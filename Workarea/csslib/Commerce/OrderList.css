@@ -1,0 +1,129 @@
+﻿.EktronOrderList
+{
+	font-family: 
+	Helvetica,Verdana,Geneva,Arial,sans-serif;	
+	padding: 1.25em;
+	border: solid 1px #aaaaaa;
+	
+	/* Ensure any absoultly positioned objects are placed in the context of the control: */
+	position: relative; top: 0; left: 0;
+}
+
+.EktronOrderList_FloatClear{clear: both; height: 0px;}
+.EktronOrderList .EktronOrderList_ErrorText{color: Red;}
+
+div.EktronOrderHistoryWrapper {width:100%;margin:0 auto;}
+
+div.EktronOrderHistoryWrapper table {width:100%;margin:0em 0em 1em 0em;font-family:Arial, Helvetica, Tahoma, Verdana, sans-serif;border-collapse:collapse;}
+div.EktronOrderHistoryWrapper table img {border:none;}
+
+div.EktronOrderHistoryWrapper table caption {background-image:url('../../images/application/Commerce/orderHistory.gif');padding:0px 0px 10px 60px;margin:0;background-position:0px 5px;background-repeat:no-repeat;text-align:left;}
+div.EktronOrderHistoryWrapper table caption span.emphasize {font-weight:bold;font-size:1.5em;display:block;margin:0;padding:0;}
+div.EktronOrderHistoryWrapper table caption span.understate {font-weight:normal;color:#4c4c4c;margin:0;padding:0;font-style:italic;}
+
+div.EktronOrderHistoryWrapper table tr {background-color:white;}
+div.EktronOrderHistoryWrapper table tr.stripe {background-color:#F2F0F5;}
+
+div.EktronOrderHistoryWrapper table tr.rowColumnHeadings th {background-color:#4c4f53;line-height:20px;border:1px solid silver;padding:.25em;background-image:url('../../images/application/Commerce/th.gif');background-position:0px 0px;background-repeat:repeat-x;color:white;}
+div.EktronOrderHistoryWrapper table td {text-align:center;border:1px solid silver;padding:.25em;}
+
+div.EktronOrderHistoryWrapper table a {text-decoration:none;}
+div.EktronOrderHistoryWrapper table a:hover {text-decoration:underline;}
+
+div.EktronOrderHistoryWrapper table a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.EktronOrderHistoryWrapper table a.buttonLeft {float:left;}
+div.EktronOrderHistoryWrapper table a.buttonRight {float:right;}
+div.EktronOrderHistoryWrapper table a.buttonInline {display:inline;}
+
+div.EktronOrderHistoryWrapper table a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.EktronOrderHistoryWrapper table a.button:hover {border:1px solid #fbc2c4;color:#d12f19;text-decoration:none;}
+
+div.EktronOrderHistoryWrapper table a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.EktronOrderHistoryWrapper table a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.EktronOrderHistoryWrapper table a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+
+div.EktronOrderHistoryWrapper table thead tr.rowViewAllOrders th a.viewAllOrders {position:relative;margin-top:-40px;font-weight:normal;}
+
+div.EktronOrderHistoryWrapper table tbody tr td a.trackPackage {background-image:url('../../images/application/Commerce/trackPackages.gif');background-position:right 1px;background-repeat:no-repeat;padding:0px 25px 0px 0px;margin:0;}
+
+div.EktronOrderHistoryWrapper table tfoot tr td {border:none;border-bottom:1px dotted silver;text-align:right;padding:.25em .25em;font-size:.9em;}
+
+div.EktronOrderHistoryWrapper table tfoot tr td ul {margin:0;padding:0;list-style:none;}
+div.EktronOrderHistoryWrapper table tfoot tr td ul li {margin:0;padding:0em 0em 0em .2em;display:inline !important;background-color:white;}
+div.EktronOrderHistoryWrapper table tfoot tr td ul li img {}
+div.EktronOrderHistoryWrapper table tfoot tr td ul li a {margin:0;padding:0;}
+
+div.EktronOrderStatusWrapper {position:relative;width:100%;padding-bottom:.75em;margin:0 auto 1em auto;font-family:Arial, Helvetica, Tahoma, Verdana, sans-serif;}
+
+div.EktronOrderStatusWrapper .emphasis {font-weight:bold;}
+div.EktronOrderStatusWrapper .block {display:block;}
+div.EktronOrderStatusWrapper .smallText {font-size:.75em;}
+
+div.EktronOrderStatusWrapper h2 {margin:0;border-bottom:1px dotted silver;background-image:url('../../images/application/Commerce/orderStatus.gif');line-height:35px;padding:10px 0px 20px 55px;background-position:0px 5px;background-repeat:no-repeat;text-align:left;font-weight:bold;font-size:1.5em;}
+
+div.EktronOrderStatusWrapper table {width:100%;margin:0em 0em 1em 0em;font-family:Arial, Helvetica, Tahoma, Verdana, sans-serif;border-collapse:collapse;}
+div.EktronOrderStatusWrapper table img {border:none;}
+
+div.EktronOrderStatusWrapper table tr {background-color:white;}
+div.EktronOrderStatusWrapper table tr.stripe {background-color:#F2F0F5;}
+
+div.EktronOrderStatusWrapper table th,
+div.EktronOrderStatusWrapper table td {text-align:center;border:1px solid silver;padding:.25em;}
+
+div.EktronOrderStatusWrapper table td.priceColumn {text-align:right !important;}
+
+div.EktronOrderStatusWrapper table th.bottomBorder {border-bottom:1px solid silver !important;} /* be nice to ie6 */
+
+div.EktronOrderStatusWrapper table th {background-color:#4c4f53;line-height:20px;color:white;background-image:url('../../images/application/Commerce/th.gif');background-repeat:repeat-x;background-position:0px 0px;}
+
+div.EktronOrderStatusWrapper table a {text-decoration:none;}
+div.EktronOrderStatusWrapper table a:hover {text-decoration:underline;}
+div.EktronOrderStatusWrapper table a.openNewWindow {padding:0px 25px 0px 0px;background-image:url('../../images/application/Commerce/trackPackages.gif');background-repeat:no-repeat;background-position:right 1px;}
+
+div.EktronOrderStatusWrapper table.orderInfo {margin:1em 0em 1em 0em;padding:0;}
+div.EktronOrderStatusWrapper table.orderInfo thead span.label {font-weight:bold;margin-right:.5em;width:10em;text-align:right;}
+
+div.EktronOrderStatusWrapper table.orderInfo th {font-weight:normal;padding:.1em .25em;border:none;background-image:none;background-color:white;color:black;}
+div.EktronOrderStatusWrapper table.orderInfo td {padding:.1em .25em;border:none;text-align:left;}
+
+div.EktronOrderStatusWrapper table.orderInfo tbody th {text-align:right;font-weight:bold;width:8em;font-size:1em;margin:0;padding:0;}
+div.EktronOrderStatusWrapper table.orderInfo tbody td {text-align:left;font-size:1em;margin:0;padding:0 0 0 .5em;}
+
+div.EktronOrderStatusWrapper p.notice {margin:0em;background:#fbe3e4;border:1px solid #fbc2c4;color:#4c4c4c;background-image:url('../../images/application/Commerce/warning.gif');background-repeat:no-repeat;background-position:5px 10px;text-align:left;padding:10px 15px 10px 35px;}
+
+div.EktronOrderStatusWrapper table.shippingBilling {margin:1em 0em 1em 0em;}
+div.EktronOrderStatusWrapper table.shippingBilling td {text-align:left;background-image:url('../../images/application/Commerce/background.gif');background-repeat:repeat;background-position:0px 0px;}
+div.EktronOrderStatusWrapper table.shippingBilling ul {border:1px solid silver;background-color:white;list-style:none;margin:.5em;padding:.5em;}
+
+div.EktronOrderStatusWrapper table.orderDetails td {padding:.5em;}
+div.EktronOrderStatusWrapper table.orderDetails td.item {text-align:left;}
+div.EktronOrderStatusWrapper table.orderDetails td.item sup a {font-size:.85em;font-style:italic;}
+div.EktronOrderStatusWrapper table.orderDetails td.item p.sku {font-size:.75em;color:#9e9e9e;margin:.25em 0em;padding:0;}
+
+div.EktronOrderStatusWrapper table.orderDetails tfoot th {padding:.5em;text-align:right;border:none;border-left:1px solid silver;color:black;background-image:url('../../images/application/Commerce/background.gif');background-repeat:repeat;background-position:0px 0px;}
+div.EktronOrderStatusWrapper table.orderDetails tfoot td {padding:.5em;}
+div.EktronOrderStatusWrapper table.orderDetails tfoot tr.notice td {border:none;border-top:1px solid silver;border-bottom:1px dotted silver;}
+
+div.EktronOrderStatusWrapper table.orderDetails tfoot td.returnExchangePolicies {padding:1em 0em;text-align:left;border:none;border-top:1px solid silver;border-bottom:1px dotted silver;}
+div.EktronOrderStatusWrapper table.orderDetails tfoot td.returnExchangePolicies h4 {margin:0em;padding:0em;font-size:.9em;color:#9e9e9e;font-style:italic;}
+div.EktronOrderStatusWrapper table.orderDetails tfoot td.returnExchangePolicies ol {margin:.25em 0 0 2.5em;padding:0;}
+div.EktronOrderStatusWrapper table.orderDetails tfoot td.returnExchangePolicies ol li {font-size:.9em;color:#9e9e9e;font-style:italic;}
+
+div.EktronOrderStatusWrapper table a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.EktronOrderStatusWrapper table a.buttonRight {float:right;}
+div.EktronOrderStatusWrapper table thead tr.rowViewAllOrders th a.viewAllOrders {position:relative;margin-top:-40px;font-weight:normal;}
+
+.EktronOrderHistoryGuestLabel { text-align:right !important; }
+.EktronOrderHistoryGuestInput { text-align:left !important; }
+.EktronOrderHistoryGuestInput input { width: 25.5em !important; }
+.EktronOrderHistoryGuestFind { text-align:left !important; }
+.EktronOrderHistoryGuestMessage { text-align:left !important; }
+.EktronOrderHistoryGuestError { border: solid red 1px; color: red; background-image:url('../../images/application/alert.gif');padding:5px 0 5px 15px;background-position:0px 5px;background-repeat:no-repeat;text-align:left;font-weight:bold;}
+
+.viewAll {position: relative; top: 0px; right: 0px;}
+.viewAll div {position: absolute; top: 10px; right: 0px;}
+.viewAll a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+.viewAll a.button img {border: none;}
+.viewAll a.viewAllOrders {position:relative;font-weight:normal;}
+
+.pageNumber {background-color: #777777; color: #ffffff; font-weight: normal; padding-bottom: 1px; padding-right: 1px; padding-top: 1px; padding-left: 2px;}

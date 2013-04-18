@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="Title">Rättstavningskontroll</string>
+	<string id="NoPermission">Du har inte behörighet till sidan eller så har din kaka (<i>cookie</i> gått ut!<br />Uppdatera sidan!</string>
+	<string id="Tab1HeaderText">Rättstavning</string>
+	<string id="ProgressMessage">Kontrollerar stavning.....</string>
+	<string id="Confirm">Vill du utföra eller avbryta all ändringar i texten fram till hit?</string>
+	<string id="ChangesMade">Du har ändrat texten.</string>
+	<string id="SpellCheckComplete">Rättstavningskontrollen klar!</string>
+	<string id="Nosuggestions">Inga förslag</string>
+	<string id="Undo">Ångra</string>
+	<string id="UndoEdit">Ångra inmatning</string>
+	<string id="Ignore">Ignorera</string>
+	<string id="IgnoreAll">Ignorera allt</string>
+	<string id="Cancel">Avbryt</string>
+	<string id="AddCustom">Infoga egen</string>
+	<string id="Change">Ändra</string>
+	<string id="ChangeAll">Ändra allt</string>
+	<string id="Help">Hjälp</string>
+	<string id="NotInDictionary">Finns ej i ordboken:</string>
+	<string id="Suggestions">Förslag:</string>
+	<string id="AddWord1">Är du säker på att du vill lägga till '</string>
+	<string id="AddWord2">' till din ordbok?</string>
+</localization>

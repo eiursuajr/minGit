@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Tab1HeaderText">Scegli un template</string>
+	<string id="Tab2HeaderText">Carica un template</string>
+	<string id="TemplateURL">URL:</string>
+	<string id="AlertFile">Per piacere, seleziona un template per fare l'upload!</string>
+	<string id="AlertExists">Questo file template esiste già in questa directory</string>
+	<string id="MessageValid">Per piacere, seleziona un file valido come template!</string>
+	<string id="MessageSize">Il file che contiene il template supera la dimensione massima consentito per l'upload!</string>
+	<string id="MessageNothingPost">Per piacere, seleziona un file template!</string>
+	<string id="NoTemplateSelectedToInsert">Per piacere, seleziona un file template da inserire!</string>
+</localization>

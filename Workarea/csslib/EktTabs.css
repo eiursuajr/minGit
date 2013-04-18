@@ -1,0 +1,64 @@
+﻿/*******************************************************************/
+/* The active panel area the where the multimedia player is 
+   loaded.*/
+.EktTabPanelActive 
+{
+	position: relative;	
+	display:block;
+}
+/*******************************************************************/
+/* The non active panel area the where the multimedia player is 
+   loaded.*/
+.EktTabPanelNotActive
+{
+	position: relative;	
+	display:none;
+}
+/*******************************************************************/
+/* The active media player selector tab. */
+.EktTabActive
+{	
+	padding: 2px 2px 2px 2px;
+	top:10px;
+	text-decoration:none;
+	position: relative;	
+	background-color:white;
+	border-style: solid;
+	border-width: thin;
+	border-color:Navy;
+	color:Navy;
+	font-weight:bolder;
+	
+}
+.EktTabNotActive
+/*******************************************************************/
+/* The non active meadia player selector tab. */
+{	
+	padding: 2px 2px 2px 2px;
+	top:10px;
+	text-decoration:none;
+	position: relative;	
+	background-color:#ADC5EF;
+	border-style: solid;
+	border-width: thin;
+	border-color:Navy;
+	color:Navy;
+	font-weight:bolder;
+}
+div.mediaarea
+{
+	text-decoration:none;
+	position: relative;	
+	background-color:Gray;
+	padding:10px 10px 10px 10px;
+}
+div.mediatabs
+{
+	text-decoration:none;
+	position: relative;	
+	background-color:Silver;
+}
+div.MediaPlayerArea 
+{
+	background-color:Gray;
+}

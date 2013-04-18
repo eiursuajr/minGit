@@ -1,0 +1,1435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Configuration XML Data XML Schema
+	Copyright Ektron, Inc. (c)2002-2009
+	Revision date: 2009-10-15
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:simpleType name="localeRefType">
+		<xs:annotation>
+			<xs:documentation>References an element in localeNNNN.xml</xs:documentation>
+			<xs:documentation>W3C XML Schema 1.0 does not support inter-document keyref. Quote: "In version 1, the reference mechanisms defined by Schema are restricted to a single document." source: http://lists.w3.org/Archives/Public/www-xml-schema-comments/2000JulSep/0186.html</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NCName"/>
+	</xs:simpleType>
+	<!-- global attribute definitions -->
+	<xs:attribute name="localeRef" type="localeRefType"/>
+	<xs:attribute name="enabled" type="yesnoType"/>
+	<xs:attribute name="visible" type="yesnoType"/>
+	<xs:attribute name="href" type="URLType"/>
+	<xs:attribute name="src" type="URLType"/>
+	<xs:simpleType name="URLType">
+		<xs:union memberTypes="xs:anyURI">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="(\[\w+\].*)|(.{0})"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="nameType">
+		<xs:restriction base="xs:NCName"/>
+	</xs:simpleType>
+	<xs:attributeGroup name="nameKey">
+		<xs:attribute name="name" type="nameType" use="required"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="buttonStyleType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="default"/>
+			<xs:enumeration value="icon"/>
+			<xs:enumeration value="toggle"/>
+			<xs:enumeration value="list"/>
+			<xs:enumeration value="listbox"/>
+			<xs:enumeration value="edit"/>
+			<xs:enumeration value="text"/>
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="buttonType">
+		<xs:attribute name="command" type="nameType" use="required"/>
+		<xs:attribute name="popup" type="nameType"/>
+		<xs:attribute ref="visible"/>
+	</xs:complexType>
+	<xs:complexType name="captionType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="enabled"/>
+				<xs:attribute ref="localeRef"/>
+				<xs:attribute ref="visible"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="tooltiptextType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="enabled"/>
+				<xs:attribute ref="localeRef"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:group name="commandGroup">
+		<xs:choice>
+			<xs:element name="cmd">
+				<xs:complexType>
+					<xs:attribute ref="enabled"/>
+					<xs:attribute name="key" type="internalIconKey"/>
+					<xs:attribute name="maxwidth" type="xs:nonNegativeInteger"/>
+					<xs:attributeGroup ref="nameKey"/>
+					<xs:attribute name="ref" type="localeRefType"/>
+					<xs:attribute ref="src"/>
+					<xs:attribute name="style" type="buttonStyleType"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="command">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="image" minOccurs="0" maxOccurs="1">
+							<xs:complexType>
+								<xs:attribute name="key" type="internalIconKey"/>
+								<xs:attribute ref="src"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="caption" type="captionType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="tooltiptext" type="tooltiptextType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="selections" type="selectionsType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute ref="enabled"/>
+					<xs:attribute name="maxwidth" type="xs:nonNegativeInteger"/>
+					<xs:attributeGroup ref="nameKey"/>
+					<xs:attribute name="style" type="buttonStyleType"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<xs:element name="config">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="interface">
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="menu">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="caption" type="captionType"/>
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="button" type="buttonType"/>
+											<xs:element name="bar"/>
+											<xs:element name="space"/>
+										</xs:choice>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute ref="localeRef"/>
+									<xs:attributeGroup ref="nameKey"/>
+									<xs:attribute name="newRow" type="yesnoType"/>
+									<xs:attribute name="showButtonsCaptions" type="yesnoType"/>
+									<xs:attribute name="style">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="icon"/>
+												<xs:enumeration value="pulldown"/>
+												<xs:enumeration value="tab"/>
+												<xs:enumeration value="status"/>
+												<xs:enumeration value="popup"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="textAlignment">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="bottom"/>
+												<xs:enumeration value="top"/>
+												<xs:enumeration value="left"/>
+												<xs:enumeration value="right"/>
+												<xs:enumeration value="center"/>
+												<xs:enumeration value="0"/>
+												<xs:enumeration value="1"/>
+												<xs:enumeration value="2"/>
+												<xs:enumeration value="3"/>
+												<xs:enumeration value="4"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="tooltips" type="yesnoType"/>
+									<xs:attribute ref="visible"/>
+									<xs:attribute name="wrap" type="yesnoType"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="button" type="buttonType"/>
+							<xs:element name="popup">
+								<xs:complexType>
+									<xs:choice minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="button" type="buttonType"/>
+										<xs:element name="bar"/>
+										<xs:element name="space"/>
+									</xs:choice>
+									<xs:attribute ref="enabled"/>
+									<xs:attributeGroup ref="nameKey"/>
+									<xs:attribute ref="visible"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="allowCustomize" type="yesnoType"/>
+						<xs:attribute name="context" type="yesnoType"/>
+						<xs:attribute ref="enabled"/>
+						<xs:attributeGroup ref="nameKey"/>
+						<xs:attribute ref="visible"/>
+					</xs:complexType>
+					<xs:key name="popupName">
+						<xs:selector xpath="popup"/>
+						<xs:field xpath="@name"/>
+					</xs:key>
+					<xs:keyref name="popupRef" refer="popupName">
+						<xs:selector xpath=".//button"/>
+						<xs:field xpath="@popup"/>
+					</xs:keyref>
+				</xs:element>
+				<xs:element name="features">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="external" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+									<xs:attribute ref="enabled"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="clean">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="remove" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:choice minOccurs="0" maxOccurs="unbounded">
+													<xs:element name="attribute" type="xs:string"/>
+													<xs:element name="endtag" type="xs:string"/>
+													<xs:element name="tagelement" type="xs:string"/>
+													<xs:element name="tagonly" type="xs:string"/>
+													<xs:element name="tagWoAttr" type="xs:string"/>
+												</xs:choice>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="preservechars" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="value" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="xsltFilter" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="src" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="feedbacklevel">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="0"/>
+												<xs:enumeration value="1"/>
+												<xs:enumeration value="2"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="autodetect" type="yesnoType"/>
+									<xs:attribute name="charencode">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="binary"/>
+												<xs:enumeration value="charref"/>
+												<xs:enumeration value="latin"/>
+												<xs:enumeration value="utf-8"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="cr" type="xs:string"/>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute name="lf" type="xs:string"/>
+									<xs:attribute name="preferfonttag" type="yesnoType"/>
+									<xs:attribute name="reducetags" type="yesnoType"/>
+									<xs:attribute name="showonsize" type="xs:nonNegativeInteger"/>
+									<xs:attribute name="showdonemsg" type="yesnoType"/>
+									<xs:attribute name="prompt" type="yesnoType"/>
+									<xs:attribute name="hideobject" type="yesnoType"/>
+									<xs:attribute name="mswordfilter" type="yesnoType"/>
+									<xs:attribute name="src" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="formelements" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+									<xs:attribute ref="enabled"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="standard">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="style">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="styleblock" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="blockid" type="xs:Name"/>
+															<xs:attribute name="styleinbody" type="yesnoType"/>
+															<xs:attribute ref="enabled"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute ref="href"/>
+												<xs:attribute name="equivClass">
+													<xs:simpleType>
+														<xs:restriction base="xs:NMTOKEN">
+															<xs:enumeration value="strict"/>
+															<xs:enumeration value="loose"/>
+															<xs:enumeration value="all"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="wrapstylewithdiv" type="yesnoType"/>
+												<xs:attribute name="preservewordstyles" type="yesnoType"/>
+												<xs:attribute name="preservewordclasses" type="yesnoType"/>
+												<xs:attribute name="publishstyles" type="yesnoType"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="validate" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="xslt" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute ref="enabled"/>
+															<xs:attribute name="src" type="URLType" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="schema" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute ref="enabled"/>
+															<xs:attribute name="src" type="URLType" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="online" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="data" minOccurs="0" maxOccurs="unbounded">
+																	<xs:complexType mixed="true">
+																		<xs:attribute name="name" type="xs:Name" use="required"/> 
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute ref="enabled"/>
+															<xs:attribute name="contentname" type="xs:string" use="required"/>
+															<xs:attribute name="src" type="URLType" use="required"/>
+															<xs:attribute name="type" type="xs:string" use="required"/>
+															<xs:attribute name="keywordsearchresult" type="xs:string" use="optional"/>
+															<xs:attribute name="keyword" type="xs:string" use="optional"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="accessibility">
+													<xs:simpleType>
+														<xs:restriction base="xs:NMTOKEN">
+															<xs:enumeration value="strict"/>
+															<xs:enumeration value="loose"/>
+															<xs:enumeration value="none"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="suggestdefaultval" type="yesnoType"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+									<xs:attribute name="autoclean" type="yesnoType"/>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute name="selection">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="html"/>
+												<xs:enumeration value="xhtml"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute ref="publish"/>
+									<xs:attribute name="publishviewassource" type="yesnoType"/>
+									<xs:attribute name="shiftenter" type="yesnoType"/>
+									<xs:attribute name="defaultdivonenter" type="yesnoType"/>
+									<xs:attribute name="continueparagraph" type="yesnoType"/>
+									<xs:attribute name="maxloadsec" type="xs:nonNegativeInteger"/>
+									<xs:attribute name="docbusymsg" type="yesnoType"/>
+									<xs:attribute name="mode" type="contentPubType"/>
+									<xs:attribute name="publishinvalid" type="yesnoType"/>
+									<xs:attribute name="finalurlcatch" type="yesnoType"/>
+									<xs:attribute name="protspaces" type="yesnoType"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="viewas" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute name="mode">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="body"/>
+												<xs:enumeration value="whole"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="view">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="wysiwyg"/>
+												<xs:enumeration value="source"/>
+												<xs:enumeration value="xsltdesign"/>
+												<xs:enumeration value="formdesign"/>
+												<xs:enumeration value="datadesign"/>
+												<xs:enumeration value="dataentry"/>
+												<xs:enumeration value="preview"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute ref="publish"/>
+									<xs:attribute name="unicode" type="yesnoType"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="internal" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute ref="enabled"/>
+											<xs:attribute ref="href"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="edithtml" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:attribute ref="enabled"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="math" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="toolbar" minOccurs="0" maxOccurs="1">
+											<xs:complexType mixed="true">
+												<xs:sequence>
+													<xs:any namespace="##any" processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute name="imagetype">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="jpg"/>
+												<xs:enumeration value="png"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="spellcheck" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="spellayt">
+											<xs:complexType>
+												<xs:attribute name="autostart" type="yesnoType"/>
+												<xs:attribute name="delay" type="xs:string"/>
+												<xs:attribute ref="enabled"/>
+												<xs:attribute name="markmisspelledsrc" type="URLType" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="spellingsuggestion">
+											<xs:complexType>
+												<xs:attribute ref="enabled"/>
+												<xs:attribute name="max" type="xs:nonNegativeInteger" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute name="langid" type="xs:string"/>
+									<xs:attribute name="dictionary2" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="msword" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute name="warn" type="yesnoType"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="table" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="selections" type="selectionsType" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="insertcell" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="defaulttext" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute name="visiblelayoutframe" type="yesnoType"/>
+									<xs:attribute name="visibleborderframe" type="yesnoType"/>
+									<xs:attribute name="visiblebackgroundframe" type="yesnoType"/>
+									<xs:attribute name="visibleaccessibilitybtn" type="yesnoType"/>
+									<xs:attribute name="visiblecellaccessibilityframe" type="yesnoType"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="mediafiles">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="maxsizek" type="xs:nonNegativeInteger" minOccurs="0" maxOccurs="1"/>
+										<xs:element name="validext" type="xs:string" minOccurs="0" maxOccurs="1"/>
+										<xs:element name="mediaconfig" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="selections" type="selectionsType" minOccurs="0" maxOccurs="1"/>
+												</xs:sequence>
+												<xs:attribute name="allowedit" type="yesnoType"/>
+												<xs:attribute ref="enabled"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="transport">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="autoupload" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="type" type="xs:string" use="required"/>
+															<xs:attribute name="openaccess" type="yesnoType"/>
+															<xs:attribute ref="enabled"/>
+															<xs:attribute name="resplvl" type="xs:string"/>
+															<xs:attribute name="showdlg" type="yesnoType"/>
+															<xs:attribute name="uploadonsave" type="yesnoType"/>
+															<xs:attribute name="showlistonsave" type="yesnoType"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="username" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="encrypted" type="yesnoType"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="password" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="encrypted" type="yesnoType"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="port" type="xs:string" minOccurs="0" maxOccurs="1"/>
+													<xs:element name="domain" type="xs:string" minOccurs="0" maxOccurs="1"/>
+													<xs:element name="xferdir">
+														<xs:complexType>
+															<xs:attribute name="src" type="xs:string" use="required"/>
+															<xs:attribute name="svrlocaleref" type="xs:string"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="webroot" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="src" type="xs:string" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="resolvemethod" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="allowoverride" type="yesnoType"/>
+															<xs:attribute name="resolve" fixed="true"/>
+															<xs:attribute name="src" type="xs:string"/>
+															<xs:attribute name="value">
+																<xs:simpleType>
+																	<xs:restriction base="xs:NMTOKEN">
+																		<xs:enumeration value="full"/>
+																		<xs:enumeration value="given"/>
+																		<xs:enumeration value="host"/>
+																		<xs:enumeration value="local"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															</xs:attribute>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="defsource" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="src" type="xs:string" use="required"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="proxyserver" type="xs:string" minOccurs="0" maxOccurs="1"/>
+													<xs:element name="roottobaseurl" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="value" use="required" type="yesnoType"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="xfer">
+													<xs:simpleType>
+														<xs:restriction base="xs:NMTOKEN">
+															<xs:enumeration value="binary"/>
+															<xs:enumeration value="text"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="pasv" type="yesnoType"/>
+												<xs:attribute name="enabled" fixed="true"/>
+												<xs:attribute name="subdir" type="yesnoType"/>
+												<xs:attribute name="allowupload" type="yesnoType"/>
+												<xs:attribute name="confirmation" type="yesnoType"/>
+												<xs:attribute name="type" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="imageedit" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="control" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute ref="src"/>
+															<xs:attribute ref="enabled"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute ref="enabled"/>
+												<xs:attribute name="ondblclickactivate" type="yesnoType"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="enabled" fixed="true"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="customtag" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="taginsdlg" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="allowdelete" type="yesnoType"/>
+												<xs:attribute name="allownew" type="yesnoType"/>
+												<xs:attribute name="allowprop" type="yesnoType"/>
+												<xs:attribute ref="enabled"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="tagpropdlg" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="allowchange" type="yesnoType"/>
+												<xs:attribute ref="enabled"/>
+												<xs:attribute name="listall" type="yesnoType"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="tagattrdlg" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="allowchange" type="yesnoType"/>
+												<xs:attribute name="allowdelete" type="yesnoType"/>
+												<xs:attribute name="allownew" type="yesnoType"/>
+												<xs:attribute ref="enabled"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="tagdefinitions">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="tagdefault" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:group ref="tagDefGroup"/>
+															<xs:attributeGroup ref="tagDefAttrs"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="tagspec" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="caption" type="captionType" minOccurs="0" maxOccurs="1"/>
+																<xs:group ref="tagDefGroup"/>
+															</xs:sequence>
+															<!-- allow names with namespace prefixed -->
+															<xs:attribute name="name" type="xs:Name" use="required"/>
+															<!-- not a nameKey -->
+															<xs:attributeGroup ref="tagDefAttrs"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute ref="enabled"/>
+												<xs:attributeGroup ref="nameKey"/>
+												<xs:attribute ref="src"/>
+												<xs:attribute name="hideobject" type="yesnoType"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="docxml" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="transform" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:attribute name="onload" type="URLType"/>
+															<xs:attribute name="onsave" type="URLType"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="loadsch" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="xsd" minOccurs="1" maxOccurs="unbounded">
+																	<xs:complexType>
+																		<xs:attribute name="status" default="idle">
+																			<xs:simpleType>
+																				<xs:restriction base="xs:NMTOKEN">
+																					<xs:enumeration value="idle"/>
+																					<xs:enumeration value="active"/>
+																					<xs:enumeration value="disabled"/>
+																				</xs:restriction>
+																			</xs:simpleType>
+																		</xs:attribute>
+																		<xs:attribute ref="src"/>
+																		<xs:attribute name="ns" type="xs:string"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute ref="enabled"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute ref="enabled"/>
+												<xs:attribute name="reqfill" type="yesnoType"/>
+												<xs:attribute name="showroot" type="yesnoType"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute name="tagsenabled" type="yesnoType"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="datadesign" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="indexing" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="override" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:attribute name="command" type="xs:string" use="required"/>
+															<xs:attribute ref="visible"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute ref="enabled"/>
+												<xs:attribute ref="visible" default="true"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="validation" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="choice" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="caption" type="captionType" minOccurs="0" maxOccurs="1"/>
+																<xs:element ref="schema" minOccurs="0" maxOccurs="1"/>
+																<!-- xs:element name="default" minOccurs="0" maxOccurs="1">
+																	<xs:complexType mixed="true">
+																		<xs:sequence>
+																			<xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element -->
+																<xs:element name="calculate" minOccurs="0" maxOccurs="1">
+																	<xs:complexType>
+																		<xs:group ref="expressionGroup"/>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="validate" minOccurs="0" maxOccurs="1">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:group ref="expressionGroup"/>
+																			<xs:element name="errormessage" minOccurs="0" maxOccurs="1">
+																				<xs:complexType>
+																					<xs:simpleContent>
+																						<xs:extension base="xs:string">
+																							<xs:attribute ref="localeRef"/>
+																						</xs:extension>
+																					</xs:simpleContent>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attributeGroup ref="nameKey"/>
+															<xs:attribute name="treeImg" type="treeviewImageKey"/>
+															<xs:attribute name="ref" type="localeRefType"/>
+															<xs:attribute name="pattern" type="regexpPatternType"/>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="custom" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="caption" type="captionType" minOccurs="0" maxOccurs="1"/>
+																<xs:element name="selections" type="selectionsType" minOccurs="0" maxOccurs="unbounded"/>
+															</xs:sequence>
+															<xs:attribute ref="enabled"/>
+															<xs:attribute ref="visible"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attributeGroup ref="nameKey"/>
+												<xs:attribute ref="enabled"/>
+												<xs:attribute ref="visible"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="xsltoutput" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:attribute name="name" type="xs:NMTOKEN" fixed="datapresentationxslt" use="required"/>
+												<xs:attribute name="mode">
+													<xs:simpleType>
+														<xs:restriction base="xs:NMTOKEN">
+															<xs:enumeration value="body"/>
+															<xs:enumeration value="whole"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="method" type="xs:NMTOKEN"/>
+												<xs:attribute name="encoding" type="xs:string"/>
+												<xs:attribute name="omit-xml-declaration" type="YesNoOnlyType"/>
+												<xs:attribute name="standalone" type="YesNoOnlyType"/>
+												<xs:attribute name="cdata-section-elements" type="xs:NMTOKENS"/>
+												<xs:attribute name="indent" type="YesNoOnlyType"/>
+												<xs:attribute name="media-type" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="liststyle" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:choice>
+													<xs:element name="itemtemplate">
+														<xs:complexType mixed="true">
+															<xs:sequence>
+																<xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="xslt">
+														<xs:complexType mixed="true">
+															<xs:sequence>
+																<xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:choice>
+												<xs:attributeGroup ref="nameKey"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="dataentry" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+										<xs:element name="datalist" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element ref="schema" minOccurs="0"/>
+													<xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType mixed="true">
+															<xs:sequence>
+																<xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+															</xs:sequence>
+															<xs:attribute name="value" type="xs:string"/>
+															<xs:attribute name="default" type="yesnoType"/>
+															<xs:attribute ref="enabled"/>
+															<xs:attribute ref="localeRef"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attributeGroup ref="nameKey"/>
+												<xs:attribute ref="src"/>
+												<xs:attribute name="cache" type="yesnoType" default="true"/>
+												<xs:attribute name="select" type="xs:string"/>
+												<xs:attribute name="captionxpath" type="xs:string"/>
+												<xs:attribute name="valuexpath" type="xs:string"/>
+												<xs:attribute name="namespaces" type="xs:string"/>
+												<xs:attribute name="validation">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="select-req"/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="minSelected" type="xs:nonNegativeInteger"/>
+												<!-- maxSelected = -1 means "no limits" -->
+												<xs:attribute name="maxSelected" type="xs:integer"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute ref="enabled"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="product" type="xs:string" use="required"/>
+			<xs:attribute name="revision" type="xs:string"/>
+			<xs:attribute name="version" type="xs:string"/>
+		</xs:complexType>
+		<xs:unique name="uniqueName">
+			<xs:selector xpath="interface|interface/menu|interface/popup|.//cmd|.//command"/>
+			<xs:field xpath="@name"/>
+		</xs:unique>
+		<!-- Key must be defined at this level for the keyref in interface to access it -->
+		<xs:key name="commandName">
+			<xs:selector xpath=".//cmd|.//command"/>
+			<xs:field xpath="@name"/>
+		</xs:key>
+		<xs:keyref name="commandRef" refer="commandName">
+			<xs:selector xpath="interface/button|interface/menu/button|interface/popup/button|features/datadesign/indexing/override"/>
+			<xs:field xpath="@command"/>
+		</xs:keyref>
+	</xs:element>
+	<xs:simpleType name="yesnoType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="true"/>
+			<xs:enumeration value="false"/>
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="YesNoOnlyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="contentPubType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="whole"/>
+			<xs:enumeration value="datadesignpackage"/>
+			<xs:enumeration value="datadocumentxml"/>
+			<xs:enumeration value="dataentrypage"/>
+			<xs:enumeration value="dataentryxslt"/>
+			<xs:enumeration value="dataindex"/>
+			<xs:enumeration value="datapresentationpage"/>
+			<xs:enumeration value="datapresentationxslt"/>
+			<xs:enumeration value="dataschema"/>
+			<xs:enumeration value="designpage"/>
+			<xs:enumeration value="databody"/> <!-- deprecated -->
+			<xs:enumeration value="datadefinitions"/> <!-- deprecated -->
+			<xs:enumeration value="dataformat"/> <!-- deprecated -->
+			<xs:enumeration value="dataheader"/> <!-- deprecated -->
+			<xs:enumeration value="datawhole"/> <!-- deprecated -->
+			<xs:enumeration value="designbody"/> <!-- deprecated -->
+			<xs:enumeration value="designdataformat"/> <!-- deprecated -->
+			<xs:enumeration value="designdefinitions"/> <!-- deprecated -->
+			<xs:enumeration value="designformat"/> <!-- deprecated -->
+			<xs:enumeration value="designheader"/> <!-- deprecated -->
+			<xs:enumeration value="designwhole"/> <!-- deprecated -->
+			<xs:enumeration value="htmlbody"/>
+			<xs:enumeration value="htmlheader"/>
+			<xs:enumeration value="htmlwhole"/>
+			<xs:enumeration value="rtf"/>
+			<xs:enumeration value="text"/>
+			<xs:enumeration value="xmlbody"/>
+			<xs:enumeration value="xmlheader"/>
+			<xs:enumeration value="xmlwhole"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attribute name="publish" fixed="xhtml" />
+	<xs:attributeGroup name="tagDefAttrs">
+		<xs:attribute name="style" type="xs:string"/>
+		<xs:attribute name="dstyle" type="xs:string"/>
+		<xs:attribute name="astyle" type="xs:string"/>
+		<xs:attribute name="ashow" type="yesnoType"/>
+		<xs:attribute name="edit" type="yesnoType"/>
+		<xs:attribute ref="enabled"/>
+		<xs:attribute name="render" type="yesnoType"/>
+		<xs:attribute name="type" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="empty"/>
+					<xs:enumeration value="nonempty"/>
+					<xs:enumeration value="vertical"/>
+					<xs:enumeration value="horizontal"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute ref="visible"/>
+	</xs:attributeGroup>
+	<xs:group name="tagDefGroup">
+		<xs:sequence>
+			<xs:element name="glyph" type="glyphType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="simtaglist" type="simtaglistType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:group>
+	<xs:complexType name="glyphType">
+		<xs:attribute name="height" type="xs:string"/>
+		<xs:attribute ref="src" use="required"/>
+		<xs:attribute ref="visible"/>
+		<xs:attribute name="width" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="selectionsType">
+		<xs:sequence>
+			<xs:element name="listchoice" minOccurs="0" maxOccurs="unbounded" type="listchoiceType"/>
+		</xs:sequence>
+		<xs:attribute name="bookmarks" type="yesnoType"/>
+		<xs:attribute ref="enabled"/>
+		<xs:attribute name="listtop" type="yesnoType"/>
+		<xs:attributeGroup ref="nameKey"/>
+		<xs:attribute name="sorted" type="yesnoType"/>
+		<xs:attribute ref="visible"/>
+	</xs:complexType>
+	<xs:complexType name="listchoiceType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="command" type="xs:string"/>
+				<xs:attribute name="data" type="xs:string"/>
+				<xs:attribute name="default" type="yesnoType"/>
+				<xs:attribute name="delimited" type="xs:string"/>
+				<xs:attribute ref="enabled"/>
+				<xs:attribute ref="href"/>
+				<xs:attribute ref="localeRef"/>
+				<xs:attribute name="target" type="xs:string"/>
+				<xs:attribute name="treeImg" type="treeviewImageKey"/>
+				<xs:attribute name="value" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="simtaglistType">
+		<xs:sequence>
+			<xs:element name="simtag" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="glyph" type="URLType"/>
+							<xs:attribute ref="localeRef"/>
+							<!-- allow names with namespace prefixed -->
+							<xs:attribute name="name" type="xs:Name" use="required"/>
+							<!-- not a nameKey -->
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute ref="enabled"/>
+		<xs:attributeGroup ref="nameKey"/>
+	</xs:complexType>
+	<xs:element name="schema">
+		<xs:complexType mixed="false">
+			<xs:sequence>
+				<xs:any namespace="http://www.w3.org/2001/XMLSchema" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+			</xs:sequence>
+			<xs:attribute name="datatype" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="regexpType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(/.+/[gim]{0,3})|(.{0})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="regexpPatternType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[^/].*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:group name="expressionGroup">
+		<xs:choice>
+			<xs:element name="regexp">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="regexpType">
+							<xs:attribute name="pattern" type="regexpPatternType"/>
+							<xs:attribute name="global" type="yesnoType" default="false"/>
+							<xs:attribute name="ignorecase" type="yesnoType" default="false"/>
+							<xs:attribute name="multiline" type="yesnoType" default="false"/>
+							<xs:attribute name="wholeline" type="yesnoType" default="false"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="script">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="value" type="xs:string" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="xpath">
+				<xs:complexType>
+					<xs:attribute name="select" type="xs:string" use="required"/>
+					<xs:attribute name="selfonly" type="yesnoType" default="true"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="xslt">
+				<xs:complexType>
+					<xs:attribute ref="src" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<xs:simpleType name="treeviewImageKey">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="calculation"/>
+			<xs:enumeration value="calendar"/>
+			<xs:enumeration value="checkbox"/>
+			<xs:enumeration value="droplist"/>
+			<xs:enumeration value="fieldset"/>
+			<xs:enumeration value="hidden"/>
+			<xs:enumeration value="hyperlink"/>
+			<xs:enumeration value="number"/>
+			<xs:enumeration value="password"/>
+			<xs:enumeration value="picture"/>
+			<xs:enumeration value="richarea"/>
+			<xs:enumeration value="table"/>
+			<xs:enumeration value="tablerow"/>
+			<xs:enumeration value="text"/>
+			<xs:enumeration value="textbox"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="internalIconKey">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="_combo"/>
+			<xs:enumeration value="_editbox"/>
+			<xs:enumeration value="about"/>
+			<xs:enumeration value="abovetext"/>
+			<xs:enumeration value="absmode"/>
+			<xs:enumeration value="abspos"/>
+			<xs:enumeration value="addcol"/>
+			<xs:enumeration value="additem"/>
+			<xs:enumeration value="addlinkpage"/>
+			<xs:enumeration value="addrow"/>
+			<xs:enumeration value="alert"/>
+			<xs:enumeration value="alpha"/>
+			<xs:enumeration value="alphauc"/>
+			<xs:enumeration value="andmath"/>
+			<xs:enumeration value="angle"/>
+			<xs:enumeration value="annotation"/>
+			<xs:enumeration value="asymp"/>
+			<xs:enumeration value="audio"/>
+			<xs:enumeration value="back"/>
+			<xs:enumeration value="backward"/>
+			<xs:enumeration value="balloon"/>
+			<xs:enumeration value="bar"/>
+			<xs:enumeration value="bbtn"/>
+			<xs:enumeration value="belowtext"/>
+			<xs:enumeration value="beta"/>
+			<xs:enumeration value="betauc"/>
+			<xs:enumeration value="bgcolor"/>
+			<xs:enumeration value="blank"/>
+			<xs:enumeration value="blur"/>
+			<xs:enumeration value="bold"/>
+			<xs:enumeration value="bookmark"/>
+			<xs:enumeration value="books1"/>
+			<xs:enumeration value="books2"/>
+			<xs:enumeration value="books3"/>
+			<xs:enumeration value="books4"/>
+			<xs:enumeration value="borders"/>
+			<xs:enumeration value="borders2"/>
+			<xs:enumeration value="brightness"/>
+			<xs:enumeration value="browse"/>
+			<xs:enumeration value="bull"/>
+			<xs:enumeration value="bullets"/>
+			<xs:enumeration value="calculation"/>
+			<xs:enumeration value="calendar"/>
+			<xs:enumeration value="camera"/>
+			<xs:enumeration value="cancel"/>
+			<xs:enumeration value="capmath"/>
+			<xs:enumeration value="cellprop"/>
+			<xs:enumeration value="center"/>
+			<xs:enumeration value="charsmenu"/>
+			<xs:enumeration value="check1"/>
+			<xs:enumeration value="checkbox"/>
+			<xs:enumeration value="checkin"/>
+			<xs:enumeration value="checklist"/>
+			<xs:enumeration value="chi"/>
+			<xs:enumeration value="chiuc"/>
+			<xs:enumeration value="choice"/>
+			<xs:enumeration value="choices"/>
+			<xs:enumeration value="clean"/>
+			<xs:enumeration value="close"/>
+			<xs:enumeration value="colordepth"/>
+			<xs:enumeration value="comment"/>
+			<xs:enumeration value="contrast"/>
+			<xs:enumeration value="contupload"/>
+			<xs:enumeration value="copy"/>
+			<xs:enumeration value="crop"/>
+			<xs:enumeration value="cupmath"/>
+			<xs:enumeration value="cut"/>
+			<xs:enumeration value="dagger"/>
+			<xs:enumeration value="darrow"/>
+			<xs:enumeration value="ddagger"/>
+			<xs:enumeration value="default"/>
+			<xs:enumeration value="del"/>
+			<xs:enumeration value="delcell"/>
+			<xs:enumeration value="delcol"/>
+			<xs:enumeration value="delete"/>
+			<xs:enumeration value="deleteitem"/>
+			<xs:enumeration value="delrow"/>
+			<xs:enumeration value="delta"/>
+			<xs:enumeration value="deltauc"/>
+			<xs:enumeration value="deselect"/>
+			<xs:enumeration value="design"/>
+			<xs:enumeration value="details"/>
+			<xs:enumeration value="digitalcamera"/>
+			<xs:enumeration value="dimensions"/>
+			<xs:enumeration value="dnload"/>
+			<xs:enumeration value="droplist"/>
+			<xs:enumeration value="duplicate"/>
+			<xs:enumeration value="epsilon"/>
+			<xs:enumeration value="epsilonuc"/>
+			<xs:enumeration value="equiv"/>
+			<xs:enumeration value="erase"/>
+			<xs:enumeration value="eraser"/>
+			<xs:enumeration value="eta"/>
+			<xs:enumeration value="etauc"/>
+			<xs:enumeration value="euro"/>
+			<xs:enumeration value="exist"/>
+			<xs:enumeration value="eyeglasses"/>
+			<xs:enumeration value="eyeglasses1"/>
+			<xs:enumeration value="faceplain"/>
+			<xs:enumeration value="facesad"/>
+			<xs:enumeration value="facesmile"/>
+			<xs:enumeration value="fgcolor"/>
+			<xs:enumeration value="fieldset"/>
+			<xs:enumeration value="filelink"/>
+			<xs:enumeration value="fileup"/>
+			<xs:enumeration value="fillin"/>
+			<xs:enumeration value="find"/>
+			<xs:enumeration value="findnext"/>
+			<xs:enumeration value="floodfill"/>
+			<xs:enumeration value="floppy"/>
+			<xs:enumeration value="fnof"/>
+			<xs:enumeration value="fontcolor"/>
+			<xs:enumeration value="fontcolor2"/>
+			<xs:enumeration value="fontcolpal"/>
+			<xs:enumeration value="fontface"/>
+			<xs:enumeration value="fontsize"/>
+			<xs:enumeration value="forall"/>
+			<xs:enumeration value="form"/>
+			<xs:enumeration value="forward"/>
+			<xs:enumeration value="freehand"/>
+			<xs:enumeration value="front"/>
+			<xs:enumeration value="fullview"/>
+			<xs:enumeration value="gamma"/>
+			<xs:enumeration value="gammauc"/>
+			<xs:enumeration value="gemath"/>
+			<xs:enumeration value="glyphs"/>
+			<xs:enumeration value="group"/>
+			<xs:enumeration value="harrow"/>
+			<xs:enumeration value="harrow2"/>
+			<xs:enumeration value="hellip"/>
+			<xs:enumeration value="help"/>
+			<xs:enumeration value="helpwhat"/>
+			<xs:enumeration value="hiddenfld"/>
+			<xs:enumeration value="hiliter"/>
+			<xs:enumeration value="hiliter1"/>
+			<xs:enumeration value="hiliter2"/>
+			<xs:enumeration value="horizflip"/>
+			<xs:enumeration value="horzrule"/>
+			<xs:enumeration value="hyperlink"/>
+			<xs:enumeration value="hyperlinkstar"/>
+			<xs:enumeration value="image"/>
+			<xs:enumeration value="imageonly"/>
+			<xs:enumeration value="indentleft"/>
+			<xs:enumeration value="indentright"/>
+			<xs:enumeration value="infin"/>
+			<xs:enumeration value="info"/>
+			<xs:enumeration value="information"/>
+			<xs:enumeration value="ins"/>
+			<xs:enumeration value="insabove"/>
+			<xs:enumeration value="insbelow"/>
+			<xs:enumeration value="inscell"/>
+			<xs:enumeration value="inscol"/>
+			<xs:enumeration value="insleft"/>
+			<xs:enumeration value="insright"/>
+			<xs:enumeration value="insrow"/>
+			<xs:enumeration value="instable"/>
+			<xs:enumeration value="integral"/>
+			<xs:enumeration value="iota"/>
+			<xs:enumeration value="iotauc"/>
+			<xs:enumeration value="isinmath"/>
+			<xs:enumeration value="italic"/>
+			<xs:enumeration value="justify"/>
+			<xs:enumeration value="kappa"/>
+			<xs:enumeration value="kappauc"/>
+			<xs:enumeration value="key"/>
+			<xs:enumeration value="lambda"/>
+			<xs:enumeration value="lambdauc"/>
+			<xs:enumeration value="larrow"/>
+			<xs:enumeration value="ldquo"/>
+			<xs:enumeration value="ldquor"/>
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="lemath"/>
+			<xs:enumeration value="lightbulb"/>
+			<xs:enumeration value="line"/>
+			<xs:enumeration value="link"/>
+			<xs:enumeration value="lock"/>
+			<xs:enumeration value="lsaquo"/>
+			<xs:enumeration value="lsquo"/>
+			<xs:enumeration value="lsquor"/>
+			<xs:enumeration value="ltrblock"/>
+			<xs:enumeration value="ltredit"/>
+			<xs:enumeration value="mail"/>
+			<xs:enumeration value="math"/>
+			<xs:enumeration value="mdash"/>
+			<xs:enumeration value="mergecell"/>
+			<xs:enumeration value="minus"/>
+			<xs:enumeration value="monetary"/>
+			<xs:enumeration value="movedown"/>
+			<xs:enumeration value="moveleft"/>
+			<xs:enumeration value="moveright"/>
+			<xs:enumeration value="moveup"/>
+			<xs:enumeration value="msword"/>
+			<xs:enumeration value="mu"/>
+			<xs:enumeration value="muuc"/>
+			<xs:enumeration value="nabla"/>
+			<xs:enumeration value="ndash"/>
+			<xs:enumeration value="nemath"/>
+			<xs:enumeration value="new"/>
+			<xs:enumeration value="newwin"/>
+			<xs:enumeration value="nimath"/>
+			<xs:enumeration value="nojustify"/>
+			<xs:enumeration value="normalview"/>
+			<xs:enumeration value="note"/>
+			<xs:enumeration value="nu"/>
+			<xs:enumeration value="numbered"/>
+			<xs:enumeration value="numeric"/>
+			<xs:enumeration value="nuuc"/>
+			<xs:enumeration value="oelig"/>
+			<xs:enumeration value="oeoelig"/>
+			<xs:enumeration value="omega"/>
+			<xs:enumeration value="omegauc"/>
+			<xs:enumeration value="omicron"/>
+			<xs:enumeration value="omicronuc"/>
+			<xs:enumeration value="one"/>
+			<xs:enumeration value="open"/>
+			<xs:enumeration value="oplus"/>
+			<xs:enumeration value="optionbox"/>
+			<xs:enumeration value="ormath"/>
+			<xs:enumeration value="oval"/>
+			<xs:enumeration value="page"/>
+			<xs:enumeration value="pagetag"/>
+			<xs:enumeration value="palette"/>
+			<xs:enumeration value="paperclip"/>
+			<xs:enumeration value="partmath"/>
+			<xs:enumeration value="paste"/>
+			<xs:enumeration value="pastenew"/>
+			<xs:enumeration value="pastetext"/>
+			<xs:enumeration value="pencil"/>
+			<xs:enumeration value="pencil1"/>
+			<xs:enumeration value="pencil2"/>
+			<xs:enumeration value="permil"/>
+			<xs:enumeration value="perp"/>
+			<xs:enumeration value="phi"/>
+			<xs:enumeration value="phiuc"/>
+			<xs:enumeration value="pi"/>
+			<xs:enumeration value="picture"/>
+			<xs:enumeration value="piuc"/>
+			<xs:enumeration value="plain"/>
+			<xs:enumeration value="polygon"/>
+			<xs:enumeration value="preview"/>
+			<xs:enumeration value="print"/>
+			<xs:enumeration value="prod"/>
+			<xs:enumeration value="properties"/>
+			<xs:enumeration value="propmath"/>
+			<xs:enumeration value="psi"/>
+			<xs:enumeration value="psiuc"/>
+			<xs:enumeration value="publish"/>
+			<xs:enumeration value="pwdfld"/>
+			<xs:enumeration value="question"/>
+			<xs:enumeration value="radical"/>
+			<xs:enumeration value="rarrow"/>
+			<xs:enumeration value="rarrow2"/>
+			<xs:enumeration value="rbtn"/>
+			<xs:enumeration value="rdquo"/>
+			<xs:enumeration value="rectangle"/>
+			<xs:enumeration value="redo"/>
+			<xs:enumeration value="remove"/>
+			<xs:enumeration value="removelink"/>
+			<xs:enumeration value="removestyle"/>
+			<xs:enumeration value="rho"/>
+			<xs:enumeration value="rhouc"/>
+			<xs:enumeration value="richtextfld"/>
+			<xs:enumeration value="right"/>
+			<xs:enumeration value="rotate"/>
+			<xs:enumeration value="rsaquo"/>
+			<xs:enumeration value="rsquo"/>
+			<xs:enumeration value="rtlblock"/>
+			<xs:enumeration value="rtledit"/>
+			<xs:enumeration value="save"/>
+			<xs:enumeration value="saveall"/>
+			<xs:enumeration value="saveas"/>
+			<xs:enumeration value="saveyel"/>
+			<xs:enumeration value="sbtn"/>
+			<xs:enumeration value="scaron"/>
+			<xs:enumeration value="select"/>
+			<xs:enumeration value="selectall"/>
+			<xs:enumeration value="selectnone"/>
+			<xs:enumeration value="setup"/>
+			<xs:enumeration value="sharpen"/>
+			<xs:enumeration value="sigma"/>
+			<xs:enumeration value="sigmaf"/>
+			<xs:enumeration value="sigmauc"/>
+			<xs:enumeration value="snapgrid"/>
+			<xs:enumeration value="space"/>
+			<xs:enumeration value="spellayt"/>
+			<xs:enumeration value="spellcheck"/>
+			<xs:enumeration value="splitcell"/>
+			<xs:enumeration value="spraycan"/>
+			<xs:enumeration value="sscaron"/>
+			<xs:enumeration value="strikethrough"/>
+			<xs:enumeration value="subemath"/>
+			<xs:enumeration value="submath"/>
+			<xs:enumeration value="subscript"/>
+			<xs:enumeration value="sum"/>
+			<xs:enumeration value="supemath"/>
+			<xs:enumeration value="superscript"/>
+			<xs:enumeration value="supmath"/>
+			<xs:enumeration value="table"/>
+			<xs:enumeration value="table508"/>
+			<xs:enumeration value="tablemenu"/>
+			<xs:enumeration value="tableprop"/>
+			<xs:enumeration value="tau"/>
+			<xs:enumeration value="tauuc"/>
+			<xs:enumeration value="telephone"/>
+			<xs:enumeration value="text"/>
+			<xs:enumeration value="textbox"/>
+			<xs:enumeration value="textfld"/>
+			<xs:enumeration value="there4"/>
+			<xs:enumeration value="theta"/>
+			<xs:enumeration value="thetauc"/>
+			<xs:enumeration value="three"/>
+			<xs:enumeration value="thumbnail"/>
+			<xs:enumeration value="timer"/>
+			<xs:enumeration value="trade"/>
+			<xs:enumeration value="translate"/>
+			<xs:enumeration value="twain"/>
+			<xs:enumeration value="two"/>
+			<xs:enumeration value="uarrow"/>
+			<xs:enumeration value="underline"/>
+			<xs:enumeration value="undo"/>
+			<xs:enumeration value="up1lvl"/>
+			<xs:enumeration value="update"/>
+			<xs:enumeration value="upload"/>
+			<xs:enumeration value="upsilon"/>
+			<xs:enumeration value="upsilonuc"/>
+			<xs:enumeration value="validate"/>
+			<xs:enumeration value="validayt"/>
+			<xs:enumeration value="vertflip"/>
+			<xs:enumeration value="vidcam"/>
+			<xs:enumeration value="viewprop"/>
+			<xs:enumeration value="wand"/>
+			<xs:enumeration value="warning"/>
+			<xs:enumeration value="world"/>
+			<xs:enumeration value="world2"/>
+			<xs:enumeration value="xi"/>
+			<xs:enumeration value="xiuc"/>
+			<xs:enumeration value="yyuml"/>
+			<xs:enumeration value="zcaron"/>
+			<xs:enumeration value="zeta"/>
+			<xs:enumeration value="zetauc"/>
+			<xs:enumeration value="zoomin"/>
+			<xs:enumeration value="zoomout"/>
+			<xs:enumeration value="zordermenu"/>
+			<xs:enumeration value="zzcaron"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,124 @@
+/*  
+	rs_ticker.css
+	
+	July 2009 - Styles for the News Ticker
+
+*/
+
+/* ************************************************* */
+
+/* TEMP - Used for general styling, taken from site's existing CSS 
+
+body {margin: 0px; padding: 0px; font:normal 12px Arial, Helvetica, sans-serif; background-color:#ffffff; }
+h3 {font-size: 1.2em; line-height:100%;} 
+a:link {color:#BE102D; text-decoration:none;}
+a:hover {color:#680213; text-decoration:none;}
+a:active {color:red; text-decoration:underline;}
+a:visited {color:#8f061c; text-decoration:none;}
+/* ************************************************* */
+
+
+
+
+
+/* ================================================================= */
+#ticker
+{
+     /* width: 440px;Width of container */
+}
+#ticker_content
+{
+    position: relative;
+    /*height: 235px;*/
+}
+#ticker_content img
+{
+    padding-right: 5px;
+    margin: 0;
+    border: 0;
+}
+#ticker_content h3
+{
+    margin-top: 0px; /* push down from the image to give room for the nav bar */
+    color: #be102d;
+}
+#ticker_content_one, #ticker_content_two
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#ticker_content_one, #ticker_content_two
+{
+    height: 100%; /* Fixed vertical height for container */
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 4px; /* plus 1px border for total padding of 5px */
+  
+}
+#ticker_content_two
+{
+    display: none;
+}
+/* Navigation bar - buttons and page numbers */
+#ticker #ticker_nav
+{
+    position: absolute;
+    left: 5px;
+    bottom: 0%; /* Height of image + top padding */
+    height: 16px; /*width:286px;*/
+    margin: 0;
+    padding: 5px 2px;
+    background-color: #ccc;
+    color: #000;
+    z-index: 1000;
+    
+}
+#ticker #ticker_nav a
+{
+    margin: 0 3px;
+    padding: 2px 6px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+}
+#ticker #ticker_nav img
+{
+    vertical-align: top;
+}
+#ticker #ticker_nav a:hover
+{
+    background-color: #680213;
+    color: #fff;
+}
+
+#ticker #ticker_nav a.here
+{
+    background-color: #be102d;
+    color: #fff;
+}
+#ticker #ticker_nav a.button
+{
+    margin: 0;
+    background: none;
+}
+#ticker_content_one h3, #ticker_content_two h3
+{
+    width:230px;
+    float: left;
+    max-height: 70px;
+    overflow: hidden;
+}
+#ticker_content_one p, #ticker_content_two p
+{
+    width:210px;
+    float: left;
+    
+    overflow: hidden;
+}
+#ticker_content_one img, #ticker_content_two img
+{
+    float: left;
+}
+
+/* ================================================================= */

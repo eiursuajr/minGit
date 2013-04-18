@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorStatistics">Statistieken</string>
+	<string id="RadEditorNodeInspector">Eigenschappen inspector</string>
+	<string id="RadEditorDomInspector">Tag inspector</string>	
+	<string id="RadEditorHtmlInspector">Real-Time HTML</string>
+	<string id="StatisticsWords">Woorden:</string>
+	<string id="StatisticsCharacters">Karakters:</string>	
+	<string id="NodeInspectorSelectedElement">Het geselecteerde element is </string>	
+	<string id="NodeInspectorInvalidValue">Onjuiste waarde. Geen aub een nummer op.</string>	
+	<string id="className">Naam klasse</string>		
+	<string id="borderColor">Kleur rand</string>	
+	<string id="bgColor">Achtergrond</string>	
+	<string id="width">Breedte</string>
+	<string id="height">Hoogte</string>
+	<string id="align">Uitlijning</string>
+	<string id="vAlign">Vertikale uitlijnin</string>
+	<string id="cellSpacing">Cellspacing</string>
+	<string id="cellPadding">Cellpadding</string>
+	<string id="border">Dikte rand</string>
+	<string id="noWrap">Nowrap</string>
+	<string id="value">Waarde</string>
+	<string id="id">Id</string>
+	<string id="name">Naam</string>
+	<string id="href">URL</string>
+	<string id="title">ToolTip</string>
+	<string id="target">Doel</string>
+	<string id="alt">ToolTip</string>
+	<string id="_blank">Nieuw venters</string>
+	<string id="_self">Hetzelfde venster</string>
+	<string id="_parent">Hoofdvenster</string>
+	<string id="_top">Browser venster</string>
+	<string id="_search">Zoek pane</string>
+	<string id="_media">Media pane</string>
+	<string id="DomInspectorRemoveElement">Verwijder element</string>
+</localization>

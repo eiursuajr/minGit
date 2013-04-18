@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorXhtmlValidator">XHTML Validator</string>
+	<string id="RadEditorStatistics">Statistics</string>
+	<string id="RadEditorNodeInspector">Properties Inspector</string>
+	<string id="RadEditorDomInspector">Tag Inspector</string>
+	<string id="RadEditorHtmlInspector">Real-Time HTML View</string>
+	<string id="StatisticsWords">Words:</string>
+	<string id="StatisticsCharacters">Characters:</string>
+	<string id="NodeInspectorSelectedElement">The selected element is</string>
+	<string id="NodeInspectorInvalidValue">Invalid value. Please enter a number.</string>
+	<string id="className">Classname</string>
+	<string id="borderColor">Border colour</string>
+	<string id="bgColor">Background</string>
+	<string id="width">Width</string>
+	<string id="height">Height</string>
+	<string id="align">Alignment</string>
+	<string id="vAlign">Vertical Alignment</string>
+	<string id="cellSpacing">CellSpacing</string>
+	<string id="cellPadding">CellPadding</string>
+	<string id="border">Border Width</string>
+	<string id="noWrap">Nowrap</string>
+	<string id="value">Value</string>
+	<string id="id">Id</string>
+	<string id="name">Name</string>
+	<string id="href">URL</string>
+	<string id="title">ToolTip</string>
+	<string id="target">Target</string>
+	<string id="alt">ToolTip</string>
+	<string id="_blank">New Window</string>
+	<string id="_self">Same Window</string>
+	<string id="_parent">Parent Window</string>
+	<string id="_top">Browser Window</string>
+	<string id="_search">Search Pane</string>
+	<string id="_media">Media Pane</string>
+	<string id="DomInspectorRemoveElement">RemoveElement</string>
+	<string id="NAME">Name</string>
+	<string id="action">Action</string>
+	<string id="ValidateXHTML">Validate XHTML</string>
+	<string id="ExpandValidator">Expand Report Pane</string>
+	<string id="Doctype">Select Doctype</string>
+	<string id="rows">Rows</string>
+	<string id="cols">Columns</string>
+</localization>

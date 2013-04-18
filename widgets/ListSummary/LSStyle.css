@@ -1,0 +1,153 @@
+@import url("ektron.treeview.css");
+
+div.LSWidget
+{
+	overflow:auto;
+}
+
+div.LSEdit
+{
+	overflow: visible;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	min-width: 31em;
+	width: auto !important;
+	width: 31em;	
+}
+
+div.LSEdit div#ResultsToggle
+{
+	margin: .75em 0 .25em;
+	font-size: 80%;
+}
+
+
+/* TABS */
+div.LSEdit .LSTabInterface .ByFolder
+{
+	display: none;
+}
+
+div.LSEdit ul.LSTabWrapper
+{
+	list-style: none;
+    margin: 2px 0 0 0;
+    padding: 0;
+}
+
+div.LSEdit ul.LSTabWrapper li.LSTab
+{
+	float: left;
+	border: solid 1px #97A5B0;
+	background: #97A5B0;
+	margin: .25em 0 0 .25em;
+	padding: 0;
+	position: relative;
+	top: 1px;
+	z-index: 2;
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+	font-weight: bold;
+}
+
+div.LSEdit ul.LSTabWrapper li.LSTab a:hover
+{
+	background-color: #27537a;
+	color: #fff;
+}
+
+div.LSEdit ul.LSTabWrapper li.LSTab span, div.LSWidget ul.LSTabWrapper li.LSTab a
+{
+	display: inline-block;
+	padding: .25em .5em .1em .5em;
+	color: #fff;
+	text-decoration: none;
+}
+
+div.LSEdit ul.LSTabWrapper li.selected
+{
+	background-color: #fff;
+	border-bottom: solid 1px #fff;
+}
+
+div.LSEdit ul.LSTabWrapper li.selected a:hover
+{
+	background-color: #fff;
+}
+
+div.LSEdit ul.LSTabWrapper li.selected a, div.LSEdit ul.LSTabWrapper li.selected a:hover, div.LSEdit ul.LSTabWrapper li.selected span
+{	
+	color: #27537a;
+}
+
+div.LSEdit ul.LSTabWrapper li.selected a:active, div.LSEdit ul.LSTabWrapper li.selected a:focus, div.LSEdit ul.LSTabWrapper li.LSTab a:active, div.LSEdit ul.LSTabWrapper li.LSTab a:focus 
+{ 
+	outline: none;
+}
+
+div.LSEdit .LSTabInterface .LSTabPanel 
+{
+	min-width: 28em;
+	width: auto !important;
+	width: 28em;
+    border: 1px solid #97a5b0;
+    padding: .5em;
+    background: #fff;
+    overflow: auto;
+    height: 15em;
+    clear: both;
+}
+
+/*  Folder Tree */
+div.LSEdit .LSTabInterface .foldercontainer span.folder, .LSTabInterface .foldercontainer span.file 
+{ 
+	padding: 1px 0 1px 18px; 
+	display: block;
+}
+
+div.LSEdit .LSTabInterface .foldercontainer span.folder
+{
+	background-image: url('../../workarea/java/plugins/treeview/images/folder.gif'); 
+	background-position: 0 0;
+	background-repeat: no-repeat; 
+	cursor: pointer;
+	border: solid 1px transparent;
+}
+
+div.LSEdit .LSTabInterface .EktronFolderTree li.expandable>span.folder
+{ 
+	background-image: url('../../workarea/java/plugins/treeview/images/folder-closed.gif'); 
+}
+div.LSEdit .LSTabInterface .EktronFolderTree li.collapsable>span.folder 
+{
+	background-image: url('../../workarea/java/plugins/treeview/images/folder.gif'); 
+}
+
+div.LSEdit .LSTabInterface .EktronFolderTree span.selected
+{
+	display: inline-block;
+	padding-top: .25em;
+	padding-bottom: .25em;
+	padding-right: .25em;
+	margin-top: -.25em;
+	background-color:#E6EFC2; 
+	border:1px solid #C6D880; 
+	color: #529214;
+	background-position: 0 .25em;
+}
+
+div.LSEdit .LSTabInterface .EktronTreeview .hover
+{
+	color: inherit;
+}
+
+div.LSEdit .LSEditControls
+{
+	text-align: right;
+	margin: .25em 0 0;
+}
+
+
+/* Clearfix */
+div.LSEdit .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+div.LSEdit .clearfix {display:block;}

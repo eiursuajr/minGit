@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Copyright 2007 Ektron, Inc. -->
+<!-- Revision Date: 2007-Jan-06 -->
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=euc-kr">
+<title>eWebEditPro with WebImageFX Installation</title>
+<script language="JavaScript1.2" src="parseinstallparams.js" type="text/javascript"></script>
+<script language="JavaScript1.2" src="../ewebeditpro.js" type="text/javascript"></script>
+<style type="text/css">
+P { font-size : small; font-family : verdana, helvetica; }
+H1 { font-family : verdana, helvetica; }
+H2 { font-family : verdana, helvetica; }
+A { font-family : verdana, helvetica; }
+BODY { font-size : small; }
+</style>
+
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+var g_bWifxReady = false;
+var g_bEwepReady = false;
+var g_bSetTimeout = false;
+
+function ReloadParent()
+{
+	document.loadingMsg.style.visibility = "hidden";
+	if (top.opener && !top.opener.closed)
+	{
+		top.opener.location.reload();
+		setTimeout("self.close()", 5000);
+	}
+}
+function OnReadyHandler()
+{
+	g_bEwepReady = true;
+	if (true == g_bWifxReady && false == g_bSetTimeout)
+	{
+		g_bSetTimeout = true;
+		ReloadParent();
+	}
+}
+function OnWifxReadyHandler()
+{
+	if (false == g_bWifxReady)
+    {
+        g_bWifxReady = true;
+		if (true == g_bEwepReady && false == g_bSetTimeout) 
+		{
+			g_bSetTimeout = true;
+			ReloadParent();
+		}
+     }
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+<h2 align="center">
+eWebEditPro with WebImageFX <br/>자동으로 <br/>다운로드 및 설치하기
+</h2>
+
+<form method="post" action="#">
+<input type=hidden name="DoneMsg" value="&lt;p&gt; &lt;/p&gt;&lt;p align=center&gt;&lt;font face='Arial' size=4&gt;다운로드중, 기다리십시오...&lt;/font&gt;&lt;/p&gt;">
+<input type=hidden name="RestartMsg" value="&lt;p&gt; &lt;/p&gt;&lt;p align=center&gt;&lt;font face='Arial' size=4&gt;&amp;#49444;&amp;#52824;&amp;#47484; &amp;#50756;&amp;#47308;&amp;#54616;&amp;#44592; &amp;#50948;&amp;#54644; Windows&amp;#47484; &amp;#45796;&amp;#49884; &amp;#49884;&amp;#51089;&amp;#54616;&amp;#49901;&amp;#49884;&amp;#50724;.&lt;/font&gt;&lt;/p&gt;">
+
+<p align="center"><font size="-1">
+<img name="loadingMsg" src="loading.gif" alt="다운로드중, 기다리십시오..." width=234 height=30><br>
+<!-- "설치 완료"가 아래의 박스에 나타나면, 성공적으로 설치된 것입니다. -->
+</font></p>
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+	var sCaption = "   eWebEditPro client installed.";
+	var sWifxCaption = "   WebImageFX client installed.";
+	writeLoader(sCaption, sWifxCaption);
+// -->
+</script>
+<div id="Instructions" style="display:none">적색의 작은 <font color="red"><b>X</b></font> 마크가 나타나면, 다운로드를 시작하십시오 <a href="eWebEditProDefaults.clientInstall">클라이언트 설치 프로그램</a> 실행. </div>
+<p><font size="-1">
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+	var sHtml = document.getElementById("Instructions").innerHTML + " ";
+	if (typeof eWebEditProDefaults == "undefined") 
+	{
+		sHtml = sHtml.replace("eWebEditProDefaults.clientInstall", "ewebeditproclient.exe");
+	}
+	else
+	{
+		sHtml = sHtml.replace("eWebEditProDefaults.clientInstall", eWebEditProDefaults.clientInstall);
+	}
+	document.write(sHtml);
+// -->
+</script>
+</font></p>
+<p><font size="-1">
+자세한 도움이 필요하시면, <a href="http://www.ektron.com/support" target="_blank">Ektron 지원 페이지</a>를 방문하십시오.
+</font></p>
+</form>
+</body>
+</html>

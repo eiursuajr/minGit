@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Bildeegenskaper</string>
+	<string id="Bytes">bytes</string>
+	<string id="Customh">Egendefinert - </string>
+	<string id="PromptColor">Vennligst oppgi HEX verdi for egendefinert farge:</string>
+	<string id="Tab1HeaderText">Bildeegenskaper</string>
+	<string id="Tab2HeaderText">Bildeinformasjon</string>
+	<string id="Tab3HeaderText">Opprett Thumbnail</string>
+	<string id="BorderWidth">Ramme bredde:</string>
+	<string id="NoBorder">Ingen ramme</string>
+	<string id="BorderColor">Bredde farge:</string>
+	<string id="NoColor">Ingen farge</string>
+	<string id="Black">Svart</string>
+	<string id="Blue">Blå</string>
+	<string id="Green">Grønn</string>
+	<string id="Orange">Oransje</string>
+	<string id="Red">Rød</string>
+	<string id="White">Hvit</string>
+	<string id="Yellow">Gul</string>
+	<string id="Custom">Egendefinert</string>
+	<string id="ImageAlign">Bildejustering:</string>
+	<string id="AbsoluteBottom">Absolutt bunn</string>
+	<string id="AbsoluteMiddle">Absolutt midten</string>
+	<string id="Baseline">Basislinje</string>
+	<string id="Bottom">Bunn</string>
+	<string id="Left">Venstre</string>
+	<string id="Middle">Midten</string>
+	<string id="Right">Høyre</string>
+	<string id="TextTop">Tekst topp</string>
+	<string id="Top">Topp</string>
+	<string id="ImageWidth">Bilde bredde:</string>
+	<string id="ImageHeight">Bilde høyde:</string>
+	<string id="ImageSize">Bilde størrelse:</string>
+	<string id="FileName">Filnavn:</string>
+	<string id="Constrain">Innskrenk</string>
+	<string id="Width">Bredde:</string>
+	<string id="Height">Høyde:</string>
+	<string id="VerticalSpacing">Vertikal avstand:</string>
+	<string id="HorizontalSpacing">Horisontal avstand:</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Avbryt</string>
+	<string id="AddCustomColor">Legg til egendefinert farge...</string>
+	<string id="ImageLongDesc">Lang beskrivelse</string>
+	<string id="AddHexColor">Legg til Hex farge...</string>
+	<string id="ChangeImageSrc">Bildekilde:</string>
+</localization>

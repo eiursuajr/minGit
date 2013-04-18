@@ -1,0 +1,36 @@
+form {
+	padding-top:16px;
+	background-image:url(formtag.gif);
+	background-repeat:no-repeat;
+	background-position:left top; 
+}
+p {
+	padding-left:16px;
+	background-image:url(ptag.gif);
+	background-repeat:no-repeat;
+	background-position:left top; 
+}
+div {
+	border-left:dashed silver 1px;
+	padding-top:16px;
+	background-image:url(divtag.gif);
+	background-repeat:no-repeat;
+	background-position:left top;
+}
+span {
+	border-bottom:dashed silver 1px;
+	padding-left:34px; 
+	background-image:url(spantag.gif);
+	background-repeat:no-repeat;
+	background-position:left; 
+}
+a.bookmark {
+	visible:false;
+	width:18px; height:14px;
+	background-image:url(bkmrktag.gif);
+	background-repeat:no-repeat;
+	background-position:bottom; 
+	margin-bottom:1px;
+}
+
+

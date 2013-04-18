@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="AreaFieldSet">Egenskaper for valgt område</string>
+	<string id="ImageFieldSet">Bildeegenskaper</string>
+	<string id="Update">Oppdater område</string>
+	<string id="Remove">Fjern område</string>
+	<string id="RemoveAll">Fjern alt</string>
+	<string id="NewArea">Opprett område</string>
+	<string id="Left">Venstre</string>
+	<string id="Top">Topp</string>
+	<string id="Width">Bredde</string>
+	<string id="Height">Høyde</string>
+	<string id="Url">Url</string>
+	<string id="Target">Mål</string>
+	<string id="Comment">Kommentar</string>
+	<string id="ImageSrc">Bilde sti</string>
+	<string id="AlertInvalidProperties">Ugyldig egenskap!</string>
+	<string id="AlertInvalidAreaProperties">Ugyldig egenskap for område. Vennligst oppgi Url.</string>
+	<string id="AlertDeleteArea">Er du sikker på at du vil slette dette området.</string>
+	<string id="AlertDeleteAllAreas">Er du sikker på at du vil slette ALLE områder.</string>
+	<string id="AlertWrongAreaDimensions">Feil dimensjoner for område. Hopper over dette området.</string>	
+	<string id="ShapeAlt">Dra i høyre hjørnet i bunnen for å justere størrelsen.</string>
+	<string id="HowToAdd">Du kan dra musepekeren over bildet for å opprette et område.</string>
+	<string id="RectangleShapeName">Rektangel</string>
+	<string id="CircleShapeName">Sirkel</string>
+	<string id="PolygonShapeName">Polygon</string>
+	<string id="SelectImage">Vennligst velg et bilde for å opprette et bildekart.</string>
+	<string id="_blank">Nytt vindu</string>
+	<string id="_self">Samme vindu</string>
+	<string id="_parent">Overliggende vindu</string>
+	<string id="_top">Nettleser vindu</string>
+	<string id="_search">Søkefelt</string>
+	<string id="_media">Mediafelt</string>
+</localization>

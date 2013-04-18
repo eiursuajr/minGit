@@ -1,0 +1,10 @@
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li a.remove {top:7px;}
+
+/* widget content - overrides */
+div.EktronPersonalization div.widget div.content {overflow:visible !important;overflow-x:auto !important;overflow-y:hidden !important;padding-bottom:25px !important;}
+
+/* sortable - overrides */
+div.placeholder {background-image:url(images/dropzonepattern.png);border:1px solid #3769b1 !important;margin:10px !important;}
+div.ui-sortable-helper div.content {overflow-x:hidden !important;overflow:hidden !important;padding:1em !important;}
+
+div#targetContentZoneWrapper {margin-bottom:0;padding-bottom:250px;}

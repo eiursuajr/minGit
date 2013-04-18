@@ -1,0 +1,17 @@
+﻿/* Search Control Styles
+----------------------------------*/
+.ektron-ui-search { }
+
+.ektron-ui-search .advancedSearch { text-align: center; border: solid 1px #d3d3d3; padding: .5em; margin-top: .5em; background-color: #fff; }
+.ektron-ui-search .advancedSearch .advancedSearchFieldset { border:0 solid white; margin-bottom:1em; padding:0px; }
+.ektron-ui-search .advancedSearch .advancedSearchFieldset legend { color:Black; font-weight:bold; padding-top:.5em; }
+.ektron-ui-search .advancedSearch .ektron-ui-button a { margin: 1em auto;}
+
+.ektron-ui-search .advancedSearch ul { margin-right:1em; }
+.ektron-ui-search .advancedSearch ul li { margin-bottom:.25em; text-align:right; }
+.ektron-ui-search .advancedSearch ul li label { text-transform:lowercase; text-align:right; white-space:nowrap; }
+
+.ektron-ui-search .basicSearch { text-align:right; }
+.ektron-ui-search .basicSearch .ektron-ui-button.ui-state-disabled button { cursor: default; }
+.ektron-ui-search .basicSearch a.toggleAdvancedSearch { display: inline-block; line-height: 1.6em; vertical-align: middle;}
+.ektron-ui-search .basicSearch a.toggleAdvancedSearch .ui-icon { display: inline-block; }

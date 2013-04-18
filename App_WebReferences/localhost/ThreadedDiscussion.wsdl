@@ -1,0 +1,2372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:s2="http://tempuri.org/AbstractTypes" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetBoardCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="boardID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoardCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBoardCategoriesResult" type="tns:ArrayOfDiscussionCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDiscussionCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DiscussionCategory" nillable="true" type="tns:DiscussionCategory" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DiscussionCategory">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="BoardID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
+      <s:complexType name="AuthenticationHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Domain" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="RequestInfoParameters" type="tns:RequestInfoParameters" />
+      <s:complexType name="RequestInfoParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ContentLanguage" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetBoardForums">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="boardID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBoardForumsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBoardForumsResult" type="tns:ArrayOfDiscussionForum" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDiscussionForum">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DiscussionForum" nillable="true" type="tns:DiscussionForum" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DiscussionForum">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FolderData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ForumName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ForumTitle" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ModerateComments" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="LockForum" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastPosted" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastTopicID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastMessageID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastUserID" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastUsername" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="NumberofPosts" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="NumberofTopics" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="BoardID" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Topics" type="tns:ArrayOfDiscussionTopic" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FolderData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfFolderData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TemplateId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="ParentId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="NameWithPath" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPermissionsInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrivateContent" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsXmlInherited" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="XmlConfiguration" type="tns:ArrayOfXmlConfigData" />
+              <s:element minOccurs="0" maxOccurs="1" name="StyleSheet" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemplateFileName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsStyleSheetInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsTemplateInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="ApprovalMethod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChildFolders" type="tns:ArrayOfFolderData" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsMetaInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="HasChildren" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PublishPdfEnabled" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PublishPdfActive" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PublishHtmlActive" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Permissions" type="tns:PermissionData" />
+              <s:element minOccurs="0" maxOccurs="1" name="FolderMetadata" type="tns:ArrayOfContentMetaData" />
+              <s:element minOccurs="0" maxOccurs="1" name="FolderTemplates" type="tns:ArrayOfTemplateData" />
+              <s:element minOccurs="1" maxOccurs="1" name="TotalContent" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsDomainFolder" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="DomainStaging" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DomainProduction" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FolderType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSitemapInherited" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="SitemapPath" type="tns:ArrayOfSitemapPath" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReplicationMethod" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsCommunityFolder" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsTaxonomyInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsAliasInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="AliasRequired" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="FlagInheritedFrom" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsFlagInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CategoryRequired" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="FolderFlags" type="tns:ArrayOfFlagDefData" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsContentSearchableInheritedFrom" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsContentSearchableInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IscontentSearchable" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfFolderData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfFolderData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfFolderData" abstract="true" />
+      <s:complexType name="ArrayOfXmlConfigData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="XmlConfigData" nillable="true" type="tns:XmlConfigData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="XmlConfigData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EditXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaveXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XmlSchema" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XmlNameSpace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XmlAdvConfig" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateCreated" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayDateCreated" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastEditDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayLastEditDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="EditorFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EditorLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhysicalPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogicalPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageDisplayXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DesignStyleSheet" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDefault" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldList" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFolderData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FolderData" nillable="true" type="tns:FolderData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PermissionData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfPermissionData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CanApprove" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAdd" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEdit" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDelete" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanRestore" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddToImageLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddToFileLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanOverwriteLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddToHyperlinkLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddToQuicklinkLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddFolders" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditFolders" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDeleteFolders" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanTraverseFolders" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanCreateTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanRedirectTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDestructTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsReadOnly" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsCollections" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsAdmin" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsLoggedIn" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsInMemberShip" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsReadOnlyLib" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LegacyData" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanHistory" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanPublish" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanBreakPending" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanView" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditSummary" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanSeeProperty" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanPreview" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDecline" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditSumit" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditCollections" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDeleteTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanMetadataComplete" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditProperties" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditApprovals" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditQLinks" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfPermissionData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfPermissionData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfPermissionData" abstract="true" />
+      <s:complexType name="ArrayOfContentMetaData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ContentMetaData" nillable="true" type="tns:ContentMetaData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContentMetaData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfContentMetaData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DataType" type="tns:ContentMetadataDataType" />
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Required" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:ContentMetadataType" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsEditable" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Separator" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CaseSensitive" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RemoveDuplicate" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSearchAllowed" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsDisplayable" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="SelectableText" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AllowMultiple" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSelectableOnly" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="MetaDisplayEE" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="BlogMetaType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ObjectType" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfContentMetaData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfContentMetaData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfContentMetaData" abstract="true" />
+      <s:simpleType name="ContentMetadataDataType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="Number" />
+          <s:enumeration value="Byte" />
+          <s:enumeration value="Double" />
+          <s:enumeration value="Float" />
+          <s:enumeration value="Integer" />
+          <s:enumeration value="Long" />
+          <s:enumeration value="Short" />
+          <s:enumeration value="Date" />
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="SingleSelect" />
+          <s:enumeration value="MultiSelect" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ContentMetadataType">
+        <s:restriction base="s:string">
+          <s:enumeration value="HtmlTag" />
+          <s:enumeration value="MetaTag" />
+          <s:enumeration value="CollectionSelector" />
+          <s:enumeration value="ListSummarySelector" />
+          <s:enumeration value="ContentSelector" />
+          <s:enumeration value="ImageSelector" />
+          <s:enumeration value="LinkSelector" />
+          <s:enumeration value="FileSelector" />
+          <s:enumeration value="MenuSelector" />
+          <s:enumeration value="UserSelector" />
+          <s:enumeration value="SearchableProperty" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfTemplateData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TemplateData" nillable="true" type="tns:TemplateData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TemplateData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfTemplateData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TemplateName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:TemplateType" />
+              <s:element minOccurs="1" maxOccurs="1" name="SubType" type="tns:TemplateSubType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Thumbnail" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MasterLayoutID" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfTemplateData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfTemplateData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfTemplateData" abstract="true" />
+      <s:simpleType name="TemplateType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Default" />
+          <s:enumeration value="User" />
+          <s:enumeration value="Group" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="TemplateSubType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Default" />
+          <s:enumeration value="Workspace" />
+          <s:enumeration value="Photos" />
+          <s:enumeration value="Blog" />
+          <s:enumeration value="Wireframes" />
+          <s:enumeration value="Profile" />
+          <s:enumeration value="Calendar" />
+          <s:enumeration value="Forum" />
+          <s:enumeration value="MasterLayout" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfSitemapPath">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SitemapPath" nillable="true" type="tns:SitemapPath" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SitemapPath">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Order" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContentId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFlagDefData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FlagDefData" nillable="true" type="tns:FlagDefData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FlagDefData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="m_strName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="m_strDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="m_bHidden" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Hidden" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfFlagItemData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFlagItemData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FlagItemData" nillable="true" type="tns:FlagItemData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FlagItemData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagDefinitionID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagDefinitionLanguage" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFlags" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDiscussionTopic">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DiscussionTopic" nillable="true" type="tns:DiscussionTopic" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DiscussionTopic">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContentData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedByUserID" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatedbyUserName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Views" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Priority" type="tns:DiscussionObjPriority" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastPostedDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastMessageID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="Replies" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="AverageRating" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LockTopic" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContentData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContentBaseData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EditorFirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EditorLastName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DateModified" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayLastEditDate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DateCreated" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayDateCreated" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPermissionsInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PermissionInheritedFrom" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GoLive" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayGoLive" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPublished" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSearchable" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="XmlInheritedFrom" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="MetaData" type="tns:ArrayOfContentMetaData" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayEndDate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="EndDateActionType" type="tns:CMSEndDateAction" />
+              <s:element minOccurs="0" maxOccurs="1" name="XmlConfiguration" type="tns:XmlConfigData" />
+              <s:element minOccurs="0" maxOccurs="1" name="StyleSheet" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LanguageDescription" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Updates" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="FolderName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaText" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="HistoryId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="HyperLink" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemplateConfiguration" type="tns:TemplateData" />
+              <s:element minOccurs="1" maxOccurs="1" name="FlagDefId" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContentBaseData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsLocalizedDataOfContentBaseData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Teaser" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Html" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quicklink" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPrivate" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SubType" type="tns:CMSContentSubtype" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssetData" type="tns:AssetData" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsLocalizedDataOfContentBaseData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfContentBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="LanguageId" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfContentBaseData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfContentBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfContentBaseData" abstract="true" />
+      <s:simpleType name="CMSContentSubtype">
+        <s:restriction base="s:string">
+          <s:enumeration value="AllTypes" />
+          <s:enumeration value="Content" />
+          <s:enumeration value="PageBuilderData" />
+          <s:enumeration value="WebEvent" />
+          <s:enumeration value="PageBuilderMasterData" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="AssetData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MimeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MimeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileExtension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Icon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PluginType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublishPdfActive" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CMSEndDateAction">
+        <s:restriction base="s:string">
+          <s:enumeration value="Undefined" />
+          <s:enumeration value="Archive_Expire" />
+          <s:enumeration value="Archive_Display" />
+          <s:enumeration value="Refresh_Report" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DiscussionObjPriority">
+        <s:restriction base="s:string">
+          <s:enumeration value="Normal" />
+          <s:enumeration value="Sticky" />
+          <s:enumeration value="Announcement" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="boardpath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathResult" type="tns:DiscussionBoard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DiscussionBoard">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FolderData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Categories" type="tns:ArrayOfDiscussionCategory" />
+              <s:element minOccurs="0" maxOccurs="1" name="Forums" type="tns:ArrayOfDiscussionForum" />
+              <s:element minOccurs="1" maxOccurs="1" name="IPBanned" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ModerateComments" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequireAuthentication" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="TermsAndConditions" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AcceptedHTML" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AcceptedExtensions" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxFileSize" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LockBoard" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="boardID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDResult" type="tns:DiscussionBoard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDiscussionBoardString">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="boardID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="URLpath" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDiscussionBoardStringResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDiscussionBoardStringResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetForum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="forumid" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetForumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetForumResult" type="tns:DiscussionBoard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddReply">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:TaskData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TaskData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfTaskData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TaskTitle" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AssignedToUserID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="AssignToUserGroupID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="AssignorUserId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DueDate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContentID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="Priority" type="tns:TaskPriority" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateCreated" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayDateCreated" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateModified" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayDateModified" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ContentTitle" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssignedToUser" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssignedToUserGroup" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Assignor" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastComment" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastCommentUserID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedByUserID" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatedByUser" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LanguageID" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Language" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContentLanguage" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContentType" type="tns:CMSContentType" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaskTypeID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="ImpersonateUser" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="CommentDisplayName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CommentEmail" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CommentURI" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ParentID" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserInfo" type="tns:UserData" />
+              <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfTaskData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfTaskData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfTaskData" abstract="true" />
+      <s:simpleType name="TaskPriority">
+        <s:restriction base="s:string">
+          <s:enumeration value="Low" />
+          <s:enumeration value="Normal" />
+          <s:enumeration value="High" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CMSContentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="AllTypes" />
+          <s:enumeration value="Content" />
+          <s:enumeration value="Forms" />
+          <s:enumeration value="Archive_Content" />
+          <s:enumeration value="Archive_Forms" />
+          <s:enumeration value="Assets" />
+          <s:enumeration value="Archive_Assets" />
+          <s:enumeration value="LibraryItem" />
+          <s:enumeration value="Multimedia" />
+          <s:enumeration value="Archive_Media" />
+          <s:enumeration value="NonLibraryContent" />
+          <s:enumeration value="DiscussionTopic" />
+          <s:enumeration value="CatalogEntry" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="UserData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:UserBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="SessionId" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="LoginAttempts" type="s:short" />
+              <s:element minOccurs="0" maxOccurs="1" name="DateCreated" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastLoginDate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastPasswordChangeDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="AcceptedTerms" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserPreference" type="tns:UserPreferenceData" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsMemberShip" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LoginIdentification" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LanguageName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LanguageId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsDisableMessage" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsDeleted" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="EditorOption" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Rank" type="tns:UserRank" />
+              <s:element minOccurs="1" maxOccurs="1" name="AuthenticationTypeId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthenticationUserId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="AuthenticationToken" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AuthenticationTokenExpires" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="CustomProperties" type="tns:ArrayOfCustomAttribute" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="UserBaseData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfUserBaseData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Avatar" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Domain" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayUserName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Latitude" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="Longitude" type="s:double" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfUserBaseData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfUserBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfUserBaseData" abstract="true" />
+      <s:complexType name="UserPreferenceData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Template" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FolderPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayBorders" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayTitleText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FolderId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Width" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Height" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForceSetting" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageSize" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="UserRank">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Posts" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IconImage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartGroup" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AppliesTo" type="tns:ArrayOfFolderData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCustomAttribute">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomAttribute" nillable="true" type="tns:CustomAttribute" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomAttribute">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfCustomAttribute">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="PropertyValueId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Value" />
+              <s:element minOccurs="1" maxOccurs="1" name="ValueType" type="tns:CustomAttributeValueTypes" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsRequired" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TagType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsList" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="DoesAtrributeExist" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfCustomAttribute" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfCustomAttribute">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfCustomAttribute" abstract="true" />
+      <s:simpleType name="CustomAttributeValueTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="String" />
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="Numeric" />
+          <s:enumeration value="Date" />
+          <s:enumeration value="Notification" />
+          <s:enumeration value="Category" />
+          <s:enumeration value="CategoryProperties" />
+          <s:enumeration value="SelectList" />
+          <s:enumeration value="MultiSelectList" />
+          <s:enumeration value="ThreadedDiscussion" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AddReplyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddReplyResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="tns:TaskData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRepliesForTopics">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ForumID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetRepliesForTopicsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRepliesForTopicsResult" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="topicid" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTopicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTopicResult" type="tns:DiscussionBoard" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchReplies">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ForumIDs" type="tns:ArrayOfLong" />
+            <s:element minOccurs="0" maxOccurs="1" name="SearchTerms" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="stType" type="tns:SearchTypes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLong">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="long" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SearchTypes">
+        <s:restriction base="s:string">
+          <s:enumeration value="OrWords" />
+          <s:enumeration value="AndWords" />
+          <s:enumeration value="ExactPhrase" />
+          <s:enumeration value="ContainsWords" />
+          <s:enumeration value="None" />
+          <s:enumeration value="ContentId" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="EkTasks" />
+      <s:element name="SearchRepliesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchRepliesResult" type="tns:EkTasks" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBoard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BoardID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBoardResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteForum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="forumID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteForumResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeleteTopic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="topicid" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTopicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteTopicResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ForumID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="LanguageId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTopic_x0020_With_x0020_Language_x0020_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddTopic_x0020_With_x0020_Language_x0020_IDResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTopic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ForumID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTopicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddTopicResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBoard">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ParentID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequiresAuthentication" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="StyleSheet" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Categories" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBoardResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddBoardResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddForum">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BoardID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ModeratePosts" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="LockForum" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="SortOrder" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddForumResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddForumResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfDiscussionCategory" nillable="true" type="tns:ArrayOfDiscussionCategory" />
+      <s:element name="ArrayOfDiscussionForum" nillable="true" type="tns:ArrayOfDiscussionForum" />
+      <s:element name="DiscussionBoard" nillable="true" type="tns:DiscussionBoard" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="ArrayOfAnyType" nillable="true" type="tns:ArrayOfAnyType" />
+      <s:element name="EkTasks" nillable="true" type="tns:EkTasks" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="long" type="s:long" />
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema targetNamespace="http://tempuri.org/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBoardCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBoardCategories" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBoardCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardCategoriesAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardCategoriesRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardForumsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBoardForums" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardForumsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBoardForumsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardForumsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardForumsRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard By Board PathAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard By Board PathRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard By Board IDAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard By Board IDRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoardStringSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDiscussionBoardString" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoardStringSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDiscussionBoardStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoardStringAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoardStringRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetForumSoapIn">
+    <wsdl:part name="parameters" element="tns:GetForum" />
+  </wsdl:message>
+  <wsdl:message name="GetForumSoapOut">
+    <wsdl:part name="parameters" element="tns:GetForumResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetForumAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetForumRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddReplySoapIn">
+    <wsdl:part name="parameters" element="tns:AddReply" />
+  </wsdl:message>
+  <wsdl:message name="AddReplySoapOut">
+    <wsdl:part name="parameters" element="tns:AddReplyResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddReplyAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddReplyRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetRepliesForTopicsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRepliesForTopics" />
+  </wsdl:message>
+  <wsdl:message name="GetRepliesForTopicsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRepliesForTopicsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRepliesForTopicsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetRepliesForTopicsRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetTopicSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTopic" />
+  </wsdl:message>
+  <wsdl:message name="GetTopicSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTopicResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTopicAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetTopicRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="SearchRepliesSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchReplies" />
+  </wsdl:message>
+  <wsdl:message name="SearchRepliesSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchRepliesResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchRepliesAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="SearchRepliesRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBoardSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBoard" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBoardSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBoardResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBoardAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBoardRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="DeleteForumSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteForum" />
+  </wsdl:message>
+  <wsdl:message name="DeleteForumSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteForumResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteForumAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteForumRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTopicSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteTopic" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTopicSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteTopicResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTopicAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTopicRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddTopic_x0020_With_x0020_Language_x0020_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:AddTopic_x0020_With_x0020_Language_x0020_ID" />
+  </wsdl:message>
+  <wsdl:message name="AddTopic_x0020_With_x0020_Language_x0020_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:AddTopic_x0020_With_x0020_Language_x0020_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddTopic With Language IDAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddTopic With Language IDRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddTopicSoapIn">
+    <wsdl:part name="parameters" element="tns:AddTopic" />
+  </wsdl:message>
+  <wsdl:message name="AddTopicSoapOut">
+    <wsdl:part name="parameters" element="tns:AddTopicResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddTopicAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddTopicRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddBoardSoapIn">
+    <wsdl:part name="parameters" element="tns:AddBoard" />
+  </wsdl:message>
+  <wsdl:message name="AddBoardSoapOut">
+    <wsdl:part name="parameters" element="tns:AddBoardResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddBoardAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddBoardRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddForumSoapIn">
+    <wsdl:part name="parameters" element="tns:AddForum" />
+  </wsdl:message>
+  <wsdl:message name="AddForumSoapOut">
+    <wsdl:part name="parameters" element="tns:AddForumResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddForumAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddForumRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardCategoriesHttpGetIn">
+    <wsdl:part name="boardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardCategoriesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDiscussionCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardForumsHttpGetIn">
+    <wsdl:part name="boardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardForumsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDiscussionForum" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathHttpGetIn">
+    <wsdl:part name="boardpath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathHttpGetOut">
+    <wsdl:part name="Body" element="tns:DiscussionBoard" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDHttpGetIn">
+    <wsdl:part name="boardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DiscussionBoard" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoardStringHttpGetIn">
+    <wsdl:part name="boardID" type="s:string" />
+    <wsdl:part name="URLpath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoardStringHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForumHttpGetIn">
+    <wsdl:part name="forumid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForumHttpGetOut">
+    <wsdl:part name="Body" element="tns:DiscussionBoard" />
+  </wsdl:message>
+  <wsdl:message name="GetRepliesForTopicsHttpGetIn">
+    <wsdl:part name="ForumID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRepliesForTopicsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnyType" />
+  </wsdl:message>
+  <wsdl:message name="GetTopicHttpGetIn">
+    <wsdl:part name="topicid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTopicHttpGetOut">
+    <wsdl:part name="Body" element="tns:DiscussionBoard" />
+  </wsdl:message>
+  <wsdl:message name="SearchRepliesHttpGetIn">
+    <wsdl:part name="ForumIDs" type="s2:StringArray" />
+    <wsdl:part name="SearchTerms" type="s2:StringArray" />
+    <wsdl:part name="stType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchRepliesHttpGetOut">
+    <wsdl:part name="Body" element="tns:EkTasks" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBoardHttpGetIn">
+    <wsdl:part name="BoardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBoardHttpGetOut" />
+  <wsdl:message name="DeleteForumHttpGetIn">
+    <wsdl:part name="forumID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteForumHttpGetOut" />
+  <wsdl:message name="DeleteTopicHttpGetIn">
+    <wsdl:part name="topicid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTopicHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AddTopic_x0020_With_x0020_Language_x0020_IDHttpGetIn">
+    <wsdl:part name="ForumID" type="s:string" />
+    <wsdl:part name="Title" type="s:string" />
+    <wsdl:part name="Message" type="s:string" />
+    <wsdl:part name="LanguageId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddTopic_x0020_With_x0020_Language_x0020_IDHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="AddTopicHttpGetIn">
+    <wsdl:part name="ForumID" type="s:string" />
+    <wsdl:part name="Title" type="s:string" />
+    <wsdl:part name="Message" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddTopicHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="AddBoardHttpGetIn">
+    <wsdl:part name="ParentID" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Title" type="s:string" />
+    <wsdl:part name="RequiresAuthentication" type="s:string" />
+    <wsdl:part name="StyleSheet" type="s:string" />
+    <wsdl:part name="Categories" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="AddBoardHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="AddForumHttpGetIn">
+    <wsdl:part name="BoardID" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Description" type="s:string" />
+    <wsdl:part name="ModeratePosts" type="s:string" />
+    <wsdl:part name="LockForum" type="s:string" />
+    <wsdl:part name="SortOrder" type="s:string" />
+    <wsdl:part name="CategoryID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddForumHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardCategoriesHttpPostIn">
+    <wsdl:part name="boardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardCategoriesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDiscussionCategory" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardForumsHttpPostIn">
+    <wsdl:part name="boardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardForumsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfDiscussionForum" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathHttpPostIn">
+    <wsdl:part name="boardpath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathHttpPostOut">
+    <wsdl:part name="Body" element="tns:DiscussionBoard" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDHttpPostIn">
+    <wsdl:part name="boardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DiscussionBoard" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoardStringHttpPostIn">
+    <wsdl:part name="boardID" type="s:string" />
+    <wsdl:part name="URLpath" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetDiscussionBoardStringHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForumHttpPostIn">
+    <wsdl:part name="forumid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForumHttpPostOut">
+    <wsdl:part name="Body" element="tns:DiscussionBoard" />
+  </wsdl:message>
+  <wsdl:message name="GetRepliesForTopicsHttpPostIn">
+    <wsdl:part name="ForumID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRepliesForTopicsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAnyType" />
+  </wsdl:message>
+  <wsdl:message name="GetTopicHttpPostIn">
+    <wsdl:part name="topicid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetTopicHttpPostOut">
+    <wsdl:part name="Body" element="tns:DiscussionBoard" />
+  </wsdl:message>
+  <wsdl:message name="SearchRepliesHttpPostIn">
+    <wsdl:part name="ForumIDs" type="s2:StringArray" />
+    <wsdl:part name="SearchTerms" type="s2:StringArray" />
+    <wsdl:part name="stType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SearchRepliesHttpPostOut">
+    <wsdl:part name="Body" element="tns:EkTasks" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBoardHttpPostIn">
+    <wsdl:part name="BoardID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBoardHttpPostOut" />
+  <wsdl:message name="DeleteForumHttpPostIn">
+    <wsdl:part name="forumID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteForumHttpPostOut" />
+  <wsdl:message name="DeleteTopicHttpPostIn">
+    <wsdl:part name="topicid" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTopicHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="AddTopic_x0020_With_x0020_Language_x0020_IDHttpPostIn">
+    <wsdl:part name="ForumID" type="s:string" />
+    <wsdl:part name="Title" type="s:string" />
+    <wsdl:part name="Message" type="s:string" />
+    <wsdl:part name="LanguageId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddTopic_x0020_With_x0020_Language_x0020_IDHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="AddTopicHttpPostIn">
+    <wsdl:part name="ForumID" type="s:string" />
+    <wsdl:part name="Title" type="s:string" />
+    <wsdl:part name="Message" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddTopicHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="AddBoardHttpPostIn">
+    <wsdl:part name="ParentID" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Title" type="s:string" />
+    <wsdl:part name="RequiresAuthentication" type="s:string" />
+    <wsdl:part name="StyleSheet" type="s:string" />
+    <wsdl:part name="Categories" type="s2:StringArray" />
+  </wsdl:message>
+  <wsdl:message name="AddBoardHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="AddForumHttpPostIn">
+    <wsdl:part name="BoardID" type="s:string" />
+    <wsdl:part name="Name" type="s:string" />
+    <wsdl:part name="Description" type="s:string" />
+    <wsdl:part name="ModeratePosts" type="s:string" />
+    <wsdl:part name="LockForum" type="s:string" />
+    <wsdl:part name="SortOrder" type="s:string" />
+    <wsdl:part name="CategoryID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddForumHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:portType name="ThreadedDiscussionSoap">
+    <wsdl:operation name="GetBoardCategories">
+      <wsdl:input message="tns:GetBoardCategoriesSoapIn" />
+      <wsdl:output message="tns:GetBoardCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardForums">
+      <wsdl:input message="tns:GetBoardForumsSoapIn" />
+      <wsdl:output message="tns:GetBoardForumsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathSoapIn" />
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDSoapIn" />
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoardString">
+      <wsdl:input message="tns:GetDiscussionBoardStringSoapIn" />
+      <wsdl:output message="tns:GetDiscussionBoardStringSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForum">
+      <wsdl:input message="tns:GetForumSoapIn" />
+      <wsdl:output message="tns:GetForumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddReply">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Adds a reply</wsdl:documentation>
+      <wsdl:input message="tns:AddReplySoapIn" />
+      <wsdl:output message="tns:AddReplySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepliesForTopics">
+      <wsdl:input message="tns:GetRepliesForTopicsSoapIn" />
+      <wsdl:output message="tns:GetRepliesForTopicsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopic">
+      <wsdl:input message="tns:GetTopicSoapIn" />
+      <wsdl:output message="tns:GetTopicSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReplies">
+      <wsdl:input message="tns:SearchRepliesSoapIn" />
+      <wsdl:output message="tns:SearchRepliesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBoard">
+      <wsdl:input message="tns:DeleteBoardSoapIn" />
+      <wsdl:output message="tns:DeleteBoardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForum">
+      <wsdl:input message="tns:DeleteForumSoapIn" />
+      <wsdl:output message="tns:DeleteForumSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopic">
+      <wsdl:input message="tns:DeleteTopicSoapIn" />
+      <wsdl:output message="tns:DeleteTopicSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <wsdl:input name="AddTopic_x0020_With_x0020_Language_x0020_ID" message="tns:AddTopic_x0020_With_x0020_Language_x0020_IDSoapIn" />
+      <wsdl:output name="AddTopic_x0020_With_x0020_Language_x0020_ID" message="tns:AddTopic_x0020_With_x0020_Language_x0020_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <wsdl:input message="tns:AddTopicSoapIn" />
+      <wsdl:output message="tns:AddTopicSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBoard">
+      <wsdl:input message="tns:AddBoardSoapIn" />
+      <wsdl:output message="tns:AddBoardSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddForum">
+      <wsdl:input message="tns:AddForumSoapIn" />
+      <wsdl:output message="tns:AddForumSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ThreadedDiscussionHttpGet">
+    <wsdl:operation name="GetBoardCategories">
+      <wsdl:input message="tns:GetBoardCategoriesHttpGetIn" />
+      <wsdl:output message="tns:GetBoardCategoriesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardForums">
+      <wsdl:input message="tns:GetBoardForumsHttpGetIn" />
+      <wsdl:output message="tns:GetBoardForumsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathHttpGetIn" />
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDHttpGetIn" />
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoardString">
+      <wsdl:input message="tns:GetDiscussionBoardStringHttpGetIn" />
+      <wsdl:output message="tns:GetDiscussionBoardStringHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForum">
+      <wsdl:input message="tns:GetForumHttpGetIn" />
+      <wsdl:output message="tns:GetForumHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepliesForTopics">
+      <wsdl:input message="tns:GetRepliesForTopicsHttpGetIn" />
+      <wsdl:output message="tns:GetRepliesForTopicsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopic">
+      <wsdl:input message="tns:GetTopicHttpGetIn" />
+      <wsdl:output message="tns:GetTopicHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReplies">
+      <wsdl:input message="tns:SearchRepliesHttpGetIn" />
+      <wsdl:output message="tns:SearchRepliesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBoard">
+      <wsdl:input message="tns:DeleteBoardHttpGetIn" />
+      <wsdl:output message="tns:DeleteBoardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForum">
+      <wsdl:input message="tns:DeleteForumHttpGetIn" />
+      <wsdl:output message="tns:DeleteForumHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopic">
+      <wsdl:input message="tns:DeleteTopicHttpGetIn" />
+      <wsdl:output message="tns:DeleteTopicHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <wsdl:input name="AddTopic_x0020_With_x0020_Language_x0020_ID" message="tns:AddTopic_x0020_With_x0020_Language_x0020_IDHttpGetIn" />
+      <wsdl:output name="AddTopic_x0020_With_x0020_Language_x0020_ID" message="tns:AddTopic_x0020_With_x0020_Language_x0020_IDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <wsdl:input message="tns:AddTopicHttpGetIn" />
+      <wsdl:output message="tns:AddTopicHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBoard">
+      <wsdl:input message="tns:AddBoardHttpGetIn" />
+      <wsdl:output message="tns:AddBoardHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddForum">
+      <wsdl:input message="tns:AddForumHttpGetIn" />
+      <wsdl:output message="tns:AddForumHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="ThreadedDiscussionHttpPost">
+    <wsdl:operation name="GetBoardCategories">
+      <wsdl:input message="tns:GetBoardCategoriesHttpPostIn" />
+      <wsdl:output message="tns:GetBoardCategoriesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardForums">
+      <wsdl:input message="tns:GetBoardForumsHttpPostIn" />
+      <wsdl:output message="tns:GetBoardForumsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathHttpPostIn" />
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_PathHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDHttpPostIn" />
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID" message="tns:GetDiscussionBoard_x0020_By_x0020_Board_x0020_IDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoardString">
+      <wsdl:input message="tns:GetDiscussionBoardStringHttpPostIn" />
+      <wsdl:output message="tns:GetDiscussionBoardStringHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForum">
+      <wsdl:input message="tns:GetForumHttpPostIn" />
+      <wsdl:output message="tns:GetForumHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRepliesForTopics">
+      <wsdl:input message="tns:GetRepliesForTopicsHttpPostIn" />
+      <wsdl:output message="tns:GetRepliesForTopicsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopic">
+      <wsdl:input message="tns:GetTopicHttpPostIn" />
+      <wsdl:output message="tns:GetTopicHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchReplies">
+      <wsdl:input message="tns:SearchRepliesHttpPostIn" />
+      <wsdl:output message="tns:SearchRepliesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBoard">
+      <wsdl:input message="tns:DeleteBoardHttpPostIn" />
+      <wsdl:output message="tns:DeleteBoardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForum">
+      <wsdl:input message="tns:DeleteForumHttpPostIn" />
+      <wsdl:output message="tns:DeleteForumHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopic">
+      <wsdl:input message="tns:DeleteTopicHttpPostIn" />
+      <wsdl:output message="tns:DeleteTopicHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <wsdl:input name="AddTopic_x0020_With_x0020_Language_x0020_ID" message="tns:AddTopic_x0020_With_x0020_Language_x0020_IDHttpPostIn" />
+      <wsdl:output name="AddTopic_x0020_With_x0020_Language_x0020_ID" message="tns:AddTopic_x0020_With_x0020_Language_x0020_IDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <wsdl:input message="tns:AddTopicHttpPostIn" />
+      <wsdl:output message="tns:AddTopicHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBoard">
+      <wsdl:input message="tns:AddBoardHttpPostIn" />
+      <wsdl:output message="tns:AddBoardHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddForum">
+      <wsdl:input message="tns:AddForumHttpPostIn" />
+      <wsdl:output message="tns:AddForumHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ThreadedDiscussionSoap" type="tns:ThreadedDiscussionSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBoardCategories">
+      <soap:operation soapAction="http://tempuri.org/GetBoardCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBoardCategoriesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBoardCategoriesRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardForums">
+      <soap:operation soapAction="http://tempuri.org/GetBoardForums" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBoardForumsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBoardForumsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <soap:operation soapAction="http://tempuri.org/GetDiscussionBoard By Board Path" style="document" />
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDiscussionBoard By Board PathAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetDiscussionBoard By Board PathRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <soap:operation soapAction="http://tempuri.org/GetDiscussionBoard By Board ID" style="document" />
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDiscussionBoard By Board IDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetDiscussionBoard By Board IDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoardString">
+      <soap:operation soapAction="http://tempuri.org/GetDiscussionBoardString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetDiscussionBoardStringAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetDiscussionBoardStringRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForum">
+      <soap:operation soapAction="http://tempuri.org/GetForum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetForumAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetForumRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReply">
+      <soap:operation soapAction="http://tempuri.org/AddReply" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddReplyAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:AddReplyRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepliesForTopics">
+      <soap:operation soapAction="http://tempuri.org/GetRepliesForTopics" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetRepliesForTopicsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetRepliesForTopicsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopic">
+      <soap:operation soapAction="http://tempuri.org/GetTopic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetTopicAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetTopicRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReplies">
+      <soap:operation soapAction="http://tempuri.org/SearchReplies" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SearchRepliesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:SearchRepliesRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBoard">
+      <soap:operation soapAction="http://tempuri.org/DeleteBoard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteBoardAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:DeleteBoardRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForum">
+      <soap:operation soapAction="http://tempuri.org/DeleteForum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteForumAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:DeleteForumRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopic">
+      <soap:operation soapAction="http://tempuri.org/DeleteTopic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteTopicAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:DeleteTopicRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <soap:operation soapAction="http://tempuri.org/AddTopic With Language ID" style="document" />
+      <wsdl:input name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <soap:body use="literal" />
+        <soap:header message="tns:AddTopic With Language IDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:AddTopic With Language IDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <soap:operation soapAction="http://tempuri.org/AddTopic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddTopicAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:AddTopicRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBoard">
+      <soap:operation soapAction="http://tempuri.org/AddBoard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddBoardAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:AddBoardRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddForum">
+      <soap:operation soapAction="http://tempuri.org/AddForum" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddForumAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:AddForumRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ThreadedDiscussionSoap12" type="tns:ThreadedDiscussionSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBoardCategories">
+      <soap12:operation soapAction="http://tempuri.org/GetBoardCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBoardCategoriesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBoardCategoriesRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardForums">
+      <soap12:operation soapAction="http://tempuri.org/GetBoardForums" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBoardForumsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBoardForumsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <soap12:operation soapAction="http://tempuri.org/GetDiscussionBoard By Board Path" style="document" />
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDiscussionBoard By Board PathAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetDiscussionBoard By Board PathRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <soap12:operation soapAction="http://tempuri.org/GetDiscussionBoard By Board ID" style="document" />
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDiscussionBoard By Board IDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetDiscussionBoard By Board IDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoardString">
+      <soap12:operation soapAction="http://tempuri.org/GetDiscussionBoardString" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetDiscussionBoardStringAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetDiscussionBoardStringRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForum">
+      <soap12:operation soapAction="http://tempuri.org/GetForum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetForumAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetForumRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReply">
+      <soap12:operation soapAction="http://tempuri.org/AddReply" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddReplyAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:AddReplyRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepliesForTopics">
+      <soap12:operation soapAction="http://tempuri.org/GetRepliesForTopics" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetRepliesForTopicsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetRepliesForTopicsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopic">
+      <soap12:operation soapAction="http://tempuri.org/GetTopic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetTopicAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetTopicRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReplies">
+      <soap12:operation soapAction="http://tempuri.org/SearchReplies" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SearchRepliesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:SearchRepliesRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBoard">
+      <soap12:operation soapAction="http://tempuri.org/DeleteBoard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteBoardAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:DeleteBoardRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForum">
+      <soap12:operation soapAction="http://tempuri.org/DeleteForum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteForumAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:DeleteForumRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopic">
+      <soap12:operation soapAction="http://tempuri.org/DeleteTopic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteTopicAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:DeleteTopicRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <soap12:operation soapAction="http://tempuri.org/AddTopic With Language ID" style="document" />
+      <wsdl:input name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddTopic With Language IDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:AddTopic With Language IDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <soap12:operation soapAction="http://tempuri.org/AddTopic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddTopicAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:AddTopicRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBoard">
+      <soap12:operation soapAction="http://tempuri.org/AddBoard" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddBoardAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:AddBoardRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddForum">
+      <soap12:operation soapAction="http://tempuri.org/AddForum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddForumAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:AddForumRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ThreadedDiscussionHttpGet" type="tns:ThreadedDiscussionHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetBoardCategories">
+      <http:operation location="/GetBoardCategories" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardForums">
+      <http:operation location="/GetBoardForums" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <http:operation location="/GetDiscussionBoard By Board Path" />
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <http:operation location="/GetDiscussionBoard By Board ID" />
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoardString">
+      <http:operation location="/GetDiscussionBoardString" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForum">
+      <http:operation location="/GetForum" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepliesForTopics">
+      <http:operation location="/GetRepliesForTopics" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopic">
+      <http:operation location="/GetTopic" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReplies">
+      <http:operation location="/SearchReplies" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBoard">
+      <http:operation location="/DeleteBoard" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForum">
+      <http:operation location="/DeleteForum" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopic">
+      <http:operation location="/DeleteTopic" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <http:operation location="/AddTopic With Language ID" />
+      <wsdl:input name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <http:operation location="/AddTopic" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBoard">
+      <http:operation location="/AddBoard" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddForum">
+      <http:operation location="/AddForum" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ThreadedDiscussionHttpPost" type="tns:ThreadedDiscussionHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetBoardCategories">
+      <http:operation location="/GetBoardCategories" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardForums">
+      <http:operation location="/GetBoardForums" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <http:operation location="/GetDiscussionBoard By Board Path" />
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_Path">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoard">
+      <http:operation location="/GetDiscussionBoard By Board ID" />
+      <wsdl:input name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetDiscussionBoard_x0020_By_x0020_Board_x0020_ID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDiscussionBoardString">
+      <http:operation location="/GetDiscussionBoardString" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForum">
+      <http:operation location="/GetForum" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRepliesForTopics">
+      <http:operation location="/GetRepliesForTopics" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopic">
+      <http:operation location="/GetTopic" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchReplies">
+      <http:operation location="/SearchReplies" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBoard">
+      <http:operation location="/DeleteBoard" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForum">
+      <http:operation location="/DeleteForum" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTopic">
+      <http:operation location="/DeleteTopic" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <http:operation location="/AddTopic With Language ID" />
+      <wsdl:input name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="AddTopic_x0020_With_x0020_Language_x0020_ID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTopic">
+      <http:operation location="/AddTopic" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBoard">
+      <http:operation location="/AddBoard" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddForum">
+      <http:operation location="/AddForum" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ThreadedDiscussion">
+    <wsdl:port name="ThreadedDiscussionSoap" binding="tns:ThreadedDiscussionSoap">
+      <soap:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Content/ThreadedDiscussion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ThreadedDiscussionSoap12" binding="tns:ThreadedDiscussionSoap12">
+      <soap12:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Content/ThreadedDiscussion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ThreadedDiscussionHttpGet" binding="tns:ThreadedDiscussionHttpGet">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Content/ThreadedDiscussion.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ThreadedDiscussionHttpPost" binding="tns:ThreadedDiscussionHttpPost">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Content/ThreadedDiscussion.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+﻿li.PBItem div.RadScheduler { overflow:visible !important; }
+li.PBItem div.RadScheduler div.rsTopWrap { width : 100% !important; min-width:400px; }
+li.PBItem div.RadScheduler td.rsHorizontalHeaderWrapper > div { width : 100% !important;  }
+li.PBItem div.RadScheduler td.rsContentWrapper { width : 100% !important;  }
+li.PBItem div.RadScheduler td.rsContentWrapper > div { width : 100% !important; }
+li.PBItem div.RadScheduler div.rsContent { width : 100% !important; }
+.WarningNoEdit { color: Silver;}

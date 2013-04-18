@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xsd:include schemaLocation="../../ContentDesigner/fieldlist.xsd"/>
+
+	<xsd:element name="skeleton">
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="skip"/>
+			</xsd:sequence>
+			<xsd:anyAttribute namespace="urn:ektron:xliff" processContents="strict"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="AssetData">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Id"/>
+				<xsd:element name="Version"/>
+				<xsd:element name="MimeType"/>
+				<xsd:element name="FileName"/>
+			</xsd:sequence>
+			<xsd:anyAttribute namespace="urn:ektron:xliff" processContents="strict"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="ektdesignns_localize">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:any namespace="##any" processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="author" type="xsd:string" use="optional"/>
+			<xsd:attribute name="exclude" type="LocaleList" use="optional"/>
+			<xsd:attribute name="note" type="xsd:string" use="optional"/>
+			<xsd:attribute name="targets" type="LocaleList" use="optional"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:simpleType name="LocaleList">
+		<xsd:list>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:annotation>
+						<xsd:documentation>
+						langtag   = language
+									["-" script]
+									["-" region]
+									["-" privateuse]
+								  / "*-" region
+						language   = 2*3ALPHA ; shortest ISO 639 code
+						script     = 4ALPHA   ; ISO 15924 code
+						region 	   = 2ALPHA	; ISO 3166-1 code
+								   / 3DIGIT	; UN M.49 code
+						privateuse = "x" 1*("-" (1*8alphanum))
+						</xsd:documentation>
+					</xsd:annotation>
+					<xsd:pattern value="\*-([A-Z]{2}|[0-9]{3})"/>
+					<xsd:pattern value="[a-z]{2,3}(-[A-Za-z]{4})?(-([A-Z]{2}|[0-9]{3}))?(-x-[A-Za-z0-9]{1,8})?"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:list>
+	</xsd:simpleType>
+
+
+<!-- TODO
+	<xsd:element name="ekt:tu">
+		<xsd:complexType mixed="true">
+			<xsd:attribute name="ekt:id" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+-->
+
+</xsd:schema>

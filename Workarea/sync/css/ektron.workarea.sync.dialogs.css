@@ -1,0 +1,211 @@
+﻿.error, 
+.successWithWarning,
+.inProgress, 
+.success, 
+div.ektronSyncModal .waitDialog .waitMessage,
+ul#configurations li.selected div.profile, 
+div.upload, 
+div.download, 
+div.bidirectional, 
+.ektronSyncButtons a.button, 
+a.syncProfileNowButton, 
+a.deleteProfileButton, 
+a.lastSyncStatusButton, 
+a.previewStatusButton, 
+ul#configurations li.syncProfilesWrapper div.profile,
+div.syncWarning 
+{
+    background-image: url("../images/syncSprites.gif"); 
+    background-repeat: no-repeat;
+}
+
+.ektronSyncButtons a.backButton {background-position: -258px -180px;}
+.ektronSyncButtons a.buttonNoIcon {background-position: -1000px 0;}
+.ektronSyncButtons a.cancelButton {background-position: -338px -100px;}
+.ektronSyncButtons a.cancelButtonDisabled {background-position: -358px -80px; cursor: wait;}
+.ektronSyncButtons a.connectButton {background-position: -78px -360px;}
+.ektronSyncButtons a.connectingButton {background-position: 3px -440px; cursor: wait;}
+.ektronSyncButtons a.createButton {background-position: -278px -160px;}
+.ektronSyncButtons a.deleteButton {background-position: -665px -380px; margin-right: .5em;}
+.ektronSyncButtons a.nextButton {background-position: -238px -200px;}
+.ektronSyncButtons a.okButton {background-position:-298px -140px;}
+.ektronSyncButtons a.performSyncButton {background-position: -38px -400px;}
+.ektronSyncButtons a.syncDirectionButton {margin: 0 1em 0 0; background-position: -398px -40px}
+.ektronSyncButtons a.resolveSyncCollisionsButton {background-position: -238px -200px;}
+.ektronSyncButtons a.cancelResolveSyncCollisionsButton {background-position: -338px -100px;}
+.ektronSyncButtons a.resolveSyncCollisionsInProgressButton {background-position: 3px -440px; cursor: wait;}
+
+.messages {display: none; width: auto; margin-bottom: .5em;}
+.messagesCaption {display: none; width: auto; margin-bottom: .5em; font-size: 10px;}
+.messages span {display: block; margin: .25em; padding: 0 .25em 0 1.75em;}
+.error {background-color:#FBE3E4; border: 1px solid #FBC2C4; color:#D12F19; background-position: -378px -58px;}
+.inProgress {background-color:#DFF4FF; border: 1px solid #C2E1EF; color:#336699; background-position: 2px -440px}
+.success {background-color: #E6EFC2; border: 1px solid #C6D880; color:#529214; background-position: -298px -140px}
+.successWithWarning {background-color:#E6EFC2; border: 1px solid #C6D880; color:#529214; background-position: -475px -571px;}
+
+
+a.deleteProfileButton {display: block;  width: 20px; height: 20px; text-indent: -10000px; overflow: hidden; background-repeat: no-repeat; background-position: -320px -120px; float: left; margin: 0; border: solid 1px #fff;}
+a.syncProfileNowButton {display: block; width: 20px; height: 20px; text-indent: -10000px; overflow: hidden; background-repeat: no-repeat; background-position: -40px -400px; float: left; border: solid 1px #fff; margin: 0;}
+a.lastSyncStatusButton {display: block; width: 20px; height: 20px; text-indent: -10000px; overflow: hidden; background-repeat: no-repeat; background-position: -440px 0px; float: left; border: solid 1px #fff; margin: 0;}
+a.previewStatusButton {display: block; width: 20px; height: 20px; text-indent: -10000px; overflow: hidden; background-repeat: no-repeat; background-position: -420px -20px; float: left; border: solid 1px #fff; margin: 0;}
+a.resumeScheduleButton {display: block; width: 20px; height: 20px; text-indent: -10000px; overflow: hidden; background-repeat: no-repeat; background-position: center center; float: left; border: solid 1px #fff; margin: 0; background-image:url('../images/UI/Icons/controlPlayBlue.png')}
+a.pauseScheduleButton {display: block; width: 20px; height: 20px; text-indent: -10000px; overflow: hidden; background-repeat: no-repeat; background-position: center center; float: left; border: solid 1px #fff; margin: 0; background-image:url('../images/UI/Icons/controlPauseBlue.png')}
+
+.ektronSyncButtons a.markReviewedButton, .ektronSyncButtons a.markReviewedEmailButton {background-position:-298px -138px;}
+
+
+.ektronModalOverlay {position: absolute !important; background-color: #3F3F3F}
+
+div.ektronSyncModal {}
+div.ektronSyncModal, input, div.ektronModalBody table th, div.ektronModalBody table td {}
+div.ektronSyncModal .CreateSyncRelationshipWrapper {position: relative;}
+div.ektronSyncModal h3 {color: #444; font-weight: bold;}
+
+div.ektronSyncModal h4 {font-size: 1em; font-weight: normal; margin: .5em 0;}
+div.ektronSyncModal h4.replacingDatabase {margin-top: 1em;}
+div.ektronSyncModal fieldset {margin: 1em;}
+div.ektronSyncModal fieldset h4 {font-weight: bold;}
+div.ektronSyncModal table.ektronSyncTable td span.caption, .messages span.caption {font-size: smaller; display: block; margin: 0; padding: 0;}
+div.ektronSyncModal table.ektronSyncTable td span.caption, .messages span.warning {display: block; color: #FF9900; font-weight: bold; font-size: 1em;}
+div.ektronSyncModal table.ektronSyncTable th { border: solid 2px #ffffff; }
+div.ektronSyncModal table.ektronSyncTable td { border: solid 2px #ffffff; }
+
+.message span.caption {margin-top: .25em;}
+.messages span.warning {margin: 0; padding: 0;}
+
+div.ektronSyncModal input.textBox {width: 18em;}
+div.syncStatusMessages {border:1px solid #ddd; background: #fff; height: 15em; margin: 0 .25em; padding: .5em; overflow: auto; color: #336699;}
+div.syncStatusMessages span.error {background-color:transparent; border: 0px; color:#D12F19; background-image: none;}
+
+div#SyncStatusModal .ektronModalHeader {margin-top: 0;}
+div#SyncStatusModal .syncError {color:#D12F19; font-weight: bold; border-top: solid 1px #ddd; padding: .5em 0; margin-top: .75em; font-size: 1.1em;}
+div#SyncStatusModal .syncSuccess {color:#529214; font-weight: bold; border-top: solid 1px #ddd; padding: .5em 0; margin-top: .75em; font-size: 1.1em;}
+div#SyncStatusModal .stepProgress {padding-left:1em; font-size: .92em; color: #888;}
+div#SyncStatusModal .syncStatistics {border: solid 1px #aaa; background: #fff; font-size: .9em; margin: 1em 0 .25em;}
+div#SyncStatusModal .syncStatistics h5 {background: #aaa; padding: .25em .5em; margin: 0; font-weight: bold; color: #fff;}
+div#SyncStatusModal .syncStatistics p {margin: 0; padding: .5em .5em 0; line-height: 1.5em; color: #888;}
+div#SyncStatusModal .syncWarning {color:#F64818;background-position: -475px -575px; padding:0em 0em 0em 2em;}  
+
+div#ResolveSyncCollisionsModal .error {color:#D12F19; font-weight: bold; border-top: solid 1px #ddd; padding: .5em 0; margin-top: .75em; font-size: 1.1em;}
+div#ResolveSyncCollisionsModal .success {color:#529214; font-weight: bold; border-top: solid 1px #ddd; padding: .5em 0; margin-top: .75em; font-size: 1.1em;}
+
+.error {background-color:#FBE3E4; border: 1px solid #FBC2C4; color:#D12F19; background-position: -378px -58px;}
+
+.messages span { display:block; margin:0.25em; padding:0 0.25em 0 1.75em; }
+
+ul#remoteSites, ul#configurations {height: 18em; margin: 0; padding: 0;}
+ul#remoteSites li.hideRemoteMultiSites {display: none;}
+ul.server {margin: 1em 1em 0; padding: 0; list-style: none; border: solid 1px #c0c0c0; font-family: Arial, Verdana, sans-serif;} /* overflow:auto; */
+#directionRemoteServer, #directionLocalServer {border: 0 none;}
+#ShowSyncConfigModal ul#configurations {position: relative; overflow: auto;}
+div.ektronSyncModal fieldset ul.server {margin-top: .25em;}
+ul.server li {background-color: #cacaca; background-image: url(../images/serverSprites.gif); background-position: 0 -80px; background-repeat: no-repeat; overflow: hidden; margin: 0; padding: 0 0 .25em 24px; border: solid 1px #cacaca; border-bottom: solid 1px #ddd; }
+ul.server li.hover {background-color: #FFE7C2; border: solid 1px #FFE7C2; cursor: pointer;}
+ul.server li.upload {background-position: -40px -40px;}
+ul.server li.download {background-position: -60px -20px;}
+ul.server li.selected {background-color: #FFD492; background-position: -20px -60px; border: solid 1px #eb9855;}
+
+ul.server li h5 {font-size: 1.2em; margin: 0em 0 .1em; font-weight: bold;}
+ul.server li h5 span.caption {font-size: .6em; float:right; margin: .25em .5em; color: #8F8F8F;}
+ul.server li.relationshipNotSyncable 
+{
+	background-color: #ddd;
+	color: GrayText;
+}
+ul.server li.relationshipNotSyncable h5
+{
+	color: GrayText
+}
+ul#configurations li.relationshipNotEligibleMessage 
+{
+	position: relative;
+	margin-top: -2em;
+	font-size: 1.75em;
+	font-weight: bold;
+	color: #fff;
+	opacity: .75;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+	z-index: 4000;
+	text-align: center;
+	margin-bottom: .33em;
+}
+
+ul.server li ul.cmsInfo {width: 100%; margin: 0; padding: 0 0 .25em 0; list-style: none;}
+div#sync_viewallsynctable ul#sync_syncRelationshipsList {display: none;} /* overflow:auto; */
+ul.syncRelationships {border: 0px;}
+ul.syncRelationships li ul.cmsInfo {width: 100%;}
+ul.syncRelationships li.syncRelationship {border: solid 1px #c0c0c0; margin-top: 1em;}
+ul.syncRelationships li.first {margin-top: 0px;}
+ul.server li ul.cmsInfo li {background: transparent none; display: block; padding: 0; margin: 0 0 .1em 0; border: 0px; overflow: visible; font-size: .8em}
+ul.server li ul.cmsInfo li strong {font-weight:bolder;}
+ul.server li ul.cmsInfo li.integratedSecurity {text-transform: capitalize;}
+ul.server li.syncProfilesWrapper {background-image: none; background: #fff; border: 0px; margin-bottom: 1em; padding: 0px; } /* width: 100%; */
+ul#configurations li.syncProfilesWrapper {background: #eee; border: solid 1px transparent; border-bottom: solid 1px #c2e1ef; padding: .5em 0em; margin: 0em}
+div.upload {background-position: -200px -242px}
+div.download {background-position: -220px -222px}
+div.bidirectional {background-position: -180px -262px}
+ul#configurations li.syncProfilesWrapper div.profile {padding-left: 2.75em}
+ul#configurations li.syncProfilesWrapper div.upload {background-position: -197px -241px}
+ul#configurations li.syncProfilesWrapper div.bidirectional {background-position: -180px -262px}
+ul#configurations li.selected div.upload, ul#configurations li.selected div.bidirectional {background-position: -296px -142px;}
+ul.hasMultiSyncFolders li {padding-bottom: 4em;}
+
+ul#configurations li.hover {background-color: #FFE7C2; border: solid 1px #FFE7C2; border-bottom: solid 1px #c2e1ef; cursor: pointer;}
+ul#configurations li.selected {background-color: #ffd492; border: solid 1px #eb9855; background-position: -1000px -10px}
+ul#configurations li.relationshipselected {background-color: #FFD492; background-position: -20px -60px; border: solid 1px #eb9855;}
+
+div.ektronModalBody table {margin: 0 1.5em;}
+div.ektronModalBody table th {font-size: 12px; padding-right: 1em; padding-top: .25em;}
+div.ektronModalBody table th, div.ektronModalBody table td {vertical-align: top;}
+div.ektronModalBody fieldset {clear: both;}
+
+/*
+div.selectMultiSite {padding: .5em 1em; position: relative; top: -4.5em; margin-bottom: -2.5em;}
+div.selectMultiSite label {font-weight: bold; margin-right: .5em; padding-left: 33px; font-size: .8em}
+div.selectMultiSite select {font-size: .8em;width:25em;}
+div.selectMultiSite table {font-size: 1em; margin:0; padding:0;}
+div.selectRemoteMultiSite {display: none;}
+div.selectLocalMultiSite select.multiSitePathDropDown {display: none;width:25em;}
+*/
+
+div.siteSelections { margin-bottom: 15px; }
+
+table.syncProfiles {
+    width: 100%; 
+    border-spacing:0;
+    border-collapse: collapse; 
+    border: 2px solid #BBDDF6;
+    background-color: #fff; 
+    -moz-border-radius: 0px;
+}
+
+table.syncProfiles th {background: #d5e7f4; color: #555;}
+table.syncProfiles th, table.syncProfiles td {font-weight: normal; text-align: left; padding: .25em; border-width: 0px 1px 1px 1px; border-style: solid; border-color: #bbddf6; -moz-border-radius: 0px; font-size: 12px; font-family: Arial, Verdana, Sans-Serif; padding: .25em;}
+
+table.syncProfiles .buttons {font-size: 1em; width: 120px;}
+table.syncProfiles th a, table.syncProfiles td a {font-size: 12px;}
+table.syncProfiles td a.syncProfileName {font-size: 1em;}
+table.syncProfiles td a:active {color: inherit;}
+table.syncProfiles td.borderNone {border: 0px;}
+table.syncProfiles td span.syncCompleted {color: #529214;}
+table.syncProfiles td span.syncFailed {color: #D12F19;}
+table.syncProfiles td p.nextSyncTime {color: #529214;}
+
+div.ektronModalBody span.defaultPort {font-size: smaller; color: #888;}
+div.ektronModalBody ul.directionInfo {margin: 0px; padding: 0px; border-width: 0px;}
+
+div#CreateSyncRelationshipModal #step2of3, div#CreateSyncRelationshipModal #step3of3 {display: none;}
+
+select#selectConfigs {position: absolute; left: -10000px;}
+
+.ektronModalButtonWrapper li {display: inline; background-image: none;  background-color: transparent;}
+
+.serverInfoLabel {font-weight: bold; margin-right: 5px;}
+.boolean { text-transform:capitalize; }
+
+#step3of3 select { width: 200px; margin-left: 10px; }
+.cmsInfoHeader { text-align: right; }
+.cmsInfoHeader label { font-weight: bold; }
+
+span.statusTime { color: #a0a0a0; vertical-align: middle; font-size: 11px; margin-right: 10px;}
+.success.dcc {padding-left:25px;}

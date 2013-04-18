@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorXhtmlValidator">XHTML Verifierare</string>
+	<string id="RadEditorStatistics">Statistik</string>
+	<string id="RadEditorNodeInspector">Egenskaper Undersökaren</string>
+	<string id="RadEditorDomInspector">Tag Undersökaren</string>	
+	<string id="RadEditorHtmlInspector">Real-Time HTML Vy</string>
+	<string id="StatisticsWords">Ord:</string>
+	<string id="StatisticsCharacters">Tecken:</string>	
+	<string id="NodeInspectorSelectedElement">Det valda elementet är </string>	
+	<string id="NodeInspectorInvalidValue">Ej korrekt värde. Ange ett nummer.</string>	
+	<string id="className">CLASS Namn</string>		
+	<string id="borderColor">Kantlinje färg</string>	
+	<string id="bgColor">Bakgrundsfärg</string>	
+	<string id="width">Bredd</string>
+	<string id="height">Höjd</string>
+	<string id="align">Justering</string>
+	<string id="vAlign">Vertikal justering</string>
+	<string id="cellSpacing">Cellmellanrum</string>
+	<string id="cellPadding">Cellutfyllnad</string>
+	<string id="border">Kantbredd</string>
+	<string id="noWrap">Ingen radbrytning</string>
+	<string id="value">Värde</string>
+	<string id="id">Id</string>
+	<string id="name">Namn</string>
+	<string id="href">URL</string>
+	<string id="title">Tips</string>
+	<string id="target">Mål</string>
+	<string id="alt">Tips</string>
+	<string id="_blank">Nytt Fönster</string>
+	<string id="_self">Samma plats i fönster</string>
+	<string id="_parent">Överliggande Fönster</string>
+	<string id="_top">Samma Fönster</string>
+	<string id="_search">Sök yta</string>
+	<string id="_media">Media yta</string>
+	<string id="DomInspectorRemoveElement">Ta bort Element</string>
+	<string id="NAME">Namn</string>
+	<string id="action">Kommando</string>	
+	<string id="ValidateXHTML">Validera XHTML</string>
+	<string id="ExpandValidator">Expandera Rapport ytan</string>
+	<string id="Doctype">Välj dokument typ</string>
+	<string id="rows">Rader</string>
+	<string id="cols">Kolumner</string>
+</localization>

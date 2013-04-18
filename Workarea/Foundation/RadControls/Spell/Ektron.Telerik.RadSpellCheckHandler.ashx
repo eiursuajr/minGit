@@ -1,0 +1,1 @@
+<%@ WebHandler language="c#" Class="Ektron.Telerik.WebControls.SpellCheckHandler" %>

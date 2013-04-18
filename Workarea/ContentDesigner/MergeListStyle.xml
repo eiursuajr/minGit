@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ektronmergelist xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+	<liststyle name="bulletedList">
+		<itemtemplate>
+			<ul ektdesignns_list="true">
+				<li>
+					<ektdesignns_mergefield />
+				</li>
+			</ul>
+		</itemtemplate>
+	</liststyle>
+	<liststyle name="numberedList">
+		<itemtemplate>
+			<ol ektdesignns_list="true">
+				<li>
+					<ektdesignns_mergefield />
+				</li>
+			</ol>
+		</itemtemplate>
+	</liststyle>
+	<liststyle name="horzTable">
+		<itemtemplate>
+			<table border="1">
+				<tr ektdesignns_list="true">
+					<td>
+						<ektdesignns_mergefield />
+					</td>
+				</tr>
+			</table>
+		</itemtemplate>
+	</liststyle>
+	<liststyle name="vertTable">
+		<itemtemplate>
+			<table ektdesignns_list="true" border="1">
+				<tr>
+					<td>
+						<ektdesignns_mergefield />
+					</td>
+				</tr>
+			</table>
+		</itemtemplate>
+	</liststyle>
+	<liststyle name="headingList">
+		<itemtemplate>
+			<h3>
+				<ektdesignns_mergefield />
+			</h3>
+		</itemtemplate>
+	</liststyle>
+	<liststyle name="delimitedList">
+		<xslt>
+			<xsl:for-each select="$xpath">
+				<xsl:if test="position() != 1">, </xsl:if>
+				<xsl:variable name="value" select="."/>
+				<xsl:for-each select="$datalist[1]"> <!-- set context for key() -->
+					<xsl:variable name="displayValue" select="key($datalistKey, $value)"/>
+					<xsl:choose>
+						<xsl:when test="$displayValue">
+							<xsl:value-of select="$displayValue"/>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:value-of select="$value"/>
+						</xsl:otherwise>
+					</xsl:choose>
+				</xsl:for-each>
+			</xsl:for-each>
+		</xslt>
+	</liststyle>
+</ektronmergelist>

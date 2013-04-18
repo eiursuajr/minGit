@@ -1,0 +1,4 @@
+.ektron-ui-dateField {position: relative; display: inline-block;}
+.ektron-ui-dateField label {display: none;}
+.ektron-ui-dateField label.inFieldLabel {display: inline; position:absolute ; top: 0; left: .25em; cursor: text; color: #888; margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+

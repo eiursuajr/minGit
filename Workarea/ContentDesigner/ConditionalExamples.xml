@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items name="conditional">
+	<Item Value="$deviceConfiguration = {X}" localeRef="sCondDevice"/>
+	<Item Value="not($deviceConfiguration = {X})" localeRef="sCondNotDevice"/>
+	<Item Value="$currentDate &gt;= 'yyyy-MM-dd'" localeRef="sCondDateAfter"/>
+	<Item Value="$currentDate &lt;= 'yyyy-MM-dd'" localeRef="sCondDateBefore"/>
+	<Item Value="$currentDate &gt;= 'yyyy-MM-dd' and $currentDate &lt;= 'yyyy-MM-dd'" localeRef="sCondDateRange"/>
+	<!--<Item Value="substring-after($currentDateTime,'T') &gt;= 'hh:mm:ssZ'" localeRef="sCondTime"/>-->
+	<Item Value="$userId != '0'" localeRef="sCondLoggedIn"/>
+	<Item Value="$userId = '0'" localeRef="sCondNotLoggedIn"/>
+	<Item Value="false()" localeRef="sCondNever"/>
+	<Item Value="true()" localeRef="sCondAlways"/>
+</Items>

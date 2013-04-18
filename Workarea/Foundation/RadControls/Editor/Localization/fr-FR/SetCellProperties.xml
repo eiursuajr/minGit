@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Title">Propriétés de cellule</string>
+  <string id="Tab1HeaderText">Propriétés de cellule</string>
+  <string id="Dimensions">Dimensions</string>
+  <string id="Height">Hauteur :</string>
+  <string id="Width">Largeur :</string>
+  <string id="ContentAlignment">Alignement du contenu</string>
+  <string id="Horizontal">Horizontal :</string>
+  <string id="Left">Gauche</string>
+  <string id="Center">Centre</string>
+  <string id="Right">Droite</string>
+  <string id="Vertical">Vertical :</string>
+  <string id="Middle">Milieu</string>
+  <string id="Top">Haut</string>
+  <string id="Bottom">Bas</string>
+  <string id="Baseline">Sur la ligne</string>
+  <string id="Background">Arrière plan</string>
+  <string id="UseColor">Couleur :</string>
+  <string id="Black">Noir</string>
+  <string id="Blue">Bleu</string>
+  <string id="Green">Vert</string>
+  <string id="Orange">Orange</string>
+  <string id="Red">Rouge</string>
+  <string id="White">Blanc</string>
+  <string id="Yellow">Jaune</string>
+  <string id="Custom">Personnalisée</string>
+  <string id="Customh">Personnalisée - </string>
+  <string id="Additional">Supplémentaire</string>
+  <string id="NoWrapping">Aucun renvoi à la ligne</string>
+  <string id="Style">Style :</string>
+  <string id="MessageStyle">Vous devez inscrire un attribut de style valide.</string>
+  <string id="PromptColor">Vous devez saisir une couleur au format HEX :</string>
+  <string id="InvalidCellWidth">La largeur de la cellule est invalide.</string>
+  <string id="InvalidCellHeight">La hauteur de la cellule est invalide.</string>
+</localization>

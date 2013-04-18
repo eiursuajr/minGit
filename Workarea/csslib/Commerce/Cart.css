@@ -1,0 +1,97 @@
+.EktWordWrap 
+{
+	/* Word-Wrap support for IE, FireFox, and Safari */
+	/* (will be supported by more as they adopt CSS 3.0) */
+	word-wrap: break-word; 
+	-moz-binding: url('../xml/moz_wordwrap.xml#wordwrap'); /* add support for FireFox 2.0 */
+}
+.EktronCartCtl{position: relative;top: 0px;left: 0px;}
+.EktronCartCtl .error{color: #ff0000;}
+.EktronCartCtl .noSavedCarts{color: brown;}
+.EktronCartCtl .duplicateEvent{color: #00ff00;}
+div.EktronCartWrapper {width:60em;margin:0 auto;}
+div.EktronCartWrapper img {border:none;}
+div.EktronCartWrapper table {	width:100%;margin:0em 0em 1em 0em;font-family:Arial, Helvetica, Tahoma, Verdana, sans-serif;border-collapse:collapse;}
+div.EktronCartWrapper table caption {line-height:40px;padding:10px 0px 10px 55px;background-position:0px 5px;background-repeat:no-repeat;text-align:left;margin:0;font-weight:bold;font-size:1.5em;}
+div.EktronCartWrapper table.savedCarts caption {background-image:url('../../images/application/commerce/shoppingcart_full.gif');}
+div.EktronCartWrapper table tr {background-color:white;}
+div.EktronCartWrapper table tr.stripe {background-color:#F2F0F5;}
+div.EktronCartWrapper table th {background-color:#4c4f53;line-height:20px;border:1px solid silver;padding:.25em;background-image:url('../../images/application/commerce/th.gif');background-position:0px 0px;background-repeat:repeat-x;color:white; white-space: nowrap;}
+div.EktronCartWrapper table th a {font-weight:normal;}
+div.EktronCartWrapper table td {text-align:center;border:1px solid silver;padding:.25em;}
+div.EktronCartWrapper table .alignRight {text-align:right;}
+div.EktronCartWrapper table .alignLeft {text-align:left;}
+div.EktronCartWrapper table .textSmall {font-size:.75em;}
+div.EktronCartWrapper table a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.EktronCartWrapper table a.paypalbutton {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;}
+div.EktronCartWrapper table a.googlebutton {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;}
+div.EktronCartWrapper table a.buttonLeft {float:left;}
+div.EktronCartWrapper table a.buttonRight {float:right;}
+div.EktronCartWrapper table a.buttonInline {display:inline;}
+div.EktronCartWrapper table a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.EktronCartWrapper table a.renameCart img {margin:0 3px -1px 3px !important;padding-left:3px;}
+div.EktronCartWrapper table .BrowserIE7 a.renameCart {display: inline-block;}
+div.EktronCartWrapper table .BrowserIE7 span.label {position: relative; left: 0; top: -5px; padding-right: 5px;}
+div.EktronCartWrapper table a.button:hover {border:1px solid #fbc2c4;color:#d12f19;}
+div.EktronCartWrapper table a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.EktronCartWrapper table a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.EktronCartWrapper table a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+div.EktronCartWrapper table div.buttonRight {float:right;}
+div.EktronCartWrapper table div.divButton {display:inline;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.EktronCartWrapper table.cartTable caption {border-bottom:1px dotted silver;}
+div.EktronCartWrapper table.cartTable caption {background-image:url('../../images/application/commerce/shoppingcart.gif');}
+div.EktronCartWrapper table.cartTable thead th.nowrap {white-space:nowrap !important;}
+div.EktronCartWrapper table.cartTable thead tr.rowCartData th {background-image:none;line-height:60px;margin:0;padding:1.75em 0em 1.5em 0em;color:#4c4c4c;background-color:white;border:none;}
+div.EktronCartWrapper table.cartTable thead tr.rowCartData th.cartActions div.cartActionsListWrapper {position:relative; top: 0px; left: 0px;z-index:0;}			
+div.EktronCartWrapper table.cartTable thead tr.rowCartData th.cartActions div.cartActionsListWrapper ul.cartActionsList {position:absolute;right:0;top:-1em;list-style-type:none;margin:0;padding:0;}
+div.EktronCartWrapper table.cartTable thead tr.rowCartData th.cartActions div.cartActionsListWrapper ul.cartActionsList li {display:inline;}
+div.EktronCartWrapper table.cartTable thead tr.rowCartData th.cartActions div.cartActionsListWrapper ul.cartActionsList li a {margin-left:10px;}
+div.EktronCartWrapper table tfoot tr td {background-image:url('../../images/application/commerce/tfoot.gif');background-position:0px 0px;background-repeat:repeat;}
+div.EktronCartWrapper table tfoot tr td.noBackgroundImage {background-image:none;}
+div.EktronCartWrapper table tfoot tr.rowSubtotal td {font-weight:bold;}
+div.EktronCartWrapper table tfoot td input.zipCode {width:4em;text-align:right;margin:0 auto;}
+div.EktronCartWrapper table tfoot tr td.noBorderTop {border-top:none;}
+div.EktronCartWrapper table tfoot tr td.noBorderTopBottom {border-top:none;border-bottom:none;}
+div.EktronCartWrapper table tfoot tr.rowContinueShopping td {background-image:none;border-top:1px solid silver;border-right:none;border-left:none;border-bottom:1px dotted silver;padding:15px 0px;}
+div.EktronCartWrapper table tfoot tr.rowContinueShopping td.continueShopping,
+div.EktronCartWrapper table tfoot tr.rowContinueShopping td.checkout {border-top:1px solid silver;}
+div.EktronCartWrapper table tfoot tr.rowContinueShopping td.checkout div.checkoutActionsWrapper {position:relative;z-index:0;}			
+div.EktronCartWrapper table tfoot tr.rowContinueShopping td.checkout div.checkoutActionsWrapper ul.checkoutActionsList {position: relative; top: 0; right: 0;list-style-type:none;margin:0;padding:0;}
+div.EktronCartWrapper table tfoot tr.rowContinueShopping td.checkout div.checkoutActionsWrapper ul.checkoutActionsList li {display:inline;}
+div.EktronCartWrapper table tfoot tr.rowContinueShopping td.checkout div.checkoutActionsWrapper ul.checkoutActionsList li a {margin-left:10px;}
+div.EktronCartWrapper table tfoot tr.rowAdvisoryMessage td {color: #ff0000; background-image:none;border-top:1px solid silver;border-right:none;border-left:none;border-bottom:1px dotted silver;padding:15px 0px;}
+div.EktronCartWrapper table tbody td a {color:blue;text-decoration:none;}
+div.EktronCartWrapper table tbody td a:hover {color:blue;text-decoration:underline;}
+div.EktronCartWrapper table tbody td a:visited {color:blue;}
+div.EktronCartWrapper table tbody td.colItemImage {text-align:center; vertical-align: middle;}
+div.EktronCartWrapper table tbody td.colItemImage img {float:none;}
+div.EktronCartWrapper table tbody td.colItemName {width:40%;text-align:left;}
+div.EktronCartWrapper table tbody .colItemNameKitNames { margin-left: 10px;}
+div.EktronCartWrapper table tbody td.colProductId {width:10%;}
+div.EktronCartWrapper table tbody td.colQty {width:10%;}
+div.EktronCartWrapper table tbody td.colItemPrice {width:10%;}
+div.EktronCartWrapper table tbody td.colEarlyPrice {width:10%;}
+div.EktronCartWrapper table tbody td.colTotal {width:20%;}
+div.EktronCartWrapper table tbody td.colCartName {width:45%;text-align:left;}
+div.EktronCartWrapper table tbody td.colLastModified {width:30%;}
+div.EktronCartWrapper table tbody td.colCartItems {width:10%;}
+div.EktronCartWrapper table tbody td.colcartSubtotal {width:15%;}
+div.EktronCartWrapper table tbody td.colQty input.productQtyText {width:2em;text-align:right;margin:0 auto;}
+div.EktronCartWrapper table tbody td.colDiscountCoupon{text-align: right;}
+div.EktronCartWrapper table tbody td img.removeFromCart {white-space: nowrap;}
+div.EktronCartWrapper table tbody td span.couponCode{font-weight: bolder; font-style: italic; color: #0000ff;}
+div.EktronCartWrapper table tbody td span.couponDiscountAmount{color: #ff0000;}
+div.EktronCartWrapper .emptyCart {text-align: left; font-weight: bold; color: #ff0000;}
+div.EktronCartWrapper .noSavedCarts {text-align: center; color: #000000;}
+div.EktronCartWrapper .divButton img {padding-left: 0.5em;}
+div.EktronCartWrapper table div.ApplyCouponUI {margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 11px 7px 24px;position: absolute;top: -2px;right: 0px;height: 30px;}
+div.EktronCartWrapper .ApplyCouponUI span {padding-right: 10px;}
+div.EktronCartWrapper .ApplyCouponUI .ApplyCouponField {width: 200px;}
+div.EktronCartWrapper .ApplyCouponUI img {padding-left: 0.5em;}
+div.EktronCartWrapper .removeCoupon {padding-left: 0.6em;}
+/* start for IE */
+body div.EktronCartWrapper table div.BrowserIE6 {left: -20px;}
+body div.EktronCartWrapper table.cartTable thead tr.BrowserIE6 {height:50px;}
+body div.EktronCartWrapper table.cartTable thead tr th {height:30px;}
+body div.EktronCartWrapper .rowCartData .cartActions div.BrowserIE {height:1px;margin-top: 0px;}
+/* end for IE */

@@ -1,0 +1,237 @@
+/*****************************************************************************************/
+/*                                                                                       */
+/*                         Internal Calendar Styles                                      */
+/*              (Used with the pop-up calendar in the Workarea)                          */
+/*                                                                                       */
+/*****************************************************************************************/
+	/* The cells at the beginning or end  */
+    /* of the month that do not contain   */
+    /* days.                              */
+	.mup_nonMonthCell {
+		border: none;
+		text-align: center;
+		overflow: hidden;
+		text-indent: -10000px;
+	}
+	/***************************************/
+	/* The weekend day cell.               */
+	.mup_weekendCell {
+		background: #DFEFFC url('ektrontheme/images/ui-bg_glass_85_dfeffc_1x400.png') repeat-x scroll 50% 50%;
+		font-size: .9em;
+		font-weight: bold;
+		color: #2e6e9e;
+		text-align: right;
+		border: solid 1px #c5dbec;
+		cursor: pointer;
+		padding: .25em;
+		border-spacing: 1px;		
+	}
+	/****************************************/
+	/* The week day cell.                   */
+	.mup_weekdayCell {
+		background: #DFEFFC url('ektrontheme/images/ui-bg_glass_85_dfeffc_1x400.png') repeat-x scroll 50% 50%;
+		font-size: .9em;
+		font-weight: bold;
+		color: #2e6e9e;
+		text-align: right;
+		border: solid 1px #c5dbec;
+		cursor: pointer;
+		padding: .25em;
+		border-spacing: 1px;
+	}
+	.mup_weekdayEventCell {
+
+	}
+	.mup_weekenddayEventCell {
+
+	}
+	.mup_weekendEventCell {
+
+	}
+	/****************************************/
+	/* Weekend day of week header.          */
+	.mup_weekendDOWHeader {
+		font-weight: bold;
+		padding: .5em 0;
+		border: none;
+		text-align: center;
+	}
+	/****************************************/
+	/* Weekday day of week header.          */
+	.mup_weekdayDOWHeader {
+		font-weight: bold;
+		padding: .5em 0;
+		border: none;
+		text-align: center;
+	}
+	/****************************************/
+	/* The year selection cell.             */
+	.mup_yearFooter
+	{
+		font-weight: Bold;
+		font-size: .9em;
+		text-align: center;
+		padding: .25em 0;
+	}
+	
+	.mup_yearFooter a
+	{
+		display: inline-block;
+		margin: 0 .5em;
+		padding: .5em .75em;
+		border: solid 1px #C5DBEC;
+		color: #2E6E9E;
+		text-decoration: none;
+		background: #DFEFFC url('ektrontheme/images/ui-bg_glass_85_dfeffc_1x400.png) repeat-x scroll 50% 50%') repeat-x scroll 50% 50%
+	}
+	
+	.mup_yearFooter a:hover
+	{
+		border: solid 1px #79b7e7;
+		color: #1d5987;
+		text-decoration: none;
+		background: #DFEFFC url('ektrontheme/images/ui-bg_glass_75_d0e5f5_1x400.png') repeat-x scroll 50% 50%
+	}
+	
+	/****************************************/
+	/* The border around the month header.  */
+	.mup_monthHeaderBorder 
+	{
+		line-height: 1.8em;
+		padding: .2em 0;
+		background: #5C9CCC url('ektrontheme/images/ui-bg_gloss-wave_55_5c9ccc_500x100.png') repeat-x scroll 50% 50%;
+	
+		font-weight: Bold;
+		font-size: 10pt;
+		border-right: #aaaaaa 1px solid;
+		border-top: #aaaaaa 1px solid;
+		border-bottom: #aaaaaa 1px solid;
+		border-left: #aaaaaa 1px solid;
+		text-align: center;
+	}
+	/****************************************/
+	/* The month header.                    */
+	.mup_monthHeader {
+		line-height: 1.8em;	
+		color: #fff;	
+		font-weight: Bold;
+		font-size: .9em;
+		text-align: center;
+	}
+	/****************************************/
+	/* The previous button, on the month    */
+    /*  header.                             */
+	.mup_monthHeaderPrev {
+		width: 20px;
+	}
+	
+	.mup_monthHeaderPrev a
+	{
+		display: block; 
+		text-indent: -10000px;
+		width: 16px;
+		height: 16px;
+		margin-left: 4px;
+		background-image: url('ektrontheme/images/ui-icons_d8e7f3_256x240.png');
+		background-repeat: no-repeat;
+		background-position: -80px -192px;
+		text-decoration: none;
+		overflow: hidden;
+	}
+	
+	.mup_monthHeaderPrev a:hover 
+	{
+		background-image: url('ektrontheme/images/ui-icons_217bc0_256x240.png');
+		background-color: #BED5EB;
+	}
+	
+	/****************************************/
+	/*	The next button, on the month       */
+    /*  header.                             */
+	.mup_monthHeaderNext {
+		width: 20px;
+	}
+	.mup_monthHeaderNext a 
+	{
+		display: block; 
+		text-indent: -10000px;
+		width: 16px;
+		height: 16px;
+		margin-right: 4px;
+		background-image: url('ektrontheme/images/ui-icons_d8e7f3_256x240.png');
+		background-repeat: no-repeat;
+		background-position: -48px -192px;
+		text-decoration: none;
+		overflow: hidden;
+	}
+	
+	.mup_monthHeaderNext a:hover
+	{
+		background-image: url('ektrontheme/images/ui-icons_217bc0_256x240.png');
+		background-color: #BED5EB;
+	}
+	
+	
+	.mup_eventDispBkg {
+
+	}
+	
+	.mup_eventDisplay {
+
+	}
+	.mup_eventDisplayDate {
+
+	}
+	.mup_eventDisplayEventTitle {
+
+	}
+	.mup_eventDisplayLocation {
+
+	}
+	.mup_eventDisplayTimes {
+
+	}
+	.mup_eventDisplayTimes {
+
+	}
+	.mup_eventDisplayLongDesc {
+
+	}
+	.mup_hiddenEvent {
+		visibility: hidden;
+		position: absolute;
+		display: none;
+	}
+	/****************************************/
+	/* The selected date.                   */
+	.mup_selectedDate {
+		background: #FBEC88 url('ektrontheme/images/ui-bg_flat_55_fbec88_40x100.png') repeat-x scroll 50% 50%;	
+		font-weight: bold;
+		font-size: .9em;
+		text-align: right;
+		padding: .25em;
+		border: 1px solid #FAD42E;
+		color: #363636;
+	}
+	/****************************************/
+	/* This class should not be changed     */
+	.mup_noShow {
+		position: absolute;
+		visibility: hidden;
+	}
+
+/* overrides for internal styling in the workarea*/
+form>table
+{
+	margin: auto;
+}
+form>table>tbody>tr>td>table
+{
+	padding: .2em;
+	margin:	0;
+	font-size: .9em;
+	color: #222;
+	border: 1px solid #A6C9E2;
+	border-collapse: separate;
+	border-spacing: 1px;
+}

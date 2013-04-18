@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Image Manager</string>
+	<string id="ConfirmLink">Link thumbnail to original image?</string>
+	<string id="ConfirmDelete">Are you sure you want to delete the selected file?\nThe selected image may be in use. If deleted, some pages will not be displayed properly.\nPress \"OK\" to confirm deletion.</string>
+	<string id="AlertImage">Please, provide image file to upload!</string>
+	<string id="AlertExists">Such image file already exists in this directory!</string>
+	<string id="AlertDimensions">Please, provide either thumbnail width or thumbnail height.</string>
+	<string id="AlertWidth">Please, provide valid image width.</string>
+	<string id="AlertHeight">Please, provide valid image height.</string>
+	<string id="MessageNothingPost">Please, provide an image file!</string>
+	<string id="MessageValid">Please, provide a valid image file!</string>
+	<string id="MessageSize">Provided image file exceeds max size allowed!</string>
+	<string id="MessagePermission">You don't have permission to access this page or your cookie has expired!<br/>Please, refresh the page!</string>
+	<string id="Tab1HeaderText">Browse Files</string>
+	<string id="Tab2HeaderText">Upload Image</string>
+	<string id="ImageFile">Image File:</string>
+	<string id="ImageURL">Image URL:</string>
+	<string id="Preview">Preview</string>
+	<string id="Loading">Loading...</string>
+	<string id="CreateThumbnail">Create Thumbnail:</string>
+	<string id="Yes">Yes</string>
+	<string id="No">No</string>
+	<string id="Width">Width:</string>
+	<string id="Height">Height:</string>
+	<string id="Constrain">Constrain</string>
+	<string id="KeepOriginalImage">Keep Original Image:</string>
+	<string id="LoadingImagePrompt">Loading image. Please wait...</string>
+	<string id="BestFit">Best Fit</string>
+	<string id="ActualSize">Actual Size</string>
+	<string id="ZoomIn">Zoom In</string>
+	<string id="ZoomOut">Zoom Out</string>
+	<string id="ChooseFileToInsert">Please, choose a file to insert</string>
+	<string id="CreateThumbnailIconTitle">Create Thumbnail</string>
+	<string id="LinkToOriginal">Link to original</string>
+	<string id="OpenOriginalInBlank">Open original in new window</string>
+	<string id="NoImageSelectedToInsert">Please, choose an image to be inserted!</string>
+</localization>

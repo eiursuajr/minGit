@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Copyright 2007 Ektron, Inc. -->
+<!-- Revision Date: 2007-Jan-06 -->
+<html>
+<head>
+<title>eWebEditPro with WebImageFX Installatie</title>
+<script language="JavaScript1.2" src="parseinstallparams.js" type="text/javascript"></script>
+<script language="JavaScript1.2" src="../ewebeditpro.js" type="text/javascript"></script>
+<style type="text/css">
+P { font-size : small; font-family : verdana, helvetica; }
+H1 { font-family : verdana, helvetica; }
+H2 { font-family : verdana, helvetica; }
+A { font-family : verdana, helvetica; }
+BODY { font-size : small; }
+</style>
+
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+var g_bWifxReady = false;
+var g_bEwepReady = false;
+var g_bSetTimeout = false;
+
+function ReloadParent()
+{
+	document.loadingMsg.style.visibility = "hidden";
+	if (top.opener && !top.opener.closed)
+	{
+		top.opener.location.reload();
+		setTimeout("self.close()", 5000);
+	}
+}
+function OnReadyHandler()
+{
+	g_bEwepReady = true;
+	if (true == g_bWifxReady && false == g_bSetTimeout)
+	{
+		g_bSetTimeout = true;
+		ReloadParent();
+	}
+}
+function OnWifxReadyHandler()
+{
+	if (false == g_bWifxReady)
+    {
+        g_bWifxReady = true;
+		if (true == g_bEwepReady && false == g_bSetTimeout) 
+		{
+			g_bSetTimeout = true;
+			ReloadParent();
+		}
+     }
+}
+//-->
+</script>
+
+ </head>
+
+ <body>
+ 
+<h2 align="center">
+eWebEditPro with WebImageFX <br/>Automatische <br/>download en installatie 
+</h2>
+ <form method="post" action="#">
+<input type=hidden name="DoneMsg" value="&lt;p&gt; &lt;/p&gt;&lt;p align=center&gt;&lt;font face='Arial' size=4&gt;Bezig met downloaden, even geduld s.v.p....&lt;/font&gt;&lt;/p&gt;">
+<input type=hidden name="RestartMsg" value="&lt;p&gt; &lt;/p&gt;&lt;p align=center&gt;&lt;font face='Arial' size=4&gt;Herstart Windows om de installatie te voltooien.&lt;/font&gt;&lt;/p&gt;">
+ <p align="center"><font size="-1">
+<img name="loadingMsg" src="loading.gif" alt="Bezig met downloaden, even geduld s.v.p...." width=234 height=30><br>
+<!-- Indien succesvol, verschijnen de woorden "Installatie voltooid" in het venster hieronder. --></font></p>
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+	var sCaption = "   eWebEditPro client installed.";
+	var sWifxCaption = "   WebImageFX client installed.";
+	writeLoader(sCaption, sWifxCaption);
+// -->
+</script>
+<div id="Instructions" style="display:none">Wanneer er een kleine rode <font color="red"><b>X</b></font> verschijnt, probeer dan het <a href="eWebEditProDefaults.clientInstall">client installatie programma</a> te downloaden en dit te laten draaien.</div>
+<p><font size="-1">
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+	var sHtml = document.getElementById("Instructions").innerHTML + " ";
+	if (typeof eWebEditProDefaults == "undefined") 
+	{
+		sHtml = sHtml.replace("eWebEditProDefaults.clientInstall", "ewebeditproclient.exe");
+	}
+	else
+	{
+		sHtml = sHtml.replace("eWebEditProDefaults.clientInstall", eWebEditProDefaults.clientInstall);
+	}
+	document.write(sHtml);
+// -->
+</script>
+</font></p>
+<p><font size="-1">
+Bezoek <a href="http://www.ektron.com/support" target="_blank">Ektron's help pagina</a>voor verdere assistentie. 
+</font></p>
+</form>
+ </body>
+</html>

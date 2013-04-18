@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Tab1HeaderText">Recherche</string>
+  <string id="Title">Trouver &amp; remplacer</string>
+  <string id="Tab2HeaderText">Remplacer</string>
+  <string id="SearchText">Trouver :</string>
+  <string id="FindNext">Trouver le suivant</string>
+  <string id="Replace">Remplacer</string>
+  <string id="ReplacementText">Remplacer avec :</string>
+  <string id="ReplaceAll">Remplacer tout</string>
+  <string id="SearchIn">Rechercher :</string>
+  <string id="SearchEntireText">Tout le texte</string>
+  <string id="SearchSelection">Selection seulement</string>
+  <string id="SearchDirection">Direction :</string>
+  <string id="MatchCase">Respecter la casse</string>
+  <string id="WholeWordsOnly">Respecter seulement les mots complets</string>
+  <string id="SearchUp">En haut</string>
+  <string id="SearchDown">En bas</string>
+  <string id="OK">OK</string>
+  <string id="Cancel">Annuler</string>
+  <string id="SearchCriteriaNotSpecified">Pas de critères de recherche</string>
+  <string id="NoSearchTarget">Pas de contenu à rechercher</string>
+  <string id="FinishedSearching">Ektron eWebEdit400 a fini la recherche</string>
+  <string id="AndHasMade">et a fait</string>
+  <string id="Replacements">remplacements.</string>
+	<string id="ektron">Ektron Editor Starts</string>
+	<string id="Close">Close</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

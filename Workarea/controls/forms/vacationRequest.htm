@@ -1,0 +1,32 @@
+<div><h1>Absence Report Form</h1>
+<p><label contenteditable="true" for="Name" unselectable="off">Name:</label>&#160;<input id="Name" onblur="design_validate_re(/\S+/,this,'Cannot be blank');" title="Name" alt="Name" maxlength="2000" name="Name" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Cannot be blank" ektdesignns_validation="string-req" ektdesignns_caption="Name" ektdesignns_name="Name" ektdesignns_nodetype="element" /></p>
+<p><label contenteditable="true" for="EmployeeID" unselectable="off">Employee ID:</label>&#160;<input id="EmployeeID" onblur="design_validate_re(/\S+/,this,'Cannot be blank');" title="Employee ID" alt="Employee ID" maxlength="2000" name="EmployeeID" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Cannot be blank" ektdesignns_validation="string-req" ektdesignns_caption="Employee ID" ektdesignns_name="EmployeeID" ektdesignns_nodetype="element" /></p>
+<p><label contenteditable="true" for="Dept" unselectable="off">Dept:</label>&#160;<input id="Dept" onblur="design_validate_re(/\S+/,this,'Cannot be blank');" title="Dept" alt="Dept" maxlength="2000" name="Dept" ektdesignns_basetype="text" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Cannot be blank" ektdesignns_validation="string-req" ektdesignns_caption="Dept" ektdesignns_name="Dept" ektdesignns_nodetype="element" /></p>
+<p>Reason for Absence:</p>
+<ektdesignns_choices id="Reason" ektdesignns_name="Reason" ektdesignns_caption="Reason" title="Reason" ektdesignns_nodetype="element" name="Reason"><ol class="design_list_vertical" onkeypress="design_validate_choice(1, -1, this, 'Options are required.')" onblur="design_validate_choice(1, -1, this, 'Options are required.')" title="Reason" contenteditable="false" onclick="design_validate_choice(1, -1, this, 'Options are required.')" unselectable="on" ektdesignns_validation="choice-req" ektdesignns_minoccurs="1" ektdesignns_maxoccurs="1">
+<li><input id="ID140F0" title="Floating Holiday" type="radio" value="Floating Holiday" name="Reason" ektdesignns_nodetype="item" /><label contenteditable="true" for="ID140F0" unselectable="off">Floating Holiday</label></li>
+<li><input id="ID17385B" title="Vacation" type="radio" value="Vacation" name="Reason" ektdesignns_nodetype="item" /><label contenteditable="true" for="ID17385B" unselectable="off">Vacation</label></li>
+<li><input id="IDF6292" title="Sick Day" type="radio" value="Sick Day" name="Reason" ektdesignns_nodetype="item" /><label contenteditable="true" for="IDF6292" unselectable="off">Sick Day</label></li>
+</ol>
+</ektdesignns_choices><table class="show_design_border" bordercolor="#4668dd" width="100%" bgcolor="#ffffff" summary="Absence Report Time Frame">
+<caption>Date(s) of Absence</caption>
+<tbody>
+<tr>
+<td width="150"><div align="right">From:</div></td>
+<td><ektdesignns_calendar id="Date_Begin" ektdesignns_name="Date_Begin" ektdesignns_caption="Date Begin" title="Date Begin" ektdesignns_nodetype="element" ektdesignns_validation="date-req" ektdesignns_basetype="calendar" ektdesignns_validate="re:/^([0-9]{4}\-(0[1-9]|1[0-2])\-(0[1-9]|[1-2][0-9]|3[0-1]))$/" ektdesignns_invalidmsg="Cannot be blank" onblur="design_validate_re(/^([0-9]{4}\-(0[1-9]|1[0-2])\-(0[1-9]|[1-2][0-9]|3[0-1]))$/,this,'Cannot be blank');" name="Date_Begin"><input readonly="readonly" size="30" unselectable="on" />&#160;<img class="design_fieldbutton" height="16" alt="Select Date" src="[srcpath]btncalendar.gif" width="16" unselectable="on" />&#160;</ektdesignns_calendar></td>
+<td></td>
+</tr>
+<tr>
+<td><p align="right">Until:</p>
+</td>
+<td><ektdesignns_calendar id="Date_End" ektdesignns_name="Date_End" ektdesignns_caption="Date End" title="Date End" ektdesignns_nodetype="element" name="Date_End"><input readonly="readonly" size="30" unselectable="on" />&#160;<img class="design_fieldbutton" height="16" alt="Select Date" src="[srcpath]btncalendar.gif" width="16" unselectable="on" />&#160;</ektdesignns_calendar></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<br />
+<p>Total Days Absent: <input id="day_pay" onblur="design_validate_re(/^\d*$/,this,'Non-negative whole number or blank');" title="day pay" alt="day pay" maxlength="2000" name="day_pay" ektdesignns_basetype="number" ektdesignns_validate="re:/^\d*$/" ektdesignns_invalidmsg="Non-negative whole number or blank" ektdesignns_validation="nonNegInt" ektdesignns_caption="day pay" ektdesignns_name="day_pay" ektdesignns_nodetype="element" />with pay <input id="day_no_pay" onblur="design_validate_re(/^\d*$/,this,'Non-negative whole number or blank');" title="day no pay" alt="day no pay" maxlength="2000" name="day_no_pay" ektdesignns_basetype="number" ektdesignns_validate="re:/^\d*$/" ektdesignns_invalidmsg="Non-negative whole number or blank" ektdesignns_validation="nonNegInt" ektdesignns_caption="day no pay" ektdesignns_name="day_no_pay" ektdesignns_nodetype="element" /> without pay</p>
+<p><label contenteditable="true" for="comments" unselectable="off">Comments:</label><br /><textarea id="comments" title="comments" name="comments" rows="5" cols="70" ektdesignns_caption="comments" ektdesignns_name="comments" ektdesignns_nodetype="element"></textarea>
+</p>
+<p align="center"><input type="submit" value="Submit" name="btnsubmit" /></p>
+</div>

@@ -1,0 +1,39 @@
+.ektronAutocomplete 
+{
+	background:url(img/shadow.png) no-repeat bottom right; 
+	position:absolute; 
+	top:0px; 
+	left:0px; 
+	margin:8px 0 0 6px; 
+}
+.ektronAutocomplete .autocomplete 
+{
+	border:1px solid #999; 
+	background:#FFF; 
+	cursor:default; 
+	text-align:left;
+	min-height:1.25em; 
+	max-height:350px; 
+	overflow:auto; 
+	margin:-6px 6px 6px -6px;
+	
+}
+	 
+	 
+	 
+.ektronAutocomplete .autocomplete .selected { background:#F0F0F0; }
+.ektronAutocomplete .autocomplete div { padding:2px 5px; white-space:nowrap; }
+.ektronAutocomplete .autocomplete strong { font-weight:normal; color:#3399FF; }
+
+.EkActivityFeedPreferenceList{list-style: none;}
+.EkActivityFeedPreferenceList li.PreferenceListItem {font-size:small;font-family:MS Reference Sans Serif; font-weight:bold;padding-bottom:.5em;}
+.EkActivityFeedPreferenceList li.PreferenceListItem span.name {margin-right:.5em;}
+.EkActivityFeedPreferenceList li.PreferenceListItem a.PreferenceListDel {float:right;display:block;height:16px;width:16px;text-indent: 1000px;background-image : url(../../../workarea/images/UI/Icons/delete.png); background-repeat:no-repeat; font-size:xx-small;} 
+.EkActivityFeedPreferenceList li.PreferenceListItem a.PreferenceListDel:hover {text-decoration:none;}
+.EkActivityFeedPreferenceList li.PreferenceListItem a.PreferenceListDel span {display:none;}
+
+
+
+/*Filter*/
+.ekActivityFilterSearch {color:Gray; font-style:italic;}   
+.EkActivityFeedPrefenceSelection input.textbox {width: 200px;}  

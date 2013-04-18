@@ -1,0 +1,107 @@
+/***************************************************************/
+/* The area where the report appears.                          */
+TABLE.tblreport
+{
+	border:0px;
+	border-collapse: collapse;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+	width: 100%;
+}
+/***************************************************************/
+/* The Refresh Reuslts link that appears below the report.     */
+A.refreshlink
+{
+	color : black;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 9px;
+}
+/***************************************************************/
+/* The Refresh Reuslts link as you are clicking on it.         */
+A.refreshlink:ACTIVE 
+{
+	color : Red;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size : 9px;
+}
+/***************************************************************/
+/* The Refresh Reuslts link after you have clicked on it.      */
+A.refreshlink:VISITED 
+{
+	color : Navy;
+	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;
+}  
+/***************************************************************/
+/* The header area where the question and number of responses  */
+/* appears.                                                    */
+.headreport
+{
+	 PADDING-LEFT: 5px;
+	 LINE-HEIGHT: .9;
+	 FONT-SIZE: 9pt; 
+	 COLOR: navy; 
+	 FONT-FAMILY: verdana; 
+	 TEXT-DECORATION: none; 
+	 FONT-WEIGHT: bold; 
+	 BACKGROUND-COLOR: #fafad2;
+	 TEXT-ALIGN:left;
+	 border-bottom:black solid 2px;
+}
+/***************************************************************/
+/* The table colums where the options and results appear.      */
+.tblcol1, .tblcol2
+{
+	text-align:left;
+}
+/***************************************************************/
+/* The area where options appear.                              */
+.optiontextcell
+{
+	font-size : 10px;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+}
+/***************************************************************/
+/* The area where the result’s percentage information appears. */
+.percentcell
+{
+	FONT-WEIGHT: bold; 
+	FONT-SIZE: 8pt;
+	height:100%;
+	vertical-align:bottom;
+	width:10%;
+	margin-left: .05%;
+}
+/***************************************************************/
+/* The cell where the bar graph appears.                       */
+.barcell
+{
+	height:18px;
+	TEXT-ALIGN:left;
+	padding:0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+}
+/***************************************************************/
+/* The result’s bar graph bar.                                 */
+.resultbar
+{
+	height:60%; 
+	background-color:#3163BD; 
+	padding-left:1px;
+	vertical-align:middle;
+}
+
+
+.lblsFormTitle
+{
+    COLOR: navy;
+    FONT-FAMILY: Verdana, Arial;
+    FONT-SIZE: 9pt;
+    FONT-WEIGHT: bold;
+}
+
+.spacercell 
+{
+	display: none;
+}
+

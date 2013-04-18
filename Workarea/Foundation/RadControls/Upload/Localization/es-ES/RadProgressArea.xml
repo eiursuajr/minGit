@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="CancelButton">Cancelar</string>
+	<string id="TimeElapsed">Tiempo transcurrido: </string>
+	<string id="TimeEstimated">Tiempo estimado: </string>
+	<string id="TransferSpeed">Velocidad: </string>
+	<string id="CurrentFileName">Subiendo archivo: </string>
+	<string id="Uploaded">Subido </string>
+	<string id="UploadedFiles">Archivos subidos: </string>
+	<string id="Total">Total </string>
+	<string id="TotalFiles">Total archivos: </string>
+</localization>

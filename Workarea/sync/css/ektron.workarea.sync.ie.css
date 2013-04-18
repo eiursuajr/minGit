@@ -1,0 +1,18 @@
+ul.syncRelationships li ul.cmsInfo {width: auto;}
+ul.server li h5 span.caption {top: .5em; right: 2em;}
+#step3of3 ul.server li h5 {position: static;}
+#step3of3 ul.server li h5 span {display: block; }
+#step3of3 ul.server li h5 span#remoteDatabaseName {display: block; float:left; }
+#step3of3 ul.server li h5 span.caption {float: right; display: block; position: static; padding-right: .25em;}
+ul.directionInfo {margin-bottom: .5em;}
+.syncProfile fieldset {padding: .25em 0 1em;}
+li.syncRelationship div.ektronSyncIconsWrapper {width: 150px;}
+table.syncProfiles 
+{
+    border: 1px solid #BBDDF6 !important;
+}
+ul#configurations li.relationshipNotEligibleMessage 
+{
+	margin-bottom: 0;
+	filter: alpha(opacity=60);
+}

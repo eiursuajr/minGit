@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+<string id="Title">Egenskaper for celle</string>
+	<string id="Tab1HeaderText">Egenskaper for celle</string>
+	<string id="Dimensions">Dimensjoner</string>
+	<string id="Height">Høyde:</string>
+	<string id="Width">Bredde:</string>
+	<string id="ContentAlignment">Justering av innhold</string>
+	<string id="Horizontal">Horisontal:</string>
+	<string id="Left">Venstre</string>
+	<string id="Center">Sentrert</string>
+	<string id="Right">Høyre</string>
+	<string id="Vertical">Vertikal:</string>
+	<string id="Middle">Midten</string>
+	<string id="Top">Topp</string>
+	<string id="Bottom">Bunn</string>
+	<string id="Baseline">Grunnlinje</string>
+	<string id="Background">Bakgrunn</string>
+	<string id="UseColor">Bruk farge:</string>
+	<string id="Black">Svart</string>
+	<string id="Blue">Blå</string>
+	<string id="Green">Grønn</string>
+	<string id="Orange">Oransje</string>
+	<string id="Red">Rød</string>
+	<string id="White">Whit</string>
+	<string id="Yellow">Gul</string>
+	<string id="Custom">Egendefinert</string>
+	<string id="Customh">Egendefinert - </string>
+	<string id="Style">Stil:</string>
+	<string id="MessageStyle">Vennligst oppgi en gyldig verdi.</string>
+	<string id="PromptColor">Vennligst oppgi verdien på egendefinert HEX farge:</string>
+	<string id="Additional">Tillegg</string>
+	<string id="NoWrapping">Ingen linjebryting</string>
+	<string id="InvalidCellWidth">Ugyldig celle bredde.</string>
+	<string id="InvalidCellHeight">Ugyldig celle høyde.</string>
+</localization>

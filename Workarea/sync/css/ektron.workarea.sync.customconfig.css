@@ -1,0 +1,72 @@
+﻿#divSyncCustomConfig
+{
+    padding-top:20px;
+    background-color:#E7F0F7;
+    color:#235478;
+    padding:20px;
+}
+
+#divSyncCustomConfig .selectContainer
+{
+    display:inline-block;
+    width:208px;
+    zoom: 1;
+    *display: inline;
+}
+
+#divSyncCustomConfig .selectContainer span.label
+{
+    display:block;
+    margin-bottom:10px;
+}
+.availlableentitieslist, .selectedentitieslist
+{
+    width:200px;
+    height:200px;
+}
+
+.scopeActionButtons
+{
+    display:inline-block;
+    width:30px;
+    padding-bottom:50px;
+}
+
+.scopeActionButtons a
+{
+    height: 1.5em;
+    margin: 0.25em;
+    padding: 0;
+    width: 1.5em;
+    position:relative;
+}
+
+.scopeActionButtons a.buttonAdd
+{
+    background-image: url("../../images/ui/icons/arrowHeadRight.png")!important;
+}
+
+.scopeActionButtons a.buttonAddAll
+{
+    background-image: url("../../images/ui/icons/arrowHeadLast.png")!important;
+}
+
+.scopeActionButtons a.buttonRemove
+{
+    background-image: url("../../images/ui/icons/arrowHeadLeft.png")!important;
+}
+
+.scopeActionButtons a.buttonRemoveAll
+{
+    background-image: url("../../images/ui/icons/arrowHeadFirst.png")!important;
+}
+
+.scopeActionButtons a.buttonUp
+{
+    background-image: url("../../images/ui/icons/arrowHeadUp.png")!important;
+}
+
+.scopeActionButtons a.buttonDown
+{
+    background-image: url("../../images/ui/icons/arrowHeadDown.png")!important;
+}

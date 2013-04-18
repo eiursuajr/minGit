@@ -1,0 +1,96 @@
+/*  MS Office Files Types */
+.doc, .dot,.docx,.dotx,.docm,.dotm
+    {background-image: url('../images/ui/icons/filetypes/word.png') !important;}
+.xla, .xlc,.xlm,.xls,.xlt,.xlw,.xlax,.xlcx,.xlmx,.xlsx,.xltx,.xlwx,.xlam,.xlcm,.xlmm,.xlsm,.xltm,.xlwm 
+    {background-image: url('../images/ui/icons/filetypes/excel.png') !important;}
+.ppt,.pot,.pps,.pptx,.potx,.ppsx,.pptm,.potm,.ppsm
+    {background-image: url('../images/ui/icons/filetypes/powerpoint.png') !important;}
+.mpp,.mppx 
+    {background-image: url('../images/ui/icons/filetypes/project.png') !important;}
+.pub,.pubx 
+    {background-image: url('../images/ui/icons/filetypes/publisher.png') !important;}
+.vsd,.vsdx 
+    {background-image: url('../images/ui/icons/filetypes/visio.png') !important;}
+.mdb, .mdbx
+    {background-image: url('../images/ui/icons/filetypes/access.png') !important;}
+/* Open Office File Types */
+.odt,.ott
+    {background-image: url('../images/application/ooo-writer-doc.gif') !important;}
+.oth
+    {background-image: url('../images/application/ooo-web-doc.gif') !important;}
+.odm
+    {background-image: url('../images/application/ooo-master-doc.gif') !important;}
+.odg,.otg
+    {background-image: url('../images/application/ooo-image-doc.gif') !important;}
+.odp, .otp":
+    {background-image: url('../images/application/ooo-impress-doc.gif') !important;}
+.ods,.ots
+    {background-image: url('../images/application/ooo-calc-doc.gif') !important;}
+.odc
+    {background-image: url('../images/application/ooo-chart-doc.gif') !important;}
+.odf
+    {background-image: url('../images/application/ooo-math-doc.gif') !important;}
+.odb
+    {background-image: url('../images/application/ooo-empty-doc.gif') !important;}
+.odi
+    {background-image: url('../images/application/ooo-draw-doc.gif') !important;}           
+
+/* Adobe File Types */
+.ai
+    {background-image: url('../images/ui/icons/filetypes/illustrator.png') !important;}
+.as
+    {background-image: url('../images/ui/icons/filetypes/actionscript.png') !important;}
+.fh,.fh4,.fh5,.fh6,.fh7,.fh8,.fh9,.fh10,.fh11,.fh50,.fha3,.fhd3,.fhtml
+    {background-image: url('../images/ui/icons/filetypes/freehand.png') !important;}
+.pdf
+    {background-image: url('../images/ui/icons/filetypes/acrobat.png') !important;}
+.psd
+    {background-image: url('../images/ui/icons/filetypes/photoshop.png') !important;}
+.swf
+    {background-image: url('../images/ui/icons/filetypes/flash.png') !important;}
+
+/* Compressed Files */
+.gz,.zip
+    {background-image: url('../images/ui/icons/filetypes/zip.png') !important;}
+    
+/* Programming Language Files */
+.c
+    {background-image: url('../images/ui/icons/filetypes/c.png') !important;}
+.cc
+    {background-image: url('../images/ui/icons/filetypes/cc.png') !important;}
+.cs
+    {background-image: url('../images/ui/icons/filetypes/csharp.png') !important;}
+.cfc, .cfml
+    {background-image: url('../images/ui/icons/filetypes/coldfusion.png') !important;}
+.htm, .html, .htt, .mhtml 
+    {background-image: url('../images/ui/icons/filetypes/html.png') !important;}
+.jsp, .jar
+    {background-image: url('../images/ui/icons/filetypes/java.png') !important;}
+.rb
+    {background-image: url('../images/ui/icons/filetypes/ruby.png') !important;}
+.vb
+    {background-image: url('../images/ui/icons/filetypes/visualstudio.png') !important;}
+.xml
+    {background-image: url('../images/ui/icons/filetypes/xml.png') !important;}
+.xsl
+    {background-image: url('../images/ui/icons/filetypes/xsl.png') !important;}
+
+/* Media Files */
+.bmp,.gif,.jpg,.jpeg,.pbm,.cmx,.ico,.cod,.ief,.jfif,.jpe,.pgm,.pnm,.ppm,.png,.ras,.rgb,.tif,.tiff,.xpm,.xbm,.xwd
+    {background-image: url('../images/ui/icons/filetypes/image.png') !important;}
+.avi,.wmv,.mov,.mpa,.mpe,.mpeg,.mpg,.mpv2,.wm,.wvx,.wmx,.wmz,.wmd,.wax,.wma
+    {background-image: url('../images/ui/icons/filetypes/video.png') !important;}
+.au,.snd,.mid,.mp3,.aif,.aifc,.aiff,.wav,.mp2,.asf,.mp4,.m3u,.asx,.lsf,.lsx,.rm
+    {background-image: url('../images/ui/icons/filetypes/audio.png') !important;}
+.qt
+    {background-image: url('../images/ui/icons/filetypes/quicktime.png') !important;}
+.rmi,.ra,.ram
+    {background-image: url('../images/ui/icons/filetypes/realplayer.png') !important;}
+
+/* Generic File Types */
+.txt, .asr
+    {background-image: url('../images/ui/icons/filetypes/text.png') !important;}
+.undefined, .file
+    {background-image: url('../images/ui/icons/filetypes/file.png')}
+
+

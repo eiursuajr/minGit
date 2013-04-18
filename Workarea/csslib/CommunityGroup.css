@@ -1,0 +1,28 @@
+.ekcgrouptbl {background-color: #639ace;border:none;width:100%;}
+.ekcgrouptbltrtop {background-color: #ffffff;vertical-align:top;}
+.ekcgrouptbltrbottom {}
+.ekcgrouptbltdname {font-size:4;color:#ffffff;}
+
+
+.ektronCommunityGroup {width: 100%; border: solid 1px #3B5998; position: relative;}
+.ektronCommunityGroup div.ektronCommunityGroupWrapper {background-color:#f7f7f7; color: #3B5998; padding: .5em;}
+.ektronCommunityGroup img {margin: 0em .5em .5em 0em; border: solid 1px #ccc;}
+.ektronCommunityGroup h3 {background-color:#3B5998; font-size: 1.15em; padding: .25em .4em; color: #fff; margin: 0em;}
+.ektronCommunityGroup div.ektronCommunityGroupDetails {float:left;width:60%;}
+.ektronCommunityGroup div.ektronCommunityGroupDetails img.ektronCommunityGroupIcon {float:left;}
+.ektronCommunityGroup div.ektronCommunityGroupDetails table {border-collapse: collapse;}
+.ektronCommunityGroup div.ektronCommunityGroupDetails table th {text-align:right; font-size: .92em;}
+.ektronCommunityGroup div.ektronCommunityGroupDetails table td {font-size: .92em; padding-left: .5em;}
+.ektronCommunityGroup div.ektronCommunityGroupDetails p.ektronCommunityGroupDescription {font-size: .92em; padding: 0em 0em .5em 1em; margin: 0em;}
+.ektronCommunityGroup div.ektronCommunityGroupAdmin {float:left; margin-left: 1em;}
+.ektronCommunityGroup div.ektronCommunityGroupAdmin p.ektronCommunityGroupAdminAvatar {float:left;}
+.ektronCommunityGroup div.ektronCommunityGroupAdmin table th {text-align:right;}
+.ektronCommunityGroup div.ektronCommunityGroupAdmin table td {padding-left: .5em;}
+.ektronCommunityGroup div.ektronCommunityGroupFooter {clear:both;margin-top:.25em;}
+
+.ektronCommunityGroup div.ektronCommunityGroupAdmin p.ektronCommunityGroupEdit {font-size: .92em;}
+.ektronCommunityGroup div.ektronCommunityGroupAdmin p.ektronCommunityGroupEdit a {color:#acbabc; position: absolute; top: .25em; right: .5em;}
+.ektronCommunityGroup div.ektronCommunityGroupAdmin p.ektronCommunityGroupEdit a:hover {color: #fff;}
+.ektronCommunityGroup table.ektronCommunityGroupAdministration {padding: 0em; vertical-align: top; border-collapse:collapse; font-size: .92em;}
+.ektronCommunityGroupIcon{width: 160px;}
+.ektronCommunityGroupIconContainer{height: 120px; overflow: hidden}

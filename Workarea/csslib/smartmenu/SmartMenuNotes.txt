@@ -1,0 +1,129 @@
+The following structure demonstrates a multiple-level menu, detailing the tag-type and classname, as follows:
+
+The menu has two sub menus off of the root; Sub1, and Sub2. 
+Sub1 has two submenus; Sub1-1 and  Sub1-2.
+Sub1-1 has three links.
+Sub1-2 has two links.
+Sub2 has two links.
+
+
+|--- Sub1 (selected and visible)
+|      |
+|      +--- Sub1-1 (selected and visible)
+|      |      |
+|      |      +--- Link-1 (visible)
+|      |      |
+|      |      +--- Link-2 (selected and visible)
+|      |      |
+|      |      +--- Link-3 (visible)
+|      |
+|      +--- Sub1-2
+|             |
+|             +--- Link-1
+|             |
+|             +--- Link-2
+|    
+|--- Sub2
+       |
+       |      
+       +--- Link-1
+       |
+       +--- Link-2
+
+
+<div class="usersClass">
+	<div class="ekmenu">
+		<div class="ekmenu_start">
+			<h2 class="ekmenu_accessible_menu_startheading">
+				<a class="ekmenu_accessible_menu_startlink" >Menu Begins - Skip Menu</a>
+			</h2>
+		</div>
+		<div class="ekmenu_submenu_items">
+			<ul class="ekmenu_unorderedlist">
+				<li class="ekmenu_unorderedlist_item">
+					<div class="ekmenu_submenu">
+						<h3 class="ekmenu_accessible_submenu_navheading" >
+							<span class="ekmenu_button_selected" >
+								<a class="ekmenu_accessible_submenu_btnlink">Sub1</a>
+							</span>
+						</h3>
+						<div class="ekmenu_submenu_items">
+							<ul class="ekmenu_unorderedlist">
+								<li class="ekmenu_unorderedlist_item">
+									<div class="ekmenu_submenu">
+										<h3 class="ekmenu_accessible_submenu_navheading" >
+											<span class="ekmenu_button_selected" >
+												<a class="ekmenu_accessible_submenu_btnlink">Sub1-1</a>
+											</span>
+										</h3>
+										<div class="ekmenu_submenu_items">
+											<ul class="ekmenu_unorderedlist">
+												<li class="ekmenu_unorderedlist_item">
+													<a class="ekmenu_link" >Link-1</a>
+												</li>
+												<li class="ekmenu_unorderedlist_item">
+													<a class="ekmenu_link_selected">Link-2<span class="ekmenu_accessibility_hidden_text">(Selected)</span></a>
+												</li>
+												<li class="ekmenu_unorderedlist_item">
+													<a class="ekmenu_link" >Link-3</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="ekmenu_unorderedlist_item">
+									<div class="ekmenu_submenu">
+										<h3 class="ekmenu_accessible_submenu_navheading" >
+											<span class="ekmenu_button" >
+												<a class="ekmenu_accessible_submenu_btnlink" >Sub1-2</a>
+											</span>
+										</h3>
+										<div class="ekmenu_submenu_items_hidden">
+											<ul class="ekmenu_unorderedlist">
+												<li class="ekmenu_unorderedlist_item">
+													<a class="ekmenu_link" >Link-1</a>
+												</li>
+												<li class="ekmenu_unorderedlist_item">
+													<a class="ekmenu_link" >Link-2</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="ekmenu_unorderedlist_item">
+					<div class="ekmenu_submenu">
+						<h3 class="ekmenu_accessible_submenu_navheading">
+							<span class="ekmenu_button" >
+								<a class="ekmenu_accessible_submenu_btnlink">Sub2</a>
+							</span>
+						</h3>
+						<div class="ekmenu_submenu_items_hidden">
+							<ul class="ekmenu_unorderedlist">
+								<li class="ekmenu_unorderedlist_item">
+									<a class="ekmenu_link" >Link-1</a>
+								</li>
+								<li class="ekmenu_unorderedlist_item">
+									<a class="ekmenu_link" >Link-2</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="ekmenu_end">
+			<a class="ekmenu_accessible_menu_endlink">Menu Ends</a>
+		</div>
+	</div>
+</div>
+
+* Notes:
+	1. This menu structure was created with with Enable508Compliance=true.
+	2. Menu Folder-Buttons Sub1 and Sub1-1 are selected.
+	3. The contents (links) of Sub1 and Sub1-1 are visible, all others are hidden.
+	4. The second link of Sub1-1 is selected.
+

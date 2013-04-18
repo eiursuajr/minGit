@@ -1,0 +1,33 @@
+body
+{
+	background  : buttonface;
+}
+
+#explorerPanel
+{
+	padding:5px;
+}
+
+#loadingBar
+{
+	background: #004D99;
+	height: 10px;
+	width: 10px;
+}
+
+#loadingMessage
+{
+	z-index:2000;
+	width:125px;
+	height:23px;
+	overflow:hidden;
+	white-space: nowrap;
+	font-size: xx-small;
+	color: #666666;
+	background:#cccccc;
+	border: solid 1px buttonshadow;
+	padding:4px;
+	position:absolute;
+	left:20%;
+	top:100px;
+}

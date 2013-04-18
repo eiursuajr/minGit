@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+  <string id="Description">Descripción</string>
+  <string id="Empty">No hay archivos seleccionados</string>
+  <string id="File">Archivo</string>
+  <string id="Title">Título</string>
+</localization>

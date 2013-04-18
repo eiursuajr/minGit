@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">存贮格属性</string>
+	<string id="Tab1HeaderText">存贮格属性</string>
+	<string id="Dimensions">尺寸</string>
+	<string id="Height">高度:</string>
+	<string id="Width">宽度:</string>
+	<string id="ContentAlignment">内容对齐</string>
+	<string id="Horizontal">水平:</string>
+	<string id="Left">靠左对齐</string>
+	<string id="Center">置中对齐</string>
+	<string id="Right">靠右对齐</string>
+	<string id="Vertical">垂直:</string>
+	<string id="Middle">置中对齐</string>
+	<string id="Top">靠上对齐</string>
+	<string id="Bottom">靠下对齐</string>
+	<string id="Baseline">基准线</string>
+	<string id="Background">背景影像</string>
+	<string id="UseColor">背景颜色:</string>
+	<string id="Black">黑色</string>
+	<string id="Blue">蓝色</string>
+	<string id="Green">绿色</string>
+	<string id="Orange">橘色</string>
+	<string id="Red">红色</string>
+	<string id="White">白色</string>
+	<string id="Yellow">黄色</string>
+	<string id="Custom">订制</string>
+	<string id="Customh">订制 - </string>
+	<string id="Update">更新</string>
+	<string id="Cancel">取消</string>
+	<string id="Additional">其他</string>
+	<string id="NoWrapping">不换行</string>
+	<string id="CellCss">存贮格样式</string>
+	<string id="CssClass">样式:</string>
+	<string id="Style">样式:</string>
+	<string id="MessageStyle">请提供适合之样式属性值。</string>
+	<string id="PromptColor">请输入 custom color HEX 值:</string>
+	<string id="AddCustomColor">新增 Custom Color...</string>
+	<string id="AddHexColor">新增 Hex Color...</string>
+	<string id="BackgroundImage">背景影像</string>
+	<string id="ClearStyle">无</string>
+</localization>

@@ -1,0 +1,63 @@
+﻿/*-------Localization START-------*/
+	
+.LangDialects
+{
+	padding-top: 20px;
+	}
+
+.currentLangDialects
+{
+	width: 49%;
+	margin-right: 23px;
+	}
+
+.otherLangDialects
+{
+	width: 49%;
+	}
+	
+.listing
+{
+	overflow-y:scroll;
+	overflow-x: hidden;
+	}
+
+td img
+{
+	padding-right: 5px;
+	}
+	
+.selectDeselect
+{
+	padding-top: 15px;
+	clear: both;
+	}
+
+.floatLeft
+{
+	float:left;
+	}
+	
+.timeline
+{
+	padding-top: 18px;
+	}
+
+.ektronForm
+{
+	width: 58%;
+	}
+	
+.timlineMargin
+{
+	margin-left: -8px;
+	}
+	
+.ektronFormWidth
+{
+	width: 28%;
+	}
+
+
+	
+/*-------Localization END-------*/

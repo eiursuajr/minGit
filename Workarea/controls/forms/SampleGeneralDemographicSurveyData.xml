@@ -1,0 +1,191 @@
+
+<Form>
+	<Title>General Demographic Survey</Title>
+	<Description>General demographic survey.</Description>
+	<SubmittedData>
+		<Date value="2005-11-03T11:12:27">11/3/2005 11:12:27 AM</Date>
+		<Data form_data_id="28">
+			<Age_range>0</Age_range>
+			<Annual_Income>0</Annual_Income>
+			<Education_Level>0</Education_Level>
+			<Father_s_Education_Level>4</Father_s_Education_Level>
+			<Gender>M</Gender>
+			<Household_Income>0</Household_Income>
+			<Marital_Status>Widowed</Marital_Status>
+			<Mother_s_Education_Level>4</Mother_s_Education_Level>
+			<Other_Religious_Affiliation>Buddist</Other_Religious_Affiliation>
+			<Race>1</Race>
+			<Religious>Other</Religious>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T11:12:53">11/3/2005 11:12:53 AM</Date>
+		<Data form_data_id="29">
+			<Age_range>3</Age_range>
+			<Annual_Income>3</Annual_Income>
+			<Education_Level>4</Education_Level>
+			<Father_s_Education_Level>5</Father_s_Education_Level>
+			<Gender>M</Gender>
+			<Household_Income>3</Household_Income>
+			<Marital_Status>Married</Marital_Status>
+			<Mother_s_Education_Level>2</Mother_s_Education_Level>
+			<Other_Religious_Affiliation></Other_Religious_Affiliation>
+			<Race>1</Race>
+			<Religious>Protestant Christian</Religious>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T11:13:27">11/3/2005 11:13:27 AM</Date>
+		<Data form_data_id="30">
+			<Age_range>6</Age_range>
+			<Annual_Income>0</Annual_Income>
+			<Education_Level>7</Education_Level>
+			<Father_s_Education_Level>1</Father_s_Education_Level>
+			<Gender>F</Gender>
+			<Household_Income>7</Household_Income>
+			<Marital_Status>Unmarried</Marital_Status>
+			<Mother_s_Education_Level>1</Mother_s_Education_Level>
+			<Other_Religious_Affiliation></Other_Religious_Affiliation>
+			<Race>3</Race>
+			<Religious>Jewish</Religious>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T16:52:03">11/3/2005 4:52:03 PM</Date>
+		<User id="1" member="false">
+			<Name>
+				<FirstName>Application</FirstName>
+				<LastName>Administrator</LastName>
+			</Name>
+			<Username>admin</Username>
+			<Email>doug@ektron.com</Email>
+		</User>
+		<Data form_data_id="47">
+			<Age_range>4</Age_range>
+			<Annual_Income>0</Annual_Income>
+			<Education_Level>4</Education_Level>
+			<Father_s_Education_Level>4</Father_s_Education_Level>
+			<Gender>M</Gender>
+			<Household_Income>11</Household_Income>
+			<Marital_Status>Married</Marital_Status>
+			<Mother_s_Education_Level>2</Mother_s_Education_Level>
+			<Other_Religious_Affiliation></Other_Religious_Affiliation>
+			<Race>1</Race>
+			<Religious>Evangelical Christian</Religious>
+		</Data>
+	</SubmittedData>
+	<ektdesignpackage_list>
+		<fieldlist>
+			<field name="Gender" datatype="choice" basetype="text" xpath="/root/Gender" datalist="gender">Gender</field>
+			<field name="Age_range" datatype="choice" basetype="text" xpath="/root/Age_range" datalist="ID0E1B">Age range</field>
+			<field name="Education_Level" datatype="choice" basetype="text" xpath="/root/Education_Level" datalist="ID0EDD">Education Level</field>
+			<field name="Annual_Income" datatype="choice" basetype="text" xpath="/root/Annual_Income" datalist="ID0EPE">Annual Income</field>
+			<field name="Household_Income" datatype="choice" basetype="text" xpath="/root/Household_Income" datalist="ID0EHG">Household Income</field>
+			<field name="Marital_Status" datatype="choice" basetype="text" xpath="/root/Marital_Status" datalist="maritalStatus">Marital Status</field>
+			<field name="Religious" datatype="choice" basetype="text" xpath="/root/Religious" datalist="ID0ESEAC">Religious</field>
+			<field name="Other_Religious_Affiliation" datatype="string" basetype="text" xpath="/root/Other_Religious_Affiliation">Other Religious Affiliation</field>
+			<field name="Race" datatype="choice" basetype="text" xpath="/root/Race" datalist="ID0EZIAC">Race</field>
+			<field name="Mother_s_Education_Level" datatype="choice" basetype="text" xpath="/root/Mother_s_Education_Level" datalist="ID0E6JAC">Mother's Education Level</field>
+			<field name="Father_s_Education_Level" datatype="choice" basetype="text" xpath="/root/Father_s_Education_Level" datalist="ID0ELLAC">Father's Education Level</field>
+			<datalist name="gender">
+				<item value="M">Male</item>
+				<item value="F">Female</item>
+			</datalist>
+			<datalist name="ID0E1B">
+				<item value="0">18-21</item>
+				<item value="1">22-25</item>
+				<item value="2">26-30</item>
+				<item value="3">31-40</item>
+				<item value="4">41-50</item>
+				<item value="5">51-60</item>
+				<item value="6">61 or over</item>
+			</datalist>
+			<datalist name="ID0EDD">
+				<item value="0">Less than High School</item>
+				<item value="1">High School/GED</item>
+				<item value="2">Some College</item>
+				<item value="3">2-Year College Degree(Associates)</item>
+				<item value="4">4-Year College Degree(BA,BS)</item>
+				<item value="5">Master's Degree</item>
+				<item value="6">Doctoral Degree</item>
+				<item value="7">Professional Degree(MD,JD)</item>
+			</datalist>
+			<datalist name="ID0EPE">
+				<item value="0">Less than $10,000</item>
+				<item value="1">$10,000-$19,999</item>
+				<item value="2">$20,000-$29,999</item>
+				<item value="3">$30,000-$39,999</item>
+				<item value="4">$40,000-$49,999</item>
+				<item value="5">$50,000-$59,999</item>
+				<item value="6">$60,000-$69,999</item>
+				<item value="7">$70,000-$79,999</item>
+				<item value="8">$80,000-$89,999</item>
+				<item value="9">$90,000-$99,999</item>
+				<item value="10">$100,000-$149,000</item>
+				<item value="11">More than $150,000</item>
+			</datalist>
+			<datalist name="ID0EHG">
+				<item value="0">Less than $10,000</item>
+				<item value="1">$10,000-$19,999</item>
+				<item value="2">$20,000-$29,999</item>
+				<item value="3">$30,000-$39,999</item>
+				<item value="4">$40,000-$49,999</item>
+				<item value="5">$50,000-$59,999</item>
+				<item value="6">$60,000-$69,999</item>
+				<item value="7">$70,000-$79,999</item>
+				<item value="8">$80,000-$89,999</item>
+				<item value="9">$90,000-$99,999</item>
+				<item value="10">$100,000-$149,000</item>
+				<item value="11">More than $150,000</item>
+			</datalist>
+			<datalist name="maritalStatus">
+				<item value="Divorced">Divorced</item>
+				<item value="Legally Separated">Legally Separated</item>
+				<item value="Married">Married</item>
+				<item value="Registered Domestic Partner">Registered Domestic Partner</item>
+				<item value="Separated">Separated</item>
+				<item value="Single">Single</item>
+				<item value="Unmarried">Unmarried</item>
+				<item value="Unreported">Unreported</item>
+				<item value="Widowed">Widowed</item>
+			</datalist>
+			<datalist name="ID0ESEAC">
+				<item value="Protestant Christian">Protestant Christian</item>
+				<item value="Roman Catholic">Roman Catholic</item>
+				<item value="Evangelical Christian">Evangelical Christian</item>
+				<item value="Jewish">Jewish</item>
+				<item value="Muslim">Muslim</item>
+				<item value="Hindu">Hindu</item>
+				<item value="Other">Other</item>
+			</datalist>
+			<datalist name="ID0EZIAC">
+				<item value="0">White</item>
+				<item value="1">White, non-Hispanic</item>
+				<item value="2">African-American</item>
+				<item value="3">Hispanic</item>
+				<item value="4">Asian-Pacific Islander</item>
+				<item value="5">Native American</item>
+			</datalist>
+			<datalist name="ID0E6JAC">
+				<item value="0">Less than High School</item>
+				<item value="1">High School/GED</item>
+				<item value="2">Some College</item>
+				<item value="3">2-Year College Degree(Associates)</item>
+				<item value="4">4-Year College Degree(BA,BS)</item>
+				<item value="5">Master's Degree</item>
+				<item value="6">Doctoral Degree</item>
+				<item value="7">Professional Degree(MD,JD)</item>
+			</datalist>
+			<datalist name="ID0ELLAC">
+				<item value="0">Less than High School</item>
+				<item value="1">High School/GED</item>
+				<item value="2">Some College</item>
+				<item value="3">2-Year College Degree(Associates)</item>
+				<item value="4">4-Year College Degree(BA,BS)</item>
+				<item value="5">Master's Degree</item>
+				<item value="6">Doctoral Degree</item>
+				<item value="7">Professional Degree(MD,JD)</item>
+			</datalist>
+		</fieldlist>
+	</ektdesignpackage_list>
+</Form>

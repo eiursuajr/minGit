@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Copyright 2001 Ektron, Inc. --> <!-- Revision Date: 2001-05-16 --> <html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+    <script language="JavaScript1.2" src="parseinstallparams.js"></script>
+ <title>Installeren van eWebEditPro with WebImageFX</title>
+</head>
+ <style>
+P { font-size : small; font-family : verdana, helvetica; }
+H1 { font-family : verdana, helvetica; }
+H2 { font-family : verdana, helvetica; }
+A { font-family : verdana, helvetica; }
+BODY { font-size : small; }
+</style>
+ <body>
+
+<script language="JavaScript1.2">
+function ExecuteInstall()
+{
+    var strLoadPath = "installnownl.htm";
+    var strAddChar = "?";
+	
+    strPageLoad = strLoadPath;
+    
+    // We should set up an array and loop through it.
+    // But for now, it is left as an excersize for the critic.
+    
+    // This is an override for specifying the above values as 
+    // command line parameters.
+    // See clientinstall/parseinstallparams.js for how to set these values.
+	if("undefined" != typeof given_eWebEditProPath)
+    {
+        if(given_eWebEditProPath.length > 0)
+        {
+            // "?" + "instewep=" + escape(strInstEwep)
+            strPageLoad += strAddChar;
+            strPageLoad += "instewep=";
+            strPageLoad += given_eWebEditProPath;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_LicenseKeys)
+    {
+       if(given_LicenseKeys.length > 0)
+        {
+            // "&" + "licnewep=" + escape(strLicnEwep)
+            strPageLoad += strAddChar;
+            strPageLoad += "licnewep=";
+            strPageLoad += given_LicenseKeys;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_WebImageFXPath)
+    {
+        if(given_WebImageFXPath.length > 0)
+        {
+            // "&" + "instwifx=" + escape(strInstWifx)
+            strPageLoad += strAddChar;
+            strPageLoad += "instwifx=";
+            strPageLoad += given_WebImageFXPath;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_WifxLicenseKeys)
+    {
+       if(given_WifxLicenseKeys.length > 0)
+        {
+            // "&" + "licnwifx=" + escape(strLicnWifx)
+            strPageLoad += strAddChar;
+            strPageLoad += "licnwifx=";
+            strPageLoad += given_WifxLicenseKeys;
+            
+            strAddChar = "&";  // If we add any after this.
+        }
+    }  
+    
+	location.href = strPageLoad;
+}
+</script>
+
+ <blockquote><blockquote>
+<p align="center"><h2 align="center">
+eWebEditPro with WebImageFX <br>Automatische <br>download en installatie </h2></p>
+<p>De pagina die u probeert te bekijken bevat Ektron's eWebEditPro with WebImageFX editor. Deze verschijnt in het venster van uw browser. Hij stelt u in staat om content voor web pagina's in te voeren met het gemak van een tekstverwerkingsprogramma.</p>
+<p>Voordat u eWebEditPro with WebImageFX kunt gebruiken, moet het in uw browser worden gedownload. Wanneer u op de <b>Installeer Nu</b> knop aan de onderkant van deze pagina klikt, dan wordt eWebEditPro with WebImageFX automatisch gedownload en geïnstalleerd. Dit proces kan enkele minuten duren afhankelijk van de snelheid van uw netwerkverbinding. Eenmaal gedownload, hoeft eWebEditPro with WebImageFX <i>niet nogmaals worden gedownload </i>tenzij het een upgrade naar een nieuwere versie betreft. </p>
+<p>U moet bevoegd zijn om programma's op uw computer te installeren. </p>
+<p>Er kunnen afbeeldingen verschijnen die lijken op die welke hieronder worden getoond . De eerste is van <a href="http://www.ektron.com" target="_blank">Ektron</a>. De andere, als ze al verschijnen, zijn van <a href="http://www.microsoft.com" target="_blank">Microsoft</a>. Mochten ze verschijnen, klik dan eenvoudig op Ja om verder te gaan.</p>
+<p align="center">
+<img src="verisign2.gif" alt="Prompt te downloaden om ActiveX control" width=331 height=242>
+</p>
+<p>Check uw Internet Explorer beveiligingsinstellingen. Deze moet zijn ingesteld op Medium of lager om het downloaden en leten draaien van ActiveX controls mogelijk te maken. Selecteer Internet Opties van het Gereedschappen menu en klik op het beveiligingslabel. </p>
+<p align="center">
+<img src="ieoptions2nl.gif" alt="Internet Beveiligingsopties" width=335 height=346>
+</p>
+<p>Afhankelijk van uw beveiligingsinstellingen, kunt u ook de vragen die hier worden getoond tegenkomen. Klik Ja op elke vraag.</p>
+<blockquote>
+<p><font size=-1>Wilt u dat software zoals ActiveX controls en plug-ins kunnen draaien?</font></p>
+<p><font size=-1>Een script geeft toegang tot sommige software (een ActiveX control) op deze pagina die als veilig voor scripting is gekenmerkt.<br></font><font size=-1>Gaat u hiermee akkoord?</font></p>
+</blockquote>
+<br><br>
+<p>Klik op <b>Installeer Nu</b> om verder te gaan, of <b>Annuleer</b> indien u eWebEditPro with WebImageFX niet wenst te installeren.</p>
+</blockquote></blockquote>
+ <p align="center">
+<form>
+<input type=button value="Installeer Nu" onclick="ExecuteInstall()">
+            <input type=button value="Annuleer" onclick="self.close()">
+</form>
+<a href="http://www.ektron.com/ewebeditpro" target="_blank"><font size=1>Meer informatie m.b.t. Ektron's eWebEditPro</font></a>
+<br/>
+<a href="http://www.ektron.com/webimagefx.cfm" target="_blank"><font size=1>Meer informatie m.b.t. Ektron's WebImageFX</font></a>
+</p>
+ </body>
+</html>

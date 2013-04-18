@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Link Manager</string>
+	<string id="Tab1HeaderText">Hyperlink</string>
+	<string id="Tab2HeaderText">Bookmark</string>
+	<string id="Tab3HeaderText">E-mail</string>
+	<string id="LinkUrl">URL:</string>
+	<string id="LinkType">Type:</string>
+	<string id="Other">other</string>
+	<string id="LinkTarget">Target:</string>
+	<string id="Target">Target</string>
+	<string id="LinkTooltip">Tooltip:</string>
+	<string id="LinkName">Name:</string>
+	<string id="LinkAddress">Address:</string>
+	<string id="LinkSubject">Subject:</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Cancel</string>
+	<string id="CssClass">Style:</string>
+	<string id="AnchorCss">Link Style</string>
+	<string id="LinkText">Link Text:</string>
+	<string id="ClearStyle">No Class</string>
+	<string id="LinkToAnchor">Existing Bookmark:</string>
+	<string id="AnchorNone">None</string>
+    <string id="ektron">Ektron Editor Starts</string>
+	<string id="UrlRequired">URL is required.</string>
+	<string id="NameRequired">Name is required.</string>
+	<string id="AddressRequired">Address is required.</string>
+	<string id="InvalidEmail">Email address is not valid.</string>
+	<string id="DuplicatedName">Bookmark name is not unique.</string>
+	<string id="AccessChecksWarn">The content is not accessibility compliance. Would you like to correct it?</string>
+	<string id="AccessChecksEnforce">Please fill in the accessibility compliance field(s).</string>
+	<string id="Or">or</string>
+	<string id="InvalidUrl">Invalid Url is detected. Please correct your Url.</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

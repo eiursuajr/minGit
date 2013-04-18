@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Zoeken &amp; Vervangen</string>
+	<string id="Tab1HeaderText">Zoeken</string>
+	<string id="Tab2HeaderText">Vervangen</string>
+	<string id="SearchText">Zoek:</string>
+	<string id="FindNext">Zoek volgende</string>
+	<string id="Replace">Vervangen</string>
+	<string id="ReplacementText">Vervangen door:</string>
+	<string id="ReplaceAll">Vervang alles</string>
+	<string id="SearchIn">Zoeken:</string>
+	<string id="SearchEntireText">Gehele tekst</string>
+	<string id="SearchSelection">Selectie</string>
+	<string id="SearchDirection">Richting:</string>
+	<string id="MatchCase">Indentieke letters</string>
+	<string id="WholeWordsOnly">Heel woord</string>
+	<string id="SearchUp">Naar boven</string>
+	<string id="SearchDown">Naar beneden</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Annuleren</string>
+	<string id="SearchCriteriaNotSpecified">Zoek criteria is niet gespecificeerd</string>
+	<string id="NoSearchTarget">Geen tekst om te doorzoeken</string>
+	<string id="FinishedSearching">Zoeken klaar</string>
+	<string id="AndHasMade">en heeft</string>
+	<string id="Replacements">item(s) vervangen.</string>
+	<string id="ektron">Ektron Editor Starts</string>
+	<string id="Close">Close</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

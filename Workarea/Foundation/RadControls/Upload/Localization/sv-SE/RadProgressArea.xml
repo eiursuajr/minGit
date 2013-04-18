@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="CancelButton">Avbryt</string>
+	<string id="TimeElapsed">Förfluten tid: </string>
+	<string id="TimeEstimated">Uppskattad tid: </string>
+	<string id="TransferSpeed">Hastighet: </string>
+	<string id="CurrentFileName">Laddar upp fil: </string>
+	<string id="Uploaded">Uppladdad </string>
+	<string id="UploadedFiles">Uppladdade filer: </string>
+	<string id="Total">Totalt </string>
+	<string id="TotalFiles">Totalt filer: </string>
+</localization>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Manager Documenti</string>
+	<string id="ConfirmDelete">Sei sicuro di voler cancellare il file selezionato?\nIl documento selezionato potrebbe essere in uso. Se lo cancelli, qualche pagina potrebbe non essere visualizzata correttamente.\nPremi \"OK\" per confermare l' eliminazione.</string>
+	<string id="Alertfile">Per piacere, inserisci un file da caricare!</string>
+	<string id="Alertvalid">Per piacere, inserisci un file documento valido da caricare!</string>
+	<string id="Alertexists">Questo file esiste gia nella direcotry selezionata!</string>
+	<string id="MessageNothingPost">Per piacere, seleziona un file documento!</string>
+	<string id="MessageValid">Per piacere, inserisci un file documento valido!</string>
+	<string id="MessageSize">Il file selezionato supera il massimo consentito come peso!</string>
+	<string id="Tab1HeaderText">Sfoglia File</string>
+	<string id="Tab2HeaderText">Upload Documento</string>
+	<string id="DocumentDirectory">Directory Documento:</string>
+	<string id="DocumentFile">File Documento:</string>
+	<string id="Tooltip">Tooltip:</string>
+	<string id="Target">Target:</string>
+	<string id="Note">Nota:</string>
+	<string id="SelectDirectory">Seleziona la Directory</string>
+	<string id="ShowProperties">Mostra pannello proprietà</string>
+	<string id="ChooseFileToInsert">Per piacere, seleziona un file da inserire</string>
+	<string id="NoDocumentSelectedToInsert">Per piacere, seleziona un documento da inserire!</string>
+</localization>

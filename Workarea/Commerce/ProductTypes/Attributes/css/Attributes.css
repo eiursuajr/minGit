@@ -1,0 +1,50 @@
+/* default styles */
+div.EktronAttributes {margin:0;padding:0;}
+div.EktronAttributes .hide {display:none;}
+div.EktronAttributes .width-percent-10 {width:10% !important;}
+div.EktronAttributes .width-percent-20 {width:20% !important;}
+div.EktronAttributes .width-percent-30 {width:30% !important;}
+div.EktronAttributes .width-percent-40 {width:40% !important;}
+div.EktronAttributes .width-percent-50 {width:50% !important;}
+
+div.EktronAttributes .ektronGrid {border-bottom:1px solid #d4d4d4;}
+
+/* helpers */
+div.EktronAttributes p.requiredFieldNote {display:none;font-size:.9em;color:Red;font-weight:bold;margin-left:.5em;padding:0em;margin:.5em .5em 0em .5em;}
+#AttributesModal p.required {margin:0 !important;padding:0 !important;}
+
+/* Attributes Table */
+div.EktronAttributes table tbody tr.attributeCloneRow {display:none;}
+
+/* Attributes Table - Value */
+div.EktronAttributes tbody td.value p.actions {float:right;margin:0;padding:0;}
+div.EktronAttributes tbody td.value p.actions a {margin-left:.5em;}
+div.EktronAttributes tbody td.value p.actions a:hover {text-decoration:none;}
+div.EktronAttributes tbody td.value p.actions a.ok {display:none;}
+div.EktronAttributes tbody td.value p.actions a.cancel {display:none;}
+div.EktronAttributes tbody td.value p.actions a.restore {display:none;}
+div.EktronAttributes tbody td.value p.data {margin:0;padding:0;text-align:left;}
+div.EktronAttributes tbody span.markedForDelete {color:Silver;text-decoration:line-through;}
+div.EktronAttributes tbody td.value p.data input {display:none;width:auto;}
+div.EktronAttributes tbody td.value p.data img.ui-datepicker-trigger {display:none;}
+div.EktronAttributes tbody td.value p.data select {display:none;}
+
+/* Attributes - Footer */
+div.EktronAttributes p.addAttribute {margin-top:1em;}
+.ektronModalButtonWrapper li {float:right;}
+.ektronModalButtonWrapper li a {float:none;}
+#AttributesModal table.noBorder {border:none !important;}
+
+/* modal buttons */
+div#AttributesModal ul.ektronModalButtonWrapper {list-style:none;}
+div#AttributesModal div.ui-widget-header span.fieldHeader {display:block;}
+div#AttributesModal div.ui-dialog-buttonpane a.ok {display:block;}
+div#AttributesModal div.ui-widget-header span.dateSelectorHeader {display:none;}
+div#AttributesModal div.ui-dialog-buttonpane a.setDate {display:none;}
+
+/* datepicker */
+.ui-datepicker {margin:0 auto !important;}
+.ui-dialog .ui-dialog-content {overflow:hidden !important;}
+div.attributesModal table table {width:100%;font-size:12px;border-collapse:collapse;margin:0 auto;}
+div.attributesModal table table th {padding:.25em 0;}
+div.attributesModal table table td {padding:0;}

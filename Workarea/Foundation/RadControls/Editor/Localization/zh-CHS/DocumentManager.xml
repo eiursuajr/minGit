@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">管理文件</string>
+	<string id="ConfirmDelete">您确定要删除此档案?\n您所选择的文件可能正在使用中。假如删除，则部分文件将无法正常显示。\n按 \"确定\" 删除此档案。</string>
+	<string id="Alertfile">请提供上传之文件档案!</string>
+	<string id="Alertvalid">请提供适合上传之文件档案!</string>
+	<string id="Alertexists">文件档案已存在!</string>
+	<string id="MessageNothingPost">请提供一文件档案!</string>
+	<string id="MessageValid">请提供适合的文件档案!</string>
+	<string id="MessageSize">提供之文件档案容量超过最大限制!</string>
+	<string id="Tab1HeaderText">浏览档案</string>
+	<string id="Tab2HeaderText">上传文件</string>
+	<string id="DocumentDirectory">文件目录:</string>
+	<string id="DocumentFile">文件档案:</string>
+	<string id="Tooltip">替代文字:</string>
+	<string id="Target">目标:</string>
+	<string id="Note">备注:</string>
+	<string id="SelectDirectory">选择目录</string>
+	<string id="ShowProperties">显示属性视窗</string>
+	<string id="ChooseFileToInsert">请选择欲插入的档案</string>
+</localization>

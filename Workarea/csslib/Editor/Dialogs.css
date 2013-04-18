@@ -1,0 +1,699 @@
+/* Global Styles */
+
+body
+{
+	background: #ffffff;
+	margin : 0px 0px;
+	padding : 0px 0px;
+}
+
+
+body.dialog
+{
+	font-family: Arial, Verdana, sans-serif;
+	font-size: 75%;
+	width: 99.99% /* Ektron */
+}
+
+div.ComboBoxDropDown_Default
+{
+	max-height: 120px;
+	overflow: auto;
+}
+div.ComboBoxDropDown_Default > div
+{
+	overflow: visible !important;
+}
+input.ComboBoxInput_Default, input.ComboBoxInputHover_Default
+{
+	height: 21px !important; /* ComboBoxDropDown image is 21 pixels high */
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+/* Text-related Styles */
+.Text
+{
+	color: black;
+}
+
+LABEL, .Label, .label
+{
+    color: black;
+	padding-left: 4px;
+	font-size: 1em;
+}
+
+legend
+{
+	font-size: 1em;
+}
+
+.DisabledLabel
+{
+	color: Gray;
+}
+
+.Message
+{
+	COLOR: blue;
+}
+
+.ErrorMessage
+{
+	COLOR: red;
+}
+
+/* Button related styles */
+
+button.ImageButton
+{
+	border: 0px;
+	background: transparent;
+	width: 22px;
+	height: 20px;
+	vertical-align: top;
+	padding-left: 0px !important;
+}
+
+.DialogUtilityArea
+{
+	border: solid 1px #999;
+	background: #ccccee;
+	margin-top: 3px;	
+	margin-bottom: 0px;	
+}
+
+/* Dialog Holder related properties */
+.FileNodeTreeHolder
+{
+	border: solid #6788be 1px;
+	overflow: auto;
+	width: 200px;
+	height: 230px;
+	background: white;
+	vertical-align: top;
+}
+
+.PreviewAreaHolder
+{
+	/* Ektron border: solid #6788be 1px; */
+	vertical-align: middle;
+	overflow: visible; /* Ektron - was auto */
+	width: 250px;
+	height: 230px;
+	background: white;
+	text-align: center;
+}
+
+/* Ektron start */
+#Ektron_FrameContentMiddle
+{
+	position: fixed; 
+	top: 30px; 
+	height: 90%;
+	left: 0;
+	right: 0;
+	bottom: 60px; 
+	overflow: auto; 
+	background: #fff;
+	margin: 8px;
+}
+* html #Ektron_FrameContentMiddle
+{ /*IE6 hack*/
+	height: 90%; 
+	width: 100%; 
+	padding: 30px 0 0 0; 
+}
+
+#Ektron_FrameContentTop, #Ektron_FrameContentBottom
+{
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 30px; /*Height of top frame div*/
+	overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+}
+
+#Ektron_FrameContentBottom
+{
+	top: auto;
+	bottom: 0; 
+	height: 60px; /*Height of bottom frame div*/
+	overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+}
+
+.Ektron_FrameInnerTube
+{
+	margin: 8px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+}
+
+.OptionsCheckList
+{
+	display: block;
+}
+
+/* Ektron end */
+
+/* Image-button related styles in the dialogs */ 
+.ImageButtonHolder
+{
+	background: white;
+	border: solid 1px #6788be;
+	border-bottom: 0px;
+}
+
+.ImageButtonHolder A
+{	
+	width:22px;/*IE*/
+	margin:1px;	
+}
+
+.ImageButtonHolder A:hover
+{
+	margin:0px;
+	background-color: white;
+	border: solid 1px white;
+}
+ 
+.ImageButtonHolder A.Disabled, .ImageButtonHolder A.Disabled:hover
+{	
+	width:22px;/*IE*/	
+	margin: 1px;
+	background: white;
+	border: solid 1px white;	
+	filter:alpha(opacity=30);
+	-moz-opacity:0.3;	
+	opacity: 0.3; /* CS3 */
+}
+
+/* disabled button in the dialogs */
+INPUT.ButtonDisabled, BUTTON.ButtonDisabled
+{
+	border: 0px;
+	margin: 3px;
+	WIDTH: 80px;
+	HEIGHT: 22px;
+	BACKGROUND-image: url(CssImg/button.gif);
+	TEXT-ALIGN: center;
+}
+
+
+/* TextBox related styles */
+
+/* DropDown related styles */
+select.DropDown
+{
+	padding-left:2px;
+	margin:2px;
+}
+
+table
+{
+	font-size: 100%;
+}
+
+/* MainTable related styles */
+table.MainTable
+{
+	background: #fff;
+}
+
+form.telerikDialog table.mainTable
+{
+
+}
+
+table.MainTable th
+{
+	text-align:left;
+	padding-left: 10px;
+	height: 19px;
+}
+
+table.MainTable td.MainTableContentCell
+{
+	padding: 10px;
+}
+
+/* TD Related styles */
+TD.Padded
+{
+	padding: 2px 2px 2px 1px;
+}
+
+/* Separator-related styles */
+td.VerticalSeparator 
+{
+	width: 2px;
+}
+
+td.HorizontalSeparator
+{
+	border-bottom: solid 1px green;
+}
+
+/* dialog - tab-related styles */
+table.Tab
+{	
+	cursor: pointer;
+	height: 19px;
+}
+
+table.TabSelected
+{
+	cursor: pointer;
+	height: 19px;
+	color: #526994;
+}
+
+.TabLeftSelected
+{
+	width: 9px;
+	font-size: 1px;
+	/*background: transparent url('CssImg/TabStrip.png') 0 -38px no-repeat;	*/
+} 
+
+.TabCenterSelected
+{
+    background: transparent url(../../images/UI/active_tab.gif) 0 0 repeat-x;
+	text-align: center;
+	padding: 0px 16px;
+	height: 19px;
+	font-size: .83em;
+	color: #fff;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.TabCenterSelected:hover
+{
+    background: transparent url(../../images/UI/over_tab.gif) 0 0 repeat-x;
+}
+
+.TabRightSelected
+{
+	width: 9px;
+	font-size: 1px;
+	/*background: url('CssImg/TabStrip.png') right -38px no-repeat;*/
+}
+
+.TabLeft,
+.TabLeftDisabled
+{
+	width: 9px;
+	height: 19px;
+	font-size: 1px;
+    /*background: transparent url('CssImg/TabStrip.png') 0px 0 no-repeat;	*/
+}
+
+.TabCenter,
+.TabCenterDisabled
+{
+	text-align: center;	
+	padding: 0px 16px;
+	color: #000;
+	background: #d0d0d0;
+	font-size: .83em;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.TabRight,
+.TabRightDisabled
+{
+	width: 9px;
+	height: 19px;
+	font-size: 1px;
+	/*background: transparent url('CssImg/TabStrip.png') right 0px no-repeat;	*/
+}
+
+table.TabDisabled
+{
+	cursor: crosshair;
+	cursor: no-drop;	
+	height: 19px;
+	filter: alpha(opacity=50); /* IE */
+	-moz-opacity: 0.5; /* Mozilla */
+	opacity: 0.5; /* CSS, Mozilla */
+}
+
+/* Tree-node related styles */
+.TreeNodeSelected td,
+.TreeNodeSelected td a
+{
+	cursor:hand;
+	cursor:pointer;
+	padding:1px 0px 1px 1px;	
+	background-color: #f2f2f2;
+	text-decoration:none;
+	color: black;
+}
+
+.TreeNodeDefault td,
+.TreeNodeDefault a,
+.TreeNodeDefault a:visited
+{
+	cursor:hand;
+	cursor:pointer;
+	padding: 1px 0px 1px 1px;	
+	text-decoration: none;
+}
+
+.TreeNodeDefault A:hover
+{
+	color: #999;
+	cursor: hand;
+	cursor: pointer;
+	text-decoration: underline;
+	padding: 1px 0px 1px 1px;		
+}
+
+.FileBrowserSortHeader
+{
+	cursor: hand;
+	cursor: pointer;
+	border-top: solid 1px white;
+	border-left: solid 1px #ccc;
+	border-right: solid 1px #9baac6;
+	background: #a0b8db;
+	color: white;
+}
+
+td.TableDialogCell
+{
+	background: #ccc;
+}
+
+
+td.TableDialogSelectedCell
+{
+	background: #999;
+}
+
+td.TableDialogTableHolder
+{
+	background: white;
+	border: solid 1px #bbb;
+}
+
+/* --- Drop down menu --- */
+.MenuButton		
+{
+	margin:3px; 
+	position:absolute;
+	width:14px; 
+	height:14px; 
+	font-size:4pt; 
+	border:1px solid #cccccc;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.MenuElement
+{
+	position: absolute;
+	background-color: #009900;	
+	z-index: 1000;
+}
+
+/* --- Color picker --- */
+.RadEColorPicker
+{
+	border:1px solid #7F9DB9;
+	background-color: white; 
+	cursor:default;
+}
+.RadEColorPicker TD
+{	
+	border:1px solid white; 
+	height:14px;
+	text-align:center;
+}
+
+.RadEColorPicker TD.Over
+{
+	border:1px solid #bbbbbb;			
+	height:14px;
+}
+
+.RadEColorPicker TD DIV
+{
+	border: 1px solid #808080;
+	width: 12px;
+	height: 13px;
+	font-size:5pt;			
+}
+
+/* --- Alignment selector --- */
+.AlignmentControlTable
+{
+	background-color:#fefefe;
+	border: 1px solid #7F9DB9;
+	cursor:default;
+}
+
+.AlignmentControlTable A
+{	
+	width:22px;/*IE*/
+	margin:1px;	
+}
+
+.AlignmentControlTable A:hover
+{
+	margin:0px;
+	background-color:#e3e3e3;
+	border:1px solid #bbbbbb;	
+} 
+
+/* TableBorderControl */
+.TableBorderControlMain 
+{
+	border: 1px solid #bbbbbb;
+	BACKGROUND-COLOR: white;
+	margin:5px;
+}
+
+.TableBorderControlMain A
+{	
+}
+
+.TableBorderControlMain A:hover
+{
+	background-color:#e3e3e3;
+	border:1px solid #666666;
+}
+
+.TableBorderControlMain TD.HButtonHolder
+{
+	border: 1px solid #bbbbbb;
+	background-image: url(Dialogs/tableBorderControlH.gif);
+	background-repeat: repeat-x;
+	padding: 2px;
+} 
+
+.TableBorderControlMain TD.VButtonHolder 
+{
+	text-align:left;
+	border: 1px solid #bbbbbb;
+	background-image: url(Dialogs/tableBorderControlV.gif);
+	background-repeat: repeat-y;
+	width: 20px;
+}
+
+.TableBorderControlMain TD.Preview
+{
+	border: 1px solid #bbbbbb;
+	background-color: #f7f7f7;
+}
+				
+.TableBorderControlPreview
+{
+	background: white;
+}
+
+.TableBorderControlPreview TD 
+{
+	/*border-color: #0099cc;*/
+}
+
+.TableBorderControlPreviewNoBorder
+{ 
+	background-color: #ffffff;
+	BORDER-RIGHT: 1px dotted #999999;
+	BORDER-BOTTOM: 1px dotted #999999;
+}
+
+.TableBorderControlPreviewNoBorder TD
+{
+	padding: 2px;
+	background-color: #ffffff;
+	BORDER-TOP: 1px dotted #999999;  
+	BORDER-LEFT: 1px dotted #999999;
+}
+
+
+/* Plus and Minus "buttons" */
+TD.SizeButtonHolder
+{
+}
+
+TD.SizeButtonHolder IMG
+{
+	border: 1px solid #6788BE;
+	background-color: White;
+}
+
+TD.SizeButtonHolder IMG.Over
+{
+	background-color: #e3e3e3;
+	border: 1px solid #666666;
+}
+
+TD.SizeButtonHolder IMG.Disabled
+{
+	background-color:transparent;
+	border:0px solid transparent;
+	filter:alpha(opacity=30);
+	-moz-opacity:0.3;
+}
+
+/* --- Color picker --- */
+.RadEColorPickerLabel
+{
+	color: green;
+	text-align: center;
+}
+
+.ColorPickerMainButton 
+{
+	height:22px;
+	width:30px;
+	/*padding-left:4px;	*/
+	vertical-align:middle;
+	border:0px solid #cccccc;
+	text-align:left;
+	background-color:Transparent;
+	background-image:url(Dialogs/ColorPickerIcon.gif);
+}
+
+.ColorPickerMainButtonOver
+{
+	height:22px;
+	width:30px;
+	/*padding-left:4px;	*/
+	vertical-align:middle;
+	border:0px solid red;
+	text-align:left;
+	background-color:Transparent;
+	background-image:url(Dialogs/ColorPickerIconOver.gif);
+}
+
+.ColorPickerMenuSpan
+{
+	margin:3px;
+	/*position:absolute;*/
+	width:12px; 
+	height:12px; 
+	font-size:4pt; 
+	border:1px solid #cccccc;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* --- Alignment selector --- */
+.AlignmentMainButton 
+{
+	height:22px;
+	width:30px;
+	padding-left:4px;	
+	vertical-align:middle;
+	border:0px solid #cccccc;
+	text-align:left;
+	background-color:Transparent;
+	background-image:url(Dialogs/AlignmentSelectorIcon.gif);
+}
+
+.AlignmentMainButtonOver
+{
+	height:22px;
+	width:30px;
+	padding-left:4px;	
+	vertical-align:middle;
+	border:0px solid #cccccc;
+	text-align:left;
+	background-color:Transparent;
+	background-image:url(Dialogs/AlignmentDropdownOver.gif);
+}
+
+/* --- TableBorderControl --- */
+.TableBorderControlMain	TABLE.ImageButtonHolder
+{
+	background-color: Transparent;
+	border: 0px solid #cccccc;
+}
+
+/* ------------------------- Editor Dropdown "Header" Styles ---------------------------------*/
+.RadEDropDown
+{
+	cursor:default;
+	background-color:white;
+	border:1px solid #A6A6A6;
+	width: 13px;
+	height: 16px;
+}
+
+.RadEDropDownOver
+{
+	cursor:default;
+	background-color:white;
+	border:1px solid #0A246A;
+	width: 13px;
+	height: 16px;
+}
+/* ------------------------- Editor Dropdown "Header" Styles ---------------------------------*/
+
+
+div.imgcntpnl table td
+{
+font-family:Arial;
+font-size:12px ;
+padding: 2px 5px 2px 5px;
+}
+	
+.imgcntpnl table
+{
+width:480px;
+
+}	
+
+div.imgcntpnl{
+background-color:#dddddd; 
+border-bottom:1px solid #666666;
+position: absolute;
+top: 0;
+}	
+.imgtbtndne
+{
+text-align:right;
+} 
+
+.imgtbtndne input
+{
+ font-size:11px;
+} 
+
+.imgtlinstsm
+{
+font-family:Arial;
+font-size:11px ;	
+vertical-align:bottom;
+}

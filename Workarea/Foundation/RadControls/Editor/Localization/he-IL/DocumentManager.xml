@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">מנהל מסמכים</string>
+	<string id="ConfirmDelete">האם אתה בטוח שברצונך למחוק את הקובץ שנבחר?\nיתכן שהמסמך שנחבר נמצא בשימוש. אם המסמך יימחק יתכן ומספר דפים לא יוצגו כראוי\nלחץ אישור כדי להמשיך במחיקה</string>
+	<string id="Alertfile">!אנא, ספק את קובץ המסמך להעלאה</string>
+	<string id="Alertvalid">!אנא, ספק קובץ מסמך חוקי להעלאה</string>
+	<string id="Alertexists">!קובץ המסמך שנבחר כבר קיים בספרייה זו</string>
+	<string id="MessageNothingPost">!אנא, ספק את קובץ המסמך</string>
+	<string id="MessageValid">!אנא, ספק קובץ מסמך חוקי</string>
+	<string id="MessageSize">גודל הקובץ שסופק חורג מהגודל המותר</string>
+	<string id="Tab1HeaderText">עיין בקבצים</string>
+	<string id="Tab2HeaderText">העלה מסמך</string>
+	<string id="DocumentDirectory">:ספריית המסמך</string>
+	<string id="DocumentFile">:קובץ המסמך</string>
+	<string id="Tooltip">:כתובית</string>
+	<string id="Target">:יעד</string>
+	<string id="Note">:הערה</string>
+	<string id="SelectDirectory">בחר ספרייה</string>
+	<string id="ShowProperties">הצג חלון מאפיינים</string>
+	<string id="ChooseFileToInsert">אנא בחר קובץ להכנסה</string>
+</localization>

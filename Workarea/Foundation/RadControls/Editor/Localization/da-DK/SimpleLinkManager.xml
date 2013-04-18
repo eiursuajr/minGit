@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Link Manager">Hyperlink Manager</string>
+	<string id="Text">Link tekst</string>
+	<string id="Type">Typ</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Cancel</string>
+</localization>

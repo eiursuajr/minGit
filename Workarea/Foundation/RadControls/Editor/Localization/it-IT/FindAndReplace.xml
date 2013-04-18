@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Trova e Sostituisci</string>
+	<string id="Tab1HeaderText">Trova</string>
+	<string id="Tab2HeaderText">Sostituisci</string>
+	<string id="SearchText">Trova:</string>
+	<string id="FindNext">Trova successivo</string>
+	<string id="Replace">Sostituisci</string>
+	<string id="ReplacementText">Sostituisci con:</string>
+	<string id="ReplaceAll">Sostituisci tutto</string>
+	<string id="SearchIn">Trova:</string>
+	<string id="SearchEntireText">Tutto il testo</string>
+	<string id="SearchSelection">Solo nella selezione</string>
+	<string id="SearchDirection">Direzione:</string>
+	<string id="MatchCase">Controlla il MAIUSCOLO/minuscolo</string>
+	<string id="WholeWordsOnly">Controlla solo le parole complete</string>
+	<string id="SearchUp">Sopra</string>
+	<string id="SearchDown">Sotto</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Annulla</string>
+	<string id="SearchCriteriaNotSpecified">Criterio di ricerca non specificato</string>
+	<string id="NoSearchTarget">Nessun contenuto da ricercare</string>
+	<string id="FinishedSearching">RadEditor ha terminato la ricerca</string>
+	<string id="AndHasMade">e ha fatto</string>
+	<string id="Replacements">sostituzioni.</string>
+	<string id="ektron">Ektron Editor Starts</string>
+	<string id="Close">Close</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

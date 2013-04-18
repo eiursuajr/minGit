@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<paramconfiguration>
+  <!--
+  Supported params for control markup rendering - do not modify
+  -->
+  <controls>
+    <control id="Collection">
+      <param name="[$SERVER_NAME]" description="Server or domain address."/>
+      <param name="[$CollectionTitle]" description="Collection title."/>
+      <param name="[$CollectionDescription]" description="Collection description."/>
+      <param name="[$ItemCount]" description="Total number of items (works only in paging mode otherwise -1)."/>
+      <param name="[$Index]" description="Serial number for the items."/>
+      <param name="[$ContentId]" description="Content Id."/>
+      <param name="[$Language]" description="Content Language."/>
+      <param name="[$Title]" description="Content Title."/>
+      <param name="[$Type]" description="Content Type."/>
+      <param name="[$Teaser]" description="Content Teaser."/>
+      <param name="[$Html]" description="Content Html."/>
+      <param name="[$QuickLink]" description="Content QuickLink."/>
+      <param name="[$HyperLink]" description="Content HyperLink."/>
+      <param name="[$ImageIcon]" description="Content Type Icon url."/>
+      <param name="[$LinkTarget]" description="Link Target"/>
+      <param name="[$Status]" description="Content Status."/>
+      <param name="[$FolderId]" description="Folder Id."/>
+      <param name="[$EditorLastName]" description="Editor Last Name."/>
+      <param name="[$EditorFirstName]" description="Editor First Name."/>
+      <param name="[$DateCreated]" description="Date created date."/>
+      <param name="[$DateModified]" description="Date modified date."/>
+      <param name="[$Comment]" description="Content comment."/>
+      <param name="[$Image]" description="ImageLink"/>
+      <param name="[$ImageThumbnail]" description="Image Thumbnail link"/>
+	  <param name="[$FilePath]" description="Content file path. For DMS assets it is file path relative to site and for content blocks it is quicklink."/>
+	</control>
+    <control id="ListSummary">
+      <param name="[$SERVER_NAME]" description="Server or domain address."/>
+      <param name="[$FolderName]" description="Folder name."/>
+      <param name="[$FolderDescription]" description="Folder description."/>
+      <param name="[$ItemCount]" description="Total number of items (works only in paging mode otherwise -1)."/>
+      <param name="[$Index]" description="Serial number for the items."/>
+      <param name="[$ContentId]" description="Content Id."/>
+      <param name="[$Language]" description="Content Language."/>
+      <param name="[$Title]" description="Content Title."/>
+      <param name="[$Type]" description="Content Type."/>
+      <param name="[$Teaser]" description="Content Teaser."/>
+      <param name="[$Html]" description="Content Html."/>
+      <param name="[$QuickLink]" description="Content QuickLink."/>
+      <param name="[$HyperLink]" description="Content HyperLink."/>
+      <param name="[$ImageIcon]" description="Content Type Icon url."/>
+      <param name="[$LinkTarget]" description="Link Target"/>
+      <param name="[$Status]" description="Content Status."/>
+      <param name="[$FolderId]" description="Folder Id."/>
+      <param name="[$EditorLastName]" description="Editor Last Name."/>
+      <param name="[$EditorFirstName]" description="Editor First Name."/>
+      <param name="[$DateCreated]" description="Date created date."/>
+      <param name="[$DateModified]" description="Date modified date."/>
+      <param name="[$Comment]" description="Content comment."/>
+      <param name="[$Image]" description="ImageLink."/>
+      <param name="[$ImageThumbnail]" description="Image Thumbnail link."/>
+	  <param name="[$FilePath]" description="Content file path. For DMS assets it is file path relative to site and for content blocks it is quicklink."/>
+	</control>
+    <control id="MetaDataList">
+      <param name="[$SERVER_NAME]" description="Server or domain address."/>
+      <param name="[$ItemCount]" description="Total number of items (works only in paging mode otherwise -1)."/>
+      <param name="[$Index]" description="Serial number for the items."/>
+      <param name="[$ContentId]" description="Content Id."/>
+      <param name="[$Language]" description="Content Language."/>
+      <param name="[$Title]" description="Content Title."/>
+      <param name="[$Type]" description="Content Type."/>
+      <param name="[$Teaser]" description="Content Teaser."/>
+      <param name="[$Html]" description="Content Html."/>
+      <param name="[$QuickLink]" description="Content QuickLink."/>
+      <param name="[$HyperLink]" description="Content HyperLink."/>
+      <param name="[$ImageIcon]" description="Content Type Icon url."/>
+      <param name="[$LinkTarget]" description="Link Target"/>
+      <param name="[$Status]" description="Content Status."/>
+      <param name="[$FolderId]" description="Folder Id."/>
+      <param name="[$EditorLastName]" description="Editor Last Name."/>
+      <param name="[$EditorFirstName]" description="Editor First Name."/>
+      <param name="[$DateCreated]" description="Date created date."/>
+      <param name="[$DateModified]" description="Date modified date."/>
+      <param name="[$Comment]" description="Content comment."/>
+      <param name="[$Image]" description="ImageLink."/>
+      <param name="[$ImageThumbnail]" description="Image Thumbnail link."/>
+	  <param name="[$ShortDateModified]" description="Short Date modified date."/>
+    </control>
+    <control id="ContentList">
+      <param name="[$SERVER_NAME]" description="Server or domain address."/>
+      <param name="[$ItemCount]" description="Total number of items (works only in paging mode otherwise -1)."/>
+      <param name="[$Index]" description="Serial number for the items."/>
+      <param name="[$ContentId]" description="Content Id."/>
+      <param name="[$Language]" description="Content Language."/>
+      <param name="[$Title]" description="Content Title."/>
+      <param name="[$Type]" description="Content Type."/>
+      <param name="[$Teaser]" description="Content Teaser."/>
+      <param name="[$Html]" description="Content Html."/>
+      <param name="[$QuickLink]" description="Content QuickLink."/>
+      <param name="[$HyperLink]" description="Content HyperLink."/>
+      <param name="[$ImageIcon]" description="Content Type Icon url."/>
+      <param name="[$LinkTarget]" description="Link Target"/>
+      <param name="[$Status]" description="Content Status."/>
+      <param name="[$FolderId]" description="Folder Id."/>
+      <param name="[$EditorLastName]" description="Editor Last Name."/>
+      <param name="[$EditorFirstName]" description="Editor First Name."/>
+      <param name="[$DateCreated]" description="Date created date."/>
+      <param name="[$DateModified]" description="Date modified date."/>
+      <param name="[$Comment]" description="Content comment."/>
+      <param name="[$Image]" description="ImageLink."/>
+      <param name="[$ImageThumbnail]" description="Image Thumbnail link."/>
+	  <param name="[$FilePath]" description="Content file path. For DMS assets it is file path relative to site and for content blocks it is quicklink."/>
+	</control>
+    <control id="Directory">
+      <param name="[$SERVER_NAME]" description="Server or domain address."/>
+      <param name="[$CategoryId]" description="current category id for items being displayed."/>
+      <param name="[$ItemCount]" description="Total number of items (works only in paging mode otherwise -1)."/>
+      <param name="[$Index]" description="Serial number for the items."/>
+      <param name="[$ContentId]" description="Content Id."/>
+      <param name="[$Language]" description="Content Language."/>
+      <param name="[$Title]" description="Content Title."/>
+      <param name="[$Type]" description="Content Type."/>
+      <param name="[$Teaser]" description="Content Teaser."/>
+      <param name="[$Html]" description="Content Html."/>
+      <param name="[$QuickLink]" description="Content QuickLink."/>
+      <param name="[$HyperLink]" description="Content HyperLink."/>
+      <param name="[$ImageIcon]" description="Content Type Icon url."/>
+      <param name="[$LinkTarget]" description="Link Target"/>
+      <param name="[$Status]" description="Content Status."/>
+      <param name="[$FolderId]" description="Folder Id."/>
+      <param name="[$EditorLastName]" description="Editor Last Name."/>
+      <param name="[$EditorFirstName]" description="Editor First Name."/>
+      <param name="[$DateCreated]" description="Date created date."/>
+      <param name="[$DateModified]" description="Date modified date."/>
+      <param name="[$Comment]" description="Content comment."/>
+      <param name="[$Image]" description="ImageLink."/>
+      <param name="[$ImageThumbnail]" description="Image Thumbnail link."/>
+      <param name="[$PagingCurrentStartIndex]" description="Start count for the items displayed in a page's search results.  Works only with taxonomy search."/>
+      <param name="[$PagingCurrentEndIndex]" description="End count for the items displayed in a page's search results.  Works only with taxonomy search."/>
+      <param name="[$SearchText]" description="Displays the text for which a user is searching.  Works only with taxonomy search."/>
+      <param name="[$SearchSummary]" description="displays a teaser that is created from information stored in the indexing service for each item in the search results.  Works only with taxonomy search."/>
+      <param name="[$SearchDuration]" description="The amount of time, in seconds, taken for executing search.  Works only with taxonomy search."/>
+      <param name="[$ContentByteSize]" description="Displays the content item’s size in KB.  Works only with taxonomy search."/>
+      <param name="[$TemplateQuickLink]" description="Uses the taxonomy template as Quicklink."/>
+    </control>
+    <control id="WebSearch">
+      <param name="[$PagingCurrentStartIndex]" description="Start count in search results."/>
+      <param name="[$PagingCurrentEndIndex]" description="End count in search results."/>
+      <param name="[$SearchText]" description="Search text."/>
+      <param name="[$ItemCount]" description="Number of results."/>
+      <param name="[$SearchDuration]" description="Time taken for executing search."/>
+      <param name="[$LinkTarget]" description="Target for QuickLink."/>
+      <param name="[$QuickLink]" description="Content QuickLink."/>
+      <param name="[$Title]" description="Content Title."/>
+      <param name="[$SearchSummary]" description="Content Summary."/>
+      <param name="[$ContentId]" description="Content Id."/>
+      <param name="[$ContentByteSize]" description="CMS Size."/>
+      <param name="[$DateModified]" description="Date modified date."/>
+      <param name="[$EditorLastName]" description="Editor Last Name."/>
+      <param name="[$EditorFirstName]" description="Editor First Name."/>
+      <param name="[$ImageIcon]" description="Content Type Icon url."/>
+	  <param name="[$ImageThumbnail]" description="Image Thumbnail link."/>
+	  <param name="[$FilePath]" description="Content file path. For DMS assets it is file path relative to site and for content blocks it is quicklink."/>
+	  <param name="[$Type]" description="Content types. (Refer to Admin Manual for complete list of content types.)"/>
+		<param name="[$FolderId]" descripton="Folder id of the content" />
+		<param name="[$ShortDateModified]" descripton="short modified date" />
+    </control>
+    <control id="Map">
+    </control>
+	<control id="MessageBoard">
+		  <param name="[$DateCreated]" description="Displays the date created."/>
+		  <param name ="[$DateModified]" description="Displays the date modified."/>
+		  <param name ="[$MessageText]"  description="  Displays the Message."/>
+		  <param name ="[$UserName]" description="Displays the user name."/>
+		  <param name ="[$FirstName]" description="Displays the First name of the member."/>
+		  <param name ="[$LastName]" description="Displays the Last name of the member."/>
+		  <param name ="[$DisplayName]" description="Displays the displayname of the member."/>
+		  <param name ="[$Avatar]" description="Displays the current profile picture or avatar of the member."/>
+		  <param name ="[$EmailAddress]" description="Displays the mail address of the  member."/>
+		<param name ="[$DeleteMessageLink]" description="Displays the Delete link for the message"/>
+		<param name="[$ApproveMessageLink]" description="Displays the Approve link for the message used by admins"/>
+		<param name="[$AddCommentBox]" description="Displays the Comment box and the button"/>
+		<param name="[$NumberComments]" description="Displays the number of comments posted"/>
+		</control>
+	  <control id="ECommerceBasket">
+		  <param name="[$BasketName]" description="The currently selected baskets name."/>
+		  <param name="[$BasketSubTotal]" description="The sub-total of all items for the current basket."/>
+		  <param name="[$ShoppingUrl]" description="URL to continue shoppign, or to see details on an item."/>
+		  <param name="[$JavascriptObjectID]" description="The unique identifier for the basket Javascript object-instance."/>
+		  <param name="[$EmptyBasketFlag]" description="An indicator of if the current basket is empty."/>
+		  <param name="[$BasketItemName]" description="The name of the product item."/>
+		  <param name="[$BasketItemID]" description="The product items ID."/>
+		  <param name="[$BasketItemQuantity]" description="The quantity to purchase for this item."/>
+		  <param name="[$BasketItemPrice]" description="The cost for this item."/>
+		  <param name="[$BasketItemEarlyPrice]" description="The early price for this item."/>
+		  <param name="[$BasketItemTotal]" description="The total for this item."/>
+		  <param name="[$SavedBasketID]" description="The ID of the saved basket."/>
+		  <param name="[$SavedBasketName]" description="The name of the saved basket."/>
+		  <param name="[$SavedBasketDateCreated]" description="The date that the saved basket was created."/>
+		  <param name="[$SavedBasketActionText]" description="The text shown for each saved baskets link (open or active)."/>
+		  <param name="[$CurrentBasketMarkup]" description="The placeholder for the currently active baskets markup."/>
+		  <param name="[$SavedBasketMarkup]" description="The placeholder for the saved baskets markup."/>
+		</control>
+	</controls >
+</paramconfiguration>

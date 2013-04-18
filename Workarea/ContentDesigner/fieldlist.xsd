@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xsd:element name="fieldlist">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="field" type="fieldType" maxOccurs="unbounded"/>
+				<xsd:element name="datalist" type="datalistType" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+		<xsd:unique name="U_xpath">
+			<xsd:selector xpath="field"/>
+			<xsd:field xpath="@xpath"/>
+		</xsd:unique>
+		<xsd:key name="K_datalist">
+			<xsd:selector xpath="datalist"/>
+			<xsd:field xpath="@name"/>
+		</xsd:key>
+		<xsd:keyref name="KR_datalist" refer="K_datalist">
+			<xsd:selector xpath="field"/>
+			<xsd:field xpath="@datalist"/>
+		</xsd:keyref>
+	</xsd:element>
+
+	<xsd:complexType name="fieldType" mixed="true">
+		<xsd:attribute name="name" type="xsd:NCName" use="required"/>
+		<xsd:attribute name="datatype" type="datatypeType" use="required"/>
+		<xsd:attribute name="basetype" type="basetypeType" use="required"/>
+		<xsd:attribute name="content" type="contentType"/>
+		<xsd:attribute name="datalist" type="xsd:NCName"/>
+		<xsd:attribute name="xpath" type="xpathType" use="required"/>
+		<xsd:attribute name="title"/>
+		<xsd:attribute name="indexed" type="xsd:boolean"/>
+		<xsd:attribute name="translate" type="xsd:boolean"/>
+		<xsd:attribute name="minoccurs" type="xsd:nonNegativeInteger"/>
+		<xsd:attribute name="maxoccurs">
+			<xsd:simpleType>
+				<xsd:union memberTypes="xsd:nonNegativeInteger">
+					<xsd:simpleType>
+						<xsd:restriction base="xsd:string">
+							<xsd:enumeration value="unbounded"/>
+						</xsd:restriction>
+					</xsd:simpleType>
+				</xsd:union>
+			</xsd:simpleType>
+		</xsd:attribute>
+	</xsd:complexType>
+
+	<xsd:complexType name="datalistType">
+		<xsd:sequence>
+			<xsd:element name="item" type="itemType" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+		<xsd:attribute name="name" use="required" type="xsd:NCName"/>
+		<xsd:attribute name="ektdesignns_datasrc" type="xsd:anyURI"/>
+		<xsd:attribute name="ektdesignns_dataselect" type="xpathType"/>
+		<xsd:attribute name="ektdesignns_captionxpath" type="xpathType"/>
+		<xsd:attribute name="ektdesignns_valuexpath" type="xpathType"/>
+		<xsd:attribute name="ektdesignns_datanamespaces" type="xsd:string"/>
+	</xsd:complexType>
+
+	<xsd:complexType name="itemType" mixed="true">
+		<xsd:attribute name="value" use="required"/>
+	</xsd:complexType>
+
+	<xsd:simpleType name="xpathType">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="datatypeType">
+		<xsd:restriction base="xsd:NCName">
+			<xsd:pattern value="anyType"/>
+			<xsd:pattern value="anyURI"/>
+			<xsd:pattern value="boolean"/>
+			<xsd:pattern value="choice"/>
+			<xsd:pattern value="date"/>
+			<xsd:pattern value="decimal"/>
+			<xsd:pattern value="double"/>
+			<xsd:pattern value="email"/>
+			<xsd:pattern value="integer"/>
+			<xsd:pattern value="long"/>
+			<xsd:pattern value="nonNegativeInteger"/>
+			<xsd:pattern value="password"/>
+			<xsd:pattern value="positiveInteger"/>
+			<xsd:pattern value="selection"/>
+			<xsd:pattern value="string"/>
+			<xsd:pattern value="textarea"/>
+			<xsd:pattern value="\S+">
+				<xsd:annotation>
+					<xsd:documentation>Any value from //choice/@name, //schema/@datatype or 
+					//custom/selections[@name='datatype']/listchoice/@value in ValidateSpec.xml
+					or //schema/@datatype in DataListSpec.xml</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="basetypeType">
+		<xsd:restriction base="xsd:NCName">
+			<xsd:pattern value="calendar"/>
+			<xsd:pattern value="checkbox"/>
+			<xsd:pattern value="html"/>
+			<xsd:pattern value="hyperlink"/>
+			<xsd:pattern value="id"/>
+			<xsd:pattern value="number"/>
+			<xsd:pattern value="password"/>
+			<xsd:pattern value="text"/>
+			<xsd:pattern value="textbox"/>
+			<xsd:pattern value="\S+">
+				<xsd:annotation>
+					<xsd:documentation>Any value from //@treeImg in ValidateSpec.xml</xsd:documentation>
+				</xsd:annotation>
+			</xsd:pattern>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="contentType">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="textarea"/>
+			<xsd:pattern value="element=\w+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

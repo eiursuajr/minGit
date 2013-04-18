@@ -1,0 +1,61 @@
+.RadEWrongWord
+{	
+	background: url('../../ewebeditpro/wavyred.gif') repeat-x left bottom;
+}
+
+.RadEDomMouseOver
+{
+	background-color: #efefef;
+	border: 1px dashed red;
+}
+
+/* Border around the textarea that holds the content */
+.RadEContent, .RadEContentBordered
+{
+	border: solid 1px #6788BE;
+	background-color: #fff;
+	padding: 3px;
+	background-image: none;
+	margin: 0px;	
+	text-align: left;	
+	word-wrap: break-word;
+}
+
+/* Ektron begin */
+body.RadEContent, body.RadEContentBordered
+{
+	border: none;
+	padding: 0;
+	padding-right: 4px;
+	margin: 0;
+	overflow: hidden;
+	direction: rtl; 
+	text-align: right !important;
+}
+/* Ektron end */
+
+.RadEContentBordered form
+{
+	 background-color: #efefef;
+	 border: 1px dashed #555555;		 
+}
+
+.RadEContentBordered table
+{
+	border-right: #999999 1px dashed; 
+	border-bottom: #999999 1px dashed;
+}
+
+.RadEContentBordered table td
+{
+	padding: 1px;
+	border-top: #999999 1px dashed;	
+	border-left: #999999 1px dashed;	
+}
+
+.RadEContentBordered table th
+{
+	padding: 1px;
+	border-top: #000000 1px dashed;	
+	border-left: #000000 1px dashed;
+}

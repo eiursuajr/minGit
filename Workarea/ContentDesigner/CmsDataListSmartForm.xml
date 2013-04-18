@@ -1,0 +1,18 @@
+<fieldset contenteditable="false" class="design_group" ektdesignns_caption="CMS Data List" ektdesignns_name="CmsDataList" ektdesignns_nodetype="element" ektdesignns_role="root" id="CmsDataList" name="CmsDataList" title="CMS Data List">
+<div contenteditable="true" class="design_membrane" ektdesignns_nodetype="content"><table cellspacing="0" cellpadding="0" border="0" class="show_design_border" ektdesignns_caption="Data List" ektdesignns_name="ol" ektdesignns_nodetype="element" id="ol" summary="Data List" title="Data List">
+<caption>Data List</caption>
+<thead>
+<tr>
+<th>Display Text</th>
+<th>Data Value</th>
+</tr>
+</thead>
+<tbody ektdesignns_list="true">
+<tr ektdesignns_caption="Item" ektdesignns_maxoccurs="unbounded" ektdesignns_minoccurs="2" ektdesignns_name="li" ektdesignns_nodetype="element" id="li" title="Item">
+<td><input alt="Text to display" ektdesignns_caption="Display Text" ektdesignns_indexed="false" ektdesignns_name="DisplayText" ektdesignns_nodetype="text" id="DisplayText" maxlength="1500" name="DisplayText" size="34" style="width: 273px;" title="Text to display" ektdesignns_validation="string-req" ektdesignns_datatype="string" ektdesignns_basetype="text" ektdesignns_schema="&lt;xs:minLength value=&quot;1&quot;/&gt;" ektdesignns_validate="re:/\S+/" ektdesignns_invalidmsg="Cannot be blank" onblur="design_validate_re(/\S+/,this,'Cannot be blank');" /></td>
+<td><input alt="Value to store" ektdesignns_caption="Data Value" ektdesignns_indexed="false" ektdesignns_name="title" ektdesignns_nodetype="attribute" id="title" maxlength="50" name="title" title="Value to store" /></td>
+</tr>
+</tbody>
+</table>
+</div>
+</fieldset>

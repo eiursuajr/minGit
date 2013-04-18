@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="ErrorMessage.ascx.cs" Inherits="ektron_Templates_EktronUI_ErrorMessage" %>
+<asp:label ID="aspErrorLabel" AssociatedControlID="" runat="server"><asp:PlaceHolder ID="aspErrorMessage" runat="server"></asp:PlaceHolder></asp:label>

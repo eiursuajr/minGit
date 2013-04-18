@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Tab1HeaderText">Choose template</string>
+	<string id="Tab2HeaderText">Upload template</string>
+	<string id="TemplateURL">URL:</string>
+	<string id="AlertFile">Please, provide template file to upload!</string>
+	<string id="AlertExists">Such template file already exists in this directory!</string>
+	<string id="MessageValid">Please, provide a valid template file!</string>
+	<string id="MessageSize">Provided template file exceeds max size allowed!</string>
+	<string id="MessageNothingPost">Please, provide a template file!</string>
+	<string id="NoTemplateSelectedToInsert">Please, choose a template file to be inserted!</string>
+</localization>

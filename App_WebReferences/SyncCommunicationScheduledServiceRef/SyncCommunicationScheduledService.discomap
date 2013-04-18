@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc" filename="SyncCommunicationScheduledService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?wsdl=wsdl0" filename="SyncCommunicationScheduleService.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd3" filename="SyncCommunicationScheduleService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd2" filename="SyncCommunicationScheduleService0.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd1" filename="SyncCommunicationScheduleService1.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd0" filename="SyncCommunicationScheduleService2.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd5" filename="SyncCommunicationScheduleService3.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd4" filename="SyncCommunicationScheduleService4.xsd" />
+  </Results>
+</DiscoveryClientResultsFile>

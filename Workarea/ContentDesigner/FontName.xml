@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<Item data="" text="(Unassigned)" />
+	<Item data="Arial,Helvetica" text="Arial, Helvetica" />
+	<Item data="Comic Sans MS" text="Comic Sans MS" />
+	<Item data="Courier New,Courier" text="Courier New, Courier" />
+	<Item data="Symbol" text="Symbol" />
+	<Item data="Times New Roman,Times" text="Times New Roman, Times" />
+	<Item data="Verdana,Helvetica" text="Verdana, Helvetica" />
+</Items>

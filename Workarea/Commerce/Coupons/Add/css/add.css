@@ -1,0 +1,27 @@
+/* wrappers */
+div.ektron {padding:0;margin:0;}
+div.notLoggedIn {background-image:none !important;}
+
+/* default styles */
+div.couponAdd .hide {display:none;}
+
+/* wizard outer table */
+div.couponAdd table.wizardTable {width:100%;border:1px solid #d4d4d4 !important;border-collapse:collapse;}
+div.couponAdd table.wizardTable td.sidebar {width:8em;vertical-align:top;background-color:#fff;border:1px solid #d4d4d4 !important;}
+div.couponAdd table.wizardTable td.sidebar table {border-collapse:collapse;margin:0;padding:0;}
+div.couponAdd table.wizardTable td.sidebar table {width:100%;}
+div.couponAdd table.wizardTable td.sidebar table td {padding:0;margin:0;}
+div.couponAdd table.wizardTable td.sidebar table td a {font-weight:bold !important;background-position:0px 50%;background-repeat:no-repeat;display:block;color:#000;border-bottom:1px solid white;padding: 3px 8px;}
+div.couponAdd table.wizardTable td.sidebar table td a.sidebarNavigationActive {background: #1b4a94 url('../../../../images/UI/active_tab.gif') repeat-x 0 0; color: #ffffff;}
+div.couponAdd table.wizardTable td.sidebar table td a.preventClick {cursor:default !important;text-decoration:none !important;}
+div.couponAdd table.wizardTable td.sidebar table td a.preventClick:hover {text-decoration:none !important;}
+div.couponAdd table.wizardTable td.sidebar table td a.aspNetDisabled {cursor:default !important;}
+div.couponAdd table.wizardTable td.sidebar table td a.aspNetDisabled:hover {text-decoration:none;}
+div.couponAdd table.wizardTable td table tr td.navigation {padding:.5em;border-top:1px solid #d4d4d4 !important;background-image:url('images/tfoot.gif');background-repeat:repeat;background-position:0px 0px;}
+div.couponAdd table.wizardTable td table tr td.navigation table {float:right;}
+div.couponAdd table.wizardTable td table tr td.navigation input {margin-left:.75em;}
+
+/* invalid permissions */
+div.couponAdd div.invalidPermissions {margin:1em;border:1px solid #d4d4d4;padding:1em;background-image:url('images/tfoot.gif');background-repeat:repeat;background-position:0px 0px;}
+div.couponAdd div.invalidPermissions p {border:1px solid #d4d4d4;background-color:White !important;padding:1em;}
+div.couponAdd div.invalidPermissions p span {padding-left:20px;background-image:url('images/warning.gif');background-repeat:no-repeat;background-position:center left;}

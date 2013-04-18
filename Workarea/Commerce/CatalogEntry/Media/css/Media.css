@@ -1,0 +1,134 @@
+/* wrapper */
+div.EktronMediaTabWrapper {width:60em;padding-bottom:.75em;margin:0em 1em 1em 1em;font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;}
+
+/* widget styles */
+div.EktronMediaTabWrapper .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+div.EktronMediaTabWrapper .clearfix {display:inline-block;}
+div.EktronMediaTabWrapper img {border:none;}
+div.EktronMediaTabWrapper .alignRight {text-align:right;}
+div.EktronMediaTabWrapper .alignLeft {text-align:left;}
+div.EktronMediaTabWrapper .textSmall {font-size:.75em;}
+div.EktronMediaTabWrapper .emphasis {font-weight:bold;}
+div.EktronMediaTabWrapper .noBackgroundImage {background-image:none;}
+div.EktronMediaTabWrapper .noBorderTop {border-top:none;}
+div.EktronMediaTabWrapper .noBorderTopBottom {border-top:none;border-bottom:none;}
+div.EktronMediaTabWrapper .gutterRight {margin-right:1em !important;}
+div.EktronMediaTabWrapper .gutterLeft {margin-left:1em !important;}
+div.EktronMediaTabWrapper .placeholder {display:none !important;}
+
+/* buttons */
+div.EktronMediaTabWrapper a {color:blue;text-decoration:none;}
+div.EktronMediaTabWrapper a:hover {color:blue;text-decoration:underline;}
+div.EktronMediaTabWrapper a:visited {color:blue;}
+div.EktronMediaTabWrapper a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.EktronMediaTabWrapper a.buttonLeft {float:left;}
+div.EktronMediaTabWrapper a.buttonRight {float:right;margin-left:1em;}
+div.EktronMediaTabWrapper a.buttonInline {display:inline;}
+div.EktronMediaTabWrapper a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.EktronMediaTabWrapper a.renameBasket img {margin:0 3px -1px 3px !important;padding-left:3px;}
+div.EktronMediaTabWrapper a.button:hover {border:1px solid #fbc2c4;color:#d12f19;text-decoration:none;}
+div.EktronMediaTabWrapper a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.EktronMediaTabWrapper a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.EktronMediaTabWrapper a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+
+/* media group header */
+div.EktronMediaTabWrapper div.mediaGroupHeader {padding:1em 0em 3em 0em;margin:0 0 1em 0;border-bottom:1px dotted silver;line-height:35px;}
+div.EktronMediaTabWrapper div.mediaGroupHeader h3 {display:inline;padding:15px 0px 20px 58px;background-image:url('images/images.gif');background-position:0px 5px;background-repeat:no-repeat;text-align:left;font-weight:bold;font-size:1.5em;}
+div.EktronMediaTabWrapper div.mediaGroupHeader p.addImage {position:relative;margin-top:-2em;}
+
+/* modal - fullsize media */
+div.ektronWindow {padding:0;}
+div.ektronWindow h4 {font-weight:bold !important;width:100% !important;color:#000080 !important;height:28px !important;margin:0 !important;padding:0 !important;text-align:right !important;background-image:url('images/th.gif') !important;background-position:0 0 !important;background-repeat:repeat-x !important;}
+div.ektronWindow h4 span {position:relative !important;top:6px !important;left:5px !important;display:block !important;float:left !important;}
+div.ektronWindow h4 img {position:relative !important;top:3px !important;right:5px !important;cursor:pointer !important;cursor:hand !important;}
+div#ektronMediaModal {background-color:#4c4c4c;}
+div#ektronMediaModal table.fullsizeMedia {border-collapse:separate;margin:1em auto;}
+div#ektronMediaModal table.fullsizeMedia th {background-color:#4c4c4c;vertical-align:middle;border:none;padding:0;margin:0;color:silver;font-weight:normal;}
+div#ektronMediaModal table.fullsizeMedia th.height {width:5em;text-align:center;background-image:url('images/xyRule.gif');background-position:top center;background-repeat:repeat-y;border-top:1px solid silver;border-right:none;border-bottom:1px solid silver;border-left:none;}
+div#ektronMediaModal table.fullsizeMedia th.width {width:5em;text-align:center;background-image:url('images/xyRule.gif');background-position:center left;background-repeat:repeat-x;border-top:none;border-right:1px solid silver;border-bottom:none;border-left:1px solid silver;}
+div#ektronMediaModal table.fullsizeMedia th.height span,
+div#ektronMediaModal table.fullsizeMedia th.width span {background-color:#4c4c4c;padding:0em 1em;margin:0;}
+div#ektronMediaModal table.fullsizeMedia td {background-color:#4c4c4c;width:auto;border:none;padding:0;margin:0;}
+div#ektronMediaModal table.fullsizeMedia td img {border:1px solid #FF0080;}
+div#ektronMediaModal table.fullsizeMedia td div.fullsizeMediaWrapper { position:relative;width:30em;height:30em;overflow:scroll;}
+
+/* modal - add new image */
+div#ektronMediaAddNewImageModal {margin:0;padding:0;}
+div#ektronMediaAddNewImageModal iframe {height:350px;border:none;width:100%;}
+div#ektronMediaAddNewImageModal h4 {margin:0;color:#000080;font-size:1.2em;line-height:20px;border-bottom:1px solid #000080;padding:0;background-image:url('images/th.gif');background-position:0px 0px;background-repeat:repeat-x;}
+div#ektronMediaAddNewImageModal h4 span {position:relative;top:4px;color:#000080;}
+div#ektronMediaAddNewImageModal h4 img {position:relative;top:3px;right:5px;cursor:pointer;cursor:hand;}
+div#ektronMediaAddNewImageModal p.cancelAddImageModal {display:block;margin:0em 1em 0em 1em;padding:1em 1em 1em 1em;border-top:1px dotted silver;}
+div#ektronMediaAddNewImageModal a {color:blue;text-decoration:none;}
+div#ektronMediaAddNewImageModal a:hover {color:blue;text-decoration:underline;}
+div#ektronMediaAddNewImageModal a:visited {color:blue;}
+div#ektronMediaAddNewImageModal a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div#ektronMediaAddNewImageModal a.buttonLeft {float:left;}
+div#ektronMediaAddNewImageModal a.buttonRight {float:right;}
+div#ektronMediaAddNewImageModal a.buttonInline {display:inline;}
+div#ektronMediaAddNewImageModal a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div#ektronMediaAddNewImageModal a.renameBasket img {margin:0 3px -1px 3px !important;padding-left:3px;}
+div#ektronMediaAddNewImageModal a.button:hover {border:1px solid #fbc2c4;color:#d12f19;text-decoration:none;}
+div#ektronMediaAddNewImageModal a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div#ektronMediaAddNewImageModal a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div#ektronMediaAddNewImageModal a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+div#ektronMediaAddNewImageModal .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+div#ektronMediaAddNewImageModal .clearfix {display:inline-block;}
+
+/* media list */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList {list-style-type:none;margin:0;padding:0;border-bottom:1px solid silver;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li {margin:-3px 0 0 0;display:block;border:1px solid silver;border-bottom:none;padding:1em !important;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li.mediaItemClone {display:none !important;color:#4c4c4c;}
+
+/* image wrapper */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody th.mediaPreview {text-align:center;vertical-align:middle;cursor:pointer;cursor:hand;background-image:url(images/imageBackground.gif);background-repeat:repeat;background-position:0px 0px;background-position:center center;overflow:hidden;margin:0 0 0 0;padding:0 !important;border:1px solid silver;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody th.mediaPreview span.viewFullsize {line-height:20px;display:none;background-image:url(images/opennewwindow.gif);background-repeat:no-repeat;background-position:3px 3px;position:absolute;z-index:99;background-color:#4c4c4c;color:white;text-align:center;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody th.mediaPreview img {position:relative;display:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody th.label {width:10em !important;}
+
+/* image attributes list */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table {border-collapse:collapse;width:100%;font-family:Helvetica, Arial, Tahoma, Verdana, sans-serif;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tfoot p {padding:0;margin:0;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody tr {background-color:White;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody tr.stripe {background-image:none;background-color:#F2F0F5;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody th {font-size:14px;text-align:right;padding:.5em;margin:0em;border:1px solid silver;border-right:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody td {text-align:left;margin:0;padding:.5em;border:1px solid silver;border-left:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody td.last {border-bottom:1px solid silver;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody td div.edit img {cursor:pointer;cursor:hand;margin:0em .5em;float:right;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody th.path,
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody td.path {vertical-align:top;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody td.path div {height:3em;white-space:nowrap;width:27em;overflow-x:auto !important;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody td input {display:inline;width:20em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody td div img.reviseOK,
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList table tbody td div img.reviseCancel {display:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li.mediaImageNone {background-color:#f6f6f6;padding:.5em !important;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li.mediaImageNone p {text-align:center;padding:0;margin:0;}
+
+/* action buttons */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.actions {display:block;margin:1em 0em 0em 0em;padding:0em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.actions .defaultImage {background-color:#4c4c4c;border:1px solid #4c4c4c;color:white;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.actions a.deleteImageSelector img {float:left;position:relative;top:-1px;margin-right:.5em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.actions a.deleteImageSelector img.restore {display:none;}
+
+/* thumbnails wrapper */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails {display:none;background-image:url(images/imageBackground.gif);background-repeat:repeat;background-position:0px 0px;text-align:center;margin:1em 0em 0em 0em;padding:1em;border:1px solid silver;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails th {border-right:1px solid silver;border-bottom:1px solid silver;float:left;margin:-1em 0em 0em -1em;padding:.25em 1em;position:absolute;}
+
+/* thumbnails image wrapper */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper {border:1px solid silver;border-collapse:collapse;width:100%;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper th {font-weight:normal;background-color:#4c4c4c;color:white;vertical-align:middle;border:none;padding:.25em}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper td {background-color:#4c4c4c;color:white;vertical-align:bottom;border:none;padding:0;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper tfoot th,
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper tbody th {text-align:right;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper td div.thumbnailImageWrapper {overflow-x:scroll !important;padding:1em .5em;}
+
+/* thumbnail image table */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper {margin:0;padding:0;border:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper td {padding:0em .5em;vertical-align:top;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p {margin:0;padding:0;text-align:center;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper span {display:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.dimensions {margin:.5em auto;color:silver;text-align:center;font-size:.75em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.thumbnailSelector {margin:0 !important;padding:0 !important;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.defaultThumbnail {line-height:30px;height:30px;cursor:pointer;cursor:hand;color:black;background-image:url(images/defaultThumbnail.gif);background-repeat:repeat-x;background-position:0px 0px;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.selectedThumbnail {background-image:url(images/defaultThumbnailSelected.gif);color:white;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.thumbnailPreview img {border:2px solid #FF00EE;}

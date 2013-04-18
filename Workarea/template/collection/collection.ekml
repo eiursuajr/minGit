@@ -1,0 +1,79 @@
+<!-- 
+Copyright (C) Ektron Inc. All rights reserved.
+Ektron Markup Variables:
+  [$CollectionTitle]			-Display the collection’s description.
+  [$CollectionDescription]		-Display the collection’s title.
+  [$Comment]					-The content’s comment information is displayed.
+  [$ContentId]					-Displays the content item’s ID.
+  [$DateCreated]				-Display the date the content was created.
+  [$DateModified]				-Display the date the content was last modified.
+  [$EditorFirstName]			-Display the last editor’s first name for a content item.
+  [$EditorLastName]				-Display the last editor’s last name for a content item. 
+  [$FolderId]					-Display the folder ID of a content item..
+  [$Html]						-Display the HTML contained in the content item. .
+  [$HyperLink]					-Adds a hyperlink using the title of the content block as the text.
+  [$Image]						-Displays the path for the image defined in a content item’s Metadata. 
+									When wrapped in <img src=””/> tag, the image is displayed. 
+								    For example: <img src=”[$Image]”/>
+  [$ImageIcon]					-Displays an image icon for the content item.
+  [$ImageThumbnail]				-Displays the path for the image’s thumbnail defined in a content item’s Metadata. 
+									When wrapped in <img src=””/> tag, a thumbnail version of the image is displayed. 
+									For example: <img src=”[$ImageThumbnail]”/>
+  [$Index]						-Serialize the content items in a numbered list.
+  [$ItemCount]					-Total number of items (works only in paging mode otherwise -1).
+  [$Language]					-Display the language ID for the content item.
+  [$LinkTarget]					-When added to an <a href=””> tag’s target=”” attribute, this variable
+									reads the server control’s LinkTarget property and uses its setting.
+  [$QuickLink]					-This property displays the Quicklink information for the content item.
+									When wrapped in an <a href=””> tag, you can create a Hyperlink..
+  [$SERVER_NAME]				-Displays the server name. For example, If this variable is applied to 
+									http://www.example.com/demo.aspx, the return is www.example.com.
+  [$ShowBubble]				    -Calls the <ekbubbleinfo></ekbubbleinfo> tags and places the information contained within those tags in a pop-up bubble.
+  [$ShowBubble(width)]		    -Works the same as [$ShowBubble]. It calls the <ekbubbleinfo></ekbubbleinfo>
+									tags and allows you to set the width of the bubble. 
+  [$ShowContent(‘htmltagid’)]	-Calls the <ekcontentinfo> tags an places the information in those tags within the 
+									specified HTML tag ID. Replace the 'htmltagid' with the ID of the tag.
+  [$Status]						-Displays the status of a content item.
+  [$Teaser]						-Display the content item’s teaser information.
+  [$Title]						-Displays the content item’s title.
+  [$UrlEncode(‘str’)]			-Encodes the string information. This variable can be used to encode another EkML 
+									variable and place it in an email.
+  [$UrlParam(‘paramname’)]		-Displays the value of a query string’s parameter. For example, if the query string is ?id=27 and 
+									the variable is [$UrlParam(‘id’)], 27 is displayed.
+  
+  -For additional information on the EKML, its variables and tags, see the CMS400.NET Developer Manual
+  section "Ektron Markup Language"
+  
+-->
+
+<!-- The <ekmarkup></ekmarkup> tags open and close the Ektron Markup Language.-->
+<ekmarkup>
+  <!-- The <ekbubbleinfo></ekbubbleinfo> tags are invoked when you use the [$ShowBubble] or 
+	   [$ShowBubble(width)] variables. By adding variables between the <ekbubbleinfo></ekbubbleinfo> 
+	   tags, you define what information appears in the bubble. In this case, the HTML information appears. -->
+  <ekbubbleinfo>
+    <table border="0">
+      <tr>
+        <td>[$Html]</td>
+      </tr>
+    </table>
+  </ekbubbleinfo>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. -->
+  <ekoutput>
+   [$CollectionTitle]
+    <table width="100%"  border="0">
+      <!-- The <ekrepeat></ekrepeat> tags apply any variables and styling information contained 
+		   within them to each item in the list. -->
+      <ekrepeat>
+        <tr>
+          <td>
+            <!-- This line creates a numbered list for each content item. It also creates a hyperlink using
+			     the title of the content item. When you click on the hyperlinked item, a bubble pops up 
+				 displaying information contained between the  <ekbubbleinfo></ekbubbleinfo> tags. -->
+            [$Index].<a href="#" onclick="[$ShowBubble];return false;">[$Title]</a>
+          </td>
+        </tr>
+      </ekrepeat>
+    </table>
+  </ekoutput>
+</ekmarkup>

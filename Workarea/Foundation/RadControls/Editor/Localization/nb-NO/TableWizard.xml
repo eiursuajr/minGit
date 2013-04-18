@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Tabell veiviser</string>
+	<string id="Tab1HeaderText">Tabell design</string>
+	<string id="Tab2HeaderText">Tabell egenskaper</string>
+	<string id="Tab3HeaderText">Celle egenskaper</string>
+	<string id="Layout">Layout</string>
+	<string id="Alignment">Justering:</string>
+	<string id="Columns">Kolonner</string>
+	<string id="ColumnSpan">Kolonne Span</string>
+	<string id="Rows">Rader</string>
+	<string id="RowSpan">Rad Span</string>
+	<string id="CellSpacing">Celle avstand:</string>
+	<string id="CellPadding">Celle Padding:</string>
+	<string id="Border">Rammer</string>
+	<string id="Size">Størrelse:</string>
+	<string id="Frame">Ramme:</string>
+  <string id="Dimensions">Dimensjoner</string>
+  <string id="Height">Høyde:</string>
+  <string id="Width">Bredde:</string>
+  <string id="ContentAlignment">Innholdsjustering</string>
+  <string id="Horizontal">Horisontal:</string>
+  <string id="Left">Venstre</string>
+  <string id="Center">Sentrert</string>
+  <string id="Right">Høyre</string>
+  <string id="Vertical">Vertikal:</string>
+  <string id="Middle">Midten</string>
+  <string id="Top">Topp</string>
+  <string id="Bottom">Bunn</string>
+  <string id="Baseline">Basislinje</string>
+  <string id="Background">Bakgrunn</string>
+  <string id="UseColor">Bruk farge:</string>
+  <string id="Black">Svart</string>
+  <string id="Blue">Blå</string>
+  <string id="Green">Grønn</string>
+  <string id="Orange">Oransje</string>
+  <string id="Red">Rød</string>
+  <string id="White">Hvit</string>
+  <string id="Yellow">Gul</string>
+  <string id="Custom">Egendefinert</string>
+  <string id="Customh">Egendefinert - </string>
+  <string id="PromptColor">Vennligst oppgi egendefinert HEX verdi:</string>
+  <string id="Additional">Tillegg</string>
+  <string id="Content">Innhold:</string>
+  <string id="NoWrapping">Ingen linjebryting</string>
+  <string id="Tab4HeaderText">Tilgjenglighet</string>
+  <string id="Sec508HeadingRows">Overskrift rader:</string>
+  <string id="Sec508HeadingCols">Overskrift kolonner:</string>
+  <string id="Sec508Summary">Oppsummering:</string>
+  <string id="Sec508Caption">Overskrift:</string>
+  <string id="Sec508CaptionAlign">Overskrift justering:</string>
+  <string id="Sec508AssocCellHeaders">Assosier celler med overskrift</string>
+  <string id="TableBorderControlSizeOverflow">Du prøver å sette rammestørrelsen til en størrelse som er større en tillatt (1000). Den vil bli satt til 1000.</string>
+  <string id="AddCustomColor">Legg til egendefinert farge...</string>
+  <string id="AddHexColor">Legg til HEX farge...</string>
+  <string id="InvalidTableWidth">Ugyldig tabell bredde.</string>
+  <string id="InvalidTableHeight">Ugyldig tabell høyde.</string>
+  <string id="InvalidCellWidth">Ugyldig celle bredde.</string>
+  <string id="InvalidCellHeight">Ugyldig celle høyde.</string>
+  
+  <string id="Allsides">Alle fire sidene</string>
+  <string id="Rules">Regler:</string>
+  <string id="Nosides">Ingen sider</string>
+  <string id="Norules">Ingen rammper</string>
+  <string id="Lefthand">Kun venstre side</string>
+  <string id="Betweencolumns">Mellom kolonner</string>
+  <string id="Righthand">Kun høyre side</string>
+  <string id="Rightleft">Kun høyre og venstre side</string>
+
+  <string id="Topbottom">Kun topp og bunn</string>
+  <string id="Topside">Kun topp</string>
+  <string id="Betweenrows">Mellom rader</string>
+  <string id="Bottomside">Kun bunnen</string>
+
+  <string id="Betweenall">Mellom alle rader og kolonner</string>
+	<string id="Betweengroup">Mellom rad og kolonne grupper</string>
+</localization>

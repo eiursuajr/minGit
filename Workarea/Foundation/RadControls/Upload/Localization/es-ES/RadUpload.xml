@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Add">Agregar</string>
+	<string id="Delete">Eliminar</string>
+	<string id="Select">Seleccionar</string>
+	<string id="Remove">Remover</string>
+	<string id="Clear">Limpiar</string>
+</localization>

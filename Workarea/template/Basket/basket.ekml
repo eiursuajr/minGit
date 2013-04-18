@@ -1,0 +1,190 @@
+<!-- 
+Copyright (C) Ektron Inc. All rights reserved.
+Ektron Markup Variables:
+
+[$BasketName]				- The currently selected baskets name.
+[$BasketSubTotal]			- The sub-total of all items for the current basket.
+[$ShoppingUrl]				- URL to continue shoppign, or to see details on an item.
+[$JavascriptObjectID]		- The unique identifier for the basket Javascript object-instance.
+[$EmptyBasketFlag]			- An indicator of if the current basket is empty.
+[$BasketItemName]			- The name of the product item.
+[$BasketItemID]				- The product items ID.
+[$BasketItemQuantity]		- The quantity to purchase for this item.
+[$BasketItemPrice]			- The cost for this item.
+[$BasketItemEarlyPrice]		- The early price for this item.
+[$BasketItemTotal]			- The total for this item.
+[$SavedBasketID]			- The ID of the saved basket.
+[$SavedBasketName]			- The name of the saved basket.
+[$SavedBasketDateCreated]	- The date that the saved basket was created.
+[$SavedBasketActionText]	- The text shown for each saved baskets link (open or active).
+[$CurrentBasketMarkup]		- The placeholder for the currently active baskets markup.
+[$SavedBasketMarkup]		- The placeholder for the saved baskets markup. 
+ 
+ 
+   -For additional information on the EKML, its variables and tags, see the CMS400.NET Developer Manual
+    section "Ektron Markup Language" 
+   
+-->
+
+<!-- The <ekmarkup></ekmarkup> tags open and close the Ektron Markup Language.-->
+<ekmarkup>
+	<!-- The <ekoutput></ekoutput> tags define what information is output from the server control, and under what mode. -->
+
+	<ekoutput mode="current_basket_markup">
+		Basket Name:
+		<span class="basketName">[$BasketName]</span>
+		<table class="basketTable">
+			<tr>
+				<th class="itemNameColumnHeader">
+					Event
+				</th>
+				<th class="productIdColumnHeader">
+					#
+				</th>
+				<th class="qtyColumnHeader">
+					Qty
+				</th>
+				<th class="itemPriceColumnHeader">
+					Event<br>
+						Price
+					</th>
+				<th class="earlyPriceColumnHeader">
+					Early<br>
+						Price
+					</th>
+				<th class="totalColumnHeader">
+					Total
+				</th>
+			</tr>
+			<ekrepeat>
+				<tr>
+					<td class="itemNameColumn">
+						<a href="[$ShoppingUrl]?id=[$BasketItemID]">
+							[$BasketItemName]
+						</a>
+					</td>
+					<td class="productIdColumn">
+						[$BasketItemID]
+					</td>
+					<td class="qtyColumn">
+						<input type="text" class="productQtyText" value="[$BasketItemQuantity]" />
+					</td>
+					<td class="itemPriceColumn">
+						[$BasketItemPrice]
+					</td>
+					<td class="earlyPriceColumn">
+						[$BasketItemEarlyPrice]
+					</td>
+					<td class="totalColumn">
+						[$BasketItemTotal]
+					</td>
+				</tr>
+			</ekrepeat>
+			<tr>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td>
+				</td>
+				<td class="subTotal">
+					Sub Total
+				</td>
+				<td>
+					[$BasketSubTotal]
+				</td>
+			</tr>
+		</table>
+		<input type="hidden" id="EktronBasketCtl_emptyBasketFlag_[$JavascriptObjectID]" value="[$EmptyBasketFlag]" />
+	</ekoutput>
+
+	<ekoutput mode="saved_basket_markup">
+		<table class="savedBasketTable">
+			<tr>
+				<th align="left">
+					Basket Name
+				</th>
+				<th align="left">
+					Date Created
+				</th>
+				<th>
+					&nbsp;
+				</th>
+				<th>
+					&nbsp;
+				</th>
+			</tr>
+			<ekrepeat>
+				<tr>
+					<td>
+						[$SavedBasketName]
+					</td>
+					<td>
+						[$SavedBasketDateCreated]
+					</td>
+					<td class="open">
+						<a onclick="return BasketClass.GetObject('[$JavascriptObjectID]').SelectBasket('[$SavedBasketID]');" href="#">
+							[$SavedBasketActionText]
+						</a>
+					</td>
+					<td align="center">
+					</td>
+				</tr>
+			</ekrepeat>
+		</table>
+	</ekoutput>
+
+	<ekoutput mode="view">
+		<div id="EktronBasketCtl_[$JavascriptObjectID]" class="Ektron EktronBasketCtl">
+			<h4>
+				Your Shopping Basket
+			</h4>
+			<div id="EktronBasketCtl_basketContainer_[$JavascriptObjectID]" class="basketContainer">
+				[$CurrentBasketMarkup]
+			</div>
+			<div class="basketButtons">
+				<span class="deletBasketButton" onclick="return BasketClass.GetObject('[$JavascriptObjectID]').DeletBasket();">
+					<input type="button" value=" Delete Basket " />
+				</span>
+				<span class="updatBasketButton" onclick="return BasketClass.GetObject('[$JavascriptObjectID]').UpdatBasket()">
+					<input type="button" value=" Update " />
+				</span>
+				<span class="renamBasketButton" onclick="return BasketClass.GetObject('[$JavascriptObjectID]').RenamBasket()">
+					<input type="button" value=" Rename " />
+				</span>
+				<span class="checkoutBasketButton" onclick="return BasketClass.GetObject('[$JavascriptObjectID]').Checkout()">
+					<input type="button" value=" Checkout " />
+				</span>
+			</div>
+			<div class="separator">
+			</div>
+			<hr />
+			<h4>
+				Your Saved Baskets
+			</h4>
+			<div id="EktronBasketCtl_savedBasketContainer_[$JavascriptObjectID]" class="savedBasketContainer">
+				[$SavedBasketMarkup]
+			</div>
+			<div class="newBasket">
+				<span class="newBasketBtn" onclick="return BasketClass.GetObject('[$JavascriptObjectID]').CreatBasket()">Create New Basket</span>
+			</div>
+			<div class="continueShopping">
+				<a href="[$ShoppingUrl]">
+					Continue Shopping
+				</a>
+			</div>
+			<div id="EktronBasketCtl_BasketDialog_[$JavascriptObjectID]" class="BasketDialog">
+				<h3>
+				</h3>
+				<div class="BasketDialogTextContainer">
+					<span></span>
+					<input name="userText" type="text" value="" />
+				</div>
+				<input class="BasketDialogOkBtn" name="Ok" type="button" value="Ok" />
+				<input class="BasketDialogCancelBtn" name="Cancel" type="button" value="Cancel" />
+			</div>
+		</div>
+	</ekoutput>
+</ekmarkup>

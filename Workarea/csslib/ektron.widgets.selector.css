@@ -1,0 +1,40 @@
+﻿form.newTemplateForm {display: block; color: #333}
+div.titleWrapper label {font-weight: bold; padding-right: .5em;}
+div.titleWrapper input.title {width: 30em;}
+div.groupSpaceCheckBox {font-size: .9em; margin: .5em 0;}
+div.groupSpaceCheckBox input {float: left;}
+div.groupSpaceCheckBox label {display: block; padding-top: .25em;}
+
+/* Buttons */
+#widgetActions {padding-right: .25em; margin-bottom: .25em}
+#widgetActions li {float: right;}
+#widgetActions a.button{ display: block; padding: .5em 1em .5em 2.25em !important; background-position: .5em .4em; font-size: 1em; margin: 0 0 0 .75em !important; }
+#widgetActions a.selectAllButton {background-image: url('../images/UI/Icons/layoutSelectAll.png'); background-repeat: no-repeat;}
+#widgetActions a.selectNoneButton {background-image: url('../images/UI/Icons/layoutDeselectAll.png'); background-repeat: no-repeat;}
+
+
+/* widgets */
+.widgetsHeader {padding: .5em 0 .25em 0}
+.widgetsHeader h4 {float: left; margin: 0; padding: 1em 0 0 .25em; font-weight: normal; color: #676767}
+.widgetsHeader ul#widgetActions {float: right; width: auto;}
+#widgetDisplay {width: 546px;}
+#widgetDisplay > fieldset {width:95%;}
+ul#widgetList { list-style-type: none; margin: 0; padding: 0; }
+ul#widgetList li { margin: 0; padding: 0; display: inline; }
+#widgets {width: 514px; height: 314px; overflow-y: scroll; overflow-x: auto; background-color: #eee; color: white; border: solid 1px #ccc;}
+.widgetTitle {text-align: center; overflow: hidden;}
+.widget {background-color: #eeeeee; color: black; width: 100px; height: 80px; padding: 5px; margin: 4px; border: 3px solid #ccc; text-align: center; float: left;}
+.widget:hover {background-color: #DFF4FF; border-color: #C2E1EF; color: #336699;}
+.selected:hover {background-color: #E6EFC2; border-color: #C6D880; color: #529214;}
+.widget input { display: none; }
+.selected {background-color: #E6EFC2; border-color: #C6D880; color: #529214;}
+.selected:hover {background-color: #E6EFC2; border-color: #C6D880; color: #529214;}
+
+/* filetree */
+.folderTree {height: 320px; overflow-y: scroll; overflow-x: auto; margin: 0 0 0 .5em}
+.file:hover {color: blue; cursor: pointer;}
+.EktronTreeview .hover {color: #ccc;}        
+
+/* Modal */
+.right {float: right;}
+.ektronModalStandard  div.ektronModalBody {padding: 0;font-size: 12px;}

@@ -1,0 +1,661 @@
+/********************************* General *******************************/
+
+.Ektron_Body
+{
+}
+
+.Ektron_Clickable
+{
+    cursor: hand;
+}
+
+.Ektron_ErrorText
+{
+	font-weight: bold;
+	font-style: italic;
+	color: Red;
+}
+
+/* Any access key (letter) in the UI */
+.Ektron_AccessKey
+{
+    text-decoration:underline;
+    font-weight: bold;
+}
+
+.Ektron_DefaultCursor
+{
+	cursor: default;
+}
+
+/* Grid columns that contain icons */
+.Ektron_IconTextColumn
+{
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+/* Buttons above grids */
+.Ektron_GridButtonContainer
+{
+    width: 100%;
+    text-align: right;
+    margin-bottom: 4px;
+}
+
+.Ektron_StandardBorder
+{
+    border: solid 1px #6788BE;
+}
+
+.Ektron_ReadOnlyTextField
+{
+    background-color: #E0E0E0;
+}
+
+/********************************** Buttons *********************************/
+
+/* Not used yet */
+.Ektron_ImageTextButton
+{
+	background: url('../images/headerBackground.png');
+	border: solid 1px #6788BE;	
+	color: #FFFFFF;
+	font: 13px;
+	font-weight: bold;
+	white-space: nowrap;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-left: 6px;
+	padding-right: 6px;			
+	display: inline-table;
+	display: -moz-inline-box;
+	display: inline-block;	
+	cursor: hand;	
+}
+
+.Ektron_AddButton
+{
+	background: url('../Images/Buttons.png');
+	background-position: 0 0; 
+    width: 15px;
+    height: 15px;    	
+}
+
+.Ektron_RemoveButton
+{    
+	background: url('../Images/Buttons.png');
+	background-position: -15px 0; 
+    width: 15px;
+    height: 15px;    	
+}
+
+.Ektron_DeleteButton
+{   
+	background: url('../Images/Buttons.png');
+	background-position: -30px 0; 
+    width: 15px;
+    height: 15px;    	
+}
+
+.Ektron_FilterButton
+{
+	background: url('../Images/Buttons.png');	
+	background-position: -45px 0; 
+    width: 15px;
+    height: 15px;    	
+}
+
+/*********************************** Help ***********************************/
+
+/* Icon that brings up context sensitive help */
+.Ektron_HelpButton
+{
+	background: url('../Images/Buttons.png');
+	background-position: -60px 0; 
+	display: block;
+	width: 15px;
+	height: 15px;
+}
+
+/* Popups that appear w/ help text via a div on a higher z-index */
+.Ektron_HelpBubble
+{
+	left: 0px; 
+	width: 290px; 
+	background-color: #FFFFFF; 
+	border: solid 1px #6788BE;
+	padding: 4px;
+	display: none;
+    position: fixed; 
+    z-index: 3000; 
+    text-align: justify; 
+}
+
+/****************************** Form Elements *******************************/
+
+/* All labels that appear to the left of, or above, a form field */
+.Ektron_StandardLabel, .Ektron_TopLabel
+{
+	white-space: nowrap;
+	width: 1%;		
+	line-height: 2.25em;
+	padding-right: .25em;	
+}
+
+/* All labels that appear to the left of a form field */
+.Ektron_StandardLabel
+{		
+	line-height: 2.25em;	
+}
+
+/* All labels that appear above a form field (generally above a text area) */
+.Ektron_TopLabel
+{	
+	line-height: 1.5em;
+}
+
+.Ektron_StandardTextArea, .Ektron_WideTextArea
+{
+	height: 7em;
+	padding-left: .25em;
+}
+
+.Ektron_NarrowTextBox, .Ektron_NarrowTextArea
+{
+	width: 10em;
+}
+
+.Ektron_StandardTextBox, .Ektron_StandardTextArea
+{
+	width: 20em;
+}
+
+.Ektron_WideTextBox, .Ektron_WideTextArea
+{
+	width: 30em;
+}
+
+.Ektron_NumberTextBox
+{
+	text-align: right;
+	width: 4em;
+}
+
+.Ektron_ReadOnlyBox
+{
+	background-color: #CCC;
+}
+
+.Ektron_StandardButton
+{
+	width: auto; /* limiting the width causes overflow problems in IE6 */
+}
+
+/* Text that we want to appear in a scrolling region, but without borders */
+.Ektron_TextBoxNoBorder
+{
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 0px; 
+	border-left-width: 0px;
+	width: 97%;
+	height: 80px;
+	padding-top: 2px;
+	padding-left: 5px;
+}
+
+/* Text that we want to appear in a scrolling region, but without borders */
+.Ektron_TextBoxNoBorderSmall
+{
+	border-top-width: 0px; 
+	border-right-width: 0px; 
+	border-bottom-width: 0px; 
+	border-left-width: 0px;
+	width: 97%;
+	height: 26px;
+	padding-top: 2px;
+	padding-left: 5px;
+}
+
+.Ektron_ScrollDivBlock
+{
+	border: solid 1px grey; 
+	overflow: auto; 
+	width: 98%; 
+	height: 8em;
+	padding: 2px 4px 2px 4px;
+}
+/********************************** Login ***********************************/
+
+.Ektron_LoginHeaderLeft
+{
+	background: transparent url('../Images/Login/HeaderLeft.gif') no-repeat;
+	width: 6px;
+}
+
+.Ektron_LoginHeaderCenter
+{   
+	background: transparent url('../Images/Login/HeaderCenter.gif') repeat-x;    	
+    height: 35px;
+}
+
+.Ektron_LoginHeaderRight
+{
+	background: transparent url('../Images/Login/HeaderRight.gif') no-repeat;
+	width: 6px;
+}
+
+.Ektron_LoginHeaderImage
+{       
+    background: transparent url('../Images/Login/Logo.png') no-repeat;  
+    margin-top: 0px;
+    width: 114px;
+    height: 20px;    
+}
+
+.Ektron_LoginBodyLeft
+{
+    width: 6px;
+    background: url('../Images/Login/BodyLeft.gif') repeat-y #fff;
+}
+
+.Ektron_LoginBodyCenter
+{
+    padding: 7px;
+	background: #fff;
+}
+
+.Ektron_LoginBodyRight
+{
+    width: 6px;
+    background: url('../Images/Login/BodyRight.gif') 100% 0 repeat-y #fff;
+}
+
+.Ektron_LoginFooterLeft
+{
+    width:6px;    
+    background:url('../Images/Login/FooterLeft.gif') no-repeat;
+}
+
+.Ektron_LoginFooterCenter
+{
+	background: transparent url('../Images/Login/FooterCenter.gif') repeat-x;
+	height: 6px;
+}
+
+.Ektron_LoginFooterRight
+{	
+	width: 6px;	
+	background: transparent url('../Images/Login/FooterRight.gif') no-repeat !important;
+}
+
+.Ektron_LoginContainer
+{
+	position:absolute;
+	top:50%;
+	text-align: center;
+	margin-top:-10%;
+	width: 100%;
+}
+
+.Ektron_LoginInnerContainer
+{	
+	margin-left:auto; 
+	margin-right:auto;
+}
+
+/* Username and Password text fields in the login box */
+.Ektron_LoginBodyCenter input[type=text], .Ektron_LoginBodyCenter input[type=password]
+{	
+	width: 150px;
+}
+
+/************************** Page Level Containers ***************************/
+
+/* Entire top section, including nav tabs */
+.Ektron_TopSectionWorkArea, .Ektron_TopSectionSmartDesktop
+{
+    position: absolute; 
+    display: block; 
+    width: 100%; 
+    height: 48px; 
+    z-index: 5;  
+	background: url('../images/topNavBarBackground.png');		
+}
+
+/* The top section (including nav tabs) is on a higher z-index */
+/* We have to push it off to the right so it doesn't lay on top of the scrollbar */
+.Ektron_TopSectionSmartDesktop
+{
+    right: 17px; 
+}
+
+/* This is a trick to push the content down below the header */
+/* The height must be set to the same height as the Ektron_TopSectionWorkArea class */
+.Ektron_TopPadding
+{
+    display: block; 
+    height: 48px;
+}
+
+/* Logo at left side of top navigation bar */
+.Ektron_Logo
+{
+	margin-top: 16px;	
+	margin-left: 6px;
+	float: left;
+}
+
+/* Logo at left side of top navigation bar - SmartDesktop only */
+/* We have to push it further off to the left because the top section is being pushed to the right */
+.Ektron_LogoDesktop
+{
+	margin-top: 16px;	
+	margin-left: 23px;
+	float: left;
+}
+
+/* Username label */
+.Ektron_Username
+{
+	float: right;
+	margin-top: 6px;
+	margin-right: 8px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/* Top navigation tabs */
+.Ektron_MainNavTabs
+{
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+}
+
+/* Lower Section (Everything besides Desktop tab) */
+.Ektron_WorkAreaViewContainer
+{	
+    background-color: #fff;
+    padding-top: 52px;     
+    display: block; 
+    height: 100%; 
+    max-height: 100%; 
+    overflow: hidden; 
+    position: relative; 
+    z-index: 3; 
+    word-wrap: break-word;
+}
+
+.Ektron_WorkAreaViewSplitterContainer
+{
+    border-top: 1px solid #6788be;
+}
+
+.Ektron_ZonePane
+{
+	padding: 0px;
+	margin: 0px;
+	height: 100%;
+	/* TODO: Ross - The following setting helps loading in Firefox, but makes the splitter bars work funky in IE: */
+	/*width: 100% !important;*/ /* This overrides a style (width:<pane_width>%) that Telerik shouldn't be writing to the div tag */
+}
+
+/******************************** Panel Bar *********************************/
+
+.Ektron_PanelBarContainer
+{
+	width:100%;
+	background-color:#cccccc;
+}
+
+.rootGroup /* Added to Telerik style */
+{
+	width:100%;
+}
+
+/**************************** Progress Indicator ****************************/
+
+.Ektron_ProgressIndicatorContainer
+{
+	border: 1px solid #999999;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	height: 60px;
+	position: relative;
+	top: -65%;
+	background-color: #FFFFFF;
+}
+
+.Ektron_ProgressIndicatorInnerContainer
+{
+	color: #999999;	
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: auto;
+}
+
+/* Background color for the loading panel (it appears lighter though because the transparency is set to 40 */
+.Ektron_LoadingPanel
+{
+    background-color: #dae6f4;
+}
+
+/* Image that appears in the loading panel */
+.Ektron_LoadingPanelImage
+{
+    margin-top: 14px;
+    background-image: url('../images/loading.gif');
+    width: 130px;
+    height: 60px;
+}
+
+/********************************** Dialogs **********************************/
+
+/* Container for tabs in Telerik dialogs */
+.Ektron_DialogTabContainer
+{
+	background-color: #a5bee7;    
+	width: 100%;
+    padding-top: 4px;
+    padding-left: 6px;
+}
+
+/* Body of dialogs w/ tabs at the top */
+.Ektron_Dialog_Tabs_BodyContainer, .Ektron_DialogTabBodyContainer
+{    
+    margin: -1px;
+    border-top: solid 1px #cdcdcd;    
+	padding-top: 5px;	
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+/* Body of dialogs w/ no tabs */
+.Ektron_DialogBodyContainer
+{	
+	padding-top: 5px;	
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+/* Container for buttons at bottom of dialog */
+.Ektron_Dialogs_ButtonContainer, .Ektron_DialogButtonContainer
+{
+	width: 100%;
+	text-align: center;
+	margin: 1em auto 0;
+	border-top: solid 1px #cdcdcd;
+	padding: 1em 0em;
+}
+
+/* Image in confirmation dialogs */
+.Ektron_ConfirmationImage
+{
+    float: left;
+}
+
+/********************************** Properties ********************************/
+
+/* Outer container for the properties section */
+.Ektron_PropertiesContainer
+{
+	padding-top: 4px;
+	padding-bottom: 6px;
+	padding-left: 6px;
+	padding-right: 6px;	
+}
+
+/******************************* Editor Properties ****************************/
+
+/* Help text in the Meta Data panel of the Editor's panelbar */
+.Ektron_MetaDataHelpText
+{
+	padding-top: 4px;
+	color: #404040;
+}
+
+/* Container for buttons in the Meta Data panel of the Editor's panelbar */
+.Ektron_MetaDataButtonContainer
+{
+	padding-top: 4px;
+}
+
+/********************************* Settings *********************************/
+
+.Ektron_SettingsWidget
+{
+	border-bottom: solid 1px #6788BE;
+}
+
+.Ektron_SettingsHeader
+{
+	background: url('../images/headerBackground.png');
+	border-bottom: solid 1px #6788BE;
+	height: 21px;
+	padding-top: 1px;	
+	padding-left: 8px;
+	padding-right: 6px;
+	vertical-align: middle;
+}
+
+/* Text next to the Site dropdown */
+.Ektron_SettingsHeaderLabel
+{
+	font-weight: bold;	
+	padding-right: .25em;
+	color: White;
+}
+
+.Ektron_SettingsHeaderTitle
+{
+	font-weight: bold;	
+	color: White;
+}
+
+.Ektron_SettingsToolbarContainer
+{
+    padding-top: 3px;
+}
+
+.Ektron_SettingsContent
+{	
+	padding-top: 8px;
+	padding-left: 8px;	
+}
+
+.Ektron_SettingLeft
+{	
+	vertical-align: top;
+	padding: 8px; /* If layouts goes from table to divs, move this to Ektron_SettingsWidget */
+}
+
+.Ektron_SettingLeftTitle
+{
+	font-weight: bold;
+}
+
+.Ektron_SettingLeftDescription
+{	
+	padding-top: 8px;
+	color: #404040;
+}
+
+.Ektron_SettingRight
+{
+	padding: 8px; /* If layouts goes from table to divs, move this to Ektron_SettingsWidget */
+}
+
+/**************************** Content View Dialog ***************************/
+
+.Ektron_ViewToolBar
+{
+	width: 100%;
+	text-align: right;
+	vertical-align: middle;
+	background-color: #F7F7F7;
+}
+
+/********************************** Spacers *********************************/
+
+div.Ektron_StandardSpacer
+{
+	clear: both;
+}
+
+.Ektron_TopSpace
+{
+	margin-top: 1em;
+}
+
+.Ektron_TopSpaceSmall
+{
+	margin-top: 8px;
+}
+
+.Ektron_TopSpaceVerySmall
+{
+	margin-top: 4px;
+}
+
+.Ektron_TopSpaceVeryVerySmall
+{
+	margin-top: 2px;
+}
+
+.Ektron_BottomSpace
+{
+	margin-bottom: 1em;
+}
+
+.Ektron_BottomSpaceSmall
+{
+	margin-bottom: .5em;
+}
+
+.Ektron_TopAndBottomSpace
+{
+	margin-top: 1em;	
+	margin-bottom: 1em;
+}
+
+.Ektron_TopAndBottomSpaceSmall
+{
+	margin-top: .5em;	
+	margin-bottom: .5em;
+}
+
+.Ektron_LeftSpace
+{
+	margin-left: 1em;	
+}
+
+.Ektron_LeftSpaceSmall
+{
+	margin-left: .5em;	
+}

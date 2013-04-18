@@ -1,0 +1,150 @@
+﻿div.todoList
+{
+	width: 640px;
+}
+
+div.todoList table.todoItems
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+
+div.todoList div.actions
+{
+	text-align: right;
+	padding-bottom: 0.5em;
+}
+
+div.todoList div.actions a.addTodo
+{
+	float: left;
+}
+
+div.todoList table.todoItems
+{
+	width: 100%;
+}
+
+div.todoList table.todoItems td
+{
+	margin: 0;
+	padding: 0.5em;
+}
+
+div.todoList table.todoItems th
+{
+	margin: 0;
+	padding: 0.5em;
+}
+
+div.todoList .ui-button { margin-left: -1px; padding: 1px 0px 1px 0px; }
+div.todoList .ui-button-icon-only .ui-button-text { padding: 0.35em; } 
+div.todoList .ui-autocomplete-input { margin: 0; padding: 0.48em 0 0.47em 0.45em; }
+
+div.todoList table.todoItems tr.todoItemComments ul.comments
+{
+	list-style-type: none;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+div.todoList table.todoItems tr.todoItemComments td
+{
+	margin: 0;
+}
+
+div.todoList table.todoItems tr.todoItemData td.title
+{
+	cursor: pointer;
+}
+
+div.todoList table.todoItems tr.todoItemComments div.commentsWrapper
+{
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+div.todoList table.todoItems tr.todoItemComments li.comment
+{
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+div.todoList table.todoItems tr.todoItemComments span.avatar
+{
+	width: 30px;
+	height: 30px;
+	background-image: url(Workarea/images/application/ani_process.gif);
+	display: inline;
+	float: left;
+	margin-right: 0.5em;
+}
+
+div.todoList table.todoItems tr.todoItemComments li
+{
+	line-height: 35px;
+}
+
+div.todoList table.todoItems tr.todoItemComments input.message
+{
+	margin: 0; padding: 0.48em 0 0.47em 0.45em;
+	width: 80%;
+}
+
+div.todoList table.todoItems tr.todoItemComments .ui-button
+{
+	margin-left: -3px;
+}
+
+div.todoList div.dialog
+{
+    display: none;
+}
+
+div.addTodo.dialog label
+{
+    margin-top: 5px;
+    display: block;
+}
+
+div.addTodo.dialog input,div.addTodo.dialog select,div.addTodo.dialog textarea
+{
+    width:100%;
+}
+
+div.addTodo.dialog input.dueDate,div.addTodo.dialog input.startDate,div.editTodo.dialog input.dueDate,div.editTodo.dialog input.startDate
+{
+    width: 200px;
+}
+
+div.editTodo.dialog label
+{
+    margin-top: 5px;
+    display: block;
+}
+
+div.editTodo.dialog input,div.editTodo.dialog select,div.editTodo.dialog textarea
+{
+    width:100%;
+}
+
+div.todoList li.comment span.userName
+{
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+div.todoList li.comment span.timeStamp:after
+{
+    content: ": ";
+}
+
+div.todoList li.comment span.message
+{
+    margin-left: 4px;
+}

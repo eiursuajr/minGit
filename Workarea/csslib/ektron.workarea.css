@@ -1,0 +1,1548 @@
+/* -------------------------------------------------------------- 
+   reset
+-------------------------------------------------------------- */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+body { 
+  line-height: 1.5; 
+}
+
+html, body { background-color: #ffffff !important; }
+form#Form1 { border-right: none !important; } /*remove border from left pane, declared inline on its frame*/
+
+table { border-collapse:collapse; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+table, td, th { vertical-align: middle; }
+
+.important { color : Red; font-size : 12px; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; vertical-align: middle; }
+
+/* Removes orange outline default by google chrome on a tag */
+a {outline:none;}
+
+/* -------------------------------------------------------------- 
+	typography
+-------------------------------------------------------------- */
+/* default font settings. The font-size percentage is of 16px. (0.75 * 16px = 12px) */
+body { 
+  font-size: 75% !important;
+  color: #222; 
+  background: #fff;
+  font-family: Arial, Verdana, sans-serif;
+}
+
+/* headings */
+h1,h2,h3,h4,h5,h6 { font-weight: normal; color:#444444;}
+h1 { font-size: 1.5em; line-height: 1; margin-bottom: 0.5em; }
+h2 { font-size: 1.25em; margin-bottom: 0.25em; }
+h3 { font-size: 1em; line-height: 1; margin-bottom: .5em; }
+h4 { font-size: 1em; line-height: 1.25; margin-bottom: .5em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: .5em; }
+h6 { font-size: 1em; font-weight: bold;}
+h1 img, h2 img, h3 img, 
+h4 img, h5 img, h6 img {
+  margin: 0;
+}
+
+/* text elements */
+p { margin: 0 0 1.5em; }
+
+a:focus, 
+a:hover { color: #444444; text-decoration: underline; -moz-outline-style: none; }
+a { color: #444444; text-decoration: none; }
+a:active { outline: none; color: #444444; }
+
+blockquote { margin: 1.5em; color: #666; font-style: italic; }
+strong { font-weight: bold; }
+em,dfn { font-style: italic; }
+dfn { font-weight: bold; }
+sup, sub { line-height: 0; }
+
+abbr, 
+acronym { border-bottom: 1px dotted #666; }
+address { margin: 0 0 1.5em; font-style: italic; }
+del { color:#666; }
+
+pre { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'lucida console', monospace; line-height: 1.5; }
+
+/* -------------------------------------------------------------- 
+	lists
+-------------------------------------------------------------- */
+li ul, 
+li ol { margin:0 1.5em; }
+ul, ol { margin: 0 1.5em 1.5em 1.5em; }
+
+ul { list-style-type: disc; }
+/*ol { list-style-type: decimal; }*/
+
+dl { margin: 0 0 1.5em 0; }
+dl dt { font-weight: bold; }
+dd { margin-left: 1.5em;}
+
+/* -------------------------------------------------------------- 
+	buttons
+-------------------------------------------------------------- */
+
+ul.buttonWrapper {float: left; Width:180px; margin: 0; padding: 0; list-style-type: none;} /*--defect 51439 ---On edit mode of user profile setting alignment of "cancel" and "save" button on add tag button --*/
+div.templateConfig ul.buttonWrapper {Width:220px;}
+ul.buttonWrapperLeft {float: left;	margin: 0; padding: 0; list-style-type: none;}
+ul.buttonWrapper li {display: inline !important; background-image: none; background-color: transparent; margin: 0; padding: 0; border: 0px;}
+ul.buttonWrapperLeft li {display: inline !important; background-image: none; background-color: transparent; float: left; margin: 0; padding: 0; border: 0px;}
+a.text { font-size: .75em;}
+	
+a.button {
+	display: inline-block;
+	background-color: #e6e6e6;
+	background-image: none !important;
+	border: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	line-height: 100%;
+	text-decoration: none;
+	color: #000000 !important;
+	cursor: pointer;
+	padding: .5em 1em .6em 1em;
+	margin: 0 0 0 .75em;
+}
+a.buttonLeft {float:left;margin: 0 .75em 0 0;}
+a.buttonRight {float:right;}
+a.buttonInline {display:inline;}
+a.buttonInlineBlock {display: inline-block; margin: 0 .75em 0 0;}
+a.button img {display: none;}
+
+/* button hover effects */
+a.button:hover,
+a.greenHover:hover,
+a.redHover:hover,
+a.blueHover:hover {text-decoration: none; background: #3767af url('../images/UI/over_tab.gif') repeat-x !important; color:#ffffff !important; }
+/* button helpers */
+/*a.buttonNoIcon {padding: .25em; margin: 0em .25em; background-position: -1000px 0}
+a.buttonRightIcon {padding: .25em 2.25em .25em 1em;}*/
+/* specific button icons/classes */
+/*a.buttonAdd {background-image: url("../images/ui/icons/add.png"); background-position:.5em center;}*/
+a.buttonAddTag {display: block; width: 16px; height: 16px; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; background-image: url("../images/ui/icons/add.png"); background-position:center; margin: 0 0.5em; padding: 0;}
+/*a.buttonAddTag:hover {background: transparent url("../images/ui/icons/add.png") !important;}*/
+a.renameBasket img {margin:0 3px -1px 3px !important;padding-left:3px;}
+/*a.buttonCancel,
+a.buttonDelete { background-image: url(../images/ui/icons/delete.png);background-position:.15em center;}*/
+/*a.buttonCatalog {background-image: url(../images/ui/icons/folderGreen.png);	background-position: .6em center;}*/
+/*a.buttonCheckAll { background-image: url(../images/ui/icons/check.png);background-position:.15em center;}*/
+/*a.buttonClear {background-image: url(../images/ui/icons/cancel.png); background-position:.25em center;}*/
+/*a.buttonDefault {background-image: url(../images/ui/icons/restore.png);background-position:.25em center; }*/
+/*a.buttonEdit {background-image: url(../images/ui/icons/pencil.png);	background-position: .25em center;}*/
+/*a.buttonFilter { background-image: url('../Images/ui/icons/filter.png'); background-position: .25em center; }*/
+/*a.buttonProduct {background-image: url(../images/ui/icons/brick.png);	background-position: .6em center;}*/
+/*a.buttonPreview { background-image: url(../images/ui/icons/contentViewPublished.png);background-position:.55em center;}*/
+/*a.buttonOk { background-image: url('../Images/ui/icons/check.png'); background-position: .25em center; }*/
+/*a.buttonUpdate { background-image: url(../images/ui/icons/save.png); background-position:.25em center;}*/
+/*a.buttonExport {background-image: url(../images/ui/icons/save.png);	background-position:.25em center;}*/
+/*a.buttonRemove {background-image: url(../images/ui/icons/remove.png);	background-position:.25em center;}*/
+/*a.buttonSearch {background-image: url(../images/ui/icons/magnifier.png); background-position: .6em center;}*/
+/*a.buttonSendMail { background-image: url('../Images/ui/icons/emailSend.png'); background-position: .25em center; }*/
+/*a.buttonUpload {background-image: url(../images/ui/icons/checkIn.png); background-position: .6em center;}*/
+/*a.buttonTaxonomy {background-image: url(../images/ui/icons/taxonomy.png);	background-position: .6em center;}*/
+a.buttonMetadataDefault { margin-left: .75em; }
+/*a.selectAllButton {background-image: url('../images/UI/Icons/layoutSelectAll.png'); background-position: .6em center;}*/
+/*a.selectNoneButton {background-image: url('../images/UI/Icons/layoutDeselectAll.png'); background-position: .6em center;}*/
+
+/* -------------------------------------------------------------- 
+	text boxes / text areas
+-------------------------------------------------------------- */
+
+input[type=text], input[type=file], textarea { width:350px; }
+textarea { height:150px; }
+/*----------defect# 60170 change the pixel for license key textarea  -----*/
+#editconfiguration_td_licensekey textarea { height:38px;}
+input.ektronInputTextMedium { width:300px; }
+input.ektronTextXXXSmall { width:50px; }
+input.ektronTextXXSmall { width:100px; }
+input.ektronTextXSmall { width:150px; }
+input.ektronTextSmall { width:200px; }
+input.ektronTextMedium { width:250px; }
+input.ektronTextLarge { width:300px; }
+input.ektronTextXLarge { width:350px; }
+input.ektronTextXXLarge { width:400px; }
+
+
+/* -------------------------------------------------------------- 
+	layout helpers
+-------------------------------------------------------------- */
+.ektronLeft {float: left;}
+.ektronRight {float: right;}
+
+.left {text-align:left !important;}
+.center {text-align:center !important;}
+.right {text-align:right !important;}
+.top {vertical-align: top !important;}
+.middle {vertical-align: middle !important;}
+.bottom {vertical-align: bottom !important;}
+.nowrap {white-space: nowrap}
+
+/* -------------------------------------------------------------- 
+	other
+-------------------------------------------------------------- */
+
+hr { height:1px;border:none 0;border-top: 1px solid #E7F0F7;}
+fieldset { border: solid 1px #d4d4d4; padding:6px; }
+legend { color:#444444; font-weight:bold; padding-left:4px; padding-right:4px; }
+p.required {color:Red;}
+span.required {margin-left:.25em;color:Red;}
+table.pseudoGrid .label {color: Black !important;}  /*for title when editing a piece of content*/
+
+/* -------------------------------------------------------------- 
+	clearfix
+-------------------------------------------------------------- */
+/* new clearfix � all browsers */ 
+* html .clearfix { height: 1%; } /* IE5-6 */
+* + html .clearfix {display: inline-block; } /* IE7 not IE8 */
+.clearfix:after {content:".";display: block;height:0;clear:both;visibility:hidden;} /* FF, IE8, O, S, etc. */
+
+
+
+/* -------------------------------------------------------------- 
+	jQuery core css
+-------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------- 
+	end ektron custom theme
+-------------------------------------------------------------- */
+
+/* Error Text
+----------------------------------*/
+
+.ektronErrorText {color: #ff0000;}
+
+/* Page Containers
+----------------------------------*/
+
+.ektronPageContainer {
+	overflow: auto;
+	border: 1px solid #d4d4d4;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+.ektronPageInfo {padding: 4px;}
+
+/* Login 
+----------------------------------*/
+body.login {background-color : #ffffff;}
+
+/* Header
+----------------------------------*/
+frame#workareatop,
+.ektronWorkAreaHeader {
+	min-width:790px;
+	display:block;
+}
+
+.ektronWorkAreaHeader {
+	height: 66px;
+	background: #050505 url( '../images/UI/Grid/headerBackground.png' ) repeat-x;
+	border-bottom:1px solid #000000;
+}
+
+/* set min-width for IE */
+* html div.ektronWorkAreaHeader,
+* html #workareatop { width: expression( document.body.clientWidth < 791 ? "790px" : "auto" ); }
+* html .ektronWorkAreaHeader .ui-tabs { margin-top: 34px; }
+
+.ektronWorkAreaHeader .logo {
+	background: transparent url( '../images/UI/EktronCms400logo.png' ) no-repeat top right;
+	text-indent: -10000px;
+	margin: 3px 24px 0 0;
+	padding: 0;
+	width: 222px;
+	height: 33px;
+	float:right;
+	display: block;
+	overflow: hidden;
+}
+.ektronWorkAreaHeader .version {
+	font-style:normal; 
+	font-size: 10px; 
+	color:#b3b3b3;
+	float:right;
+	text-align:right; 
+}
+.ektronWorkAreaHeader .version  i { font-style: normal; }
+
+.ektronWorkAreaHeader .dvVersion {
+	float:right;
+	margin: 0 22px 0 0;
+	clear:right;
+}
+
+.ektronWorkAreaHeader .userInfo {
+	color: #f2f8fd;   
+	float:right;
+	text-align:right; 
+	right: 18px;
+	top: 7px;
+	font-size: 12px;
+	display: none;
+}
+
+.ektronWorkAreaHeader .userInfo #userUnreadMessages a {
+	color: #55bdfa;
+}
+
+.ektronWorkAreaHeader .licInfo
+{
+	color: #f2f8fd;   
+	font-weight: bold;
+	text-align:center;
+	position: absolute;
+	left: 4;
+}
+
+
+/* Forms
+----------------------------------*/
+
+.ektronForm 
+{
+	border-spacing:0;
+	border-collapse:separate;
+	border:1px solid #d4d4d4;
+	width:100%;
+	display:none;
+}
+
+.ektronForm tr.stripe {background-color:#f4f4f4;}
+
+.ektronForm td, .ektronForm th
+{
+	padding:.25em;
+	border-right:0px solid #d4d4d4;
+	border-bottom:0px solid #d4d4d4;
+	padding: .25em .5em;
+	vertical-align:top;
+}
+
+.ektronForm td.label, .ektronForm th.label, .ektronForm span.label, .ektronForm label.label
+{
+	color:#444444;
+	width:10%;
+	white-space:nowrap;
+	text-align:right;
+	font-weight:bold;
+}
+
+/* Titlebar
+----------------------------------*/
+
+.ektronPageHeader {
+	color: #444444;
+	background: #ffffff url('../images/UI/newGradient.gif') repeat-x top;
+	padding-top: 20px;
+}
+
+.ektronTitlebar
+{
+	color: #444444;
+	background: #ffffff url('../images/UI/newGradient.gif') repeat-x;
+	font-weight: bold;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;		
+}
+
+div.ektronPageHeader .ektronTitlebar
+{
+	color: #FFF;
+	background: #414141 url('../images/UI/title-bar-bg.gif') repeat-x center;
+	font-weight: normal !important;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding: 4px 8px 2px 8px;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	margin-top: 1px;
+}
+
+div.couponList div.actions ul,
+div.ektronPageHeader .ektronToolbar {
+	padding: 6px 8px;
+	margin: 0;
+	height: 28px;
+	background:#ebebeb url('../images/UI/action-bar-bg.gif') repeat-x top;
+	border-left: 1px solid #d4d4d4;
+	border-right: 1px solid #d4d4d4;
+	position: relative;
+}
+
+div.ektronPageHeader .ektronTitlebar img { position: relative; top: -2px; }
+
+/*left nav bar*/
+.ektronNavToolbar .ektronPageHeader { padding-top: 0; }
+.ektronNavToolbar .ektronPageHeader .ektronTitlebar { background: #ffffff url('../images/UI/newGradient.gif') repeat-x; padding: 2px 0 0 0;margin: 0; }
+
+
+/*overrides to fix titlebar and action bar where markup is inconsistent*/
+
+/*fix oddity where there are table cells that are really wide, particularly on the help button td*/
+.ektronToolbar td { width: auto !important; }
+
+/*settings -> configuration -> task types*/
+#pnlViewTaskType .ektronPageHeader { *height: auto; }
+
+/*settings -> reports*/
+.ektronTitlebar table { width: 100%; }
+.workareaReportFixedArea { padding-top: 24px; padding-bottom: 24px; }
+
+/*settings -> business rules*/
+.baseClassToolbar { margin-top: 1px; background: #ebebeb; padding-bottom: 2px; }
+.baseClassToolbar, .baseClassToolbar table { border-collapse: separate !important; }
+
+/*reports -> traffic analytics*/
+.AnalyticsReportTitlebar { font-weight: normal !important; }
+.EktronPersonalization .ektronToolbar input { top: 4px; }
+.EktronPersonalization .ektronToolbar input[type=image] { position: relative; top: 5px; }
+.EktronPersonalization .ektronPageContainer { border: none !important; }
+.EktronPersonalization .workareaReportFixedArea {
+	position: relative;
+	top: 64px;
+	overflow: auto;
+	border: 1px solid #d4d4d4;
+	border-top: none;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+/* Toolbar
+----------------------------------*/
+.ektronToolbar td {white-space: nowrap !important; }
+.ektronToolbar table { width: auto !important; }
+.ektronToolbar .label {padding-right: 4px;	}
+.ektronToolbar .button, .ektronToolbar .button-over {height: 16px;width: auto !important;padding: 3px; cursor: pointer;}
+.ektronToolbar td.button, .ektronToolbar td.button-over {padding: 0 3px 0 0; }
+.ektronToolbar select {font-size: .9em;}
+.ektronToolbar input[type=text] {font-size: .9em;}
+.ektronToolbar #btnSearch {font-size: .8em;}
+
+/*new action bar*/
+.menuRootItem span,
+.menuRootItemSelected span,
+.menuRootItemClicked span,
+.ektronToolbar a.primary,
+div.couponList div.actions ul a.primary {
+	display: block;
+	padding: 4px 8px 4px 8px;
+	margin: 0;
+}
+.menuRootItem span.new{
+
+}
+.menuRootItem{
+
+}
+.menuRootItem span.new,
+.menuRootItem span.action,
+.menuRootItem span.delete,
+.menuRootItem span.folderView,
+.menuRootItem span.chartBar,
+.menuRootItem span.dropdownMenuButton,
+.menuRootItemSelected span.new,
+.menuRootItemSelected span.action,
+.menuRootItemSelected span.delete,
+.menuRootItemSelected span.folderView,
+.menuRootItemSelected span.chartBar,
+.menuRootItemSelected span.dropdownMenuButton,
+.ektronToolbar a.primary,
+div.couponList div.actions ul a.primary {
+	white-space: nowrap;
+	text-transform: uppercase;
+	text-decoration: none !important;
+	font-weight: bold;
+	font-size: 11px;
+	background: #fdfdfd url('../images/UI/action-bar-prinav-bg.gif') top left repeat-x;
+	color: #555555;
+	border: 1px solid #bababa;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin-right: 3px;
+	cursor: pointer !important;
+
+}
+.menuRootItem span.new,
+.menuRootItem span.action,
+.menuRootItem span.delete,
+.menuRootItem span.folderView,
+.menuRootItem span.chartBar,
+.menuRootItem span.dropdownMenuButton{
+    height: 100%;
+}
+
+.menuRootItemSelected span.new:hover,
+.menuRootItemSelected span.action:hover,
+.menuRootItemSelected span.delete:hover,
+.menuRootItemSelected span.folderView:hover,
+.menuRootItemSelected span.chartBar:hover,
+.menuRootItemSelected span.dropdownMenuButton:hover{
+    background: #414141 url('../images/UI/title-bar-bg.gif') repeat-x top left !important;
+    color: #FFF !important;
+    border-color: transparent !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom: none !important;
+    line-height: 17px !important;
+    position: relative !important;
+    margin-bottom: -1px !important;
+}
+.active-button-menu{
+    background: #414141 url('../images/UI/title-bar-bg.gif') repeat-x top left !important;
+    color: #FFF !important;
+    border-color: transparent !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border-bottom: none !important;
+    line-height: 17px !important;
+    position: relative !important;
+    margin-bottom: -1px !important;
+}
+
+
+
+
+.menuRootItemSelected span.new,
+.menuRootItemSelected span.action,
+.menuRootItemSelected span.delete,
+.menuRootItemSelected span.folderView,
+.menuRootItemSelected span.chartBar,
+.menuRootItemSelected span.dropdownMenuButton,
+.ektronToolbar a.primary:hover,
+div.couponList div.actions ul a.primary:hover {
+	/*background: #333 url('../images/UI/Header/tabsBG.png') repeat-x bottom;
+	color: #fff;*/
+	text-decoration: none !important;
+}
+
+
+/*back and cancel button*/
+.ektronToolbar a.backButton,
+.ektronToolbar a.cancelButton {
+	background: url('../images/UI/back-arrow.gif') no-repeat top center !important;
+	width: 16px !important;
+	height: 24px;
+	padding: 0;
+	margin: 0;
+	text-indent: -99999px;
+	cursor: pointer !important; 
+	text-decoration: none !important;
+}
+
+input#btnCancel.cancelButton {
+	background: url('../images/UI/back-arrow.gif') no-repeat top center;
+	width: 16px;
+	height: 24px;
+	padding: 0;
+	margin: 0;
+	text-indent: -99999px;
+	cursor: pointer !important; 
+	text-decoration: none !important;
+    border: 1px solid #BABABA;
+}
+
+/*.ektronToolbar a.backButton:hover,
+.ektronToolbar a.cancelButton:hover {
+	background-position:bottom center;
+	border-color: #080808;
+}  
+*/
+.ektronToolbar td a { vertical-align: text-top; } /* fixes issue in Chrome with the secondary icons jumping when dropdown menu item is hovered */
+/*end new action bar*/
+
+.action-bar-tooltip {
+	position: absolute;
+	left: -99999px;
+	top: -99999px;
+	z-index: 99999;
+	/*max-width: 200px;*/
+	cursor: default;
+	white-space: nowrap;
+	padding: 2px 6px;
+	background: #3c74bb url('../images/UI/tooltip.gif') 0 0 repeat-x;
+	color: #fff;
+	font-size: 11px;
+}
+.action-bar-tooltip-arrow {
+	position: absolute;
+	left: -99999px;
+	top: -99999px;
+	z-index: 999;
+	width: 7px;
+	height: 4px;
+	overflow: hidden;
+	cursor: default;
+	background: url('../images/UI/tooltip-arrow.gif') 0 0 no-repeat;
+}
+.action-bar-rollover-indicator {
+	position: absolute;	
+	bottom: 1px;
+	left: -99999px;
+	z-index: 999;
+	height: 3px;
+	overflow : hidden;
+	background: #3c74bb;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.action-bar-rollover-indicator { margin-left: 2px; }
+}
+/*to fix odd issue where the tooltip appeared way too low*/
+td.ektronToolbar .action-bar-rollover-indicator { bottom: auto; top: 34px; }
+/*override for firefox bug*/
+@-moz-document url-prefix() {
+	td.ektronToolbar .action-bar-rollover-indicator { top: 76px; }
+}
+
+/* Nav Toolbar 
+----------------------------------*/
+
+.ektronNavToolbar .help {float: right;margin-right: 7px;}
+.ektronTabContentsContainer {padding: 8px;padding-top: 10px;}
+
+/* Tree container 
+----------------------------------*/
+
+.ektronTreeContainer {
+	margin: 0 10px;
+	padding: 18px;
+	overflow: visible;
+	width: 245px !important;
+	*width: 280px !important;
+	background: #eeeef0;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+#accordion .ektronTreeContainer {
+	margin: 0;
+	padding: 0;
+	width: auto !important;
+	background: transparent;
+}
+ul.ektree a, ul.ektree a:hover, ul.ektree a:visited, ul.ektree a:focus, ul.ektree a:active  {
+	color: #000;
+	display: inline-block; 
+	padding: 0 .25em; 
+	text-decoration: none; 
+	cursor: pointer; 
+	border: solid 1px transparent; 
+	background-repeat: no-repeat; 
+	background-position: -10000 0;
+}
+ul.ektree {position: relative; overflow: visible; margin: 0; padding: 0;}
+.ektronTreeComposite {height: 100%; width: 99%; border-right: none; overflow: auto;}
+.ektronTreeComposite ul {list-style-type: none; margin-left: 1.5em; margin-bottom: .25em; overflow: visible}
+.ektronTreeComposite ul li {white-space: nowrap;}
+.ektronTreeComposite #folder0 {margin-left: -.5em}
+.ektronTreeComposite a, .ektronTreeComposite a:active, .ektronTreeComposite a:focus {
+	color: #000;
+	cursor: pointer;
+	text-decoration: none;  
+}
+
+ul.ektree a:hover, .ektronTreeComposite a:hover, .ektronTreeComposite a.hover {
+	color:#3769b1;
+	text-decoration: none; /* because IE can be stubborn */
+}
+
+ul.ektree li a.ektronTreeSelectedItem {
+	color:#444444; 
+	border: solid 1px #c5dbec; 
+	background-color: #dfeffc; 
+	background-repeat: repeat-x; 
+	background-position: 0 0;
+	background-image: url(../Images/UI/Grid/headerBackground.gif); 
+}
+
+ul.ektree li a.contextMenuHighlight {color:#3769b1;}
+.ektronTreeComposite a img {vertical-align: middle; margin-right: .5em;}
+
+/* Grids 
+----------------------------------*/
+.ektronGrid {
+	border-spacing:0;
+	border-collapse:collapse;
+	width:100%;
+	background-color:White;
+	display:none;
+	/*border: 1px solid #d4d4d4;*/}
+
+/* modal overrides */
+.ektronModalStandard div.ektronModalBody table.ektronGrid {margin:0 !important;padding:0 !important;}
+
+/* inside the following we need borders on the top and left */
+.ektronPageInfo .ektronGrid, 
+.ektronPageTabbed .ektronGrid,
+.ektronModalStandard .ektronGrid {
+	border:1px solid #d4d4d4;}
+
+.ektronGrid tr.title-header{
+	color: #777777;
+	font-size: 11px;
+	line-height: 19px;
+	white-space: nowrap;
+	/*background: #d5e7f4;*/}
+
+.ektronGrid > tr > th,
+.ektronGrid > tr > td,
+.ektronGrid > tr > th.title-header,
+.ektronGrid > tr > td.title-header,
+.ektronGrid > thead > tr > th.title-header,
+.ektronGrid > thead > tr.title-header > th,
+.ektronGrid > thead > tr > td.title-header,
+.ektronGrid > tbody > tr > th,
+.ektronGrid > tbody > tr > th.title-header,
+.ektronGrid > tbody > tr > td,
+.ektronGrid > tbody > tr > td.title-header {
+	border:0;
+	padding: 14px;
+	vertical-align: top;
+	text-align:left;
+}
+
+/* header overrides */
+.ektronGrid td.title-header, 
+.ektronGrid th, 
+.ektronGrid th.title-header{
+	text-align:center;
+	white-space:nowrap;
+	color: #777777;
+	font-size: 11px;
+	border-bottom: 1px solid #d4d4d4 !important;
+	padding-bottom: 4px !important;
+	}
+
+.ektronGrid tr.stripe {background-color:#f4f4f4 !important;}
+.ektronGrid tr.title-header td a, 
+.ektronGrid tr.title-header td a:active, 
+.ektronGrid tr.title-header td a:visited, 
+.ektronGrid tr.title-header td a:focus {
+	color: #777777;
+	text-decoration: none;}
+
+.ektronGrid tr.title-header td a:hover {text-decoration: underline;}
+
+.ektronGrid tr.ektronSubjectHeader{
+	border-top: solid 1px #84b6de; 	
+	border-bottom: solid 1px #84b6de;}
+
+.ektronGrid .label{
+	color:#444444;
+	width:10%;
+	white-space:nowrap;
+	text-align:right;
+	font-weight:bold;
+	font-size:0.9em;}
+
+.ektronGrid .shortLabel {white-space:normal;width:20%;}
+
+/* dms menu overrides for ektronGrid */
+.ektronGrid div.dmsWrapper p.dmsItemWrapper img {float:left !important;margin-right:.25em;}
+.ektronGrid div.dmsWrapper p.dmsItemWrapperActive img {float:left !important;margin-right:.25em;}
+/*.ektronGrid div.dmsWrapper p.dmsItemWrapper a:hover {text-decoration:none !important;color:	#235478 !important;}*/
+
+div.dmsWrapperHover p.dmsItemWrapper {
+    border-color: transparent !important;
+	background-position:  right -395px !important;
+}
+
+div.dmsWrapperHover p.dmsItemWrapper a.dmsViewItemAnchor { border-color: transparent !important;}
+
+
+/* Paging 
+----------------------------------*/
+
+div.paging {margin: 0;padding: 0;}
+div.paging ul.direct {display: block;margin: 0;position: relative;top: 2px; width: 10em;}
+div.paging ul.direct li {display: inline;margin: 0;padding: 0;}
+div.paging ul.direct li input {width: 16px;height: 16px;margin: 0;padding: 0;}
+div.paging p.adHoc {margin: 2px 1em 4px .25em; float: right;}
+div.paging p.adHoc input.currentPage {width: 25px;font-size:.9em;}
+div.paging p.adHoc a.adHocPage {text-decoration: underline; }
+
+/* Tooltips 
+----------------------------------*/
+
+#dhtmltooltip
+{
+	position: absolute;
+	width: 150px;
+	border: solid 1px #5d8fb4;
+	padding: 2px;
+	background-color: #ebf1f7;
+	visibility: hidden;
+	z-index: 100;
+	/* Remove below line to remove shadow. Below line should always appear last within this CSS*/
+	/* filter: progid:DXImageTransform.Microsoft.Shadow(color=gray,direction=135);  */
+}
+
+/* Spacers 
+----------------------------------*/
+
+.ektronTopSpace {margin-top: .75em;}
+.ektronTopSpaceSmall {margin-top: .5em;}
+.ektronTopSpaceVerySmall {margin-top: .25em;}
+.ektronRightSpace {margin-right: .75em;}
+.ektronRightSpaceSmall {margin-right: .5em;}
+.ektronRightSpaceVerySmall {margin-right: .25em;}
+
+
+/* Header Text 
+----------------------------------*/
+
+.ektronHeader {color: #444444;font-weight: bold;}
+
+/* Borders
+----------------------------------*/
+
+.ektronBorder {border: solid 1px #d4d4d4;}
+
+/* SitemapPath 
+----------------------------------*/
+
+.ektronSitemapPathSelected {background-color: #d0d0d0;cursor: pointer;}
+
+/* Miscellaneous 
+----------------------------------*/
+
+.ektronCaption {color: #666;font-size: .8em !important;}
+img.ektronClickableImage {margin-left: .25em;vertical-align: middle;cursor: pointer;}
+.ektronException {
+	background-color: #FFFFCC;
+	color: #FF0000;
+	font-size:12px;
+	font-weight:bold;
+	padding:2px 0 4px 2px;	
+}
+
+/* Ektron Date Picker text box */
+span.dateClass { display: inline-block; background-color: #f5f5f5; border: 1px solid #d4d4d4; text-decoration: none; width:350px; padding: .25em;}
+
+/* Modal Popup */
+table.tabWindow 
+{
+	border: solid 1px #525252 !important;
+}
+
+/* Modal Popup - header */
+table.tabWindow thead th.tabHeader 
+{
+	background: #3163BD url('../images/UI/modal-header-bg.gif') repeat-x !important; 
+	color: #f2f8fd !important;	
+	font-weight: bold;
+	border-bottom: solid 1px #525252 !important;
+	height: 26px !important;
+}
+
+/* Modal Popup - buttons */
+table.tabWindow .button 
+{
+	margin-left: 8px !important;   
+}
+
+/* Modal Popup - border above button container */
+table.tabWindow tfoot div 
+{
+	border-top: solid 1px #cdcdcd !important;
+}
+
+table.ektronWindow img.modalClose 
+{
+	background-image: url('../images/UI/Modal/closeButton.png') !important;
+	width: 16px !important;
+	height: 16px !important;
+	cursor:pointer  !important;
+}
+
+/* MetaData Custom Fields */
+fieldset.ektronMetaDataFieldset {padding: 0.5em; margin: .25em;}
+fieldset.ektronMetaDataFieldset ul.buttonWrapper {float: left; width: auto; margin-top: .5em;}
+fieldset.ektronMetaDataFieldset ul.buttonWrapper li {float: left;}
+fieldset.ektronMetaDataFieldset .ektronGrid tr.stripe {background-color: transparent;}
+.ektronMetadataForm { padding-bottom: 5px;}
+.ektronMetadataFormBumpDown {margin-top: .5em;}
+
+td.moveMeta a.button {background-position: center center;}
+td.moveMeta a.buttonAdd {height: 1.5em; width: 1.5em; margin: .25em; padding: 0; background-image: url(../images/ui/icons/arrowHeadRight.png);}
+td.moveMeta a.buttonAddAll {height: 1.5em; width: 1.5em; margin: .25em; padding: 0; background-image: url(../images/ui/icons/arrowHeadLast.png);}
+td.moveMeta a.buttonLeftRemove {height: 1.5em; width: 1.5em; margin: .25em; padding: 0; background-image: url(../images/ui/icons/arrowHeadLeft.png);}
+td.moveMeta a.buttonRemoveAll {height: 1.5em; width: 1.5em; margin: .25em; padding: 0; background-image: url(../images/ui/icons/arrowHeadFirst.png);}
+table.directContainerMetadataForm {width: 100%;}
+
+
+.ektronMetadataForm td.label, .ektronMetadataForm th.label, .ektronMetadataForm span.label, .ektronMetadataForm label.label {color:#444444; width:10%;white-space:nowrap;text-align:right;font-weight:bold;}
+.checkboxIsSearchable {padding: .5em 0 0 .75em;}
+/*a.buttonAddTagWithText {background-image: url("../images/ui/icons/add.png"); background-position:.25em;}*/
+#newTagNameScrollingDiv {height: 80px; overflow: auto; border: solid 1px #aaaaaa; z-index: 1; margin-bottom:.5em;}
+
+/* end MetaData Custom Fields */
+
+/* Search Text inputLabel Default Look/Feel */
+.ektronWorkareaSearch, .ektronWorkareaSearch:active,  .ektronWorkareaSearch:focus 
+{
+	width: 16px; 
+	height: 16px; 
+	text-indent: -10000px; 
+	border: none; cursor:pointer; 
+	background: transparent url(../images/ui/icons/magnifier.png) no-repeat; 
+	vertical-align: middle; 
+	margin-left: .25em; 
+	display: inline-block; 
+	overflow: hidden;
+}
+div.tabContainer ul.ui-tabs-nav > li  
+{
+    z-index:5;   
+}
+.ektronWorkareaSearch::-moz-focus-inner { border: 0; } /* removes dotted outline on click/focus */
+.ektronInputLabelShown {color: #878787; font-style: oblique;}
+
+
+/* Ektron Theme Overrides 
+----------------------------------*/
+.ui-state-default,
+.ui-state-hover { border: none !important; }
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus, .ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus { background: #3767af url('../images/UI/over_tab.gif') repeat-x 0 0; border: none; }
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active { background: #1b4a94 url('../images/UI/active_tab.gif') repeat-x 0 0; border: none; }
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight { border: none; }
+
+#loginWrapper .ui-state-default { font-weight: normal; }
+
+/* Accordion Overides */
+#accordion {width: 284px; padding: 0 10px;}
+#accordion .ui-accordion-header {
+	-moz-border-radius-bottomleft: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+}
+#accordion .ui-accordion-header a  {font-size: .9em; padding: 5px 20px;}
+#accordion .ui-accordion-header .ui-icon { display: none; }
+#accordion .ui-accordion-content {background: #eeeef0 url('../images/UI/accordionSelectedArrow.png') no-repeat 20px 0; border: none;}
+
+/* Tabs Overrides */
+
+div.tabContainer {margin:.5em !important;padding:.2em !important; border: none;}
+div.ui-tabs-panel {overflow-x:auto !important;overflow-y:hidden !important;}
+div.tabContainer > ul {visibility:hidden;height:26px;overflow:hidden;background-image:none;}
+div.tabContainer div.ektronTabBackground { display: none; border-bottom: 1px solid #b9b9b9; }
+
+.ui-tabs-nav { border: none; padding: 0 12px; background-color: transparent; }
+.ui-tabs-nav li { font-weight: normal !important; }
+.ui-tabs-nav .ui-state-default { background: #e6e6e6; }
+.ui-tabs-nav .ui-state-hover { background: #3767af url('../images/UI/over_tab.gif') repeat-x 0 0; }
+.ui-tabs-nav .ui-state-active { background: #1b4a94 url('../images/UI/active_tab.gif') repeat-x 0 0; }
+.ui-tabs-nav .ui-state-default a { color: #000000; }
+.ui-tabs-nav .ui-state-hover a,
+.ui-tabs-nav .ui-state-active a { color: #ffffff; }
+
+ul.tabButtons li a,
+.ektronPageContainer .ui-tabs-nav li a { padding: 4px 18px !important; }
+
+
+/*overrides for tabs in analytics*/
+ul.tabButtons {
+	background: none;
+	border-bottom: 1px solid #b9b9b9;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+/*fix odd issue with ui-state-default class not being added to traffic tab as it should be*/
+ul.tabButtons #liTrafficTab { color: #000; background: #e6e6e6; }
+ul.tabButtons #liTrafficTab.ui-state-hover { background: #3767af url('../images/UI/over_tab.gif') repeat-x 0 0; }
+ul.tabButtons #liTrafficTab.ui-state-active { background: #1b4a94 url('../images/UI/active_tab.gif') repeat-x 0 0; }
+
+
+#viewfolder_FolderDataGrid tbody tr.selected {border: none !important; background: #d0d0d0 !important; color: #000000 !important; }
+
+/*export content for translation*/
+.L10nZipFileName, .L10nZipFileSize { color: #444444; }
+.L10nErrorMessage {
+	/*copied rules from jquery-ui-custom.css, line 81*/
+	border: 1px solid #cd0a0a !important;
+	background: #ffa799 url(ektronTheme/images/ui-bg_diagonals-thick_20_ffa799_40x40.png) 50% 50% repeat !important;
+	/*end copied rules from jquery-ui-custom.css, line 81*/
+	color: #ffffff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 12px !important;
+}
+.nonSelectedTab { background-color : #DDDDFF ; }
+.selectedTab { background-color : transparent ; border-right : #DDDDFF solid ; border-top : #DDDDFF solid ; border-left : #DDDDFF solid ;}
+.nonTabbed { background-color : transparent ; border-bottom : #DDDDFF solid ; }
+.TabContent { background-color : transparent ; border-right: #DDDDFF solid ; border-bottom: #DDDDFF solid ; border-left: #DDDDFF solid ; padding-top: 10px; padding-left: 10px; padding-right: 10px; padding-bottom: 10px ; }
+.NoDisplayTabContent { float : none ; position : relative ; display : none ; }
+.DisplayTabContent { float : none ; position : relative ; }
+
+/* Header Tabs (these styles override the default jQuery Theme styles) 
+----------------------------------*/
+
+.ektronWorkAreaHeader .ui-tabs {
+	float: left;
+	left: 0;
+	position: relative; 
+	bottom: 11px;
+	padding: 0px;
+	background: url( '../images/UI/Header/tabsBG.png' ) repeat-x;
+}
+
+.ektronWorkAreaHeader .tabs .ui-tabs-nav {padding: 0px !important; margin: 0 !important;}
+.ektronWorkAreaHeader .tabs .ui-tabs-nav li { margin: 0; }
+.ektronWorkAreaHeader .tabs .ui-tabs-nav li a {
+	padding: 10px 24px;
+	padding-top: 8px;
+	text-shadow: 1px 1px .5px rgba(0,0,0, .55);
+	font-size: 13px;
+	color: #ffffff;
+	outline: none;
+}
+.ektronWorkAreaHeader .tabs .ui-tabs-nav li a:hover,
+.ektronWorkAreaHeader .tabs .ui-tabs-nav li a.selected { padding-top: 9px; padding-bottom: 9px; background: repeat-x; position: relative; top: -1px; }
+.ektronWorkAreaHeader .tabs .ui-tabs-nav li a.selected { background-image: url( '../images/UI/Header/tabSelected.png'); }
+
+.ektronWorkAreaHeader .tabs a {font-weight: normal;}
+
+.ektronWorkAreaHeader .tabs .left,
+.ektronWorkAreaHeader .tabs .divider {display: none;}
+
+/* Icons
+----------------------------------*/
+.ui-icon-ektron-contentEdit {background-image: url('../images/UI/icons/contentEdit.png') !important;}
+.ui-icon-ektron-edit {background-image: url('../images/UI/icons/pencil.png') !important;}
+.ui-icon-ektron-delete {background-image: url('../images/UI/icons/delete.png') !important;}
+
+/* End Ektron Theme Overrides 
+----------------------------------*/
+
+/* other workarea styles */
+#editContentContainer.ektronPageTabbed {
+	height: auto; /* hide loading .gif when editing content*/
+}
+#editContentTabContainer.tabContainer {
+	height: 100%; /* hide loading .gif when editing content*/
+}
+/* ecommerce overwrite */
+/*#formCouponList div.couponList div.actions ul  {
+	background: #858585 url( 'ektronTheme/images/toolbarBG.png' ) repeat-x !important;
+}
+#formCouponList div.couponList div.actions ul li a, #formCouponList div.couponList div.actions ul li a:visited {
+	color:#ffffff;
+}*/
+
+/* analytics */
+.AnalyticsErrorMessage
+{ 
+	background-color:#FBE3E4;
+	border: 1px solid #FBC2C4;
+	color: #D12F19;
+	display: block;
+	margin: 0.25em;
+	padding: 5px;
+}
+
+.analyticsReport .ektronToolbar, .analyticsTrend .ektronToolbar 
+{
+	position: relative; 
+	top: 0; 
+	left: 0;
+}
+
+/* date-picker styling */
+.DateRangePickerContainer .DatePickerContainer { margin-right: 0.5em; }
+.DatePickerContainer input.DatePicker_input { width: 6em; }
+.DateRangePickerValidator
+{
+	position: absolute;
+	background-color: White;
+	border: 1px solid red;
+	padding: 4px 6px 4px 6px;
+	margin-left: 4px;
+}
+.DatePickerContainer_BadDateError input { background-color:#FBE3E4; border-color: #D12F19; }
+
+/* overlay styles */
+iframe.ektronOverlayIframe 
+{
+	display: none !important;
+	border: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	filter: alpha(Opacity=0);
+	cursor: wait;
+}
+
+.ektronOverlayPleaseWait
+{
+	display: none;
+	border: none;
+	margin: 0 auto;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;  
+	right: 0;
+	bottom: 0;
+	background: transparent url(../images/UI/loading_big.gif) no-repeat center center;
+	cursor: wait;
+}
+
+.ektronOverlayPleaseWait h1
+{
+   text-indent: -10000px;
+}
+/*popup warning that appears when checking in content someone else is already editing*/
+#dvHoldMessage { z-index: 999999999999 !important; width: auto !important; }
+#dvHoldMessage table {
+	background: #414141 !important;
+	-moz-box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000');
+}
+#dvHoldMessage table td { padding: 12px !important; }
+#dvHoldMessage table * { color: #fff !important; font-size: 11px !important; }
+
+/*Archived content styling */
+
+span.Archived 
+{
+	display : block;
+	width : 16px;
+	height : 16px;
+	text-indent : -10000px;
+	background : url( '../Images/ui/icons/check.png' );
+}
+
+
+#content_divContentHtml fieldset{ overflow: hidden; }
+
+div#TaxonomySelect.ektronWindow.ektronModalWidth-40.ui-dialog.ui-widget.ui-widget-content.ui-corner-all,
+div#EkTB_window
+{
+	padding: 0px;
+	-moz-border-radius: 0px;
+	-webkit-border-radius: 0px;
+	border-radius: 0px;
+	border: 1px solid #525252;
+	background: #414141;
+}
+
+div#TaxonomySelect.ektronWindow.ektronModalWidth-40.ui-dialog.ui-widget.ui-widget-content.ui-corner-all div.ui-dialog-content.ui-widget-content
+{
+	padding: 0px;
+	width: 100%;
+
+}
+div#TaxonomySelect.ektronWindow.ektronModalWidth-40.ui-dialog.ui-widget.ui-widget-content.ui-corner-all div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix.propertiesModalHeader,
+div#EkTB_title
+{
+	color: #FFF;
+	background: #414141 url('../images/UI/title-bar-bg.gif') repeat-x center;
+	font-weight: normal !important;
+	height: 20px;
+	line-height: 20px;
+	vertical-align: middle;
+	padding: 4px 8px 2px 8px;
+	margin-top: 0px;
+	border: none;
+ 
+}
+div#TaxonomySelect.ektronWindow.ektronModalWidth-40.ui-dialog.ui-widget.ui-widget-content.ui-corner-all div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix.propertiesModalHeader a:hover
+{
+	padding: 1px;
+} 
+div#TaxonomySelect.ektronWindow.ektronModalWidth-40.ui-dialog.ui-widget.ui-widget-content.ui-corner-all div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix.propertiesModalHeader span.ui-icon-closethick,
+div#EkTB_title #EkTB_closeAjaxWindow #EkTB_closeWindowButton
+{
+ 	background: #414141 url('../images/UI/modal/closeButton.png') repeat-x center;
+}
+
+div#TaxonomySelect.ektronWindow.ektronModalWidth-40.ui-dialog.ui-widget.ui-widget-content.ui-corner-all div.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix.propertiesModalHeader span.ui-dialog-title.header
+{
+	font-weight: 700;
+	padding-top: 0;
+}
+form.modal-content{
+	 border: none;
+}
+form.modal-content .ektronPageContainer{
+	 border: none;
+	 padding: 1em 1em 0 1em;
+     top: 41px !important;
+}
+ form.newTemplateForm .ektronPageContainer{
+     border: none;
+    padding: 1em 1em 0 1em;
+    top: 70px !important;
+ }
+form.modal-content div.ektronPageHeader .ektronTitlebar
+{
+	display: none;
+}/* This is to  hide an extra spacing in some of the modals*/
+form.modal-content div.ektronPageHeader, form.newTemplateForm div.ektronPageHeader{
+ 	padding-top: 0px;
+    margin-top: -3px;
+}
+.ektronModalStandard iframe{
+    border: none;
+}
+#dvUserGroups ul.userGroups li.stripe {
+    background-color: #f4f4f4 !important;
+}
+
+div#uxSearchTabs_uxTabAdvanced_TR_showLibdlg table.ektronGrid tbody tr td {
+color: #000000 !important;
+}
+
+div#uxSearchTabs_uxTabAdvanced_TR_showLibdlg div {
+background-color: #f4f4f4 !important;
+border: #d4d4d4 1px solid !important;
+border-top: none !important;
+}
+#pnlwizard .ektronPageHeader > .ektronToolbar{
+    padding: 0;
+    height: auto;
+    background: #EBEBEB url('../images/UI/action-bar-bg.gif') repeat-x top;
+    border-left: 1px solid #D4D4D4;
+    border-right: 1px solid #D4D4D4;
+
+}
+#pnlwizard .ektronPageHeader .ektronToolbar .ektronToolbar{
+    background: none;
+    border:  none;
+    height: 28px;
+}
+
+#pnlwizard .ektronPageHeader .ektronToolbar #stepsTable{
+    margin: 0;
+}
+#pnlwizard .ektronPageHeader .ektronToolbar table#stepsTable #step1,
+#pnlwizard .ektronPageHeader .ektronToolbar table#stepsTable #step2,
+#pnlwizard .ektronPageHeader .ektronToolbar table#stepsTable #step3,
+#pnlwizard .ektronPageHeader .ektronToolbar table#stepsTable #step4
+ {
+    padding: 4px 8px;
+    border:  1px solid #d4d4d4;
+ }
+
+#pnlwizard .ektronPageHeader .ektronToolbar table#stepsTable .stepCurrent { background: #1b4a94 url('../images/UI/active_tab.gif') repeat-x 0 0; color: #fff;}
+
+.stepNext, .stepFuture, .stepVisited, .stepDisabled
+{
+  color: #555 !important;
+  background: #FDFDFD url('../images/UI/action-bar-prinav-bg.gif') repeat-x top left !important;
+  font-weight: bold !important;
+}
+
+#pnlwizard .ektronPageHeader .ektronToolbar table#stepsTable .ektronToolbar{
+    padding: 1px 8px 4px 1px;
+}
+#pnlwizard .ektronPageHeader .ektronToolbar table#stepsTable a.button{
+    margin:  auto 8px auto 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #FDFDFD url('../images/UI/action-bar-prinav-bg.gif') repeat-x top left !important;
+    color: #555 !important;
+    border: 1px solid #BABABA;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    height: 16px;
+    padding: 6px 8px 5px 8px;
+    margin: 0;
+    vertical-align: text-bottom;
+}
+#pnlwizard #stepsContainer{
+    border: 1px solid #d4d4d4;
+}
+div.EktronPersonalization a{
+    color: #444 !important;
+    text-decoration: none;
+}
+div.EktronPersonalization a:hover{
+    color: #444 !important;
+    text-decoration: underline;
+}
+.EktronPersonalization.report-container {
+    border: none;
+}
+.EktronPersonalization.report-container .widget{
+    border:  none;
+}
+.EktronPersonalization.report-container .widget > .header{
+    display: none;
+}
+form.modal-content.settings-currencies div.ektronPageHeader,
+form.modal-content.settings-email-from-list div.ektronPageHeader{
+    margin-top: -1px;
+    padding-top: 20px;
+}
+form.modal-content.settings-currencies div.ektronPageHeader > table,
+form.modal-content.settings-email-from-list div.ektronPageHeader > table{
+
+    background: url("../images/UI/newGradient.gif") repeat-x scroll 0 0 #FFFFFF;
+}
+form.modal-content.settings-currencies div.ektronPageHeader .ektronTitlebar,
+form.modal-content.settings-email-from-list div.ektronPageHeader .ektronTitlebar{
+    display: block;
+}
+form.modal-content.settings-currencies div.ektronPageHeader .ektronToolbar,
+form.modal-content.settings-email-from-list div.ektronPageHeader .ektronToolbar{
+    border-bottom: 1px solid #d4d4d4;
+}
+form.modal-content.settings-currencies div.ektronPageContainer,
+form.modal-content.settings-email-from-list div.ektronPageContainer{
+    top: 88px !important;
+    padding: 0;
+    border-left: 1px solid #d4d4d4;
+
+}
+
+/*.RadETableWrapperBodyLeft{
+    display: none !important;
+}
+.RadETableWrapperBodyRight{
+    display: none !important;
+}
+
+.RadETableWrapperHeaderLeft, .RadETableWrapperHeaderCenter, .RadETableWrapperHeaderRight{
+ display: none !important;
+}
+
+table.translation-toolbar{
+
+}
+form#frmWordLingo{
+    
+}
+.RadETableWrapperFooterLeft, .RadETableWrapperFooterCenter, .RadETableWrapperFooterRight{
+    display: none !important;
+}
+
+.translation-toolbar .ektronPageHeader{
+    padding-top: 0px;
+}
+.translation-toolbar .ektronTitlebar{
+    background: #414141 url("../images/UI/title-bar-bg.gif") repeat-x top left !important;
+    color: #FFFFFF !important;
+    font-weight: normal !important;
+    line-height: 20px !important;
+    margin-top: 1px !important;
+    padding: 4px 8px 2px !important;
+    vertical-align: middle !important;
+    height: 27px;
+}
+.translation-toolbar #TransTitle{
+    padding-left: 8px !important;
+}
+.translation-toolbar .ektronTitlebar, .translation-toolbar .ektronToolbar{
+    width: 530px;
+    height: 27px;
+}
+.hide-title{
+    display: none !important;
+}
+.no-top-padding{
+    padding-top: 0px !important;
+}
+.adjusted-33px-top{
+    top: 33px !important;
+}*/
+
+#dvMetadata fieldset{
+    padding: 0.5em;
+}
+#dvMetadata fieldset *{
+   padding-left: 0.5em;
+}
+div.autoAlias div.ektronBorder{
+   padding: 14px;
+}
+div.PBColumn div.widget div.header div.buttons{
+    height: 20px;
+}
+#tvJobs table{
+    width: 99%;
+}
+
+.actionbarDivider {background: url("/Workarea/PageBuilder/PageControls/Themes/TrueBlue/images/actionbar_divider.png") no-repeat; width: 1px; height: 26px; padding: 0px; margin-left: 15px; margin-right: 15px;}
+
+#dropupload .helpassets{
+    background: #E6E6E6;
+    display:block;
+    height:30px;
+    margin:-2px 0 0 -4px;
+    padding:0 5px;
+    position:relative;
+    right:0;
+    top:-1px;
+    width:100%;
+    border-bottom: 1px solid #d4d4d4;
+}
+#dropupload .ektronToolbar{
+    
+}
+#dropupload #aHelp{
+    top: 6px;
+}
+#dropupload .ui-tabs-nav{
+    background: #ffffff;
+    border-bottom: 1px solid #d4d4d4;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.ui-widget-overlay{
+    background-image: none;
+}
+#tr_exchangerate td{
+    padding-right: 0px !important;
+}
+
+#myform .switchcontent{
+    top: 185px !important;
+}
+
+.forceTitlebar
+{
+	color: #FFF !important;
+	background: #414141 url('../images/UI/title-bar-bg.gif') repeat-x center !important;
+	font-weight: normal !important;
+	height: 23px !important;
+	line-height: 21px !important;
+	vertical-align: middle !important;
+	padding: 4px 8px 2px 8px !important;
+	-webkit-border-top-left-radius: 4px !important;
+	-webkit-border-top-right-radius: 4px !important;
+	-moz-border-radius-topleft: 4px !important;
+	-moz-border-radius-topright: 4px !important;
+	border-top-left-radius: 4px !important;
+	border-top-right-radius: 4px !important;
+	margin: -1px 0px 0px -1px !important;
+}
+.forceToolbar
+{
+    top:47px !important;
+    position:absolute !important;
+    width:98.6% !important;  
+}
+.forceMarginTop40
+{
+    margin-top: 40px !important;
+}
+
+#EkTB_ajaxContent.EkTB_modal{
+    background-color: #ffffff;
+}
+div.itemsTabModal h3.itemsModalHeader{
+	color: #FFF !important;
+	background: #414141 url('../images/UI/title-bar-bg.gif') repeat-x center !important;
+	font-weight: normal !important;
+	height: 23px !important;
+	line-height: 21px !important;
+	vertical-align: middle !important;
+	padding: 4px 8px 2px 8px !important;
+	-webkit-border-top-left-radius: 4px !important;
+	-webkit-border-top-right-radius: 4px !important;
+	-moz-border-radius-topleft: 4px !important;
+	-moz-border-radius-topright: 4px !important;
+	border-top-left-radius: 4px !important;
+	border-top-right-radius: 4px !important;
+	margin: -1px 0px 0px -1px !important;
+}
+td.moveMeta a.button{
+    background-color: #e6e6e6 !important;
+}
+td.moveMeta a.button:hover{
+    background-color: #e6e6e6 !important;
+}
+td.moveMeta a.buttonAdd {
+    background-image: url(../images/ui/icons/arrowHeadRight.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 4px 2px !important;
+	display: block;
+}
+td.moveMeta a.buttonAddAll {
+    background-image: url(../images/ui/icons/arrowHeadLast.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 4px 2px !important;
+	display: block;
+}
+td.moveMeta a.buttonLeftRemove {
+    background-image: url(../images/ui/icons/arrowHeadLeft.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 4px 2px !important;
+	display: block;
+}
+td.moveMeta a.buttonRemoveAll {
+    background-image: url(../images/ui/icons/arrowHeadFirst.png) !important;
+    background-repeat: no-repeat !important;
+    background-position: 4px 2px !important;
+	display: block;
+}

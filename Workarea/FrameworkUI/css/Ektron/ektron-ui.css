@@ -1,0 +1,65 @@
+/* Color/Interaction state helpers
+----------------------------------*/
+.ektron-ui-added {background: #9fde79;}
+.ektron-ui-caption {font-size: .9em; color: #555;}
+.ektron-ui-changed {background: #f3ea62;}
+.ektron-ui-even {background: #dadada;}
+.ektron-ui-highlight {color: #000; background: #ffff00;}
+.ektron-ui-loud {font-weight: bold; font-size: 1.1em;}
+.ektron-ui-odd {background: #e6e6e6;}
+.ektron-ui-quiet {color: #555;}
+.ektron-ui-removed {text-decoration: line-through; background: #f28975;}
+.ektron-ui-required {color: #a11a08;}
+
+/* error handling helpers */
+.ektron-ui-invalid {color: #a11a08;}
+label.ektron-ui-invalid {display: inline-block; margin-left: .5em;}
+.ektron-ui-valid {}
+/*
+
+/* Layout Helpers
+----------------------------------*/
+.ektron-ui-alignLeft        {text-align:left;}
+.ektron-ui-alignRight       {text-align:right;}
+.ektron-ui-alignCenter      {text-align:center;}
+.ektron-ui-floatNone        {float:none;}
+
+.ektron-ui-inline           {display: inline;}
+.ektron-ui-block            {display: block;}
+.ektron-ui-inlineBlock      {display: inline-block;}
+
+.ektron-ui-hidden           {display:none;}
+.ektron-ui-hiddenOffScreen  {position: absolute; left: -10000px}
+
+.ektron-ui-clearfix:after   {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.ektron-ui-clearfix         {display: inline-block;}
+/* required comment for clearfix to work in Opera \*/
+* html .ektron-ui-clearfix  {height:1%;}
+.ektron-ui-clearfix         {display:block;}
+/* end clearfix */
+
+/* Typography Helpers
+----------------------------------*/
+.ektron-ui-uppercase        {text-transform:uppercase;}
+.ektron-ui-lowercase        {text-transform:lowercase;}
+.ektron-ui-smallCaps        {font-variant:small-caps;}
+.ektron-ui-noTextTransform  {text-transform:none;}
+.ektron-ui-noTextDecoration {text-decoration:none;}
+.ektron-ui-text-xlarge      {font-size: 1.4em;}
+.ektron-ui-text-large       {font-size: 1.2em;}
+.ektron-ui-text-medium      {font-size: 1em;}
+.ektron-ui-text-small       {font-size: .8em;}
+.ektron-ui-text-xsmall      {font-size: .6em;}
+.ektron-ui-forceWrap        {word-wrap: break-word;}
+.ektron-ui-forceWrap:active, .ektron-ui-forceWrap:focus{outline: none;} /* fixes scrollbars appearing when focus and active status is brought to the element in mozilla */
+
+
+/* Control Helpers
+----------------------------------*/
+.ektron-ui-control {}
+
+/* Lists
+----------------------------------*/
+.ektron-ui-listStyleNone {list-style-type: none; margin: 0; padding: 0;}
+.ektron-ui-inlineList {list-style-type: none; margin: 0; padding: 0;}
+.ektron-ui-inlineList li {display: inline; margin: 0; padding: 0;}

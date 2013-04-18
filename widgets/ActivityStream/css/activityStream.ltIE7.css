@@ -1,0 +1,12 @@
+.ektronAutocomplete .autocomplete 
+{
+	height:350px; 
+}
+
+.EkActivityFeedPreferenceList li.PreferenceListItem a.PreferenceListDel 
+{
+	float:right;
+	text-indent: 1000px;
+	margin-top:-20px;
+}
+  

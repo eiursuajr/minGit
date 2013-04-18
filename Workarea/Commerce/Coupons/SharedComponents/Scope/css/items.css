@@ -1,0 +1,9 @@
+/* default styles */
+div.items .hide {display:none;}
+
+/* entire cart */
+div.items h3 {border:1px solid silver;border-bottom:none;font-size:14px !important;text-align:center;background-image:url('images/headerBackground_darkBlue.gif');background-repeat:repeat-x;background-position:0px 0px;color:White;}
+div.items div.message {margin:0;padding:1em;text-align:center;border:1px solid silver;background-image:url('images/tfoot.gif');background-repeat:repeat;}
+div.items div.message p {padding:1em;background-color:White;border:1px solid silver;}
+div.items{overflow-y:visible !important;}
+.ui-tabs-nav {width: 100% !important;}

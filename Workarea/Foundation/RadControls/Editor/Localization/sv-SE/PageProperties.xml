@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="HTMLAttributes">Sidattribut</string>
+	<string id="PageTitle">Titel</string>
+	<string id="Description">Beskrivning</string>
+	<string id="Keywords">Nyckelord</string>
+	<string id="Width">Bredd</string>
+	<string id="BaseLocation">BASE LOCATION</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Avbryt</string>
+	<string id="BodyAttributes">BODY attribut</string>
+	<string id="BackColor">Bakgrundsfärg</string>	
+	<string id="TopMargin">Överkantsmarginal</string>
+	<string id="BottomMargin">Underkantsmarginal</string>
+	<string id="LeftMargin">Vänster marginal</string>
+	<string id="RightMargin">Höger marginal</string>
+	<string id="BGImage">Bakgrundsbild</string>
+	<string id="ClassName">CLASS namn</string>
+	
+	
+</localization>

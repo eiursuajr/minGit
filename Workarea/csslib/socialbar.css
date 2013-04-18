@@ -1,0 +1,5 @@
+.ekSocialBar { margin: 0em; padding: 0em; list-style: none; }
+.ekSocialBar li { display: inline; margin-right: 4px; }
+.ekSocialBar li a { font-size: .87em; color: #486AC5; text-decoration: none; padding: 2px 2px 4px 2px;}
+.ekSocialBar li a:hover { background-color: #EEEEEE; }
+.ekSocialBar li img { vertical-align: middle; border-style: none; }

@@ -1,0 +1,175 @@
+<!--
+Copyright (C) Ektron Inc. All rights reserved.
+Ektron Template Markup
+  __Map                  - Displays the map section of the Map server control.
+  __SearchTxtResultPane  - Displays the results pane from the search.
+  __RouteInfoPane        - Displays the direction information pane.
+  
+  -For additional information on the EKML, its variables and tags, see the CMS400.NET Developer Manual
+  section "Ektron Markup Language"
+-->
+
+<!-- The <ekmarkup></ekmarkup> tags open and close the Ektron Markup Language.-->
+<ekmarkup>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. -->
+  <ekoutput>
+    <div>
+      <table>
+        <tr>
+          <!-- In this section of the table, the ID information and the variables cannot be changed. However, you can
+			 change the style information. -->
+          <td>
+            <div style="width: 95%; height: 95%" id="_dvSearch">
+              <table>
+                <tr>
+                  <td nowrap="nowrap">
+                    <div id="__SearchPane" >&#160;</div>
+                  </td>
+                  <td nowrap="nowrap">
+                    <div id="__CategoryPane" style="display: none;">
+                      &#160;
+                    </div>
+                    <div id="MapSearchOption">
+                      <table>
+                        <tr>
+                          <td align="right">
+                            <div style="float:right;" id="__CatCloseIcon">&#160;</div>
+                            <div id="__ClearAll" style="display:block;">
+                              <a href="javascript:EMap.ClearAll();">Clear&#160;All</a>&#160;&#160;
+                            </div>
+
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div id="timedv" style="display:none;">
+                              <table width ="100%" cellspacing="0" cellpadding="4" class="b3">
+                                <tr>
+                                  <td colspan="2" class="b2">
+                                    <span id="__timelabel" class="b-title">
+                                      Date:
+                                    </span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <input type="radio" name="__timegroup" value="1" onclick="EMap.TimeSearch(1);" checked=""/>Single Day&#160;&#160;&#160;
+                                    <input type="radio" name="__timegroup" value="-1" onclick="EMap.TimeSearch(-1);"/>Range
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td nowrap="nowrap">
+                                    <span id="__time1_label" class="bl">
+                                      Date:
+                                    </span>
+                                    <br/>
+                                    <span id="__time1_value">&#160;</span>
+
+                                  </td>
+                                </tr>
+                                <tr id="__time2" style="display:none;">
+                                  <td nowrap="nowrap">
+                                    <span id="__time2_label" class="bl">
+                                      End Date:
+                                    </span>
+                                    <br/>
+                                    <span id="__time2_value">&#160;</span>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div id="catdv" style="display:none;" >
+                              <table width ="100%" cellspacing="0" cellpadding="4" class="b3">
+                                <tr>
+                                  <td class="b2">
+                                    <span id="__MapCategoryTreeLabel" class="b-title">Categories:</span>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div id="__MapCategoryTreePane" style="display:block;">&#160;</div>
+                                    <br/>
+                                  </td>
+                                </tr>
+                              </table>
+                            </div>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div style="display: none; width: 95%; height: 95%" id="_dvDirection">
+              <table>
+                <tr>
+                  <td nowrap="nowrap">
+                    <div id="__DirectionPane">&#160;</div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <!-- In this section of the table, the ID information and the variables cannot be changed. However, you can
+			 change the style information. -->
+          <td>
+            <div id="__MapTab" style="display:none;">
+              <table style="background-color: white" border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                  <td class="tab_actived" id="dvSearch" width="1%" onclick="EMap.SetControl('search',true);return false;" nowrap="nowrap">
+                    <b>&#160;Search&#160;</b>
+                  </td>
+                  <td class="tab_spacer" width="1%" nowrap="nowrap">&#160;</td>
+                  <td class="tab_disabled" id="dvFind" width="1%" onclick="EMap.SetControl('find',true);return false;" nowrap="nowrap">
+                    <b>
+                      &#160;<span id="__findtitle">Find What</span>&#160;
+                    </b>
+                  </td>
+                  <td class="tab_spacer" width="1%" nowrap="nowrap">&#160;</td>
+                  <td class="tab_disabled" id="dvDirection" width="1%" onclick="EMap.SetControl('direction',false);return false;" nowrap="nowrap">
+                    <b>&#160;Directions&#160;</b>
+                  </td>
+                  <td class="tab_spacer" width="1%" nowrap="nowrap">&#160;</td>
+                  <td  class="tab_spacer" id="dvCheck" width="1%" nowrap="nowrap">
+                    <div id="__TypeControl" style="display:none;">
+                      <input type="checkbox" id="__ChkControl" onclick="EMap.SetMapControl();return true;"></input>Hide zoom control
+                    </div>
+                  </td>
+                  <td class="tab_spacer" width="1%" nowrap="nowrap">&#160;</td>
+                  <td class="tab_last" width="91%" nowrap="nowrap">&#160;</td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <!-- This section contains variables for displaying the driving directions, the map and the search results. 
+				 You cannot change the ID variables. However, you can change the style information and you can move 
+				 the div tags around within this table to create different layouts. -->
+            <table>
+              <tr>
+                <td>
+                  <div id="__RouteInfoPane" style="display:none;overflow:scroll"/>
+                </td>
+                <td>
+                  <div id="__Map" style="position:relative;border-style: solid; border-width: 1px; border-color: #4b7c9f;"></div>
+                </td>
+                <td>
+                  <div id="__SearchTxtResultPane" style="overflow:auto"></div>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr >
+      </table>
+    </div>
+  </ekoutput>
+</ekmarkup>

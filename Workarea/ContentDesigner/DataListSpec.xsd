@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="CommonSpec.xsd"/>
+
+	<xs:element name="datalists">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="datalist" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="schema" minOccurs="0"/>
+							<xs:element name="item" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType mixed="true">
+									<xs:sequence>
+										<xs:any namespace="##any" minOccurs="0" maxOccurs="unbounded" processContents="skip"/>
+									</xs:sequence>
+									<xs:attribute name="value" type="xs:string"/>
+									<xs:attribute name="default" type="xs:boolean"/>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute ref="localeRef"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attributeGroup ref="nameKey"/>
+						<xs:attribute ref="localeRef"/>
+						<xs:attribute ref="src"/>
+						<xs:attribute name="cache" type="xs:boolean" default="true"/>
+						<xs:attribute name="select" type="xs:string"/>
+						<xs:attribute name="captionxpath" type="xs:string"/>
+						<xs:attribute name="valuexpath" type="xs:string"/>
+						<xs:attribute name="namespaces" type="xs:string"/>
+						<xs:attribute name="validation">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="select-req"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="datatype" type="xs:NMTOKEN"/>
+						<xs:attribute name="treeImg" type="treeviewImageKey"/>
+						<xs:attribute name="minSelected" type="xs:nonNegativeInteger"/>
+						<!-- maxSelected = -1 means "no limits" -->
+						<xs:attribute name="maxSelected" type="xs:integer"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute ref="enabled"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

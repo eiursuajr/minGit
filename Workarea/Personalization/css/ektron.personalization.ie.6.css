@@ -1,0 +1,45 @@
+/* widget menu handle */
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li a.remove {top:5px;right:10px;} /* fixes position of delete image */
+
+/* tab options menu */
+div.EktronPersonalization div.tabWrapper ul.tabOptions li a {display:inline;}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li a:hover {zoom:1;margin-bottom:-3px;}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li a span {display:block;}
+
+/* widgetTray not sizing correctly */
+div.EktronPersonalization div.widgetTray div.overflowWrapper {position:relative;}
+div.EktronPersonalization div.widgetTray {}
+
+/* fix to get the columns to tuck-up underneath the widget handle */
+div.EktronPersonalization p.widgetTrayHandle {margin:0 0 -10px 0;}
+
+/* ie6 fix for child selectors */
+div.EktronPersonalization div.widget div.header {cursor:move;line-height:20px;background-image:url('images/widgetHeaderBackground.gif');background-position:0px 0px;background-repeat:repeat-x;}
+div.EktronPersonalization div.widget * div.header {cursor:auto;line-height:normal;background-image:none;background-position:inherit;background-repeat:inherit}
+
+div.EktronPersonalization div.widget div.header div.buttons {padding:0px 2px 0px 0px;}
+div.EktronPersonalization div.widget div.header * div.buttons {padding:inherit;}
+
+div.EktronPersonalization div.widget div.header div.buttons input {position:relative;top:2px;float:right;height:16px;width:16px;}
+div.EktronPersonalization div.widget div.header div.buttons * input {position:static;float:none;height:auto;width:auto;}
+
+div.EktronPersonalization div.widget div.header div.buttons input.minimize {float:left;}
+div.EktronPersonalization div.widget div.header div.buttons input.restore {float:left;}
+
+div.EktronPersonalization div.widget div.header div.buttons a {position:relative;top:2px;float:right;height:16px;width:16px;}
+div.EktronPersonalization div.widget div.header div.buttons * a {position:static;height:auto;width:auto;}
+
+div.EktronPersonalization div.widget div.header h4 {display:inline;margin:0;padding:0;font-size:13px;}
+div.EktronPersonalization div.widget div.header * h4 {display:block;margin:inherit;padding:inherit;font-size:inherit;}
+
+div.EktronPersonalization div.widget div.header div.buttons a.minimize {float:left;}
+div.EktronPersonalization div.widget div.header div.buttons a.restore {float:left;}
+
+div.EktronPersonalization div.widget div.header h4 {clear:none !important;}
+div.EktronPersonalization div.widget div.header * h4 {clear:both;}
+
+div.EktronPersonalization div.widget div.header h4 span {overflow:hidden;display:block;margin-right:1em;white-space:nowrap;padding:0px 0px 0px 2px;color:#676767;}
+div.EktronPersonalization div.widget div.header h4 * span {overflow:inherit;display:inline;margin:inherit;white-space:normal;padding:inherit;color:inherit;}
+
+div.EktronPersonalization div.widget div.content {padding:1em;overflow:auto;display:none;}
+div.EktronPersonalization div.widget * div.content {padding:inherit;overflow:inherit;display:block;}

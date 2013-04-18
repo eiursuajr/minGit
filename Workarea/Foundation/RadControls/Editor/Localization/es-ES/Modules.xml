@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorXhtmlValidator">Validator de XHTML</string>
+	<string id="RadEditorStatistics">Estadística</string>
+	<string id="RadEditorNodeInspector">Inspector de las características</string>
+	<string id="RadEditorDomInspector">Inspector de la etiqueta</string>	
+	<string id="RadEditorHtmlInspector">Opinión en tiempo real del HTML</string>
+	<string id="StatisticsWords">Palabras:</string>
+	<string id="StatisticsCharacters">Caracteres:</string>	
+	<string id="NodeInspectorSelectedElement">El elemento seleccionado es</string>	
+	<string id="NodeInspectorInvalidValue">Valor inválido. Incorporar por favor un número.</string>	
+	<string id="className">Classname</string>		
+	<string id="borderColor">Color de la frontera</string>	
+	<string id="bgColor">Fondo</string>	
+	<string id="width">Anchura</string>
+	<string id="height">Altura</string>
+	<string id="align">Alineación</string>
+	<string id="vAlign">Alineación vertical</string>
+	<string id="cellSpacing">CellSpacing</string>
+	<string id="cellPadding">CellPadding</string>
+	<string id="border">Anchura de la frontera</string>
+	<string id="noWrap">Nowrap</string>
+	<string id="value">Valor</string>
+	<string id="id">Identificación</string>
+	<string id="name">Nombre</string>
+	<string id="href">URL</string>
+	<string id="title">ToolTip</string>
+	<string id="target">Blanco</string>
+	<string id="alt">ToolTip</string>
+	<string id="_blank">Ventana nueva</string>
+	<string id="_self">La misma ventana</string>
+	<string id="_parent">Ventana del padre</string>
+	<string id="_top">Ventana de Browser</string>
+	<string id="_search">Cristal de la búsqueda</string>
+	<string id="_media">Cristal de los medios</string>
+	<string id="DomInspectorRemoveElement">RemoveElement</string>
+	<string id="NAME">Nombre</string>
+	<string id="action">Acción</string>	
+	<string id="ValidateXHTML">Validar XHTML</string>
+	<string id="ExpandValidator">Ampliar el cristal del informe</string>
+	<string id="Doctype">Seleccionar Doctype</string>
+	<string id="rows">Filas</string>
+	<string id="cols">Columnas</string>
+</localization>

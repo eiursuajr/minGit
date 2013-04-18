@@ -1,0 +1,15 @@
+﻿/* coupon table - tfoot */
+div.itemsData table.items tfoot td {padding-bottom:1em;}
+
+table.ektronGrid {border-bottom:1px solid #d4d4d4;}
+
+/* modal - tfoot */
+table.ektronCouponItems tfoot td {padding-bottom:1em;}
+
+table.items .resetBorders {border:none !important;}
+
+table.ektronCouponItems tbody td iframe {width:95%;}
+
+div.itemsData a.button {white-space:nowrap !important;}
+
+div.itemsData table.items thead th.markForDelete {zoom:1;}

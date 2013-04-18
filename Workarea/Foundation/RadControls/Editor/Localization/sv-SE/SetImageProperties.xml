@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Bildegenskaper</string>
+	<string id="Bytes">bytes</string>
+	<string id="Customh">Egen - </string>
+	<string id="PromptColor">Var vänlig och ange HEX värdet för den egna färgen:</string>
+	<string id="Tab1HeaderText">Bild Egenskaper</string>
+	<string id="Tab2HeaderText">Bild Information</string>
+	<string id="Tab3HeaderText">Skapa 'Thumbnail'</string>
+	<string id="BorderWidth">Ram Bredd:</string>
+	<string id="NoBorder">Ingen ram</string>
+	<string id="BorderColor">Ram färg:</string>
+	<string id="NoColor">Ingen färg</string>
+	<string id="Black">Svart</string>
+	<string id="Blue">Blå</string>
+	<string id="Green">Grön</string>
+	<string id="Orange">Orange</string>
+	<string id="Red">Röd</string>
+	<string id="White">Vit</string>
+	<string id="Yellow">Gul</string>
+	<string id="Custom">Egen</string>
+	<string id="ImageAlign">Bild Justering:</string>
+	<string id="AbsoluteBottom">Absolut Nederst</string>
+	<string id="AbsoluteMiddle">Absolut Mitten</string>
+	<string id="Baseline">Baslinje</string>
+	<string id="Bottom">Nederst</string>
+	<string id="Left">Vänster</string>
+	<string id="Middle">Mitten</string>
+	<string id="Right">Höger</string>
+	<string id="TextTop">Överst i text</string>
+	<string id="Top">Överst</string>
+	<string id="ImageWidth">Bild Bredd:</string>
+	<string id="ImageHeight">Bild Höjd:</string>
+	<string id="ImageSize">Bild Storlek:</string>
+	<string id="FileName">Fil Namn:</string>
+	<string id="Constrain">Begränsning</string>
+	<string id="Width">Bredd:</string>
+	<string id="Height">Höjd:</string>
+	<string id="VerticalSpacing">Vertikal utfyllnad:</string>
+	<string id="HorizontalSpacing">Horisontell utfyllnad:</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Avbryt</string>
+	<string id="AddCustomColor">Infoga egen färg...</string>
+	<string id="ImageLongDesc">Lång Beskrivning</string>
+	<string id="AddHexColor">Infoga HEX färg...</string>
+	<string id="ChangeImageSrc">Bild SRC:</string>
+</localization>

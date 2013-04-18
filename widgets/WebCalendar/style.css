@@ -1,0 +1,162 @@
+@import url("ektron.treeview.css");
+
+div.WCEdit > div
+{
+	height: auto !important;
+	max-height: 300px;
+	overflow: auto;
+}
+
+div.WCEdit .WCEditControls
+{
+	text-align: right;
+	margin: .25em 0 0;
+}
+div.WCEdit span.add
+{ 
+	background-image: url('../../workarea/images/UI/Icons/add.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	cursor:pointer;
+	padding:0 0 0 18px;
+}
+div.WCEdit span.click
+{ 
+	cursor:pointer;
+}
+div.WCEdit span.remove
+{
+	background-image: url('../../workarea/images/UI/Icons/delete.png');
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display:block;
+	width:16px;
+	height:16px;
+	text-indent:-100px;
+	overflow:hidden;
+}
+
+/*** Color Picker ***/
+.SelectedCalendars .bgcolor { width:125px; }
+
+/*** Tables ***/
+div.ektronModalBody div.WCEdit table, div.WCEdit table
+{
+	width: 100%;
+	border-collapse:collapse;
+	font-size:12px;
+	margin:0;
+	text-align:left;
+}
+div.WCEdit table th
+{
+	background-color:#B9C9FE;
+	border-bottom:1px solid #FFFFFF;
+	border-top:4px solid #AABCFE;
+	color:#003399;
+	font-size:13px;
+	font-weight:normal;
+	padding:8px;
+}
+div.WCEdit table tr.center td
+{
+	text-align:center;
+}
+div.WCEdit table tr td
+{
+	background-color:#E8EDFF;
+	border-bottom:1px solid #FFFFFF;
+	border-top:1px solid transparent;
+	color:#666699;
+	padding:8px;
+}
+div.WCEdit table tr.even td
+{
+	background-color:#EFF2FF;
+	border-bottom:1px solid #FFFFFF;
+	border-top:1px solid transparent;
+	color:#666699;
+	padding:8px;
+}
+
+
+
+/*  Folder Tree */
+div.WCEdit .WCfoldercontainer span.folder
+{ 
+	padding: 1px 0 1px 18px; 
+	display: block;
+	background-image: url('../../workarea/java/plugins/treeview/images/folder.gif'); 
+	background-position: 0 0;
+	background-repeat: no-repeat; 
+	cursor: pointer;
+	border: solid 1px transparent;
+}
+div.WCEdit .EktronFolderTree li.calendar>span.folder
+{ 
+	background-image: url('../../workarea/images/UI/Icons/calendarViewDay.png'); 
+}
+div.WCEdit .EktronFolderTree li.expandable>span.folder
+{ 
+	background-image: url('../../workarea/java/plugins/treeview/images/folder-closed.gif'); 
+}
+div.WCEdit .EktronFolderTree li.collapsable>span.folder 
+{
+	background-image: url('../../workarea/java/plugins/treeview/images/folder.gif'); 
+}
+
+div.WCEdit .EktronFolderTree span.selected
+{
+	display: inline-block;
+	padding-top: .25em;
+	padding-bottom: .25em;
+	padding-right: .25em;
+	margin-top: -.25em;
+	background-color:#E6EFC2; 
+	border:1px solid #C6D880; 
+	color: #529214;
+	background-position: 0 .25em;
+}
+
+/** User **/
+div.WCEdit div.WebCalByUser div.searcharea
+{
+	float: right;
+}
+div.WCEdit div.WebCalByUser div.mycalendar
+{
+	float:left;
+}
+div.WCEdit div.WebCalByUser div.paging
+{
+	width:100%;
+}
+div.WCEdit div.WebCalByUser div.paging > span
+{
+	display:inline-block;
+	width:49%;
+	text-align:center;
+	cursor: pointer;
+}
+
+/** Group **/
+div.WCEdit div.WebCalByGroup div.searcharea
+{
+	float: right;
+}
+
+div.WCEdit div.WebCalByGroup div.paging
+{
+	width:100%;
+}
+div.WCEdit div.WebCalByGroup div.paging > span
+{
+	display:inline-block;
+	width:49%;
+	text-align:center;
+	cursor: pointer;
+}
+
+
+/* Clearfix */
+div.WCEdit .clear { clear:both; }

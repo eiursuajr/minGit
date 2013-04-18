@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Proprietà cella</string>
+	<string id="Tab1HeaderText">Proprietà cella</string>
+	<string id="Dimensions">Dimensioni</string>
+	<string id="Height">Altezza:</string>
+	<string id="Width">Larghezza:</string>
+	<string id="ContentAlignment">Allineamento contenuto</string>
+	<string id="Horizontal">Orizzontale:</string>
+	<string id="Left">Sinistro</string>
+	<string id="Center">Centrato</string>
+	<string id="Right">Destro</string>
+	<string id="Vertical">Verticale:</string>
+	<string id="Middle">In mezzo</string>
+	<string id="Top">In alto</string>
+	<string id="Bottom">In basso</string>
+	<string id="Baseline">Linea base</string>
+	<string id="Background">Sfondo</string>
+	<string id="UseColor">Usa il colore:</string>
+	<string id="Black">Nero</string>
+	<string id="Blue">Blu</string>
+	<string id="Green">Verde</string>
+	<string id="Orange">Arancione</string>
+	<string id="Red">Rosso</string>
+	<string id="White">Bianco</string>
+	<string id="Yellow">Giallo</string>
+	<string id="Custom">Personalizzato</string>
+	<string id="Customh">Personalizzato - </string>
+	<string id="Style">Stile:</string>
+	<string id="MessageStyle">Per piacere, inserisci un valore per lo stile valido.</string>
+	<string id="PromptColor">Per piacere, inserisci un valore HEX valido:</string>
+	<string id="Additional">Aggiuntivi</string>
+	<string id="NoWrapping">No Wrapping</string>
+	<string id="InvalidCellWidth">Larghezza cella non valida.</string>
+	<string id="InvalidCellHeight">Altezza cella non valida.</string>
+</localization>

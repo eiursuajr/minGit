@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Table Wizard</string>
+	<string id="Tab1HeaderText">Table Design</string>
+	<string id="Tab2HeaderText">Table Properties</string>
+	<string id="Tab3HeaderText">Cell Properties</string>
+	<string id="Layout">Layout</string>
+	<string id="Alignment">Alignment:</string>
+	<string id="Columns">Columns</string>
+	<string id="ColumnSpan">Column Span</string>
+	<string id="Rows">Rows</string>
+	<string id="RowSpan">Row Span</string>
+	<string id="CellSpacing">Cell Spacing:</string>
+	<string id="CellPadding">Cell Padding:</string>
+	<string id="Border">Border</string>
+	<string id="Size">Size:</string>
+	<string id="Frame">Frame:</string>
+	<string id="Dimensions">Dimensions</string>
+	<string id="Height">Height:</string>
+	<string id="Width">Width:</string>
+	<string id="ContentAlignment">Content Alignment</string>
+	<string id="Horizontal">Horizontal:</string>
+	<string id="Left">Left</string>
+	<string id="Center">Center</string>
+	<string id="Right">Right</string>
+	<string id="Vertical">Vertical:</string>
+	<string id="Middle">Middle</string>
+	<string id="Top">Top</string>
+	<string id="Bottom">Bottom</string>
+	<string id="Baseline">Baseline</string>
+	<string id="Background">Background</string>
+	<string id="UseColor">Use Color:</string>
+	<string id="Black">Black</string>
+	<string id="Blue">Blue</string>
+	<string id="Green">Green</string>
+	<string id="Orange">Orange</string>
+	<string id="Red">Red</string>
+	<string id="White">White</string>
+	<string id="Yellow">Yellow</string>
+	<string id="Custom">Custom</string>
+	<string id="Customh">Custom - </string>
+	<string id="PromptColor">Please, provide the custom color HEX value:</string>
+	<string id="Additional">Additional</string>
+	<string id="Content">Content:</string>
+	<string id="NoWrapping">No Wrapping</string>
+	<string id="Tab4HeaderText">Accessibility</string>	
+	<string id="Sec508HeadingRows">Heading rows:</string>
+	<string id="Sec508HeadingCols">Heading columns:</string>
+	<string id="Sec508Summary">Summary:</string>
+	<string id="Sec508Caption">Caption:</string>
+	<string id="Sec508CaptionAlign">Caption alignment:</string>
+	<string id="Sec508AssocCellHeaders">Associate cells with headers</string>
+	<string id="TableBorderControlSizeOverflow">You are trying to set border size to a greater value than maximum (1000). It will be set to 1000.</string>
+	<string id="AddCustomColor">Add Custom Color...</string>
+	<string id="AddHexColor">Add Hex Color...</string>
+	<string id="InvalidTableWidth">Invalid table width.</string>
+	<string id="InvalidTableHeight">Invalid table height.</string>
+	<string id="InvalidCellWidth">Invalid cell width.</string>
+	<string id="InvalidCellHeight">Invalid cell height.</string>
+	
+	<string id="Allsides">All four sides</string>
+	<string id="Rules">All rows and columns</string>
+	<string id="Nosides">No borders</string>
+	<string id="Norules">No interior borders</string>
+	<string id="Lefthand">Left side</string>
+	<string id="Betweencolumns">Between columns</string>
+	<string id="Righthand">Right-hand side only</string>
+	<string id="Rightleft">Right and left sides only</string>
+	
+	<string id="Topbottom">Top and bottom sides only</string>	
+	<string id="Topside">Top side only</string>
+	<string id="Betweenrows">Between rows</string>
+	<string id="Bottomside">Bottom side only</string>					
+	
+	<string id="Betweenall">Between all rows and columns</string>
+	<string id="Betweengroup">Between row and column group</string>				
+</localization>

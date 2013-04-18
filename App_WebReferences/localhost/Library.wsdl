@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="DeleteLoadBalanceItem">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteLoadBalanceItemResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
+      <s:complexType name="AuthenticationHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Domain" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="RequestInfoParameters" type="tns:RequestInfoParameters" />
+      <s:complexType name="RequestInfoParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ContentLanguage" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllLoadBalancePaths_x0020_By_x0020_TypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllLoadBalancePaths_x0020_By_x0020_TypeResult" type="tns:ArrayOfLoadBalanceData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLoadBalanceData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LoadBalanceData" nillable="true" type="tns:LoadBalanceData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LoadBalanceData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MakeRelative" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LibTypeID" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeResult" type="tns:ArrayOfLoadBalanceData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDResult" type="tns:LibraryData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LibraryData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:LibraryBaseData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="FolderName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EditorFirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EditorLastName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastEditDate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayLastEditDate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DateCreated" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayDateCreated" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContentId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="ParentId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="Relative" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContentType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContentSubType" type="tns:CMSContentSubtype" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPrivate" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Teaser" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MetaData" type="tns:ArrayOfContentMetaData" />
+              <s:element minOccurs="0" maxOccurs="1" name="Taxonomies" type="tns:ArrayOfTaxonomyBaseData" />
+              <s:element minOccurs="1" maxOccurs="1" name="OriginalLibraryId" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="LibraryBaseData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfLibraryBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TypeId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="LanguageId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="StagingFileName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="File" type="s:base64Binary" />
+              <s:element minOccurs="1" maxOccurs="1" name="LibraryType" type="tns:LibraryType" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfLibraryBaseData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfLibraryBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfLibraryBaseData" abstract="true" />
+      <s:simpleType name="LibraryType">
+        <s:restriction base="s:string">
+          <s:enumeration value="images" />
+          <s:enumeration value="files" />
+          <s:enumeration value="hyperlinks" />
+          <s:enumeration value="quicklinks" />
+          <s:enumeration value="forms" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CMSContentSubtype">
+        <s:restriction base="s:string">
+          <s:enumeration value="AllTypes" />
+          <s:enumeration value="Content" />
+          <s:enumeration value="PageBuilderData" />
+          <s:enumeration value="WebEvent" />
+          <s:enumeration value="PageBuilderMasterData" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfContentMetaData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ContentMetaData" nillable="true" type="tns:ContentMetaData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContentMetaData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfContentMetaData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DataType" type="tns:ContentMetadataDataType" />
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Required" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:ContentMetadataType" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsEditable" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Separator" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CaseSensitive" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RemoveDuplicate" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSearchAllowed" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsDisplayable" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="SelectableText" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AllowMultiple" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSelectableOnly" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="MetaDisplayEE" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="BlogMetaType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ObjectType" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfContentMetaData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfContentMetaData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfContentMetaData" abstract="true" />
+      <s:simpleType name="ContentMetadataDataType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="Number" />
+          <s:enumeration value="Byte" />
+          <s:enumeration value="Double" />
+          <s:enumeration value="Float" />
+          <s:enumeration value="Integer" />
+          <s:enumeration value="Long" />
+          <s:enumeration value="Short" />
+          <s:enumeration value="Date" />
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="SingleSelect" />
+          <s:enumeration value="MultiSelect" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ContentMetadataType">
+        <s:restriction base="s:string">
+          <s:enumeration value="HtmlTag" />
+          <s:enumeration value="MetaTag" />
+          <s:enumeration value="CollectionSelector" />
+          <s:enumeration value="ListSummarySelector" />
+          <s:enumeration value="ContentSelector" />
+          <s:enumeration value="ImageSelector" />
+          <s:enumeration value="LinkSelector" />
+          <s:enumeration value="FileSelector" />
+          <s:enumeration value="MenuSelector" />
+          <s:enumeration value="UserSelector" />
+          <s:enumeration value="SearchableProperty" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfTaxonomyBaseData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TaxonomyBaseData" nillable="true" type="tns:TaxonomyBaseData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TaxonomyBaseData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfTaxonomyBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonomyId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxonomyIdPath" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxonomyName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxonomyImage" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CategoryUrl" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Visible" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonomyType" type="tns:TaxonomyType" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonomyLanguage" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxonomyLanguageName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxonomyDescription" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonomyParentId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonomyLevel" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="TaxonomyPath" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonomyCreatedDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonomyItemCount" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="TaxonomyHasChildren" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="TemplateId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemplateName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TemplateInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="TemplateInheritedFrom" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfTaxonomyBaseData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfTaxonomyBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfTaxonomyBaseData" abstract="true" />
+      <s:simpleType name="TaxonomyType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Content" />
+          <s:enumeration value="User" />
+          <s:enumeration value="Group" />
+          <s:enumeration value="Locale" />
+          <s:enumeration value="Undefined" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetLibraryItem_x0020_By_x0020_Id">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LibID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLibraryItem_x0020_By_x0020_IdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLibraryItem_x0020_By_x0020_IdResult" type="tns:LibraryData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLibrarySettings">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLibrarySettingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLibrarySettingsResult" type="tns:LibraryConfigData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LibraryConfigData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="RelativeImages" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelativeFiles" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageExtensions" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageDirectory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileExtensions" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileDirectory" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLibraryTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderBy" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLibraryTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLibraryTypesResult" type="tns:ArrayOfLibraryTypeData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLibraryTypeData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LibraryTypeData" nillable="true" type="tns:LibraryTypeData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LibraryTypeData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Extensions" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RelativeDirectory" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllChildLibItems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="OrderBy" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="currentPageNum" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pageSize" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalPages" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllChildLibItemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllChildLibItemsResult" type="tns:ArrayOfLibraryData" />
+            <s:element minOccurs="1" maxOccurs="1" name="totalPages" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLibraryData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LibraryData" nillable="true" type="tns:LibraryData" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLoadBalancePath">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoadBalancePathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoadBalancePathResult" type="tns:LoadBalanceData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfLoadBalanceData" nillable="true" type="tns:ArrayOfLoadBalanceData" />
+      <s:element name="LibraryData" nillable="true" type="tns:LibraryData" />
+      <s:element name="LibraryConfigData" nillable="true" type="tns:LibraryConfigData" />
+      <s:element name="ArrayOfLibraryTypeData" nillable="true" type="tns:ArrayOfLibraryTypeData" />
+      <s:element name="LoadBalanceData" nillable="true" type="tns:LoadBalanceData" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="DeleteLoadBalanceItemSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteLoadBalanceItem" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoadBalanceItemSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteLoadBalanceItemResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoadBalanceItemAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoadBalanceItemRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_TypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllLoadBalancePaths_x0020_By_x0020_Type" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_TypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllLoadBalancePaths_x0020_By_x0020_TypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths By TypeAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths By TypeRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths By Id and TypeAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths By Id and TypeRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem By Id And ParentIDAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem By Id And ParentIDRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_IdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLibraryItem_x0020_By_x0020_Id" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_IdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLibraryItem_x0020_By_x0020_IdResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem By IdAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem By IdRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetLibrarySettingsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLibrarySettings" />
+  </wsdl:message>
+  <wsdl:message name="GetLibrarySettingsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLibrarySettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLibrarySettingsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetLibrarySettingsRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLibraryTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLibraryTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryTypesAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryTypesRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetAllChildLibItemsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllChildLibItems" />
+  </wsdl:message>
+  <wsdl:message name="GetAllChildLibItemsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllChildLibItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllChildLibItemsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAllChildLibItemsRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadBalancePathSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoadBalancePath" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadBalancePathSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoadBalancePathResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadBalancePathAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadBalancePathRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoadBalanceItemHttpGetIn">
+    <wsdl:part name="Id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoadBalanceItemHttpGetOut" />
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_TypeHttpGetIn">
+    <wsdl:part name="Type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_TypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadBalanceData" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeHttpGetIn">
+    <wsdl:part name="Id" type="s:string" />
+    <wsdl:part name="Type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadBalanceData" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDHttpGetIn">
+    <wsdl:part name="Id" type="s:string" />
+    <wsdl:part name="ParentId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:LibraryData" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_IdHttpGetIn">
+    <wsdl:part name="LibID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_IdHttpGetOut">
+    <wsdl:part name="Body" element="tns:LibraryData" />
+  </wsdl:message>
+  <wsdl:message name="GetLibrarySettingsHttpGetIn">
+    <wsdl:part name="Id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLibrarySettingsHttpGetOut">
+    <wsdl:part name="Body" element="tns:LibraryConfigData" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryTypesHttpGetIn">
+    <wsdl:part name="Id" type="s:string" />
+    <wsdl:part name="OrderBy" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryTypesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLibraryTypeData" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadBalancePathHttpGetIn">
+    <wsdl:part name="Id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadBalancePathHttpGetOut">
+    <wsdl:part name="Body" element="tns:LoadBalanceData" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoadBalanceItemHttpPostIn">
+    <wsdl:part name="Id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteLoadBalanceItemHttpPostOut" />
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_TypeHttpPostIn">
+    <wsdl:part name="Type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_TypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadBalanceData" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeHttpPostIn">
+    <wsdl:part name="Id" type="s:string" />
+    <wsdl:part name="Type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLoadBalanceData" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDHttpPostIn">
+    <wsdl:part name="Id" type="s:string" />
+    <wsdl:part name="ParentId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:LibraryData" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_IdHttpPostIn">
+    <wsdl:part name="LibID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryItem_x0020_By_x0020_IdHttpPostOut">
+    <wsdl:part name="Body" element="tns:LibraryData" />
+  </wsdl:message>
+  <wsdl:message name="GetLibrarySettingsHttpPostIn">
+    <wsdl:part name="Id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLibrarySettingsHttpPostOut">
+    <wsdl:part name="Body" element="tns:LibraryConfigData" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryTypesHttpPostIn">
+    <wsdl:part name="Id" type="s:string" />
+    <wsdl:part name="OrderBy" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLibraryTypesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLibraryTypeData" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadBalancePathHttpPostIn">
+    <wsdl:part name="Id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadBalancePathHttpPostOut">
+    <wsdl:part name="Body" element="tns:LoadBalanceData" />
+  </wsdl:message>
+  <wsdl:portType name="LibrarySoap">
+    <wsdl:operation name="DeleteLoadBalanceItem">
+      <wsdl:input message="tns:DeleteLoadBalanceItemSoapIn" />
+      <wsdl:output message="tns:DeleteLoadBalanceItemSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_TypeSoapIn" />
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_TypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeSoapIn" />
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID" message="tns:GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDSoapIn" />
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID" message="tns:GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id" message="tns:GetLibraryItem_x0020_By_x0020_IdSoapIn" />
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id" message="tns:GetLibraryItem_x0020_By_x0020_IdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibrarySettings">
+      <wsdl:input message="tns:GetLibrarySettingsSoapIn" />
+      <wsdl:output message="tns:GetLibrarySettingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryTypes">
+      <wsdl:input message="tns:GetLibraryTypesSoapIn" />
+      <wsdl:output message="tns:GetLibraryTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChildLibItems">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Loads all of the library items by type</wsdl:documentation>
+      <wsdl:input message="tns:GetAllChildLibItemsSoapIn" />
+      <wsdl:output message="tns:GetAllChildLibItemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadBalancePath">
+      <wsdl:input message="tns:GetLoadBalancePathSoapIn" />
+      <wsdl:output message="tns:GetLoadBalancePathSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LibraryHttpGet">
+    <wsdl:operation name="DeleteLoadBalanceItem">
+      <wsdl:input message="tns:DeleteLoadBalanceItemHttpGetIn" />
+      <wsdl:output message="tns:DeleteLoadBalanceItemHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_TypeHttpGetIn" />
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_TypeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeHttpGetIn" />
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID" message="tns:GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDHttpGetIn" />
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID" message="tns:GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id" message="tns:GetLibraryItem_x0020_By_x0020_IdHttpGetIn" />
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id" message="tns:GetLibraryItem_x0020_By_x0020_IdHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibrarySettings">
+      <wsdl:input message="tns:GetLibrarySettingsHttpGetIn" />
+      <wsdl:output message="tns:GetLibrarySettingsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryTypes">
+      <wsdl:input message="tns:GetLibraryTypesHttpGetIn" />
+      <wsdl:output message="tns:GetLibraryTypesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadBalancePath">
+      <wsdl:input message="tns:GetLoadBalancePathHttpGetIn" />
+      <wsdl:output message="tns:GetLoadBalancePathHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="LibraryHttpPost">
+    <wsdl:operation name="DeleteLoadBalanceItem">
+      <wsdl:input message="tns:DeleteLoadBalanceItemHttpPostIn" />
+      <wsdl:output message="tns:DeleteLoadBalanceItemHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_TypeHttpPostIn" />
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_TypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeHttpPostIn" />
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type" message="tns:GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_TypeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID" message="tns:GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDHttpPostIn" />
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID" message="tns:GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id" message="tns:GetLibraryItem_x0020_By_x0020_IdHttpPostIn" />
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id" message="tns:GetLibraryItem_x0020_By_x0020_IdHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibrarySettings">
+      <wsdl:input message="tns:GetLibrarySettingsHttpPostIn" />
+      <wsdl:output message="tns:GetLibrarySettingsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryTypes">
+      <wsdl:input message="tns:GetLibraryTypesHttpPostIn" />
+      <wsdl:output message="tns:GetLibraryTypesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadBalancePath">
+      <wsdl:input message="tns:GetLoadBalancePathHttpPostIn" />
+      <wsdl:output message="tns:GetLoadBalancePathHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LibrarySoap" type="tns:LibrarySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteLoadBalanceItem">
+      <soap:operation soapAction="http://tempuri.org/DeleteLoadBalanceItem" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteLoadBalanceItemAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:DeleteLoadBalanceItemRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <soap:operation soapAction="http://tempuri.org/GetAllLoadBalancePaths By Type" style="document" />
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAllLoadBalancePaths By TypeAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetAllLoadBalancePaths By TypeRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <soap:operation soapAction="http://tempuri.org/GetAllLoadBalancePaths By Id and Type" style="document" />
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAllLoadBalancePaths By Id and TypeAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetAllLoadBalancePaths By Id and TypeRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <soap:operation soapAction="http://tempuri.org/GetLibraryItem By Id And ParentID" style="document" />
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLibraryItem By Id And ParentIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetLibraryItem By Id And ParentIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <soap:operation soapAction="http://tempuri.org/GetLibraryItem By Id" style="document" />
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLibraryItem By IdAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetLibraryItem By IdRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibrarySettings">
+      <soap:operation soapAction="http://tempuri.org/GetLibrarySettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLibrarySettingsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetLibrarySettingsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryTypes">
+      <soap:operation soapAction="http://tempuri.org/GetLibraryTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLibraryTypesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetLibraryTypesRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChildLibItems">
+      <soap:operation soapAction="http://tempuri.org/GetAllChildLibItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAllChildLibItemsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetAllChildLibItemsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadBalancePath">
+      <soap:operation soapAction="http://tempuri.org/GetLoadBalancePath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLoadBalancePathAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetLoadBalancePathRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LibrarySoap12" type="tns:LibrarySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DeleteLoadBalanceItem">
+      <soap12:operation soapAction="http://tempuri.org/DeleteLoadBalanceItem" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteLoadBalanceItemAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:DeleteLoadBalanceItemRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <soap12:operation soapAction="http://tempuri.org/GetAllLoadBalancePaths By Type" style="document" />
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAllLoadBalancePaths By TypeAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetAllLoadBalancePaths By TypeRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <soap12:operation soapAction="http://tempuri.org/GetAllLoadBalancePaths By Id and Type" style="document" />
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAllLoadBalancePaths By Id and TypeAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetAllLoadBalancePaths By Id and TypeRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <soap12:operation soapAction="http://tempuri.org/GetLibraryItem By Id And ParentID" style="document" />
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLibraryItem By Id And ParentIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetLibraryItem By Id And ParentIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <soap12:operation soapAction="http://tempuri.org/GetLibraryItem By Id" style="document" />
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLibraryItem By IdAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetLibraryItem By IdRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibrarySettings">
+      <soap12:operation soapAction="http://tempuri.org/GetLibrarySettings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLibrarySettingsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetLibrarySettingsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryTypes">
+      <soap12:operation soapAction="http://tempuri.org/GetLibraryTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLibraryTypesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetLibraryTypesRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChildLibItems">
+      <soap12:operation soapAction="http://tempuri.org/GetAllChildLibItems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAllChildLibItemsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetAllChildLibItemsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadBalancePath">
+      <soap12:operation soapAction="http://tempuri.org/GetLoadBalancePath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLoadBalancePathAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetLoadBalancePathRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LibraryHttpGet" type="tns:LibraryHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="DeleteLoadBalanceItem">
+      <http:operation location="/DeleteLoadBalanceItem" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <http:operation location="/GetAllLoadBalancePaths By Type" />
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <http:operation location="/GetAllLoadBalancePaths By Id and Type" />
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <http:operation location="/GetLibraryItem By Id And ParentID" />
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <http:operation location="/GetLibraryItem By Id" />
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibrarySettings">
+      <http:operation location="/GetLibrarySettings" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryTypes">
+      <http:operation location="/GetLibraryTypes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadBalancePath">
+      <http:operation location="/GetLoadBalancePath" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LibraryHttpPost" type="tns:LibraryHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="DeleteLoadBalanceItem">
+      <http:operation location="/DeleteLoadBalanceItem" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <http:operation location="/GetAllLoadBalancePaths By Type" />
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Type">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLoadBalancePaths">
+      <http:operation location="/GetAllLoadBalancePaths By Id and Type" />
+      <wsdl:input name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetAllLoadBalancePaths_x0020_By_x0020_Id_x0020_and_x0020_Type">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <http:operation location="/GetLibraryItem By Id And ParentID" />
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id_x0020_And_x0020_ParentID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryItem">
+      <http:operation location="/GetLibraryItem By Id" />
+      <wsdl:input name="GetLibraryItem_x0020_By_x0020_Id">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetLibraryItem_x0020_By_x0020_Id">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibrarySettings">
+      <http:operation location="/GetLibrarySettings" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLibraryTypes">
+      <http:operation location="/GetLibraryTypes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoadBalancePath">
+      <http:operation location="/GetLoadBalancePath" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Library">
+    <wsdl:port name="LibrarySoap" binding="tns:LibrarySoap">
+      <soap:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Library.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LibrarySoap12" binding="tns:LibrarySoap12">
+      <soap12:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Library.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LibraryHttpGet" binding="tns:LibraryHttpGet">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Library.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LibraryHttpPost" binding="tns:LibraryHttpPost">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Library.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CreateLangArrayFromCSlist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateLangArrayFromCSlistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateLangArrayFromCSlistResult" type="tns:ArrayOfLanguageData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLanguageData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="LanguageData" nillable="true" type="tns:LanguageData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="LanguageData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Activated" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImagePath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CharSet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrowserCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direction" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FlagFile" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XmlLang" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SiteEnabled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LegacyData" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
+      <s:complexType name="AuthenticationHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Domain" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="RequestInfoParameters" type="tns:RequestInfoParameters" />
+      <s:complexType name="RequestInfoParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ContentLanguage" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetAllCalendars">
+        <s:complexType />
+      </s:element>
+      <s:complexType name="CalendarData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AvailableLanguages" type="tns:ArrayOfLanguageData" />
+          <s:element minOccurs="1" maxOccurs="1" name="CalendarID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="CalendarTitle" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CalendarDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RootFolderID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="RootFolderPath" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ShowWeekend" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TableHeight" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TableWidth" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocationLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StartLabel" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EndLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ForwardOnly" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventTypeLabel" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventTypeAvailable" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventTypeRequired" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContentLanguage" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="LongDescriptionAvailable" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventTypeInstructions" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShowAllEventTypes" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCalendarData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CalendarData" nillable="true" type="tns:CalendarData" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllCalendarsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllCalendarsResult" type="tns:ArrayOfCalendarData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CalendarID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCalendarResult" type="tns:CalendarData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCalendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="inCalendar" type="tns:CalendarData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveCalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SaveCalendarResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCalendar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteCalendarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteCalendarResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfLanguageData" nillable="true" type="tns:ArrayOfLanguageData" />
+      <s:element name="ArrayOfCalendarData" nillable="true" type="tns:ArrayOfCalendarData" />
+      <s:element name="CalendarData" nillable="true" type="tns:CalendarData" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CreateLangArrayFromCSlistSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateLangArrayFromCSlist" />
+  </wsdl:message>
+  <wsdl:message name="CreateLangArrayFromCSlistSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateLangArrayFromCSlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateLangArrayFromCSlistAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreateLangArrayFromCSlistRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCalendarsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllCalendars" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCalendarsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllCalendarsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCalendarsAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCalendarsRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCalendar" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveCalendar" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalendarAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="SaveCalendarRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteCalendar" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteCalendarResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="CreateLangArrayFromCSlistHttpGetIn">
+    <wsdl:part name="inList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateLangArrayFromCSlistHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLanguageData" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCalendarsHttpGetIn" />
+  <wsdl:message name="GetAllCalendarsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCalendarData" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarHttpGetIn">
+    <wsdl:part name="CalendarID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarHttpGetOut">
+    <wsdl:part name="Body" element="tns:CalendarData" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="CreateLangArrayFromCSlistHttpPostIn">
+    <wsdl:part name="inList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateLangArrayFromCSlistHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfLanguageData" />
+  </wsdl:message>
+  <wsdl:message name="GetAllCalendarsHttpPostIn" />
+  <wsdl:message name="GetAllCalendarsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCalendarData" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarHttpPostIn">
+    <wsdl:part name="CalendarID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCalendarHttpPostOut">
+    <wsdl:part name="Body" element="tns:CalendarData" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteCalendarHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="CalendarSoap">
+    <wsdl:operation name="CreateLangArrayFromCSlist">
+      <wsdl:input message="tns:CreateLangArrayFromCSlistSoapIn" />
+      <wsdl:output message="tns:CreateLangArrayFromCSlistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCalendars">
+      <wsdl:input message="tns:GetAllCalendarsSoapIn" />
+      <wsdl:output message="tns:GetAllCalendarsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <wsdl:input message="tns:GetCalendarSoapIn" />
+      <wsdl:output message="tns:GetCalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalendar">
+      <wsdl:input message="tns:SaveCalendarSoapIn" />
+      <wsdl:output message="tns:SaveCalendarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <wsdl:input message="tns:DeleteCalendarSoapIn" />
+      <wsdl:output message="tns:DeleteCalendarSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CalendarHttpGet">
+    <wsdl:operation name="CreateLangArrayFromCSlist">
+      <wsdl:input message="tns:CreateLangArrayFromCSlistHttpGetIn" />
+      <wsdl:output message="tns:CreateLangArrayFromCSlistHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCalendars">
+      <wsdl:input message="tns:GetAllCalendarsHttpGetIn" />
+      <wsdl:output message="tns:GetAllCalendarsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <wsdl:input message="tns:GetCalendarHttpGetIn" />
+      <wsdl:output message="tns:GetCalendarHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <wsdl:input message="tns:DeleteCalendarHttpGetIn" />
+      <wsdl:output message="tns:DeleteCalendarHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="CalendarHttpPost">
+    <wsdl:operation name="CreateLangArrayFromCSlist">
+      <wsdl:input message="tns:CreateLangArrayFromCSlistHttpPostIn" />
+      <wsdl:output message="tns:CreateLangArrayFromCSlistHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCalendars">
+      <wsdl:input message="tns:GetAllCalendarsHttpPostIn" />
+      <wsdl:output message="tns:GetAllCalendarsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <wsdl:input message="tns:GetCalendarHttpPostIn" />
+      <wsdl:output message="tns:GetCalendarHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <wsdl:input message="tns:DeleteCalendarHttpPostIn" />
+      <wsdl:output message="tns:DeleteCalendarHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalendarSoap" type="tns:CalendarSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateLangArrayFromCSlist">
+      <soap:operation soapAction="http://tempuri.org/CreateLangArrayFromCSlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateLangArrayFromCSlistAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:CreateLangArrayFromCSlistRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCalendars">
+      <soap:operation soapAction="http://tempuri.org/GetAllCalendars" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAllCalendarsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetAllCalendarsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <soap:operation soapAction="http://tempuri.org/GetCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCalendarAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetCalendarRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalendar">
+      <soap:operation soapAction="http://tempuri.org/SaveCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SaveCalendarAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:SaveCalendarRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <soap:operation soapAction="http://tempuri.org/DeleteCalendar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteCalendarAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:DeleteCalendarRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalendarSoap12" type="tns:CalendarSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateLangArrayFromCSlist">
+      <soap12:operation soapAction="http://tempuri.org/CreateLangArrayFromCSlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreateLangArrayFromCSlistAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:CreateLangArrayFromCSlistRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCalendars">
+      <soap12:operation soapAction="http://tempuri.org/GetAllCalendars" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAllCalendarsAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetAllCalendarsRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <soap12:operation soapAction="http://tempuri.org/GetCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCalendarAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetCalendarRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveCalendar">
+      <soap12:operation soapAction="http://tempuri.org/SaveCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SaveCalendarAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:SaveCalendarRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <soap12:operation soapAction="http://tempuri.org/DeleteCalendar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteCalendarAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:DeleteCalendarRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalendarHttpGet" type="tns:CalendarHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="CreateLangArrayFromCSlist">
+      <http:operation location="/CreateLangArrayFromCSlist" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCalendars">
+      <http:operation location="/GetAllCalendars" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <http:operation location="/GetCalendar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <http:operation location="/DeleteCalendar" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="CalendarHttpPost" type="tns:CalendarHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="CreateLangArrayFromCSlist">
+      <http:operation location="/CreateLangArrayFromCSlist" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCalendars">
+      <http:operation location="/GetAllCalendars" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCalendar">
+      <http:operation location="/GetCalendar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteCalendar">
+      <http:operation location="/DeleteCalendar" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Calendar">
+    <wsdl:port name="CalendarSoap" binding="tns:CalendarSoap">
+      <soap:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Calendar/Calendar.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CalendarSoap12" binding="tns:CalendarSoap12">
+      <soap12:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Calendar/Calendar.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CalendarHttpGet" binding="tns:CalendarHttpGet">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Calendar/Calendar.asmx" />
+    </wsdl:port>
+    <wsdl:port name="CalendarHttpPost" binding="tns:CalendarHttpPost">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Calendar/Calendar.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

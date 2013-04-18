@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="Tab1HeaderText">בחירת תבנית</string>
+	<string id="Tab2HeaderText">העלאת תבנית</string>
+	<string id="TemplateURL">:כתובת אינטרנט</string>
+	<string id="AlertFile">!אנא, ספק קובץ תבנית להעלאה</string>
+	<string id="AlertExists">!תבנית הקובץ שנבחר כבר קיימת בספרייה זו</string>
+	<string id="MessageValid">אנא, ספק את תבנית הקובץ הרצויה</string>
+	<string id="MessageSize">גודל הקובץ שסופק חורג מהגודל המותר</string>
+	<string id="MessageNothingPost">אנא, ספק קובץ תבנית</string>
+</localization>

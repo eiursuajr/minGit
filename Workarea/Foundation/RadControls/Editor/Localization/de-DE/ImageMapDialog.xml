@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization> 
+	<string id="AreaFieldSet">Eigenschaften des gewählten Bereichs</string>  
+	<string id="ImageFieldSet">Bildeigenschaften</string>
+	<string id="Update">Bereich aktualisieren</string>  
+	<string id="Remove">Bereich entfernen</string>  
+	<string id="RemoveAll">Alle entfernen</string>  
+	<string id="NewArea">Klickbaren Bereich erstellen</string>  
+	<string id="Left">Links</string>  
+	<string id="Top">Oben</string>  
+	<string id="Width">Breite</string>  
+	<string id="Height">Höhe</string>  
+	<string id="Url">URL</string>  
+	<string id="Target">Ziel</string>  
+	<string id="Comment">Bemerkung</string>  
+	<string id="ImageSrc">Bildquelle</string>
+	<string id="AlertInvalidProperties">Ungültige Eigenschaften!</string>  
+	<string id="AlertInvalidAreaProperties">Ungültige Bereichseigenschaften. Bitte geben Sie eine Url ein.</string>  
+	<string id="AlertDeleteArea">Sind Sie sicher, dass Sie diesen Bereich löschen wollen.</string>  
+	<string id="AlertDeleteAllAreas">Sind Sie sicher, dass Sie alle Bereiche löschen wollen.</string>  
+	<string id="AlertWrongAreaDimensions">Ungültige Bereich-Dimensionen entdeckt. Bereich wird übersprungen.</string>  
+	<string id="ShapeAlt">Ziehen Sie die rechte untere Ecke, um die Größe des Bereichs zu ändern.</string>  
+	<string id="HowToAdd">Sie können über dem Bild ziehen&amp;loslassen um einen neuen Bereich zu erstellen.</string>  
+	<string id="RectangleShapeName">Rechteck</string>  
+	<string id="CircleShapeName">Kreis</string>  
+	<string id="PolygonShapeName">Polygon</string>   
+	<string id="SelectImage">Bitte wählen Sie ein Bild aus um klickbare Bereich zu definieren.</string>
+	<string id="_blank">Neues Fenster</string>
+	<string id="_self">Gleiches Frame</string>
+	<string id="_parent">Übergeordnetes Frame</string>
+	<string id="_top">Browserfenster</string>
+	<string id="_search">Such-Panel</string>
+	<string id="_media">Media-Panel</string>
+</localization>

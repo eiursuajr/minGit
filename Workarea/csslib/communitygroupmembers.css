@@ -1,0 +1,64 @@
+.ekfavaddfolderpanel {font-size:.85em}
+.ekfavaddfolderpanel textarea{width:95%}
+.ekfraddfolderpanel {position:absolute; border: 1px solid black; background-color:white; z-index:99; width:280px;}
+.ekfrmovepanel {position:absolute; border: 1px solid black; background-color:white; z-index:99;	width:280px;}
+.ekfavmovepanel {position:absolute; border: 1px solid black; background-color:white; z-index:99; width:280px;}
+.ekGroupMembersOuterTable {background-color:#3B5998; width:315px; padding: 0px; margin: 0em; border-collapse: collapse; border: solid 1px #3B5998; }
+.ekGroupMembersInnerTable {background-color:white;width:100%;}
+.ekGroupMembersInnerTable a {font-size: .92em; color: #486AC5}
+.ekGroupMembersHeaderSpan { color: white; padding-left: .5em;}
+.ekGroupMembersListCheck {text-align:center;vertical-align:middle;width:1%;}
+.ekGroupMembersListImage {text-align:left; vertical-align:middle; width:48px; vertical-align:top;}
+.ekGroupMembersListImage img{border: solid 1px #ccc;}
+.ekGroupMembersListName {vertical-align:top; text-align:left; width:80%;}
+.ekGroupMembersListName a, .ekGroupMembersFooter a {font-weight: bold; color: #486AC5;}
+.ekGroupMembersFooter {text-align:right;}
+
+.ekFriendsOuterTable {background-color:#3B5998; width:315px;}
+.ekFriendsInnerTable {background-color:white; width:100%;}
+.ekFriendsHeaderSpan { color: white; padding-left:.5em; font-weight: bold;}
+.ekFriendsListCheck {text-align:center;	vertical-align:middle; width:1%;}
+.ekFriendsListImage {text-align:left; vertical-align:middle; width:48px; vertical-align:top;}
+.ekFriendsListName {vertical-align:top;	text-align:left; width:80%;}
+.ekFriendsListName a, .ekFriendsFooter a {font-size: .92em; font-weight: bold;	color: #486AC5;}
+.ekFriendsFooter {text-align:right;}
+
+.ekFavoritesOuterTable {background-color:#3B5998; width:315px;}
+.ekFavoritesInnerTable {background-color:white;	width:100%;}
+.ekFavoritesHeaderSpan { color: white; padding-left: .5em;}
+.ekFavoritesListCheck {text-align:center; vertical-align:middle; width:1%;}
+.ekFavoritesListImage {text-align:left; vertical-align:middle; width:16px; vertical-align:top;}
+.ekFavoritesListName {vertical-align:top; text-align:left; width:90%;}
+.ekFavoritesListName a, .ekFavoritesFooter a {font-size: .92em; font-weight: bold;	color: #486AC5;}
+.ekFavoritesFooter {text-align:right;}
+
+.ekGroupBrowserTopOuterTable{background-color:white;width:100%;}
+.ekGroupBrowserOuterTable {background-color:#3B5998; width:400px;}
+.ekGroupBrowserInnerTable {background-color:white; width:100%;}
+.ekGroupBrowserHeaderSpan { color: white; padding-left: .5em;}
+.ekGroupBrowserListCheck {text-align:center; vertical-align:middle; width:1%;}
+.ekGroupBrowserListImage {text-align:left; vertical-align:middle; width:48px; vertical-align:top;}
+.ekGroupBrowserListGroupMain {vertical-align:top; text-align:left; width:50%;}
+.ekGroupBrowserListGroupInfo {vertical-align:top; text-align:left;	width:50%;}
+.ekGroupBrowserListGroupMain a, .ekGroupBrowserListGroupInfo a, .ekGroupBrowserFooter a {font-size: .92em;	font-weight: bold; color: #486AC5;}
+.ekGroupBrowserFooter {text-align:right;}
+.ekGroupBrowserCategorySeachBtn {font-size:.9em;}
+.ekGroupBrowserCategoryList {text-align:left; width:100%;}
+.ekGroupBrowserCategoryHeader {font-weight:bold;}
+.ekGroupBrowserTagsLabel {font-weight:bold;}
+
+.ekGroupListOuterTable {background-color:#3B5998; width:315px;}
+.ekGroupListInnerTable {background-color:white; width: 100%;}
+.ekGroupListHeaderSpan { color: white; padding-left: .5em;}
+.ekGroupListListCheck {text-align:center; vertical-align:middle; width:1%;}
+.ekGroupListListImage {text-align:left; vertical-align:middle; width:48px; vertical-align:top;}
+.ekGroupListListGroupMain {vertical-align:top; text-align:left;}
+.ekGroupListListGroupInfo {vertical-align:top;	text-align:left;}
+.ekGroupListListGroupMain a, .ekGroupListListGroupInfo a, .ekGroupListFooter a {font-size: .92em; font-weight: bold;color: #486AC5;}
+.ekGroupListFooter {text-align:right;}
+.ekGroupListTagsLabel {font-weight:bold;}
+
+
+div.ekFavoritesControls span.ekFavSelected a {background-color:#3B5998;color:White; }
+
+

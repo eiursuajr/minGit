@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">管理影像</string>
+	<string id="ConfirmLink">要連結縮圖至原始影像嗎?</string>
+	<string id="ConfirmDelete">您確定要刪除此檔案?\n您所選擇的影像可能正在使用中。假如刪除，則部分網頁將無法正常顯示。\n按 \"確定\" 刪除此檔案。</string>
+	<string id="AlertImage">請提供上傳之影像檔案!</string>
+	<string id="AlertExists">影像檔案已存在!</string>
+	<string id="AlertDimensions">請提供縮圖的高度或寬度</string>
+	<string id="AlertWidth">請提供適合的影像寬度。</string>
+	<string id="AlertHeight">請提供適合的影像高度。</string>
+	<string id="MessageNothingPost">請提供一影像檔案!</string>
+	<string id="MessageValid">請提供適合的影像檔案!</string>
+	<string id="MessageSize">提供之影像檔案容量超過最大限制!</string>
+	<string id="MessagePermission">您沒有權限進入此網頁或您的 cookie 已遺失!<br />請重新整理此網頁!</string>
+	<string id="Tab1HeaderText">瀏覽檔案</string>
+	<string id="Tab2HeaderText">上傳影像</string>
+	<string id="ImageFile">影像檔案:</string>
+	<string id="ImageURL">影像網址:</string>
+	<string id="Preview">預覽</string>
+	<string id="Loading">下載中...</string>
+	<string id="CreateThumbnail">新增縮圖:</string>
+	<string id="Yes">是</string>
+	<string id="No">否</string>
+	<string id="Width">寬度:</string>
+	<string id="Height">高度:</string>
+	<string id="Constrain">等比例</string>
+	<string id="KeepOriginalImage">保留原始影像:</string>
+	<string id="LoadingImagePrompt">下載影像中。請稍後...</string>
+	<string id="BestFit">最適尺寸</string>
+	<string id="ActualSize">實際大小</string>
+	<string id="ZoomIn">放大</string>
+	<string id="ZoomOut">縮小</string>
+	<string id="ChooseFileToInsert">請選擇欲插入的檔案</string>
+	<string id="CreateThumbnailIconTitle">新增縮圖</string>
+	<string id="LinkToOriginal">連結至原始檔</string>
+	<string id="OpenOriginalInBlank">在新視窗開啟原始檔</string>
+</localization>

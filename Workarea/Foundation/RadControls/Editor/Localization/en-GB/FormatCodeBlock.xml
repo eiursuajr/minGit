@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+
+	<string id="PasteSourceCode">Paste source code below:</string>
+	<string id="CodeLanguage">Code language</string>
+	<string id="SnippetMaxHeight">Snippet MaxHeight</string>
+	<string id="ShowLineNumbers">Show line numbers</string>
+	<string id="SnippetMaxWidth">Snippet MaxWidth</string>
+	<string id="Preview">Preview</string>
+	<string id="PreviewCode">Preview Code</string>
+	<string id="Working">Working ...</string>
+</localization>

@@ -1,0 +1,63 @@
+<!-- 
+Copyright (C) Ektron Inc. All rights reserved.
+Ektron Markup Variables:
+
+  [$AddCommentBox]       - Displays the Add Comment box and the button.
+  [$ApproveMessageLink]  - Displays the Approve link for the message. This link is 
+							used to approve the message for display when the Moderate 
+							property is set to true. Only Admins, the person who left 
+							the message or the person who owns the board can see this 
+							link.
+  [$Avatar]              - Displays the current profile picture or avatar of the member.
+  [$DateCreated]         - Displays the date the message was created.
+  [$DateModified]        - Displays the date the message was last modified.
+  [$DeleteMessageLink]   - Displays the Delete link for the message. Only Admins, the 
+							person who left the message or the person who owns the board
+							can see this link.
+  [$DisplayName]         - Displays the display name of the member who left the message.
+  [$EmailAddress]        - Displays the email address of the member who left the message.
+  [$FirstName]           - Displays the First name of the member who left the message.
+  [$LastName]            - Displays the Last name of the member who left the message.
+  [$MessageText]         - Displays the Message.
+  [$NumberComments]      - Displays the number of comments posted in the message board.
+  [$UserName]            - Displays the user name of the member who left the message.
+  
+ 
+   -For additional information on the EKML, its variables and tags, see the CMS400.NET Developer Manual
+    section "Ektron Markup Language" 
+   
+-->
+
+<!-- The <ekmarkup></ekmarkup> tags open and close the Ektron Markup Language.-->
+<ekmarkup>
+	<!-- The <ekoutput></ekoutput> tags define what information is output from the server control. -->
+	<ekoutput>
+		<div class="ContributionForm">
+			<h4>[$NumberComments] Comments</h4>
+			<ul>
+				<!-- The <ekrepeat></ekrepeat> tags apply any variables and styling information contained 
+	   within them to each item in the list. -->
+				<ekrepeat>
+					<li class="ekMessagePost">
+						<div class="avatar"><!-- Displays the image associtated with the member who added the message.-->[$Avatar]</div>
+						<div class="message">
+							<div class="metaData">
+								<!-- Shows the display name of the member who left the comment. -->
+								<span class="username">[$DisplayName]</span>
+								<!-- Shows the date the comment was last modified. -->
+								<span class="time">[$DateCreated]</span>
+							</div>
+							<p class="body"><!-- Displays each message, and a More link if needed. -->[$MessageText]</p>
+							<ul class="commands"><!-- Displays a Delete link and an Approve message link if necessary. -->
+								<li class="ekDeleteMessage">[$DeleteMessageLink]</li>
+								<li class="ekApproveMessage">[$ApproveMessageLink]</li>
+							</ul>
+						</div>
+					</li>
+				</ekrepeat>
+			</ul>
+			<!-- Displays the Add Comment box and button.-->
+			[$AddCommentBox]
+		</div>
+	</ekoutput>
+</ekmarkup>

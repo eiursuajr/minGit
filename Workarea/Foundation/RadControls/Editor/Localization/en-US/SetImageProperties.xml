@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Image Properties</string>
+	<string id="Bytes">bytes</string>
+	<string id="Customh">Custom - </string>
+	<string id="PromptColor">Please, provide the custom color HEX value:</string>
+	<string id="Tab1HeaderText">Image Properties</string>
+	<string id="Tab2HeaderText">Image Information</string>
+	<string id="Tab3HeaderText">Create Thumbnail</string>
+	<string id="BorderWidth">Border Width:</string>
+	<string id="NoBorder">No Border</string>
+	<string id="BorderColor">Border Color:</string>
+	<string id="NoColor">No Color</string>
+	<string id="Black">Black</string>
+	<string id="Blue">Blue</string>
+	<string id="Green">Green</string>
+	<string id="Orange">Orange</string>
+	<string id="Red">Red</string>
+	<string id="White">White</string>
+	<string id="Yellow">Yellow</string>
+	<string id="Custom">Custom</string>
+	<string id="ImageAlign">Image Alignment:</string>
+	<string id="AbsoluteBottom">Absolute Bottom</string>
+	<string id="AbsoluteMiddle">Absolute Middle</string>
+	<string id="Baseline">Baseline</string>
+	<string id="Bottom">Bottom</string>
+	<string id="Left">Left</string>
+	<string id="Middle">Middle</string>
+	<string id="Right">Right</string>
+	<string id="TextTop">Text Top</string>
+	<string id="Top">Top</string>
+	<string id="ImageWidth">Image Width:</string>
+	<string id="ImageHeight">Image Height:</string>
+	<string id="ImageSize">Image Size:</string>
+	<string id="FileName">File Name:</string>
+	<string id="Constrain">Constrain</string>
+	<string id="Width">Width:</string>
+	<string id="Height">Height:</string>
+	<string id="VerticalSpacing">Vertical Spacing:</string>
+	<string id="HorizontalSpacing">Horizontal Spacing:</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Cancel</string>
+	<string id="AddCustomColor">Add Custom Color...</string>
+	<string id="ImageLongDesc">Long Description</string>
+	<string id="AddHexColor">Add Hex Color...</string>
+	<string id="ChangeImageSrc">Image Src:</string>
+</localization>

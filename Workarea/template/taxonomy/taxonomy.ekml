@@ -1,0 +1,233 @@
+﻿<!--   
+Copyright (C) Ektron Inc. All rights reserved.
+Ektron Template Markup
+  
+  [$AddArticle]                     -Adds a link that allows a logged in user to add HTML content to CMS400.NET.
+  [$AddAsset]                       -Adds a link that allows a logged in user to add assets to CMS400.NET.
+  [$categorybacklink]                   -When place between <ekactivebacklink> tags, this variable adds a clickable image that 
+                                         allows a user to navigate up one category level. When placed between <ekdisablebacklink> 
+									     tags and in the text area of an <a> tag , this variable adds a clickable image that 
+							             allows a user to navigate to another URL once they reach the top level category.
+  [$CategoryId]                     -Displays the ID of a taxonomy's category.
+  [$ContentByteSize]				-Displays the content item’s size in KB. Only works with taxonomy search.
+  [$ContentId]                      -Display the content item’s ID.
+  [$DateCreated]                    -Display the date the content was created.
+  [$DateModified]                   -Display the date the content was last modified.
+  [$EditorFirstName]                -Display the last editor’s first name for a content item.
+  [$EditorLastName]                 -Display the last editor’s last name for a content item.
+  [$FolderId]                       -Display the folder ID of a content item.
+  [$Html]                           -Display the HTML contained in the content item.
+  [$HyperLink]                      -Adds a hyperlink using the title of the content block as the text.
+  [$ImageIcon]                      -Displays an image icon for the content item.
+  [$Index]                          -Serialize the content items in a numbered list.
+  [$ItemCount]                      -Total number of items (works only in paging mode otherwise -1).
+  [$Language]                       -Display the language ID for the content item.
+  [$LinkTarget]                     -When added to an <a href=””> tag’s target=”” attribute, this variable
+									     reads the server control’s LinkTarget property and uses its setting.
+  [$PagingCurrentEndIndex]			-End count for the items displayed in a page's search results. Works only with taxonomy search.
+  [$PagingCurrentStartIndex]		-Start count for the items displayed in a page's search results. Works only with taxonomy search.
+  [$QuickLink]                      -This property displays the Quicklink information for the content item.
+							             When wrapped in an <a href=””> tag, you can create a Hyperlink.
+  [$SearchDuration]					-The amount of time, in seconds, taken for executing search. Works only with taxonomy search.
+  [$SearchSummary]					-Displays a teaser that is created from information stored in the indexing service for each item in the search results. Works only with taxonomy search.
+  [$SearchText]						-Displays the text for which a user is searching. Works only with taxonomy search.
+  [$SERVER_NAME]                    -Displays the server name. For example, If this variable is applied to http://www.example.com/demo.aspx, 
+                                         the return is www.example.com.
+  [$ShowBubble]					    -Calls the <ekbubbleinfo></ekbubbleinfo> tags and places the 
+									     information contained within those tags in a pop-up bubble.
+  [$ShowBubble(width)]			    -Works the same as [$ShowBubble]. It calls the <ekbubbleinfo></ekbubbleinfo>
+									     tags and allows you to set the width of the bubble.
+  [$ShowBubble(width,height)]       -Works the same as [$ShowBubble]. It calls the <ekbubbleinfo></ekbubbleinfo>
+									     tags and allows you to set the width and height of the bubble.
+  [$ShowContent('htmltagid')]       -Display content in given div/span tag. Replace the 'htmltagid' with the name 
+									     of the tag.
+  [$Status]                         -Display the status of a content item.
+  [$Teaser]                         -Display the content item’s summary information.
+  [$TemplateQuickLink]              -Uses the taxonomy template as Quicklink.
+  [$Title]                          -Display the content item’s title.
+  [$UrlEncode(‘str’)]               -Encodes the string information. This variable can be used to encode another EkML variable
+                                         and place it in an email.
+  [$UrlParam('paramname')]          -Reads the given parameter value
+  
+  -For additional information on the EkML, its variables and tags, see the CMS400.NET Developer Manual
+    section "Ektron Markup Language"
+     
+-->
+<!-- The <ekmarkup></ekmarkup> tags open and close the Ektron Markup Language.-->
+<ekmarkup>
+  <!-- The <ekbubbleinfo></ekbubbleinfo> tags are invoked when you use the [$ShowBubble], [$ShowBubble(width)]
+       [$ShowBubble(width,height)] variables. By adding variables between the <ekbubbleinfo></ekbubbleinfo> 
+       tags, you define what information appears in the bubble. In this case, the HTML information appears. -->
+  <ekbubbleinfo>
+    <table border="0">
+      <tr>
+        <td>[$Html]</td>
+      </tr>
+    </table>
+  </ekbubbleinfo>
+  <!-- The <ekcontnetinfo></ekcontentinfo> tags are invoked when you use the [$ShowContent('htmltagid')]
+       variable. By adding variables between the <ekcontnetinfo></ekcontentinfo> tags, you define what 
+       information appears in the specified html tag ID. In this case, the HTML information appears. -->
+  <ekcontentinfo>
+    <table border="0">
+      <tr>
+        <td>[$Html]</td>
+      </tr>
+    </table>
+  </ekcontentinfo>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	   defines the output of the breadcrumb information. -->
+  <ekoutput mode="breadcrumb">
+    <!-- Defines the title for the breadcrumb. -->
+    <bctitle>
+      <span class="bc_title">Breadcrumb:&#160;</span>
+    </bctitle>
+    <bcrootlink>
+      <span class="bc_current">Top</span>
+    </bcrootlink>
+    <bcseparator>
+      <span class="bc_sep"> > </span>
+    </bcseparator>
+    <bchyperlink>
+      <span class="bc_link">{0}</span>
+    </bchyperlink>
+    <bcactivelink>
+      <span class="bc_current">{0}</span>
+    </bcactivelink>
+  </ekoutput>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	   defines the output of the category. -->
+  <ekoutput mode="category">
+    <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+      <ekrepeat>
+        <tr>
+          <!-- The <ekcolrepeat></ekcolrepeat> tags are used exlusively with the Taxonomy EkML. It takes the 
+		       category links and spreads them over the amount of columns that are defined in the Directory 
+			   server control's TaxonomyCol property -->
+          <ekcolrepeat>
+            <td nowrap="nowrap">
+              <strong>-</strong>[$CategoryLink]&#160;
+            </td>
+          </ekcolrepeat>
+        </tr>
+      </ekrepeat>
+    </table>
+  </ekoutput>
+  <ekoutput mode="categorybacklink">
+    <ekactivebacklink>
+      [$CategoryLink]
+    </ekactivebacklink>
+    <ekdisablebacklink>
+      [$CategoryLink]
+    </ekdisablebacklink>
+  </ekoutput>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	   defines the area where the content hyperlinks and summary information appears. -->
+  <ekoutput mode="article">
+    <table width="100%"  border="0">
+      <tr>
+        <td>
+          <ul>
+            <!-- The <ekrepeat></ekrepeat> tags apply any variables and styling information contained 
+				 within them to each article in the taxonomy. In this case, the hyperlink and summary  
+				 appear for each article in the taxonomy category. -->
+            <!-- If you have defined template while creating taxonomy you can override content block template using the token $TemplateQuickLink-->
+            <ekrepeat>
+              <li>
+                <a href="[$TemplateQuickLink]">[$Title]</a><br/>[$Teaser]
+              </li>
+            </ekrepeat>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </ekoutput>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	     defines the results output of the taxonomy search. -->
+  <ekoutput mode="article_search">
+    <table width="100%"  border="0">
+      <tr>
+        <td>
+          <ul>
+            <!-- The <ekrepeat></ekrepeat> tags apply any variables and styling information contained 
+				 within them to each article in the taxonomy. In this case, the hyperlink and summary  
+				 appear for each article in the taxonomy category -->
+            <ekrepeat>
+              <li>
+                [$HyperLink]<br/>[$SearchSummary]
+              </li>
+            </ekrepeat>
+          </ul>
+        </td>
+      </tr>
+    </table>
+  </ekoutput>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	   defines the overall output view of the Taxonomy. It denotes the locations of Search Box, Breadcrumb,
+	   Category and Articles.-->
+  <ekoutput mode="view">
+    <table>
+      <tr>
+        <!-- [$SearchBox] denotes the location to display the search box. -->
+        <td>[$SearchBox]</td>
+      </tr>
+      <tr>
+        <!-- [$BreadCrumb] denotes the location to display the breadcumb trail. -->
+        <td>[$BreadCrumb]</td>
+      </tr>
+      <tr>
+        <td>
+          <table>
+            <eklabel>
+              <tr>
+                <td>
+                  <hr/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!--This is the name of the Categories Area. -->
+                  <b>Category:</b>
+                  <!-- This creates a (What's This) link with the Alt text being a description of Categories. -->
+                  <small>
+                    (<a href="#" title="Categories are nodes within a Taxonomy tree.  Categories are used to link groups of “Articles” together in a semi-automatic way."> What's This?</a>)
+                  </small>
+                  <span id="__showallcategory" style="display:none;">[$ShowAllCategory]</span>[$categorybacklink]
+                </td>
+              </tr>
+            </eklabel>
+            <tr>
+              <!-- [$Categories] denotes the location to display the categories.-->
+              <td>[$Categories]</td>
+            </tr>
+            <eklabel>
+              <tr>
+                <td>
+                  <hr/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <!--This is the name of the Articles area -->
+                  <b>Articles:</b>
+                  <!-- This creates a (What's This) link with the Alt text being a description of Articles. -->
+                  <small>
+                    (<a href="#" title="An article is document or a piece of content.  In CMS terms it is a “content block”"> What's This?</a>)
+                  </small>
+                </td>
+              </tr>
+            </eklabel>
+            <tr>
+              <!-- [$Articles] denotes the location to display the Articles.-->
+              <td>[$Articles]</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </ekoutput>
+
+</ekmarkup>
+
+
+

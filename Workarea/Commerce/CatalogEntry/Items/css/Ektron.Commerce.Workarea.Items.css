@@ -1,0 +1,153 @@
+div.EktronCommerceItems {padding:1em;width:60em;}
+
+/* default styles */
+div.EktronCommerceItems .hide {display:none;}
+div.EktronCommerceItems .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+div.EktronCommerceItems .clearfix {display:block;}
+
+/* buttons */
+div.EktronCommerceItems a {color:blue;text-decoration:none;}
+div.EktronCommerceItems a:hover {color:blue;text-decoration:underline;}
+div.EktronCommerceItems a:visited {color:blue;}
+div.EktronCommerceItems a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.EktronCommerceItems a.buttonLeft {float:left;}
+div.EktronCommerceItems a.buttonRight {float:right;}
+div.EktronCommerceItems a.buttonInline {display:inline;}
+div.EktronCommerceItems a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.EktronCommerceItems a.renameBasket img {margin:0 3px -1px 3px !important;padding-left:3px;}
+div.EktronCommerceItems a.button:hover {border:1px solid #fbc2c4;color:#d12f19;}
+div.EktronCommerceItems a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.EktronCommerceItems a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.EktronCommerceItems a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+div.EktronCommerceItems span.required {color:Red;font-weight:bold;display:none;margin-left:.5em;float:left;}
+div.EktronCommerceItems p.requiredFieldNote {display:none;font-size:.9em;color:Red;font-weight:bold;margin-left:.5em;padding:0em;margin:.5em .5em 0em .5em;}
+
+/* Default & Kit View */
+div.EktronCommerceItems h3 {color:#000080;margin:0;font-size:1em;background-color:#4c4f53;line-height:20px;border:1px solid #000080;border-bottom:none;padding:.25em .5em;background-image:url('images/th.gif');background-position:0px 0px;background-repeat:repeat-x;}
+div.EktronCommerceItems div.items h3 {position:relative;margin-left:-1px;}
+div.EktronCommerceItems div.detail h3 {position:relative;margin-left:-1px;}
+
+/* Default View */
+div.EktronCommerceItems div.itemWrapper {border:1px solid #000080;padding:1em;}
+div.EktronCommerceItems div.itemWrapper ul.defaultViewItems {list-style:none;margin:0em;padding:0;}
+div.EktronCommerceItems div.itemWrapper li.defaultViewItem,
+div.EktronCommerceItems div.itemWrapper li.emptyItem {background-color:white;position:relative;margin:-1px 0px 0px 0px;border:1px solid #000080;padding:.25em 1em;line-height:20px;}
+div.EktronCommerceItems div.itemWrapper li.stripe,
+div.EktronCommerceItems div.itemWrapper li.emptyItem {background-color:#f6f6f6;}
+div.EktronCommerceItems div.itemWrapper li.editMode {cursor:move !important;}
+div.EktronCommerceItems div.itemWrapper li.defaultViewItem span.delete {float:right;display:block;}
+div.EktronCommerceItems div.itemWrapper li.defaultViewItem span.delete a {text-decoration:none;display:block;height:16px;width:16px;background-image:url('images/toggleDelete.gif');background-position:0px 0px;background-repeat:no-repeat;}
+div.EktronCommerceItems div.itemWrapper li.defaultViewItem span.delete a:hover {text-decoration:none !important;}
+div.EktronCommerceItems div.itemWrapper li.defaultViewItem span.delete a.undo {background-image:url('images/toggleDeleteUndo.gif');}
+div.EktronCommerceItems div.itemWrapper li.defaultViewItem span.title a {cursor:pointer;cursor:hand;}
+div.EktronCommerceItems div.itemWrapper p.addDefaultNodeButtons {background-image:none;border:none;border-top:1px dotted silver;margin:1em 0em 0em 0em;padding:1em 1em 0em 0em;}
+
+/* Kit View */
+div.EktronCommerceItems div.kitView table {border-collapse:collapse;border:1px solid #000080;margin:0;padding:0;width:100%;}
+div.EktronCommerceItems div.kitView table thead th {font-size:14px;vertical-align:top;border:1px solid #000080;color:#000080;line-height:20px;background-image:url('images/th.gif');background-position:0px 0px;background-repeat:repeat-x;}
+div.EktronCommerceItems div.kitView table tbody td {vertical-align:top;border:1px solid #000080;}
+
+div.EktronCommerceItems div.kitView tbody td.list {width:35%;padding:0em 0em 1em 0em;}
+div.EktronCommerceItems div.kitView tbody td.list ul.kitGroups {margin:.5em;}
+
+div.EktronCommerceItems div.kitView li.kitGroup {list-style:none;line-height:20px;padding-left:30px;background-image:url('images/24-tab.gif');background-position:0px 0px;background-repeat:no-repeat;}
+div.EktronCommerceItems div.kitView li.kitGroupEditable {cursor:move;}
+div.EktronCommerceItems div.kitView li.kitGroup span {cursor:pointer;}
+
+div.EktronCommerceItems div.kitView tbody td.list ul.kitGroups li.addKitGroup {cursor:pointer;cursor:hand;line-height:20px;padding-left:30px;background-image:url('images/24-tab-add.gif');background-position:0px 0px;background-repeat:no-repeat;}
+div.EktronCommerceItems div.kitView tbody td.list ul.kitGroups li.addKitGroup span:hover {color:Maroon !important;text-decoration:underline !important;}
+
+div.EktronCommerceItems div.kitView li.kitItem {list-style:none;cursor:pointer;cursor:hand;line-height:20px;padding-left:30px;background-image:url('images/24-tag-hot.gif');background-position:0px 0px;background-repeat:no-repeat;}
+div.EktronCommerceItems div.kitView li.kitItemEditable {cursor:move;}
+div.EktronCommerceItems div.kitView li.kitItem span {cursor:pointer;}
+div.EktronCommerceItems div.kitView li.addKitItem {list-style:none;background-image:url('images/24-tag-add.gif');cursor:pointer;cursor:hand;line-height:20px;padding-left:30px;background-position:0px 0px;background-repeat:no-repeat;}
+
+div.EktronCommerceItems div.kitView tbody td.list ul.kitGroups ul.kitViewContextMenu {display:none;}
+div.EktronCommerceItems div.kitView tbody td.list ul.kitGroups li.selectedItem {font-weight:bold;color:Maroon;}
+div.EktronCommerceItems div.kitView tbody td.list ul.kitGroups li.selectedItem li {font-weight:normal;color:black;}
+div.EktronCommerceItems div.kitView tbody td.list p.emptyKitRow {padding:1em 1em 0em 1em;text-align:center;}
+
+/* treeview.css override */
+.EktronTreeview div.lastExpandable-hitarea { background-position: -80px -3px !important; }
+.EktronTreeview div.lastCollapsable-hitarea { background-position: -64px -25px !important; }
+
+/* modal.css override */
+div.EktronCommerceItems div.kitView tbody td.list ul.kitGroups li li span:hover,
+.EktronTreeview .hover {color:Maroon !important;text-decoration:underline !important;}
+
+div.EktronCommerceItems div.kitView ul.kitGroups li.kitGroupClone {display:none;visibility:hidden;}
+div.EktronCommerceItems div.kitView ul.kitGroups li.kitItemClone {display:none;visibility:hidden;}
+
+div.EktronCommerceItems div.kitView li.markedForDelete span {color:silver !important;text-decoration:line-through;}
+div.EktronCommerceItems div.kitView li.markedForDelete li span {color:#4c4c4c;text-decoration:none;}
+div.EktronCommerceItems div.kitView ul.kitItems li.markedForDelete span {color:silver !important;text-decoration:line-through;}
+
+div.EktronCommerceItems div.kitView tbody td.detail {width:65%;padding:0em 0em 1em 0em;}
+div.EktronCommerceItems div.kitView tbody td.detail div.groupDetails,
+div.EktronCommerceItems div.kitView tbody td.detail div.itemDetails {display:none;padding:1em;margin:0em .5em;}
+div.EktronCommerceItems div.kitView tbody td.detail p.editButtons {display:none;border-top:1px dotted #000080;padding:1em;margin:0em .5em;}
+div.EktronCommerceItems div.kitView tbody td.detail p.editButtons a {margin-left:1em;}
+
+div.EktronCommerceItems div.kitView tbody td.detail table {width:100%;font-size:1em;border-collapse:collapse;margin:0em;border-top:1px solid #000080;}
+div.EktronCommerceItems div.kitView tbody td.detail table caption {color:#000080;margin-left:-1px;padding:.25em .25em .25em .5em;font-weight:bold;text-align:left;border:1px solid #000080;font-size:1.1em;line-height:20px;background-image:url('images/th.gif');background-position:0px 0px;background-repeat:repeat-x;}
+div.EktronCommerceItems div.kitView tbody td.detail table th {width:30%;border:1px solid #000080;padding:.5em;vertical-align:top;text-align:right;}
+div.EktronCommerceItems div.kitView tbody td.detail table td {width:70%;border:1px solid #000080;padding:.5em;vertical-align:top;text-align:left;}
+div.EktronCommerceItems div.kitView tbody td.detail table tr.stripe th {background:#f9fcfe;}
+div.EktronCommerceItems div.kitView tbody td.detail table tr.stripe td {background:#f7fbff;}
+div.EktronCommerceItems div.kitView tbody td.detail table td input {width:15em;float:left;}
+div.EktronCommerceItems div.kitView tbody td.detail table td span.currencySymbol {float:left;padding-right:.5em;}
+div.EktronCommerceItems div.kitView tbody td.detail table td textarea {font-family: Verdana, Arial, Sans-Serif;font-size:1.2em;}
+div.EktronCommerceItems div.kitView tbody td.detail table td select {float:left;margin-right:1em;}
+div.EktronCommerceItems div.kitView tbody td.detail table td input.itemPriceModifierDollarsEdit {width:3em;float:left;text-align:right;}
+div.EktronCommerceItems div.kitView tbody td.detail table td span.decimalPoint {display:block;float:left;margin:0 .25em;position:relative;top:8px;}
+div.EktronCommerceItems div.kitView tbody td.detail table td input.itemPriceModifierCentsEdit {width:2em;float:left;text-align:left;}
+
+/* item selector modal */
+div.itemsTabModal {width:50em;margin:0;padding:0em 0em 1em 0em;height:35em;}
+div.itemsTabModal h3.itemsModalHeader {margin:0;color:#000080;font-size:1.2em;line-height:20px;padding:.25em;background-image:url('images/th.gif');background-position:0px 0px;background-repeat:repeat-x;}
+div.itemsTabModal h3.itemsModalHeader img {float:right;cursor:pointer;cursor:hand;}
+div.itemsTabModal p.cancelAddItemModal {border-top:1px dotted #000080;padding:1em;margin:0em .5em;}
+div.itemsTabModal p.cancelAddItemModal a {margin-left:1em;}
+
+/* default view modal content */
+div.itemsTabModal iframe {width:100%;height:30em;}
+
+/* kit view modal content */
+div.itemsTabModal h3.kitGroupModalGroupTitle {display:none;}
+div.itemsTabModal h3.kitGroupModalItemTitle {display:none;}
+
+div.itemsTabModal div.addKitNode table {width:95%;border-collapse:collapse;margin:1em;padding:0;font-size:1em;}
+
+div.itemsTabModal div.addKitNode table tbody tr.stripe th,
+div.itemsTabModal div.addKitNode table tbody tr.stripe td {background-color:#f9fcfe;}
+
+div.itemsTabModal div.addKitNode table tbody tr th {vertical-align:top;border:1px solid #000080;padding:.25em;text-align:right;color:#000080;}
+div.itemsTabModal div.addKitNode table tbody tr td {vertical-align:top;border:1px solid #000080;padding:.25em;}
+div.itemsTabModal div.addKitNode table tbody tr td span.currencySymbol {float:left;padding-right:.5em;}
+div.itemsTabModal div.addKitNode table tbody tr td input {width:15em;}
+div.itemsTabModal div.addKitNode table tbody tr td textarea {font-family: Arial, Sans-Serif;font-size:1.2em;}
+div.itemsTabModal div.addKitNode table tbody tr td select {float:left;margin-right:1em;}
+div.itemsTabModal div.addKitNode table tbody tr td input.addItemPriceAmountDollarsEdit {width:3em;float:left;text-align:right;}
+div.itemsTabModal div.addKitNode table tbody tr td span.decimalPoint {display:block;float:left;margin:0 .25em;position:relative;top:8px;}
+div.itemsTabModal div.addKitNode table tbody tr td input.addItemPriceAmountCentsEdit {width:2em;float:left;text-align:left;}
+
+/* modal buttons */
+div.itemsTabModal a {color:blue;text-decoration:none;}
+div.itemsTabModal a:hover {color:blue;text-decoration:underline;}
+div.itemsTabModal a:visited {color:blue;}
+div.itemsTabModal a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.itemsTabModal a.buttonLeft {float:left;}
+div.itemsTabModal a.buttonRight {float:right;}
+div.itemsTabModal a.buttonInline {display:inline;}
+div.itemsTabModal a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.itemsTabModal a.renameBasket img {margin:0 3px -1px 3px !important;padding-left:3px;}
+div.itemsTabModal a.button:hover {border:1px solid #fbc2c4;color:#d12f19;}
+div.itemsTabModal a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.itemsTabModal a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.itemsTabModal a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+div.itemsTabModal p.editButtons {border-top:1px dotted #000080;padding:1em;margin:0em .5em;}
+div.itemsTabModal p.editButtons a {margin-left:1em;}
+div.itemsTabModal input.addGroupName,
+div.itemsTabModal input.addItemName {width:15em;float:left;}
+div.itemsTabModal span.required {color:Red;font-weight:bold;margin-left:.5em;float:left;}
+div.itemsTabModal p.requiredFieldNote {font-size:.9em;color:Red;font-weight:bold;margin-left:.5em;padding:0em;margin:-.5em .5em 1em 1.5em;}

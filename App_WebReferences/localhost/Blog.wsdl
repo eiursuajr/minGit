@@ -1,0 +1,2377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BlogID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateResult" type="tns:BlogData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BlogData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:FolderData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Content" type="tns:ArrayOfBlogPostData" />
+              <s:element minOccurs="1" maxOccurs="1" name="Visibility" type="tns:BlogVisibility" />
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Tagline" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PostsVisible" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="EnableComments" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="ModerateComments" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RequiresAuthentication" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="NotifyURL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Categories" type="tns:ArrayOfString" />
+              <s:element minOccurs="0" maxOccurs="1" name="BlogRoll" type="tns:BlogRoll" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostDates" type="tns:ArrayOfDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostMonths" type="tns:ArrayOfDateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostYears" type="tns:ArrayOfDateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FolderData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfFolderData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="TemplateId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="ParentId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="NameWithPath" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPermissionsInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PrivateContent" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsXmlInherited" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="XmlConfiguration" type="tns:ArrayOfXmlConfigData" />
+              <s:element minOccurs="0" maxOccurs="1" name="StyleSheet" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemplateFileName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsStyleSheetInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsTemplateInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="ApprovalMethod" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="ChildFolders" type="tns:ArrayOfFolderData" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsMetaInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="HasChildren" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PublishPdfEnabled" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PublishPdfActive" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PublishHtmlActive" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Permissions" type="tns:PermissionData" />
+              <s:element minOccurs="0" maxOccurs="1" name="FolderMetadata" type="tns:ArrayOfContentMetaData" />
+              <s:element minOccurs="0" maxOccurs="1" name="FolderTemplates" type="tns:ArrayOfTemplateData" />
+              <s:element minOccurs="1" maxOccurs="1" name="TotalContent" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsDomainFolder" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="DomainStaging" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DomainProduction" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FolderType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSitemapInherited" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="SitemapPath" type="tns:ArrayOfSitemapPath" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReplicationMethod" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsCommunityFolder" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsTaxonomyInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsAliasInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="AliasRequired" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="FlagInheritedFrom" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsFlagInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CategoryRequired" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="FolderFlags" type="tns:ArrayOfFlagDefData" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsContentSearchableInheritedFrom" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsContentSearchableInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IscontentSearchable" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfFolderData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfFolderData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfFolderData" abstract="true" />
+      <s:complexType name="ArrayOfXmlConfigData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="XmlConfigData" nillable="true" type="tns:XmlConfigData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="XmlConfigData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EditXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SaveXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt5" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XmlSchema" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XmlNameSpace" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="XmlAdvConfig" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DateCreated" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayDateCreated" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="LastEditDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayLastEditDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="EditorFirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EditorLastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PhysicalPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LogicalPath" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageDisplayXslt" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DesignStyleSheet" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDefault" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldList" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFolderData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FolderData" nillable="true" type="tns:FolderData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PermissionData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfPermissionData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CanApprove" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAdd" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEdit" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDelete" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanRestore" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddToImageLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddToFileLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanOverwriteLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddToHyperlinkLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddToQuicklinkLib" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddFolders" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditFolders" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDeleteFolders" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanTraverseFolders" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanCreateTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanRedirectTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDestructTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsReadOnly" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsCollections" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsAdmin" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsLoggedIn" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsInMemberShip" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsReadOnlyLib" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="LegacyData" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanHistory" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanPublish" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanAddTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanBreakPending" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanView" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditSummary" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanSeeProperty" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanPreview" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDecline" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditSumit" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditCollections" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanDeleteTask" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanMetadataComplete" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditProperties" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditApprovals" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CanEditQLinks" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfPermissionData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfPermissionData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfPermissionData" abstract="true" />
+      <s:complexType name="ArrayOfContentMetaData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ContentMetaData" nillable="true" type="tns:ContentMetaData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContentMetaData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfContentMetaData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DataType" type="tns:ContentMetadataDataType" />
+              <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Required" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:ContentMetadataType" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsEditable" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Separator" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CaseSensitive" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RemoveDuplicate" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSearchAllowed" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsDisplayable" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="SelectableText" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="AllowMultiple" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSelectableOnly" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="MetaDisplayEE" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="BlogMetaType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="ObjectType" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfContentMetaData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfContentMetaData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfContentMetaData" abstract="true" />
+      <s:simpleType name="ContentMetadataDataType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Text" />
+          <s:enumeration value="Number" />
+          <s:enumeration value="Byte" />
+          <s:enumeration value="Double" />
+          <s:enumeration value="Float" />
+          <s:enumeration value="Integer" />
+          <s:enumeration value="Long" />
+          <s:enumeration value="Short" />
+          <s:enumeration value="Date" />
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="SingleSelect" />
+          <s:enumeration value="MultiSelect" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ContentMetadataType">
+        <s:restriction base="s:string">
+          <s:enumeration value="HtmlTag" />
+          <s:enumeration value="MetaTag" />
+          <s:enumeration value="CollectionSelector" />
+          <s:enumeration value="ListSummarySelector" />
+          <s:enumeration value="ContentSelector" />
+          <s:enumeration value="ImageSelector" />
+          <s:enumeration value="LinkSelector" />
+          <s:enumeration value="FileSelector" />
+          <s:enumeration value="MenuSelector" />
+          <s:enumeration value="UserSelector" />
+          <s:enumeration value="SearchableProperty" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfTemplateData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TemplateData" nillable="true" type="tns:TemplateData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TemplateData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfTemplateData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TemplateName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:TemplateType" />
+              <s:element minOccurs="1" maxOccurs="1" name="SubType" type="tns:TemplateSubType" />
+              <s:element minOccurs="0" maxOccurs="1" name="Thumbnail" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="MasterLayoutID" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfTemplateData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfTemplateData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfTemplateData" abstract="true" />
+      <s:simpleType name="TemplateType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Default" />
+          <s:enumeration value="User" />
+          <s:enumeration value="Group" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="TemplateSubType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Default" />
+          <s:enumeration value="Workspace" />
+          <s:enumeration value="Photos" />
+          <s:enumeration value="Blog" />
+          <s:enumeration value="Wireframes" />
+          <s:enumeration value="Profile" />
+          <s:enumeration value="Calendar" />
+          <s:enumeration value="Forum" />
+          <s:enumeration value="MasterLayout" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfSitemapPath">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SitemapPath" nillable="true" type="tns:SitemapPath" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SitemapPath">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Order" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContentId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFlagDefData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FlagDefData" nillable="true" type="tns:FlagDefData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FlagDefData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="m_strName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="m_strDescription" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="m_bHidden" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Hidden" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfFlagItemData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfFlagItemData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FlagItemData" nillable="true" type="tns:FlagItemData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FlagItemData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagDefinitionID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="FlagDefinitionLanguage" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalFlags" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SortOrder" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBlogPostData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BlogPostData" nillable="true" type="tns:BlogPostData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BlogPostData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContentBase">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TrackBackURL" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Tags" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Pingback" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="Categories" type="tns:ArrayOfString" />
+              <s:element minOccurs="1" maxOccurs="1" name="TrackBackURLID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="TagsID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="PingBackID" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="CategoryID" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comments" type="tns:ArrayOfBlogComment" />
+              <s:element minOccurs="1" maxOccurs="1" name="PostID" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorDisplayName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorFName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CreatorLName" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContentBase">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Html" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPrivate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="GoLiveDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayStartDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayGoLiveDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayEndDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDateAction" type="tns:CMSEndDateAction" />
+          <s:element minOccurs="0" maxOccurs="1" name="ContentStatus" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt1" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt3" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt4" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xslt5" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DefaultXslt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PackageDisplayXslt" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContentType" type="tns:CMSContentType" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContentSubType" type="tns:CMSContentSubtype" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateCreated" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayDateCreated" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateModified" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayDateModified" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastEditorFname" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastEditorLname" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsInherited" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="InheritedFrom" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="TemplateLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QuickLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HyperLink" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Teaser" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:ItemStatus" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AssetInfo" type="tns:AssetData" />
+          <s:element minOccurs="0" maxOccurs="1" name="StagingDomain" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductionDomain" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="XMLCollectionID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="FieldList" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageThumbnail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPublished" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnalyticsInfo" type="tns:AnalyticsData" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CMSEndDateAction">
+        <s:restriction base="s:string">
+          <s:enumeration value="Undefined" />
+          <s:enumeration value="Archive_Expire" />
+          <s:enumeration value="Archive_Display" />
+          <s:enumeration value="Refresh_Report" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CMSContentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="AllTypes" />
+          <s:enumeration value="Content" />
+          <s:enumeration value="Forms" />
+          <s:enumeration value="Archive_Content" />
+          <s:enumeration value="Archive_Forms" />
+          <s:enumeration value="Assets" />
+          <s:enumeration value="Archive_Assets" />
+          <s:enumeration value="LibraryItem" />
+          <s:enumeration value="Multimedia" />
+          <s:enumeration value="Archive_Media" />
+          <s:enumeration value="NonLibraryContent" />
+          <s:enumeration value="DiscussionTopic" />
+          <s:enumeration value="CatalogEntry" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CMSContentSubtype">
+        <s:restriction base="s:string">
+          <s:enumeration value="AllTypes" />
+          <s:enumeration value="Content" />
+          <s:enumeration value="PageBuilderData" />
+          <s:enumeration value="WebEvent" />
+          <s:enumeration value="PageBuilderMasterData" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ItemStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="All" />
+          <s:enumeration value="PendingStart" />
+          <s:enumeration value="PendingExpiration" />
+          <s:enumeration value="Approved" />
+          <s:enumeration value="Expired" />
+          <s:enumeration value="Submitted" />
+          <s:enumeration value="CheckedOut" />
+          <s:enumeration value="CheckedIn" />
+          <s:enumeration value="PendingDelete" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="AssetData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Version" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MimeType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MimeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileExtension" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImageUrl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Icon" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="PluginType" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PublishPdfActive" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AnalyticsData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ContentViewCount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContentRatingAverage" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContentRatingCount" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBlogComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BlogComment" nillable="true" type="tns:BlogComment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BlogComment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="DateCreated" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="PostID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPending" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BlogVisibility">
+        <s:restriction base="s:string">
+          <s:enumeration value="Public" />
+          <s:enumeration value="Private" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="BlogRoll">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Items" type="tns:ArrayOfBlogRollItem" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBlogRollItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BlogRollItem" nillable="true" type="tns:BlogRollItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BlogRollItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LinkName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ShortDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDateTime">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="dateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
+      <s:complexType name="AuthenticationHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Domain" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="RequestInfoParameters" type="tns:RequestInfoParameters" />
+      <s:complexType name="RequestInfoParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ContentLanguage" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetBlogData_x0020_By_x0020_ID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BlogID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogData_x0020_By_x0020_IDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogData_x0020_By_x0020_IDResult" type="tns:BlogData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BlogID" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="StartDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="Postsvisible" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LanguageID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDResult" type="tns:BlogData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogData_x0020_By_x0020_FolderData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="folder_data" type="tns:FolderData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogData_x0020_By_x0020_FolderDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogData_x0020_By_x0020_FolderDataResult" type="tns:BlogData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogRoll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="blog_id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogRollResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogRollResult" type="tns:BlogRoll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlankBlogPostData">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBlankBlogPostDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlankBlogPostDataResult" type="tns:BlogPostData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogDataForPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="post_id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogDataForPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogDataForPostResult" type="tns:BlogData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogPostData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogPostDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogPostDataResult" type="tns:BlogPostData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCommentForPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bcComment" type="tns:BlogComment" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCommentForPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddCommentForPostResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="path" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxEntries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LanguageID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDResult" type="tns:BlogData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartDate" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaxEntries" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="LanguageID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDResult" type="tns:BlogData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogRoll_x0020_By_x0020_Path">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBlogRoll_x0020_By_x0020_PathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBlogRoll_x0020_By_x0020_PathResult" type="tns:BlogRoll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBlog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="BlogID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBlogResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="DeletePost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="post_id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeletePostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeletePostResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBlogPostComment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="postComment_id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteBlogPostCommentResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="blogID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostContent" type="tns:ContentData" />
+            <s:element minOccurs="0" maxOccurs="1" name="Categories" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="Pingback" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Tags" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TrackbackURL" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ContentData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:ContentBaseData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EditorFirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EditorLastName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Comment" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DateModified" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayLastEditDate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DateCreated" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayDateCreated" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:long" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPermissionsInherited" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="PermissionInheritedFrom" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="GoLive" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayGoLive" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPublished" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSearchable" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="XmlInheritedFrom" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="MetaData" type="tns:ArrayOfContentMetaData" />
+              <s:element minOccurs="0" maxOccurs="1" name="DisplayEndDate" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EndDate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="EndDateActionType" type="tns:CMSEndDateAction" />
+              <s:element minOccurs="0" maxOccurs="1" name="XmlConfiguration" type="tns:XmlConfigData" />
+              <s:element minOccurs="0" maxOccurs="1" name="StyleSheet" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LanguageDescription" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Text" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Path" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ContType" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Updates" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="FolderName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MediaText" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="HistoryId" type="s:long" />
+              <s:element minOccurs="0" maxOccurs="1" name="HyperLink" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TemplateConfiguration" type="tns:TemplateData" />
+              <s:element minOccurs="1" maxOccurs="1" name="FlagDefId" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ContentBaseData">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsLocalizedDataOfContentBaseData">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Teaser" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Html" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Quicklink" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsPrivate" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="SubType" type="tns:CMSContentSubtype" />
+              <s:element minOccurs="0" maxOccurs="1" name="AssetData" type="tns:AssetData" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsLocalizedDataOfContentBaseData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:CmsDataOfContentBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="LanguageId" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="CmsDataOfContentBaseData" abstract="true">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseDataOfContentBaseData">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:long" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseDataOfContentBaseData" abstract="true" />
+      <s:element name="AddPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddPostResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBlog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ParentFolderID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlogName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlogTitle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BlogDescription" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Visibility" type="tns:BlogVisibility" />
+            <s:element minOccurs="1" maxOccurs="1" name="EnableComments" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="ModerateComments" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="RequireAuthentication" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="Categories" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="RollLinks" type="tns:BlogRoll" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddBlogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddBlogResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="post_id" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="PostInfo" type="tns:BlogPostData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPostResult" type="tns:ContentData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPostbyID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="post_id" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPostbyIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPostbyIDResult" type="tns:BlogPostData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBlogProperties">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="blog" type="tns:BlogData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateBlogPropertiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateBlogPropertiesResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserBlog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="userId" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserBlogResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetUserBlogResult" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BlogData" nillable="true" type="tns:BlogData" />
+      <s:element name="BlogRoll" nillable="true" type="tns:BlogRoll" />
+      <s:element name="BlogPostData" nillable="true" type="tns:BlogPostData" />
+      <s:element name="boolean" type="s:boolean" />
+      <s:element name="long" type="s:long" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData By ID and StartDateAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData By ID and StartDateRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_IDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogData_x0020_By_x0020_ID" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_IDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogData_x0020_By_x0020_IDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData By IDAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData By IDRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData by ID, StartDate, PostsVisible and LanguageIDAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData by ID, StartDate, PostsVisible and LanguageIDRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_FolderDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogData_x0020_By_x0020_FolderData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_FolderDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogData_x0020_By_x0020_FolderDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData By FolderDataAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData By FolderDataRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRollSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogRoll" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRollSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogRollResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRollAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRollRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlankBlogPostDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlankBlogPostData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlankBlogPostDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlankBlogPostDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlankBlogPostDataAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlankBlogPostDataRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogDataForPostSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogDataForPost" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogDataForPostSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogDataForPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogDataForPostAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogDataForPostRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostDataSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogPostData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostDataSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogPostDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostDataAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostDataRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentForPostSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCommentForPost" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentForPostSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCommentForPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentForPostAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddCommentForPostRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog By Path, StartDate, MaxEntries and LanguageIDAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog By Path, StartDate, MaxEntries and LanguageIDRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog by ID, StartDate, MaxEntries and LanguageIDAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog by ID, StartDate, MaxEntries and LanguageIDRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRoll_x0020_By_x0020_PathSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBlogRoll_x0020_By_x0020_Path" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRoll_x0020_By_x0020_PathSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBlogRoll_x0020_By_x0020_PathResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRoll By PathAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRoll By PathRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBlog" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBlogResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="DeletePostSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePost" />
+  </wsdl:message>
+  <wsdl:message name="DeletePostSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePostResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePostAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeletePostRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostCommentSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteBlogPostComment" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostCommentSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteBlogPostCommentResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostCommentAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostCommentRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddPostSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPost" />
+  </wsdl:message>
+  <wsdl:message name="AddPostSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPostAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddPostRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="AddBlogSoapIn">
+    <wsdl:part name="parameters" element="tns:AddBlog" />
+  </wsdl:message>
+  <wsdl:message name="AddBlogSoapOut">
+    <wsdl:part name="parameters" element="tns:AddBlogResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddBlogAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="AddBlogRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetPostSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPost" />
+  </wsdl:message>
+  <wsdl:message name="GetPostSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPostAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPostRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetPostbyIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPostbyID" />
+  </wsdl:message>
+  <wsdl:message name="GetPostbyIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPostbyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPostbyIDAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetPostbyIDRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlogPropertiesSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateBlogProperties" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlogPropertiesSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateBlogPropertiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlogPropertiesAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="UpdateBlogPropertiesRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetUserBlogSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserBlog" />
+  </wsdl:message>
+  <wsdl:message name="GetUserBlogSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserBlogResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserBlogAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserBlogRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateHttpGetIn">
+    <wsdl:part name="BlogID" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_IDHttpGetIn">
+    <wsdl:part name="BlogID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_IDHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDHttpGetIn">
+    <wsdl:part name="BlogID" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="Postsvisible" type="s:string" />
+    <wsdl:part name="LanguageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRollHttpGetIn">
+    <wsdl:part name="blog_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRollHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogRoll" />
+  </wsdl:message>
+  <wsdl:message name="GetBlankBlogPostDataHttpGetIn" />
+  <wsdl:message name="GetBlankBlogPostDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogPostData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogDataForPostHttpGetIn">
+    <wsdl:part name="post_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogDataForPostHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostDataHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogPostData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpGetIn">
+    <wsdl:part name="path" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="MaxEntries" type="s:string" />
+    <wsdl:part name="LanguageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpGetIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="MaxEntries" type="s:string" />
+    <wsdl:part name="LanguageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRoll_x0020_By_x0020_PathHttpGetIn">
+    <wsdl:part name="Path" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRoll_x0020_By_x0020_PathHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogRoll" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogHttpGetIn">
+    <wsdl:part name="BlogID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogHttpGetOut" />
+  <wsdl:message name="DeletePostHttpGetIn">
+    <wsdl:part name="post_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeletePostHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostCommentHttpGetIn">
+    <wsdl:part name="postComment_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostCommentHttpGetOut" />
+  <wsdl:message name="GetPostbyIDHttpGetIn">
+    <wsdl:part name="post_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPostbyIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:BlogPostData" />
+  </wsdl:message>
+  <wsdl:message name="GetUserBlogHttpGetIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserBlogHttpGetOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateHttpPostIn">
+    <wsdl:part name="BlogID" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_IDHttpPostIn">
+    <wsdl:part name="BlogID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_By_x0020_IDHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDHttpPostIn">
+    <wsdl:part name="BlogID" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="Postsvisible" type="s:string" />
+    <wsdl:part name="LanguageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRollHttpPostIn">
+    <wsdl:part name="blog_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRollHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogRoll" />
+  </wsdl:message>
+  <wsdl:message name="GetBlankBlogPostDataHttpPostIn" />
+  <wsdl:message name="GetBlankBlogPostDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogPostData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogDataForPostHttpPostIn">
+    <wsdl:part name="post_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogDataForPostHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostDataHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogPostDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogPostData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpPostIn">
+    <wsdl:part name="path" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="MaxEntries" type="s:string" />
+    <wsdl:part name="LanguageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpPostIn">
+    <wsdl:part name="ID" type="s:string" />
+    <wsdl:part name="StartDate" type="s:string" />
+    <wsdl:part name="MaxEntries" type="s:string" />
+    <wsdl:part name="LanguageID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogData" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRoll_x0020_By_x0020_PathHttpPostIn">
+    <wsdl:part name="Path" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetBlogRoll_x0020_By_x0020_PathHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogRoll" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogHttpPostIn">
+    <wsdl:part name="BlogID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogHttpPostOut" />
+  <wsdl:message name="DeletePostHttpPostIn">
+    <wsdl:part name="post_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeletePostHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostCommentHttpPostIn">
+    <wsdl:part name="postComment_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="DeleteBlogPostCommentHttpPostOut" />
+  <wsdl:message name="GetPostbyIDHttpPostIn">
+    <wsdl:part name="post_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetPostbyIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:BlogPostData" />
+  </wsdl:message>
+  <wsdl:message name="GetUserBlogHttpPostIn">
+    <wsdl:part name="userId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetUserBlogHttpPostOut">
+    <wsdl:part name="Body" element="tns:long" />
+  </wsdl:message>
+  <wsdl:portType name="BlogSoap">
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate" message="tns:GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateSoapIn" />
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate" message="tns:GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID" message="tns:GetBlogData_x0020_By_x0020_IDSoapIn" />
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID" message="tns:GetBlogData_x0020_By_x0020_IDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID" message="tns:GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDSoapIn" />
+      <wsdl:output name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID" message="tns:GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_By_x0020_FolderData" message="tns:GetBlogData_x0020_By_x0020_FolderDataSoapIn" />
+      <wsdl:output name="GetBlogData_x0020_By_x0020_FolderData" message="tns:GetBlogData_x0020_By_x0020_FolderDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <wsdl:input message="tns:GetBlogRollSoapIn" />
+      <wsdl:output message="tns:GetBlogRollSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlankBlogPostData">
+      <wsdl:input message="tns:GetBlankBlogPostDataSoapIn" />
+      <wsdl:output message="tns:GetBlankBlogPostDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogDataForPost">
+      <wsdl:input message="tns:GetBlogDataForPostSoapIn" />
+      <wsdl:output message="tns:GetBlogDataForPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostData">
+      <wsdl:input message="tns:GetBlogPostDataSoapIn" />
+      <wsdl:output message="tns:GetBlogPostDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCommentForPost">
+      <wsdl:input message="tns:AddCommentForPostSoapIn" />
+      <wsdl:output message="tns:AddCommentForPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <wsdl:input name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDSoapIn" />
+      <wsdl:output name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <wsdl:input name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDSoapIn" />
+      <wsdl:output name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <wsdl:input name="GetBlogRoll_x0020_By_x0020_Path" message="tns:GetBlogRoll_x0020_By_x0020_PathSoapIn" />
+      <wsdl:output name="GetBlogRoll_x0020_By_x0020_Path" message="tns:GetBlogRoll_x0020_By_x0020_PathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlog">
+      <wsdl:input message="tns:DeleteBlogSoapIn" />
+      <wsdl:output message="tns:DeleteBlogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <wsdl:input message="tns:DeletePostSoapIn" />
+      <wsdl:output message="tns:DeletePostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPostComment">
+      <wsdl:input message="tns:DeleteBlogPostCommentSoapIn" />
+      <wsdl:output message="tns:DeleteBlogPostCommentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <wsdl:input message="tns:AddPostSoapIn" />
+      <wsdl:output message="tns:AddPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddBlog">
+      <wsdl:input message="tns:AddBlogSoapIn" />
+      <wsdl:output message="tns:AddBlogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPost">
+      <wsdl:input message="tns:GetPostSoapIn" />
+      <wsdl:output message="tns:GetPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostbyID">
+      <wsdl:input message="tns:GetPostbyIDSoapIn" />
+      <wsdl:output message="tns:GetPostbyIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlogProperties">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">updates blog data.</wsdl:documentation>
+      <wsdl:input message="tns:UpdateBlogPropertiesSoapIn" />
+      <wsdl:output message="tns:UpdateBlogPropertiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBlog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">retrieves the user's blog folder</wsdl:documentation>
+      <wsdl:input message="tns:GetUserBlogSoapIn" />
+      <wsdl:output message="tns:GetUserBlogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BlogHttpGet">
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate" message="tns:GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateHttpGetIn" />
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate" message="tns:GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID" message="tns:GetBlogData_x0020_By_x0020_IDHttpGetIn" />
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID" message="tns:GetBlogData_x0020_By_x0020_IDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID" message="tns:GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDHttpGetIn" />
+      <wsdl:output name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID" message="tns:GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <wsdl:input message="tns:GetBlogRollHttpGetIn" />
+      <wsdl:output message="tns:GetBlogRollHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlankBlogPostData">
+      <wsdl:input message="tns:GetBlankBlogPostDataHttpGetIn" />
+      <wsdl:output message="tns:GetBlankBlogPostDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogDataForPost">
+      <wsdl:input message="tns:GetBlogDataForPostHttpGetIn" />
+      <wsdl:output message="tns:GetBlogDataForPostHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostData">
+      <wsdl:input message="tns:GetBlogPostDataHttpGetIn" />
+      <wsdl:output message="tns:GetBlogPostDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <wsdl:input name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpGetIn" />
+      <wsdl:output name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <wsdl:input name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpGetIn" />
+      <wsdl:output name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <wsdl:input name="GetBlogRoll_x0020_By_x0020_Path" message="tns:GetBlogRoll_x0020_By_x0020_PathHttpGetIn" />
+      <wsdl:output name="GetBlogRoll_x0020_By_x0020_Path" message="tns:GetBlogRoll_x0020_By_x0020_PathHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlog">
+      <wsdl:input message="tns:DeleteBlogHttpGetIn" />
+      <wsdl:output message="tns:DeleteBlogHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <wsdl:input message="tns:DeletePostHttpGetIn" />
+      <wsdl:output message="tns:DeletePostHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPostComment">
+      <wsdl:input message="tns:DeleteBlogPostCommentHttpGetIn" />
+      <wsdl:output message="tns:DeleteBlogPostCommentHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostbyID">
+      <wsdl:input message="tns:GetPostbyIDHttpGetIn" />
+      <wsdl:output message="tns:GetPostbyIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBlog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">retrieves the user's blog folder</wsdl:documentation>
+      <wsdl:input message="tns:GetUserBlogHttpGetIn" />
+      <wsdl:output message="tns:GetUserBlogHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BlogHttpPost">
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate" message="tns:GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateHttpPostIn" />
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate" message="tns:GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID" message="tns:GetBlogData_x0020_By_x0020_IDHttpPostIn" />
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID" message="tns:GetBlogData_x0020_By_x0020_IDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <wsdl:input name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID" message="tns:GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDHttpPostIn" />
+      <wsdl:output name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID" message="tns:GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <wsdl:input message="tns:GetBlogRollHttpPostIn" />
+      <wsdl:output message="tns:GetBlogRollHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlankBlogPostData">
+      <wsdl:input message="tns:GetBlankBlogPostDataHttpPostIn" />
+      <wsdl:output message="tns:GetBlankBlogPostDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogDataForPost">
+      <wsdl:input message="tns:GetBlogDataForPostHttpPostIn" />
+      <wsdl:output message="tns:GetBlogDataForPostHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostData">
+      <wsdl:input message="tns:GetBlogPostDataHttpPostIn" />
+      <wsdl:output message="tns:GetBlogPostDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <wsdl:input name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpPostIn" />
+      <wsdl:output name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <wsdl:input name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpPostIn" />
+      <wsdl:output name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID" message="tns:GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <wsdl:input name="GetBlogRoll_x0020_By_x0020_Path" message="tns:GetBlogRoll_x0020_By_x0020_PathHttpPostIn" />
+      <wsdl:output name="GetBlogRoll_x0020_By_x0020_Path" message="tns:GetBlogRoll_x0020_By_x0020_PathHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlog">
+      <wsdl:input message="tns:DeleteBlogHttpPostIn" />
+      <wsdl:output message="tns:DeleteBlogHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <wsdl:input message="tns:DeletePostHttpPostIn" />
+      <wsdl:output message="tns:DeletePostHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPostComment">
+      <wsdl:input message="tns:DeleteBlogPostCommentHttpPostIn" />
+      <wsdl:output message="tns:DeleteBlogPostCommentHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostbyID">
+      <wsdl:input message="tns:GetPostbyIDHttpPostIn" />
+      <wsdl:output message="tns:GetPostbyIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBlog">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">retrieves the user's blog folder</wsdl:documentation>
+      <wsdl:input message="tns:GetUserBlogHttpPostIn" />
+      <wsdl:output message="tns:GetUserBlogHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BlogSoap" type="tns:BlogSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBlogData">
+      <soap:operation soapAction="http://tempuri.org/GetBlogData By ID and StartDate" style="document" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlogData By ID and StartDateAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlogData By ID and StartDateRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <soap:operation soapAction="http://tempuri.org/GetBlogData By ID" style="document" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlogData By IDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlogData By IDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <soap:operation soapAction="http://tempuri.org/GetBlogData by ID, StartDate, PostsVisible and LanguageID" style="document" />
+      <wsdl:input name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlogData by ID, StartDate, PostsVisible and LanguageIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlogData by ID, StartDate, PostsVisible and LanguageIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <soap:operation soapAction="http://tempuri.org/GetBlogData By FolderData" style="document" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_FolderData">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlogData By FolderDataAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlogData By FolderDataRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_FolderData">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <soap:operation soapAction="http://tempuri.org/GetBlogRoll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlogRollAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlogRollRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlankBlogPostData">
+      <soap:operation soapAction="http://tempuri.org/GetBlankBlogPostData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlankBlogPostDataAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlankBlogPostDataRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogDataForPost">
+      <soap:operation soapAction="http://tempuri.org/GetBlogDataForPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlogDataForPostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlogDataForPostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostData">
+      <soap:operation soapAction="http://tempuri.org/GetBlogPostData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlogPostDataAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlogPostDataRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCommentForPost">
+      <soap:operation soapAction="http://tempuri.org/AddCommentForPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddCommentForPostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:AddCommentForPostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <soap:operation soapAction="http://tempuri.org/GetBlog By Path, StartDate, MaxEntries and LanguageID" style="document" />
+      <wsdl:input name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlog By Path, StartDate, MaxEntries and LanguageIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlog By Path, StartDate, MaxEntries and LanguageIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <soap:operation soapAction="http://tempuri.org/GetBlog by ID, StartDate, MaxEntries and LanguageID" style="document" />
+      <wsdl:input name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlog by ID, StartDate, MaxEntries and LanguageIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlog by ID, StartDate, MaxEntries and LanguageIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <soap:operation soapAction="http://tempuri.org/GetBlogRoll By Path" style="document" />
+      <wsdl:input name="GetBlogRoll_x0020_By_x0020_Path">
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBlogRoll By PathAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetBlogRoll By PathRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogRoll_x0020_By_x0020_Path">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlog">
+      <soap:operation soapAction="http://tempuri.org/DeleteBlog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteBlogAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:DeleteBlogRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <soap:operation soapAction="http://tempuri.org/DeletePost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeletePostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:DeletePostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPostComment">
+      <soap:operation soapAction="http://tempuri.org/DeleteBlogPostComment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteBlogPostCommentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:DeleteBlogPostCommentRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <soap:operation soapAction="http://tempuri.org/AddPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddPostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:AddPostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBlog">
+      <soap:operation soapAction="http://tempuri.org/AddBlog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddBlogAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:AddBlogRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPost">
+      <soap:operation soapAction="http://tempuri.org/GetPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetPostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostbyID">
+      <soap:operation soapAction="http://tempuri.org/GetPostbyID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPostbyIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetPostbyIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlogProperties">
+      <soap:operation soapAction="http://tempuri.org/UpdateBlogProperties" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:UpdateBlogPropertiesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:UpdateBlogPropertiesRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBlog">
+      <soap:operation soapAction="http://tempuri.org/GetUserBlog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserBlogAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetUserBlogRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BlogSoap12" type="tns:BlogSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBlogData">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogData By ID and StartDate" style="document" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlogData By ID and StartDateAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlogData By ID and StartDateRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogData By ID" style="document" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlogData By IDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlogData By IDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogData by ID, StartDate, PostsVisible and LanguageID" style="document" />
+      <wsdl:input name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlogData by ID, StartDate, PostsVisible and LanguageIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlogData by ID, StartDate, PostsVisible and LanguageIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogData By FolderData" style="document" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_FolderData">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlogData By FolderDataAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlogData By FolderDataRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_FolderData">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogRoll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlogRollAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlogRollRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlankBlogPostData">
+      <soap12:operation soapAction="http://tempuri.org/GetBlankBlogPostData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlankBlogPostDataAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlankBlogPostDataRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogDataForPost">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogDataForPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlogDataForPostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlogDataForPostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostData">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogPostData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlogPostDataAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlogPostDataRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCommentForPost">
+      <soap12:operation soapAction="http://tempuri.org/AddCommentForPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddCommentForPostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:AddCommentForPostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <soap12:operation soapAction="http://tempuri.org/GetBlog By Path, StartDate, MaxEntries and LanguageID" style="document" />
+      <wsdl:input name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlog By Path, StartDate, MaxEntries and LanguageIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlog By Path, StartDate, MaxEntries and LanguageIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <soap12:operation soapAction="http://tempuri.org/GetBlog by ID, StartDate, MaxEntries and LanguageID" style="document" />
+      <wsdl:input name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlog by ID, StartDate, MaxEntries and LanguageIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlog by ID, StartDate, MaxEntries and LanguageIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <soap12:operation soapAction="http://tempuri.org/GetBlogRoll By Path" style="document" />
+      <wsdl:input name="GetBlogRoll_x0020_By_x0020_Path">
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBlogRoll By PathAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetBlogRoll By PathRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogRoll_x0020_By_x0020_Path">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlog">
+      <soap12:operation soapAction="http://tempuri.org/DeleteBlog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteBlogAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:DeleteBlogRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <soap12:operation soapAction="http://tempuri.org/DeletePost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeletePostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:DeletePostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPostComment">
+      <soap12:operation soapAction="http://tempuri.org/DeleteBlogPostComment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteBlogPostCommentAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:DeleteBlogPostCommentRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPost">
+      <soap12:operation soapAction="http://tempuri.org/AddPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddPostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:AddPostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddBlog">
+      <soap12:operation soapAction="http://tempuri.org/AddBlog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddBlogAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:AddBlogRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPost">
+      <soap12:operation soapAction="http://tempuri.org/GetPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPostAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetPostRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPostbyID">
+      <soap12:operation soapAction="http://tempuri.org/GetPostbyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPostbyIDAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetPostbyIDRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBlogProperties">
+      <soap12:operation soapAction="http://tempuri.org/UpdateBlogProperties" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:UpdateBlogPropertiesAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:UpdateBlogPropertiesRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBlog">
+      <soap12:operation soapAction="http://tempuri.org/GetUserBlog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserBlogAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetUserBlogRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BlogHttpGet" type="tns:BlogHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetBlogData">
+      <http:operation location="/GetBlogData By ID and StartDate" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <http:operation location="/GetBlogData By ID" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <http:operation location="/GetBlogData by ID, StartDate, PostsVisible and LanguageID" />
+      <wsdl:input name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <http:operation location="/GetBlogRoll" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlankBlogPostData">
+      <http:operation location="/GetBlankBlogPostData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogDataForPost">
+      <http:operation location="/GetBlogDataForPost" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostData">
+      <http:operation location="/GetBlogPostData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <http:operation location="/GetBlog By Path, StartDate, MaxEntries and LanguageID" />
+      <wsdl:input name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <http:operation location="/GetBlog by ID, StartDate, MaxEntries and LanguageID" />
+      <wsdl:input name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <http:operation location="/GetBlogRoll By Path" />
+      <wsdl:input name="GetBlogRoll_x0020_By_x0020_Path">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="GetBlogRoll_x0020_By_x0020_Path">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlog">
+      <http:operation location="/DeleteBlog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <http:operation location="/DeletePost" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPostComment">
+      <http:operation location="/DeleteBlogPostComment" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostbyID">
+      <http:operation location="/GetPostbyID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBlog">
+      <http:operation location="/GetUserBlog" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BlogHttpPost" type="tns:BlogHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetBlogData">
+      <http:operation location="/GetBlogData By ID and StartDate" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID_x0020_and_x0020_StartDate">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <http:operation location="/GetBlogData By ID" />
+      <wsdl:input name="GetBlogData_x0020_By_x0020_ID">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_By_x0020_ID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogData">
+      <http:operation location="/GetBlogData by ID, StartDate, PostsVisible and LanguageID" />
+      <wsdl:input name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogData_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_PostsVisible_x0020_and_x0020_LanguageID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <http:operation location="/GetBlogRoll" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlankBlogPostData">
+      <http:operation location="/GetBlankBlogPostData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogDataForPost">
+      <http:operation location="/GetBlogDataForPost" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogPostData">
+      <http:operation location="/GetBlogPostData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <http:operation location="/GetBlog By Path, StartDate, MaxEntries and LanguageID" />
+      <wsdl:input name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetBlog_x0020_By_x0020_Path_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlog">
+      <http:operation location="/GetBlog by ID, StartDate, MaxEntries and LanguageID" />
+      <wsdl:input name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetBlog_x0020_by_x0020_ID_x002C__x0020_StartDate_x002C__x0020_MaxEntries_x0020_and_x0020_LanguageID">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBlogRoll">
+      <http:operation location="/GetBlogRoll By Path" />
+      <wsdl:input name="GetBlogRoll_x0020_By_x0020_Path">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="GetBlogRoll_x0020_By_x0020_Path">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlog">
+      <http:operation location="/DeleteBlog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePost">
+      <http:operation location="/DeletePost" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteBlogPostComment">
+      <http:operation location="/DeleteBlogPostComment" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="GetPostbyID">
+      <http:operation location="/GetPostbyID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserBlog">
+      <http:operation location="/GetUserBlog" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Blog">
+    <wsdl:port name="BlogSoap" binding="tns:BlogSoap">
+      <soap:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Content/Blog.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BlogSoap12" binding="tns:BlogSoap12">
+      <soap12:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Content/Blog.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BlogHttpGet" binding="tns:BlogHttpGet">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Content/Blog.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BlogHttpPost" binding="tns:BlogHttpPost">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/Content/Blog.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

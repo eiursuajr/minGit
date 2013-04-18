@@ -1,0 +1,360 @@
+/*                                                                          */
+/* NOTICE:                                                                  */
+/*    To support more than one-single SmartMenu server control per page     */
+/*    the CSS files' name is used as a class and is prefixed to all of      */
+/*    the selectors (without the path or extension).                        */
+/*                                                                          */
+/*    The server control will automatically wrap the entire SmartMenu       */
+/*    within a div-tag, whose class-name will be derived from the filename. */
+/*                                                                          */
+/*    Only the base ASCII character set is supported.                       */
+/*                                                                          */
+/*    Also, spaces and periods before the extension will be converted       */
+/*    into underscores, as these are not permitted within the selector.     */
+/*                                                                          */
+
+.shuttermenu_workarea .ekmenu 
+{
+	/* DIV; wraps the entire menu */
+	/* (the outer-most non-user container element) */
+    color: #FFFFFF; /* default text color */
+    width: 148px; /* can be overridden in the primary div-containers (whose class = ekmenu) style */
+    font-size: 12px;
+    font-family: Sans-Serif;
+    background: #646496; /* shows up on left side, widens with nesting level */
+    border-right: solid 1px #474747;
+    border-bottom: solid 1px #474747;
+}
+
+.shuttermenu_workarea .ekmenu_start 
+{
+	/* DIV; wraps the menu-start link (normally hidden, but visible */
+	/* to page readers and text-browsers for accessibility). */
+	/* Only added if 508-Compliance is enabled. */
+	/* Typical parent element: div.ekmenu */
+	position: absolute;
+	overflow: hidden;
+	top: -10000px;
+	left: -10000px;
+	height: 1px;
+	width: 1px;
+}
+
+.shuttermenu_workarea .ekmenu_end
+{
+	/* DIV; wraps the menu-end page-anchor (normally hidden, but */
+	/* visible to page readers and text-browsers for accessibility). */
+	/* Only added if 508-Compliance is enabled. */
+	/* Typical parent element: div.ekmenu */
+	position: absolute;
+	overflow: hidden;
+	top: -10000px;
+	left: -10000px;
+	height: 1px;
+	width: 1px;
+}
+
+.shuttermenu_workarea .ekmenu_accessible_menu_startheading
+{
+	/* H2; wraps the skip-menu with a navigation-heading (normally hidden, */
+	/* but available to page readers and text-browsers for accessibility). */
+	/* Only added if 508-Compliance is enabled. */
+	/* Typical parent element: div.ekmenu_start */
+	position: absolute;
+	overflow: hidden;
+	top: -10000px;
+	left: -10000px;
+	height: 1px;
+	width: 1px;
+}
+
+.shuttermenu_workarea .ekmenu_accessible_menu_startlink 
+{
+	/* A; wraps the skip-menu text with a navigation-link (normally hidden, */
+	/* but available to page readers and text-browsers for accessibility). */
+	/* Only added if 508-Compliance is enabled. */
+	/* Typical parent element: h2.ekmenu_accessible_menu_startheading */
+}
+
+.shuttermenu_workarea .ekmenu_accessible_menu_endlink
+{
+	/* A; acts as a destination page anchor for the skip-menu */
+	/* text with a navigation-link (normally hidden, but available */
+	/* to page readers and text-browsers for accessibility). */
+	/* Only added if 508-Compliance is enabled. */
+	/* Typical parent element: h2.ekmenu_accessible_menu_startheading */
+}
+
+.shuttermenu_workarea .ekmenu_submenu,
+.shuttermenu_workarea .ekmenu_submenu_hover,
+.shuttermenu_workarea .ekmenu_submenu_parent,
+.shuttermenu_workarea .ekmenu_submenu_parent_hover
+{
+	/* DIV; holds submenu items, such as a submenu title and links. */
+	/* Typical parent element: div.ekmenu_submenu_items, or else */
+	/* li.ekmenu_unorderedlist_item if 508-Compliance is enabled. */
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+.shuttermenu_workarea .ekmenu_accessible_submenu_navheading
+{
+	/* H3; wraps each menu button title with a navigation-heading (normally hidden, */
+	/* but available to page readers and text-browsers for accessibility). */
+	/* Only added if 508-Compliance is enabled. */
+	/* Typical parent element: div.ekmenu_submenu */
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0px 0px 0px 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+
+.shuttermenu_workarea .ekmenu_accessible_submenu_btnlink
+{
+	/* A; wraps each menu button title with a navigation-anchor */
+	/* (useful to page readers and text-browsers for accessibility). */
+	/* Only added if 508-Compliance is enabled. */
+	/* Typical parent element: span.ekmenu_button */
+    color: #FFFFFF; /* default text color */
+	font-size: 1em;
+	text-decoration: none;
+	margin: 0px 0px 0px 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	width:100%;
+}
+
+.shuttermenu_workarea .ekmenu_button_selected .ekmenu_accessible_submenu_btnlink, 
+.shuttermenu_workarea .ekmenu_button_selected_hover .ekmenu_accessible_submenu_btnlink 
+{
+	/*  */
+	/* Typical parent element: span.ekmenu_button */
+    color: #FFFFFF; /* default text color */
+	font-size: 1em;
+    text-decoration: underline;
+	margin: 0px 0px 0px 0px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	width:100%;
+}
+
+.shuttermenu_workarea .ekmenu_accessibility_hidden_text{
+	/* SPAN; wraps text that should normally be hidden, but made */
+	/* visible to page readers and text-browsers for accessibility). */
+	/* Typical parent element: a.ekmenu_link_selected, and others... */
+	position: absolute;
+	overflow: hidden;
+	top: -10000px;
+	left: -10000px;
+	height: 1px;
+	width: 1px;
+}
+
+.shuttermenu_workarea .ekmenu_unorderedlist 
+{
+	/* UL; a container for menu list items (useful for non-graphical browsers). */
+	/* Typical parent element: div.ekmenu_submenu_items */
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.shuttermenu_workarea .ekmenu_unorderedlist_item 
+{
+	/* LI; container for menu items (typically either links or sub-menus). */
+	/* Typical parent element: ul.ekmenu_unorderedlist */
+	display:inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+.shuttermenu_workarea .ekmenu_submenu_items {
+	/* DIV; container for menu lists. */
+	/* Typical parent element: div.ekmenu (root level), div.ekmenu_submenu */
+    overflow: hidden; /* truncate what cannot fit */
+    /*border-bottom: solid 2px rgb(71, 71, 71);*/
+}
+
+.shuttermenu_workarea .ekmenu_submenu_items_hidden 
+{
+	/* DIV; normally hidden container for menu lists (becomes visible if */
+	/* user clicks on related submenu button, or if Javascript/CSS not supported). */
+	/* Typical parent element: div.ekmenu (root level), div.ekmenu_submenu */
+	display: none;
+}
+
+/* Nested menu items */
+.shuttermenu_workarea .ekmenu_submenu_items .ekmenu_submenu_items, 
+.shuttermenu_workarea .ekmenu_submenu_items .ekmenu_submenu_items_hidden, 
+.shuttermenu_workarea .ekmenu_submenu_items_hidden .ekmenu_submenu_items_hidden
+{
+	/* Rule is applied to nested submenus. Hidden included in-case */
+	/* Javascript is not supported and hidden submenus are made visible. */
+	/* Typical parent element: (not applicable) */
+	margin-left: 5px; /* indents menu items, accumulating with each nesting level */
+    border-bottom-width: 0px; /* prevents bottom border from accumulating, with each level of nesting */
+}
+
+/* Button menu items, controls visibility of associated sub-menus */
+.shuttermenu_workarea .ekmenu_button
+{
+	/* SPAN; holds the title of the associated submenu, and typically acts as a */
+	/* button (or folder) for the submenu. Can also hold images (background, etc). */
+	/* Typical parent element: div.ekmenu_submenu, or else */
+	/* h3.ekmenu_accessible_submenu_navheading if 508-Compliance is enabled. */
+    display: block;
+    padding: 5px 0px;
+    font-weight: bold;
+    color: #FFFFFF; /* button-title text color */
+    background: #2F2F61 url(../../images/application/menu/ek_menu_ex__btnWorkareaBlue.jpg) repeat-x; /* color specified in case image unavailable */
+    text-indent: 10px;
+    width: 100%; /* capture on-click for entire row that the button occupies */
+}
+.shuttermenu_workarea .ekmenu_button_hover
+{
+	/* SPAN; hovered version of .ekmenu_button, see above... */
+	/* Typical parent element: div.ekmenu_submenu, or else */
+	/* h3.ekmenu_accessible_submenu_navheading if 508-Compliance is enabled. */
+    display: block;
+    padding: 5px 0px;
+    font-weight: bold;
+    color: #FFFFFF; /* button-title text color */
+    background: #2F2F61 url(../../images/application/menu/ek_menu_ex__btnWorkareaOrange.jpg) repeat-x; /* color specified in case image unavailable */
+    text-indent: 10px;
+    width: 100%; /* capture on-click for entire row that the button occupies */
+}
+.shuttermenu_workarea .ekmenu_button_selected
+{
+	/* SPAN; selected version of .ekmenu_button, see above... */
+	/* Typical parent element: div.ekmenu_submenu, or else */
+	/* h3.ekmenu_accessible_submenu_navheading if 508-Compliance is enabled. */
+    display: block;
+    padding: 5px 0px;
+    font-weight: bold;
+    color: #FFFFFF; /* button-title text color */
+    background: #2F2F61 url(../../images/application/menu/ek_menu_ex__btnWorkareaOrangeSelected.jpg) repeat-x; /* color specified in case image unavailable */
+    text-indent: 10px;
+    width: 100%; /* capture on-click for entire row that the button occupies */
+    text-decoration: underline;
+}
+.shuttermenu_workarea .ekmenu_button_selected_hover
+{
+	/* SPAN; hovered version of .ekmenu_button_selected, see above... */
+	/* Typical parent element: div.ekmenu_submenu, or else */
+	/* h3.ekmenu_accessible_submenu_navheading if 508-Compliance is enabled. */
+    display: block;
+    padding: 5px 0px;
+    font-weight: bold;
+    color: #FFFFFF; /* button-title text color */
+    background: #2F2F61 url(../../images/application/menu/ek_menu_ex__btnWorkareaOrangeSelectedHover.jpg) repeat-x; /* color specified in case image unavailable */
+    text-indent: 10px;
+    width: 100%; /* capture on-click for entire row that the button occupies */
+    text-decoration: underline;
+}
+
+/* images */
+.shuttermenu_workarea .ekmenu_submenu_items a img, 
+.shuttermenu_workarea .ekmenu_submenu_items_hidden a img {
+	/* IMG; menu-item image, selected by CMS, can be used */
+	/* with or in place of the textual title of the link. */
+	/* Typical parent element: a.ekmenu_link */
+	border-width: 0px;
+}
+.shuttermenu_workarea .ekmenu_linkimage, 
+.shuttermenu_workarea .ekmenu_linkimage_selected
+{
+	/* SPAN; supports rollover-images, where a single image is scrolled */
+	/* to show the desired effect for the given action-event. Separate the */
+	/* .ekmenu_linkimage and .ekmenu_linkimage_selected classes for more images */
+	/* Typical parent element: a.ekmenu_link */
+    display: block;
+	position: relative;
+	background-position: 0px 0px;
+	background-repeat:no-repeat;
+	height: 30px;
+	overflow: hidden;
+}
+.shuttermenu_workarea .ekmenu_linkimage_hover, 
+.shuttermenu_workarea .ekmenu_linkimage_selected_hover
+{
+	/* SPAN; hovered version of ekmenu_linkimage. Supports rollover-images, */
+	/* where a single image is scrolled to show the desired effect for the */
+	/* given action-event. Separate the .ekmenu_linkimage_hover and */
+	/* .ekmenu_linkimage_selected_hover classes to control more images */
+	/* Typical parent element: a.ekmenu_link */
+    display: block;
+	position: relative;
+	background-position: 0px -30px;
+	background-repeat:no-repeat;
+	height: 30px;
+	overflow: hidden;
+}
+
+/* Link menu items */
+.shuttermenu_workarea a.ekmenu_link, 
+.shuttermenu_workarea a.ekmenu_link:link, 
+.shuttermenu_workarea a.ekmenu_link:visited {
+	/* A; link for individual menu items (CMS quicklink, external link, etc.). */
+	/* Typical parent element: div.ekmenu_submenu_items, or else */
+	/* li.ekmenu_unorderedlist_item if 508-Compliance is enabled. */
+    padding: 0px 0px; /*padding: 5px 0px; *//* set all to zero for images */
+    text-indent: 10px;
+    color: #0000A0; /* link text color */
+    background: #EEEEEE;
+    text-decoration: none; /* remove underlines */
+    display: block; /* force one link per row */
+    width: 100%; /* fill entire row with link */
+    border-bottom: 1px solid #DCDCDC; /* link row seperators */
+}
+/*.ekmenu_submenu_items a:hover */
+.shuttermenu_workarea a.ekmenu_link:hover, 
+.shuttermenu_workarea a.ekmenu_link:active, 
+.shuttermenu_workarea a.ekmenu_link:focus  {
+	/* A; hovered version of ekmenu_link, see above... */
+	/* Typical parent element: div.ekmenu_submenu_items, or else */
+	/* li.ekmenu_unorderedlist_item if 508-Compliance is enabled. */
+    padding: 0px 0px; /*padding: 5px 0px; *//* set all to zero for images */
+    text-indent: 10px;
+    color: #FFFFFF;  /* hovered-link text color */
+    background : #B5A684;
+    text-decoration: none; /* remove underlines */
+    border-color: #B5A684;
+	display: block; 
+	width: 100%;
+    border-bottom: 1px solid #DCDCDC; /* link row seperators */
+}
+
+.shuttermenu_workarea a.ekmenu_link_selected {
+	/* A; selected version of ekmenu_link, see above... */
+	/* Typical parent element: div.ekmenu_submenu_items, or else */
+	/* li.ekmenu_unorderedlist_item if 508-Compliance is enabled. */
+    padding: 0px 0px; /*padding: 5px 0px; *//* set all to zero for images */
+    text-indent: 10px;
+	color: #0059E7;
+    background: #CEBE8C;
+    border-color : #CEBE8C;
+	display: block; 
+	width: 100%;
+    border-bottom: 1px solid #DCDCDC; /* link row seperators */
+}
+.shuttermenu_workarea a.ekmenu_link_selected:hover {
+	/* A; selected and hovered version of ekmenu_link, see above... */
+	/* Typical parent element: div.ekmenu_submenu_items, or else */
+	/* li.ekmenu_unorderedlist_item if 508-Compliance is enabled. */
+    padding: 0px 0px; /*padding: 5px 0px; *//* set all to zero for images */
+    text-indent: 10px;
+	color: #C6D3FF;
+    background: #A18D51;
+    border-color : #A18D70;
+	display: block; 
+	width: 100%;
+    border-bottom: 1px solid #DCDCDC; /* link row seperators */
+}

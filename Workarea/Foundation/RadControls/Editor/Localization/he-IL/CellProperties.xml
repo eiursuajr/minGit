@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">מאפייני תא</string>
+	<string id="Tab1HeaderText">מאפייני תא</string>
+	<string id="Dimensions">מימדים</string>
+	<string id="Height">:גובה</string>
+	<string id="Width">:רוחב</string>
+	<string id="ContentAlignment">יישור תוכן</string>
+	<string id="Horizontal">:אנכי</string>
+	<string id="Left">שמאל</string>
+	<string id="Center">מרכז</string>
+	<string id="Right">ימין</string>
+	<string id="Vertical">:אופקי</string>
+	<string id="Middle">אמצע</string>
+	<string id="Top">עליון</string>
+	<string id="Bottom">תחתון</string>
+	<string id="Baseline">בסיס השורה</string>
+	<string id="Background">רקע</string>
+	<string id="UseColor">:השתמש בצבע</string>
+	<string id="Black">שחור</string>
+	<string id="Blue">כחול</string>
+	<string id="Green">ירוק</string>
+	<string id="Orange">כתום</string>
+	<string id="Red">אדום</string>
+	<string id="White">לבן</string>
+	<string id="Yellow">צהוב</string>
+	<string id="Custom">מותאם אישית</string>
+	<string id="Customh"> - מותאם אישית</string>
+	<string id="Update">עדכן</string>
+	<string id="Cancel">בטל</string>
+	<string id="Additional">נוסף</string>
+	<string id="NoWrapping">ללא כיסוי</string>
+	<string id="CellCss">Cell CSS</string>
+	<string id="CssClass">CSS Class:</string>
+	<string id="Style">:סגנון</string>
+	<string id="MessageStyle">.אנא, ספק ערך סגנון חוקי</string>
+	<string id="PromptColor">:(Hex) אנא ספק את קוד הצבע</string>
+	<string id="AddCustomColor">...הוסף צבע מותאם אישית</string>
+	<string id="AddHexColor">...(Hex) הוספת צבע</string>
+	<string id="BackgroundImage">תמונת רקע</string>
+	<string id="ClearStyle">ללא מחלקה</string>
+</localization>

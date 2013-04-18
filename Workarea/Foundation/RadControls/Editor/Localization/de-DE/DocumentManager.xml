@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<string id="Title">Datei-Manager</string>
+	<string id="ConfirmDelete">Wollen Sie diese Datei wirklich löschen?\nSie ist möglicherweise in Verwendung. Wenn Sie gelöscht ist, werden einige Seiten möglicherweisse nicht korrekt dargestellt.\nDrücken Sie \"OK\" um das Löschen zu bestätigen.</string>
+	<string id="Alertfile">Bitte geben Sie eine Datei zum Hochladen an!</string>
+	<string id="Alertvalid">Bitte geben Sie eine gültige Datei zum Hochladen an!</string>
+	<string id="Alertexists">Eine gleichnamige Datei existiert bereits in diesem Verzeichnis!</string>
+	<string id="MessageNothingPost">Bitte geben Sie eine Datei an!</string>
+	<string id="MessageValid">Bitte geben Sie eine gültige Datei an!</string>
+	<string id="MessageSize">Die Datei überschreitet die maximal erlaubte Dateigrösse!</string>
+	<string id="Tab1HeaderText">Datei Eigenschaften</string>
+	<string id="Tab2HeaderText">hochzuladende Datei</string>
+	<string id="DocumentDirectory">Dateiverzeichnis:</string>
+	<string id="DocumentFile">Dateiname:</string>
+	<string id="Tooltip">Hinweistext:</string>
+	<string id="Target">Ziel:</string>
+	<string id="SelectDirectory">Verzeichnis auswählen</string>
+	<string id="Note">Notiz:</string>
+	<string id="ShowProperties">Eigenschaften anzeigen</string>
+	<string id="ChooseFileToInsert">Bitte wählen Sie eine Datei zum Einfügen</string>
+	<string id="NoDocumentSelectedToInsert">Bitte wählen Sie ein Dokument, einzufügen!</string>  
+</localization>

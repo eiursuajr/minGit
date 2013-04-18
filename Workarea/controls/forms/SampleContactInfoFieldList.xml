@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<fieldlist>
+  <field name="Subject" datatype="string" basetype="text" xpath="*/Subject" title="Subject">Subject</field>
+  <field name="Name" datatype="string" basetype="text" xpath="*/Name" title="Full Name">Full Name</field>
+  <field name="Address" datatype="string" basetype="text" xpath="*/Address" title="Address">Address</field>
+  <field name="City" datatype="string" basetype="text" xpath="*/City" title="City">City</field>
+  <field name="State" datatype="choice" basetype="text" xpath="*/State" title="State" datalist="USPS-US">State</field>
+  <field name="Zip" datatype="ZipCode" basetype="text" xpath="*/Zip" title="Zip">Zip</field>
+  <field name="Country" datatype="string" basetype="text" xpath="*/Country" title="Country">Country</field>
+  <field name="BusinessPhone" datatype="phoneUSCA" basetype="text" xpath="*/BusinessPhone" title="Business Telephone Number">Business Phone</field>
+  <field name="HomePhone" datatype="phoneUSCA" basetype="text" xpath="*/HomePhone" title="Home Telephone Number">Home Phone</field>
+  <field name="Email" datatype="email" basetype="text" xpath="*/Email" title="Email Address">Email Address</field>
+  <datalist name="USPS-US" ektdesignns_datasrc="uspsus.xsd" ektdesignns_dataselect="/xsd:schema/xsd:simpleType/xsd:restriction/xsd:enumeration" ektdesignns_captionxpath="xsd:annotation/xsd:documentation" ektdesignns_valuexpath="@value" ektdesignns_datanamespaces="xmlns:xsd='http://www.w3.org/2001/XMLSchema'"/>
+</fieldlist>

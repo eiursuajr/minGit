@@ -1,0 +1,109 @@
+/*<meta />*/
+
+/*COPIED FROM SITE STYLES - set styles for the workarea and for content display on site*/
+
+body
+{
+	font-family: Arial, Helvetica, sans-serif;
+	color: #3C3E42;
+	font-size: 75%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+{
+	color: #3C3E42;
+}
+
+a:focus,
+a:hover
+{
+	color: #399BC0;
+	text-decoration: underline;
+}
+
+a
+{
+	color: #399BC0;
+	text-decoration: none;
+}
+
+/* Form Styles */
+
+p
+{
+	margin-bottom: .25em;
+}
+
+.center
+{
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* End Form Styles */
+
+/*  END - COPIED FROM SITE STYLES -  */
+
+h1.contentTitle
+{
+	color: #3C3E42;
+	font-size: 1.5em;
+	margin-bottom: .5em;
+	line-height: 1.2;
+}
+
+h1.title,
+h2.title,
+h3.title,
+h4.title,
+h5.title,
+h6.title
+{
+	color: #3C3E42;
+	font-size: 1.1em;
+	line-height: 1.2;
+	margin-bottom: .5em;
+	font-weight: bold;
+}
+
+thead th
+{
+	background: #bcddea;
+	color: #3C3E42;
+}
+
+input.textField
+{
+	border: 1px solid #A1A3A4;
+	vertical-align: middle;
+}
+
+p.MyStyle
+{
+	font-family: Arial;
+	font-size: 12pt;
+	margin: 0px;
+}
+
+a.Popup
+{
+	
+}
+
+@media print
+{
+	
+}
+
+img
+{
+	border: solid;
+	border-style: none;
+}
+

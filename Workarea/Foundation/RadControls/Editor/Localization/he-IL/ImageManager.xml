@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">מנהל תמונה</string>
+	<string id="ConfirmLink">?האם לקשר בין התמונה הממוזערת לבין המקורית</string>
+	<string id="ConfirmDelete">האם אתה בטוח שברצונך למחוק את הקובץ שנבחר?\nיתכן שהמסמך שנחבר נמצא בשימוש. אם המסמך יימחק יתכן ומספר דפים לא יוצגו כראוי\nלחץ אישור כדי להמשיך במחיקה</string>
+	<string id="AlertImage">!אנא, ספק את קובץ התמונה להעלאה</string>
+	<string id="AlertExists">!קובץ התמונה שנבחר כבר קיים בספרייה </string>
+	<string id="AlertDimensions">.אנא, ספק רוחב התמונה הממוזערת או גובה התמונה הממוזערת</string>
+	<string id="AlertWidth">אנא, ספק רוחב תמונה חוקי</string>
+	<string id="AlertHeight">אנא, ספק גובה תמונה חוקי</string>
+	<string id="MessageNothingPost">!אנא, ספק קובץ תמונה</string>
+	<string id="MessageValid">!אנא, ספק קובץ תמונה חוקי</string>
+	<string id="MessageSize">גודל קובץ התמונה שסופק חורג מהגודל המותר</string>
+	<string id="MessagePermission">אין לך הרשאה להכנס לדף זה או שפג תוקף קובץ העוגייה שברשותך<br/>אנא רענן את הדף</string>
+	<string id="Tab1HeaderText">עיין בקבצים</string>
+	<string id="Tab2HeaderText">העלה תמונה</string>
+	<string id="ImageFile">:קובץ התמונה</string>
+	<string id="ImageURL">כתובת התמונה</string>
+	<string id="Preview">תצוגה מקדימה</string>
+	<string id="Loading">...טוען</string>
+	<string id="CreateThumbnail">:צור תמונה ממוזערת</string>
+	<string id="Yes">כן</string>
+	<string id="No">לא</string>
+	<string id="Width">:רוחב</string>
+	<string id="Height">:גובה</string>
+	<string id="Constrain">אילוץ</string>
+	<string id="KeepOriginalImage">:השאר תמונה מקורית</string>
+	<string id="LoadingImagePrompt">...טוען תמונה, המתן בבקשה</string>
+	<string id="BestFit">התאמה מירבית</string>
+	<string id="ActualSize">גודל ממשי</string>
+	<string id="ZoomIn">הגדלה</string>
+	<string id="ZoomOut">הקטנה</string>
+	<string id="ChooseFileToInsert">אנא בחר קובץ להכנסה</string>
+	<string id="CreateThumbnailIconTitle">צור תמונה ממוזערת</string>
+	<string id="LinkToOriginal">קישור למקור</string>
+	<string id="OpenOriginalInBlank">פתח את המקור בחלון חדש</string>
+</localization>

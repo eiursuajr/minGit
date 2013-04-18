@@ -1,0 +1,37 @@
+div.EktronPersonalizationWrapper .topmenuinputbox
+{
+	top: .15em;
+}
+
+div.EktronPersonalizationWrapper div#widgetlistWrapper
+{
+	position: relative; /* fix for IE overflow bug*/
+}
+
+/******************************** Drop Zone ************************************/
+
+div.PBColumn
+{
+	width: 100%;
+}
+
+div.EktronPersonalizationWrapper div#widgetlistWrapper
+{
+	position:absolute;
+}
+
+div.dropzone div.PBColumn ul.column
+{
+	min-width: 30px;
+	width: auto !important;
+	width: 30px;
+}
+
+div.PBColumn img.PB-UI-icon
+{
+	margin: .25em 0;
+}
+
+/********************************* Clear Fix *******************************/
+.PBClear {display: inline-block;}
+* html .PBClear {height: 1%;}

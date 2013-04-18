@@ -1,0 +1,4 @@
+﻿select, option 
+{
+	behavior: url(DisabledOptions.htc);
+}

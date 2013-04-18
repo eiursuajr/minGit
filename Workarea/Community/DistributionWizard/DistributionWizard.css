@@ -1,0 +1,8 @@
+﻿body{color: #000000; font-family: Arial;}
+#DistributionWizard {/*padding: 10px; */width: 100%; height: 100%;}
+#DistributionWizardStepHeader {border-bottom: solid 2px #000000; font-size:12px; font-weight:bold; margin-bottom: 10px;}
+#DistributionWizardStepTitle {font-size:14px; font-weight: bold; margin-bottom:10px;}
+#DistributionWizardContent {}
+#DistributionWizardFooter {text-align: right; margin-top: 10px;}
+.DistributionWizardErrorMessage {font-size:12px; font-weight: bold; color: #800000;}
+.DistributionWizardCenteredText {text-align: center;}

@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AlternateEnglishNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AlternateEnglishNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AlternateNativeNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AlternateNativeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BCP47Resource1.Text" xml:space="preserve">
+    <value>IETF BCP 47</value>
+  </data>
+  <data name="BCP47Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsRightToLeftResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkIsRightToLeftResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CultureDescResource1.Text" xml:space="preserve">
+    <value>The ASP.NET Culture specifies the region for formatting dates, times, currencies, etc. This value is assigned to the ASP.NET 'Culture' property.</value>
+  </data>
+  <data name="CultureRecResource1.Text" xml:space="preserve">
+    <value>Recommended:</value>
+  </data>
+  <data name="CustomCulturesDescResource1.Text" xml:space="preserve">
+    <value>On Windows Vista and later, the Microsoft Locale Builder may be used to create custom, supplemental ASP.NET cultures. 
+				Custom cultures are most helpful if no ASP.NET Culture matches either the language or the region, for example, eo-150 (Esperanto in Europe). 
+				Custom cultures may also be created for new combinations, for example, fr-US (French in U.S.). For information about custom cultures and the Locale Builder, see the following Ektron article:</value>
+  </data>
+  <data name="EnglishNameAltResource1.Text" xml:space="preserve">
+    <value>Alternate:</value>
+  </data>
+  <data name="EnglishNameDescResource1.Text" xml:space="preserve">
+    <value>Name of the locale in English.</value>
+  </data>
+  <data name="EnglishNameRecResource1.Text" xml:space="preserve">
+    <value>Recommended:</value>
+  </data>
+  <data name="FallbackLocDescResource1.Text" xml:space="preserve">
+    <value>Content will display in the fallback locale if it is not available in the specified locale. Only enabled locales may be selected.</value>
+  </data>
+  <data name="FallbackLocRecResource1.Text" xml:space="preserve">
+    <value>Recommended:</value>
+  </data>
+  <data name="FlagDescResource1.Text" xml:space="preserve">
+    <value>The flag provides a graphical icon to represent the locale. It may be language-centric or region-centric to minimize duplicates. Disabled flags are files that do not exist, but you may create one for the locale. Flag files must be 16x16 pixel GIF images in the flags folder.</value>
+  </data>
+  <data name="HyperLinkResource1.Text" xml:space="preserve">
+    <value>W3C Choosing a Language Tag</value>
+  </data>
+  <data name="HyperLinkResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkResource2.Text" xml:space="preserve">
+    <value>W3C Language tags in HTML and XML</value>
+  </data>
+  <data name="HyperLinkResource2.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkResource3.Text" xml:space="preserve">
+    <value>Language Subtag Lookup</value>
+  </data>
+  <data name="HyperLinkResource3.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HyperLinkResource4.Text" xml:space="preserve">
+    <value>Using Locale Builder to create custom locales</value>
+  </data>
+  <data name="HyperLinkResource4.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LanguageDescResource1.Text" xml:space="preserve">
+    <value>Select a language. When a country is selected, percentages shown for recommended languages refer to the population within that country who know that language, based on information in {0:yyyy}.</value>
+  </data>
+  <data name="LanguageSetResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblCultureResource1.Text" xml:space="preserve">
+    <value>ASP.NET Culture</value>
+  </data>
+  <data name="lblCultureResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblEnglishNameResource1.Text" xml:space="preserve">
+    <value>English Name</value>
+  </data>
+  <data name="lblEnglishNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFallbackLocResource1.Text" xml:space="preserve">
+    <value>Fallback Locale</value>
+  </data>
+  <data name="lblFallbackLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFlagFolderResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFlagFolderResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblFlagResource1.Text" xml:space="preserve">
+    <value>Flag Icon</value>
+  </data>
+  <data name="lblFlagResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLanguageResource1.Text" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="lblLanguageResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblLocResource1.Text" xml:space="preserve">
+    <value>Locale</value>
+  </data>
+  <data name="lblLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblNativeNameResource1.Text" xml:space="preserve">
+    <value>Native Name</value>
+  </data>
+  <data name="lblNativeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblPrivateUseSubtagResource1.Text" xml:space="preserve">
+    <value>Custom Ext.</value>
+  </data>
+  <data name="lblPrivateUseSubtagResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblRegionResource1.Text" xml:space="preserve">
+    <value>Region</value>
+  </data>
+  <data name="lblRegionResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblScriptSubtagResource1.Text" xml:space="preserve">
+    <value>Alphabet</value>
+  </data>
+  <data name="lblScriptSubtagResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblUICultureResource1.Text" xml:space="preserve">
+    <value>ASP.NET UICulture</value>
+  </data>
+  <data name="lblUICultureResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lblXmlLangResource1.Text" xml:space="preserve">
+    <value>Language Tag</value>
+  </data>
+  <data name="lblXmlLangResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ListItemResource1.Text" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="ListItemResource2.Text" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="ListItemResource3.Text" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="ListItemResource4.Text" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="ListItemResource5.Text" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="ListItemResource6.Text" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="ListItemResource7.Text" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="ListItemResource8.Text" xml:space="preserve">
+    <value>Common</value>
+  </data>
+  <data name="ListItemResource9.Text" xml:space="preserve">
+    <value>Show All</value>
+  </data>
+  <data name="litCustomCulturesResource1.Text" xml:space="preserve">
+    <value>Custom Cultures</value>
+  </data>
+  <data name="litLocRecResource1.Text" xml:space="preserve">
+    <value>Recommended:</value>
+  </data>
+  <data name="litLocReqResource1.Text" xml:space="preserve">
+    <value>Must be unique. Up to 20 letters, number, underscores (_) and dashes (-). No spaces.</value>
+  </data>
+  <data name="litUICultureRecResource1.Text" xml:space="preserve">
+    <value>Recommended:</value>
+  </data>
+  <data name="LocatorMapResource1.AlternateText" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocatorMapResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LocDescResource1.Text" xml:space="preserve">
+    <value>The locale is an alphanumeric key uniquely identifing this language-region combination. This value may be used for the 'loc' Url parameter. This value may be customized to your needs. It does not need to conform to international standards.</value>
+  </data>
+  <data name="lstCultureResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lstFallbackLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="lstUICultureResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="MachineTranslationDescResource1.Text" xml:space="preserve">
+    <value>When content is exported to this locale, it is translated using machine translation and immediately imported.</value>
+  </data>
+  <data name="MachineTranslationExtResource1.Text" xml:space="preserve">
+    <value>mt</value>
+  </data>
+  <data name="MachineTranslationNameResource1.Text" xml:space="preserve">
+    <value>(machine translation)</value>
+  </data>
+  <data name="MachineTranslationUndefinedResource1.Text" xml:space="preserve">
+    <value>No strategy for 'MachineTranslation' has been defined. The x-mt subtag will simply copy the content when exported.</value>
+  </data>
+  <data name="NativeNameAltResource1.Text" xml:space="preserve">
+    <value>Alternate:</value>
+  </data>
+  <data name="NativeNameDescResource1.Text" xml:space="preserve">
+    <value>Name of the locale in its native natural language, that is, what the people in that locale call their own language and region.</value>
+  </data>
+  <data name="NativeNameRecResource1.Text" xml:space="preserve">
+    <value>Recommended:</value>
+  </data>
+  <data name="PrivateUseSubtagDescResource1.Text" xml:space="preserve">
+    <value>The custom extension (i.e., private use subtag) is meaningful only within this system. The following are associated with objectFactory.config strategies.</value>
+  </data>
+  <data name="PseudoLocalizationDescResource1.Text" xml:space="preserve">
+    <value>When content is exported to this locale, it is converted to pseudo-language text and immediately imported.</value>
+  </data>
+  <data name="PseudoLocalizationExtResource1.Text" xml:space="preserve">
+    <value>pseudo</value>
+  </data>
+  <data name="PseudoLocalizationNameResource1.Text" xml:space="preserve">
+    <value>(pseudo localization)</value>
+  </data>
+  <data name="PseudoLocalizationUndefinedResource1.Text" xml:space="preserve">
+    <value>No strategy for 'PseudoLocalization' has been defined. The x-pseudo subtag will simply copy the content when exported.</value>
+  </data>
+  <data name="rblFlagResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RecommendedCultureResource1.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="RecommendedCultureResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RecommendedEnglishNameResource1.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="RecommendedEnglishNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RecommendedFallbackLocResource1.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="RecommendedFallbackLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RecommendedLocResource1.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="RecommendedLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RecommendedNativeNameResource1.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="RecommendedNativeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RecommendedUICultureResource1.Text" xml:space="preserve">
+    <value>?</value>
+  </data>
+  <data name="RecommendedUICultureResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegionSetResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RegionSubtagDescResource1.Text" xml:space="preserve">
+    <value>Select the geographical area most closely associated with the locale. The territory may be a single country or multinational region. When a language is selected, recommended countries are those where the language is spoken.</value>
+  </data>
+  <data name="revEnglishNameResource1.ErrorMessage" xml:space="preserve">
+    <value>Maximum of 50 characters</value>
+  </data>
+  <data name="revEnglishNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revEnglishNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revLocResource1.ErrorMessage" xml:space="preserve">
+    <value>* invalid</value>
+  </data>
+  <data name="revLocResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revNativeNameResource1.ErrorMessage" xml:space="preserve">
+    <value>Maximum of 50 characters</value>
+  </data>
+  <data name="revNativeNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revNativeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revPrivateUseSubtagResource1.ErrorMessage" xml:space="preserve">
+    <value>One to eight letters or numbers</value>
+  </data>
+  <data name="revPrivateUseSubtagResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="revPrivateUseSubtagResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="RFC5646Resource1.Text" xml:space="preserve">
+    <value>RFC 5646</value>
+  </data>
+  <data name="RFC5646Resource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvEnglishNameResource1.ErrorMessage" xml:space="preserve">
+    <value>* required</value>
+  </data>
+  <data name="rfvEnglishNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvEnglishNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvLocResource1.ErrorMessage" xml:space="preserve">
+    <value>* required</value>
+  </data>
+  <data name="rfvLocResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvNativeNameResource1.ErrorMessage" xml:space="preserve">
+    <value>* required</value>
+  </data>
+  <data name="rfvNativeNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="rfvNativeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SaveResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SaveResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScriptSubtagDescResource1.Text" xml:space="preserve">
+    <value>The alphabet specifies the set of letters and characters used to write the language.</value>
+  </data>
+  <data name="ScriptSubtagSelectorResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ScriptSubtagSetResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEnglishNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtEnglishNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLocResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNativeNameResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtNativeNameResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPrivateUseSubtagResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPrivateUseSubtagResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXmlLangResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtXmlLangResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UICultureDescResource1.Text" xml:space="preserve">
+    <value>ASP.NET UICulture specifies the natural language of resource strings. This value is assigned to the ASP.NET 'UICulture' property.</value>
+  </data>
+  <data name="UpdateResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UpdateResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="valLocResource1.ErrorMessage" xml:space="preserve">
+    <value>* must be unique</value>
+  </data>
+  <data name="valLocResource1.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="valLocResource1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="XmlLangDescP1Resource1.Text" xml:space="preserve">
+    <value>The language tag informs translators and browsers of the language and region of this content. 
+				This value must conform to the {0} (Best Current Practice), which at this date is defined by {1}.</value>
+  </data>
+  <data name="XmlLangDescP2Resource1.Text" xml:space="preserve">
+    <value>The alphabet is the script subtag of the language tag, however, the script subtag is omitted from the language tag when it is the presumed script. 
+				For example, English is presumed written in Latin letters.</value>
+  </data>
+  <data name="XmlLangDescP3Resource1.Text" xml:space="preserve">
+    <value>The custom extension is the private use subtag of the language tag, however, it should be avoided unless absolutely necessary.</value>
+  </data>
+  <data name="XmlLangDescP4Resource1.Text" xml:space="preserve">
+    <value>The following sites provide more information about language tags.</value>
+  </data>
+</root>

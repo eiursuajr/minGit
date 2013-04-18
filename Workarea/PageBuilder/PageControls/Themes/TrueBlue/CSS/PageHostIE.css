@@ -1,0 +1,126 @@
+div.EktronPersonalizationWrapper ul.ektronPersonalizationWidgetList li, .ektronPBWidgetTokenDrag {
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000000');
+}
+
+div.EktronPersonalizationWrapper ul.dropdown,
+div.EktronPersonalizationWrapper ul.dropdownProps { margin-left: 0; }
+
+/*IE9 supports rounded corners, so let's offset the dropdowns*/
+@media all and (min-width:0) {
+	div.EktronPersonalizationWrapper ul.dropdown,
+	div.EktronPersonalizationWrapper ul.dropdownProps { margin-left: 4px \0/; }
+}
+
+div.EktronPersonalizationWrapper div#widgetlistWrapper { position:absolute; }
+
+/******************************** Drop Zone ************************************/
+/*
+div.PBColumn
+{
+	width: 100%;
+}
+
+
+div.dropzone div.PBColumn ul.column
+{
+	min-width: 30px;
+	width: auto !important;
+	width: 30px;
+}
+
+div.PBColumn img.PB-UI-icon
+{
+	margin: .25em 0;
+}
+*/
+
+/* For IE6's broken box model and 3px float problem */
+div.PBColumn { *margin-right: -3px; }
+/* For IE7's percent width rounding problems */
+html>body div.PBColumn { *margin-right: -1px; }
+div.dropzone ul.columnwidgetlist div.widget { *width: 99%; }
+
+/* For IE6's broken box model and 3px float problem */
+div.PBViewing { *margin-right: -3px; }
+
+/* For IE7's percent width rounding problems */
+html>body div.PBViewing { *margin-right: -1px; }
+
+
+/********************************* Clear Fix *******************************/
+* html .PBClear {display: inline-block;}
+/*/.PBClear {display:block;}/**/
+* html .PBClear {height: 1%;}
+
+div.PBClear
+{
+	zoom:1;
+}
+
+*:first-child+html div.dropzone /* IE7 only */
+{
+	margin-bottom:.75em;
+}
+
+/*fix for disapearing background-image - ie7 only */
+*:first-child+html div.EktronPersonalizationWrapper .topmenu {zoom:1;}
+
+/*fix for unsized columns*/
+div.dropzone div.PBColumnUnsized div.widget > div > div.content
+{
+	min-width: 30px;
+	width: auto !important;
+	width: 30px;
+	min-height: 30px;
+	height: auto !important;
+	height: 30px;
+	padding-top: 23px;
+}
+
+*:first-child+html div.PBColumnUnsized div.widget > div > div.content /* IE7 only */
+{
+	max-width:100% !important;
+}
+
+div.dropzone div.PBColumnUnsized div.widget > div
+{
+	position:relative;
+}
+
+div.dropzone div.PBColumnUnsized div.widget > div > div.header
+{
+	position: absolute;
+	left:0px;
+	right:0px;
+}
+
+div.PBColumn ul.columnwidgetlist li.header,
+div.PBColumn ul.columnwidgetlist li.header span.position
+{
+	min-width: 50px;
+	width: auto !important;
+	width: 50px;
+}
+
+.ektronPBWidgetTokenDrag
+{
+    margin-top: -48px;
+}
+
+/*
+div.PBColumnOuter div.PBColumnUnsized > ul.column > li
+{
+	padding-top:0px;
+}
+
+
+
+div.PBColumnOuter div.PBColumnUnsized div.widget div.buttons span
+{
+	position:absolute;
+	right:28px;
+}
+*/

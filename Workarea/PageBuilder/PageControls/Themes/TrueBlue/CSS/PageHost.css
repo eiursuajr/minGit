@@ -1,0 +1,627 @@
+.topmenu *,
+div.EktronPersonalizationWrapper * {
+	font-family: Arial, Verdana, sans-serif !important;
+}
+div.EktronPersonalizationWrapper {
+	position:absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	z-index:9999;
+	line-height: 1.25em;
+}
+
+div.EktronPersonalizationWrapper a {outline: none;}
+div.EktronPersonalizationWrapper a:focus {-moz-outline-style: none;}
+div.EktronPersonalizationWrapper img { border: none; }
+
+div.EktronPersonalizationWrapper .topmenu {
+	background-image:url(../images/ScorpiusTopMenu.gif);
+	background-color:#71a9d4;
+	color:#005695;
+	font-weight: bold;
+	font-size:12px;
+	align: absmiddle;
+	padding:9px 0px 5px 8px;
+	margin:0;
+}
+div.EktronPersonalizationWrapper .topmenuitem {
+	margin-right: 4px;
+	padding: 5px 10px;
+	padding-bottom: 4px;
+	float:left;
+	border: solid 1px #bababa;
+	background: #fdfdfd url(../images/top_menu_button_bg.gif);
+	color: #555555;
+	font-size: 11px;
+	text-transform: uppercase;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	cursor: default;
+}
+
+div.EktronPersonalizationWrapper .topmenu .menuHover { background: #555555; color: #fdfdfd; }
+div.EktronPersonalizationWrapper .topmenuitem ul { z-index:99999; position:absolute; }
+
+div.EktronPersonalizationWrapper .topmenutext_right,
+div.EktronPersonalizationWrapper .topmenuitem_right { padding: 6px 16px; float:right; top: 9px; }
+
+div.EktronPersonalizationWrapper .topmenuitem_right a,
+div.EktronPersonalizationWrapper .topmenutext_right label { font-weight:normal; color: #444444; font-size: 11px; }
+
+div.EktronPersonalizationWrapper .topmenutext_right { position: absolute; right: 316px; } /*filter widget list label*/
+div.EktronPersonalizationWrapper .topmenuitem_right { position: absolute; right: 80px; background: url(../images/actionbar_divider.png) no-repeat right center; } /*logout*/
+
+div.EktronPersonalizationWrapper .MenuToggle {
+	position:absolute;
+	left:100%;
+	top:0;
+	width:12px;
+	height:30px;
+}
+div.EktronPersonalizationWrapper .MenuOpened {
+	position:absolute;
+	right:24px;
+	left:auto;
+}
+div.EktronPersonalizationWrapper .MenuTack {
+	position:absolute;
+	right:46px;
+	width:20px;
+	left:auto;
+	top:15px;
+}
+div.EktronPersonalizationWrapper .MenuToggle img { border:none; }
+
+.widgetModalDraggable {cursor: move;}
+.widgetModalDraggable .ektronModalBody {cursor: auto;}
+
+/******************************** Menu Icons ************************************/
+ul.dropdown li a.valid, ul.dropdown li a.invalid { display: inline-block; background-repeat: no-repeat; }
+/*#PBNew a {background-image: url('../images/icon_add.png');}
+#PBNew a.invalid {background-image: url('../images/icon_add_off.png');}
+#PBCopy a {background-image: url('../images/icon_saveas.png');}
+#PBCopy a.invalid {background-image: url('../images/icon_saveas_off.png');}
+#PBEdit a {background-image: url('../images/document_published.png');}
+#PBEdit a.invalid {background-image: url('../images/document_published_off.png');}
+#PBSave a, #PBSave a.invalid {background-image: url('../images/icon_save.png');}
+#PBCheckin a {background-image: url('../images/document_checkin.png');}
+#PBCheckin a.invalid {background-image: url('../images/document_checkin_off.png');}
+#PBPublish a {background-image: url('../images/document_published.png');}
+#PBPublish a.invalid {background-image: url('../images/document_published_off.png');}
+#PBCancel a {background-image: url('../images/icon_remove.png');}
+#PBCancel a.invalid {background-image: url('../images/icon_remove_off.png');}
+#PBViewPublishedCheckedIn a {background-image: url('../images/arrowLeft.png');}
+#PBViewPublishedCheckedIn a.invalid {background-image: url('../images/arrowLeftOff.png');}
+#PBProperties a, #PBPreview a {background-image: url('../images/document_published.png');}
+#PBProperties a.invalid, #PBPreview a.invalid {background-image: url('../images/document_published_off.png');}
+#PBWorkarea a {background-image: url('../images/toolbox.png');}
+#PBAnalytics a {background-image: url('../images/chartBar.png');}
+
+#PBPagesHelp a {background-image: url('../images/icon_add_help.png');}
+#PBLayoutHelp a {background-image: url('../images/layout_content_help.png');}
+#PBLaunchHelp a {background-image: url('../images/icon_help_over.png');}*/
+
+div.EktronPersonalizationWrapper .searchbox_alignright {
+	margin:0 10px;
+	width:182px;
+	float:right;
+	position: absolute;
+	right: 135px;
+	background: url(../images/actionbar_divider.png) no-repeat right center;
+}
+div.EktronPersonalizationWrapper .searchbutton {
+	background:url(../images/SearchboxButton.png) 0 0 no-repeat;
+	border:none;
+	width:14px;
+	height:14px;
+	font-size:2px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 5px;
+	right: 24px;
+}
+div.EktronPersonalizationWrapper .topmenuinputbox {
+	border: 1px solid #cdcdcd !important;
+	height:15px;
+	width:136px !important;
+	min-width: 136px !important;
+	font-size:10px;
+	position: relative;
+	top: 0;
+	left: .25em;
+}
+div.EktronPersonalizationWrapper .clear { clear:both; height:0; }
+
+div.EktronPersonalizationWrapper div#widgetlistWrapper {
+	overflow:hidden;
+	border: none;
+	left:24px;
+	right:24px;
+}
+	
+div.EktronPersonalizationWrapper a.scrollRight,
+div.EktronPersonalizationWrapper a.scrollLeft {
+	text-decoration:none;
+	font-size:xx-small;
+	margin-top:0px;
+	margin-left: 0;
+	display: block;
+	float:left;
+	width:58px;
+	height:101px;
+	z-index:10;
+	position:absolute;
+	top: 41px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+div.EktronPersonalizationWrapper a.scrollRight { background-image: url('../images/scrollLeft.png'); left: 0; }
+div.EktronPersonalizationWrapper a.scrollRight:hover { background-image:url('../images/scrollLeftHover.png'); }
+
+div.EktronPersonalizationWrapper a.scrollLeft { background-image: url('../images/scrollRight.png'); right:0; }
+div.EktronPersonalizationWrapper a.scrollLeft:hover { background-image: url('../images/scrollRightHover.png'); }
+
+div.EktronPersonalizationWrapper .controldashboard {
+	height:100px;
+	background: #ffffff url(/WorkArea/personalization/css/images/widgetTrayWorkareaBackground_small.png);
+	border:1px solid #cdcdcd;
+	border-bottom-color: #ffffff;
+	display:none;
+	overflow:hidden;
+	margin: 0 auto;
+	padding: 0px 24px;
+}
+
+/*in workarea, settings > config > personalizations > targeted content > add*/
+.workarea-targeted-content div.EktronPersonalizationWrapper a.scrollRight,
+.workarea-targeted-content div.EktronPersonalizationWrapper a.scrollLeft { top: 1px; }
+
+div.EktronPersonalizationWrapper .controldashboardbottom {
+	z-index:10000;
+	height:12px;
+	background:url(../images/pullchainbackground.png) repeat-x 0 0;
+}
+div.EktronPersonalizationWrapper .pullchain {	
+	
+	text-align:center;
+	
+}
+div.EktronPersonalizationWrapper .pullchain img { border: none; position: relative; top: -8px; }
+div.EktronPersonalizationWrapper ul.dropdown,
+div.EktronPersonalizationWrapper ul.dropdownProps {
+	display: none;
+	list-style: none;
+	font-weight: normal;
+	color: #555555;
+	background: #ededed url(../../../../../images/UI/menu/dropdown-background.gif) repeat-x 0 0;
+	width: 150px;
+	border: solid 1px #bfbfbf;
+	border-top-color; #cdcdcd;
+	margin:10px 0 0 4px;
+	padding: 18px 0;
+	text-transform: none;
+}
+div.EktronPersonalizationWrapper ul.dropdownProps { width: 300px; padding: 18px 24px; }
+
+div.EktronPersonalizationWrapper li.dropdown a,
+div.EktronPersonalizationWrapper li.dropdown2 a,
+div.EktronPersonalizationWrapper li.dropdownProps a {
+	padding: 3px 24px;
+	text-transform: none;
+	color: #222222;
+	text-decoration: none;
+	font-size: 12px;
+	color: #555555;
+	display: block;
+	text-transform: none;
+}
+
+div.EktronPersonalizationWrapper li.dropdown2 a { padding-left: 36px; }
+
+div.EktronPersonalizationWrapper ul.dropdown li.dropdown:hover a,
+div.EktronPersonalizationWrapper ul.dropdown li.dropdown2:hover a { color: #ffffff; background: #3767af url(../../../../../images/UI/over_tab.gif) repeat-x 0 0; }
+
+div.EktronPersonalizationWrapper ul.dropdown a.invalid,
+div.EktronPersonalizationWrapper ul.dropdown li:hover a.invalid { color:#aaaaaa; }
+
+div.EktronPersonalizationWrapper ul.dropdown img { border: none; }
+
+div.EktronPersonalizationWrapper table#PBPropsTable span.label { margin-right: 2em; }
+
+div.EktronPersonalizationWrapper ul.ektronPersonalizationWidgetList {
+	padding:0px;
+	list-style-type:none;	
+	margin: 0px;
+	height: 100px;
+	position: relative;
+}
+
+div.EktronPersonalizationWrapper ul.ektronPersonalizationWidgetList li, .ektronPBWidgetTokenDrag {
+	float:left;
+	cursor: move;
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 10px 5px;
+	overflow: hidden;
+	padding: 0;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	background: #ffffff;
+	border: 1px solid #a0a0a0;
+	
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,.15);
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.15);
+	box-shadow: 1px 1px 1px rgba(0,0,0,.15);
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+div.EktronPersonalizationWrapper ul.ektronPersonalizationWidgetList li img, .ektronPBWidgetTokenDrag img {
+	height: 48px;
+	margin: 5px auto;
+	width: 48px;
+}
+
+div.EktronPersonalizationWrapper ul.ektronPersonalizationWidgetList li span, .ektronPBWidgetTokenDrag span {
+	color: #555555;
+	display:block;
+	font-size:8px;
+	overflow:hidden;
+	text-align:center;
+	width:80px;
+	letter-spacing: 1px; 
+	white-space:nowrap;
+}
+
+div.EktronPersonalizationWrapper ul.ektronPersonalizationWidgetList li.hover span, .ektronPBWidgetTokenDrag span { color: #444444; }
+
+/******************************** Drop Zone ************************************/
+
+div.PBDZhasHeader { border: solid 1px #BBBBBB; }
+
+div.PBDZhasHeader > .PBDZHeader {
+	background-color:#BBBBBB;
+	height:16px;
+	text-align:right;
+	padding:3px 4px 3px 0px;
+}
+
+input.PBAddColumn {
+	border-width:0;
+	height:12px;
+	vertical-align:middle;
+	width:12px;
+	margin:2px 0px 2px 2px;
+}
+input.PBAddColumn:hover { background-image: url('../images/addcolumn_on.png'); }
+
+a.masterzoneselect {
+	vertical-align:middle;
+	padding-top:2px;
+}
+
+/*a.PBAddColumn:hover {background-color:#E6EFC2; border:1px solid #C6D880; color:#529214;}*/
+
+body > div.setSize, body > div.setMaster {
+	font-size: 12px; 
+	display: none;
+	position: absolute;
+	background-color: #fff;
+	border: solid 1px #c9d3db;
+	width: 24.5em; 
+	padding: .2em .5em;
+	z-index: 9999;
+}
+
+body > div.setSize a, body > div.setMaster a { font-size: .9em; }
+
+body > div.setSize .newwidth
+{
+	width: 5em;
+	margin-right: .25em
+}
+
+.dropzone {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;	
+}
+
+div.dropzone div.PBColumn ul.columnwidgetlist
+{
+	min-height: 200px;
+	height: auto !important;
+	height: 10px;
+	
+	text-align: right;
+	
+	min-width: 50px;
+	width: auto !important;
+	width: 50px;
+	
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	
+	margin:0;
+	padding:0;
+	list-style-type: none;
+	
+	background-position:top;
+	background-image:url(../images/header-background.png);
+	background-repeat:repeat-x;
+	border: 1px solid #BBBBBB;
+}
+
+div.PBColumn {
+	float:left;
+	margin: 0;
+	margin-bottom:0.75em;
+}
+div.dropzone ul.columnwidgetlist div.widget {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+div.dropzone div.PBColumn ul.highlight { border: dashed 3px orange; }
+
+div.PBColumn ul.columnwidgetlist li.header {
+	margin: 0;
+	padding: 0;
+	height: 19px;
+	overflow:hidden;
+	text-align:right;
+}
+
+div.PBColumn ul.columnwidgetlist li.header .columnwidgetcaption
+{
+	float: left;
+	margin-left: 3px;
+	color: White;
+	font-size: 14px; /* parent is 19px high */
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+div.PBColumn ul.columnwidgetlist li.header a
+{
+	text-decoration: none;
+}
+
+/*
+div.PBColumn ul.columnwidgetlist li.header > span
+{
+	text-align:right;
+	display:block;
+	height: 19px;
+	background: #5c8eb3;
+}
+*/
+
+div.PBColumn li.header img
+{
+	border-width: 0;
+	margin-right: 2px;
+	margin-bottom: 4px;
+}
+
+div.PBColumn ul.columnwidgetlist > li
+{
+	background: transparent none no-repeat scroll 0 0;
+	margin: 0 0.75em 0.75em 0.75em;
+	padding: 0.75em 0 0 0;
+	text-align: left;
+}
+
+div.PBUnsizable ul.columnwidgetlist > li
+{
+	background: transparent none no-repeat scroll 0 0;
+	margin: 0;
+	padding: 0.75em 0 0 0;
+}
+
+div.PBColumn ul.columnwidgetlist > li.DropArea
+{
+	background-image:url(../images/dropzonepattern.png);
+	border:2px solid #f7a11a;
+	text-align:center;
+	font-size:20px;
+}
+
+div.PBColumn ul.columnwidgetlist > li.DropArea > span
+{
+	display: block;
+	margin:5px auto;
+	padding: 0 1em;
+	color: #ff7900;
+}
+
+div.PBColumn div.widget > div
+{
+	border-left: solid 3px #6f6f6f; 
+	border-right: solid 3px #6f6f6f; 
+	border-bottom: solid 3px #6f6f6f; 
+	background-color: White;
+	overflow: hidden;
+}
+
+div.PBColumn div.widget div.header
+{
+	background-color:#6f6f6f;
+	text-align:right;
+	cursor:move;
+	height:20px;
+}
+
+div.PBColumn div.widget div.header span
+{
+	float:left;
+	color: #CCC;
+	margin-top: .25em;
+	position:absolute;
+	right:60px;
+	left:0px;
+	overflow:hidden;
+	text-align:left;
+	line-height:20px;
+	font-size: 12px;
+}
+
+div.PBColumn div.widget div.header img
+{
+	border-width:0px;
+	cursor: pointer;
+}
+
+div.PBColumn div.widget div.content
+{
+	margin:10px;
+}
+
+div.PBUnsizable div.widget div.content
+{
+	margin: 5px 0px 3px 0px;
+}
+
+div.PBColumn div.widget div.header div.buttons
+{
+	overflow:hidden;
+	position:relative;
+}
+
+div.PBColumn div.widget div.header div.buttons a
+{
+	line-height:20px;
+	padding-top: .25em;
+	text-decoration: none;
+}
+
+li.ui-sortable-helper
+{
+	list-style-type:none;
+}
+
+div.ui-resizable{
+	position: relative;
+}
+div.PBColumn div.ui-resizable-handle
+{
+	position: absolute;
+	font-size: 0.1px;
+	z-index: 99999; 
+	display: block;
+	cursor: e-resize;
+	right:0px;
+	top:19px;
+	height:auto;
+	width:4px;
+	bottom:0px;
+	background-color:#ccc;
+}
+div.PBColumn .ui-resizable-disabled .ui-resizable-handle, div.PBColumn .ui-resizable-autohide .ui-resizable-handle { display: none; }
+
+div.PBColumn img.PB-UI-icon
+{
+	width: 12px;
+	height: 12px;
+	vertical-align: middle;
+}
+
+/********************************* Viewing Mode *******************************/
+
+
+div.dropzone div.PBViewing ul.columnwidgetlist
+{
+	border: solid 0px;
+	margin:0;
+	padding:0;
+	list-style-type: none;
+}
+
+div.PBViewing
+{
+	float:left;
+	margin:0;
+}
+
+
+div.PBViewing ul.columnwidgetlist > li
+{
+	margin: 0;
+	padding-top:0;
+}
+
+div.PBViewing div.widget div.header
+{
+	display:none;
+}
+
+div.PBViewing div.widget div.content
+{
+	margin:0;
+}
+
+
+/********************************* Error Mode *******************************/
+
+div.PBDropzoneError
+{
+	width:100%;
+	height:2em;
+	line-height:2em;
+	display:block;
+	text-align:center;
+	background-color:#EF8424;
+	color:#fff;
+	border: solid 1px #7C7C7C;
+}
+
+/********************************* BlockUI *********************************/
+
+div.PBBlockUI
+{
+	width: 66px;
+	height: 66px;
+	background: transparent;
+	margin: -33px 0 0 -33px;
+	background-image: url('../images/loading.gif');
+	display: none;
+}
+
+/********************************* Clear Fix *******************************/
+
+.PBClear:after 
+{
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+}
+
+.PBNonsortable div.buttons,.PBNonsortable .remColumn
+{
+	display: none !important;
+}
+
+.PBHighlight {border: 1px solid #fad42e; background: #fbec88 50% 50% repeat-x; color: #363636; }
+
+.widget100px
+{
+    height: 100px;
+}
+
+.widget50px
+{
+    height: 50px;
+}

@@ -1,0 +1,200 @@
+/*Micro Messaging*/
+
+.EkMicroMessageInput{background-color:#F7F7F7; border: 1px solid #D8DFEA; padding: .5em 0em;}
+.EkMicroMessageInput a {text-decoration:none;}
+.EkMicroMessageInput a:hover {text-decoration:underline;}
+.EkMicroMessageDisplay {width: 100%;}
+.EkMicroMessageDisplay{margin-top:1em;}
+
+.EkMicroMessageInput div.AddComment {margin: 0em; padding: 0em;}
+.EkMicroMessageInput div.AddComment h4 {background-image:url('../images/application/community/comment_add.gif'); margin: 2em 1em .25em 1em; background-repeat: no-repeat; background-position:0px 0px; min-height: 16px; height:auto !important; height: 16px;} /* extra height declarations for IE */
+.EkMicroMessageInput div.AddComment div.userInput {margin: 0em; padding: .5em 1em; text-align:center;}
+.EkMicroMessageInput div.AddComment div.userInput h6 {margin: 0; padding: 0em; font-size: .75em; color: #486AC5; font-weight: normal; text-align: left;} 
+.EkMicroMessageInput div.AddComment input {display:block; margin: 0 .5em .5em auto;}
+
+.EkMicroMessageInput div.AddComment div.userInput textarea.ContributionText 
+{
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #CCCCCC;
+	font-size:1em;
+	height:3.5em;
+	margin:auto;
+	overflow-y:scroll;
+	width: 100%;
+	font-family: Verdana,Arial,sans-serif;
+}
+
+.EkMicroMessageInput div.MicroMessageSearch {margin: 0em; padding: 0em;}
+.EkMicroMessageInput div.MicroMessageSearch h4 {background-image:url('../images/application/community/comment_add.gif'); margin: 2em 1em .25em 1em; background-repeat: no-repeat; background-position:0px 0px; min-height: 16px; height:auto !important; height: 16px;} /* extra height declarations for IE */
+.EkMicroMessageInput div.MicroMessageSearch div.userSearch {margin: 0em; padding: .5em 1em; text-align:center;}
+.EkMicroMessageInput div.MicroMessageSearch input {display:block; margin: 0 .5em .5em auto;}
+.EkMicroMessageInput div.MicroMessageSearch div.userSearch textarea.ContributionText 
+{
+	background:#FFFFFF none repeat scroll 0 0;
+	border:1px solid #CCCCCC;
+	font-size:1em;
+	height:1.75em;
+	margin:auto;
+	overflow-y:scroll;
+	width: 100%;
+	font-family: Verdana,Arial,sans-serif;
+}
+.EkMicroMessageDisplay ul {list-style-type: none; margin: 0em; padding: 0em;}
+.EkMicroMessageDisplay ul li div.message {margin: 0 .25em .5em 52px;}
+.EkMicroMessageDisplay ul li div.message div.metaData {margin: 0; border-bottom: solid 1px #ccc; text-align: right;}
+.EkMicroMessageDisplay ul li div.message div.metaData span.time {white-space: nowrap; font-size: .75em; color: #666696;float:left;}
+.EkMicroMessageDisplay ul li div.message div.metaData span.time a {color: #666696;}
+
+
+.EkMicroMessageDisplay ul li div.message p.body {margin: .5em 0;overflow: auto; font-size:13px;font-weight:bold; font-family:Verdana,Arial,sans-serif; line-height: 1.5em;}
+
+.EkMicroMessageDisplay ul li div.message p.body .EkForceWrap{word-break: break-all; -moz-binding: url('../xml/moz_wordwrap.xml#wordwrap');}
+.EkMicroMessageDisplay ul li div.message p.body a.EkForceWrap:active, .EkMicroMessageDisplay ul li div.message p.body a.EkForceWrap:focus{outline: none;} /* fixes scrollbars appearing when focus and active status is brought to link in mozilla */
+
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message ul.commands {margin: 0em; padding: 0em; list-style-type: none; text-align: right; height: 16px;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message ul.commands li {display: inline; margin-right: .5em;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message ul.commands li a, .EkMicroMessageDisplay ul li div.message ul.commands li span {display: block; overflow: hidden; width: 16px; height: 16px; background-repeat: no-repeat; text-decoration: none; text-indent: 1000px;} 
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message ul.commands li.ekDeleteMessage a {background-image: url('../../images/UI/icons/delete.png');display:none;float: right;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message ul.commands li.ekReplyMessage a {background-image: url('../../images/UI/icons/reply.png');display:none;padding:0px 0.2em 0px 0px;float: right;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message ul.commands li.ekReplyToMessageText{text-align:left;float:left;padding-left:1em;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message ul.commands li.ekReplyToMessageText a{text-decoration: inherit;display:inline;text-indent:0px;} 
+
+.EkMicroMessageDisplay ul li.ekMicroMessage div.avatar {width: 48px; text-align: center; float: left;  }
+.EkMicroMessageDisplay ul li.ekMicroMessage div.avatar img.avatar {width: 48px; height: 48px; border:none;}
+.EkMicroMessageDisplay ul li.ekMicroMessage  {clear: both; display: block; margin: 0em 0em .75em 0em; border: solid 1px #ccc; background: #eee; padding: .25em; min-height: 48px; height:auto !important; height: 48px;} /* extra height declarations for IE */
+
+.EkMicroMessageDisplay ul li div.message span.username {display: block; float: left; white-space: nowrap; font-size: .75em; font-weight: bold; color: #666696;}
+.EkMicroMessageDisplay ul li div.message span.username span.colon{display: inline-block; margin: 0 .5em 0 0; padding: 0;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message:hover ul.commands li.ekDeleteMessage a, .EkMicroMessageDisplay ul li.ekMicroMessage div.message:hover ul.commands li.ekReplyMessage a{display:block;}
+
+div.ekCommentError {color: red; font-size: 1em;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message div.ekReplySuccess {color:#529214 ; font-size: 1em;font-weight:bold;background-color:#E6EFC2;}  
+
+.EkMicroMessageDisplay div.MicroMessageNoSearchResults{background: #eee;font-size:medium;} 
+/*Reply*/
+
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message p.body {margin: .25em 0em; overflow: auto; font-size:10px; line-height: 1.75em;}
+
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message p.body .EkForceWrap{word-break: break-all; -moz-binding: url('../xml/moz_wordwrap.xml#wordwrap');}
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message p.body a.EkForceWrap:active, .EkMicroMessageDisplay ul li div.message p.body a.EkForceWrap:focus{outline: none;} /* fixes scrollbars appearing when focus and active status is brought to link in mozilla */
+
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies  div.message span.username {display: block; float: left; white-space: nowrap; font-size: .85em; font-weight: bold; color: #666696;}
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies  div.message div.metaData span.time {white-space: nowrap; font-size: .65em; color: #666696;}
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies  div.message div.metaData span.time a {color: #666696;}
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.avatar {width: 30px; text-align: center; float: left;*margin-top:.95em;margin-left:1em;}
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.avatar img.avatar {width: 30px; height: 30px; border:none;*margin-top:0.5em;}
+
+
+
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message ul.commands {margin: 0em; padding: 0em; list-style-type: none; text-align: right; height: 16px;}
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message ul.commands li {display: inline; margin-right: .5em;}
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message ul.commands li a, .ContributionForm ul li div.message ul.commands li span {display: block; float: right; overflow: hidden; width: 16px; height: 16px; background-repeat: no-repeat; text-decoration: none; text-indent: 1000px;} 
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message ul.commands li.ekDeleteMessage a {background-image: url('../../images/UI/icons/delete.png');}
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message ul.commands li.ekReplyMessage a {text-decoration:inherit;width:auto;height:auto;text-indent: 0px; }
+.EkMicroMessageDisplay ul li.ekMicroMessageReplies div.message ul.commands li span {background-image: url('../images/application/community/hourglass.gif'); border: 0px;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message a.ekMicroMsgOpenReplies{background:url('../../images/UI/Icons/arrowHeadRight.png');background-repeat:no-repeat;padding-left:15.5px;font-size:.85em;color:green;}
+.EkMicroMessageDisplay ul li.ekMicroMessage div.message a.ekMicroMsgCloseReplies{background:url('../../images/UI/Icons/arrowHeadDown.png');background-repeat:no-repeat;padding-left:15.5px;font-size:.85em;color:green;}
+
+/* Tab navigation */
+
+.EkMicroMessageTabs ul 
+{
+     border-collapse: collapse;
+     padding: 0;
+     white-space: nowrap;
+     list-style: none;
+     margin: 1px;
+     height: auto;
+     line-height: normal;
+     
+}
+
+.EkMicroMessageTabs li { display: inline; }
+
+.EkMicroMessageTabs li a 
+{
+      background-color: #C6C0C7;
+      border-color: #D8DFEA;
+      border-width: 1px;
+      border-style: solid solid none solid;
+      height: auto;
+      margin-right: 0.5em;
+      padding: 0 1em;
+      text-decoration: none;
+}
+
+.EkMicroMessageTabs li.active a 
+{
+     background-color: #F7F7F7;
+     border: 1px solid #bbb;
+     border-bottom: #D8DFEA 1px solid;
+}
+
+.EkMicroMessageTabs li a:hover 
+{
+	 background-color: #eee;
+	 border-color: #ccc;
+	 border-bottom-color: #eee;
+} 
+/*Reply Modal*/
+.ektronMicroMessageModal {font-size: 12px;}
+.ektronMicroMessageModal .ektronModalBody p.ekMicroMessageReplyTextAreaWrapper {margin: 0; padding: 0;}
+.ektronMicroMessageModal .ektronModalBody p.ekMicroMessageReplyTextAreaWrapper textarea {display: block; width: 99%; border: solid 1px #ccc; overflow: auto; font-size: 1em; font-family: Arial, sans-serif;}
+.ektronMicroMessageModal .ektronModalBody .ekMicroMessageCaption {display: block; font-size: .9em; color:#486AC5; text-align: right;}
+.ektronMicroMessageModal .ektronModalBody .ektronModalButtonWrapper {margin-top: .75em;}
+.ekMicroMessageReplyPanelButton{margin: 0;}
+.ektronMicroMessageModal .ektronModalBody .ekMicroMessageReplyPanelComment{margin: 0;}
+.ektronMicroMessageModal .ektronModalBody h4 {font-size: 1em; color:#486AC5; margin: 0 0 .25em; padding: 0;}
+.ektronMicroMessageModal .ektronModalBody .ekMicroMessageReplyButton {background-image:url("../../images//UI/Icons/Reply.png");}
+.ektronMicroMessageModal .ektronModalBody blockquote 
+{
+	font-style:italic; 
+	margin: .5em 0 1em;
+	padding: 0;
+	font-size: 1.2em;
+}
+.ektronMicroMessageModal .ektronModalBody blockquote span.bqStart, .ektronMicroMessageModal .ektronModalBody blockquote span.bqEnd 
+{
+	float: left;
+    height: 45px;
+    margin: -25px 6px -9px -10px; 
+    *margin: -25px -10px -50px -10px;
+    font-size: 600%;
+	font-family: Times New Roman, Serif; 
+	color: #E1E7F2; 
+}
+.ektronMicroMessageModal .ektronModalBody blockquote span.bqEnd 
+{
+	float: right;
+    height: 25px;
+    margin: -35px 0 0 -10px;
+    *margin: -35px -15px 0 -10px;
+}
+
+/* Paging */
+div.ekMicroMessagePaging {margin: 0em; width:100%; position: relative; overflow: hidden; height: 20px;}
+div.ekMicroMessagePaging h4 {margin: 0em 0em 0em .25em; font-size: 1em; margin-top: .25em; text-align: left;}
+div.ekMicroMessagePaging div.ekPageControl {position: absolute; top: -.25em; right: 0em; text-align: right; width: 80px;}
+div.ekMicroMessagePaging div.ekPageControl span {display: block; width: 20px; height: 20px; overflow: hidden; background-repeat: no-repeat; float: left;}
+div.ekMicroMessagePaging div.ekPageControl span a {background-image: none;}
+
+div.ekMicroMessagePaging div.ekPageControl span.but_first_disable {text-indent: 100px; background-image:url('../../images/application/but_first_d.gif'); background-position: -9px 0px;}
+div.ekMicroMessagePaging div.ekPageControl span.but_first{background-image:url('../../images/application/but_first.gif'); background-position: -9px 0px;}
+div.ekMicroMessagePaging div.ekPageControl span.but_first a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekMicroMessagePaging div.ekPageControl span.but_previous_disable{text-indent: 100px; background-image:url('../../images/application/but_prev_d.gif'); background-position: -6px 0px; }
+div.ekMicroMessagePaging div.ekPageControl span.but_previous{background-image:url('../../images/application/but_prev.gif'); background-position: -6px 0px;}
+div.ekMicroMessagePaging div.ekPageControl span.but_previous a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekMicroMessagePaging div.ekPageControl span.but_next_disable {text-indent: 100px; background-image:url('../../images/application/but_next_d.gif'); background-position: 0px 0px;}
+div.ekMicroMessagePaging div.ekPageControl span.but_next{background-image:url('../../images/application/but_next.gif'); background-position: 0px 0px;}
+div.ekMicroMessagePaging div.ekPageControl span.but_next a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekMicroMessagePaging div.ekPageControl span.but_last_disable {text-indent: 100px; background-image:url('../../images/application/but_last_d.gif'); background-position: 0px 0px;}
+div.ekMicroMessagePaging div.ekPageControl span.but_last{background-image:url('../../images/application/but_last.gif'); background-position: 0px 0px;}
+div.ekMicroMessagePaging div.ekPageControl span.but_last a{display: block; text-indent: 100px; height: 20px;}
+
+.messages {display: none; width: auto; margin-bottom: .5em;}
+.messages span {display: block; margin: .25em; padding: .5em .5em .5em 2em;}
+.messages span.wordbreak {display: inline; text-indent: -10000px; margin: 0; padding: 0; width: 0; overflow: hidden; font-size: 1px;}
+.error {background-color:#FBE3E4; border: 1px solid #FBC2C4; color:#D12F19; background-position: -475px -571px;}

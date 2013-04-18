@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Procedura guidata tabella</string>
+	<string id="Tab1HeaderText">Progettazione tabella</string>
+	<string id="Tab2HeaderText">Proprietà tabella</string>
+	<string id="Tab3HeaderText">Proprietà cella</string>
+	<string id="Layout">Layout</string>
+	<string id="Alignment">Allineamento:</string>
+	<string id="Columns">Colonne</string>
+	<string id="ColumnSpan">Span Colonna</string>
+	<string id="Rows">Righe</string>
+	<string id="RowSpan">Span riga</string>
+	<string id="CellSpacing">Spazio cella:</string>
+	<string id="CellPadding">Padding cella:</string>
+	<string id="Border">Bordo</string>
+	<string id="Size">Dimensione:</string>
+	<string id="Frame">Frame:</string>
+	<string id="Dimensions">Dimensioni</string>
+	<string id="Height">Altezza:</string>
+	<string id="Width">Larghezza:</string>
+	<string id="ContentAlignment">Allineamento della parte interna</string>
+	<string id="Horizontal">Orizzontale:</string>
+	<string id="Left">Sinistro</string>
+	<string id="Center">Centrato</string>
+	<string id="Right">Destro</string>
+	<string id="Vertical">Verticale:</string>
+	<string id="Middle">In mezzo</string>
+	<string id="Top">Alto</string>
+	<string id="Bottom">Basse</string>
+	<string id="Baseline">Baseline</string>
+	<string id="Background">Sfondo</string>
+	<string id="UseColor">Usa il colore:</string>
+	<string id="Black">Nero</string>
+	<string id="Blue">Blu</string>
+	<string id="Green">Verde</string>
+	<string id="Orange">Arancio</string>
+	<string id="Red">Rosso</string>
+	<string id="White">Bianco</string>
+	<string id="Yellow">Giallo</string>
+	<string id="Custom">Personalizzato</string>
+	<string id="Customh">Personalizzato - </string>
+	<string id="PromptColor">Per piacere, fornisci il codice HEX per il colore desiderato:</string>
+	<string id="Additional">Addizionali</string>
+	<string id="Content">Contenuto:</string>
+	<string id="NoWrapping">Nessun Wrapping</string>
+	<string id="Tab4HeaderText">Accessibilità</string>	
+	<string id="Sec508HeadingRows">Intestazione righe:</string>
+	<string id="Sec508HeadingCols">Intestazione colonne:</string>
+	<string id="Sec508Summary">Sommario:</string>
+	<string id="Sec508Caption">Etichetta:</string>
+	<string id="Sec508CaptionAlign">Allineamento etichetta:</string>
+	<string id="Sec508AssocCellHeaders">Associare le celle con le intestazioni</string>
+	<string id="TableBorderControlSizeOverflow">Stai cercando di impostare i bordi ad uno spessore più grande del consentito (1000). Verranno impostati a 1000.</string>
+	<string id="AddCustomColor">Aggiungi un colore personalizzato...</string>
+	<string id="AddHexColor">Aggiungi un colore con il codice Hex...</string>
+	<string id="InvalidTableWidth">Larghezza tabella non valida.</string>
+	<string id="InvalidTableHeight">Altezza tabella non valida.</string>
+	<string id="InvalidCellWidth">Larghezza cella non valida.</string>
+	<string id="InvalidCellHeight">Altezza cella non valida.</string>
+
+	<string id="Allsides">Tutti quattro i lati</string>
+	<string id="Rules">Righelli:</string>
+	<string id="Nosides">Nessun lato</string>
+	<string id="Norules">Nessun righello</string>
+	<string id="Lefthand">Solo lato per mancini</string>
+	<string id="Betweencolumns">Tra le colonne</string>
+	<string id="Righthand">Solo lato per destrosi</string>
+	<string id="Rightleft">Solo lato destro e sinistro</string>
+
+	<string id="Topbottom">Solo lato superiore e inferiore</string>
+	<string id="Topside">Solo lato superiore</string>
+	<string id="Betweenrows">Tra le righe</string>
+	<string id="Bottomside">Solo lato inferiore</string>
+
+	<string id="Betweenall">Tra tutte le righe e le colonne</string>
+	<string id="Betweengroup">Tra il gruppo riga e colonna</string>
+</localization>

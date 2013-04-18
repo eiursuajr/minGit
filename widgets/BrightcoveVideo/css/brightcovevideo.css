@@ -1,0 +1,872 @@
+
+div.ektronModalBody { max-height: 500px !important; } /* Fix to remove unnecessary scroll bars */
+
+.ektronWindow
+{
+    width: 100%;
+}
+
+.editWrapper
+{
+    margin-bottom: 20px;
+    position: relative;
+    height: 100%;
+}
+
+.ektronWidgetBrightcove 
+{
+    position:relative;
+}
+
+.ektronWidgetBrightcove .quickPublish
+{
+    height: 420px;
+}
+
+.ektronWidgetBrightcove .embedPane
+{
+    height: 420px;
+    display: none;
+}
+
+.ektronWidgetBrightcove .uploadPane
+{
+    height: 420px;
+    display: none;
+}
+
+.bcLoading
+{
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/loadIcon.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000;
+    position: absolute;
+    top: 0px;
+    -khtml-opacity: .30;
+    -moz-opacity: .30;
+    -ms-filter: "alpha(opacity=30)";
+    filter: alpha(opacity=30);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.3);
+    opacity: .30;
+}
+
+.ektronWidgetBrightcove
+{
+    width: 767px; /*height:455px;*/
+    color: #5b5b5b;
+    font-size: 12px;
+    font-family: "Trebuchet MS" , sans-serif;
+}
+
+.ektronWidgetBrightcove .settingsWrapper
+{
+    background-image: url("../images/intro_back.png");
+    background-repeat: no-repeat;
+    width: 767px;
+    height: 455px;
+}
+
+.ektronWidgetBrightcove .referralwrapper
+{
+    float: left;
+    width: 383px;
+}
+
+.ektronWidgetBrightcove .referralwrapper a
+{
+    display: block;
+    position: relative;
+    top: 212px;
+    left: 31px;
+    width: 322px;
+    height: 71px;
+}
+
+.ektronWidgetBrightcove .settingsFormWrapper
+{
+    float: left;
+    width: 338px;
+}
+
+.ektronWidgetBrightcove .settingsFromInner
+{
+    position: relative;
+    top: 102px;
+    left: -4px;
+}
+
+.ektronWidgetBrightcove .settingsFromInner table td.label
+{
+    font-size: 12px;
+    font-weight: bold;
+    color: #333;
+}
+
+.ektronWidgetBrightcove .settingsFromInner table td.data input
+{
+    width: 200px;
+}
+
+.ektronWidgetBrightcove .helpdata
+{
+    display: none;
+}
+
+.ektronWidgetBrightcove .help
+{
+    cursor: pointer;
+}
+
+.ektronWidgetBrightcove .cluetip-default, .cluetip-default #cluetip-outer
+{
+    background-color: #000;
+    border: 1px solid #ddd;
+}
+
+
+
+
+
+.ektronWidgetBrightcove .settingsFromInner table td.edit
+{
+}
+.ektronWidgetBrightcove .settingsIntro
+{
+     padding-left:10px;
+}
+.ektronWidgetBrightcove .settingsIntro h3, .editWrapper h3
+{
+    font-weight: bold;
+    font-size: 18px;
+    color: #000;
+    margin: 0px;
+}
+
+.ektronWidgetBrightcove .settingsIntro p.subHeader
+{
+    margin: 0px;
+}
+
+.ektronWidgetBrightcove .settingsIntro p.StepCounter
+{
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+}
+
+.ektronWidgetBrightcove a.bcButton
+{
+    background-color: #eeeeef;
+    border: 1px solid #ddd;
+    padding: 3px 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #808080;
+}
+
+.ektronWidgetBrightcove a.bcButton:hover
+{
+    color: #484848;
+}
+
+.ektronWidgetBrightcove .warningWrapper
+{
+    color: #db341d;
+    font-size: 12px;
+    width: 184px;
+    margin-right: 100px;
+    float: right;
+}
+
+.ektronWidgetBrightcove .tokenwarning
+{
+    display:block;
+}
+
+.ektronWidgetBrightcove .tokenError
+{
+    display:none;
+}
+
+.ektronWidgetBrightcove .tokenwarning .warningTitle
+{
+    font-weight: bold;
+}
+
+.ektronWidgetBrightcove .actionRow
+{
+    margin-top: 70px;
+    margin-right: 67px;
+    text-align: right;
+}
+
+.ektronWidgetBrightcove .editHeader
+{
+    margin-bottom: 10px;
+}
+
+.ektronWidgetBrightcove .editHeader h3
+{
+    float: left;
+}
+
+.ektronWidgetBrightcove .options span, .ektronWidgetBrightcove .options
+{
+    float: right;
+    color: #0f73b7;
+    font-weight: bold;
+    margin: 3px 5px;
+    cursor: pointer;
+}
+
+.ektronWidgetBrightcove .options span.sep
+{
+    margin:0px 0px 0px 18px;
+}
+
+.ektronWidgetBrightcove .executeSearch
+{
+    cursor: pointer;
+}
+
+.ektronWidgetBrightcove .borderfull
+{
+    border:1px solid #ddd;
+}
+
+.ektronWidgetBrightcove .borderbottom
+{
+    border-bottom:1px solid #ddd;
+}
+
+.ektronWidgetBrightcove .borderleft
+{
+    border-left:1px solid #ddd;
+}
+
+.ektronWidgetBrightcove .borderright
+{
+    border-right:1px solid #ddd;
+}
+
+.ektronWidgetBrightcove .playlistSearchInput, .ektronWidgetBrightcove .videoSearchInput, .ektronWidgetBrightcove .playlistList, .ektronWidgetBrightcove .playlistList, .ektronWidgetBrightcove .videoList, .ektronWidgetBrightcove .videoDetail
+{
+    float: left;
+}
+
+.ektronWidgetBrightcove .playlistSearchInput
+{
+    width: 176px;
+    height: 28px;
+    border-bottom:none;
+}
+
+.ektronWidgetBrightcove .videoSearchInput
+{
+    width: 75%;
+    height: 28px;
+    padding: 6px 0 2px;
+}
+
+.ektronWidgetBrightcove .videoSearchInput .searchOptions
+{
+    margin-top: 4px;
+    margin-left: 6px;
+    margin-right: 4px;
+}
+
+.ektronWidgetBrightcove .videoSearchInput input
+{
+    border: none;
+    height: 14px;
+    margin-top: 6px;
+}
+
+.ektronWidgetBrightcove .videoSearchInput .searchBorder
+{
+    border: 1px solid #ddd;
+    padding-bottom: 2px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 4px;
+    box-shadow: 0 0 3px #DDDDDD;
+}
+
+.ektronWidgetBrightcove .videoSearchInput img
+{
+    top: 0px;
+}
+
+
+.ektronWidgetBrightcove .videoSearchInput .searchInput
+{
+    width: 184px;
+    background: none;
+    box-shadow:none;
+}
+
+.ektronWidgetBrightcove .videoSearchInput .searchSort
+{
+    width: 128px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.ektronWidgetBrightcove .videoSearchInput .sortOrder
+{
+    width: 60px;
+    margin-top: 4px;
+    margin-left: 0;
+    margin-right: 4px;
+}
+
+.ektronWidgetBrightcove .playlistList
+{
+    width: 176px;
+    height: 320px;
+}
+
+.ektronWidgetBrightcove .videoList
+{
+    width: 397px;
+    height: 320px;
+    font-weight: bold;
+    position:relative;
+}
+
+.ektronWidgetBrightcove .playlistList, .ektronWidgetBrightcove .videoListList
+{
+    overflow: auto;
+}
+
+.ektronWidgetBrightcove .playlistList ul
+{
+    padding: 0px;
+    margin:0px;
+}
+
+.ektronWidgetBrightcove .videoListList ul
+{
+    padding: 0px;
+    margin:0px;
+}
+
+.ektronWidgetBrightcove .videoListList
+{
+    border-top: 1px solid #ddd;
+}
+
+.ektronWidgetBrightcove .playlistList ul li
+{
+    list-style: none;
+    height: 19px;
+    padding: 3px 0px 0px 8px;
+    margin:0px;
+    color: #333333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ektronWidgetBrightcove .videoListList ul li
+{
+    list-style: none;
+    height: 50px;
+    padding: 2px 0px 0px 8px;
+    margin:0px;
+    color: #333333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ektronWidgetBrightcove .playlistList ul li:hover, .ektronWidgetBrightcove .videoListList ul li:hover
+{
+    color: #FFF;
+    background-color: #0F73B7;
+}
+
+.ektronWidgetBrightcove .videoListList .oddVideoRow
+{
+    background-color: #EEEEEF;
+}
+
+.ektronWidgetBrightcove .playlistList ul li .videoCount
+{
+    color: #808080;
+    font-weight: normal;
+}
+
+.ektronWidgetBrightcove .playlistList ul li.selectedItem, .ektronWidgetBrightcove .playlistList ul li.selectedItem .videoCount, .ektronWidgetBrightcove .videoListList ul li.selectedItem
+{
+    background-color: #5C9CCC;
+    color: #FFF;
+}
+
+.ektronWidgetBrightcove .videoListList
+{
+    height: 297px;
+}
+
+.ektronWidgetBrightcove .videoList ul li span
+{
+    float: left;
+}
+
+.ektronWidgetBrightcove .videoList .bcName
+{
+    width: 57%;
+    height:100%;
+    overflow:hidden;
+}
+
+.ektronWidgetBrightcove .videoList .bcDate
+{
+   width: 29%;
+}
+
+.ektronWidgetBrightcove .videoListList .thumb
+{
+    width: 14%;
+    clear: both;
+}
+
+.ektronWidgetBrightcove .videoList .listheader
+{
+    background-color: #EEEEEF;
+    height: 19px;
+    padding-top: 4px;
+}
+
+.ektronWidgetBrightcove .videoList .listheader .bcName
+{
+    margin: 0px 141px 0px 65px;
+}
+
+.ektronWidgetBrightcove .videoListList ul li .thumb img
+{
+    width: 46px;
+    height: 46px;
+}
+
+.ektronWidgetBrightcove .videoListList ul li.noresults
+{
+    text-align:center;
+    color:Red;
+}
+.ektronWidgetBrightcove .videoListList ul li.noresults:hover
+{
+    background-color:Red;
+    color:#fff;
+}
+
+.ektronWidgetBrightcove .videoListList #loader
+{
+    text-align:center;
+}
+
+.ektronWidgetBrightcove .videoDetail
+{
+    width: 190px;
+    height: 320px;
+}
+
+.ektronWidgetBrightcove .videoInfo
+{
+    height: 273px;
+}
+
+.ektronWidgetBrightcove .videoSaveLink, .ektronWidgetBrightcove .videoCancelLink
+{
+    display:none;
+}
+
+.ektronWidgetBrightcove .properties .property
+{
+    float: left;
+    height: 21px;
+    width:50px;
+}
+
+.ektronWidgetBrightcove .properties .propertyValue
+{
+    float: right;
+    color: #333333;
+    font-weight: bold;
+    width:110px;
+    overflow:hidden;
+    max-height:21px;
+}
+
+.ektronWidgetBrightcove .properties input.propertyValue
+{
+    font-weight:normal;
+    font-size:11px;
+    max-height:14px;
+}
+
+.ektronWidgetBrightcove .properties .hiddenProperty
+{
+    display:none;
+    width:100px;
+}
+
+.ektronWidgetBrightcove .videoInfo
+{
+    padding: 8px;
+}
+
+.ektronWidgetBrightcove .videoDetail .videoInfo img
+{
+    width: 172px;
+    height: 120px;
+    display: block;
+    cursor:pointer;
+}
+
+.ektronWidgetBrightcove .videoDetail .videoInfo img:hover
+{
+    background-image: url("../images/loadIcon.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000;
+    -khtml-opacity: .75;
+    -moz-opacity: .75;
+    -ms-filter: "alpha(opacity=75)";
+    opacity: .75;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.75);
+    filter: alpha(opacity=75);
+}
+
+.ektronWidgetBrightcove .videoAction
+{
+    color: #0F73B7;
+    float: right;
+    cursor: pointer;
+    padding: 0px 5px;
+}
+
+.ektronWidgetBrightcove .playerSelection
+{
+    color: #333333;
+    font-weight: bold;
+    background-color: #EEEEEF;
+    border-top: 1px solid #ddd;
+    padding: 2px 0px 2px 4px;
+}
+
+.ektronWidgetBrightcove .playerSelection select
+{
+    width: 115px;
+}
+
+.ektronWidgetBrightcove .playerSelection img
+{
+    width: 16px;
+}
+
+
+.ektronWidgetBrightcove .previewVideoPlayer
+{
+    display:none;
+    position:absolute;
+    top:0;
+    width:480px;
+    height:272px;
+    background-color:#EEEEEF;
+}
+
+.ektronWidgetBrightcove .previewVideoPlayer iframe
+{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    border:none;
+}
+
+.ektronWidgetBrightcove .ekBCfooter
+{
+    margin-top: 15px;
+    height: 30px;
+}
+
+.ektronWidgetBrightcove .ekBCfooter .dimensions
+{
+    margin-left:30px;
+}
+
+.ektronWidgetBrightcove .ekBCfooter .dimensions input
+{
+    width:35px;
+}
+
+.ektronWidgetBrightcove .ekBCfooter .ekBCright
+{
+    height: 25px;
+}
+
+.ektronWidgetBrightcove .ekBCfooter .ekBCexternalLink
+{
+    font-style: italic;
+}
+
+.ektronWidgetBrightcove .ekBCfooter .ekBCexternalLink a
+{
+    color: #0f73b7;
+    font-weight: bold;
+}
+
+.ektronWidgetBrightcove .ekBCright
+{
+    float: right;
+}
+
+.ektronWidgetBrightcove .ekBCleft
+{
+    float: left;
+}
+
+.ektronWidgetBrightcove .uploadWrapper
+{
+	float:left;
+    width: 400px;
+}
+
+.ektronWidgetBrightcove .uploadWrapper input
+{
+    width: 224px;
+    text-align: left;
+}
+
+.ektronWidgetBrightcove .uploadWrapper .actionRow
+{
+    margin-top: 20px;
+}
+
+.ektronWidgetBrightcove .error
+{
+    color:Red;
+    font-weight:bold;
+    clear:both;
+    padding-top:20px;
+}
+
+.ektronWidgetBrightcove .uploadSuccess {
+    background-color: #E5FFE7;
+    border: 1px solid green;
+    clear: both;
+    color: Green !important;
+    display: block;
+    font-weight: normal !important;
+    margin: 50px 0 0;
+    padding: 10px !important;
+}
+
+.ektronWidgetBrightcove .embedInput
+{
+    width: 95%;
+    height: 250px;
+}
+
+.hiddenHelp
+{
+    display: none;
+}
+
+.cluetip-jtip
+{
+    font-family: Arial,sans-serif;
+    font-size: 12px;
+    color: #5B5B5B;
+}
+
+.cluetip-jtip a
+{
+    color: #0f73b7;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+.cluetip-jtip .helpTitle
+{
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom:5px;
+    color:#000;
+}
+
+.cluetip-jtip .helpBody
+{
+    margin-bottom:10px;
+}
+
+#cluetip
+{
+    z-index:9999 ! important;
+}
+
+/* global */
+div.ui-cluetip
+{
+    font-size: 1em;
+}
+.ui-cluetip-header, .ui-cluetip-content
+{
+    padding: 12px;
+}
+.ui-cluetip-header
+{
+    font-size: 1em;
+    margin: 0;
+    overflow: hidden;
+}
+
+#cluetip-title
+{
+    display:none;
+}
+
+#cluetip-title #cluetip-close
+{
+    float: right;
+    position: relative;
+}
+#cluetip-close img
+{
+    border: 0;
+}
+
+#cluetip-waitimage
+{
+    width: 43px;
+    height: 11px;
+    position: absolute;
+    background-image: url(../images/loadIcon.gif);
+}
+.cluetip-arrows
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -11px;
+    height: 22px;
+    width: 11px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+#cluetip-extra
+{
+    display: none;
+}
+
+
+.cluetip-jtip
+{
+    background-color: #fff;
+}
+.cluetip-jtip #cluetip-outer
+{
+    border: 2px solid #ccc;
+    position: relative;
+    padding: 10px;
+    padding-right:0px;
+}
+
+.cluetip-jtip #cluetip-inner
+{
+    padding: 0 5px 5px;
+    display: inline-block;
+}
+.cluetip-jtip div#cluetip-close
+{
+    text-align: right;
+    margin: 0 5px 0;
+    color: #900;
+}
+
+.cluetip-jtip .ui-cluetip-header
+{
+    background-color: #ccc;
+    padding: 6px;
+    margin-bottom: 1em;
+}
+
+/* jtip arrows */
+
+.clue-right-jtip .cluetip-arrows
+{
+    background-image: url(../images/arrowleft.gif);
+}
+.clue-left-jtip .cluetip-arrows
+{
+    background-image: url(../images/arrowright.gif);
+    left: 100%;
+    margin-right: -11px;
+}
+.clue-top-jtip .cluetip-arrows
+{
+    background-image: url(../images/arrowdown.gif);
+    top: 100%;
+    left: 50%;
+    margin-left: -11px;
+    height: 11px;
+    width: 22px;
+}
+.clue-bottom-jtip .cluetip-arrows
+{
+    background-image: url(../images/arrowup.gif);
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+    height: 11px;
+    width: 22px;
+}
+
+
+/*Start  of old*/
+.ektronWidgetBrightcove
+{
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position:relative;
+}
+
+/* clearfix */
+.ektronWidgetBrightcove .clearfix:after
+{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.ektronWidgetBrightcove .clearfix
+{
+    display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .ektronWidgetBrightcove .clearfix
+{
+    height: 1%;
+}
+.ektronWidgetBrightcove .clearfix
+{
+    display: block;
+}
+/* End hide from IE-mac */
+
+.DimensionsErrorDisplay
+{
+    position: relative; 
+    text-align: right !important; 
+    margin: 6px 10px 0 0;
+}
+
+.ektronWidgetBrightcove tbody tr:nth-child(2n) td, tbody tr.even td {
+    background: none;
+}

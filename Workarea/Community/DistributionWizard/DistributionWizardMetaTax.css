@@ -1,0 +1,13 @@
+﻿
+
+/* Metadata / Taxonomy tabbed navigation. */
+
+table.tabs {width:100%;}
+td.tabSpacer {width: 2%; margin: 0px; border-bottom: solid 1px Navy;}
+td.tabActivated {font-size: 12px; width:11%; background-color: #ffffff; margin: 0px; text-align:center; border-left: solid 1px Navy; border-right: solid 1px Navy; border-top: solid 1px Navy; padding: 2px; cursor: pointer; color: Navy; font-weight: bold;}
+td.tabDeactivated {font-size: 12px; width:11%; margin: 0px; background-color: #adc5ef; text-align:center; border: solid 1px Navy; padding: 2px; cursor: pointer; color: Navy; font-weight: bold;}
+td.tabFiller {width: 100%; border-bottom: solid 1px Navy;}
+div.visibleTabContents {position:inherit; min-height: 350px; left: 0px;}
+div.hiddenTabContents {position:absolute; left: -4000px; width:1px;}
+
+ul { list-style-type: none; }

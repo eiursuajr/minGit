@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Title">Bildeigenschaften</string>
+  <string id="Bytes">Bytes</string>
+  <string id="Customh">Benutzerdefiniert - </string>
+  <string id="PromptColor">Bitte geben Sie den HEX-Wert für die benutzerdefinierte Farbe an:</string>
+  <string id="Tab1HeaderText">Bildeigenschaften</string>
+  <string id="Tab2HeaderText">Bildinformationen</string>
+  <string id="BorderWidth">Rahmenbreite:</string>
+  <string id="NoBorder">Kein Rahmen</string>
+  <string id="BorderColor">Rahmenfarbe:</string>
+  <string id="NoColor">Keine Farbe</string>
+  <string id="Black">Schwarz</string>
+  <string id="Blue">Blau</string>
+  <string id="Green">Grün</string>
+  <string id="Orange">Orange</string>
+  <string id="Red">Rot</string>
+  <string id="White">Weiß</string>
+  <string id="Yellow">Gelb</string>
+  <string id="Custom">Benutzerdefiniert</string>
+  <string id="ImageAlign">Bildausrichtung:</string>
+  <string id="AbsoluteBottom">Absolut Unten</string>
+  <string id="AbsoluteMiddle">Absolut Mitte</string>
+  <string id="Baseline">Grundlinie</string>
+  <string id="Bottom">Unten</string>
+  <string id="Left">Links</string>
+  <string id="Middle">Mitte</string>
+  <string id="Right">Rechts</string>
+  <string id="TextTop">Textoberkante</string>
+  <string id="Top">Oben</string>
+  <string id="ImageWidth">Bildbreite:</string>
+  <string id="ImageHeight">Bildhöhe:</string>
+  <string id="ImageSize">Bildgrösse:</string>
+  <string id="FileName">Dateiname:</string>
+  <string id="Constrain">erzwingen</string>
+  <string id="Width">Breite:</string>
+  <string id="Height">Höhe:</string>
+  <string id="VerticalSpacing">Vertikaler Abstand:</string>
+  <string id="HorizontalSpacing">Horizontaler Abstand:</string>
+  <string id="OK">OK</string>
+  <string id="Cancel">Abbrechen</string>
+  <string id="AddCustomColor">Benutzerdefinierte Farbe hinzufügen</string>
+  <string id="ImageLongDesc">Ausführliche Beschreibung</string>
+  <string id="AddHexColor">Hexadezimal-Farbe hinzufügen...</string>
+  <string id="Tab3HeaderText">Thumbnail erstellen</string>
+  <string id="ChangeImageSrc">Bild Src:</string>
+</localization>

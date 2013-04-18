@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<fieldlist>
+  <field name="FirstName" datatype="string" basetype="text" xpath="*/FirstName" title="First Name">First Name</field>
+  <field name="LastName" datatype="string" basetype="text" xpath="*/LastName" title="Last Name">Last Name</field>
+  <field name="Company" datatype="string" basetype="text" xpath="*/Company" title="Company Name">Company Name</field>
+  <field name="URL" datatype="url" basetype="hyperlink" xpath="*/URL" title="Company or Personal Website">Website URL</field>
+  <field name="Email" datatype="email" basetype="text" xpath="*/Email" title="Email Address">Email Address</field>
+  <field name="Phone" datatype="phoneUSCA" basetype="text" xpath="*/Phone" title="Telephone Number">Phone</field>
+  <field name="PhoneExt" datatype="nonNegInt" basetype="number" xpath="*/PhoneExt" title="Telephone Number Extension">Phone Extension</field>
+  <field name="State" datatype="choice" basetype="text" xpath="*/State" title="US State or Canadian Province" datalist="USPS-US">State or Province</field>
+  <field name="Country" datatype="choice" basetype="text" xpath="*/Country" title="Country" datalist="countries">Country</field>
+  <field name="Comment" datatype="max1000Chars" basetype="textbox" xpath="*/Comment" title="Comment" content="textarea">Comment</field>
+  <datalist name="USPS-US" ektdesignns_datasrc="uspsus.xsd" ektdesignns_dataselect="/xsd:schema/xsd:simpleType/xsd:restriction/xsd:enumeration" ektdesignns_captionxpath="xsd:annotation/xsd:documentation" ektdesignns_valuexpath="@value" ektdesignns_datanamespaces="xmlns:xsd='http://www.w3.org/2001/XMLSchema'"/>
+  <datalist name="countries" ektdesignns_datasrc="countries.xml" ektdesignns_dataselect="/select/option" ektdesignns_captionxpath="." ektdesignns_valuexpath="@value"/>
+</fieldlist>

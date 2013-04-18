@@ -1,0 +1,120 @@
+/* XP Style  Menu */
+.menuRootItem, .menuRootItemSelected, .menuRootItemClicked
+{
+	cursor: default;
+	padding: 0 .25em 0 0;
+}
+
+/*.menuRootItemSelected span
+{
+	cursor: default;	
+	color: #000;
+}*/
+
+.menuRootItemClicked span
+{	
+	background: #3767af url('../../images/ui/over_tab.gif') !important;
+	color: #000;
+}
+
+.Menu
+{
+    background: #ededed url('../../images/UI/menu/dropdown-background.gif') repeat-x;
+    border: solid 1px #bfbfbf;
+    width: 210px;
+	margin-top: 9px;
+	*margin-top: 8px;
+    position: absolute;
+    z-index: 1010;
+    cursor: default;
+	padding: 18px 0;
+	-moz-box-shadow: 1px 1px 2px rgba(0,0,0,.15);
+	-webkit-box-shadow: 1px 1px 2px rgba(0,0,0,.15);
+	box-shadow: 1px 1px 2px rgba(0,0,0,.15);
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	.Menu { margin-top: 8px; } /*for some reason Chrome needs this*/
+}
+/*language flyout menus -- if we find others besides this language one we should simply add selectors to this ruleset*/
+#language.Menu { border-top: solid 1px #bfbfbf; margin-top: -9px; margin-left: -6px; }
+
+.MenuItem, .MenuItemOver, .MenuItemOut, .MenuItemSubMenu, .MenuIcon, .MenuItemSubMenuOut, .MenuItemSubMenuOver
+{
+    position: relative;
+    overflow: hidden;
+    height: 20px;
+    line-height: 20px;
+    display: block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+.MenuItem img, .MenuItemOut img, .MenuItemOver img, .MenuItemSubMenu img, .MenuItemSubMenuOut img, .MenuItemSubMenuOver img
+{ 
+    display: none;
+}
+
+.MenuItemSubMenu, .MenuItemSubMenuOut, .MenuItemSubMenuOver
+{
+	background: no-repeat top right;
+	overflow: hidden;
+}
+.MenuItemSubMenu, .MenuItemSubMenuOut { background-image: url('../../images/UI/Menu/arrow.png'); }
+.MenuItemSubMenuOver { background-image: url('../../images/UI/Menu/arrow_over.png'); color: #fff; }
+
+.MenuIcon
+{
+	padding-left: 3px;
+	float: left;
+}
+
+.MenuItemOut
+{
+    overflow:hidden;
+}
+
+.MenuItemOver
+{
+    border: none;
+    background: #3767af url('../../images/ui/over_tab.gif') !important;
+    overflow:hidden;
+}
+
+.MenuItemOver,
+.MenuItemSubMenuOver,
+ul.dmsMenuWrapper li a:hover { color: #ffffff; }
+
+.MenuItemBreak
+{
+    margin: 8px 19px;
+    border-top: 1px solid #dfdfdf;    
+    /*overflow: hidden;*/
+    text-align: center;
+}
+
+.Menu ul {list-style-type: none; margin: 0em; padding: 0em;}
+.Menu ul li.MenuItem {background-repeat:no-repeat; background-position: top right; height: 22px; padding: 0;}
+.Menu ul li a {cursor:pointer; padding:0 20px; display:block;}
+.Menu ul li a:hover { background: #3767af url('../../images/ui/over_tab.gif'); text-decoration: none; color: #fff; }
+.Menu ul li a.disabled {color: #acacac; cursor: default;}       
+.Menu ul li.break {height: 1px; line-height: 1px; margin: 0 3px 0 27px !important; background-color: #bfbfbf; border: none; text-align: center;}
+ 
+#dvTaxonomy .Menu { padding-top: 0; }
+#dvTaxonomy .Menu ul { border-top: solid 1px #bfbfbf; padding-top: 20px; }
+ 
+/*
+.Menu ul li.add, .Menu ul li.add a:hover {background-image: url('../../images/UI/Icons/add.png');}
+.Menu ul li.view, .Menu ul li.view a:hover {background-image: url('../../images/UI/Icons/pencil.png');}
+.Menu ul li.edit, .Menu ul li.edit a:hover {background-image: url('../../images/UI/Icons/pencil.png');}
+.Menu ul li.reorder, .Menu ul li.reorder a:hover {background-image: url('../../images/UI/Icons/arrowUpDown.png');}
+.Menu ul li.editProperties, .Menu ul li.editProperties a:hover {background-image: url('../../images/UI/Icons/properties.png');}
+.Menu ul li.delete, .Menu ul li.delete a:hover {background-image: url('../../images/UI/Icons/delete.png');}        
+.Menu ul li.assignItems, .Menu ul li.assignItems a:hover {background-image: url('../../images/UI/Icons/contentAdd.png');}        
+.Menu ul li.assignFolders, .Menu ul li.assignFolders a:hover {background-image: url('../../images/UI/Icons/folderAdd.png');}        
+.Menu ul li.enable, .Menu ul li.enable a:hover {background-image: url('../../images/UI/Icons/go.png');}
+.Menu ul li.disable, .Menu ul li.disable a:hover {background-image: url('../../images/UI/Icons/stop.png');}  
+.Menu ul li.moveUp, .Menu ul li.moveUp a:hover  {background-image: url('../../images/UI/Icons/arrowUp.png');}
+.Menu ul li.moveDown, .Menu ul li.moveDown a:hover {background-image: url('../../images/UI/Icons/arrowDown.png');}
+*/
+#language {overflow: auto; max-height: 250px;}
+

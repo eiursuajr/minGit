@@ -1,0 +1,36 @@
+/* begin outer container styles */
+div#UserTaxonomy {font-family:Tahoma, Sans-Serif;width:60em;margin:1em auto;padding:0em;border:1px solid #4c4c4c;}
+/* end outer container styles */
+
+/* begin header styles */
+div#UserTaxonomyHeader {margin:0em;padding:0em;border-bottom:1px solid #4c4c4c;}	
+div#UserTaxonomyHeader h3 {color:Black;font-weight:normal;margin:0em;padding:.5em;border-bottom:1px solid #4c4c4c;background-color:#C6C6C6;text-align:right;}	
+div#UserTaxonomyHeader h3 span.Label {float:left;}
+div#UserTaxonomyHeader h3 span.SearchLabel {font-size:.9em;color:#4c4c4c;margin-right:.5em;}	
+ul#UserTaxonomyBreadcrumbs {list-style:none;margin:0;padding:.5em 1em;}
+ul#UserTaxonomyBreadcrumbs li {margin:.0em .5em .5em 0em;display:inline;float:left;padding:0;}
+ul#UserTaxonomyBreadcrumbs li a {margin-right:.5em;}
+div#UserTaxonomyActions {border-top:1px solid #4c4c4c;clear:left;text-align:right;}
+div#UserTaxonomyActions p {margin:1em 1em 1em 1em;font-size:.75em;}
+div#UserTaxonomyActions p a {margin-left:1em;text-decoration:none;padding:.25em;border:1px solid #4c4c4c;background-color:#c6c6c6;}
+/* end header styles */
+
+/* begin body styles */
+div#UserTaxonomyBody {overflow:hidden;padding:1em;}
+div#UserTaxonomyBody ul {list-style:none;margin:0;padding:0;}
+div#UserTaxonomyBody ul li {margin:0em 1em 1em .5em;display:inline;float:left;}
+
+
+div#UserTaxonomyBody ul li input {float:left;}
+div#UserTaxonomyBody ul li div {margin:0em 0em 1em 5px;overflow:hidden;width:12em;height:6em;background-repeat:no-repeat;background-position:0px 0px;}
+div#UserTaxonomyBody ul li.folder div {background-image:url('images/application/folder.gif');}
+div#UserTaxonomyBody ul li.group div {background-image:url('images/application/user.gif');background-position:3px 0px;}
+
+
+div#UserTaxonomyBody ul li div a {display:block;}
+/* end body styles */
+
+/* begin footer styles */
+div#UserTaxonomyFooter {display:block;margin:0em;padding:0em;border-top:1px solid #4c4c4c;margin-top:1em;clear:both;}
+/* end footer styles */
+.addfolderpanel{ background-color:white; text-align:left; }

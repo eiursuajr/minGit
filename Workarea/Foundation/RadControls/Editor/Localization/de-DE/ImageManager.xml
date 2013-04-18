@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<string id="Title">Bild-Manager</string>
+	<string id="ConfirmLink">Soll ein Vorschaubild mit dem Originalbild verlinkt werden?</string>
+	<string id="ConfirmDelete">Wollen Sie dieses Bild wirklich löschen?\nEs ist möglicherweise in Verwendung. Wenn es gelöscht ist, werden einige Seiten möglicherweisse nicht korrekt dargestellt.\nDrücken Sie \"OK\" um das Löschen zu bestätigen.</string>
+	<string id="AlertImage">Bitte geben Sie ein Bild zum Hochladen an!</string>
+	<string id="AlertExists">Ein gleichnamiges Bild existiert bereits in diesem Verzeichnis!</string>
+	<string id="AlertDimensions">Bitte geben Sie entweder die Vorschaubreite oder Höhe an.</string>
+	<string id="AlertWidth">Bitte geben Sie eine gültige Bildbreite an.</string>
+	<string id="AlertHeight">Bitte geben Sie eine gültige Bildhöhe an.</string>
+	<string id="MessageNothingPost">Bitte geben Sie eine Bilddatei an!</string>
+	<string id="MessageValid">Bitte geben Sie eine gültige Bilddatei an!</string>
+	<string id="MessageSize">Die Bilddatei überschreitet die maximal erlaubte Dateigrösse!</string>
+	<string id="MessagePermission">Sie haben keine Berechtigung diese Seite zu betreten oder Ihre Sitzung ist abgelaufen!<br />Bitte aktualisieren Sie die Seite!</string>
+	<string id="Tab1HeaderText">Bildeigenschaften</string>
+	<string id="Tab2HeaderText">Bild hochladen</string>
+	<string id="ImageFile">Bilddatei:</string>
+	<string id="ImageURL">Bild URL:</string>
+	<string id="Preview">Vorschau</string>
+	<string id="Loading">Lade...</string>
+	<string id="CreateThumbnail">Erzeuge Vorschau:</string>
+	<string id="Yes">Ja</string>
+	<string id="No">Nein</string>
+	<string id="Width">Breite:</string>
+	<string id="Height">Höhe:</string>
+	<string id="Constrain">erzwingen</string>
+	<string id="KeepOriginalImage">Original Bild beibehalten:</string>
+	<string id="LoadingImagePrompt">Lade Bild. Bitte warten Sie...</string>
+	<string id="BestFit">Optimal</string>
+	<string id="ActualSize">Aktuelle Größe</string>
+	<string id="ZoomIn">Vergrößern</string>
+	<string id="ZoomOut">Verkleinern</string>
+	<string id="ChooseFileToInsert">Bitte wählen Sie eine Datei zum Einfügen</string>
+	<string id="CreateThumbnailIconTitle">Thumbnail erstellen</string>
+	<string id="LinkToOriginal">Verbindung zum Original</string>
+	<string id="OpenOriginalInBlank">Original in neuem Fenster öffnen</string>
+	<string id="NoImageSelectedToInsert">Bitte wählen Sie ein Bild!</string>  
+</localization>

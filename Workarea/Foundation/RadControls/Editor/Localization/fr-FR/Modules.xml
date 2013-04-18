@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="RadEditorStatistics">Statistik</string>
+  <string id="RadEditorNodeInspector">Eigenschaften-Inspektor</string>
+  <string id="EkRadEditorDomInspector">Tag-Inspektor</string>
+  <string id="RadEditorHtmlInspector">Echtzeit HTML-Ansicht</string>
+  <string id="StatisticsWords">Wörter:</string>
+  <string id="StatisticsCharacters">Zeichen:</string>
+  <string id="NodeInspectorSelectedElement">Das ausgewählte Element ist: </string>
+  <string id="NodeInspectorInvalidValue">Ungültiger Wert. Bitte tragen Sie eine Zahl ein.</string>
+  <string id="className">Klassename</string>
+  <string id="borderColor">Rahmenfarbe</string>
+  <string id="bgColor">Hintergrund</string>
+  <string id="width">Breite</string>
+  <string id="height">Höhe</string>
+  <string id="align">Ausrichtung</string>  
+  <string id="vAlign">Senkrechte Ausrichtung</string>
+  <string id="cellSpacing">CellSpacing</string>
+  <string id="cellPadding">CellPadding</string>
+  <string id="border">Rahmenbreite</string>
+  <string id="noWrap">Kein Umbruch</string>
+  <string id="value">Wert</string>
+  <string id="id">Id</string>
+  <string id="name">Name</string>
+  <string id="href">URL</string>
+  <string id="title">Hinweis</string>
+  <string id="target">Ziel</string>
+  <string id="alt">Hinweis</string>
+  <string id="_blank">Neues Fenster</string>
+  <string id="_self">Gleiches Fenster</string>
+  <string id="_parent">Übergeordnetes Fenster</string>
+  <string id="_top">Browser-Fenster</string>
+  <string id="_search">Such-Fenster</string>
+  <string id="_media">Media-Fenster</string>
+  <string id="DomInspectorRemoveElement">Element entfernen</string>
+  <string id="rows">Zeile</string>
+  <string id="cols">Spalte</string>
+  <string id="EkRadEditorXhtmlValidator">Content Validator</string>
+</localization>

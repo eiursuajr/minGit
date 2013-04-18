@@ -1,0 +1,40 @@
+﻿body {
+}
+.Edit_Gidwet
+{
+	float:left;
+	width:100%;
+	margin:0px;
+	padding:0px;
+}
+.Edit_Gidwet dl
+{
+	float:left;
+	margin:0px;
+	padding:0px;
+	width:100%;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+.Edit_Gidwet dt
+{
+	float:left;
+	margin:0px;
+	padding:0px;
+	width:25%;
+	text-align:left;
+}
+
+.Edit_Gidwet dd
+{
+	float:left;
+	margin:0px;
+	padding:0px;
+	width:70%;
+	text-align:left;
+}
+h6
+{
+	margin-bottom:0px;
+}
+

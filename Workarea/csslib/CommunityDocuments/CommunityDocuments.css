@@ -1,0 +1,144 @@
+img {
+	border:none; 
+	vertical-align: middle;
+}
+
+a {
+	color:#6a85b6;
+	text-decoration:none;
+}
+a:hover {text-decoration:underline;}
+a:visited {color:#6a85b6;}
+.WorkspaceShareDiv
+{
+	color:blue;
+	background-color:Yellow;
+	margin-left:30px;
+	margin-top:15px;
+	position:absolute;
+	text-align:center;
+	display:none;
+	border-style:solid;
+	border-color:Black;
+	border-width:thin;
+	padding:10px;
+}
+
+div img.EkImageIconStyle 
+{
+	float:left;
+	margin-right:.25em;	
+}
+div.contentID
+{
+	margin-bottom:.75em;	
+}
+
+.Ekt_AddContentLink a:link,
+.Ekt_AddContentLink a:visited,
+.Ekt_AddContentLink a:hover{
+padding:0px 2px 0px 2px;
+text-indent:-5000px;
+display:block;
+height:25px;
+width:30px;
+outline:none;
+}
+
+.Ekt_AddContentLink{
+float:left;
+display:block;
+height:25px;
+width:30px;
+background-image:url(../../images/application/workspace/document_add.gif);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+.Ekt_AddAssetLink a:link,
+.Ekt_AddAssetLink a:visited,
+.Ekt_AddAssetLink a:hover{
+padding:0px 2px 0px 2px;
+text-indent:-5000px;
+display:block;
+height:25px;
+width:30px;
+outline:none;
+}
+
+.Ekt_AddAssetLink{
+float:left;
+display:inline;
+height:25px;
+width:30px;
+background-image:url(../../images/application/workspace/DmsAsset_add.gif);
+background-repeat:no-repeat;
+background-position:center center;
+}
+/* Manage Items Links */
+.Ekt_CopyItemsLink a:link,
+.Ekt_CopyItemsLink a:visited,
+.Ekt_CopyItemsLink a:hover{
+padding:0px 2px 0px 2px;
+text-indent:-5000px;
+display:block;
+height:25px;
+width:30px;
+}
+
+.Ekt_CopyItemsLink{
+float:left;
+display:inline;
+height:25px;
+width:30px;
+background-image:url(../../images/application/workspace/copy.gif);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+.Ekt_MoveItemsLink a:link,
+.Ekt_MoveItemsLink a:visited,
+.Ekt_MoveItemsLink a:hover{
+padding:0px 2px 0px 2px;
+text-indent:-5000px;
+display:block;
+height:25px;
+width:30px;
+}
+
+.Ekt_MoveItemsLink{
+float:left;
+display:inline;
+height:25px;
+width:30px;
+background-image:url(../../images/application/workspace/paste.gif);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+.Ekt_ClearItemsLink a:link,
+.Ekt_ClearItemsLink a:visited,
+.Ekt_ClearItemsLink a:hover{
+padding:0px 2px 0px 2px;
+text-indent:-5000px;
+display:block;
+height:25px;
+width:30px;
+}
+
+.Ekt_ClearItemsLink{
+float:left;
+display:inline;
+height:25px;
+width:30px;
+background-image:url(../../images/application/workspace/clipboard_empty.gif);
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+.Ekt_CopyBuffer
+{
+	clear:both;
+	display:block;
+}
+/* Manage Items Links */

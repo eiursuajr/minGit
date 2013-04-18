@@ -1,0 +1,217 @@
+﻿.EktronCheckout { font-family: Helvetica,Verdana,Geneva,Arial,sans-serif; padding: 1.25em; border: solid 1px #aaaaaa; overflow: auto; position: relative; top: 0; left: 0; }
+.EktronCheckout_FloatClear{clear: both; height: 0px;}
+.EktronCheckout h3 { background-color: #1c62aa; color: #ffffff; padding: 0.3em; margin-top: 0px; margin-bottom: 0px; }
+.EktronCheckout .wideTextField { width: 19em; }
+
+.EktronCheckout_FullPageUIMode .EktronCheckout_ProcBlock { margin: 0.63em; }
+.EktronCheckout_ReturningCustomer span { font-weight: bolder; font-size: large; color: #1c62aa; }
+.EktronCheckout_AccountLogin .EktronCheckout_LoginBlock { margin-top: 0.63em; max-width: 400px; }
+
+.EktronCheckout_AccountLogin .EktronCheckout_LoginEmail{clear: both;}
+.EktronCheckout_AccountLogin .EktronCheckout_LoginEmail span { float: left; text-align: right; width: 50%; }
+.EktronCheckout_AccountLogin .EktronCheckout_LoginEmail input { margin-left: 0.63em; text-align: left; }
+
+.EktronCheckout_AccountLogin .EktronCheckout_LoginPassword{clear: both; margin-top: 0.63em;}
+.EktronCheckout_AccountLogin .EktronCheckout_LoginPassword span { float: left; text-align: right; width: 50%; }
+.EktronCheckout_AccountLogin .EktronCheckout_LoginPassword input { margin-left: 0.63em; text-align: left; }
+
+.EktronCheckout_AccountLogin .EktronCheckout_LoginButton { clear: both; margin-top: 0.63em;}
+.EktronCheckout_AccountLogin .EktronCheckout_LoginButton span { float: left; text-align: right; width: 50%; }
+.EktronCheckout_AccountLogin .EktronCheckout_LoginButton input { margin-left: 0.63em; text-align: left; }
+
+.EktronCheckout_FullPageUIMode .EktronCheckout_AccountLogin .EktronCheckout_Reminder { margin-top: 0.63em; }
+.EktronCheckout_AccountLogin .EktronCheckout_NewCustomer { margin-top: 1.3em; }
+.EktronCheckout_AccountLogin .EktronCheckout_GuestCustomer { margin-top: 1.3em; }
+.EktronCheckout_AccountLogin .EktronCheckout_NewCustomerAlert { font-size: large; font-weight: bolder; color: #1c62aa; }
+.EktronCheckout_FullPageUIMode .EktronCheckout_BillingInfo { float: left; width: 45%; }
+.EktronCheckout_FullPageUIMode .EktronCheckout_ShippingInfo { float: left; width: 45%; }
+.EktronCheckout_FullPageUIMode .EktronCheckout_ShippingMethod { clear: both; width: 92%; }
+.EktronCheckout_FullPageUIMode .EktronCheckout_ReviewOrder { float: left; width: 45%; }
+.EktronCheckout_FullPageUIMode .EktronCheckout_SubmitOrder { float: left; width: 45%; }
+
+.EktronCheckout_Row_LeftContents { float: left; width: 40%; text-align: right; padding-right: 0.3em; } 
+.EktronCheckout_Row_RightContents { width: 55%; text-align: left; }
+
+.EktronCheckout_NotRequired .EktronCheckout_RequiredSymbol {display: none;}
+.EktronCheckout_RequiredSymbol {display: inline; margin-right: 0.1em;}
+.EktronCheckout_RequiredNotice{display: block; margin-top: 0.63em; font-size: smaller; padding-left: 30%;}
+.EktronCheckout_SubmitOrder .EktronCheckout_RequiredNotice{padding-left: 0.63em;}
+
+.EktronCheckout_BillingInfo input.EktronCheckout_Row_RightContents{width: 15.5em;}
+.EktronCheckout_BillingInfo select.EktronCheckout_Row_RightContents{width: 15.8em;}
+.EktronCheckout_BillingInfo input.EktronCheckout_PostalCode{width: 9.38em;}
+.EktronCheckout_BillingInfo .EktronCheckout_BillingNotice{margin: 0.63em; margin-top: 0.63em; margin-bottom: 1.2em; font-size: smaller;}
+.EktronCheckout_BillingInfo .EktronCheckout_EmailNotice{clear: both; padding-left: 30%; margin-top: 0.63em; font-size: smaller;}
+
+.EktronCheckout_SpacerLeft{display:block;margin:0;float:left;}
+a.EktronCheckout_button {display:block;margin:0;background-color:#f5f5f5 !important;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:80%;line-height:100%;color:#565656;cursor:pointer;padding:4px 6px 5px 6px; vertical-align:middle;}
+a.EktronCheckout_button:hover {border:1px solid #fbc2c4;color:#d12f19;}
+a.EktronCheckout_buttonRight {float:right;}
+a.EktronCheckout_buttonLeft {float:left;}
+a.EktronCheckout_button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px; vertical-align:middle;}
+
+a.EktronCheckout_message {display:block;margin:0;background-color:#E6EFC2 !important;border:1px solid #C6D880;border-top:1px solid #C6D880;border-left:1px solid #C6D880;font-size:80%;line-height:100%;text-decoration:none !important;color:#529214 !important;padding:4px 6px 5px 6px;cursor:default;}
+a.EktronCheckout_message:hover {color:green;}
+a.EktronCheckout_message2 {display:block;margin:0;background-color:#dff4ff !important;border:1px solid #c2e1ef;border-top:1px solid #c2e1ef;border-left:1px solid #c2e1ef;font-size:80%;line-height:100%;text-decoration:none !important;color:#336699 !important;padding:4px 6px 5px 6px;cursor:default;}
+a.EktronCheckout_messageRight {float:right;}
+a.EktronCheckout_messageLeft {float:left;}
+a.EktronCheckout_message img, a.EktronCheckout_message2 img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+
+.EktronCheckout_ShippingInfo input.EktronCheckout_Row_RightContents{width: 15.5em;}
+.EktronCheckout_ShippingInfo select.EktronCheckout_Row_RightContents{width: 15.8em;}
+.EktronCheckout_ShippingInfo .EktronCheckout_FloatClear{clear: both; height: 0px;}
+.EktronCheckout_ShippingInfo input.EktronCheckout_PostalCode{width: 9.38em;}
+.EktronCheckout_ShippingAddressSelectBilling{padding-left: 35%; margin-top: 0.5em; margin-bottom: -0.5em;}
+.EktronCheckout_ShippingInfo .EktronCheckout_EmailNotice{display:none; clear: both; padding-left: 30%; margin-top: 0.63em; font-size: smaller;}
+
+.EktronCheckout_ReviewOrder .EktronCheckout_ReviewOrder_OrderListing{margin: 0.63em; border-collapse: collapse;}
+.EktronCheckout_ReviewOrder .EktronCheckout_ReviewOrder_OrderListing th{padding-right: 1.2em;}
+.EktronCheckout_ReviewOrder .EktronCheckout_ReviewOrder_OrderListing .colItemNameKitNames { margin-left: 10px;}
+.EktronCheckout_ReviewOrder .EktronCheckout_AltRow{background-color: #ddd;}
+.EktronCheckout_ReviewOrder .EktronCheckout_ReviewOrder_EditCartBtn{color:#1C62AA; font-weight:bolder; text-decoration: none;}
+.EktronCheckout_ReviewOrder a.EktronCheckout_ReviewOrder_EditCartBtn:hover{text-decoration: underline;}
+.EktronCheckout_ReviewOrder .EktronCheckout_ReviewOrder_OrderCharges{margin: 0.63em; border-collapse: collapse; margin-left: 9em;}
+.EktronCheckout_ReviewOrder .EktronCheckout_ReviewOrder_OrderCharges td{padding-right: 1.2em;}
+.EktronCheckout_ReviewOrder .EktronCheckout_ReviewOrder_OrderCharges .ChargesTotal {border-top: solid 1px #777; font-weight: bold;}
+
+.EktronCheckout_ReviewOrder_OrderListing th {background-color:gray; color:white; font-size:smaller; font-weight:bold;}
+.EktronCheckout_ReviewOrder_OrderListing th,
+.EktronCheckout_ReviewOrder_OrderListing td {border:1px solid white; padding: 0.3em;}
+
+.EktronCheckout_PaymentType{margin: 0.63em;}
+.EktronCheckout_PaymentTypeTitle{display: block;}
+
+.EktronCheckout_Hidden {display: none;}
+.EktronCheckout_Required_Hidden {display: none;}
+
+.EktronCheckout_BankName{margin: 0.63em;}
+.EktronCheckout_BankNameTitle{display: block;}
+.EktronCheckout_BankAccountNumber{margin: 0.63em;}
+.EktronCheckout_BankAccountNumberTitle{display: block;}
+.EktronCheckout_BankABARouting{margin: 0.63em;}
+.EktronCheckout_BankABARoutingTitle{display: block;}
+
+.EktronCheckout_PayPal_Image { display: block; margin:0.63em; }
+
+.EktronCheckout_CreditCardType{margin: 0.63em;}
+.EktronCheckout_CreditCardTypeTitle{display: block;}
+
+.EktronCheckout_CreditCardNumber{margin: 0.63em;}
+.EktronCheckout_CreditCardNumberTitle{display: block;}
+
+.EktronCheckout_CardHolderName{margin: 0.63em;}
+.EktronCheckout_CardHolderNameTitle{display: block;}
+
+.EktronCheckout_CreditCardIssueNumber{margin: 0.63em; margin-top: 1em;}
+.EktronCheckout_CreditCardIssueNumberTitle{display: block;}
+
+.EktronCheckout_CardBankName{margin: 0.63em; margin-top: 1em;}
+.EktronCheckout_CardBankNameTitle{display: block;}
+
+.EktronCheckout_CCID{margin: 0.63em;}
+.EktronCheckout_CCIDTitle{display: block;}
+.EktronCheckout_CCID input{width: 4.0em;}
+.EktronCheckout_CCIDInfo{margin-left: 0.63em; color:#1C62AA; font-size: smaller; text-decoration: none;}
+a.EktronCheckout_CCIDInfo:hover{text-decoration: underline;}
+
+.EktronCheckout_StartDate{margin: 0.63em;}
+.EktronCheckout_StartDateTitle{display: block;}
+.EktronCheckout_StartDateMonthTitle{margin-left: 0.63em;}
+.EktronCheckout_StartDateYearTitle{margin-left: 0.63em;}
+
+.EktronCheckout_ExpirationDate{margin: 0.63em;}
+.EktronCheckout_ExpirationDateTitle{display: block;}
+.EktronCheckout_ExpirationDateMonthTitle{margin-left: 0.63em;}
+.EktronCheckout_ExpirationDateYearTitle{margin-left: 0.63em;}
+
+.EktronCheckout_RedeemGiftCard{margin: 0.63em;}
+.EktronCheckout_RedeemGiftCard a{margin-left: 0.63em; color:#1C62AA; font-size: smaller; text-decoration: none;}
+.EktronCheckout_RedeemGiftCard a:hover{text-decoration: underline;}
+
+.EktronCheckout_SubmitOrderBtn{margin: 0.63em;}
+
+.EktronCheckout_BillingInfo .EktronCheckout_UserInfo_BillingAddressFragment{margin-left: 0.63em; margin-top: 0.37em;}
+.EktronCheckout_ShippingInfo .EktronCheckout_UserInfo_ShippingAddressFragment{margin-left: 0.63em; clear:both;}
+.EktronCheckout_ShippingInfo .EktronCheckout_ShippingNotice{margin: 0.63em; margin-top: 0.63em; margin-bottom: 0.63em; font-size: smaller; font-weight: normal;}
+
+.EktronCheckout_modalContainer{position: absolute; top: 0.6em; left: 10%; width: 50em; height: 21em; background-color: White; border: 1px solid black; display: none;}
+
+.EktronCheckout_UserInfo_ShippingAddress_SaveLink{}
+.EktronCheckout_UserInfo_ShippingAddress_CancelLink{margin-left: 0.63em;}
+.EktronCheckout_UserInfo_BillingAddress_SaveLink{}
+.EktronCheckout_Rows_Container .EktronCheckout_linkRow span.EktronCheckout_UserInfo_BillingAddress_CancelLink{margin-left: 0; text-align: right; float: left; width: 15%;}
+.EktronCheckout_Rows_Container .EktronCheckout_linkRow span {width: 25%;}
+
+.EktronCheckout_FullPageUIMode .EktronCheckout_UserInfo_PageLinks{display: none;}
+.EktronCheckout_WizardMode .EktronCheckout_UserInfo_PageLinks{margin-top: 0.63em;}
+.EktronCheckout_UserInfo_PreviousPageLink{margin-right: 0.63em;}
+.EktronCheckout_UserInfo_NextPageLink{}
+
+.EktronCheckout_RequiredNotice_FailedVerification {color: Red;}
+.EktronCheckout_Required_FailedVerification label{color: Red;}
+.EktronCheckout_Required_FailedVerification input{border: solid 2px Red; background-color: #ffeaea;}
+.EktronCheckout_Required_FailedVerification select{border: solid 2px Red; background-color: #ffeaea;}
+
+.EktronCheckout_Row_Disabled label{color: #777; }
+
+.EktronCheckout_UserInfo_ShippingUsingBillingAddress,
+.EktronCheckout_UserInfo_SeperateShippingAddress{font-size: smaller; margin-top: 1.2em; margin-bottom: 1.2em;}
+
+.EktronCheckout_ShippingAddress_MultipleAddressSelect{margin-top: 0.63em; margin-bottom: 0.63em; }
+.EktronCheckout_ShippingAddress_Address{ float: left; border: 1px solid lightgray; margin: 3px; min-height:12.5em; min-width:12.5em; }
+.EktronCheckout_ShippingAddress_AddressDefault{ border: 1px solid green !important; }
+.EktronCheckout_WizardMode .EktronCheckout_UserInfo_BillingAddress_EditLinkContainer, 
+.EktronCheckout_WizardMode .EktronCheckout_UserInfo_ShippingAddress_EditLinkContainer{margin-top: 1.2em;}
+
+.EktronCheckout_UserInfo_ShippingAddress_AddNewAddressLink{margin-left: 0.63em; margin-right: 0.63em;}
+.EktronCheckout_UserInfo_ShippingAddress_MultipleAddressSelect_selectAddress{}
+
+.EktronCheckout_AjaxBusyImageContainer{display: none; padding: 1.2em;}
+.EktronCheckout_waitCreatingAccountMessageContainer{display: none; padding: 1.2em;}
+
+.EktronCheckout_ShippingMethod_ServiceMethodSelectContainer{margin: 0.63em;}
+.EktronCheckout_ShippingMethod_ServiceMethodSelectContainer table{margin: 0.63em; border-collapse: collapse; }
+.EktronCheckout_ShippingMethod_ServiceSelectRow{}
+.EktronCheckout_ShippingMethod_ServiceSelectName {padding: 2px 15px 2px 15px;}
+.EktronCheckout_ShippingMethod_ServiceSelectCharge {}
+
+.EktronCheckout_Rows_Container li {margin-top: 2px;}
+.EktronCheckout ul, .EktronCheckout_modalContainer ul {list-style: none;}
+.EktronCheckout_modalContainer {font-family: Helvetica,Verdana,Geneva,Arial,sans-serif;}
+.EktronCheckout_modalContainer{position: absolute; top: 0.0em; left: 10%; width: 40em; height: auto; padding-bottom: 0.63em; background-color: White; display: none;}
+.EktronCheckout_modalContainer .EktronCheckout_Rows_Container{ padding-left: 0.63em; }
+.EktronCheckout_modalContainer .EktronCheckout_Row_LeftContents { float: left; width: 30%; text-align: right; padding-right: 0.3em; }
+.EktronCheckout_modalContainer .EktronCheckout_Row_RightContents { width: 55%; text-align: left; }
+.EktronCheckout_modalContainer  h4{text-align: center; margin-bottom: 0.31em; margin-top: 0; background-color: Gray; border-bottom: 1px solid black; color: White; padding: 0.5em;}
+.EktronCheckout_modalContainer input.EktronCheckout_Row_RightContents{width: 15.5em;}
+.EktronCheckout_modalContainer select.EktronCheckout_Row_RightContents{width: 15.8em;}
+.EktronCheckout_modalContainer input.EktronCheckout_PostalCode{width: 9.38em;}
+.EktronCheckout_modalContainer .EktronCheckout_BillingNotice{margin: 0.63em; margin-top: 0.63em; margin-bottom: 1.2em; font-size: smaller;}
+.EktronCheckout_modalContainer .EktronCheckout_EmailNotice{clear: both; padding-left: 30%; margin-top: 0.63em; font-size: smaller;}
+
+.EktronCheckout_ErrorText{color: Red;}
+.EktronCheckout_log {padding-left: 1.25em; padding-right: 1.25em; padding-bottom: 1.25em; margin: 1.25em; width: 80%; border: solid 1px #aaaaaa;}
+.EktronCheckout_modalContainer input:focus {background-color: #ffc; border: 2px solid #aaa; }
+.EktronCheckout_modalContainer select:focus {background-color: #ffc; border: 2px solid #aaa; }
+
+.EktronCheckout_UserExistPayPal { border: solid 1px #aaaaaa; }
+.EktronCheckout_ExternalPaymentText{color: Green; margin: 0.63em; }
+
+.EktronCheckout .AdvisoryMessage {color: #ff0000; background-image:none;border-top:1px dotted silver;border-right:none;border-left:none;border-bottom:1px dotted silver;padding:15px 0px; margin-top: 10px; display: none;}
+
+.EktronCheckout .wizardStep a {text-decoration: none;}
+.EktronCheckout .wizardStep {margin-left: 10px; margin-bottom: 1em; /* width: 38em; margin-left: auto; margin-right: auto; margin-bottom: 1em; */}
+.EktronCheckout .wizardStep .past{float:left; margin-right:0; width:90px; text-align:center; background-image:url(../../images/application/Commerce/Checkout/blue.gif); background-repeat:repeat-x; background-position:35px 30px;}
+.EktronCheckout .wizardStep .bluechecked {background-image:url(../../images/application/Commerce/Checkout/Checkmarked.gif); background-repeat:no-repeat; height:40px; background-position:35px bottom; color:#005695;}
+.EktronCheckout .wizardStep .present{float:left; margin-right:0; width:90px; text-align:center; font-weight: bold; background-image:url(../../images/application/Commerce/Checkout/blue.gif); background-repeat:repeat-x; background-position:35px 30px;}
+.EktronCheckout .wizardStep .blue {background-image:url(../../images/application/Commerce/Checkout/currentstate.gif); background-repeat:no-repeat; height:40px; background-position:35px bottom; color:#005695;}
+.EktronCheckout .wizardStep .blue a, .EktronCheckout .wizardStep .bluechecked a {color:#005695;}
+.EktronCheckout .wizardStep .future{float:left; margin-right:0; width:90px; text-align:center; background-image:url(../../images/application/Commerce/Checkout/greyrule.gif); background-repeat:repeat-x; background-position:35px 30px;}
+.EktronCheckout .wizardStep .grey {background-image:url(../../images/application/Commerce/Checkout/Unchecked.gif); background-repeat:no-repeat; height:40px; background-position:35px bottom; color:#989898;}
+.EktronCheckout .wizardStep .grey a {color:#989898;}
+.EktronCheckout .wizardStep .wizardEnd {clear:both;}
+.EktronCheckout .wizardStep .hiddenStep{display: none;}
+.EktronCheckout .spacingContainer {padding-left: 0.63em;}
+.EktronCheckout .EktronCheckout_RoutingAccountNumberHelp {margin: 0.63em; position: absolute; top: 17.75em; left: 12.5em;}
+.EktronCheckout .EktronCheckout_RoutingAccountNumberHelp .EktronCheckout_checkHelpLabel {margin: 0.63em; color: blue; font-weight: bold;}
+.EktronCheckout .EktronCheckout_RoutingAccountNumberHelp .innerContainer{display: none; position: absolute; top: -12.5em; left: 0.5em;}

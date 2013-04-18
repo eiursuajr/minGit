@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<dl>
+	<!-- This contains two sections, one for Min Data and the other for Demo Data -->
+
+	<!-- uncomment this section for Ektron CMS400 Min Data -->
+	<!--
+	<dd title="Blog Tags">
+		<dfn id="11" xml:lang="en-US" />
+	</dd>
+	<dd title="Blog Categories">
+		<dfn id="12" xml:lang="en-US" />
+	</dd>
+	<dd title="Blog TrackBack">
+		<dfn id="13" xml:lang="en-US" />
+	</dd>
+	<dd title="Blog Pingback">
+		<dfn id="14" xml:lang="en-US" />
+	</dd>
+	<dd title="MapAddress">
+		<dfn id="108" xml:lang="en-US" />
+	</dd>
+	<dd title="MapLatitude">
+		<dfn id="110" xml:lang="en-US" />
+	</dd>
+	<dd title="MapLongitude">
+		<dfn id="112" xml:lang="en-US" />
+	</dd>
+	<dd title="MapDate">
+		<dfn id="114" xml:lang="en-US" />
+	</dd>
+	-->
+
+	<!-- uncomment this section for Ektron CMS400Demo data -->
+	<!--
+	<dd title="Associated Collection">
+		<dfn id="24" xml:lang="en-US"/>
+	</dd>
+	<dd title="Blog Categories">
+		<dfn id="12" xml:lang="en-US"/>
+		<dfn id="124" xml:lang="fr-FR"/>
+		<dfn id="116" xml:lang="nl-NL"/>
+		<dfn id="132" xml:lang="de-DE"/>
+		<dfn id="140" xml:lang="it-IT"/>
+		<dfn id="148" xml:lang="es-ES"/>
+	</dd>
+	<dd title="Blog Pingback">
+		<dfn id="14" xml:lang="en-US"/>
+		<dfn id="120" xml:lang="nl-NL"/>
+		<dfn id="128" xml:lang="fr-FR"/>
+		<dfn id="136" xml:lang="de-DE"/>
+		<dfn id="144" xml:lang="it-IT"/>
+		<dfn id="152" xml:lang="es-ES"/>
+	</dd>
+	<dd title="Blog Tags">
+		<dfn id="11" xml:lang="en-US"/>
+		<dfn id="114" xml:lang="nl-NL"/>
+		<dfn id="122" xml:lang="fr-FR"/>
+		<dfn id="130" xml:lang="de-DE"/>
+		<dfn id="138" xml:lang="it-IT"/>
+		<dfn id="146" xml:lang="es-ES"/>
+	</dd>
+	<dd title="Blog TrackBack">
+		<dfn id="13" xml:lang="en-US"/>
+		<dfn id="118" xml:lang="nl-NL"/>
+		<dfn id="126" xml:lang="fr-FR"/>
+		<dfn id="134" xml:lang="de-DE"/>
+		<dfn id="142" xml:lang="it-IT"/>
+		<dfn id="150" xml:lang="es-ES"/>
+	</dd>
+	<dd title="ContentRelation">
+		<dfn id="40" xml:lang="en-US"/>
+	</dd>
+	<dd title="description">
+		<dfn id="20" xml:lang="en-US"/>
+		<dfn id="28" xml:lang="es-ES"/>
+	</dd>
+	<dd title="keywords">
+		<dfn id="22" xml:lang="en-US"/>
+		<dfn id="30" xml:lang="es-ES"/>
+	</dd>
+	<dd title="MapAddress">
+		<dfn id="108" xml:lang="en-US"/>
+		<dfn id="154" xml:lang="es-ES"/>
+	</dd>
+	<dd title="MapDate">
+		<dfn id="162" xml:lang="en-US"/>
+		<dfn id="164" xml:lang="es-ES"/>
+	</dd>
+	<dd title="MapLatitude">
+		<dfn id="110" xml:lang="en-US"/>
+		<dfn id="156" xml:lang="es-ES"/>
+	</dd>
+	<dd title="MapLongitude">
+		<dfn id="112" xml:lang="en-US"/>
+		<dfn id="158" xml:lang="es-ES"/>
+	</dd>
+	<dd title="title">
+		<dfn id="16" xml:lang="en-US"/>
+		<dfn id="26" xml:lang="es-ES"/>
+	</dd>
+	<dd title="UserRegion">
+		<dfn id="160" xml:lang="es-ES"/>
+		<dfn id="38" xml:lang="en-US"/>
+	</dd>
+	<dd title="wellness">
+		<dfn id="17" xml:lang="en-US"/>
+		<dfn id="32" xml:lang="es-ES"/>
+	</dd>
+	<dd title="wellness_es">
+		<dfn id="34" xml:lang="es-ES"/>
+	</dd>
+	-->
+</dl>

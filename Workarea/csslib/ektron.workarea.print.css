@@ -1,0 +1,5 @@
+/* counter-act the efects of fixedPositionToolbar CSS if it was included */
+body, body {height: auto !important; overflow: auto !important;}
+body div.ektronPageHeader {position: static; top: auto;}
+body div.ektronPageContainer {position: static; bottom: auto;}
+body div.ui-tabs-panel {overflow-y: auto !important;}

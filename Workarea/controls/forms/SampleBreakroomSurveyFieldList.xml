@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<fieldlist>
+  <field name="Coffee" datatype="selection" basetype="text" xpath="*/Coffee" title="Coffee" datalist="EP">Coffee</field>
+  <field name="Tea" datatype="selection" basetype="text" xpath="*/Tea" title="Tea" datalist="EEAAC">Tea</field>
+  <field name="Sweetener" datatype="choice" basetype="text" xpath="*/Sweetener" title="Sweetener" datalist="EAEAC">Sweetener</field>
+  <field name="Comment" datatype="max1000Chars" basetype="textbox" xpath="*/Comment" title="Comment" content="textarea">Comment</field>
+  <datalist name="EP">
+    <item value="Costa Rica Tarrazu">Costa Rica Tarrazu</item>
+    <item value="Ethiopia Limu">Ethiopia Limu</item>
+    <item value="Colombian 100%">Colombian 100%</item>
+    <item value="Colombian Decaffeinated">Colombian Decaffeinated</item>
+    <item value="House Blend">House Blend</item>
+    <item value="Sumatra">Sumatra</item>
+    <item value="Decaffeinated Dark">Decaffeinated Dark</item>
+    <item value="Kenya Kilimandjaro Dark">Kenya Kilimandjaro Dark</item>
+    <item value="Guatemala Antigua Dark">Guatemala Antigua Dark</item>
+    <item value="French Roast">French Roast</item>
+    <item value="Chocolate Almond">Chocolate Almond</item>
+    <item value="French Vanilla">French Vanilla</item>
+    <item value="French Vanilla Decaf">French Vanilla Decaf</item>
+    <item value="Irish Cream">Irish Cream</item>
+    <item value="Macadamia Nut">Macadamia Nut</item>
+    <item value="Vanilla Hazelnut">Vanilla Hazelnut</item>
+    <item value="Vanilla Hazelnut Decaf">Vanilla Hazelnut Decaf</item>
+  </datalist>
+  <datalist name="EEAAC">
+    <item value="Earl Grey">Earl Grey</item>
+    <item value="Green Tea">Green Tea</item>
+    <item value="Mint Medley">Mint Medley</item>
+    <item value="I Love Lemon">I Love Lemon</item>
+    <item value="English Breakfast">English Breakfast</item>
+    <item value="Orange &amp; Spice">Orange &amp; Spice</item>
+    <item value="Lipton">Lipton</item>
+    <item value="Lipton Decaf">Lipton Decaf</item>
+  </datalist>
+  <datalist name="EAEAC">
+    <item value="Sugar">Sugar</item>
+    <item value="Equal">Equal</item>
+    <item value="Sweet-n-Low">Sweet-n-Low</item>
+    <item value="Splenda">Splenda</item>
+  </datalist>
+</fieldlist>

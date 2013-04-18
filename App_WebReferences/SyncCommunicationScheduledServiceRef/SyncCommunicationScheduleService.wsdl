@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://ektron.com/synccommunicationservice" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://ektron.com/synccommunicationservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://ektron.com/synccommunicationservice/Imports">
+      <xsd:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd0" namespace="http://ektron.com/synccommunicationservice" />
+      <xsd:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" />
+      <xsd:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Synchronization" />
+      <xsd:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+      <xsd:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="SyncCommunicationSchedule_Synchronize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Synchronize" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_Synchronize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_SynchronizeFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeFile" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_SynchronizeFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_GetCurrentSyncStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentSyncStatus" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_GetCurrentSyncStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrentSyncStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_IsSyncInProgress_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsSyncInProgress" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_IsSyncInProgress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsSyncInProgressResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_SynchronizeContent_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeContent" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_SynchronizeContent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeContentResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_SynchronizeFolder_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeFolder" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_SynchronizeFolder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeFolderResponse" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_SynchronizeMultiSite_InputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeMultiSite" />
+  </wsdl:message>
+  <wsdl:message name="SyncCommunicationSchedule_SynchronizeMultiSite_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SynchronizeMultiSiteResponse" />
+  </wsdl:message>
+  <wsdl:portType name="SyncCommunicationSchedule">
+    <wsdl:operation name="Synchronize">
+      <wsdl:input wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/Synchronize" message="tns:SyncCommunicationSchedule_Synchronize_InputMessage" />
+      <wsdl:output wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeResponse" message="tns:SyncCommunicationSchedule_Synchronize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeFile">
+      <wsdl:input wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeFile" message="tns:SyncCommunicationSchedule_SynchronizeFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeFileResponse" message="tns:SyncCommunicationSchedule_SynchronizeFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentSyncStatus">
+      <wsdl:input wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/GetCurrentSyncStatus" message="tns:SyncCommunicationSchedule_GetCurrentSyncStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/GetCurrentSyncStatusResponse" message="tns:SyncCommunicationSchedule_GetCurrentSyncStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsSyncInProgress">
+      <wsdl:input wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/IsSyncInProgress" message="tns:SyncCommunicationSchedule_IsSyncInProgress_InputMessage" />
+      <wsdl:output wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/IsSyncInProgressResponse" message="tns:SyncCommunicationSchedule_IsSyncInProgress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeContent">
+      <wsdl:input wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeContent" message="tns:SyncCommunicationSchedule_SynchronizeContent_InputMessage" />
+      <wsdl:output wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeContentResponse" message="tns:SyncCommunicationSchedule_SynchronizeContent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeFolder">
+      <wsdl:input wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeFolder" message="tns:SyncCommunicationSchedule_SynchronizeFolder_InputMessage" />
+      <wsdl:output wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeFolderResponse" message="tns:SyncCommunicationSchedule_SynchronizeFolder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeMultiSite">
+      <wsdl:input wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeMultiSite" message="tns:SyncCommunicationSchedule_SynchronizeMultiSite_InputMessage" />
+      <wsdl:output wsaw:Action="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeMultiSiteResponse" message="tns:SyncCommunicationSchedule_SynchronizeMultiSite_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

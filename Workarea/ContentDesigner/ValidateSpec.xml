@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datadesign xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<validation name="plaintext">
+		<choice name="none" treeImg="text">
+			<caption localeRef="dlgNV8n" />
+			<schema datatype="string" />
+		</choice>
+		<choice name="string-req" treeImg="text">
+			<caption localeRef="dlgNBlank" />
+			<schema datatype="string">
+				<xs:minLength value="1" />
+			</schema>
+			<validate>
+				<regexp multiline="false" wholeline="false" ignorecase="false" global="false">/\S+/</regexp>
+			</validate>
+		</choice>
+		<choice name="nonNegInt" treeImg="number">
+			<caption localeRef="dlgNNN" />
+			<schema>
+				<xs:simpleType>
+					<xs:union memberTypes="xs:nonNegativeInteger">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="0" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:union>
+				</xs:simpleType>
+			</schema>
+			<validate>
+				<regexp multiline="false" wholeline="false" ignorecase="false" global="false">/^\d*$/</regexp>
+			</validate>
+		</choice>
+		<choice name="nonNegInt-req" treeImg="number">
+			<caption localeRef="dlgNNNReqd" />
+			<schema datatype="nonNegativeInteger" />
+			<validate>
+				<regexp multiline="false" wholeline="false" ignorecase="false" global="false">/^\d+$/</regexp>
+			</validate>
+		</choice>
+		<choice name="decnum" treeImg="number">
+			<caption localeRef="sDecN" />
+			<schema>
+				<xs:simpleType>
+					<xs:union memberTypes="xs:decimal">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="0" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:union>
+				</xs:simpleType>
+			</schema>
+			<validate>
+				<regexp pattern="^(\-?(\d*\.)?\d+)$|^$" multiline="false" wholeline="false" ignorecase="false" global="false" />
+			</validate>
+		</choice>
+		<choice name="decnum2-req" treeImg="number">
+			<caption localeRef="sDecN2Reqd" />
+			<schema datatype="decimal">
+				<xs:fractionDigits value="2" />
+			</schema>
+			<calculate>
+				<regexp multiline="false" wholeline="false" ignorecase="false" global="false">/(\-?(\d*\.\d{1,2}|\d+))/</regexp>
+				<!-- normalize to 2 decimal digits -->
+			</calculate>
+			<validate>
+				<regexp pattern="\-?(\d*\.\d{1,2}|\d+)" wholeline="true" multiline="false" ignorecase="false" global="false" />
+			</validate>
+		</choice>
+		<choice name="percent-req" treeImg="number">
+			<caption localeRef="sPctReqd" />
+			<schema datatype="nonNegativeInteger">
+				<xs:minInclusive value="0" />
+				<xs:maxInclusive value="100" />
+			</schema>
+			<validate>
+				<regexp pattern="[0-9]|[1-9][0-9]|100" wholeline="true" multiline="false" ignorecase="false" global="false" />
+			</validate>
+		</choice>
+		<!-- RFC 2822 defines email address format -->
+		<choice name="email" treeImg="text" translate="false" ref="sEmailAddr" pattern="[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*" />
+		<!-- semicolon-delimited list of email addresses -->
+		<choice name="emailList" treeImg="text" translate="false" ref="sEmailAddrList" pattern="[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*(\s*\;\s*[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*)*" />
+		<!-- ZIP code (US) 99999 or 99999-9999 -->
+		<choice name="ZipCode" treeImg="text" translate="false" ref="sZIP" pattern="[0-9]{5}(\-[0-9]{4})?" />
+		<!-- Social Security Number (US) 999-99-9999 -->
+		<choice name="SSN" treeImg="text" translate="false" ref="sSSN" pattern="[0-9]{3}\-?[0-9]{2}\-?[0-9]{4}" />
+		<!-- Postal Code (Canada) A9A 9A9 -->
+		<choice name="PostalCodeCA" treeImg="text" translate="false" ref="sPCCA" pattern="[A-Z][0-9][A-Z] [0-9][A-Z][0-9]" />
+		<!-- Social Insurance Number (Canada) 999 999 999 -->
+		<choice name="SIN" treeImg="text" translate="false" ref="sSIN" pattern="[0-9]{3} ?[0-9]{3} ?[0-9]{3}" />
+		<!-- Telephone Number (US and Canada) [+]1 (999) 999-9999 -->
+		<choice name="phoneUSCA" treeImg="text" ref="sPhoneUSCA" pattern="((\+?1[\. \-]?)?\(?[2-9][0-9]{2}\)?[\. \-\/]*)?[2-9][0-9]{2}[\. \-]?[0-9]{4}" />
+		<!-- RFC 2396 and RFC 2732 defines URL format -->
+		<choice name="url" treeImg="hyperlink">
+			<caption localeRef="sURL" />
+			<schema>
+				<xs:simpleType>
+					<xs:union memberTypes="xs:anyURI">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:length value="0" />
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:union>
+				</xs:simpleType>
+			</schema>
+			<!-- don't bother with a reg exp because it allows most anything -->
+		</choice>
+		<!-- ISBN-10 or ISBN-13 http://www.isbn-international.org/ -->
+		<choice name="ISBN" treeImg="text" translate="false">
+			<caption localeRef="sISBN" />
+			<schema>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="([0-9]{9}[0-9X])|([0-9]{13})" />
+					</xs:restriction>
+				</xs:simpleType>
+			</schema>
+			<calculate>
+				<script value="this.text=design_normalize_isbn(this.text)"></script>
+			</calculate>
+			<validate>
+				<script value="design_validate_isbn(this.text)"></script>
+			</validate>
+		</choice>
+		<!-- ISSN-8 http://www.issn.org/ -->
+		<choice name="ISSN" treeImg="text" translate="false">
+			<caption localeRef="sISSN" />
+			<schema>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]{7}[0-9X]" />
+					</xs:restriction>
+				</xs:simpleType>
+			</schema>
+			<calculate>
+				<script value="this.text=design_normalize_issn(this.text)"></script>
+			</calculate>
+			<validate>
+				<script value="design_validate_issn(this.text)"></script>
+			</validate>
+		</choice>
+		<custom>
+			<caption localeRef="dlgCustom" />
+			<selections name="datatype">
+				<listchoice value="string" treeImg="text" localeRef="sPText" />
+				<listchoice value="anyURI" treeImg="hyperlink" localeRef="sURL" />
+				<listchoice value="integer" treeImg="number" localeRef="sWhNum" />
+				<listchoice value="decimal" treeImg="number" localeRef="sDecNum" />
+				<listchoice value="double" treeImg="number" localeRef="sFPNum" />
+			</selections>
+			<selections name="examples">
+				<listchoice value="{X} &lt; . and . &lt; {Y}" localeRef="sN2Vals" />
+				<listchoice value=". = {X}" localeRef="sEquN" />
+				<listchoice value=". != {X}" localeRef="sNeqN" />
+				<listchoice value="string-length(.) &lt;= {X}" localeRef="sMaxLen" />
+				<listchoice value="string-length(.) &gt; 0 or {X} != {Y}" localeRef="sCondReqd" />
+			</selections>
+		</custom>
+	</validation>
+	<validation name="textarea">
+		<choice name="none" treeImg="textbox">
+			<caption localeRef="dlgNV8n" />
+			<schema datatype="string" />
+		</choice>
+		<choice name="string-req" treeImg="textbox">
+			<caption localeRef="dlgNBlank" />
+			<schema datatype="string">
+				<xs:minLength value="1" />
+			</schema>
+			<validate>
+				<regexp multiline="false" wholeline="false" ignorecase="false" global="false">/\S+/</regexp>
+			</validate>
+		</choice>
+		<choice name="max1000Chars" treeImg="textbox">
+			<caption localeRef="sMax1000Chars" />
+			<validate>
+				<script value="this.text.length &lt;= 1000" />
+			</validate>
+		</choice>
+		<custom>
+			<caption localeRef="dlgCustom" />
+			<selections name="datatype">
+				<listchoice value="string" treeImg="text" localeRef="sPText" />
+			</selections>
+			<selections name="examples">
+				<listchoice value="string-length(.) &lt;= {X}" localeRef="sMaxLen" />
+				<listchoice value="string-length(.) &gt; 0 or {X} != {Y}" localeRef="sCondReqd" />
+			</selections>
+		</custom>
+	</validation>
+	<validation name="richarea">
+		<choice name="none" treeImg="richarea">
+			<caption localeRef="dlgNV8n" />
+			<schema datatype="anyType" />
+		</choice>
+		<choice name="content-req" treeImg="richarea">
+			<caption localeRef="dlgNBlank" />
+			<schema datatype="anyType"/>
+			<validate>
+				<regexp multiline="false" wholeline="false" ignorecase="false" global="false">/\S+/</regexp>
+			</validate>
+		</choice>
+		<custom>
+			<caption localeRef="dlgCustom" />
+			<selections name="datatype">
+				<listchoice value="anyType" treeImg="richarea" localeRef="sHtml" />
+			</selections>
+			<selections name="examples">
+				<listchoice value="string-length(.) &lt;= {X}" localeRef="sMaxLen" />
+				<listchoice value="string-length(.) &gt; 0 or {X} != {Y}" localeRef="sCondReqd" />
+				<listchoice value="count(.//img) = 0" localeRef="sNoImgs" />
+				<listchoice value="count(.//script) = 0 and count(.//object) = 0 and count(.//embed) = 0" localeRef="sNoScript" />
+				<listchoice value="count(.//a[contains(@hef,'mailto:')]) = 0" localeRef="sNoMailto" />
+			</selections>
+		</custom>
+	</validation>		
+	<validation name="password">
+		<choice name="none" treeImg="textbox">
+			<caption localeRef="dlgNV8n" />
+			<schema datatype="string" />
+		</choice>
+		<choice name="string-req" treeImg="textbox">
+			<caption localeRef="dlgNBlank" />
+			<schema datatype="string">
+				<xs:minLength value="1" />
+			</schema>
+			<validate>
+				<regexp multiline="false" wholeline="false" ignorecase="false" global="false">/\S+/</regexp>
+			</validate>
+		</choice>
+		<choice name="mix8charstr-req" treeImg="textbox">
+			<caption localeRef="sPwd8StrReqd" />
+			<validate>
+				<script value="this.text.length &gt;= 8 &amp;&amp; /^\w*\d\w*$/.test(this.text)" />
+			</validate>
+		</choice>
+		<custom>
+			<caption localeRef="dlgCustom" />
+			<selections name="datatype">
+				<listchoice value="string" treeImg="text" localeRef="sPText" />
+				<listchoice value="integer" treeImg="number" localeRef="sWhNum" />
+			</selections>
+			<selections name="examples">
+				<listchoice value=". = {X}" localeRef="sEqu" />
+				<listchoice value="string-length(.) &gt;= {X}" localeRef="sMinLen" />
+				<listchoice value="string-length(.) &gt; 0 or {X} != {Y}" localeRef="sCondReqd" />
+			</selections>
+		</custom>
+	</validation>
+	<validation name="checkbox">
+		<choice name="none" treeImg="checkbox">
+			<caption localeRef="dlgNV8n" />
+			<schema datatype="boolean" />
+		</choice>
+		<choice name="checked" treeImg="checkbox">
+			<caption localeRef="sMustCheck" />
+			<schema datatype="boolean">
+				<xs:pattern value="true"/>
+			</schema>
+			<validate>
+				<regexp pattern="true" wholeline="true" multiline="false" ignorecase="false" global="false" />
+			</validate>
+		</choice>
+		<choice name="unchecked" treeImg="checkbox">
+			<caption localeRef="sMustUncheck" />
+			<schema datatype="boolean">
+				<xs:pattern value="false"/>
+			</schema>
+			<validate>
+				<regexp pattern="false" wholeline="true" multiline="false" ignorecase="false" global="false" />
+			</validate>
+		</choice>
+		<custom>
+			<caption localeRef="dlgCustom" />
+			<selections name="datatype">
+				<listchoice value="boolean" treeImg="checkbox" localeRef="sBool" />
+			</selections>
+			<selections name="examples">
+				<listchoice value=". = {X}" localeRef="sEqu" />
+				<listchoice value=". = 'true' or {X} != {Y}" localeRef="sCondReqd" />
+			</selections>
+		</custom>
+	</validation>
+	<validation name="calculation">
+		<choice name="none" treeImg="text">
+			<caption localeRef="dlgNV8n" />
+			<schema datatype="string" />
+		</choice>
+		<choice name="nonNeg" treeImg="number">
+			<caption localeRef="sNNN" />
+			<schema datatype="decimal">
+				<xs:minInclusive value="0" />
+			</schema>
+			<validate>
+				<xpath select=". &gt;= 0" selfonly="true" />
+			</validate>
+		</choice>
+		<custom>
+			<caption localeRef="dlgCustom" />
+			<selections name="datatype">
+				<listchoice value="integer" treeImg="number" localeRef="sWhNum" />
+				<listchoice value="decimal" treeImg="number" localeRef="sDecNum" />
+				<listchoice value="double" treeImg="number" localeRef="sFPNum" />
+				<listchoice value="string" treeImg="text" localeRef="sPText" />
+			</selections>
+			<selections name="examples">
+				<listchoice value="not(. &lt;= {X})" localeRef="sGTN" />
+				<listchoice value="not(. &gt;= {X})" localeRef="sLTN" />
+				<listchoice value=". = {X}" localeRef="sEquN" />
+				<listchoice value="not(. = {X})" localeRef="sNeqN" />
+				<listchoice value="string-length(.) &lt;= {X}" localeRef="sMaxLen" />
+			</selections>
+		</custom>
+	</validation>
+	<validation name="calendar">
+		<choice name="none" treeImg="calendar">
+			<caption localeRef="dlgNV8n" />
+		</choice>
+		<choice name="date-req" treeImg="calendar">
+			<caption localeRef="dlgNBlank" />
+			<schema datatype="date" />
+			<validate>
+				<regexp pattern="[0-9]{4}\-(0[1-9]|1[0-2])\-(0[1-9]|[1-2][0-9]|3[0-1])" wholeline="true" multiline="false" ignorecase="false" global="false" />
+			</validate>
+		</choice>
+		<choice name="datePast" treeImg="calendar">
+			<caption localeRef="sDatePast" />
+			<validate>
+				<xpath select="not(. &gt; $currentDate)" selfonly="true" />
+			</validate>
+		</choice>
+		<choice name="datePast-req" treeImg="calendar">
+			<caption localeRef="sDatePastReqd" />
+			<schema datatype="date" />
+			<validate>
+				<xpath select=". &lt;= $currentDate" selfonly="true" />
+			</validate>
+		</choice>
+		<choice name="dateFuture" treeImg="calendar">
+			<caption localeRef="sDateFuture" />
+			<validate>
+				<xpath select="not(. &lt; $currentDate)" selfonly="true" />
+			</validate>
+		</choice>
+		<choice name="dateFuture-req" treeImg="calendar">
+			<caption localeRef="sDateFutureReqd" />
+			<schema datatype="date" />
+			<validate>
+				<xpath select=". &gt;= $currentDate" selfonly="true" />
+			</validate>
+		</choice>
+		<custom>
+			<caption localeRef="dlgCustom" />
+			<selections name="datatype">
+				<listchoice value="" treeImg="calendar" localeRef="sDateNReq" />
+				<listchoice value="date" treeImg="calendar" localeRef="sDateReqd" />
+			</selections>
+			<selections name="examples">
+				<listchoice value="not(. &gt; {X})" localeRef="sDateBefore" />
+				<listchoice value="not(. &lt; {X})" localeRef="sDateAfter" />
+				<listchoice value=". &lt;= {X}" localeRef="sDateBeforeReqd" />
+				<listchoice value=". &gt;= {X}" localeRef="sDateAfterReqd" />
+			</selections>
+		</custom>
+	</validation>
+	<validation name="datatype">
+		<choice name="none" treeImg="text">
+			<caption localeRef="dlgNV8n" />
+			<schema datatype="string" />
+		</choice>
+		<!-- RFC 2822 defines email address format -->
+		<choice name="email" treeImg="text" translate="false">
+			<caption localeRef="sEmailAddr" />
+			<validate>
+				<regexp pattern="[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*" wholeline="true" />
+			</validate>
+		</choice>
+		<!-- semicolon-delimited list of email addresses -->
+		<choice name="emailList" treeImg="text" translate="false">
+			<caption localeRef="sEmailAddrList" />
+			<validate>
+				<regexp pattern="[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*(\s*\;\s*[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*@[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+(\.[A-Za-z0-9!#-'\*\+\-\/=\?\^_`\{-~]+)*)*" wholeline="true" />
+			</validate>
+		</choice>
+		<choice name="boolean" treeImg="checkbox">
+			<caption localeRef="sBool" />
+			<schema datatype="boolean" />
+			<validate>
+				<regexp pattern="(true|false)" wholeline="true" ignorecase="false" />
+			</validate>
+		</choice>
+		<choice name="nonNegInt" treeImg="number">
+			<caption localeRef="sNNI" />
+			<schema datatype="nonNegativeInteger" />
+			<validate>
+				<regexp pattern="\d+" wholeline="true" />
+			</validate>
+		</choice>
+		<choice name="integer" treeImg="number">
+			<caption localeRef="sWhNum" />
+			<schema datatype="integer" />
+			<validate>
+				<regexp pattern="\-?\d+" wholeline="true" />
+			</validate>
+		</choice>
+		<choice name="decimal" treeImg="number">
+			<caption localeRef="sDecNum" />
+			<schema datatype="decimal" />
+			<validate>
+				<regexp pattern="\-?(\d*\.\d+|\d+)" wholeline="true" />
+			</validate>
+		</choice>
+		<choice name="double" treeImg="number">
+			<caption localeRef="sFPNum" />
+			<schema datatype="double" />
+			<validate>
+				<regexp pattern="(\-?(\d*\.\d+|\d+)([eE]\-?\d+)?)|INF|\-INF|NaN" wholeline="true" ignorecase="false" />
+			</validate>
+		</choice>
+		<choice name="date" treeImg="calendar">
+			<caption localeRef="sDate" />
+			<schema datatype="date" />
+			<validate>
+				<regexp pattern="[0-9]{4}\-(0[1-9]|1[0-2])\-(0[1-9]|[1-2][0-9]|3[0-1])" wholeline="true" multiline="false" ignorecase="false" global="false" />
+			</validate>
+		</choice>
+		<!-- RFC 2396 and RFC 2732 defines URL format -->
+		<choice name="url" treeImg="hyperlink">
+			<caption localeRef="sURL" />
+			<schema datatype="anyURI"/>
+			<validate>
+				<regexp multiline="false" wholeline="false" ignorecase="false" global="false">/\S+/</regexp>
+			</validate>
+		</choice>
+	</validation>
+	<validate>
+		<xslt id="ektaccesseval" name="Section 508 Validation" enabled="true" src="[srcPath]/ektaccesseval.xslt"/>
+		<online id="XHTML10Strict" name="XHTML 1.0 Strict" type="string" contentname="fragment" site="validator.w3.org" src="http://validator.w3.org/check" doctype="!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;" keywordsearchresult="failure" keyword=" id=&quot;results&quot; class=&quot;invalid&quot;">
+			<data name="verbose">1</data>
+			<data name="sp">1</data>
+			<data name="ss">1</data>
+		</online>
+		<online id="XHTML10Transitional" name="XHTML 1.0 Transitional" type="string" contentname="fragment" site="validator.w3.org" src="http://validator.w3.org/check" doctype="!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;" keywordsearchresult="failure" keyword=" id=&quot;results&quot; class=&quot;invalid&quot;">
+			<data name="verbose">1</data>
+			<data name="sp">1</data>
+			<data name="ss">1</data>
+		</online>
+		<online id="XHTML11" name="XHTML 1.1" site="validator.w3.org" type="string" contentname="fragment" src="http://validator.w3.org/check" doctype="!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.1//EN&quot; &quot;http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd&quot;" keywordsearchresult="failure" keyword=" id=&quot;results&quot; class=&quot;invalid&quot;">
+			<data name="verbose">1</data>
+			<data name="sp">1</data>
+			<data name="ss">1</data>
+		</online>
+		<!-- This is designed to use WAVE 3.0. WAVE has changed their webpage to use WAVE 4.0 beta. It is decided to temporarily removed this option until later.  -->
+		<!--<online id="wave3" name="WAVE 3.0 Accessibility Tool" site="wave.webaim.org" src="http://wave.webaim.org/wave/Output.jsp" doctype="" keywordsearchresult="failure" keyword="ACCESSIBILTY FEATURE: Null ">
+			<data name="Submit">Submit</data>
+			<data name="IPAddress">127.0.0.1</data>
+		</online>-->
+	</validate>
+</datadesign >

@@ -1,0 +1,372 @@
+.CommunitySearchCtl{ width: 500px; padding: 0px; position: relative; top: 0px; left: 0px; z-index:1; }
+.CommunitySearch_DirectorySearchTab, 
+.CommunitySearch_BasicSearchTab,
+.CommunitySearch_AdvancedSearchTab,
+.CommunitySearch_LocationSearchTab{
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+    border: solid 1px #3B5998;
+    background-color: #D8DFEA;
+    color:#3B5998;
+    padding: 3px;
+    float: left;
+    margin-right: 3px;  
+    position: relative;
+    top: 1px;
+    left: 0px;
+    cursor: pointer;
+}
+.CommunitySearch_BasicSearchTab{
+    margin-left: 0px;
+}
+.CommunitySearch_TabSelected{
+    background-color: #ffffff;
+    color:#9595C0;
+    /*border-bottom: solid 1px white;*/
+}
+.CommunitySearch_BasicContainer{
+    display: none;
+}
+.CommunitySearch_BasicContainer_Selected{
+    margin-top: 0px;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #F7F7F7;
+    border: solid 1px #3B5998;
+    clear: both;
+	display: block;
+}
+.CommunitySearch_BasicTextboxContainer{margin-left: 10px;}
+.CommunitySearch_BasicTextboxContainer input{
+    width: 150px;
+}
+.CommunitySearch_BasicSearchButtonContainer{margin-left: 5px;}
+.CommunitySearch_AdvancedContainer{
+    display: none;
+}
+.CommunitySearch_AdvancedContainer_Selected{
+    border: solid 1px #3B5998;
+    background-color: #EEEEEE;  /***changed background color  from #FFFFFF to #EEEEEE to flow better with the new style of the control****/
+    clear: both;
+    padding: 10px;
+	display: block;
+}
+.CommunitySearch_UserFilterFieldset{
+}
+.CommunitySearch_UserFilterContainer{
+}
+.CommunitySearch_GroupFilterFieldset{
+    margin-top: 10px;
+}
+.CommunitySearch_GroupFilterContainer{
+}
+.CommunitySearch_FilterBlock{
+    margin: 5px;
+}
+.CommunitySearch_FilterModeContainer{
+}
+.CommunitySearch_FilterModeContainer select{
+    width: 150px;
+}
+.CommunitySearch_FilterTextboxContainer{
+    margin-left: 10px;
+}
+.CommunitySearch_FilterTextboxContainer input{
+    width: 150px;
+}
+.CommunitySearch_FilterRemoveBtnContainer{
+    position: relative;
+    top: -2px;
+    left: 10px;
+}
+.CommunitySearch_FilterRemoveBtnContainer a{
+    color: blue;
+}
+.CommunitySearch_FilterTaxonomyLinkContainer
+{
+    position: relative;
+    top: -2px;
+    left: 10px;
+    margin-right: 10px;
+}
+.CommunitySearch_FilterTaxonomyLinkContainer a{
+    color: blue;
+}
+.CommunitySearch_GroupAddFilterButtonContainer{
+    margin-left: 5px;
+}
+.CommunitySearch_UserAddFilterButtonContainer{
+    margin-left: 5px;
+}
+.CommunitySearch_UserAddFilterButtonContainer .FriendsOnlyButton{
+    margin-left: 90px;
+}
+.CommunitySearch_UserAddFilterButtonContainer .FriendsOnlyButtonLabel{
+    background-color: #FFFFFF;
+}
+.CommunitySearch_SearchButtonContainer{
+    margin-top: 10px;
+}
+.CommunitySearch_LocationContainer{
+    border: solid 1px #3B5998;
+    display: none;
+    clear: both;
+}
+.CommunitySearch_ResultsContainer{
+    border: none;
+    margin-top: 10px;
+    display: none;
+    clear: both;
+}
+
+.CommunitySearchCtl img{border: none;}
+.CommunitySearchCtl a {color: Blue;}
+.CommunitySearchCtl a:visited {color: Blue;}
+
+.CommunitySearch_footer{
+	background-color: #F7F7F7;
+    border: solid 1px #3B5998;
+    border-top: none;
+    padding-top: 3px;
+}
+
+.CommunitySearchCtl_MapContainer
+{
+	position: absolute;
+	top: -10000px;
+	left: -10000px;
+	clear: both;
+	margin-bottom: 20px;
+}
+.CommunitySearchCtl_MapContainer_Selected{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	clear: both;
+	margin-bottom: 20px;
+}
+.CommunitySearch_CategoryContainer{width: 300px; padding: 0px; background-color:White; position: absolute; top: 5px; left: 228px;}
+.CommunitySearch_InnerCategoryContainer{border: solid 1px #3B5998; padding: 0px; overflow: hidden;}
+.CommunitySearch_CategoryContainerHeader{position:relative; top: 0px; left: 0px; padding-left: 4px; padding-top: 1px; border-bottom:solid 1px #777777; background-color: #3B5998; color: #ffffff; margin-bottom: 7px;} /*height: 18px; */
+.CommunitySearch_CategoryContainerCloser{position:absolute; top: 1px; right: 1px;}
+.CommunitySearch_CategoryFriendsContainer{position:absolute; top: 22px; left: 7px; }
+.CommunitySearch_CategoryContainer b3{margin: 0px;}
+
+.CommunitySearch_ResultTable{
+	border-collapse: collapse; 
+    border: solid 1px #3B5998;
+	border: none;
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	width: 100%;
+}
+.CommunitySearch_ResultTable th {padding: 5px; border: solid 1px #3B5998;}
+.CommunitySearch_ResultTable td {padding: 5px; border: solid 1px #3B5998;}
+.CommunitySearch_ResultTableHead{background-color: #3B5998; color: #FFFFFF}
+.CommunitySearch_ResultTableHeadAvatar{width: 80px;} /*.CommunitySearch_ResultTableHeadAvatar{width: 20%;}*/
+.CommunitySearch_ResultTableHeadMember{width: 45%;}
+.CommunitySearch_ResultTableHeadStatus{width: 35%;}
+.CommunitySearch_ResultTableOddRow td {background-color: #ffffff;}
+.CommunitySearch_ResultTableEvenRow td {background-color: #F7F7F7;}
+.CommunitySearch_ResultTableDataAvatar{}
+.CommunitySearch_ResultTableDataAvatarContainer{max-height: 75px; overflow:hidden;}
+.CommunitySearch_ResultTableDataMember{}
+.CommunitySearch_ResultTableDataStatus{}
+.CommunitySearch_ResultTableDataAvatar img{border: none; width: 75px;}
+.CommunitySearch_ResultNoResults{color: red;}
+.CommunitySearch_ResultEmptyQuery{color: red;}
+.CommunitySearch_Result_MemberName{margin-bottom: 4px; font-weight:bold;}
+.CommunitySearch_Result_Phone{}
+.CommunitySearch_Result_MemberPTags{white-space: normal ; margin: 4px 0px; float: left; width: 100%; } /* .CommunitySearch_Result_MemberPTags{white-space: normal ; margin-bottom: 4px;} */
+.CommunitySearch_Result_additionalPersonalTags{padding: 10px; border: 1px solid #3B5998; position: absolute; top: 1.5em; left: 0.63em; background-color: white;}
+.CommunitySearch_Result_MemberLocationLink{margin-bottom: 4px;}
+.CommunitySearch_ResultLoading{}
+.CommunitySearch_TargetsPagePreviousBtn{margin-right: 10px;}
+.CommunitySearch_TargetsPageNextBtn{}
+.CommunitySearch_WaitingImage{}
+.CommunitySearch_Result_InfoBlockContainer{position: relative; top: 0px; left: 0px;}
+.CommunitySearch_InfoBlock{position:absolute; top: 5px; left: 20px; width: 300px; background-color:White; border: solid 1px black; white-space:normal;}
+.CommunitySearch_GroupInfoBlock{position:absolute; top: 5px; left: 20px; width: 300px; background-color:White; border: solid 1px black; white-space:normal; overflow:hidden;}
+.CommunitySearch_InfoBlockHeader{position:relative; top: 0px; left: 0px; border-bottom:solid 1px black; height: 16px; margin-bottom:5px; background-color: #3B5998;}
+.CommunitySearch_InfoBlockCloser{position:absolute; top: 1px; right: 1px;}
+.CommunitySearch_InfoBlockBody{overflow:auto; position:relative; top: 0px; left: 0px;}
+.CommunitySearch_InfoBlockItem{white-space:nowrap; position:relative; top: 0px; left: 0px; width: 100%; height: 20px;}
+.CommunitySearch_InfoBlockLabel{font-weight:bolder; position:absolute; top: 0px; right: 200px;}
+.CommunitySearch_InfoBlockData{position:absolute; top: 0px; left: 110px; font-weight: normal;}
+.CommunitySearch_GroupInfoBlockBody{}
+.CommunitySearch_GroupInfoBlockItem{white-space:nowrap; position:relative; top: 0px; left: 0px; width: 100%; height: 20px;}
+.CommunitySearch_GroupDescriptionInfoBlockItem{white-space:normal; position:relative; top: 0px; left: 0px; width: 100%; height: 100px; overflow:hidden;}
+.CommunitySearch_GroupInfoBlockLabel{font-weight:bolder; position:absolute; top: 0px; right: 220px;}
+.CommunitySearch_GroupInfoBlockData{position:absolute; top: 0px; left: 90px; font-weight: normal;}
+.CommunitySearch_ItemLocationSearchImage{margin-top: 1px;}
+.CommunitySearch_UserTagLink{margin-right: 3px;}
+.CommunitySearch_UserTagLinkContainer{font-style:italic; margin-right: 5px; display:block;} /* changed 'display:block;' to 'float:left' to display better within the new style of the container *//*.CommunitySearch_UserTagLinkContainer{font-style:italic; margin-right: 5px; display:block;}*/
+.CommunitySearch_UserTagLinkContainer_Truncated{font-style:italic; margin-right: 5px; position: relative; top: 0; left: 0; clear: both;} 
+.CommunitySearch_accessDenied{font-weight:bolder;}
+.CommunitySearch_AdvancedContainer_Selected fieldset {background-color: #ffffff; border: solid 1px #3B5998; padding-bottom: 5px; padding-left: 5px;}
+.CommunitySearch_AdvancedContainer_Selected select {border: solid 1px #3B5998;}
+.CommunitySearch_AdvancedContainer_Selected .CommunitySearch_FilterTextboxContainer input {border: solid 1px #3B5998;}
+
+.CommunitySearch_UserTagLinkContainer_Truncated .CommunitySearch_UserTag_TruncatedLinkContainer_Less .CommunitySearch_more_control{display: inline;}
+.CommunitySearch_UserTagLinkContainer_Truncated .CommunitySearch_UserTag_TruncatedLinkContainer_Less .CommunitySearch_less_control{display: none;}
+.CommunitySearch_UserTagLinkContainer_Truncated .CommunitySearch_UserTag_TruncatedLinkContainer_Less .CommunitySearch_Result_additionalPersonalTags{display: none;}
+
+.CommunitySearch_UserTagLinkContainer_Truncated .CommunitySearch_UserTag_TruncatedLinkContainer_More .CommunitySearch_more_control{display: none;}
+.CommunitySearch_UserTagLinkContainer_Truncated .CommunitySearch_UserTag_TruncatedLinkContainer_More .CommunitySearch_less_control{display: inline;}
+.CommunitySearch_UserTagLinkContainer_Truncated .CommunitySearch_UserTag_TruncatedLinkContainer_More .CommunitySearch_Result_additionalPersonalTags{display: block;}
+
+.CommunitySearch_OuterResultFilterCategoryContainer{clear: both;}
+.CommunitySearch_FilterCategoriesButton{cursor: pointer; color:#3B5998; margin-top: 10px; margin-left: 5px;
+	background-image:url(../images/application/arrowClosed.gif);
+	background-repeat: no-repeat; padding-left: 15px; height: 1%;}
+.CommunitySearch_FilterCategoriesButton_selected{cursor: pointer; color:#3B5998; margin-top: 10px; margin-left: 5px;
+	background-image:url(../images/application/arrowOpen.gif);
+	background-repeat: no-repeat; padding-left: 15px; height: 1%;}
+.CommunitySearch_InnerResultFilterCategoryContainer{}
+.CommunitySearch_ResultFilterFieldset{padding: 0px;}
+
+ /*************************************************************/
+ /* CSS for the Community Search Control's Directory Tab */
+
+#__Map{border: 1px solid rgb(75, 124, 159); overflow: hidden; position: relative; display: block; width: 390px; height: 350px; background-color: rgb(233, 231, 212);}
+div#__MapTab table tr td{ background-color: #F7F7F7; }
+.CommunitySearchCtl_MapContainer_Selected{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	clear: both;
+	margin-bottom: 20px;
+    /*added the following styles because the map was outside of it's container*/
+    width: 95%; 
+    border: solid 1px #3B5998; 
+    background-color: #F7F7F7; 
+    clear: both; 
+}
+.CommunitySearch_BasicTextboxContainer{margin-left: 10px; background-color: #EEEEEE; } /*****added 'background-color: #EEEEEE;' ****/
+.CommunitySearch_ResultTableDataAvatarContainer{height: 80px; width: 80px; overflow: hidden;}
+
+   /* Styles added for Directory Tab functionality */
+.CommunitySearch_DirectorySortByContainer{font-size: 13px; font-weight: normal; padding: 0px; margin: 5px; color: #444468;}
+.CommunitySearch_DirectoryDescription{ font-size: 14px; font-weight: normal; padding: 3px; margin: 5px 1px; color: #444468; }
+.CommunitySearch_DirectoryContainer_Selected{width: 53.5em; margin-top: 0px; padding: 10px; border: solid 1px #3B5998; background-color: #EEEEEE; clear: both; display: block; }
+.CommunitySearch_DirectoryContainer{ display: none; }
+ 
+.CommunitySearch_labelTabContainer{ padding: 1px 3px; margin: 0px 1px 1px 1px; background-color: Transparent; height: 45px; color: #3B5998;  }
+.CommunitySearch_sortByContainer{ float: left; padding: 3px; margin: 1px 1px 1px 10px;}
+
+.CommunitySearch_labelTabs{ float: left; padding: 3px; margin: 1px; border: solid 1px #3B5998; color: #0000FF; background-color: #FFFFFF; font-weight: bold; text-decoration: none; }
+.CommunitySearch_labelTabs a{color: #0000FF; font-weight: bold; text-decoration: none; }
+.CommunitySearch_labelTabs a:link{color: #0000FF; font-weight: bold; text-decoration: none; }
+.CommunitySearch_labelTabs a:visited{color: #0000FF; font-weight: bold; text-decoration: none; }
+.CommunitySearch_labelTabs a:active{color: #0000FF; font-weight: bold; text-decoration: none;}
+.CommunitySearch_labelTabs a:hover{color: #0000FF; font-weight: bold; text-decoration: underline;}
+
+.CommunitySearch_ResultTableHeadFirstName{width: 14%;}
+.CommunitySearch_ResultTableHeadLastName{width: 14%;}
+
+
+/*************************************************************/
+/*  The following rules apply to the User-Select-Control, which uses the community search control internally:  */
+.UserSelectTargetCtl {padding: 10px;} 
+.UserSelectTargetCtl .CommunitySearchCtl {width: 100%;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_GroupFilterFieldset{display: none;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_BasicSearchTab{}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_AdvancedSearchTab{}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_LocationSearchTab{display: none;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_UserFilterFieldset{border: none;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_UserFilterFieldset legend{display: none;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_AdvancedContainer_Selected {padding: 0px;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_AdvancedContainer_Selected .CommunitySearch_SearchButtonContainer{margin-left: 5px;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_UserFilterContainer .CommunitySearch_FilterModeContainer select{width: 125px;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_UserFilterContainer .CommunitySearch_FilterTextboxContainer input{width: 125px;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_ResultTableHeadAvatar{width: 20%;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_ResultTableHeadMember{}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_ResultTableHeadSelect{width: 5%;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_ResultTable .CommunitySearch_Result_InfoBlockContainer{left: -95px;}
+.UserSelectTargetCtl .CommunitySearchCtl .FriendsOnlyButton{margin-left: 15px;margin-right: 0px;}
+.UserSelectTargetCtl .CommunitySearchCtl .FriendsOnlyButtonLabel{background-color: #FFFFFF;display: inline;margin-left: 0px;}
+.UserSelectTargetCtl .CommunitySearchCtl .CommunitySearch_SearchButtonContainer {margin-top: 0px;}
+
+/*************************************************************/
+/*  These additional rules apply to Messagings' User-Select-Control, which uses the community search control internally:  */
+.MsgUserSelectCtl {
+	background-color:white;
+	font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	height:100%;
+	overflow: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* Category Filter Tree */
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv input.searchTaxonomyPath,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer input.searchTaxonomyPath
+	{
+		margin: 0 .25em 0 0;
+		padding: 0;
+		position: relative;
+		top: .1em;
+		*position: static; /* fix for IE */
+		*top: 0; /* fix for IE */
+		*vertical-align: middle; /* fix for IE */
+	}
+
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview li,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer .EktronTreeview li
+	{
+		background: none;		
+	}
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview .hitarea,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer .EktronTreeview .hitarea
+	{
+		background-image: none;
+		background-repeat: no-repeat;
+		background-position: 3px 0px;
+		background-color: transparent;
+		*background-position: 5px 3px;
+	}
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview .expandable-hitarea,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer .EktronTreeview .expandable-hitarea
+	{
+		background-image: url('../images/ui/icons/tree/plus.png'); 
+	}
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview .collapsable-hitarea,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer  .EktronTreeview .collapsable-hitarea
+	{
+		background-image: url('../images/ui/icons/tree/minus.png'); 
+	}
+
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview li span.folder, 
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview li span.file,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer .EktronTreeview li span.file,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer .EktronTreeview li span.folder
+	{
+		display: inline-block;
+		padding: 0 0 0 20px;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		font-size: 12px;
+	}
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview li.collapsable>span.folder,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer  .EktronTreeview li.collapsable>span.folder
+	{
+		background-image: url('../images/ui/icons/folderOpen.png');
+
+	}	
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview li.expandable>span.folder,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer  .EktronTreeview li.expandable>span.folder
+	{
+		background-image: url('../images/ui/icons/folder.png'); 
+	}
+.CommunitySearchCtl div.CommunitySearch_InnerResultFilterCategoryContainer fieldset.CommunitySearch_ResultFilterFieldset div.CommunitySearch_ResultFilterDiv .EktronTreeview span.file,
+.CommunitySearchCtl div.CommunitySearch_CategoryContainer  .EktronTreeview span.file
+	{
+		background-image: url('../images/ui/icons/taxonomy.png'); 
+	}		

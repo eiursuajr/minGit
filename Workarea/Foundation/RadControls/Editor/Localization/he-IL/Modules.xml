@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorXhtmlValidator">XHTML בדיקת</string>
+	<string id="RadEditorStatistics">סטטיסטיקה</string>
+	<string id="RadEditorNodeInspector">מאפייני פיקוח</string>
+	<string id="RadEditorDomInspector">מפקח תג</string>	
+	<string id="RadEditorHtmlInspector">בזמן אמת HTML תצוגת</string>
+	<string id="StatisticsWords">:מילים</string>
+	<string id="StatisticsCharacters">:תווים</string>	
+	<string id="NodeInspectorSelectedElement"> הרכיב שנבחר הוא</string>	
+	<string id="NodeInspectorInvalidValue">.ערך לא חוקי. אנא הכנס מספר</string>	
+	<string id="className">שם מחלקה</string>		
+	<string id="borderColor">צבע הגבול</string>	
+	<string id="bgColor">רקע</string>	
+	<string id="width">רוחב</string>
+	<string id="height">גובה</string>
+	<string id="align">יישור</string>
+	<string id="vAlign">יישור אנכי</string>
+	<string id="cellSpacing">מרווח תא</string>
+	<string id="cellPadding">ריפוד תא</string>
+	<string id="border">רוחב גבול</string>
+	<string id="noWrap">ללא גלישה</string>
+	<string id="value">ערך</string>
+	<string id="id">זיהוי</string>
+	<string id="name">שם</string>
+	<string id="href">כתובת</string>
+	<string id="title">חלון קופץ</string>
+	<string id="target">יעד</string>
+	<string id="alt">כתובית</string>
+	<string id="_blank">חלון חדש/</string>
+	<string id="_self">חלון נוכחי</string>
+	<string id="_parent">חלון אב</string>
+	<string id="_top">חלון דפדפן</string>
+	<string id="_search">חלונית חיפוש</string>
+	<string id="_media">חלונית מדיה</string>
+	<string id="DomInspectorRemoveElement">הסר רכיב</string>
+	<string id="NAME">שם</string>
+	<string id="action">פעולה</string>	
+	<string id="ValidateXHTML">XHTML בדיקת</string>
+	<string id="ExpandValidator">הרחב חלונית דווח</string>
+	<string id="Doctype">בחר את סוג המסמך</string>
+</localization>

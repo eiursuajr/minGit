@@ -1,0 +1,199 @@
+
+/*****************************************************************************************/
+/*                                                                                       */
+/*                         Calendar Control (monthcalendarcontrol)                       */
+/*                                                                                       */
+/*****************************************************************************************/
+.calctl_nonMonthCell {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+}
+.calctl_weekendCell {
+	background : #dedeff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+.calctl_weekdayCell {
+	background : #eeffff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+.calctl_weekdayEventCell {
+	background : #ffffee ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+.calctl_weekendEventCell {
+	background : #ccccff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+.calctl_weekendDOWHeader {
+	background : #ddddff ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+	text-align : center ;
+}
+.calctl_weekdayDOWHeader {
+	background : #eeeeff ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+}
+.calctl_yearFooter
+{
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 9pt;
+	text-align : center ;
+}
+.calctl_monthHeaderBorder {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 10pt;
+	border-right : #aaaaaa 1px solid ;
+	border-top : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	text-align : center ;
+}
+.calctl_monthHeader {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 10pt;
+	text-align : center ;
+}
+.calctl_monthHeaderPrev {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	text-align : center ;
+}	
+.calctl_monthHeaderNext {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	text-align : center ;
+}
+.calctl_eventDispBkg {
+	background : #eeeeff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+	border-right : #aaaaaa 1px solid ;
+	border-top : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+
+}
+.calctl_eventDisplay {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+.calctl_eventDisplayDate {
+	font-size : 12pt ;
+	font-weight : bold ;
+	background : transparent ;
+	font-family : Arial ;
+	text-align : center ;
+	border-bottom : #aaaaaa 1px solid ;
+}
+.calctl_eventDisplayEventTitle {
+	font-weight : bold ;
+	background : transparent ;
+	font-family : Arial ;
+	font-size : 10pt;
+	text-align : left ;
+}
+.calctl_eventDisplayLocation {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+.calctl_eventDisplayTimes {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+.calctl_eventDisplayTimes {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+.calctl_eventDisplayLongDesc {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+.calctl_hiddenEvent {
+	visiblity : hidden ;
+	position : absolute ;
+	display : none ;
+}
+.calcctl_selectedDay {
+
+	background : #99ffff ;
+	font-family : Arial ;
+	font-weight : bold ;
+	font-size : 8pt;
+	text-align : center ;
+
+	border-top : #ff0000 1px solid ;
+	border-left : #ff0000 1px solid ;
+	border-right : #ff0000 1px solid ;
+	border-bottom : #ff0000 1px solid ;
+}

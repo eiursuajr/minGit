@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+  <string id="Description">Beskrivning</string>
+  <string id="Empty">Inga filer valda.</string>
+  <string id="File">Fil</string>
+  <string id="Title">Titel</string>
+</localization>

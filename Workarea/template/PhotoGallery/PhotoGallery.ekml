@@ -1,0 +1,159 @@
+<!--   
+Copyright (C) Ektron Inc. All rights reserved.
+Ektron Template Markup
+  
+  [$Comment]                        -The content’s comment information is displayed.
+  [$ContentByteSize]				        -Displays the content item’s size in KB. Works only with taxonomy search.
+  [$ContentId]                      -Display the content item’s ID.
+  [$DateCreated]                    -Display the date the content was created.
+  [$DateModified]                   -Display the date the content was last modified.
+  [$EditorFirstName]                -Display the last editor’s first name for a content item.
+  [$EditorLastName]                 -Display the last editor’s last name for a content item.
+  [$FolderId]                       -Display the folder ID of a content item.
+  [$Html]                           -Display the HTML contained in the content item..
+  [$HyperLink]                      -Adds a hyperlink using the title of the content block as the text.
+  [$ImageIcon]                      -Displays an image icon for the content item
+  [$Index]                          -Serialize the content items in a numbered list
+  [$ItemCount]                      -Total number of items (works only in paging mode otherwise -1).
+  [$Language]                       -Display the language ID for the content item.
+  [$LinkTarget]                     -When added to an <a href=””> tag’s target=”” attribute, this variable
+									                    reads the server control’s LinkTarget property and uses its setting.
+  [$PagingCurrentEndIndex]			    -End count for the items displayed in a page's search results. Works only with taxonomy search.
+  [$PagingCurrentStartIndex]		    -Start count for the items displayed in a page's search results. Works only with taxonomy search
+  [$QuickLink]                      -This property displays the Quicklink information for the content item.
+							                        When wrapped in an <a href=””> tag, you can create a Hyperlink.
+  [$SearchDuration]					        -The amount of time, in seconds, taken for executing search. Works only with taxonomy search.
+  [$SearchSummary]					        -Displays a teaser that is created from information stored in the indexing service for each item in the search results. Works only with taxonomy search.
+  [$SearchText]						          -Displays the text for which a user is searching. Works only with taxonomy search.
+  [$ShowBubble]					            -Calls the <ekbubbleinfo></ekbubbleinfo> tags and places the 
+									                      information contained within those tags in a pop-up bubble.
+  [$ShowBubble(width)]			        -Works the same as [$ShowBubble]. It calls the <ekbubbleinfo></ekbubbleinfo>
+									                    tags and allows you to set the width of the bubble.
+  [$ShowBubble(width,height)]       -Works the same as [$ShowBubble]. It calls the <ekbubbleinfo></ekbubbleinfo>
+									                    tags and allows you to set the width and height of the bubble.
+  [$ShowContent('htmltagid')]       -Display content in given div/span tag. Replace the 'htmltagid' with the name 
+									                    of the tag.
+  [$Status]                         -Display the status of a content item.
+  [$Teaser]                         -Display the content item’s summary information.
+  [$Title]                          -Display the content item’s title.
+  [$UrlParam('paramname')]          -Reads the given parameter value
+  [$TemplateQuickLink]              -Uses the taxonomy template as Quicklink.
+  -For additional information on the EkML, its variables and tags, see the CMS400.NET Developer Manual
+    section "Ektron Markup Language"
+     
+-->
+<!-- The <ekmarkup></ekmarkup> tags open and close the Ektron Markup Language.-->
+<ekmarkup>
+  <!-- The <ekcontnetinfo></ekcontentinfo> tags are invoked when you use the [$ShowContent('htmltagid')]
+       variable. By adding variables between the <ekcontnetinfo></ekcontentinfo> tags, you define what 
+       information appears in the specified html tag ID. In this case, the HTML information appears. -->
+  <ekcontentinfo>[$Html]</ekcontentinfo>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	   defines the output of the breadcrumb information. -->
+  <ekoutput mode="breadcrumb">
+    <!-- Defines the title for the breadcrumb. -->
+    <bctitle>
+      <span class="bc_title">&#160;</span>
+    </bctitle>
+    <bcrootlink>
+      <span class="bc_current">Albums</span>
+    </bcrootlink>
+    <bcseparator>
+      <span class="bc_sep"> > </span>
+    </bcseparator>
+    <bchyperlink>
+      <span class="bc_link">{0}</span>
+    </bchyperlink>
+    <bcactivelink>
+      <span class="bc_current">{0}</span>
+    </bcactivelink>
+  </ekoutput>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	   defines the output of the category. -->
+  <ekoutput mode="category">
+      <ekrepeat>
+		  <li>[$ManageCategoryLink]&#160;[$CategoryLink]</li>
+      </ekrepeat>
+  </ekoutput>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	   defines the area where the content hyperlinks and summary information appears. -->
+  <ekoutput mode="article">
+      <ekrepeat>
+        <tr>
+          <ekcolrepeat>
+			  <td class="Image">				  
+				  <div class="image">
+					<span style="display:none !important;" id="EktPhotoGallery[$ContentId]_Teaser">[$Teaser]</span>
+					  <a href="[$QuickLink]" id="EktPhotoGallery[$ContentId]"  title="[$Title]" rel="gallery-images" onclick="ektb_show(document.getElementById('EktPhotoGallery[$ContentId]_Teaser'), this.href, this.rel);return false;"><img id="EktGalleryThumb[$ContentId]" src="[$ImageThumbnail]" alt="[$Title]" title="[$Title]" /></a>  
+				  </div>
+				  <div class="contentID">
+					  [$HyperLink]
+				  </div>
+			  </td>
+          </ekcolrepeat>
+        </tr>
+      </ekrepeat>
+  </ekoutput>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	     defines the results output of the taxonomy search. -->
+  <ekoutput mode="article_search">
+          <ul>
+            <!-- The <ekrepeat></ekrepeat> tags apply any variables and styling information contained 
+				 within them to each article in the taxonomy. In this case, the hyperlink and summary  
+				 appear for each article in the taxonomy category -->
+            <ekrepeat>
+				<li>[$ImageThumbnail][$HyperLink][$SearchSummary]</li>
+			</ekrepeat>
+          </ul>
+  </ekoutput>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. This section
+	   defines the overall output view of the Taxonomy. It denotes the locations of Search Box, Breadcrumb,
+	   Category and Articles.-->
+  <ekoutput mode="view">
+	  <table id="GalleryLayout">
+		  <thead>
+			  <tr>
+				  <th colspan="2" class="breadcrumb">
+					  <div class="breadcrumb">[$BreadCrumb][$AddButton]</div>
+				  </th>
+			  </tr>
+			  <tr>
+				  <th class="subcategories">
+					  <span class="subcategory">
+						  Subcategories<!--Category-->
+					  </span>
+				  </th>
+				  <th valign="top" class="images">
+					 <span class="image">Photos
+	<a href="javascript:window.location.reload(true);">
+	<img src="[$param.workareapath]images/application/refresh.png" title="refresh" alt="" /></a>
+					</span>[$AddAsset]
+				  </th>
+			  </tr>
+		  </thead>
+		  <tbody>
+			  <tr>
+				  <td id="navigation">
+					  <ul class="taxonomy-navigation">
+						  [$Categories]
+					  </ul>
+					  <div class="TaxonomySearchBox">[$SearchBox]</div>
+				  </td>
+				  <td id="images">
+					  <table class="Gallery">
+						  [$Articles]
+					  </table>
+				  </td>
+			  </tr>
+			 
+			  <tr>
+				  <td>
+					  [$ManageContent]
+				  </td>
+			  </tr>
+			 
+		  </tbody>
+	  </table>
+	  	  
+  </ekoutput>
+</ekmarkup>

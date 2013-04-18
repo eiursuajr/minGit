@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<Manifest>
+	<Reports>
+		<!-- Place reports that are more specific at the top of the list -->
+		<Report xml:lang="en">
+			<Title>Contact Information</Title>
+			<Description>Lists contacts sorted by ZIP code.</Description>
+			<xslt src="contactinfo.xslt"/>
+			<fieldlist>
+				<field name="Name"/>
+				<field name="Address"/>
+				<field name="City"/>
+				<field name="State"/>
+				<field name="Zip"/>
+				<field name="BusinessPhone"/>
+				<field name="HomePhone"/>
+				<field name="Email"/>
+			</fieldlist>
+		</Report>
+		<Report xml:lang="en">
+			<Title>Summary of Vacation Requests</Title>
+			<Description>Lists number of paid vacations days requested per person.</Description>
+			<xslt src="vacationRequest.xslt"/>
+			<fieldlist>
+				<field name="Name"/>
+				<field name="Reason"/>
+				<field name="day_pay"/>
+			</fieldlist>
+		</Report>
+		<Report>
+			<Title>Table with Totals</Title>
+			<Description>Each field is a column in the table. 
+				Additionally, each option of choice fields is listed in a column. 
+				Totals for numeric and choice fields are shown at the bottom of the table.</Description>
+			<xslt src="FormReportTotals.xslt"/>
+			<fieldlist>
+				<field datalist="*"/>
+			</fieldlist>
+			<fieldlist>
+				<field datatype="boolean"/>
+			</fieldlist>
+			<fieldlist>
+				<field basetype="number"/>
+			</fieldlist>
+		</Report>
+		<Report>
+			<Title>Bar Chart of Choice Percentages</Title>
+			<Description>Displays the percent selected of select lists, choices, and checkbox options, 
+				in a bar graph format. Multi-select lists are excluded. This report is suitable for polls.</Description>
+			<xslt src="FormReportPoll.xslt"/>
+			<fieldlist>
+				<field datalist="*" datatype="!selection"/>
+			</fieldlist>
+			<fieldlist>
+				<field datatype="boolean"/>
+			</fieldlist>
+		</Report>
+		<Report>
+			<Title>Summary of Selected Choices</Title>
+			<Description>Displays the results of select lists, choices, and checkbox options, 
+				such as in a survey or poll.</Description>
+			<xslt src="FormReportChoices.xslt"/>
+			<fieldlist>
+				<field datalist="*"/>
+			</fieldlist>
+			<fieldlist>
+				<field datatype="boolean"/>
+			</fieldlist>
+		</Report>
+		<Report>
+			<Title>Table of Values</Title>
+			<Description>Each field is a column in the table.</Description>
+			<xslt src="FormReportTable.xslt"/>
+		</Report>
+		<Report>
+			<Title>List of Submitted Values</Title>
+			<Description>The submitted values for each field are displayed in a list.</Description>
+			<xslt src="FormReportList.xslt"/>
+		</Report>
+		<Report>
+			<Title>Submitted Data as XML</Title>
+			<Description>The submitted values are displayed as XML in a scrollable box.</Description>
+			<xslt src="FormDataXml.xslt"/>
+		</Report>
+	</Reports>
+</Manifest>

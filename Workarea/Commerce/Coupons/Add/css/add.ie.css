@@ -1,0 +1,12 @@
+﻿div.couponAdd {zoom:1;position:relative;background-image:url('images/headerBackground_darkBlue.gif');background-repeat:repeat-x;background-position:0px -3px;}
+div.couponAdd .clearfix {display:inline-block;}
+div.couponAdd a.help {top:3px;}
+
+div.couponAdd div.couponAddWizard {position:relative;top:-2px;}
+
+div.couponAdd div.invalidPermissions p {zoom:1;}
+
+/* wizard outer table */
+div.couponAdd table.wizardTable td.sidebar a {display:none;}
+div.couponAdd table.wizardTable td.sidebar a table a {display:block;}
+div.couponAdd table.wizardTable td table tr td.navigation input {margin-left:.25em;}

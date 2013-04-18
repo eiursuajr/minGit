@@ -1,0 +1,98 @@
+.GSearchResultItem0, .GSearchResultItem1
+{
+	border-bottom : solid 1px #ccc;
+	padding : 10px;
+	margin-bottom	: 0px;
+	clear:	all;
+	height: 0px;
+	position:relative;
+}
+
+.GSearchResultItem0
+{
+	background : #f0f0f0;
+}
+
+.GSearchResultItem1
+{
+	background : #ffffff;
+}
+
+#iconList
+{
+	border:none;
+}
+
+#iconListStatus
+{
+	background:buttonface;
+	border : none 0px;
+	border-bottom : solid 1px #aca899;
+	border-top: solid 1px #7f9db9;
+	border-left: solid 1px #7f9db9;
+	height: 23px;
+	padding-left: 10px;
+	padding-top: 1px;
+}
+
+#iconListOutput
+{
+	border-left: solid 1px #7f9db9;
+	display:block; 
+	position:absolute; 
+	z-index:3; 
+	width:100%; 
+	background:#fff;
+}
+
+* html #iconListOutput {
+	height:96%;
+}
+
+.itemTitle
+{
+	height: 14px;
+	overflow:hidden;
+}
+
+.itemIconBox
+{
+	width:120px;
+	height:92px;
+	border: solid 1px #000000;
+	float: left;
+	margin-right:20px;
+	margin-left:12px;
+}
+.itemIcon
+{
+	margin-left:28px;
+	margin-top:10px;
+}
+
+.itemIconLoadingMessage
+{
+	width:120px;
+	height:22px;
+	position:absolute;
+	top:85px;
+	left:45px;
+	color:#c0c0c0;
+}
+
+.itemPreview
+{
+	zoom: .25;
+	float: left;
+	margin-right : 20px;
+	margin-left  : 10px;
+	width: 800px;
+	height: 600px;
+	border: solid 5px #000;
+}
+
+ul.GSearch
+{
+	width: 100%;
+	margin-top : 0px;
+}

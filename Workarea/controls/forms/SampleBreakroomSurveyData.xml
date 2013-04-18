@@ -1,0 +1,47 @@
+<Form>
+<Title>Breakroom Survey</Title>
+<Description>Vote for your favorite coffees, teas and snacks.</Description>
+<SubmittedData>
+<Date>11/3/2005 11:15:29 AM</Date>
+<Data form_data_id="33">
+<Coffee>Colombian 100%</Coffee>
+<Coffee>French Vanilla</Coffee>
+<Coffee>French Vanilla decaf</Coffee>
+<Coffee>Vanilla Hazelnut</Coffee>
+<Coffee>Vanilla Hazelnut decaf</Coffee>
+<sweetener>Sweet-n-Low</sweetener>
+<Tea>Orange &#38; Spice</Tea>
+<u_comment_7></u_comment_7>
+</Data>
+</SubmittedData>
+<SubmittedData>
+<Date>11/3/2005 11:15:47 AM</Date>
+<Data form_data_id="34">
+<Coffee>House Blend</Coffee>
+<Coffee>Sumatra</Coffee>
+<Coffee>Decaffeinated Dark</Coffee>
+<Coffee>Kenya Kilimandjaro dark</Coffee>
+<Coffee>Guatemala Antigua dark</Coffee>
+<sweetener>Sugar</sweetener>
+<Tea>Earl Grey</Tea>
+<Tea>Green Tea</Tea>
+<Tea>Mint Medley</Tea>
+<Tea>I Love Lemon</Tea>
+<Tea>English Breakfast</Tea>
+<Tea>Orange &#38; Spice</Tea>
+<Tea>Lipton Decaf</Tea>
+<u_comment_7></u_comment_7>
+</Data>
+</SubmittedData>
+<SubmittedData>
+<Date>11/3/2005 11:15:53 AM</Date>
+<Data form_data_id="35">
+<Coffee></Coffee>
+<sweetener></sweetener>
+<Tea></Tea>
+<u_comment_7></u_comment_7>
+</Data>
+</SubmittedData>
+<ektdesignpackage_list>
+<fieldlist><field name="Coffee" datatype="selection" xpath="/*/Coffee" datalist="EALA">Coffee</field><field name="Tea" datatype="selection" xpath="/*/Tea" datalist="EAIA">Tea</field><field name="Sweetener" datatype="choice" xpath="/*/Sweetener" datalist="EAFA">Sweetener</field><field name="Comment" datatype="max1000Chars" xpath="/*/Comment">Comment</field><datalist name="EALA"><item value="Costa Rica Tarrazu">Costa Rica Tarrazu</item><item value="Ethiopia Limu">Ethiopia Limu</item><item value="Colombian 100%">Colombian 100%</item><item value="Colombian Decaffeinated">Colombian Decaffeinated</item><item value="House Blend">House Blend</item><item value="Sumatra">Sumatra</item><item value="Decaffeinated Dark">Decaffeinated Dark</item><item value="Kenya Kilimandjaro Dark">Kenya Kilimandjaro Dark</item><item value="Guatemala Antigua Dark">Guatemala Antigua Dark</item><item value="French Roast">French Roast</item><item value="Chocolate Almond">Chocolate Almond</item><item value="French Vanilla">French Vanilla</item><item value="French Vanilla Decaf">French Vanilla Decaf</item><item value="Irish Cream">Irish Cream</item><item value="Macadamia Nut">Macadamia Nut</item><item value="Vanilla Hazelnut">Vanilla Hazelnut</item><item value="Vanilla Hazelnut Decaf">Vanilla Hazelnut Decaf</item></datalist><datalist name="EAIA"><item value="Earl Grey">Earl Grey</item><item value="Green Tea">Green Tea</item><item value="Mint Medley">Mint Medley</item><item value="I Love Lemon">I Love Lemon</item><item value="English Breakfast">English Breakfast</item><item value="Orange &amp; Spice">Orange &amp; Spice</item><item value="Lipton">Lipton</item><item value="Lipton Decaf">Lipton Decaf</item></datalist><datalist name="EAFA"><item value="Sugar">Sugar</item><item value="Equal">Equal</item><item value="Sweet-n-Low">Sweet-n-Low</item><item value="Splenda">Splenda</item></datalist></fieldlist></ektdesignpackage_list>
+</Form>

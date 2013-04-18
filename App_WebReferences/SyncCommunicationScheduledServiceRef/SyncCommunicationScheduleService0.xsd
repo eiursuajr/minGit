@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Synchronization" />
+  <xs:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.IO" />
+  <xs:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="SyncParameters">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SyncCommonParams">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SyncAssets" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncDatabase" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncPrivateAssets" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncTemplates" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncUploadedFiles" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncUploadedImages" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SyncWorkArea" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SyncParameters" nillable="true" type="tns:SyncParameters" />
+  <xs:complexType name="SyncCommonParams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssetLibraryPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AssetsPath" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Microsoft.Synchronization" minOccurs="0" name="ConflictResolutionPolicy" type="q1:ConflictResolutionPolicy" />
+      <xs:element minOccurs="0" name="IsRemoteSite" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LocalSiteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrivateAssetsPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrivateCatalog" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PublishCatalog" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Recursive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RemoteAssetLibraryPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteAssetsPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemotePrivateAssetsPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteSiteName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteSitePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteUploadedFilesPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteUploadedImagesPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RemoteWorkareaPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ScopeFilter" nillable="true" type="tns:SyncScopeFilter" />
+      <xs:element minOccurs="0" name="SitePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SyncDirection" type="tns:SyncDirection" />
+      <xs:element minOccurs="0" name="SyncID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SyncStartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UploadedFilesPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UploadedImagesPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkareaPath" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SyncCommonParams" nillable="true" type="tns:SyncCommonParams" />
+  <xs:complexType name="SyncScopeFilter">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.IO" name="fileAttrsToExclude" type="q2:FileAttributes" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="fileNamesToExclude" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="fileNamesToInclude" nillable="true" type="q4:ArrayOfstring" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" name="subDirectoriesToExclude" nillable="true" type="q5:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SyncScopeFilter" nillable="true" type="tns:SyncScopeFilter" />
+  <xs:simpleType name="SyncDirection">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="upload" />
+      <xs:enumeration value="download" />
+      <xs:enumeration value="bidirectional" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SyncDirection" nillable="true" type="tns:SyncDirection" />
+  <xs:complexType name="SyncFileParameters">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SyncCommonParams">
+        <xs:sequence>
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LocalFilePath" nillable="true" type="q6:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SyncFileParameters" nillable="true" type="tns:SyncFileParameters" />
+  <xs:complexType name="SyncStatusInfoList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SyncStatusInfo" nillable="true" type="tns:SyncStatusInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SyncStatusInfoList" nillable="true" type="tns:SyncStatusInfoList" />
+  <xs:complexType name="SyncStatusInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SyncStatusInfo" nillable="true" type="tns:SyncStatusInfo" />
+  <xs:complexType name="SyncContentParameters">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SyncCommonParams">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssetID" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssetVersion" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ContentId" type="xs:long" />
+          <xs:element minOccurs="0" name="ContentLanguage" type="xs:int" />
+          <xs:element minOccurs="0" name="FolderPath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsAsset" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SyncContentParameters" nillable="true" type="tns:SyncContentParameters" />
+  <xs:complexType name="SyncFolderParameters">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SyncCommonParams">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FolderId" type="xs:long" />
+          <xs:element minOccurs="0" name="FolderPath" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SyncFolderParameters" nillable="true" type="tns:SyncFolderParameters" />
+  <xs:complexType name="SyncMultiSiteParameters">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:SyncCommonParams">
+        <xs:sequence>
+          <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CommonFolderIds" nillable="true" type="q7:ArrayOflong" />
+          <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CommonFolderPaths" nillable="true" type="q8:ArrayOfstring" />
+          <xs:element minOccurs="0" name="MultiSiteFolderPath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MultiSiteId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SyncMultiSiteParameters" nillable="true" type="tns:SyncMultiSiteParameters" />
+</xs:schema>

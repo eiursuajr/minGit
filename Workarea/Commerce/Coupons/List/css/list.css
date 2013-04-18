@@ -1,0 +1,65 @@
+/* wrappers */
+div.ektron {padding:0;margin:0;}
+
+/* actions */
+div.couponList { margin-top: -2px; }
+div.couponList div.actions ul li { display:inline-block; padding: 0; margin: 0; }
+div.couponList div.actions ul li a.primary { display: inline-block; }
+div.couponList div.actions ul li.save,
+div.couponList div.actions ul li.cancel { background-repeat:no-repeat;background-position:center center; margin-right: 10px; text-indent: -9999px; }
+div.couponList div.actions ul li.save {background-image:url('../../../../images/ui/icons/save.png');display:none;}
+div.couponList div.actions ul li.cancel {background-image:url('../../../../images/ui/icons/cancel.png');display:none;}
+
+/* search */
+div.couponList p.search {float:right;margin:-28px 1em 0 0;position:relative;}
+div.couponList p.search input.clearSearch {position:relative;top:3px;}
+
+/* coupon table */
+div.couponList div.coupons {clear:both;}
+
+/* coupon table - thead */
+div.couponList div.coupons table.coupons thead tr {cursor:pointer;cursor:hand;}
+div.couponList div.coupons table.coupons thead th {vertical-align:middle;}
+div.couponList div.coupons table.coupons thead th a {background-position:right 50%;background-repeat:no-repeat;padding:0;}
+div.couponList div.coupons table.coupons thead th a:hover {text-decoration:none;}
+div.couponList div.coupons table.coupons thead th a.ascending {background-image:url('images/ascending.gif');padding-right:16px;}
+div.couponList div.coupons table.coupons thead th a.descending {background-image:url('images/descending.gif');padding-right:16px;}
+div.couponList div.coupons table.coupons thead th img.restore {display:none;}
+
+/* coupon table - tfoot */
+div.couponList div.coupons table.coupons tfoot td {vertical-align:middle;text-align:left;border:none;border:1px solid silver;background-image:url('images/tfoot.gif');background-repeat:repeat;}
+div.couponList div.coupons table.coupons tfoot td input.currentPage {width:2em;}
+div.couponList div.coupons table.coupons tfoot td p input.adHocPage {position:relative;top:1px;}
+div.couponList div.coupons table.coupons tfoot td ul {float:right;display:block;margin:0;position:relative;top:3px;}
+div.couponList div.coupons table.coupons tfoot td ul li {display:inline;margin:0;padding:0;}
+div.couponList div.coupons table.coupons tfoot td ul li input {width:16px;height:16px;margin:0;padding:0;}
+
+/* coupon table - tbody */
+div.couponList div.coupons table.coupons tbody tr {cursor:pointer;cursor:hand;}
+div.couponList div.coupons table.coupons tbody tr td {vertical-align:middle;}
+div.couponList div.coupons table.coupons tbody tr td.hover {background-color:#FFFFCC;}
+div.couponList div.coupons table.coupons tbody td span.enabled {color:Green;}
+div.couponList div.coupons table.coupons tbody td span.disabled {color:Red;}
+div.couponList div.coupons table.coupons tbody td img.restore {display:none;}
+div.couponList div.coupons table.coupons tbody td.markedForDelete {color:Silver;text-decoration:line-through;}
+div.couponList div.coupons table.coupons tbody td.markedForDelete span.enabled {color:Silver;}
+div.couponList div.coupons table.coupons tbody td.markedForDelete span.disabled {color:Silver;}
+
+/* delete confirmation modal */
+div#EktronCouponListModal div.couponsMarkedForDelete {height:400px;overflow:scroll-y;}
+div#EktronCouponListModal div.couponsMarkedForDelete table.publishedCouponsMarkedForDelete {display:none;}
+
+/* base modal styles */
+div#EktronCouponListModal .dialogLabel {background-image:url('images/modal.png');margin:0em 0em 1em 0em !important;padding:.5em .5em .5em 26px;background-repeat:no-repeat;background-position:5px center;}
+div#EktronCouponListModal .redLabel {background-color:#fbe3e4;border:1px solid #fbc2c4;}
+div#EktronCouponListModal .greenLabel {background-color:#E6EFC2;border:1px solid #C6D880;}
+div#EktronCouponListModal .cloneRow {display:none !important;}
+div#EktronCouponListModal td.restore {width:20px;cursor:pointer;cursor:hand;}
+div#EktronCouponListModal th.restore {width:20px;cursor:default;}
+div#EktronCouponListModal div.footer p {margin:.5em 0;}
+div#EktronCouponListModal p.warning {margin:0 auto 1em 0;padding:5px 0 5px 25px;background-color:#FFFFCC;border:1px solid #D9CD00;background-image:url('images/warning.gif');background-repeat:no-repeat;background-position:4px 7px;}
+
+/* invalid permissions */
+div.invalidPermissions {margin:1em;border:1px solid silver;padding:1em;background-image:url('images/tfoot.gif');background-repeat:repeat;background-position:0px 0px;}
+div.invalidPermissions p {border:1px solid silver;background-color:White;padding:1em;}
+div.invalidPermissions p span {padding-left:20px;background-image:url('images/warning.gif');background-repeat:no-repeat;background-position:center left;}

@@ -1,0 +1,60 @@
+.tabPanelGroup 
+{
+	font-family: ms sans serif;
+	font-size: xx-small;
+	position:relative;
+
+	/* height = tabPanel.height + tab.height */
+	width: 300px;
+	height: 425px;
+	
+	/* debugging styles
+	border: solid 2px #00f;
+	*/
+}
+
+.tabPanel 
+{
+	border: solid 1px #919b9c;
+	width: 300px;
+	height: 400px;
+	position:absolute;
+	background: #fff;
+	z-index:0;
+	display:none;
+	padding:10px;
+	overflow:auto;
+}
+
+.tabGroup 
+{
+	margin-left: 5px;
+}
+
+.tabDefault, .tabSelected , .tabHover
+{
+	cursor: default;
+	background: url("images/tab.gif");
+	background-repeat:no-repeat;
+	background-position: center middle;
+	padding-top:3px;
+	text-align:center;
+	display:inline;
+	width: 70px;
+	height: 20px;
+	position:absolute;
+	top:5px;
+}
+
+.tabHover
+{
+	background: url("images/tab.hover.gif");
+}
+
+.tabSelected 
+{ 
+	background: url("images/tab.active.gif");
+	width: 74px;
+	height: 23px;
+	top:2px;
+}

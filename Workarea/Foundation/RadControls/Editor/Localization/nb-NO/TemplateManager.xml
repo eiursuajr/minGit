@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Tab1HeaderText">Velg mal</string>
+	<string id="Tab2HeaderText">Last opp mal</string>
+	<string id="TemplateURL">URL:</string>
+	<string id="AlertFile">Vennligst oppgi mal-fil som skal lastes opp!</string>
+	<string id="AlertExists">Det finnes allerede en mal-fil med dette navnet i mappen!</string>
+	<string id="MessageValid">Vennligst oppgi et gyldig filnavn!</string>
+	<string id="MessageSize">Mal-filen er større en tillatt!</string>
+	<string id="MessageNothingPost">Vennligst velg en mal-fil!</string>
+  <string id="NoTemplateSelectedToInsert">Vennligst velg en mal-fil du vil sette inn!</string>
+</localization>

@@ -1,0 +1,515 @@
+.message p {font-size: 8.0pt;}
+
+p, li, div 	
+	{
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+body, td, input, select
+{
+	font-family: Verdana;
+	font-size: 8pt;
+}
+
+/* Defines the look of the image */
+img 
+{
+	border: 0;
+}
+
+/* Header 1 - Main header */
+.header1 {
+	background-image: url('bg_header1.gif');
+	background-color: #555555;
+	color: #FFFFFF;
+	font-weight: bold;
+	height: 32px;
+}
+
+/* Header 2 - Sub header */
+.header2 {
+	background-image: url('bg_header2.gif');
+	background-color: #DDDDDD;
+	color: #000000;
+	font-weight: bold;
+	height: 28px;
+}
+
+/* Footer1 - Bottom of tables */
+.footer1 {
+	background-image: url('bg_footer1.gif');
+	font-size: 7pt;
+	height: 28px;
+}
+
+.footer1 select, .footer1 td
+{
+	font-size: 7pt;
+}
+
+/* Header of posts */
+.postheader 
+{
+	background-color: #CCCCCC;
+}
+
+/* User info and post/article */
+.post 
+{
+	background-color: #DDDDDD;
+}
+
+.post_alt
+{
+	background-color: #f3f3f3;
+}
+
+
+/* Footer of posts */
+.postfooter 
+{
+	background-color: #BBBBBB;
+}
+
+/* Area between posts */
+.postsep 
+{
+	background-color: #555555;
+	height: 1px
+}
+
+/* most tables are class 'content' */
+table.content {
+	font-family: verdana;
+	font-size: 8pt;
+	border: 1px solid Black;
+	color: #000000;
+	padding: 0px;
+	background-color: #FFFFFF;
+}
+
+table.content td {
+	padding: 3px;
+}
+
+.content td div.content_html_Toolbar table tr td 
+{
+	padding: 0px;
+} 
+
+.content td div.content_html_Toolbar table tr td.content_html_Button_Off_Out 
+{
+	padding: 1px;
+} 
+
+/* links inside content table*/
+.content a			{ color: navy; text-decoration: underline; }
+.content a:hover	{ color: #000000; text-decoration: underline; }
+
+/* used for quoting messages */
+.quote 
+{
+	padding-left: 16px;
+}
+
+.quoteinner 
+{
+	padding: 4px;
+	background-color: #CCCCCC;
+	border: 1px solid #EEEEEE;
+}
+
+/* font sizes */
+.smallfont	{ font-size: 7pt; }
+.largefont	{ font-size: 9pt; }
+
+/* Image Links */
+a.imagelink 
+{
+	font-family: Trebuchet MS;
+	font-size: 9pt;
+	font-weight: bold;
+	color: #000000;
+}
+a:hover.imagelink
+{
+	text-decoration: none;
+	/*background-color: #D0D0D0;*/
+}
+
+/* Used for editor textarea */
+.posteditor 
+{
+	width: 100%;
+	height: 200px;
+	font-family: Verdana;
+	font-size: 8pt;
+}
+
+/* Table just above and below tables */
+table.command 
+{
+	/*border: solid 1px blue;*/
+	padding: 3px;
+}
+
+/* p-tag at the top of pages with navigation links */
+.navlinks { font-weight: bold; color: #000000; }
+.navlinks a { color: #000080; text-decoration: none }
+.navlinks a:hover {
+	color: #87CEEB;
+}
+
+/* for printing */
+table.print 
+{
+	border: solid 1px #C0C0C0;
+}
+.printheader 
+{
+	background-color: #DDDDDD;
+	color: #000000;
+	padding: 4px;
+}
+.printbody 
+{
+	background-color: #FFFFFF;
+	color: #000000;
+	padding: 4px;
+}
+
+/* Classes used for language translation */
+
+.ekForumIcon
+{
+	float:left;
+	display:inline;
+	padding: 2px;
+	margin-top: 0.5em;
+}
+
+.ekForumButtonWrapper 
+{
+	float:right;
+}
+
+.ekForumButtonWrapperLeft
+{
+	float:left;
+}
+
+.ekForumButton
+{
+	float:left;
+	display:inline;
+	padding: 0;
+	margin: 0;
+	padding: 2px;
+	margin-top:4px; 
+
+	/* comment the next few properties to see the translated text instead of the image */
+	text-align:left;
+	text-indent:-5000px;
+	background-position:center; 
+	background-repeat:no-repeat;
+	height:18px;
+	width:81px;
+	overflow:hidden;
+
+}
+
+/* comment the background-image and width in each of the properties below to see the translated text instead of the image */
+
+.ekForumButtonNewTopic
+{
+	background-image:url("b_post_topic.png");
+}
+
+.ekForumButtonProperties
+{
+	background-image:url("b_edit_post.png");
+}
+
+.ekForumButtonSearch
+{
+	background-image:url("b_post_search.png");
+}
+
+.ekForumButtonAddPost
+{
+	background-image:url("b_addpost.png");
+}
+
+.ekForumButtonEditPost
+{
+	background-image:url("b_edit_post.png");
+	width:60px;
+}
+
+.ekForumButtonApprove
+{
+	background-image:url("b_approve.png");
+}
+
+.ekForumButtonPostReply
+{
+	background-image:url("b_post_reply.png");
+}
+
+.ekForumButtonQuotePost
+{
+	background-image:url("b_quote_post.png");
+	width:55px;
+}
+
+.ekForumButtonMessage
+{
+	background-image:url("p_pm.gif");
+}
+
+.ekForumButtonReport
+{
+	background-image:url("b_ReportPost.png");
+}
+
+.ekForumButtonControlPanel
+{
+	background-image:url("b_controlPanel.png");
+}
+
+.ekForumButtonDeletePost
+{
+	background-image:url("b_delete_post.png");
+	width:60px;
+}
+
+.ekForumButtonReply
+{
+	background-image:url("b_Reply.png");
+}
+
+.ekForumButtonDeleteMesssage
+{
+	background-image:url("b_delete_post.png");
+	width:60px;
+}
+
+.ekForumButtonDeleteTopic
+{
+	background-image:url("b_delete_topic.png");
+}
+
+/* End of classes used for translation */
+
+
+/* Classes used to control alignment and width of tables in forum screens */
+.ekNavLinkReply
+{
+	text-align:left; 
+}
+
+
+table.ekContent
+{
+	width:100%; 
+}
+
+table.ekContentPostDelete, table.ekContentPostReply, table.ekContentPostEdit, table.ekContentPostNewTopic
+{
+	text-align:center; 
+}
+
+td.ekHeader1
+{
+	text-align:center;
+}
+
+table.ekHeader1Search, table.ekHeader1Reply
+{
+	width:100%;
+}
+
+.ekHeader1Icon
+{
+	width:1%;
+}
+
+td.ekHeader1Forums
+{
+	text-align:left; 
+}
+
+td.ekHeader1Topics
+{
+	text-align:center; 
+	width:7%;
+}
+
+td.ekHeader1Posts
+{
+	text-align:center; 
+	width:7%;
+}
+
+td.ekHeader1LastPost
+{
+	text-align:center; 
+	width:25%;
+}
+
+table.ekHeader1Reply
+{
+	width:100%;
+}
+
+td.ekHeader2Notify
+{
+	text-align:left;
+}
+
+td.ekHeader2NotifyAlignBoardName
+{
+	text-align:left;
+}
+
+td.ekHeader2NotifyWatchTypeCheck
+{
+	text-align:center; 
+	width:24%;
+}
+
+td.ekHeader2NotifyWatchTypeCheck
+{
+	text-align:center; 
+	width:24%;
+}
+
+td.ekHeader2ModerateIcon
+{
+	width:1%;
+}
+
+td.ekHeader2ModerateForumName
+{
+	text-align:left;	
+}
+
+td.ekHeader2ModerateNumPosts
+{
+	text-align:center; 
+	width:24%;	
+}
+
+td.ekHeader2Reply
+{
+	text-align:left;	
+}
+
+td.ekHeader2Forum
+{
+	width:1%;		
+}
+
+td.ekHeader2SortByTopic
+{
+	text-align:left;	
+}
+
+td.ekHeader2SortByTopicStart
+{
+	text-align:left; 
+	width:20%;	
+}
+
+td.ekHeader2SortByReply
+{
+	text-align:center; 
+	width:7%;	
+}
+
+td.ekHeader2SortByView
+{
+	text-align:center; 
+	width:7%;	
+}
+
+td.ekHeader2SortByThreadRate
+{
+	text-align:center; 
+	width:7%;	
+}
+
+td.ekHeader2SortByLastPost
+{
+	text-align:center; 
+	width:25%;	
+}
+
+td.ekPostFormHeader
+{
+	width:20%;	
+	text-align:left;
+}
+
+td.ekPostFormHeaderMessages, td.ekPostFormHeaderNewTopic
+{
+	vertical-align:top;
+}
+
+table.ekCommand
+{
+	width:100%;	
+}
+
+td.ekPost
+{
+	width:80%;
+	text-align:left;
+}
+
+td.ekPostSubscribe
+{
+	width:80%;
+}
+
+td.ekPostProfile, td.ekPostManageNotify, td.ekPostManageModerate, td.ekPostManageModeratePrivate,  td.ekPostBoardMessage
+{
+	vertical-align:top;
+}
+
+td.ekPostNotify, td.ekPostModerate, td.ekPostModeratePrivate, td.ekPostMessage
+{
+	width:150px;	
+	vertical-align:top;
+}
+
+td.ekPostHeaderMemberProfile
+{
+	width:60px;
+}
+
+td.ekPostHeaderSearch
+{
+	text-align:center; 
+}
+
+td.ekPostNotifyPanel
+{
+	text-align:center; 
+	width:24%;
+}
+
+td.ekPostPrivateMessage, td.ekPostMessages, td.ekPostApprove, td.ekPostReport, td.ekPostDeleteTopic, td.ekPostApproveTopic, td.ekPostReply
+{
+	width:80%;
+}
+
+td.ekMessage
+{
+	vertical-align:top;
+}
+
+/* End of classes used to control alignment and width of tables in forum screens */

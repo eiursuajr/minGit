@@ -1,0 +1,86 @@
+<Form>
+	<Title>Breakroom Survey</Title>
+	<Description>Vote for your favorite coffees, teas and snacks.</Description>
+	<SubmittedData>
+		<Date>11/3/2005 11:15:29 AM</Date>
+		<Data form_data_id="1" totalCount="100">
+			<Coffee>
+				<item value="Costa Rica Tarrazu" totalCount="10">Costa Rica Tarrazu</item>
+				<item value="Ethiopia Limu" totalCount="10">Ethiopia Limu</item>
+				<item value="Colombian 100%" totalCount="10">Colombian 100%</item>
+				<item value="Colombian Decaffeinated" totalCount="5">Colombian Decaffeinated</item>
+				<item value="House Blend" totalCount="5">House Blend</item>
+				<item value="Sumatra" totalCount="5">Sumatra</item>
+				<item value="Decaffeinated Dark" totalCount="5">Decaffeinated Dark</item>
+				<item value="Kenya Kilimandjaro Dark" totalCount="5">Kenya Kilimandjaro Dark</item>
+				<item value="Guatemala Antigua Dark" totalCount="5">Guatemala Antigua Dark</item>
+				<item value="French Roast" totalCount="5">French Roast</item>
+				<item value="Chocolate Almond" totalCount="5">Chocolate Almond</item>
+				<item value="French Vanilla" totalCount="5">French Vanilla</item>
+				<item value="French Vanilla Decaf" totalCount="5">French Vanilla Decaf</item>
+				<item value="Irish Cream" totalCount="5">Irish Cream</item>
+				<item value="Macadamia Nut" totalCount="5">Macadamia Nut</item>
+				<item value="Vanilla Hazelnut" totalCount="5">Vanilla Hazelnut</item>
+				<item value="Vanilla Hazelnut Decaf" totalCount="5">Vanilla Hazelnut Decaf</item>
+			</Coffee>
+			<Tea>
+				<item value="Earl Grey" totalCount="10">Earl Grey</item>
+				<item value="Green Tea" totalCount="10">Green Tea</item>
+				<item value="Mint Medley" totalCount="10">Mint Medley</item>
+				<item value="I Love Lemon" totalCount="10">I Love Lemon</item>
+				<item value="English Breakfast" totalCount="20">English Breakfast</item>
+				<item value="Orange &amp; Spice" totalCount="20">Orange &amp; Spice</item>
+				<item value="Lipton" totalCount="10">Lipton</item>
+				<item value="Lipton Decaf" totalCount="10">Lipton Decaf</item>
+			</Tea>
+			<Sweetener name="EAFA">
+				<item value="Sugar" totalCount="25">Sugar</item>
+				<item value="Equal" totalCount="25">Equal</item>
+				<item value="Sweet-n-Low" totalCount="40">Sweet-n-Low</item>
+				<item value="Splenda" totalCount="10">Splenda</item>
+			</Sweetener>
+		</Data>
+	</SubmittedData>
+	<ektdesignpackage_list>
+		<fieldlist>
+			<field name="Coffee" datalist="EALA" title="Question1">Coffee</field>
+			<field name="Tea" datatype="selection" xpath="/*/Tea" datalist="EAIA" title="question2">Tea</field>
+			<field name="Sweetener" datatype="choice" xpath="/*/Sweetener" datalist="EAFA" title="question3">Sweetener</field>
+			<datalist name="EALA">
+				<item value="Costa Rica Tarrazu">Costa Rica Tarrazu</item>
+				<item value="Ethiopia Limu">Ethiopia Limu</item>
+				<item value="Colombian 100%">Colombian 100%</item>
+				<item value="Colombian Decaffeinated">Colombian Decaffeinated</item>
+				<item value="House Blend">House Blend</item>
+				<item value="Sumatra">Sumatra</item>
+				<item value="Decaffeinated Dark">Decaffeinated Dark</item>
+				<item value="Kenya Kilimandjaro Dark">Kenya Kilimandjaro Dark</item>
+				<item value="Guatemala Antigua Dark">Guatemala Antigua Dark</item>
+				<item value="French Roast">French Roast</item>
+				<item value="Chocolate Almond">Chocolate Almond</item>
+				<item value="French Vanilla">French Vanilla</item>
+				<item value="French Vanilla Decaf">French Vanilla Decaf</item>
+				<item value="Irish Cream">Irish Cream</item>
+				<item value="Macadamia Nut">Macadamia Nut</item>
+				<item value="Vanilla Hazelnut">Vanilla Hazelnut</item>
+				<item value="Vanilla Hazelnut Decaf">Vanilla Hazelnut Decaf</item>
+			</datalist>
+			<datalist name="EAIA">
+				<item value="Earl Grey">Earl Grey</item>
+				<item value="Green Tea">Green Tea</item>
+				<item value="Mint Medley">Mint Medley</item>
+				<item value="I Love Lemon">I Love Lemon</item>
+				<item value="English Breakfast">English Breakfast</item>
+				<item value="Orange &amp; Spice">Orange &amp; Spice</item>
+				<item value="Lipton">Lipton</item>
+				<item value="Lipton Decaf">Lipton Decaf</item>
+			</datalist>
+			<datalist name="EAFA">
+				<item value="Sugar">Sugar</item>
+				<item value="Equal">Equal</item>
+				<item value="Sweet-n-Low">Sweet-n-Low</item>
+				<item value="Splenda">Splenda</item>
+			</datalist>
+		</fieldlist>
+	</ektdesignpackage_list>
+</Form>

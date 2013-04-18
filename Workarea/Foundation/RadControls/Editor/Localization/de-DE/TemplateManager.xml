@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<string id="Tab1HeaderText">Wählen Sie eine Vorlage</string>
+	<string id="Tab2HeaderText">Aktualisieren Sie die Vorlage</string>
+	<string id="TemplateURL">URL:</string>
+	<string id="AlertFile">Bitte Vorlagendatei zum Hochladen angeben</string>
+	<string id="AlertExists">Eine gleichnamige Datei existiert bereits in diesem Verzeichnis!</string>
+	<string id="MessageValid">Bitte geben Sie eine gültige Vorlagendatei an!</string>
+	<string id="MessageSize">Die angegebene Vorlagendatei überschreitet die erlaubte Max.größe!</string>
+	<string id="MessageNothingPost">Bitte geben Sie eine Vorlagendatei an!</string>
+	<string id="NoTemplateSelectedToInsert">Bitte wählen Sie eine Vorlagendatei!</string>
+</localization>

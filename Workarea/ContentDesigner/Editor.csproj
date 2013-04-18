@@ -1,0 +1,135 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2B817CB7-AA9C-45EA-9E02-0F7C923D70E3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Editor</RootNamespace>
+    <AssemblyName>Editor</AssemblyName>
+    <SccProjectName>Perforce Project</SccProjectName>
+    <SccLocalPath>.</SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>MSSCCI:Perforce SCM</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Content Include="CalculatedFieldExamples.xml" />
+    <Content Include="ChoicesFieldDataItems.xslt" />
+    <Content Include="ChoicesFieldList.xml" />
+    <Content Include="DataList_ageRange.xml" />
+    <Content Include="DataList_countries.xml" />
+    <Content Include="DataList_languages.xml" />
+    <Content Include="DataList_maritalStatus.xml" />
+    <Content Include="DataList_numRange.xml" />
+    <Content Include="DataList_USPS-CA.xml" />
+    <Content Include="DataList_USPS-US.xml" />
+    <Content Include="DataList_years.xml" />
+    <Content Include="dialogs\calculatedfield.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\calendarfield.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\checkboxfield.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\choicesfield.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\filelinkfield.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\groupbox.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\imageonlyfield.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\tabulardatabox.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\textfield.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\ucFieldAdvanced.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\ucFieldAllow.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\ucFieldDataStyle.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\ucFieldDialogButtons.ascx">
+    </Content>
+    <Content Include="dialogs\ucFieldName.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\ucFieldTreeView.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\ucFieldUse.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\ucFieldValidation.ascx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="dialogs\ucFieldValueOption.ascx" />
+    <Content Include="EkAccessibleTable.js" />
+    <Content Include="ekajaxtransform.aspx" />
+    <Content Include="ekajaxtransform.aspx.vb" />
+    <Content Include="EkCellPropertiesControl.js" />
+    <Content Include="ekcommandlist.js" />
+    <Content Include="ekformfields.js" />
+    <Content Include="ekforms.css" />
+    <Content Include="ekforms.js" />
+    <Content Include="ekformsiframe.htm" />
+    <Content Include="EkRadEditor.js" />
+    <Content Include="EkRadEditorDomInspector.js" />
+    <Content Include="EkRadEditorXhtmlValidator.js" />
+    <Content Include="ektaccesseval.xslt" />
+    <Content Include="ekutil.js" />
+    <Content Include="ekxbrowser.js" />
+    <Content Include="FontName.xml" />
+    <Content Include="FontSize.xml" />
+    <Content Include="HTMLElement.js" />
+    <Content Include="jsoop.js" />
+    <Content Include="platforminfo.js" />
+    <Content Include="sarissa.js" />
+    <Content Include="ValidateSpec.xml" />
+    <Content Include="ValidateSpecToDatatypeCombo.xslt" />
+    <Content Include="ValidateSpecToExamplesCombo.xslt" />
+    <Content Include="ValidateSpecToValidationCombo.xslt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+</Project>

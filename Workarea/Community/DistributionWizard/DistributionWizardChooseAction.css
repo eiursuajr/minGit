@@ -1,0 +1,6 @@
+﻿ul {list-style-type: none;}
+li {margin-top: 10px;}
+#DistributionWizardRedistributionInformation { font-size: 10px; margin-top: 20px;padding-left: 40px; padding-right: 40px; }
+.DistributionWizardChooseButton {font-size:13px; font-weight: bold; background-color: #eeeeee; border: solid 1px #000000; padding: 10px; margin-bottom:10px; margin-top: 10px; text-align: left; display:block; cursor:pointer; text-decoration:none; color:#000000;}
+.DistributionWizardChooseButton:hover {background-color: #cccccc;}
+.RedistributionDetails {margin-bottom: 30px;}

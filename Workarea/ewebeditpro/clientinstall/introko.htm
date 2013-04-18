@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Copyright 2001 Ektron, Inc. -->
+<!-- Revision Date: 2001-05-16 -->
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=euc-kr">
+    <script language="JavaScript1.2" src="parseinstallparams.js"></script>
+	<title>eWebEditPro with WebImageFX 설치하기</title>
+
+    <style>
+P { font-size : small; font-family : verdana, helvetica; }
+H1 { font-family : verdana, helvetica; }
+H2 { font-family : verdana, helvetica; }
+A { font-family : verdana, helvetica; }
+BODY { font-size : small; }
+</style>
+
+</head>
+
+<body>
+
+<script language="JavaScript1.2">
+function ExecuteInstall()
+{
+    var strLoadPath = "installnowko.htm";
+    var strAddChar = "?";
+	
+    strPageLoad = strLoadPath;
+    
+    // We should set up an array and loop through it.
+    // But for now, it is left as an excersize for the critic.
+    
+    // This is an override for specifying the above values as 
+    // command line parameters.
+    // See clientinstall/parseinstallparams.js for how to set these values.
+	if("undefined" != typeof given_eWebEditProPath)
+    {
+        if(given_eWebEditProPath.length > 0)
+        {
+            // "?" + "instewep=" + escape(strInstEwep)
+            strPageLoad += strAddChar;
+            strPageLoad += "instewep=";
+            strPageLoad += given_eWebEditProPath;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_LicenseKeys)
+    {
+       if(given_LicenseKeys.length > 0)
+        {
+            // "&" + "licnewep=" + escape(strLicnEwep)
+            strPageLoad += strAddChar;
+            strPageLoad += "licnewep=";
+            strPageLoad += given_LicenseKeys;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_WebImageFXPath)
+    {
+        if(given_WebImageFXPath.length > 0)
+        {
+            // "&" + "instwifx=" + escape(strInstWifx)
+            strPageLoad += strAddChar;
+            strPageLoad += "instwifx=";
+            strPageLoad += given_WebImageFXPath;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_WifxLicenseKeys)
+    {
+       if(given_WifxLicenseKeys.length > 0)
+        {
+            // "&" + "licnwifx=" + escape(strLicnWifx)
+            strPageLoad += strAddChar;
+            strPageLoad += "licnwifx=";
+            strPageLoad += given_WifxLicenseKeys;
+            
+            strAddChar = "&";  // If we add any after this.
+        }
+    }  
+    
+	location.href = strPageLoad;
+}
+</script>
+
+<blockquote><blockquote>
+<p align="center"><h2 align="center">
+eWebEditPro with WebImageFX <br>자동으로 <br>다운로드 및 설치하기
+</h2></p>
+<p>여러분이 보려고 시도하는 페이지에는 Ektron의 eWebEditPro with WebImageFX 에디터가 포함되어 있습니다. 이것은 여러분의 브라우저에서 나타나게 됩니다. 이는 워드 프로세서를 사용하는 것처럼 수월하게 웹페이지의 내용에 들어갈 수 있도록 해줍니다.</p>
+<p>eWebEditPro with WebImageFX를 사용하시려면, 우선 브라우저로 다운로드를 받아야 합니다. 이 페이지의 하단에 있는 <b>지금 설치</b> 버튼을 클릭하면, eWebEditPro with WebImageFX가 자동으로 다운로드되고 설치됩니다. 여러분의 네트워크 연결 속도에 따라, 이 과정은 수 분이 소요될 수 있습니다. 한번 다운로드를 받으면, eWebEditPro with WebImageFX는 새로운 버전으로 갱신할 때까지 <i>다시 다운로드받을 필요가 없습니다</i>. </p>
+<p>여러분의 컴퓨터에 프로그램을 설치하려면, 반드시 인증을 받아야 합니다. </p>
+<p>아래에 보이는 것과 비슷한 그림이 나타납니다. 처음 것은 <a href="http://www.ektron.com" target="_blank">Ektron</a>사의 화면이고, 다른 것은 <a href="http://www.microsoft.com" target="_blank">Microsoft</a>사의 화면입니다. 이 화면들이 나타나면, "예"를 클릭하여 계속 진행하십시오.</p>
+<p align="center">
+<img src="verisign2.gif" alt="Prompt to download ActiveX control" width=331 height=242>
+</p>
+<p>여러분의 Internet Explorer 보안 설정을 점검하십시오. ActiveX 컨트롤을 실행하고 다운로드를 허가하려면, 보통 또는 낮음으로 설정되어야 합니다. 도구 메뉴에서 인터넷 옵션을 선택한 다음, 보안 탭을 클릭하십시오. </p>
+<p align="center">
+<img src="ieoptions2ko.gif" alt="Internet Security Options" width=356 height=323>
+</p>
+<p>보안 설정에 따라, 몇가지 질문이 나타납니다. 매번 모두 "예"를 클릭하십시오.</p>
+<blockquote>
+<p><font size=-1>ActiveX 컨트롤 및 플러그인과 같은 소프트웨어의 실행을 허가하시겠습니까?</font></p>
+<p><font size=-1>스크립트에 대해 안전함으로 마킹된 이 페이지에서, 스크립트가 일부 소프트웨어 (ActiveX 컨트롤)에 접근합니다.<br>이를 허가하시겠습니까?</font></p>
+</blockquote>
+<br><br>
+<p>계속 진행하시려면 <b>지금 설치</b>를 클릭하시고, eWebEditPro with WebImageFX를 설치하고 싶지 않으시면 <b>취소</b> 버튼을 클릭하십시오.</p>
+</blockquote></blockquote>
+
+<p align="center">
+<form>
+<input type=button value="지금 설치" onclick="ExecuteInstall()">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type=button value="취소" onclick="self.close()">
+</form>
+<a href="http://www.ektron.com/ewebeditpro" target="_blank"><font size=1>Ektron의 eWebEditPro에 대한 자세한 정보</font></a>
+<br/>
+<a href="http://www.ektron.com/webimagefx.cfm" target="_blank"><font size=1>Ektron의 WebImageFX에 대한 자세한 정보</font></a>
+</p>
+
+</body>
+</html>

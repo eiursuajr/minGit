@@ -1,0 +1,739 @@
+/*****************************************************************************************/
+/*                                                                                       */
+/*                         Single Day View (day)                                         */
+/*                                                                                       */
+/*****************************************************************************************/
+/* The cells that are defined as workday hour cells. */
+.dv_HourCell {
+	background : #99DDFF ;
+	font-family : Arial, Arial Narrow, Times New Roman ;
+	font-size : 9pt ;
+	font-weight : Bold ;
+}
+/* The evening and morning hour cells. */
+.dv_HourCellEve {
+	background : #6699DD ;
+	font-family : Arial, Arial Narrow, Times New Roman ;
+	font-size : 9pt ;
+	font-weight : Bold ;
+}
+/* An event listed on the daily calendar. */
+.dv_EventTitle {
+	background : #aaddaa ;
+	font-family : Arial, Arial Narrow, Times New Roman ;
+	font-size : 9pt ;
+	font-weight : Bold ;
+	cursor : pointer ;
+}
+/* The borders of the hour cells. */
+.dv_BorderCell {
+	background : #0033AA ;
+}
+.dv_HourLayer
+{
+	
+}
+.dv_HiddenEventLayer 
+{
+	position : absolute ;
+	visibility : hidden ;
+}
+.dv_EventLayer
+{
+	background: transparent ;
+	position: absolute;
+}
+.dv_Event {
+	background : transparent ;
+	font-family : Arial, Arial Narrow, Times New Roman ;
+	font-size : 9pt ;
+	font-weight : Bold ;
+}
+.dv_EventTransparent {
+	background : transparent ;
+	font-family : Arial, Arial Narrow, Times New Roman ;
+	font-size : 9pt ;
+	font-weight : Bold ;
+}
+.dv_DayHeaderBkg{
+	background : #99DDFF ;
+	color : #0033AA ;
+	font-family : Arial ;
+	font-size : 11pt ;
+	font-weight : bold ;
+	border-left: solid 1 #0033AA ;													
+	border-top: solid 1 #0033AA ;
+	border-bottom: solid 1 #0033AA ;
+	border-right: solid 1 #0033AA ;
+}
+/* The button for moving the calendar to the next day. */
+.dv_DayHeaderNext{
+	background : #99DDFF ;
+	color : #0033AA ;
+	font-family : Arial ;
+	font-size : 9pt ;
+	font-weight : bold ;
+	text-align : right ;
+}
+/* The button for moving the calendar to the previous day. */
+.dv_DayHeaderPrev{
+	background : #99DDFF ;
+	color : #0033AA ;
+	font-family : Arial ;
+	font-size : 9pt ;
+	font-weight : bold ;
+	text-align : left ;
+}
+/* The day header for the calendar. */
+.dv_DayHeader {
+	background : #99DDFF ;
+	color : #0033AA ;
+	font-family : Arial ;
+	font-size : 11pt ;
+	font-weight : bold ;
+	text-align : center ;
+}
+.dv_DayHeaderTransparent {
+	background : transparent ;
+	font-family : Arial ;
+	font-size : 11pt ;
+	font-weight : bold ;
+}
+.dv_LongDescriptionHidden {
+	visibility : hidden ;
+	position : absolute ;
+}
+.dv_LongDescriptionVisible {
+	position : relative ;
+	visibility : visible ;
+	background-color : #eeeeee ;
+}
+/*****************************************************************************************/
+/*                                                                                       */
+/*                         Month View (month)                                            */
+/*                                                                                       */
+/*****************************************************************************************/
+/* Weekend day of week header. */
+.mv_weekendDOWHeader {
+	background : #c5daef ;
+	font-family : arial ;
+	font-weight : bold ;
+	font-size : 8pt;
+	border-top : #c9bda5 1px solid ;
+	border-bottom : #c9bda5 1px solid ;
+	border-right: #c9bda5 1px solid ;
+	border-left: #c9bda5 1px solid ;
+	text-align : center ;
+}
+/* Weekday day of week header. */
+.mv_weekdayDOWHeader {
+	background : #c5daef ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	border-top : #c9bda5 1px solid ;
+	border-bottom : #c9bda5 1px solid ;
+	border-right: #c9bda5 1px solid ;
+	border-left: #c9bda5 1px solid ;
+	text-align : center ;
+}
+/* Month header. */
+.mv_MonthHeader
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12pt;
+    BACKGROUND: transparent;
+    FONT-FAMILY: Arial ;
+}
+/* Month header background. */
+.mv_MonthHeaderBkg
+{
+    border-right : #c9bda5 2px solid ;
+    border-top : #c9bda5 2px solid ;
+    border-left : #c9bda5 2px solid ;
+    font-weight: bold ;
+    font-size: 9pt ;
+    background: #A5B7C9 ;
+    font-family: arial ;
+}
+/* The button for moving the calendar to the next month. */
+.mv_MonthHeaderNext
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    BACKGROUND: transparent;
+    FONT-FAMILY: Arial ;
+    text-align : right ;
+}
+/* The button for moving the calendar to the previous month. */
+.mv_MonthHeaderPrev
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    BACKGROUND: transparent;
+    FONT-FAMILY: Arial ;
+    text-align : left ;
+}
+/* The cells at the beginning or end of the month that do not contain days. */
+.mv_NonMonthBorder
+{
+    border-right: #c9bda5 1px solid ;
+    border-top: #c9bda5 1px solid ;
+    /* background: #F0E9C5 ; */
+    background : #e0e0e0 ;
+    border-left: #c9bda5 1px solid ;
+    border-bottom: #c9bda5 1px solid ;
+}
+
+.mv_NonMonthCell
+{
+    font-weight: normal;
+    font-size: 9pt;
+    /* background: #F0E9C5; */
+    background : #e0e0e0 ;
+    font-family: arial ;
+    border-top : #c9bda5 1px solid;
+    border-bottom : #c9bda5 1px solid;
+    border-left : #c9bda5 1px solid;
+    border-right : #c9bda5 1px solid;
+}
+
+.mv_DateNonMonthDayCell
+{
+    font-weight: bold;
+    font-size: 9pt;
+    /* background: #F0E9C5; */
+    background : #e0e0e0 ;
+    border-bottom: #000000 1px solid;
+    font-family: arial
+}
+/* The cells where the numerical weekdays appear. */
+.mv_DateCell
+{
+    font-weight: bold;
+    font-size: 9pt;
+    background: #F0E9C5;
+    border-left: #c9bda5 1px solid;
+    border-bottom: #c9bda5 1px solid;
+    font-family: arial ;
+}
+/* The cells where the numerical weekend days appear. */
+.mv_DateCellWeekend
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #C5DAEF;
+    BORDER-LEFT: #c9bda5 1px solid;
+    BORDER-BOTTOM: #c9bda5 1px solid;
+    FONT-FAMILY: Arial ;	
+}
+/* The cells where today’s numerical day appears. */
+.mv_DateCellToday
+{
+    /* background : #C5DAEF ; */
+    background : #FFE354 ;
+    /* border-left : #c9bda5 1px solid ; */
+    border-left : #b38b3b 1px solid ;
+    /* border-bottom : #c9bda5 1px solid ; */
+    border-bottom : #b38b3b 1px solid ;
+    font-family: Arial ;
+    font-size : 9pt ;
+    font-weight : bold ;
+}
+/* The weekend cells that hold the Add Event and View Event buttons. */
+.mv_DateCellEmptyWeekend
+{
+    background : #C5DAEF;
+    border-bottom : #c9bda5 1px solid ;
+    font-family: Arial ;
+    font-size : 9pt ;
+    font-weight : bold ;
+}
+/* The today cell that holds the Add Event and View Event buttons. */
+.mv_DateCellEmptyToday
+{
+    /* background : #C5DAEF ; */
+    background : #FFE354 ;
+    /* border-bottom : #c9bda5 1px solid ; */
+    border-bottom : #b38b3b 1px solid ;
+    font-family: Arial ;
+    font-size : 9pt ;
+    font-weight : bold ;
+}
+/* The weekday cells that holds the Add Event and View Event buttons. */
+.mv_DateCellEmpty
+{
+    font-weight: bold;
+    font-size: 9pt;
+    background: #f0e9c5;
+    border-bottom: #c9bda5 1px solid;
+    font-family: arial
+}
+/* The popup window that appears when the event is hovered over. */
+.mv_eventContainer
+{
+    visibility: hidden ;
+    position: absolute ;
+}
+/* The today cell that holds listed events. */
+.mv_dayBorderToday
+{
+	/*
+    border-right: #c9bda5 2px solid ;
+    border-top: #c9bda5 2px solid ;
+    background: #c5daef ;
+    border-left: #c9bda5 2px solid ;
+    border-bottom: #c9bda5 2px solid ;
+    */
+    border-right: #b38b3b 2px solid ;
+    border-top: #b38b3b 2px solid ;
+    background: #ffe354 ;
+    border-left: #b38b3b 2px solid ;
+    border-bottom: #b38b3b 2px solid ;
+}
+/* The weekday cell that holds listed events. */
+.mv_dayBorder
+{
+    border-right: #c9bda5 1px solid ;
+    border-top: #c9bda5 1px solid ;
+    background: #f0e9c5 ;
+    border-left: #c9bda5 1px solid ;
+    border-bottom: #c9bda5 1px solid ;
+}
+/* The Weekend day cell that holds listed events. */
+.mv_dayBorderWeekend
+{
+    border-right: #c9bda5 1px solid ;
+    border-top: #c9bda5 1px solid ;
+    background: #c5daef ;
+    border-left: #c9bda5 1px solid ;
+    border-bottom: #c9bda5 1px solid ;
+}
+/* The event title cell. */
+.mv_eventTitle
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9pt;
+    BACKGROUND: transparent ;
+    FONT-FAMILY: Arial
+}
+/* Today’s event title cell. */
+.mv_DayCellToday
+{
+	background : transparent ;
+	font-family : Arial ;
+    font-weight : bold ;
+    font-size : 9pt ;
+}
+.mv_DayCell
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9pt;
+    BACKGROUND: transparent ;
+    FONT-FAMILY: Arial
+}
+/* The font for the event pop-up. */
+.mv_TodayCell
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #C5DAEF;
+    FONT-FAMILY: Arial
+}
+/* The border for the event pop-up. */
+.mv_eventPopup
+{
+    BORDER-RIGHT: #000000 1px solid;
+    BORDER-TOP: #000000 1px solid;
+    BORDER-LEFT: #000000 1px solid;
+    BORDER-BOTTOM: #000000 1px solid;
+}
+
+/*****************************************************************************************/
+/*                                                                                       */
+/*                         Inline View (inline)                                          */
+/*                                                                                       */
+/*****************************************************************************************/
+/* The inline view header background. */
+.ILViewHeaderBkg
+{
+    BORDER-RIGHT: #9999ff 2px solid;
+    BORDER-TOP: #9999ff 2px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    BACKGROUND: #ddddff;
+    BORDER-LEFT: #9999ff 2px solid;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: center ;
+}
+
+.ILViewHeader
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11pt;
+    BACKGROUND: #ddddff;
+    FONT-FAMILY: Arial;
+    TEXT-ALIGN: center ;
+}
+/* Font for the event description. */
+.ILViewEvent
+{
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: Arial;
+}
+/* The date for the inline view. */
+.ILViewDate
+{
+    BORDER-RIGHT: #9999ff 1px solid;
+    BORDER-TOP: #9999ff 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #ddddff;
+    BORDER-LEFT: #9999ff 1px solid;
+    FONT-FAMILY: Arial ;
+}
+.ILViewTodayDate
+{
+    BORDER-RIGHT: #9999ff 1px solid;
+    BORDER-TOP: #9999ff 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #eeeeaa;
+    BORDER-LEFT: #9999ff 1px solid;
+    FONT-FAMILY: Arial
+}
+/* The cell the events are listed in. */
+.ILViewDayCell
+{
+    BORDER-RIGHT: #9999ff 1px solid;
+    BORDER-TOP: #9999ff 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #eeeeff;
+    BORDER-LEFT: #9999ff 1px solid;
+    BORDER-BOTTOM: #9999ff 1px solid;
+    FONT-FAMILY: Arial
+}
+.ILViewTodayCell
+{
+    BORDER-RIGHT: #9999ff 1px solid;
+    BORDER-TOP: #9999ff 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 9pt;
+    BACKGROUND: #eeeedd;
+    BORDER-LEFT: #9999ff 1px solid;
+    BORDER-BOTTOM: #9999ff 1px solid;
+    FONT-FAMILY: Arial
+}
+
+/*****************************************************************************************/
+/*                                                                                       */
+/*                         Month-Up With Event (monthupwithevent)                        */
+/*                                                                                       */
+/*****************************************************************************************/
+/* The cells at the beginning or end of the month that do not contain days. */
+.mup_nonMonthCell {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+}
+/* The weekend day cell. */
+.mup_weekendCell {
+	background : #dedeff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+}
+/* The week day cell. */
+.mup_weekdayCell {
+	background : #eeffff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+}
+/* Highlights the weekdays that have events. */
+.mup_weekdayEventCell {
+	background : #ffffee ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+.mup_weekenddayEventCell {
+	background : #eeeedd ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+.mup_weekendEventCell {
+	background : #ccccff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+/* Weekend day of week header. */
+.mup_weekendDOWHeader {
+	background : #ddddff ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+	text-align : center ;
+}
+/* Weekday day of week header. */
+.mup_weekdayDOWHeader {
+	background : #eeeeff ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	border-right: #aaaaaa 1px solid ;
+	border-bottom: #aaaaaa 1px solid ;
+	border-left: #aaaaaa 1px solid ;
+	text-align : center ;
+}
+/* The year selection cell. */
+.mup_yearFooter
+{
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 9pt;
+	text-align : center ;
+}
+/* The border around the month header. */
+.mup_monthHeaderBorder {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 10pt;
+	border-right : #aaaaaa 1px solid ;
+	border-top : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	text-align : center ;
+}
+/* The month header. */
+.mup_monthHeader {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 10pt;
+	text-align : center ;
+}
+/* The previous button, on the month header. */
+.mup_monthHeaderPrev {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	text-align : center ;
+}	
+/* The next button, on the month header. */
+.mup_monthHeaderNext {
+	background : #eeeeee ;
+	font-family : Arial ;
+	font-weight : Bold ;
+	font-size : 8pt;
+	text-align : center ;
+}
+/* The background for the event display. */
+.mup_eventDispBkg {
+	background : #eeeeff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+	border-right : #aaaaaa 1px solid ;
+	border-top : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+}
+/* The event display. */	
+.mup_eventDisplay {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+/* The event display date header. */
+.mup_eventDisplayDate {
+	font-size : 12pt ;
+	font-weight : bold ;
+	background : transparent ;
+	font-family : Arial ;
+	text-align : center ;
+	border-bottom : #aaaaaa 1px solid ;
+}
+/* Display for the event title. */
+.mup_eventDisplayEventTitle {
+	font-weight : bold ;
+	background : transparent ;
+	font-family : Arial ;
+	font-size : 10pt;
+	text-align : left ;
+}
+/* Display for the event location. */
+.mup_eventDisplayLocation {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+/* Display for event times. */
+.mup_eventDisplayTimes {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+/* Displays the event’s long description. */
+.mup_eventDisplayLongDesc {
+	background : transparent ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 10pt;
+	text-align : left ;
+}
+.mup_hiddenEvent {
+	visiblity : hidden ;
+	position : absolute ;
+	display : none ;
+}
+.mup_weekdayLoggedInCell {
+	background : #eeffff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+.mup_weekenddayLoggedInCell {
+	background : #dedeff ;
+	font-family : Arial ;
+	font-weight : normal ;
+	font-size : 8pt;
+	text-align : center ;
+	border-right : #aaaaaa 1px solid ;
+	border-bottom : #aaaaaa 1px solid ;
+	border-left : #aaaaaa 1px solid ;
+	cursor : pointer ;
+}
+/*****************************************************************************************/
+/*                                                                                       */
+/*                         Event View (event)                                            */
+/*                                                                                       */
+/*****************************************************************************************/
+
+.evt_TitleCell 
+{
+		background : #C5DAEF ;
+		font-family : Arial ;
+		font-weight : bold ;
+		font-size : 12pt;
+		text-align : center ;
+		border-top : #A39986 1px solid ;
+		border-left : #A39986 1px solid ;
+		border-right : #A39986 1px solid ;
+}
+.evt_DateCell 
+{
+		background : #C5DAEF ;
+		font-family : Arial ;
+		font-weight : bold ;
+		font-size : 9pt;
+		text-align : center ;
+		border-top : #A39986 1px solid ;
+		border-left : #A39986 1px solid ;
+		border-right : #A39986 1px solid ;
+}
+.evt_ViewDayCell 
+{
+		background : #C5DAEF ;
+		font-family : Arial ;
+		font-weight : normal ;
+		font-size : 10pt;
+		text-align : left ;
+		border-bottom : #A39986 1px solid ;
+		border-left : #A39986 1px solid ;
+		border-right : #A39986 1px solid ;
+}
+.evt_ViewEvent 
+{
+		background : #C5DAEF ;
+		font-family : Arial ;
+		font-weight : bold ;
+		font-size : 10pt;
+		text-align : left ;
+}
+
+/*****************************************************************************************/
+/*                                                                                       */
+/*                         Event Type Control (used in month display)                    */
+/*                                                                                       */
+/*****************************************************************************************/
+/* The background of the event type control cell. */
+.etCtrl_Background {
+    border-right : #c9bda5 2px solid ;
+    border-top : #c9bda5 2px solid ;
+    border-left : #c9bda5 2px solid ;
+    border-bottom : #c9bda5 2px solid ;
+    font-size: 9pt ;
+    background: #A5B7C9 ;
+    font-family: Arial ;
+}
+/* The instructions cell for event type control. */
+.etCtrl_InstructCell {
+	background: transparent ;
+	font-family: Arial ;
+    font-size: 9pt ;
+    font-weight : bold ;
+    text-align : right ;
+    vertical-align : top ;
+}
+/* The cell the selection box is displayed in. */
+.etCtrl_SelCell {
+	background: transparent ;
+	font-family: Arial ;
+    font-size: 9pt ;
+    text-align : left ;
+    vertical-align : top ;
+}
+/* The event type selection box. */
+.etCtrl_selectBox {
+	background : #c5daef ;
+}

@@ -1,0 +1,18 @@
+/* fix header */
+div.ektronPricingWrapper h3 {line-height:30px !important;padding:0em .5em .45em .5em;}
+div.ektronPricingWrapper h3 select {position:relative;top:3px;font-size:0.8em;}
+
+/* ie6 was losing margin-top when pricing tier gets hidden */
+div.ektronPricingWrapper div.innerWrapper table.unitPricing {margin-top:1em !important;}
+
+/* remove 1em of top-padding for inner wrapper */
+div.ektronPricingWrapper div.innerWrapper {padding:0em 1em 0em 1em;}
+
+/* fix button text */
+div.ektronPricingWrapper a.button {color:#565656;}
+div.ektronPricingWrapper a.button:hover {text-decoration:none !important;}
+div.ektronPricingWrapper a.button:visited {color:#565656;}
+
+/* fix remove tier button */
+div.ektronPricingWrapper p.commands a.removePricingTierDisabled {color:silver !important;}
+

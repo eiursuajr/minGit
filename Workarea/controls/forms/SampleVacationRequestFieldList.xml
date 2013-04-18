@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<fieldlist>
+  <field name="Name" datatype="string" basetype="text" xpath="*/Name" title="Name">Name</field>
+  <field name="EmployeeID" datatype="string" basetype="text" xpath="*/EmployeeID" title="Employee ID">Employee ID</field>
+  <field name="Dept" datatype="string" basetype="text" xpath="*/Dept" title="Dept">Dept</field>
+  <field name="Reason" datatype="choice" basetype="text" xpath="*/Reason" title="Reason" datalist="EGC">Reason</field>
+  <field name="Date_Begin" datatype="date" basetype="calendar" xpath="*/Date_Begin" title="Date Begin">Date Begin</field>
+  <field name="Date_End" datatype="date" basetype="calendar" xpath="*/Date_End" title="Date End">Date End</field>
+  <field name="day_pay" datatype="nonNegInt" basetype="number" xpath="*/day_pay" title="day pay">day pay</field>
+  <field name="day_no_pay" datatype="nonNegInt" basetype="number" xpath="*/day_no_pay" title="day no pay">day no pay</field>
+  <field name="comments" datatype="textarea" basetype="textbox" xpath="*/comments" title="comments" content="textarea">comments</field>
+  <datalist name="EGC">
+    <item value="Floating Holiday">Floating Holiday</item>
+    <item value="Vacation">Vacation</item>
+    <item value="Sick Day">Sick Day</item>
+  </datalist>
+</fieldlist>

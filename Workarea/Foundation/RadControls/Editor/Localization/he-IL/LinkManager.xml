@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">מנהל קישורים</string>
+	<string id="Tab1HeaderText">קישור</string>
+	<string id="Tab2HeaderText">תווית</string>
+	<string id="Tab3HeaderText">דואר אלקטרוני</string>
+	<string id="LinkUrl">:כתובת אינטרנט</string>
+	<string id="LinkType">:סוג</string>
+	<string id="Other">אחר</string>
+	<string id="LinkTarget">:יעד</string>
+	<string id="Target">יעד</string>
+	<string id="LinkTooltip">:כתובית</string>
+	<string id="LinkName">:שם</string>
+	<string id="LinkAddress">:כתובת</string>
+	<string id="LinkSubject">:נושא</string>
+	<string id="OK">אישור</string>
+	<string id="Cancel">ביטול</string>
+	<string id="CssClass">CSS Class:</string>
+	<string id="AnchorCss">Link CSS</string>
+	<string id="LinkText">קישור טקסט:</string>
+	<string id="ClearStyle">ללא מחלקה</string>
+	<string id="LinkToAnchor">תווית קיימת</string>
+	<string id="AnchorNone">ללא</string>
+	<string id="_blank">חלון חדש</string>
+	<string id="_self">חלון נוכחי</string>
+	<string id="_parent">חלון אב</string>
+	<string id="_top">חלון דפדפן</string>
+	<string id="_search">חלונית חיפוש</string>
+	<string id="_media">חלונית מדיה</string> 
+    <string id="ektron">Ektron Editor Starts</string>
+	<string id="UrlRequired">URL is required.</string>
+	<string id="NameRequired">Name is required.</string>
+	<string id="AddressRequired">Address is required.</string>
+	<string id="InvalidEmail">Email address is not valid.</string>
+	<string id="DuplicatedName">Bookmark name is not unique.</string>
+	<string id="AccessChecksWarn">The content is not accessibility compliance. Would you like to correct it?</string>
+	<string id="AccessChecksEnforce">Please fill in the accessibility compliance field(s).</string>
+	<string id="Or">or</string>
+	<string id="InvalidUrl">Invalid Url is detected. Please correct your Url.</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

@@ -1,0 +1,54 @@
+/* Ektron CSS Reset v1.0 */
+/* Based on Eric Meyer's CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+.ektron { line-height: 1;}
+
+.ektron, .ektron div, .ektron span, .ektron applet, .ektron object, .ektron iframe,
+.ektron h1, .ektron h2, .ektron h3, .ektron h4, .ektron h5, .ektron h6, .ektron p, .ektron blockquote, .ektron pre,
+.ektron a, .ektron abbr, .ektron acronym, .ektron address, .ektron big, .ektron cite, .ektron code,
+.ektron del, .ektron dfn, .ektron em, .ektron font, .ektron img, .ektron ins, .ektron kbd, .ektron q, .ektron s, .ektron samp,
+.ektron small, .ektron strike, .ektron strong, .ektron sub, .ektron sup, .ektron tt, .ektron var,
+.ektron b, .ektron u, .ektron i, .ektron center,
+.ektron dl, .ektron dt, .ektron dd, .ektron ol, .ektron ul, .ektron li,
+.ektron fieldset, .ektron form, .ektron label, .ektron legend,
+.ektron table, .ektron caption, .ektron tbody, .ektron tfoot, .ektron thead, .ektron tr, .ektron th, .ektron td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+.ektron ol, .ektron ul {
+	list-style: none;
+}
+.ektron blockquote, .ektron q {
+	quotes: none;
+}
+.ektron blockquote:before, .ektron blockquote:after,
+.ektron q:before, .ektron q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+.ektron :focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+.ektron ins {
+	text-decoration: none;
+}
+.ektron del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+.ektron table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}

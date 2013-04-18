@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="Title">Spell Check</string>
+	<string id="NoPermission">
+		You don't have permission to access this page or your cookie has expired!<br />Please, refresh the page!
+	</string>
+	<string id="Tab1HeaderText">Spell Check</string>
+	<string id="ProgressMessage">Spell Checking in progress.....</string>
+	<string id="Confirm">Do you want to apply or cancel the changes to the text so far?</string>
+	<string id="ChangesMade">You have made changes to the text.</string>
+	<string id="SpellCheckComplete">The Spell Check is complete!</string>
+	<string id="Nosuggestions">No suggestions</string>
+	<string id="Undo">Undo</string>
+	<string id="UndoEdit">Undo Edit</string>
+	<string id="Ignore">Ignore</string>
+	<string id="IgnoreAll">Ignore All</string>
+	<string id="Cancel">Close</string>
+	<string id="AddCustom">Add Custom</string>
+	<string id="Change">Change</string>
+	<string id="ChangeAll">Change All</string>
+	<string id="Help">Help</string>
+	<string id="NotInDictionary">Not in Dictionary:</string>
+	<string id="Suggestions">Suggestions:</string>
+	<string id="AddWord1">Are you sure you want to add '</string>
+	<string id="AddWord2">' to the custom dictionary?</string>
+</localization>

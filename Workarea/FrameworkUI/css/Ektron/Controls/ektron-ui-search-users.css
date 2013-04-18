@@ -1,0 +1,11 @@
+﻿/* User Search Control Styles
+----------------------------------*/
+.ektron-ui-search-users { }
+
+.ektron-ui-search-users .basicSearch { text-align:right; }
+.ektron-ui-search-users .basicSearch .ektron-ui-button.ui-state-disabled button { cursor: default; }
+.ektron-ui-search-users .basicSearch a.toggleDirectorySearch { display: inline-block; line-height: 1.6em; vertical-align: middle;}
+.ektron-ui-search-users .basicSearch a.toggleDirectorySearch .ui-icon { display: inline-block; }
+
+.ektron-ui-search-users .directorySearch { text-align: center; border-top: solid 1px #d3d3d3; padding: .5em; margin-top: .5em; }
+.ektron-ui-search-users .directorySearch .ektron-ui-button a { margin: 1em auto;}

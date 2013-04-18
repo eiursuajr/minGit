@@ -1,0 +1,89 @@
+/* wrapper styles */
+div.ektron_PricingWrapper {width:100%;margin:0 auto;padding:0;font-family:Arial, Helvetica, Tahoma, Verdana, sans-serif;border-collapse:collapse;}
+div.ektron_PricingWrapper div.ektron_Pricing_InnerWrapper {background-color:white;margin:0;padding:1em 1em 0em 1em;}
+div.ektron_PricingWrapper .ektron_Pricing_CurrencyWrapper {display:none;}
+div.ektron_PricingWrapper .ektron_Pricing_CurrencyWrapper_Active {display:block;}
+
+/* element styles */
+div.ektron_PricingWrapper label {display:inline;}
+div.ektron_PricingWrapper img {border:none;}
+div.ektron_PricingWrapper table {width:100%;margin:0 0 1em 0;padding:0;font-family:Arial, Helvetica, Tahoma, Verdana, sans-serif;border-collapse:collapse;}
+div.ektron_PricingWrapper tr {background-color:white;}
+div.ektron_PricingWrapper tr.stripe {background-color:#F2F0F5;}
+div.ektron_PricingWrapper thead th {background-color:#d8e6ff;font-weight:bold;background-image:url('../../images/application/commerce/th76.gif');background-position:0px 0px;background-repeat:repeat-x;line-height:30px;padding:0 .5em;}
+div.ektron_PricingWrapper th {padding:.5em .25em;font-weight:normal;text-align:right;}
+div.ektron_PricingWrapper th img.moreInfo {position:relative;top:2px;margin-right:.25em;}
+div.ektron_PricingWrapper td {}
+div.ektron_PricingWrapper td {padding:.25em}
+div.ektron_PricingWrapper tfoot td {padding:.5em .25em;}
+
+/* widget header */
+div.ektron_PricingWrapper h3 {background-color:#d8e6ff;font-size:1.25em;border-bottom:none;margin:0;text-align:right;font-weight:bold;background-image:url('../../images/application/commerce/th76.gif');background-position:0px 0px;background-repeat:repeat-x;line-height:30px;padding:.5em;}
+div.ektron_PricingWrapper h3 span.currencyLabel {float:left;}
+div.ektron_PricingWrapper h3 select {position:relative;top:-1px;font-size:0.8em;}
+
+/* generic widget styles */
+div.ektron_PricingWrapper .narrowCol {width:12em;text-align:right;}
+div.ektron_PricingWrapper .wideCol {text-align:left;}
+div.ektron_PricingWrapper .noFloat {float:none !important;}
+div.ektron_PricingWrapper .noBorder {border:none;}
+div.ektron_PricingWrapper .noBorderTop {border-top:none;}
+div.ektron_PricingWrapper .noBorderRight {border-right:none;}
+div.ektron_PricingWrapper .noBorderBottom {border-bottom:none;}
+div.ektron_PricingWrapper .noBorderLeft {border-left:none;}
+div.ektron_PricingWrapper .alignCenter {text-align:center !important;}
+div.ektron_PricingWrapper .alignRight {text-align:right;}
+div.ektron_PricingWrapper .alignLeft {text-align:left;}
+div.ektron_PricingWrapper .textSmall {font-size:.75em;}
+div.ektron_PricingWrapper .emphasis {font-weight:bold;}
+div.ektron_PricingWrapper .noBackgroundImage {background-image:none;}
+div.ektron_PricingWrapper .noBorderTop {border-top:none;}
+div.ektron_PricingWrapper .noBorderTopBottom {border-top:none;border-bottom:none;}
+div.ektron_PricingWrapper .sectionBreak {}
+div.ektron_PricingWrapper .clearfix {display:inline-block;}
+div.ektron_PricingWrapper .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+
+/* buttons */
+div.ektron_PricingWrapper a {color:blue;text-decoration:none;}
+div.ektron_PricingWrapper a:hover {color:blue;text-decoration:underline;}
+div.ektron_PricingWrapper a:visited {color:blue;}
+div.ektron_PricingWrapper a.button {display:block;margin:0;background-color:#f5f5f5;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.ektron_PricingWrapper a.buttonLeft {float:left;}
+div.ektron_PricingWrapper a.buttonRight {float:right;}
+div.ektron_PricingWrapper a.buttonInline {display:inline;}
+div.ektron_PricingWrapper a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.ektron_PricingWrapper a.button:hover {color:#d12f19;}
+div.ektron_PricingWrapper a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.ektron_PricingWrapper a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.ektron_PricingWrapper a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+div.ektron_PricingWrapper a.marginLeft {margin-left:.5em;}
+div.ektron_PricingWrapper a.disabled {color:silver;border:1px solid #eee !important;cursor:default !important;color:silver !important;}
+div.ektron_PricingWrapper a.ektron_RemovePricingTier_Button {display:none;}
+
+/* tier pricing */
+div.ektron_PricingWrapper div.ektron_TierPricing_Wrapper {display:none;}
+div.ektron_PricingWrapper table.ektron_TierPricing_Table col.ektron_TierPricing_TierRemove {width:4%;text-align:center;}
+div.ektron_PricingWrapper table.ektron_TierPricing_Table col.ektron_TierPricing_TierQuantity {width:47%;}
+div.ektron_PricingWrapper table.ektron_TierPricing_Table col.ektron_TierPricing_TierPrice {width:47%;}
+div.ektron_PricingWrapper table.ektron_TierPricing_Table tr.ektron_TierPricing_HeaderLabels th {font-weight:normal;background-color:white;background-image:none;color:#4c4c4c;}
+div.ektron_PricingWrapper table.ektron_TierPricing_Table th {text-align:left;}
+div.ektron_PricingWrapper table.ektron_TierPricing_Table th img.ektron_TierPricing_HeaderRemoveImage {display:none;position:relative;top:2px;left:2px;}
+div.ektron_PricingWrapper table.ektron_TierPricing_Table td {line-height:18px;padding:.5em}
+div.ektron_PricingWrapper p.ektron_TierPricing_Commands {display:block;margin:0 0 0 0;padding:1em 0em 1em 0em;border-top:1px dotted silver;background-color:white;}
+
+/* Recurring Pricing */
+table.ektron_RecurringPricing_Table {border-collapse:collapse;margin:1em;}
+table.ektron_RecurringPricing_Table thead th {border:1px solid silver;padding:.25em;text-align:left;background-color:#d8e6ff;font-weight:bold;background-image:url('../../images/application/commerce/th76.gif');background-position:0px 0px;background-repeat:repeat-x;line-height:30px;padding:0 .5em;}
+table.ektron_RecurringPricing_Table tbody th {font-weight:normal;border:1px solid silver;border-right:none;padding:.25em 1em .25em .25em;text-align:right;width:15em;}
+table.ektron_RecurringPricing_Table tbody th label {font-weight:normal;}
+table.ektron_RecurringPricing_Table tbody td {border:1px solid silver;border-left:none;padding:.25em .25em .25em 1em;text-align:left;width:45em;}
+table.ektron_RecurringPricing_Table tbody td input.interval {width:4em;}
+table.ektron_RecurringPricing_Table tbody td span.intervalRequired {display:none;color:red;}
+
+/* modal (remove tier pricing) */
+#ektron_Pricing_Modal {margin:0 0 0 -10em;padding:0;width:20em;}
+#ektron_Pricing_Modal h4 {font-size:1em;border:1px solid silver;border-bottom:none;margin:0;text-align:right;color:white;font-weight:bold;background-image:url('../../images/application/commerce/th76.gif');background-position:0px 0px;background-repeat:repeat-x;line-height:29px;padding:0 .5em;}
+#ektron_Pricing_Modal h4 img {position:relative;top:4px;}
+#ektron_Pricing_Modal div.ektron_Pricing_Modal_InnerWrapper {padding:1em;border:1px solid silver;}
+#ektron_Pricing_Modal div p {margin:0 0 1em 0;padding:0 0 1em 0;border-bottom:1px dotted silver;}
+#ektron_Pricing_Modal div p.buttons {display:block;margin:0;padding:0;border:none;}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items>
+	<Item data="" text="(Unassigned)" localeRef="dlgUA" />"
+	<Item data="xx-small" text="xx-small" />
+	<Item data="x-small" text="x-small" />
+	<Item data="small" text="small" />
+	<Item data="medium" text="medium" />
+	<Item data="large" text="large" />
+	<Item data="x-large" text="x-large" />
+	<Item data="xx-large" text="xx-large" />
+</Items>

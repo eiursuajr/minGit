@@ -1,0 +1,100 @@
+.contextMenu
+{
+border: 1px solid #aca899;
+width: 150px;
+margin:1px;
+position:absolute;
+z-index:50;
+background:#fff;
+cursor:default;
+/*filter:progid:DXImageTransform.Microsoft.Shadow(color='#666666', Direction=135, Strength=6)*/
+}
+
+.contextMenuItem, .contextMenuItemOver, .contextMenuItemOut, .contextMenuItemSubMenu
+{
+position:relative;
+border: 1px solid #fff;
+font-family: ms sans serif;
+font-size: xx-small;
+height: 15px;
+background:#fff;
+display:block;
+padding-top: 2px;
+padding-bottom: 2px;
+margin-top: 0px;
+padding-left: 15px;
+vertical-align:middle;
+}
+
+.contextMenuItemOut
+{
+border: 1px solid #fff;
+background:#fff;
+}
+
+.contextMenuItemOver
+{
+background:#316ac5;
+color: #fff;
+}
+
+.contextMenuItemBreak
+{
+margin-left:5px;
+margin-right:5px;
+margin-top:3px;
+margin-bottom:3px;
+border:1px solid #aca899;
+height:1px;
+overflow:hidden;
+text-align:center;
+}
+
+/*
+.contextMenu
+{
+border: 1px solid #8a867a;
+width: 150px;
+margin:1px;
+position:absolute;
+z-index:50;
+background:#fff;
+cursor:default;
+}
+
+.contextMenuItem, .contextMenuItemOver, .contextMenuItemOut
+{
+position:relative;
+border: 1px solid #fff;
+font-family: ms sans serif;
+font-size: xx-small;
+height: 22px;
+background:#fff;
+display:block;
+padding: 5px;
+padding-left: 15px;
+}
+
+.contextMenuItemOut
+{
+border: 1px solid #fff;
+background:#fff;
+}
+
+.contextMenuItemOver
+{
+background:#c1d2ee;
+color: #000;
+border:1px solid #316ac5;
+}
+
+.contextMenuItemBreak
+{
+margin:0px;
+padding:0px;
+border:1px solid buttonface;
+width:100%;
+height:1px;
+overflow:hidden;
+}
+*/

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+  <string id="Title">Propiedades de celda</string> 
+  <string id="Tab1HeaderText">Propiedades de celda</string> 
+  <string id="Dimensions">Dimensiones </string> 
+  <string id="Height">Alto:</string> 
+  <string id="Width">Ancho:</string> 
+  <string id="ContentAlignment">Alineacion de contenidos</string> 
+  <string id="Horizontal">Horizontal:</string> 
+  <string id="Left">Izquierda</string> 
+  <string id="Center">Centro</string> 
+  <string id="Right">Derecha</string> 
+  <string id="Vertical">Vertical:</string> 
+  <string id="Middle">Medio</string> 
+  <string id="Top">Arriba</string> 
+  <string id="Bottom">Abajo</string> 
+  <string id="Baseline">Linea base</string> 
+  <string id="Background">Fondo</string> 
+  <string id="UseColor">Usar Color:</string> 
+  <string id="Black">Negro</string> 
+  <string id="Blue">Azul</string> 
+  <string id="Green">Verde</string> 
+  <string id="Orange">Naranja</string> 
+  <string id="Red">Rojo</string> 
+  <string id="White">Blanco</string> 
+  <string id="Yellow">Amarillo</string> 
+  <string id="Custom">Personalizar</string> 
+  <string id="Customh">Personalizar -</string> 
+  <string id="Update">Guardar</string> 
+  <string id="Cancel">Cancelar</string> 
+  <string id="Additional">Adicional</string> 
+  <string id="NoWrapping">Sin ajuste de linea</string> 
+  <string id="CellCss">CSS celda</string> 
+  <string id="CssClass">Estilo CSS:</string> 
+  <string id="Style">Estilo:</string> 
+  <string id="MessageStyle">Por favor, proporcionar un valor valido para el atributo estilo</string> 
+  <string id="PromptColor">Por favor, proporcionar el valor HEX del color personalizado:</string> 
+	<string id="AddCustomColor">Anadir Color Personalizado...</string>
+	<string id="AddHexColor">Anadir color HEX...</string>
+	<string id="BackgroundImage">Imagen de fondo</string>
+	<string id="ClearStyle">Limpiar estilo</string>
+</localization>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">儲存格屬性</string>
+	<string id="Tab1HeaderText">儲存格屬性</string>
+	<string id="Dimensions">尺寸</string>
+	<string id="Height">高度:</string>
+	<string id="Width">寬度:</string>
+	<string id="ContentAlignment">內容對齊</string>
+	<string id="Horizontal">水平</string>
+	<string id="Left">靠左對齊</string>
+	<string id="Center">置中對齊</string>
+	<string id="Right">靠右對齊</string>
+	<string id="Vertical">垂直</string>
+	<string id="Middle">置中對齊</string>
+	<string id="Top">靠上對齊</string>
+	<string id="Bottom">靠下對齊</string>
+	<string id="Baseline">靠文字底部對齊</string>
+	<string id="Background">背景影像</string>
+	<string id="UseColor">背景顏色:</string>
+	<string id="Black">黑色</string>
+	<string id="Blue">藍色</string>
+	<string id="Green">綠色</string>
+	<string id="Orange">橘色</string>
+	<string id="Red">紅色</string>
+	<string id="White">白色</string>
+	<string id="Yellow">黃色</string>
+	<string id="Custom">自訂</string>
+	<string id="Customh">自訂 - </string>
+	<string id="Style">樣式:</string>
+	<string id="MessageStyle">請提供適合之樣式屬性值。</string>
+	<string id="PromptColor">請輸入 custom color HEX 值:</string>
+	<string id="Additional">其他</string>
+	<string id="NoWrapping">不換行</string>
+	<string id="InvalidCellWidth">無效的儲存格寬度。</string>
+	<string id="InvalidCellHeight">無效的儲存格高度。</string>
+</localization>

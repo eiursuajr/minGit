@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Title">Zelleneigenschaften</string>
+  <string id="Tab1HeaderText">Zelleneigenschaften</string>
+  <string id="Dimensions">Grösse</string>
+  <string id="Height">Höhe:</string>
+  <string id="Width">Breite:</string>
+  <string id="ContentAlignment">Ausrichtung des Inhalts</string>
+  <string id="Horizontal">Horizontal:</string>
+  <string id="Left">Links</string>
+  <string id="Center">Zentriert</string>
+  <string id="Right">Rechts</string>
+  <string id="Vertical">Vertikal:</string>
+  <string id="Middle">Mitte</string>
+  <string id="Top">Oben</string>
+  <string id="Bottom">Unten</string>
+  <string id="Baseline">Grundlinie</string>
+  <string id="Background">Hintergrund</string>
+  <string id="UseColor">Benutze Farbe:</string>
+  <string id="Black">Schwarz</string>
+  <string id="Blue">Blau</string>
+  <string id="Green">Grün</string>
+  <string id="Orange">Orange</string>
+  <string id="Red">Rot</string>
+  <string id="White">Weiß</string>
+  <string id="Yellow">Gelb</string>
+  <string id="Custom">Benutzerdefiniert</string>
+  <string id="Customh">Benutzerdefiniert - </string>
+  <string id="Additional">Zusatzoptionen</string>
+  <string id="NoWrapping">Kein Umbruch</string>
+  <string id="Style">Stil:</string>
+  <string id="MessageStyle">Bitte geben Sie einen gültigen Stil-Wert an.</string>
+  <string id="PromptColor">Bitte geben Sie den HEX-Wert für die benutzerdefinierte Farbe an:</string>
+  <string id="InvalidCellWidth">Ungültige Zellenbreite.</string>
+  <string id="InvalidCellHeight">Ungültige Zellenhöhe.</string>
+</localization>

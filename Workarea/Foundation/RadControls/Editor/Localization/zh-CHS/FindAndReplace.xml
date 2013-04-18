@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">搜寻和取代</string>
+	<string id="Tab1HeaderText">搜寻</string>
+	<string id="Tab2HeaderText">取代</string>
+	<string id="SearchText">搜寻:</string>
+	<string id="FindNext">搜寻下一个</string>
+	<string id="Replace">取代</string>
+	<string id="ReplacementText">取代为:</string>
+	<string id="ReplaceAll">全部取代</string>
+	<string id="SearchIn">搜寻:</string>
+	<string id="SearchEntireText">全部文字</string>
+	<string id="SearchSelection">选取范围</string>
+	<string id="SearchDirection">搜寻方向:</string>
+	<string id="MatchCase">大小写需相符</string>
+	<string id="WholeWordsOnly">全字拼写需相符</string>
+	<string id="SearchUp">向上</string>
+	<string id="SearchDown">向下</string>
+	<string id="OK">确定</string>
+	<string id="Cancel">取消</string>
+	<string id="SearchCriteriaNotSpecified">未定义搜寻项目</string>
+	<string id="NoSearchTarget">没有内容可供搜寻</string>
+	<string id="FinishedSearching">Ektron eWebEdit400 已完成搜寻</string>
+	<string id="AndHasMade">且使</string>
+	<string id="Replacements">个项目被取代。</string>
+	<string id="ektron">Ektron Editor Starts</string>
+	<string id="Close">Close</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

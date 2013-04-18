@@ -1,0 +1,52 @@
+<!-- This file is created by Ektron and may be modified. -->
+<!-- Based on group list in CLDR/common/supplemental/supplementalData.xml#xpointer(/*/territoryContainment/group) -->
+<!-- type is the UN region code -->
+<!-- loc is my suggested abbreviation -->
+<!-- flag is my suggested flag -->
+<!-- likely is my suggested country code -->
+<!-- chtm is Google chart map zoom value -->
+<!--
+Sources for flag images:
+https://www.cia.gov/library/publications/the-world-factbook/docs/flagsoftheworld.html
+http://www.flags.net/mainindex.htm great site, but some flags are out of date
+http://www.crwflags.com/page0018.html
+http://en.wikipedia.org/
+-->
+<regions> 
+	<region type="001" loc="intl"    flag="flag_und-001.gif" likely="GB" chtm="world"/>  <!--World -->
+	<region type="011" loc="wafr"    flag="flag_und-002.gif" likely="MR" chtm="africa"/> <!--Western Africa -->
+	<region type="013" loc="centam"  flag="flag_und-019.gif" likely="MX" chtm="world"/>  <!--Central America -->
+	<region type="014" loc="eafr"    flag="flag_und-002.gif" likely="KE" chtm="africa"/> <!--Eastern Africa -->
+	<region type="142" loc="asia"    flag="flag_und-001.gif" likely="CN" chtm="world"/>  <!--Asia -->
+	<region type="143" loc="casia"   flag="flag_und-001.gif" likely="KZ" chtm="asia"/>   <!--Central Asia -->
+	<region type="145" loc="wasia"   flag="flag_ar.gif"      likely="SA" chtm="asia"/>   <!--Western Asia -->
+	<region type="015" loc="nafr"    flag="flag_ar.gif"      likely="EG" chtm="africa"/> <!--Northern Africa -->
+	<region type="150" loc="eur"     flag="flag_und-EU.gif"  likely="GB" chtm="world"/>  <!--Europe -->
+	<region type="151" loc="eeur"    flag="flag_und-172.gif" likely="RU" chtm="europe"/> <!--Eastern Europe -->
+	<region type="154" loc="neur"    flag="flag_und-154.gif" likely="GB" chtm="europe"/> <!--Northern Europe -->
+	<region type="830" loc="chan"    flag="flag_und-EU.gif"  likely="JE" chtm="europe"/> <!--Channel Islands -->
+	<region type="155" loc="weur"    flag="flag_und-155.gif" likely="FR" chtm="europe"/> <!--Western Europe -->
+	<region type="017" loc="mafr"    flag="flag_und-002.gif" likely="CD" chtm="africa"/> <!--Middle Africa -->
+	<region type="172" loc="cis"     flag="flag_und-172.gif" likely="RU" chtm="world"/>  <!--Commonwealth of Independent States -->
+	<region type="018" loc="safr"    flag="flag_und-002.gif" likely="ZA" chtm="africa"/> <!--Southern Africa -->
+	<region type="019" loc="nsam"    flag="flag_und-019.gif" likely="US" chtm="world"/>  <!--Americas -->
+	<region type="002" loc="afr"     flag="flag_und-002.gif" likely="EG" chtm="world"/>  <!--Africa -->
+	<region type="021" loc="usca"    flag="flag_und-019.gif" likely="US" chtm="world"/>  <!--Northern America -->
+	<region type="029" loc="carib"   flag="flag_und-029.gif" likely="PR" chtm="world"/>  <!--Caribbean -->
+	<region type="003" loc="noram"   flag="flag_und-019.gif" likely="US" chtm="world"/>  <!--North America -->
+	<region type="030" loc="easia"   flag="flag_und-001.gif" likely="JP" chtm="asia"/>   <!--Eastern Asia -->
+	<region type="035" loc="seasia"  flag="flag_und-035.gif" likely="ID" chtm="asia"/>   <!--South-Eastern Asia -->
+	<region type="039" loc="seur"    flag="flag_und-EU.gif"  likely="IT" chtm="europe"/> <!--Southern Europe -->
+	<region type="419" loc="latam"   flag="flag_und-019.gif" likely="MX" chtm="world"/>  <!--Latin America and the Caribbean -->
+	<region type="005" loc="southam" flag="flag_und-019.gif" likely="BR" chtm="world"/>  <!--South America -->
+	<region type="053" loc="aunz"    flag="flag_pacific.gif" likely="AU" chtm="world"/>  <!--Australia and New Zealand -->
+	<region type="054" loc="melan"   flag="flag_pacific.gif" likely="PG" chtm="world"/>  <!--Melanesia -->
+	<region type="057" loc="micro"   flag="flag_pacific.gif" likely="GU" chtm="world"/>  <!--Micronesia -->
+	<region type="061" loc="polyn"   flag="flag_und-061.gif" likely="PF" chtm="world"/>  <!--Polynesia -->
+	<region type="062" loc="scasia"  flag="flag_und-001.gif" likely="IN" chtm="asia"/>   <!--South-Central Asia --> 
+	<region type="034" loc="sasia"   flag="flag_und-001.gif" likely="IN" chtm="asia"/>   <!--Southern Asia -->
+	<region type="009" loc="oce"     flag="flag_pacific.gif" likely="AU" chtm="world"/>  <!--Oceania -->
+	<region type="QO"  loc="qo"      flag="flag_pacific.gif" likely="CX" chtm="world"/>  <!--Outlying Oceania -->
+	<region type="EU"  loc="eu"      flag="flag_und-EU.gif"  likely="DE" chtm="europe"/> <!--European Union -->
+</regions>
+

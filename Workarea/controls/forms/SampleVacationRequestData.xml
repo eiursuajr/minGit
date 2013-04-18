@@ -1,0 +1,90 @@
+
+<Form>
+	<Title>Vacation Request</Title>
+	<Description>Vacation Request form.</Description>
+	<SubmittedData>
+		<Date value="2005-11-03T11:16:22">11/3/2005 11:16:22 AM</Date>
+		<User id="1" member="false">
+			<Name>
+				<FirstName>Application</FirstName>
+				<LastName>Administrator</LastName>
+			</Name>
+			<Username>admin</Username>
+			<Email>doug@ektron.com</Email>
+		</User>
+		<Data form_data_id="36">
+			<comments></comments>
+			<Date_Begin>2005-11-02</Date_Begin>
+			<Date_End>2005-11-02</Date_End>
+			<day_no_pay></day_no_pay>
+			<day_pay>1</day_pay>
+			<Dept>Eng</Dept>
+			<Name>Doug Domeny</Name>
+			<Reason>Vacation</Reason>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T11:16:44">11/3/2005 11:16:44 AM</Date>
+		<Data form_data_id="37">
+			<comments></comments>
+			<Date_Begin>2005-11-04</Date_Begin>
+			<Date_End>2005-11-07</Date_End>
+			<day_no_pay></day_no_pay>
+			<day_pay>2</day_pay>
+			<Dept>Eng</Dept>
+			<Name>John Edit</Name>
+			<Reason>Sick Day</Reason>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T11:17:05">11/3/2005 11:17:05 AM</Date>
+		<Data form_data_id="38">
+			<comments></comments>
+			<Date_Begin>2005-11-21</Date_Begin>
+			<Date_End>2005-11-25</Date_End>
+			<day_no_pay></day_no_pay>
+			<day_pay>5</day_pay>
+			<Dept>Eng</Dept>
+			<Name>Doug Domeny</Name>
+			<Reason>Vacation</Reason>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T16:52:40">11/3/2005 4:52:40 PM</Date>
+		<User id="1" member="false">
+			<Name>
+				<FirstName>Application</FirstName>
+				<LastName>Administrator</LastName>
+			</Name>
+			<Username>admin</Username>
+			<Email>doug@ektron.com</Email>
+		</User>
+		<Data form_data_id="48">
+			<comments></comments>
+			<Date_Begin>2005-11-24</Date_Begin>
+			<Date_End>2005-11-25</Date_End>
+			<day_no_pay></day_no_pay>
+			<day_pay>2</day_pay>
+			<Dept>Eng</Dept>
+			<Name>Doug Domeny</Name>
+			<Reason>Vacation</Reason>
+		</Data>
+	</SubmittedData>
+	<ektdesignpackage_list>
+		<fieldlist>
+			<field name="Name" datatype="string" basetype="text" xpath="/root/Name">Name</field>
+			<field name="Dept" datatype="string" basetype="text" xpath="/root/Dept">Dept</field>
+			<field name="Reason" datatype="choice" basetype="text" xpath="/root/Reason" datalist="ID0EPB">Reason</field>
+			<field name="Date_Begin" datatype="date" basetype="calendar" xpath="/root/Date_Begin">Date Begin</field>
+			<field name="Date_End" datatype="date" basetype="calendar" xpath="/root/Date_End">Date End</field>
+			<field name="day_pay" datatype="nonNegInt" basetype="number" xpath="/root/day_pay">day pay</field>
+			<field name="day_no_pay" datatype="nonNegInt" basetype="number" xpath="/root/day_no_pay">day no pay</field>
+			<field name="comments" datatype="textarea" basetype="textbox" xpath="/root/comments" content="textarea">comments</field>
+			<datalist name="ID0EPB">
+				<item value="Floating Holiday">Floating Holiday</item>
+				<item value="Vacation">Vacation</item>
+				<item value="Sick Day">Sick Day</item>
+			</datalist>
+		</fieldlist>
+	</ektdesignpackage_list>
+</Form>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorXhtmlValidator">Validatore XHTML</string>
+	<string id="RadEditorStatistics">Statistiche</string>
+	<string id="RadEditorNodeInspector">Finestra Proprietà</string>
+	<string id="RadEditorDomInspector">Fienstra TAG</string>	
+	<string id="RadEditorHtmlInspector">Vista in tempo reale HTML</string>
+	<string id="StatisticsWords"> Parole:</string>
+	<string id="StatisticsCharacters">Caratteri:</string>	
+	<string id="NodeInspectorSelectedElement">L'elemento selezionato è </string>	
+	<string id="NodeInspectorInvalidValue">Valore invalido. Per piacere inserisci un numero.</string>	
+	<string id="className">Nome Classe</string>		
+	<string id="borderColor">Colore del bordo</string>	
+	<string id="bgColor">Sfondo</string>	
+	<string id="width">Larghezza</string>
+	<string id="height">Altezza</string>
+	<string id="align">Allineamento</string>
+	<string id="vAlign">Allineamento Verticale</string>
+	<string id="cellSpacing">Spazio tra le Celle</string>
+	<string id="cellPadding">Padding tra le Celle</string>
+	<string id="border">Spessore bordo</string>
+	<string id="noWrap">Nessuna sovvraposizione</string>
+	<string id="value">Valore</string>
+	<string id="id">Id</string>
+	<string id="name">Nome</string>
+	<string id="href">URL</string>
+	<string id="title">ToolTip</string>
+	<string id="target">Destinazione</string>
+	<string id="alt">ToolTip</string>
+	<string id="_blank">Nuova Finestra</string>
+	<string id="_self">Stessa Finestra</string>
+	<string id="_parent">Finestra Parent</string>
+	<string id="_top">Finestra del browser</string>
+	<string id="_search">Pannello di ricerca</string>
+	<string id="_media">Pannello Media</string>
+	<string id="DomInspectorRemoveElement">Rimuovi elemento</string>
+	<string id="NAME">Nome</string>
+	<string id="action">Azione</string>	
+	<string id="ValidateXHTML">Valida codice</string>
+	<string id="ExpandValidator">Espandi pannello</string>
+	<string id="Doctype">Seleziona Doctype</string>
+	<string id="rows">Righe</string>
+	<string id="cols">Colonne</string>
+</localization>

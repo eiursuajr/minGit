@@ -1,0 +1,290 @@
+﻿body /* common */
+{
+    line-height: 1.5;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+#ulItemsToSynchronize
+{
+    margin: 0px;
+    padding: 0px;
+}
+
+#ulItemsToSynchronize li
+{
+    list-style: none;
+}
+
+#scheduleFieldset
+{
+    width: 300px;
+    border: 1px solid #BBDDF6;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+.description
+{
+    font-family: Arial,Tahoma,sans-serif;
+    font-size: 11px;
+    color: Gray;
+}
+
+.textInput
+{
+    width: 300px;
+}
+
+.optionHeader
+{
+    font-family: Arial,Tahoma,sans-serif;
+    font-weight: bold;
+    color: #1D5987;
+}
+
+.optionDescription
+{
+    width: 90%;
+    margin-left: 10px;
+    font-family: Arial,Tahoma,sans-serif;
+    font-size: 11px;
+    color: Gray;
+    padding: 3px;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+
+td
+{
+    vertical-align: top !important;
+}
+
+td.option
+{
+    border-top: solid 5px Transparent;
+    border-bottom: solid 5px Transparent;
+}
+
+td.label
+{
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    color: #1D5987;
+    font-weight: bold;
+}
+
+.stripe
+{
+    background-color: #E7F0F7;
+}
+
+div.errorMessage
+{
+    background-image: url("../images/syncSprites.gif");
+    background-repeat: no-repeat;
+    background-color: #FBE3E4;
+    border: 1px solid #FBC2C4;
+    color: #D12F19;
+    background-position: -378px -58px;
+    margin: 5px;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 2em;
+    padding-right: .5em;
+}
+
+table.filters td
+{
+    padding: 5px;
+}
+
+td.filterOptions
+{
+    vertical-align: top;
+    width: 100px;
+}
+
+#txtFileFilters
+{
+    width: 99%;
+}
+
+#txtDirectoryFilters
+{
+    width: 99%;
+}
+
+span.dateClass
+{
+    width: 250px !important;
+    border: solid 1px #AAAAAA !important;
+}
+
+#divWeeklySchedule div
+{
+    margin-bottom: 5px;
+}
+
+#divMonthlySchedule div
+{
+    margin-bottom: 5px;
+}
+
+td.scheduleOptions
+{
+    vertical-align: top;
+    width: 100px;
+}
+
+#tblProfile td.label
+{
+    vertical-align: top;
+    width: 200px;
+}
+
+
+#rdoConflictResolution
+{
+    width: 200px;
+}
+
+.hidden
+{
+    visibility: hidden !important;
+}
+
+.displayNone
+{
+    display: none;
+}
+
+label.scopehover 
+{
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+div.scopeitemswrapper
+{
+    display:none;
+    width:242px;
+    height:187px;
+}
+
+span.scopeitemstitle
+{
+    float:left;
+    color: #1D5987;
+    font-size: 12px;
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+    height:20px;
+}
+
+span.scopeitemsclose
+{
+    float:right;
+    color: #1D5987;
+    font-size: 12px;
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-weight: 700;
+}
+
+span.scopeitemsclose:hover
+{
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+ul.scopeitemslist
+{
+    clear:both;
+    width:100%;
+    height:100%;
+    overflow-y:scroll;
+}
+
+/* global */
+#cluetip-close img
+{
+    border: 0;
+}
+#cluetip-title
+{
+    overflow: hidden;
+}
+#cluetip-title #cluetip-close
+{
+    float: right;
+    position: relative;
+}
+
+.cluetip-arrows
+{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -11px;
+    height: 22px;
+    width: 11px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+#cluetip-extra
+{
+    display: none;
+}
+
+/***************************************
+   =cluetipClass: 'jtip'
+-------------------------------------- */
+.cluetip-jtip
+{
+    background-color: transparent;
+}
+.cluetip-jtip #cluetip-outer
+{
+    border: 2px solid #ccc;
+    position: relative;
+    background-color: #fff;
+    width:700px;
+}
+
+.cluetip-jtip h3#cluetip-title
+{
+    margin: 0 0 5px;
+    padding: 2px 5px;
+    font-size: 16px;
+    font-weight: normal;
+    background-color: #ccc;
+    color: #333;
+}
+
+.cluetip-jtip #cluetip-inner
+{
+    padding: 0 5px 5px;
+    display: inline-block;
+}
+
+.cluetip-jtip div#cluetip-close
+{
+    text-align: right;
+    margin: 0 5px 5px;
+    color: #900;
+}
+
+/* jtip arrows */
+
+.clue-bottom-jtip .cluetip-arrows
+{
+    background-image: url(../images/arrowup.gif);
+    top: -11px;
+    left: 50%;
+    margin-left: -11px;
+    height: 11px;
+    width: 22px;
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="AreaFieldSet">Selected Area Properties</string>
+	<string id="ImageFieldSet">Image Properties</string>
+	<string id="Update">Update Area</string>
+	<string id="Remove">Remove Area</string>
+	<string id="RemoveAll">Remove All</string>
+	<string id="NewArea">Create Area</string>
+	<string id="Left">Left</string>
+	<string id="Top">Top</string>
+	<string id="Width">Width</string>
+	<string id="Height">Height</string>
+	<string id="Url">Url</string>
+	<string id="Target">Target</string>
+	<string id="Comment">Comment</string>
+	<string id="ImageSrc">Image Src</string>
+	<string id="AlertInvalidProperties">Invalid Properties!</string>
+	<string id="AlertInvalidAreaProperties">Invalid Area Properties. Please enter url.</string>
+	<string id="AlertDeleteArea">Are you sure you want to delete this area.</string>
+	<string id="AlertDeleteAllAreas">Are you sure you want to delete ALL areas.</string>
+	<string id="AlertWrongAreaDimensions">Wrong area dimensions detected. Skipping this area.</string>	
+	<string id="ShapeAlt">Drag the bottom right corner to resize the Area.</string>
+	<string id="HowToAdd">You can drag over the image to create a new Area.</string>
+	<string id="RectangleShapeName">Rectangle</string>
+	<string id="CircleShapeName">Circle</string>
+	<string id="PolygonShapeName">Polygon</string>
+	<string id="SelectImage">Please choose an image in order to create image map.</string>
+	<string id="_blank">New Window</string>
+	<string id="_self">Same Window</string>
+	<string id="_parent">Parent Window</string>
+	<string id="_top">Browser Window</string>
+	<string id="_search">Search Pane</string>
+	<string id="_media">Media Pane</string>
+</localization>

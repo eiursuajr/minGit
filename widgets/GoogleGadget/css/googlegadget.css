@@ -1,0 +1,10 @@
+.gadget                                { background-color: #F0F0FF; font-family: Calibri; font-size: 12pt; }
+.gadget h1                             { font-size: 14pt; margin: 0; padding: 4px; color: #3333BB}
+.gadget-list                           { list-style-type: none; padding: 0; margin: 0; }
+.gadget-list li.alt1                   { background-color: #E0E0FF; }
+.gadget-list li.alt2                   { background-color: #CCCCFF; }
+.gadget-list li                        { padding: 3px; margin: 0; }
+.gadget-list li img.gadget-thumbnail   { display: block; float: left; width: 90px; height: 45px; }
+.gadget-list li a                      { text-decoration: none; color: #4444BB; font-weight: bold; margin-left: 94px; display: block; line-height: 26px; }
+.gadget-list li span.gadget-description { margin-left: 94px; display: block; }
+.gadget-list li.hover                   { background-color: #EEEEFF; cursor: pointer; }

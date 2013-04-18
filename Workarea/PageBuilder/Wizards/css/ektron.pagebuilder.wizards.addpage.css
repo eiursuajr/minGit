@@ -1,0 +1,230 @@
+/* Body */
+body.ektronWizardFrame {font-size: 12px; font-family: Arial, Verdana, sans-serif; margin: 0; padding: 0;}
+body.ektronWizardFrame form.ektronWizardForm {display: block; width: 100%;}
+body.ektronWizardFrame form.ektronWizardForm .InnerWrapper {margin: 1em .75em; padding: .25em;}
+
+/* Text Elements */
+.ektronWizardStepWrapper h4 {background-image:url('../images/icon_info_lg.gif'); background-position:left top; background-repeat:no-repeat; border-bottom: solid 1px #333; margin: .5em .75em; font-size: 1em; padding-bottom:.5em;}
+.ektronWizardStepWrapper h4 span {display:block; padding-left:50px; height:3.5em;}
+.ektronWizardStepWrapper h4 span.withMaster {display:block; padding-left:50px; height:3.2em;}
+.ektronWizardStepWrapper .ektronFolderSelect {display: block; margin: .1em .75em .25em; font-size: .9em}
+.ektronWizardStepWrapper .ektronMasterPageTitle {display: block; margin: .1em .75em .25em; font-size: .9em}
+.ektronWizardStepWrapper .ektronMasterPageTitle label{margin:0px;}
+.ektronWizardStepWrapper label {font-size:11px;}
+.ektronWizardStepWrapper #ektronPageBuilderChangePath { margin-left: 50px; } 
+.ektronWizardStepWrapper .pageBuilderPleaseSelectLayout {display: block; margin: .1em .75em .25em; font-size: .9em}
+.redirectMessage h4 {color: #529214; margin: .5em .75em; font-size: 1em;}
+.redirectMessage p {margin: 0; padding: 0 .75em;}
+
+/* Table elements */
+.ektronWizardStepWrapper table.ektronPageBuilderWizardTable {}
+.ektronWizardStepWrapper table th, .ektronWizardStepWrapper table td {font-size: 12px;}
+.ektronWizardStepWrapper table.ektronPageBuilderWizardTable th, .ektronWizardStepWrapper table.ektronPageBuilderWizardTable td {padding-bottom: .75em;}
+.ektronPageBuilderWizard div.ektronModalBody table {margin:0 1.5em;}
+
+/* Form Elements */
+.ektronWizardStepWrapper label { margin: 0 .25em;}
+.ektronWizardStepWrapper input.inputText {width: 15em;}
+.ektronWizardStepWrapper #step2 {display: none;}
+.ektronWizardStepWrapper #step3 {display: none;}
+.ektronWizardStepWrapper #btnFinish {position: absolute; top: -10000px; left: -10000px;}
+
+/* Layout/Alignment */
+.ektronWizardStepWrapper .txtRight { text-align: right; vertical-align: top;}
+
+/* page 2 */
+.ektronAliasTaxonomy { height: 305px; }
+.ektronAliasTaxonomy .ektronAliasTaxLeft { margin-left:.75em; width:300px; float:left; }
+.ektronAliasTaxonomy fieldset { border:1px solid #b9b9b9; }
+.ektronAliasTaxonomy fieldset legend { padding: 0.2em 0.5em; border:none; color:#444444; font-size:90%; text-align:right; }
+.ektronAliasTaxonomy .ektronAliasing { width:300px; float:right; margin-right:.75em; height: 300px; }
+.ektronAliasTaxonomy .ektronAliasing .ektronFieldInside { height: 268px; overflow: auto; }
+.ektronAliasTaxonomy .ektronAliasing .ektronFieldInside ul { list-style-type: none; margin: 0 0 0 5px; }
+.ektronAliasTaxonomy .ektronAliasing .ektronFieldInside h5 { font-size: 90%; font-weight:normal; margin: 0.5em 0 0 0; }
+.ektronAliasTaxonomy .ektronAliasing .ektronFieldInside input { width: 12em; }
+.ektronAliasTaxonomy .ektronAliasing .ektronFieldInside .aliasPreviewLabel  { margin-left: 5px; font-size: 75%; }
+.ektronAliasTaxonomy .ektronAliasing .ektronFieldInside .AliasPreview { font-size: 75%; }
+.ektronAliasTaxonomy .ektronAliasing .ektronFieldInside .createManualAlias input { width: 1em; margin-left: 0px; }
+
+.ektronAliasTaxonomy .ektronAliasing fieldset { height: 290px; }
+.ektronAliasTaxonomy .ektronPageTitle { height: 2.1em; }
+.ektronAliasTaxonomy fieldset.ektronTaxonomy { margin-top: 9px; }
+.ektronAliasTaxonomy fieldset.ektronTaxonomy > div { height: 198px; overflow:auto; }
+.ektronAliasTaxonomy .ektronAliasing .ektronFieldInside ul li{ text-indent: -.5em; padding-left: .5em; }
+
+.ektronAliasTaxonomy div.treecontainer > ul > li { background:none; }
+.ektronAliasTaxonomy div.treecontainer > ul > li > div.hitarea { background-position:-48px -45px; }
+.ektronAliasTaxonomy div.treecontainer > ul > li.collapsable > div.collapsable-hitarea { background-position:-16px -90px; }
+
+/* Alias Preview */
+.ektronWizardStepWrapper .aliasPreviewContainer {font-size: .9em; padding: .25em; margin: 0; color: #888; width: 40em;}
+.ektronWizardStepWrapper #aliasValue {display: inline; padding: 0; margin: 0; word-break: break-all; -moz-binding: url('../../../csslib/xml/moz_wordwrap.xml');}
+.ektronWizardStepWrapper .AliasPreview, .ektronWizardStepWrapper #aliasValue, .ektronWizardStepWrapper .extValue {color: #6699CC}
+
+/* Tabs */
+.ektronPageBuilderTabs, .ektronPageBuilderTabPanel {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+.ektronPageBuilderTabPanel textarea {
+    width:98% !important;
+}
+
+
+.ektronPageBuilderTabs {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 4px;
+}
+.ektronPageBuilderTabs:after { /* clearing without presentational markup, IE gets extra treatment */
+    display: block;
+    clear: both;
+    content: " ";
+}
+.ektronPageBuilderTabs li {
+    float: left;
+    margin: 0 0 0 2px;
+    min-width: 84px; /* be nice to Opera */
+	background: #d0d0d0;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+.ektronPageBuilderTabs li:hover { background: #1b4a94 url('../../../images/UI/over_tab.gif') repeat-x 0 0; }
+.ektronPageBuilderTabs li:hover a { color: #fff; }
+	
+.ektronPageBuilderTabs a, .ektronPageBuilderTabs a span {
+    display: block;
+    padding: 0 10px;
+}
+
+.ektronPageBuilderTabs a {
+    margin: 1px 0 0; /* position: relative makes opacity fail for disabled tab in IE */
+    padding-left: 0;
+    color: #000;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap; /* required in IE 6 */    
+    outline: 0; /* prevent dotted border in Firefox */
+}
+
+.ektronPageBuilderTabs .selected { background: #1b4a94 url('../../../images/UI/active_tab.gif') repeat-x 0 0; }
+.ektronPageBuilderTabs .selected a {
+    position: relative;
+    top: 1px;
+    z-index: 2;
+    margin-top: 0;
+    color: #fff;
+}
+
+.ektronPageBuilderTabs a span {
+    width: 64px; /* IE 6 treats width as min-width */
+    min-width: 64px;
+    height: 18px; /* IE 6 treats height as min-height */
+    min-height: 18px;
+    padding-top: 6px;
+    padding-right: 0;
+}
+*>.ektronPageBuilderTabs a span { /* hide from IE 6 */
+    width: auto;
+    height: auto;
+}
+.ektronPageBuilderTabs .selected a span {
+    padding-bottom: 1px;
+}
+
+.ektronPageBuilderTabs .selected a, .ektronPageBuilderTabs a:hover, .ektronPageBuilderTabs a:focus, .ektronPageBuilderTabs a:active {
+    background-position: 100% -150px;
+}
+
+.ektronPageBuilderTabs a, .ektronPageBuilderTabs .disabled a:hover, .ektronPageBuilderTabs .disabled a:focus, .ektronPageBuilderTabs .disabled a:active {
+    background-position: 100% -100px;
+}
+
+.ektronPageBuilderTabs .selected a span, .ektronPageBuilderTabs a:hover span, .ektronPageBuilderTabs a:focus span, .ektronPageBuilderTabs a:active span {
+    background-position: 0 -50px;
+}
+
+.ektronPageBuilderTabs .selected a:link, .ektronPageBuilderTabs .selected a:visited { /* @ Opera, use pseudo classes otherwise it confuses cursor... */
+    cursor: text;
+}
+
+.ektronPageBuilderTabs a:hover, .ektronPageBuilderTabs a:focus, .ektronPageBuilderTabs a:active,
+.ektronPageBuilderTabs .unselect a:hover, .ektronPageBuilderTabs .unselect a:focus, .ektronPageBuilderTabs .unselect a:active { /* @ Opera, we need to be explicit again here now... */
+    cursor: pointer;
+}
+
+/* Additional IE specific bug fixes... */
+* html .ektronPageBuilderTabs { /* auto clear, @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block;
+}
+*:first-child+html .ektronPageBuilderTabs  { /* @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block;
+}
+
+.ektronPageBuilderTabPanel {
+    border-top: 1px solid #97a5b0;
+    padding: .25em;
+    background: #fff; /* declare background color for container to avoid distorted fonts in IE while fading */
+    overflow: auto;
+    height: 23em;
+}
+.ektronWizardStepWrapper .ektronPageBuilderTabPanel table.directContainerMetadataForm{display:block}
+
+#ektronPageBuilderTaxonomy, #ektronPageBuilderSummary {display: none;}
+
+/* Template Lists */
+.ektronWizardStepWrapper .ektronPageBuilderPageLayouts {display: none; position:relative;}
+.ektronWizardStepWrapper .ektronTemplateListWrapper {margin: 0 .75em; border: solid 1px #c0c0c0; height: 19em; overflow-y: scroll; position:relative; }
+.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList {margin: 0em; padding: 0; list-style: none; font-family: Arial, Verdana, sans-serif; }
+.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li {background-image: none; margin: 0; padding: 0; float: left; width: 200px;}
+.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li .templateInnerWrapper {margin: 4px; text-align: center; border: solid 1px transparent;}
+
+.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li a {display: block; text-decoration: none; color: #333; text-align: center; padding: 4px; position: relative;}
+.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li a:focus, .ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li a:active {-moz-outline-style: none; outline: none;}
+.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li a span.ektronTemplateThumb {display: block; background-repeat: no-repeat; width: 180px; height: 180px; margin: auto; border: solid 1px transparent;}
+.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li a span.checked {display: block; width: 18px; height: 18px; background-repeat: no-repeat; position: absolute; right: 4px; top: 4px; z-index: 1; background-image: url("../../../images/application/check_16x16.gif"); background-position: -50px -50px;}
+.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li strong {display: block; padding: .25em 0; font-weight: normal; text-align: center; color: #8F8F8F; word-break: break-all; -moz-binding: url('../../../csslib/xml/moz_wordwrap.xml');}
+	/* === template hovers === */
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.hover {}
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.hover .templateInnerWrapper{background-color: #DFF4FF; border: 1px solid #C2E1EF;}
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.hover a span.ektronTemplateThumb {border: solid 1px #C2E1EF;}
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.hover strong {color: #336699;}
+	/* === template selected === */
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.selected {}
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.selected .templateInnerWrapper{background-color: #E6EFC2; border: 1px solid #C6D880;}
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.selected a {}
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.selected a span.ektronTemplateThumb {border: solid 1px #C6D880;}
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.selected strong {color: #529214;}
+	.ektronWizardStepWrapper .ektronTemplateListWrapper ul.ektronTemplateList li.selected a span.checked {background-color: #E6EFC2; background-position: 3px 0; border-left: solid 1px #C6D880; border-bottom: solid 1px #C6D880}
+	
+/* Clear Fix */
+.clearfix:after {
+    content: " "; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden; 
+    font-size: 0; 
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+
+/* Additional IE specific bug fixes... */
+* html Textarea#RadEContentTextareaSummary  { /* auto clear, @ IE 6 & IE 7 Quirks Mode */
+    height:220px !important;
+}
+*:first-child+html Textarea#RadEContentTextareaSummary   { /* @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    height:220px !important;
+}

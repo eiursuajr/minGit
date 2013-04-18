@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorXhtmlValidator">XHTML Validator</string>
+	<string id="RadEditorStatistics">Statistikk</string>
+	<string id="RadEditorNodeInspector">Egenskap inspektør</string>
+	<string id="RadEditorDomInspector">Tag inspektør</string>	
+	<string id="RadEditorHtmlInspector">Real-Time HTML visning</string>
+	<string id="StatisticsWords">Ord:</string>
+	<string id="StatisticsCharacters">Bokstaver:</string>	
+	<string id="NodeInspectorSelectedElement">Valgt element er </string>	
+	<string id="NodeInspectorInvalidValue">Ugyldig verdi. Vennligst oppgi et nummer.</string>	
+	<string id="className">Klassenavn</string>		
+	<string id="borderColor">Rammefarge</string>	
+	<string id="bgColor">Bakgrunn</string>	
+	<string id="width">Bredde</string>
+	<string id="height">Høyde</string>
+	<string id="align">Justering</string>
+	<string id="vAlign">Vertikal justering</string>
+	<string id="cellSpacing">CellSpacing</string>
+	<string id="cellPadding">CellPadding</string>
+	<string id="border">Ramme bredde</string>
+	<string id="noWrap">Nowrap</string>
+	<string id="value">Verdi</string>
+	<string id="id">Id</string>
+	<string id="name">Navn</string>
+	<string id="href">URL</string>
+	<string id="title">ToolTip</string>
+	<string id="target">Target</string>
+	<string id="alt">ToolTip</string>
+	<string id="_blank">Nytt vindu</string>
+	<string id="_self">Samme vindu</string>
+	<string id="_parent">Eier vindu</string>
+	<string id="_top">Nettleser vindu</string>
+	<string id="_search">Søk</string>
+	<string id="_media">Media</string>
+	<string id="DomInspectorRemoveElement">Fjern element</string>
+	<string id="NAME">Navn</string>
+	<string id="action">Handling</string>	
+	<string id="ValidateXHTML">Validere XHTML</string>
+	<string id="ExpandValidator">Ekspander rapport</string>
+	<string id="Doctype">Velg dokumenttype</string>
+  <string id="rows">Rad</string>
+  <string id="cols">Kolonne</string>
+</localization>

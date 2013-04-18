@@ -1,0 +1,66 @@
+/* DMS Item Wrapper
+----------------------------------*/
+div.dmsWrapper p.dmsItemWrapper
+{
+    /* the following two rules force IE6 to do a transparent border */
+    border-color: pink;
+    filter: chroma(color=pink);
+}
+
+div.dmsWrapperHover p.dmsItemWrapper 
+{
+    /* overrides the transparency effects above */
+    border-color: #5d8fb4 !important;
+    filter: none !important;
+}
+
+/* DMS View Item Wrapper
+----------------------------------*/
+div.dmsWrapper p.dmsItemWrapper a.dmsViewItemAnchor
+{
+    /* the following two rules force IE6 to do a transparent border */
+	border-color: pink;
+    filter: chroma(color=pink);
+}
+div.dmsWrapperHover p.dmsItemWrapper a.dmsViewItemAnchor 
+{
+    /* overrides the transparency effects above */
+    border-color: #2a60a8;
+    filter: none;
+}
+
+/* DMS Menu Wrapper
+----------------------------------*/
+ul.dmsMenuWrapper, ul.dsmMenuWrapper li
+{
+    zoom: 1;
+}
+
+ul.dmsMenuWrapper li a
+{
+    /* the following two rules force IE6 to do a transparent border */
+	border-color: pink !important;
+    filter: chroma(color=pink) !important;
+}
+
+ul.dmsMenuWrapper li
+{
+    /* the following two rules force IE6 to do a transparent border */
+	border-color: pink !important;
+    filter: chroma(color=pink) !important;
+}
+
+ul.dmsMenuWrapper li a:hover 
+{
+    font-size:1em !important; /* prevents the font from changing sizes on hover */
+    /* overrides the transparency effects above */
+    border-color: #EB9855;
+    filter: none !important;
+}
+
+ul.dmsMenuWrapper li.sectionBreak 
+{
+    /* the following additional rules ensure the section break appears the same in IE6 */
+	margin: 0 0 0 27px !important;
+	text-transform: none !important;
+}

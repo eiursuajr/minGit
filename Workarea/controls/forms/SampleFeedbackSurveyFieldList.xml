@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<fieldlist>
+  <field name="conference_id" datatype="string" basetype="text" xpath="*/conference_id" title="Subject">conference_id</field>
+  <field name="Registration" datatype="choice" basetype="text" xpath="*/Registration" title="Registration" datalist="ET">Registration</field>
+  <field name="conference_materials" datatype="choice" basetype="text" xpath="*/conference_materials" title="conference materials" datalist="E5C">conference materials</field>
+  <field name="Speakers" datatype="choice" basetype="text" xpath="*/Speakers" title="Speakers" datalist="EJF">Speakers</field>
+  <field name="facilities" datatype="choice" basetype="text" xpath="*/facilities" title="facilities" datalist="EUH">facilities</field>
+  <field name="session_attend" datatype="choice" basetype="text" xpath="*/session_attend" title="session attend" datalist="E6BAC">session attend</field>
+  <field name="session_length" datatype="choice" basetype="text" xpath="*/session_length" title="session length" datalist="EBDAC">session length</field>
+  <field name="Content" datatype="choice" basetype="text" xpath="*/Content" title="Content" datalist="E4EAC">Content</field>
+  <field name="Organized" datatype="choice" basetype="text" xpath="*/Organized" title="Organized" datalist="EEHAC">Organized</field>
+  <field name="Staff" datatype="choice" basetype="text" xpath="*/Staff" title="Staff" datalist="ELJAC">Staff</field>
+  <field name="Future_Session" datatype="max1000Chars" basetype="textbox" xpath="*/Future_Session" title="Future Session" content="textarea">Future Session</field>
+  <field name="like_most" datatype="max1000Chars" basetype="textbox" xpath="*/like_most" title="like most" content="textarea">like most</field>
+  <field name="like_least" datatype="max1000Chars" basetype="textbox" xpath="*/like_least" title="like least" content="textarea">like least</field>
+  <field name="Attend_annually" datatype="choice" basetype="text" xpath="*/Attend_annually" title="Attend annually" datalist="ELNAC">Attend annually</field>
+  <field name="Attend_next_year" datatype="choice" basetype="text" xpath="*/Attend_next_year" title="Attend next year" datalist="EAAAE">Attend next year</field>
+  <field name="Recommend_others" datatype="choice" basetype="text" xpath="*/Recommend_others" title="Recommend others" datalist="E1BAE">Recommend others</field>
+  <field name="Rate_this_conference" datatype="choice" basetype="text" xpath="*/Rate_this_conference" title="Rate this conference" datalist="EUDAE">Rate this conference</field>
+  <field name="Be_improved" datatype="max1000Chars" basetype="textbox" xpath="*/Be_improved" title="Be improved" content="textarea">Be improved</field>
+  <datalist name="ET">
+    <item value="Very Dissatisfied">Very Dissatisfied</item>
+    <item value="Dissatisfied">Dissatisfied</item>
+    <item value="Satisfied">Satisfied</item>
+    <item value="Very Satisfied">Very Satisfied</item>
+  </datalist>
+  <datalist name="E5C">
+    <item value="Very Dissatisfied">Very Dissatisfied</item>
+    <item value="Dissatisfied">Dissatisfied</item>
+    <item value="Satisfied">Satisfied</item>
+    <item value="Very Satisfied">Very Satisfied</item>
+  </datalist>
+  <datalist name="EJF">
+    <item value="Very Dissatisfied">Very Dissatisfied</item>
+    <item value="Dissatisfied">Dissatisfied</item>
+    <item value="Satisfied">Satisfied</item>
+    <item value="Very Satisfied">Very Satisfied</item>
+  </datalist>
+  <datalist name="EUH">
+    <item value="Very Dissatisfied">Very Dissatisfied</item>
+    <item value="Dissatisfied">Dissatisfied</item>
+    <item value="Satisfied">Satisfied</item>
+    <item value="Very Satisfied">Very Satisfied</item>
+  </datalist>
+  <datalist name="E6BAC">
+    <item value="0">1</item>
+    <item value="1">2-3</item>
+    <item value="2">4-5</item>
+    <item value="3">6-7</item>
+    <item value="4">8-9</item>
+    <item value="5">10 or more</item>
+  </datalist>
+  <datalist name="EBDAC">
+    <item value="Too long">Too long</item>
+    <item value="Just about right">Just about right</item>
+    <item value="Too short">Too short</item>
+  </datalist>
+  <datalist name="E4EAC">
+    <item value="Strongly Disagree">Strongly Disagree</item>
+    <item value="Disagree">Disagree</item>
+    <item value="Agree">Agree</item>
+    <item value="Strongly Agree">Strongly Agree</item>
+  </datalist>
+  <datalist name="EEHAC">
+    <item value="Strongly Disagree">Strongly Disagree</item>
+    <item value="Disagree">Disagree</item>
+    <item value="Agree">Agree</item>
+    <item value="Strongly Agree">Strongly Agree</item>
+  </datalist>
+  <datalist name="ELJAC">
+    <item value="Strongly Disagree">Strongly Disagree</item>
+    <item value="Disagree">Disagree</item>
+    <item value="Agree">Agree</item>
+    <item value="Strongly Agree">Strongly Agree</item>
+  </datalist>
+  <datalist name="ELNAC">
+    <item value="1-2 per year">1-2 per year</item>
+    <item value="3-4 per year">3-4 per year</item>
+    <item value="5-6 per year">5-6 per year</item>
+    <item value="more than 6 per year">more than 6 per year</item>
+    <item value="Don't usually attend conferences">Don't usually attend conferences</item>
+  </datalist>
+  <datalist name="EAAAE">
+    <item value="Yes">Yes</item>
+    <item value="No">No</item>
+    <item value="Don't Know">Don't Know</item>
+  </datalist>
+  <datalist name="E1BAE">
+    <item value="Yes">Yes</item>
+    <item value="No">No</item>
+    <item value="Don't Know">Don't Know</item>
+  </datalist>
+  <datalist name="EUDAE">
+    <item value="Very poor">Very poor</item>
+    <item value="Poor">Poor</item>
+    <item value="Average">Average</item>
+    <item value="Very good">Very good</item>
+    <item value="Excellent">Excellent</item>
+  </datalist>
+</fieldlist>

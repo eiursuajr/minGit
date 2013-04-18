@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="Maximize">Ingrandisci</string>
+	<string id="Minimize">Riduci a icona</string>
+	<string id="Close">Chiudi</string>
+	<string id="Restore">Ripristino in basso</string>	
+	<string id="PinOff">Sblocca</string>
+	<string id="PinOn">Blocca</string>
+	<string id="ConfirmMessage">Sei proprio sicurp?</string>
+	<string id="PromptMessage">Inserisci un valore:</string>
+	<string id="Ok">Ok</string>
+	<string id="Cancel">Annulla</string>
+	<string id="Yes">Sì</string>
+	<string id="No">No</string>
+	<string id="Loading">In caricamento...</string>
+	<string id="Reload">Aggiorna</string>	
+	<string id="Alert">r.a.d.window alert</string>
+	<string id="Prompt">r.a.d.window prompt</string>
+	<string id="Confirm">r.a.d.window confirm</string>	
+</localization>

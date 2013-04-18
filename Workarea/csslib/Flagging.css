@@ -1,0 +1,21 @@
+﻿.flagitpanel
+{
+	text-align:left;
+	position:absolute;
+	border: 1px solid black;
+	background-color:white;
+	padding:4px;
+	z-index: 99;
+}
+.ekflagredText
+{
+	 height: 20px;
+	 text-align: center;
+	 width: 100%;
+}
+.ekflagblueText
+{
+	 height: 20px;
+	 text-align: center;
+	 width: 100%;
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Document Manager</string>
+	<string id="ConfirmDelete">Are you sure you want to delete the selected file?\nThe selected document may be in use. If deleted, some pages will not be displayed properly.\nPress \"OK\" to confirm deletion.</string>
+	<string id="Alertfile">Please, provide a document file to upload!</string>
+	<string id="Alertvalid">Please, provide a valid document file to upload!</string>
+	<string id="Alertexists">Such document file already exists in this directory!</string>
+	<string id="MessageNothingPost">Please, provide a document file!</string>
+	<string id="MessageValid">Please, provide a valid document file!</string>
+	<string id="MessageSize">Provided document file exceeds max size allowed!</string>
+	<string id="Tab1HeaderText">Browse Files</string>
+	<string id="Tab2HeaderText">Upload Document</string>
+	<string id="DocumentDirectory">Document Directory:</string>
+	<string id="DocumentFile">Document File:</string>
+	<string id="Tooltip">Tooltip:</string>
+	<string id="Target">Target:</string>
+	<string id="Note">Note:</string>
+	<string id="SelectDirectory">Select Directory</string>
+	<string id="ShowProperties">Show Properties Pane</string>
+	<string id="ChooseFileToInsert">Please, choose a file to insert</string>
+	<string id="NoDocumentSelectedToInsert">Please, choose a document file to be inserted!</string>
+</localization>

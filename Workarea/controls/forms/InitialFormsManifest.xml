@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<Manifest>
+	<Forms>
+    <Form default="true">
+      <Title>Blank Form</Title>
+      <Description>Design a new form.</Description>
+      <Design src=""/>
+      <Response src=""/>
+    </Form>
+    <Form type="survey">
+      <Title>Blank Survey</Title>
+      <Description>Design a new survey.</Description>
+      <Submit limit="1" autofill="true"/>
+      <Design src="BasicForm.htm"/>
+      <Response src=""/>
+    </Form>
+	<Form type="poll">
+      <Title>Standard Poll</Title>
+      <Description>Design a new poll.</Description>
+      <Submit limit="1" autofill="false"/>
+      <Design src=""/>
+      <Response src=""/>
+    </Form>
+    <Form xml:lang="en">
+		<Title>Compose Email</Title>
+		<Description>Write and send an email message.</Description>
+		<Mail>
+			<To field="To"/>
+			<From field="Email"/>
+			<CC field="CC"/>
+			<Subject field="Subject"/>
+			<MessageBody field="Message"/>
+		</Mail>
+		<Design src="composeEmail.htm"/>
+		<Response src="composeEmailResponse.htm"/>
+	</Form>
+	<Form xml:lang="en">
+		<Title>Contact Information</Title>
+		<Description>Contact information.</Description>
+		<Design src="contactinfo.htm"/>
+		<Response src="contactinfo_response.htm"/>
+	</Form>
+	<Form xml:lang="en" type="survey">
+		<Title>General Demographic Survey</Title>
+		<Description>General demographic survey.</Description>
+		<Submit limit="1" autofill="true"/>
+		<Design src="demographic_survey.htm"/>
+		<Response src="demographic_survey_response.htm"/>
+	</Form>
+	<Form xml:lang="en" type="survey">
+		<Title>Feedback Survey</Title>
+		<Description>Collect feedback from conference attendees.</Description>
+		<Submit limit="1" autofill="true"/>
+		<Design src="feedback_survey.htm"/>
+		<Response src="feedback_survey_response.htm"/>
+	</Form>
+	<Form xml:lang="en" type="survey">
+		<Title>Breakroom Survey</Title>
+		<Description>Vote for your favorite coffees, teas and snacks.</Description>
+		<Submit limit="1" autofill="true"/>
+		<Design src="breakroomSurvey.htm"/>
+		<Response src="thankyou.htm"/>
+	</Form>
+	<Form xml:lang="en">
+		<Title>Vacation Request</Title>
+		<Description>Vacation Request form.</Description>
+		<Design src="vacationRequest.htm"/>
+		<Response src="vacationResponse.htm"/>
+	</Form>
+	<Form xml:lang="en">
+		<Title>Whitepaper Request</Title>
+		<Description>Request a whitepaper document.</Description>
+		<Design src="whitepaperRequest.htm"/>
+		<Response src="whitepaperRedirect.htm"/>
+	</Form>	
+	</Forms>
+</Manifest>

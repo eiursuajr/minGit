@@ -1,0 +1,68 @@
+.EktronTreeview, .EktronTreeview ul { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.EktronTreeview ul {
+	background-color: white;
+	margin-top: 4px;
+}
+
+.EktronTreeview .hitarea {
+	background: url(./images/treeview/treeview-default.gif) -64px -25px no-repeat;
+	height: 16px;
+	width: 16px;
+	margin-left: -16px;
+	float: left;
+	cursor: pointer;
+}
+/* fix for IE6 */
+* html .hitarea {
+	display: inline;
+	float:none;
+}
+
+.EktronTreeview li { 
+	margin: 0;
+	padding: 3px 0pt 3px 16px;
+}
+
+.EktronTreeview a.selected {
+	background-color: #eee;
+}
+
+#treecontrol { margin: 1em 0; display: none; }
+
+.EktronTreeview .hover {color: blue; cursor: pointer; }
+
+.EktronTreeview li { background: url(./images/treeview/treeview-default-line.gif) 0 0 no-repeat; }
+.EktronTreeview li.collapsable, .EktronTreeview li.expandable { background-position: 0 -176px; }
+
+.EktronTreeview .expandable-hitarea { background-position: -80px -3px; }
+
+.EktronTreeview li.last { background-position: 0 -1766px }
+.EktronTreeview li.lastCollapsable, .EktronTreeview li.lastExpandable { background-image: url(./images/treeview/treeview-default.gif); }  
+.EktronTreeview li.lastCollapsable { background-position: 0 -111px }
+.EktronTreeview li.lastExpandable { background-position: -32px -67px }
+
+.EktronTreeview div.lastCollapsable-hitarea, .EktronTreeview div.lastExpandable-hitarea { background-position: 0; }
+
+.EktronTreeview-red li { background-image: url(./images/treeview/treeview-red-line.gif); }
+.EktronTreeview-red .hitarea, .EktronTreeview-red li.lastCollapsable, .EktronTreeview-red li.lastExpandable { background-image: url(./images/treeview/treeview-red.gif); } 
+
+.EktronTreeview-black li { background-image: url(./images/treeview/treeview-black-line.gif); }
+.EktronTreeview-black .hitarea, .EktronTreeview-black li.lastCollapsable, .EktronTreeview-black li.lastExpandable { background-image: url(./images/treeview/treeview-black.gif); }  
+
+.EktronTreeview-gray li { background-image: url(./images/treeview/treeview-gray-line.gif); }
+.EktronTreeview-gray .hitarea, .EktronTreeview-gray li.lastCollapsable, .EktronTreeview-gray li.lastExpandable { background-image: url(./images/treeview/treeview-gray.gif); } 
+
+.EktronTreeview-famfamfam li { background-image: url(./images/treeview/treeview-famfamfam-line.gif); }
+.EktronTreeview-famfamfam .hitarea, .EktronTreeview-famfamfam li.lastCollapsable, .EktronTreeview-famfamfam li.lastExpandable { background-image: url(./images/treeview/treeview-famfamfam.gif); } 
+
+
+.EktronFiletree li { padding: 3px 0 2px 16px; }
+.EktronFiletree span.folder, .EktronFiletree span.file { padding: 1px 0 1px 18px; display: block; }
+.EktronFiletree span.folder { background: url(./images/treeview/folder.gif) 0 0 no-repeat; }
+.EktronFiletree li.expandable span.folder { background: url(./images/treeview/folder-closed.gif) 0 0 no-repeat; }
+.EktronFiletree span.file { background: url(./images/treeview/file.gif) 0 0 no-repeat; }

@@ -1,0 +1,4 @@
+/* content */
+div.finish div.innerWrapper p {margin:1em;text-align:center;}
+div.finish div.innerWrapper p span {padding-left:20px;background-image:url('images/accept.png');background-repeat:no-repeat;background-position:center left;}
+div.finish div.innerWrapper ul {list-style-type:disc;padding:0em 1em;}

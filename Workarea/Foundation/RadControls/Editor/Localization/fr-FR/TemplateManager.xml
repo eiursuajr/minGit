@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Tab1HeaderText">Choix de gabarit</string>
+  <string id="Tab2HeaderText">Télécharger un gabarit</string>
+  <string id="TemplateURL">URL :</string>
+  <string id="AlertFile">Veuillez fournir un fichier de gabarit pour téléchargement !</string>
+  <string id="AlertExists">Un gabarit identique déjà existe dans ce dossier !</string>
+  <string id="MessageValid">Veuillez fournir un fichier gabarit valide !</string>
+  <string id="MessageSize">La dimension du fichier gabarit fourni dépasse la dimension maximale permise !</string>
+  <string id="MessageNothingPost">Veuillez fournir un fichier gabarit !</string>
+  <string id="NoTemplateSelectedToInsert">Aucun fichier gabarit n'a été sélectionné !</string>
+</localization>

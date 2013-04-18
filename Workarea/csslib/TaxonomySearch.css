@@ -1,0 +1,83 @@
+div.ekindexsearch input.indexsearchbutton,
+div.ekindexsearch input.clearsearchbutton
+{
+	padding:0;
+	font-weight:normal;
+	margin:1em 0.5em 0 0;
+	font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size:12px;
+}
+
+.ektronSearch div.searchWrapper {clear:left;padding:0em 1em 1em 1em;margin:0em;border:0px solid #4c4c4c; }
+.ektronSearch div.searchWrapper fieldset {margin:0em;}
+
+.ektronSearch div.searchWrapper p#EktronCategorySearchToggle 
+{
+	margin-top:1em;
+	padding-left:15px;
+	background-image:url('../images/application/arrowClosed.gif');
+	background-position:0 2px;
+	background-repeat:no-repeat;
+}
+
+.ektronSearch div.searchWrapper p#EktronCategorySearchToggle:hover {text-decoration:underline;}
+
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch {margin-top:.5em;padding:0em 1em .5em 1em;background-color:White;display:block;}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch>div {margin-top:.5em;}
+
+
+/* Category Filter Tree */
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane input.searchTaxonomyPath 
+	{
+		margin: 0 .25em 0 0;
+		padding: 0;
+		position: relative;
+		top: .1em;
+		*position: static; /* fix for IE */
+		*top: 0; /* fix for IE */
+		*vertical-align: middle; /* fix for IE */
+	}
+
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li 
+	{
+		background: none;		
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview .hitarea 
+	{
+		background-image: none;
+		background-repeat: no-repeat;
+		background-position: 3px 0px;
+		background-color: transparent;
+		*background-position: 5px 3px;
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview .expandable-hitarea 
+	{
+		background-image: url('../images/ui/icons/tree/plus.png'); 
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview .collapsable-hitarea  
+	{
+		background-image: url('../images/ui/icons/tree/minus.png'); 
+	}
+
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li span.folder, 
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li span.file 
+	{
+		display: inline-block;
+		padding: 0 0 0 20px;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li.collapsable>span.folder 
+	{
+		background-image: url('../images/ui/icons/folderOpen.png'); 
+
+	}	
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li.expandable>span.folder 
+	{
+		background-image: url('../images/ui/icons/folder.png'); 
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview span.file 
+	{
+		background-image: url('../images/ui/icons/taxonomy.png'); 
+	}		

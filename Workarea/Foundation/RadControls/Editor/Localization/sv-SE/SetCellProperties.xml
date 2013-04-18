@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Cell Egenskaper</string>
+	<string id="Tab1HeaderText">Cell Egenskaper</string>
+	<string id="Dimensions">Dimension</string>
+	<string id="Height">Höjd:</string>
+	<string id="Width">Bredd:</string>
+	<string id="ContentAlignment">Innehåll Justering</string>
+	<string id="Horizontal">Horisontal:</string>
+	<string id="Left">Vänster</string>
+	<string id="Center">Centrerad</string>
+	<string id="Right">Höger</string>
+	<string id="Vertical">Vertikal:</string>
+	<string id="Middle">Mitten</string>
+	<string id="Top">Överst</string>
+	<string id="Bottom">Nederst</string>
+	<string id="Baseline">Baslinje</string>
+	<string id="Background">Bakgrund</string>
+	<string id="UseColor">Använd färg:</string>
+	<string id="Black">Svart</string>
+	<string id="Blue">Blå</string>
+	<string id="Green">Grön</string>
+	<string id="Orange">Orange</string>
+	<string id="Red">Röd</string>
+	<string id="White">Vit</string>
+	<string id="Yellow">Gul</string>
+	<string id="Custom">Egen</string>
+	<string id="Customh">Egen - </string>
+	<string id="Style">Format:</string>
+	<string id="MessageStyle">Ange ett korrekt värde för format attribut.</string>
+	<string id="PromptColor">Var vänlig och ange egen färg som HEX värde:</string>
+	<string id="Additional">Tillägg</string>
+	<string id="NoWrapping">Ingen radbrytning</string>
+	<string id="InvalidCellWidth">Ej giltig cell bredd.</string>
+	<string id="InvalidCellHeight">Ej giltig cell höjd.</string>
+</localization>

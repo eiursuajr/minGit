@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Tab1HeaderText">Välj mall</string>
+	<string id="Tab2HeaderText">Ladda upp mall</string>
+	<string id="TemplateURL">URL:</string>
+	<string id="AlertFile">Var vänlig och ange en mall att ladda upp!</string>
+	<string id="AlertExists">Mallen finns redan i mappen!</string>
+	<string id="MessageValid">Var vänlig och ange en korrekt mall!</string>
+	<string id="MessageSize">Angiven mall (fil) är för stor!</string>
+	<string id="MessageNothingPost">Var vänlig och ange en mall!</string>
+	<string id="NoTemplateSelectedToInsert">Var vänlig och välj en mall att infoga!</string>
+</localization>

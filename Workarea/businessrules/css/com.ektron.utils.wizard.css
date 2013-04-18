@@ -1,0 +1,48 @@
+.wizardStep
+{
+	border:1px solid #d4d4d4;
+	margin: .5em;
+	padding: .5em;
+	display: none;
+}
+
+.wizardStep p {margin: 0;}
+
+#wizardStep1
+{
+	display:block;
+}
+
+td#stepsCaption
+{
+	padding: .25em .25em .25em .5em;
+}
+
+table#stepsGraphicsTable
+{
+	margin: .25em 1em;
+	padding: 0;
+	border-collapse: collapse;
+	background-color: #e6e6e6;
+}
+
+table#stepsGraphicsTable td
+{
+	padding: .25em 0;
+	width: 2em;	
+	font-size: .9em;
+	text-align: center;
+}
+
+table#stepsGraphicsTable .stepVisited {background: #fff; color: #666;}
+table#stepsGraphicsTable .stepCurrent {background: #1b4a94 url('../../images/UI/active_tab.gif') repeat-x 0 0; color: #fff;}
+
+.ektronToolbar table#stepsTable {margin: .25em 0;}
+.ektronToolbar table#stepsTable a.button {font-size: .9em; height: auto; margin: auto; width: auto; background-position: .25em center;}
+a.ruleBack {background-color: #eaeaea; border: solid 1px #aaa; background-image: url('../../images/ui/icons/arrowHeadLeft.png');}
+a.ruleNext {background-color: #eaeaea; border: solid 1px #aaa; background-image: url('../../images/ui/icons/arrowHeadRight.png');}
+.ektronToolbar table#stepsTable a.ruleNext {background-position: right center;}
+a.ruleDone {background-color: #eaeaea; border: solid 1px #aaa; background-image: url('../../images/ui/icons/save.png');}
+a.ruleCancel {background-color: #eaeaea; border: solid 1px #aaa; background-image: url('../../images/ui/icons/cancel.png');}
+
+#stepDescription {padding: .5em}

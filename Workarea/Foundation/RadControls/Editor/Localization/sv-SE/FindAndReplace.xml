@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Sök &amp; Ersätt</string>
+	<string id="Tab1HeaderText">Sök</string>
+	<string id="Tab2HeaderText">Ersätt</string>
+	<string id="SearchText">Sök:</string>
+	<string id="FindNext">Sök nästa</string>
+	<string id="Replace">Ersätt</string>
+	<string id="ReplacementText">Ersätt med:</string>
+	<string id="ReplaceAll">Ersätt alla</string>
+	<string id="SearchIn">Sök:</string>
+	<string id="SearchEntireText">Hela texten</string>
+	<string id="SearchSelection">Endast markerade</string>
+	<string id="SearchDirection">Sökriktning:</string>
+	<string id="MatchCase">Matcha gemener/VERSALER</string>
+	<string id="WholeWordsOnly">Matcha hela ord</string>
+	<string id="SearchUp">Uppåt</string>
+	<string id="SearchDown">Nedåt</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Avbryt</string>
+	<string id="SearchCriteriaNotSpecified">Ange sök kriterium</string>
+	<string id="NoSearchTarget">Ingen text att söka i</string>
+	<string id="FinishedSearching">Ektron eWebEdit400 är klar med sökningen</string>
+	<string id="AndHasMade"></string>
+	<string id="Replacements">ersättningar gjordes.</string>
+	<string id="ektron">Ektron Editor Starts</string>
+	<string id="Close">Close</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

@@ -1,0 +1,106 @@
+﻿.ektronWidgetITunePodcast {font-size: 12px; font-family: Arial, sans-serif;}
+.ektronWidgetITunePodcast .FKOptions {font-size: .9em; margin: 0; padding: 1em 0 .5em; border-top: solid 1px #c5dbec; }
+
+/* Tabs */
+.ektronWidgetITunePodcast ul.ektronWidgetFKTbs {margin: 0; padding: 0; list-style-type: none; overflow: visible;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKTabs li {display: block; float: left;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKTabs li a, .ektronWidgetITunePodcast ul.ektronWidgetFKTabs li a:active, .ektronWidgetITunePodcast ul.ektronWidgetFKTabs li a:visited, .ektronWidgetITunePodcast ul.ektronWidgetFKTabs li a:focus 
+{
+	border: solid 1px #c5dbec; 
+	padding: .25em .5em 0em; 
+	margin: 0 0 0 .25em; 
+	position: relative; 
+	background-repeat: repeat-x; 
+	background-image: url("../images/tabBackground.png"); 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #2e6e9e; 
+	cursor: pointer;
+	-moz-outline-style: none; 
+}
+.ektronWidgetITunePodcast a,img
+{
+border:none;
+}
+
+.ektronWidgetITunePodcast ul.ektronWidgetFKTabs li a:hover 
+{
+	color: #e17009; 
+}
+.ektronWidgetITunePodcast ul.ektronWidgetFKTabs a.selectedTab 
+{
+	background-image: none !important; 
+	background-color: #fff !important; 
+	border-bottom: solid 1px #fff !important; 
+	z-index: 10 !important;
+}
+
+/* The Image List */
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages {list-style-type: none; margin: .25em 0; padding: 0;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages li {display: block; padding: .25em 0; margin: .25em 0;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages li.alt1 {background-color: #eee;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages li.ImageFirst {background-color: transparent;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages div.ImageThumbOuter {float: left; text-align: center; padding: 4px; border: solid 1px #ccc; background: #fff;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages div.ImageThumbInner {text-align: center;  width: 90px; overflow:hidden;}
+/*.ektronWidgetITunePodcast ul.ektronWidgetFKImages div.a.ImageThumbInner img.thumbnail {float:left; display: block; overflow: hidden; margin: auto;}*/
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages input.ImageCheckList {float:left;margin:35px 5px 5px 0px;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages a, .ektronWidgetITunePodcast ul.ektronWidgetFKImages a:active, .ektronWidgetITunePodcast ul.ektronWidgetFKImages a:visited {text-decoration: none;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages a:hover {color: #e17009; text-decoration: none;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKImages span.short-description {float:left; font-size: .9em; width:635px; padding-left:10px; }
+
+
+/* Buttons */
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper {margin: 0; padding: .5em 0 0; text-align: center; list-style-type: none; border-top: solid 1px #c5dbec;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper li {display: inline; font-size: .9em; margin: 0; padding: 0;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKButton {display:inline-block; width: 16px; height: 16px; background-position: 0 0; background-repeat: no-repeat; cursor: pointer;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKButton span {display: inline-block; text-indent: -10000px; visibility:hidden;}
+.itemhide{display:none;}
+
+
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKButtonFirst {background-image: url("../images/resultset_first.png");}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKFirstDisabled {background-image: url("../images/resultset_first_disabled.png"); cursor: default;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKButtonPrevious {background-image: url("../images/resultset_previous.png");}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKPreviousDisabled {background-image: url("../images/resultset_previous_disabled.png"); cursor: default;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKButtonNext {background-image: url("../images/resultset_next.png");}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKNextDisabled {background-image: url("../images/resultset_next_disabled.png"); cursor: default;}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKButtonLast {background-image: url("../images/resultset_last.png");}
+.ektronWidgetITunePodcast ul.ektronWidgetFKButtonWrapper .ektronWidgetFKLastDisabled {background-image: url("../images/resultset_last_disabled.png"); cursor: default;}
+
+.ektronWidgetITunePodcast ul.ektronWidgetFKSearchButtons a.ektronWidgetFKButton {display:inline-block;}
+.ektronWidgetITunePodcast .ektronWidgetFKGoButton {display: inline-block; width: 16px; height: 16px; text-indent: -10000px; background-image: url("../images/zoom.png"); background-repeat: no-repeat; cursor: pointer;} 
+
+
+/* clearfix */
+.ektronWidgetITunePodcast .clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.ektronWidgetITunePodcast .clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .ektronWidgetITunePodcast .clearfix {height: 1%;}
+.ektronWidgetITunePodcast .clearfix {display: block;}
+/* End hide from IE-mac */
+
+.first_row img
+{
+    padding: 0px; border: solid 1px #ccc; background: #fff;
+}
+
+#ulSelected
+{
+float: left;
+margin-left: 0px;
+width: 210px;
+}
+#ulTrash
+{
+float: left;
+margin-left: 0px;
+width: 210px;
+
+}

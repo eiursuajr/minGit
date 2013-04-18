@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorStatistics">Modulo de estadisticas</string>
+	<string id="RadEditorNodeInspector">Inspector del elemento seleccionado</string>
+	<string id="RadEditorDomInspector">Ruta de elemento corriente</string>	
+	<string id="RadEditorHtmlInspector">Modulo de visualizacion HTML</string>
+	<string id="StatisticsWords">Palabras:</string>
+	<string id="StatisticsCharacters">Caracters:</string>	
+	<string id="NodeInspectorSelectedElement">El elemento seleccionado es </string>	
+	<string id="NodeInspectorInvalidValue">Valor invalida. Por favor introduzca un numero.</string>	
+	<string id="className">Nombre de clase</string>		
+	<string id="borderColor">Color del borde</string>	
+	<string id="bgColor">Fondo</string>	
+	<string id="width">Ancho</string>
+	<string id="height">Alto</string>
+	<string id="align">Alinacion</string>
+	<string id="vAlign">Alinacion verticalt</string>
+	<string id="CellSpacing">Espacio entre celdas:</string> 
+	<string id="CellPadding">Relleno de celda:</string> 
+	<string id="border">Anchura de borde</string>
+	<string id="noWrap">Sin ajuste de linea</string>
+	<string id="value">Valor</string>
+	<string id="id">Id</string>
+	<string id="name">Nombre</string>
+	<string id="href">URL</string>
+	<string id="title">ToolTip</string>
+	<string id="target">Destino</string>
+	<string id="alt">ToolTip</string>
+	<string id="_blank">Nueva Ventana</string>
+	<string id="_self">Misma Ventana</string>
+	<string id="_parent">Ventana Padre</string>
+	<string id="_top">Ventana de navigador</string>
+	<string id="_search">Panel de busqueda</string>
+	<string id="_media">Panel de media</string>
+	<string id="DomInspectorRemoveElement">Quitar elemento</string>
+</localization>

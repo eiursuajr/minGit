@@ -1,0 +1,33 @@
+/* coupon table - thead */
+div.itemsData table.items thead th a.ascending {background-image:url('images/ascending.gif');}
+div.itemsData table.items thead th a.descending {background-image:url('images/descending.gif');}
+div.itemsData table.items thead th.markForDelete,
+div.itemsData table.items tbody td.markForDelete {cursor:pointer;cursor:hand;width:20px !important;}
+div.itemsData table.items thead th.disabled {cursor:default;}
+div.itemsData table.items thead th img.restore {display:none;}
+div.itemsData table.items img {border:none;}
+
+/* coupon table - tbody */
+div.itemsData table.items tbody tr {cursor:pointer;cursor:hand;}
+div.itemsData table.items tbody tr.stripe td {background-color:#E1E1FF;}
+div.itemsData table.items tbody td.markForDelete {width:20px !important;}
+
+/* coupon table - tbody - cloneRow*/
+div.itemsData table.items tbody tr.cloneRow {display:none !important;}
+
+/* buttons */
+div.itemsData div.itemsDataWrapper p.actions {margin:1em 0em 0em 0em;padding:0;}
+
+div.itemsData table tbody td span.enabled {color:Green;}
+div.itemsData table tbody td span.disabled {color:Red;}
+div.itemsData table tbody td img.restore {display:none;}
+div.itemsData table tbody td.markedForDelete {color:Silver;text-decoration:line-through;}
+div.itemsData table tbody td.markedForDelete span.enabled {color:Silver;}
+div.itemsData table tbody td.markedForDelete span.disabled {color:Silver;}
+
+/* delete confirmation modal */
+div.itemsData table.publishedCouponsMarkedForDelete {display:none;}
+
+/* modal */
+div#EktronCouponItems {padding:2px;}
+div#EktronCouponItems iframe {border:1px solid silver;height:300px;width:100%;background-color:white;background-image:url('images/loading.gif');background-repeat:no-repeat;background-position:center center;}

@@ -1,0 +1,176 @@
+@import url("ektron.treeview.css");
+@import url("jquery.cluetip.css");
+
+div.TSWidget
+{
+	overflow: auto;
+}
+
+div.TSEdit
+{
+	overflow: visible;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	min-width: 31em;
+	width: auto !important;
+	width: 31em;
+}
+
+div.TSEdit div#ResultsToggle
+{
+	margin: .75em 0 .25em;
+	font-size: 80%;
+}
+
+
+/* TABS */
+div.TSEdit .TSTabInterface .ByProperty, div.TSEdit .TSTabInterface .ByThemes
+{
+	display: none;
+}
+
+div.TSEdit ul.TSTabWrapper
+{
+	list-style: none;
+	margin: 0 0 0 0;
+	padding: 0;
+}
+
+div.TSEdit ul.TSTabWrapper li.TSTab
+{
+	float: left;
+	border: solid 1px #97A5B0;
+	background: #97A5B0;
+	margin: .25em 0 0 .25em;
+	padding: 0;
+	position: relative;
+	top: 1px; top /*\**/: 3px\9
+	z-index: 2;
+	font-family: "Trebuchet MS" , Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+div.TSEdit ul.TSTabWrapper li.TSTab a:hover
+{
+	background-color: #27537a;
+	color: #fff;
+}
+
+div.TSEdit ul.TSTabWrapper li.TSTab span, div.TSWidget ul.TSTabWrapper li.TSTab a
+{
+	display: inline-block;
+	padding: .25em .5em .1em .5em;
+	color: #fff;
+	text-decoration: none;
+}
+
+div.TSEdit ul.TSTabWrapper li.selected
+{
+	background-color: #fff;
+	border-bottom: solid 1px #fff;
+}
+
+div.TSEdit ul.TSTabWrapper li.selected a:hover
+{
+	background-color: #fff;
+}
+
+div.TSEdit ul.TSTabWrapper li.selected a, div.TSEdit ul.TSTabWrapper li.selected a:hover, div.TSEdit ul.TSTabWrapper li.selected span
+{
+	color: #27537a;
+}
+
+div.TSEdit ul.TSTabWrapper li.selected a:active, div.TSEdit ul.TSTabWrapper li.selected a:focus, div.TSEdit ul.TSTabWrapper li.TSTab a:active, div.TSEdit ul.TSTabWrapper li.TSTab a:focus
+{
+	outline: none;
+}
+
+div.TSEdit .TSTabInterface .TSTabPanel
+{
+	min-width: 28em;
+	width: auto !important;
+	width: 28em;
+	border: 1px solid #97a5b0;
+	padding:.5em 0;
+	background: #fff;
+	overflow: auto;
+	height: 17em;
+	clear: both;
+}
+
+/*  Folder Tree */
+div.TSEdit .TSTabInterface .foldercontainer span.folder, .TSTabInterface .foldercontainer span.file
+{
+	padding: 1px 0 1px 18px;
+	display: block;
+}
+
+div.TSEdit .TSTabInterface .foldercontainer span.folder
+{
+	background-image: url( '../../workarea/java/plugins/treeview/images/folder.gif' );
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	border: solid 1px transparent;
+}
+
+div.TSEdit .TSTabInterface .EktronFolderTree li.expandable > span.folder
+{
+	background-image: url( '../../workarea/java/plugins/treeview/images/folder-closed.gif' );
+}
+div.TSEdit .TSTabInterface .EktronFolderTree li.collapsable > span.folder
+{
+	background-image: url( '../../workarea/java/plugins/treeview/images/folder.gif' );
+}
+
+div.TSEdit .TSTabInterface .EktronFolderTree span.selected
+{
+	display: inline-block;
+	padding-top: .25em;
+	padding-bottom: .25em;
+	padding-right: .25em;
+	margin-top: -.25em;
+	background-color: #E6EFC2;
+	border: 1px solid #C6D880;
+	color: #529214;
+	background-position: 0 .25em;
+}
+
+div.TSEdit .TSTabInterface .EktronTreeview .hover
+{
+	color: inherit;
+}
+
+div.TSEdit .TSEditControls
+{
+	text-align: right;
+	margin: .25em 0 0;
+}
+
+
+/* Clearfix */
+div.TSEdit .clearfix:after
+{
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+div.TSEdit .clearfix
+{
+	display: block;
+}
+
+div.TSEdit .taxonomypath
+{
+	padding: 1px 2px 1px 2px;
+	width: auto;
+}
+
+div.TSEdit .TSTabInterface .ByProperty td.label
+{
+	text-align: right;
+}
+

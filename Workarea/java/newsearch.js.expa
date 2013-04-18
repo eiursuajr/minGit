@@ -1,0 +1,486 @@
+//Utilities for format
+String.prototype.format = function()
+{
+    var toReturn = this;
+
+    for (var i = 0; i < arguments.length; i++)
+    {
+        var regex = new RegExp("\\{" + i + "\\}", "g");
+        toReturn = toReturn.replace(regex, arguments[i]);
+    }
+
+    return toReturn;
+}
+
+String.format = function()
+{
+    var pattern = arguments[0];
+    var params = [];
+
+    for (var i = 1; i < arguments.length; i++)
+        params[i-1] = arguments[i]
+    return pattern.format(params);
+}
+
+var EkCookie = 
+{ 
+    setCookie : function(name,value){
+    if(name.length<1) return;
+    if(0<value.length){
+    document.cookie=""+name+"="+value;}else{document.cookie=name+"=";
+    }},
+    getCookie : function(name)
+    {var value="";var index=0;var oDoc=document;
+    if(oDoc.cookie)index=oDoc.cookie.indexOf( name+"=" );else index=-1;if(index<0){value="";}else{var countbegin=(oDoc.cookie.indexOf("=",index)+1);
+    if(0<countbegin)
+    {var countend=oDoc.cookie.indexOf(";",countbegin);if(countend<0)countend=oDoc.cookie.length;value=oDoc.cookie.substring(countbegin,countend);}else{value="";}}return value;},
+    deleteCookie : function(name){document.cookie = name + "=";}}
+    
+    var EkSearchResult =
+   {
+    keys : Array(),
+    values : Array(),
+    parseContextData : function(query)
+    {
+        keys = new Array();
+        values = new Array();
+        var pairs = query.split("&");
+        for (var i=0;i<pairs.length;i++)
+        {
+            var pos = pairs[i].indexOf('=');
+	        if (pos >= 0)
+	        {
+	            var argname = decodeURIComponent(pairs[i].substring(0,pos));
+	            var value = decodeURIComponent(pairs[i].substring(pos+1));
+	            this.keys[this.keys.length] = argname;
+		        this.values[this.values.length] = value;		
+	        }
+        }
+    },
+    getKeyValue : function(key)
+    {
+        var value = null;
+        for (var i=0;i<this.keys.length;i++)
+        {
+            if (this.keys[i]==key)
+            {
+	            value = this.values[i];
+	            break;
+            }
+        }
+        return value;
+    },
+    
+    displayResult : function(result, context) 
+    {
+        EkSearchResult.parseContextData(context);
+        EkCookie.setCookie('contextparams',context);
+        if (document.getElementById('ecmsearchpage')!=null)
+			EkCookie.setCookie('pageparams',document.getElementById('ecmsearchpage').value);
+        if (document.getElementById(EkSearchResult.getKeyValue("control"))!=null)
+			document.getElementById(EkSearchResult.getKeyValue("control")).innerHTML=result;
+        try
+        {
+            if(document.getElementById("__EkAjaxHidden$"+EkSearchResult.getKeyValue("control"))!=null){
+                document.getElementById("__EkAjaxHidden$"+EkSearchResult.getKeyValue("control")).value=result;
+            }
+        }
+        catch(e)
+        {
+        }
+    },
+    displayError : function(message, context)
+    {
+        alert('An unhandled exception has occurred:\n' + message);
+    }
+    
+ }
+
+var EkSearch = 
+{
+    imagepath : 'images',
+    searchInit : function()
+    {
+         var searchType=document.getElementById('ecmsearchmode');
+         EkSearch.showSearchOps(searchType.value);
+         EkSearch.addMeta('init');           
+         
+         
+         if(EkCookie.getCookie('searchcookie')!=null || EkCookie.getCookie('searchcookie')!='')
+         {
+            _backbuttonaction=true;
+         }
+    },
+    showSearchOps : function(value)
+    {
+        if(value == 'normal')
+        {
+            if (document.getElementById('advancedTerms') != null)
+				document.getElementById('advancedTerms').style.display="none";
+			if (document.getElementById('advancedFilters')!=null)
+				document.getElementById('advancedFilters').style.display="none";
+			if (document.getElementById('advancedSub')!=null)
+				document.getElementById('advancedSub').style.display="none";
+			if (document.getElementById('parentForFilters')!=null)
+				document.getElementById('parentForFilters').style.display="none";
+            if (document.getElementById('basicFilter') != null)
+				document.getElementById('basicFilter').style.display="";
+            if (document.getElementById('basicTerms')!= null)
+				document.getElementById('basicTerms').style.display="";
+        }
+        else
+        {
+		    if (document.getElementById('basicTerms')!= null)
+	           document.getElementById('basicTerms').style.display="none";
+            if (document.getElementById('basicFilter') != null)
+				document.getElementById('basicFilter').style.display="none";
+			if (document.getElementById('advancedTerms') != null)				
+				document.getElementById('advancedTerms').style.display="";
+            if (document.getElementById('advancedFilters')!=null)
+				document.getElementById('advancedFilters').style.display="";
+			if (document.getElementById('advancedSub')!=null)
+				document.getElementById('advancedSub').style.display="";
+			if (document.getElementById('parentForFilters')!=null)
+	            document.getElementById('parentForFilters').style.display="";
+        }
+    },
+    searchBackButton : function()
+    {
+        if(_backbuttonaction)
+        {
+            var cookie_str=EkCookie.getCookie('searchcookie');
+            if(cookie_str!=null && cookie_str!='')
+            {
+                EkSearchResult.parseContextData(cookie_str);
+                //check for weather you belong to same page
+				if(document.getElementById('ecmsearchpage').value == EkCookie.getCookie('pageparams'))
+				{
+					if (document.getElementById('ecmBasicKeywords') != null)
+					{
+						var basicText = EkSearchResult.getKeyValue('ecmBasicKeywords'); 
+						var newCookie1 = EkCookie.getCookie('SearchTextCookie'); 
+						EkSearchResult.parseContextData(newCookie1); 
+						var mode = EkSearchResult.getKeyValue('searchmode');
+						if (mode == "advanced") 
+						{
+							var searchStr = EkSearchResult.getKeyValue('searchtext');
+							document.getElementById('ecmBasicKeywords').value = searchStr;
+						}
+						else
+							document.getElementById('ecmBasicKeywords').value = basicText;  
+					}
+					__LoadSearchResult(cookie_str,EkCookie.getCookie('contextparams'));  
+				}
+                else
+                {
+                   EkSearch.clrCookie();
+                }
+                
+            }
+       }
+    },
+    
+    serializeForm : function()
+    {
+        var element = document.forms[0].elements;
+        var len = element.length;
+        var query_string = "";
+        this.AddFormField = 
+        function(name,value) 
+        { 
+            if (query_string.length>0) 
+            { 
+                query_string += "&";
+            }
+            query_string += encodeURIComponent(name) + "=" + encodeURIComponent(value);
+        };
+        
+        for (var i=0; i<len; i++) 
+        {
+            var item = element[i];
+            if(typeof(item.name) != 'undefined')
+            {
+                if((item.name.indexOf('ecm') !=-1) || 
+                   (item.name.indexOf('selLang') !=-1) ||
+                   (item.name.indexOf('EVENTTARGET') !=-1) ||
+                   (item.name.indexOf('EVENTARGUMENT') !=-1))
+                   {
+                    try
+                    {
+                        switch(item.type)
+                        {
+                            case 'text': case 'password': case 'hidden': case 'textarea': 
+                                 this.AddFormField(item.name,item.value);
+                                break;
+                            case 'select-one':
+                                if (item.selectedIndex>=0) {
+                                 this.AddFormField(item.name,item.options[item.selectedIndex].value);
+                                }
+                                break;
+                            case 'select-multiple':
+                                for (var j=0; j<item.options.length; j++) {
+                                    if (item.options[j].selected) {
+                                     this.AddFormField(item.name,item.options[j].value);
+                                    }
+                                }
+                                break;
+                            case 'checkbox': case 'radio':
+                                if (item.checked) {
+                                 this.AddFormField(item.name,item.value);
+                                }
+                             break;
+                        }
+                    }
+                    catch(e)
+                    {
+                    }
+                }
+            }
+        }
+        EkSearch.clrCookie();
+        EkCookie.setCookie('searchcookie',query_string);
+        return query_string;
+    },  
+    getArguements : function()
+    {
+        return this.serializeForm();
+    },
+    validateKey : function(item,control)
+    {
+        if (item.keyCode==13)
+        {
+            __LoadSearchResult(EkSearch.getArguements(),'control='+control+'&__ecmcurrentpage=1');
+            return false;
+        }
+    },
+       
+    getKeyWords : function()
+    {
+        var val="";
+        try
+        {
+            if(document.getElementById("ecmBasicKeywords")!=null)
+            {
+                val=document.getElementById("ecmBasicKeywords").value;
+            }
+        }
+        catch(e)
+        {
+        }
+        return val;
+   },
+
+    setKeyWords : function(val)
+    {
+        try
+        {
+            if(document.getElementById("ecmBasicKeywords")!=null && val!="")
+            {
+                document.getElementById("ecmBasicKeywords").value=val;
+            }
+        }
+        catch(e)
+        {
+        }
+    },
+          
+   
+    addLoadEvent : function (func)
+    {
+        var _currentloadevent = window.onload;
+        if (typeof window.onload != 'function') 
+        {
+            window.onload = func;
+        }
+        else
+        {
+            window.onload = function()
+            {
+                if (_currentloadevent) 
+                {
+                    _currentloadevent();
+                }
+                func();
+            }
+        }
+    },
+    togDisp : function(e,name)
+    {
+        stopB(e);
+        var elems=document.getElementsByName(name);
+        for(var i=0;i<elems.length;i++)
+        {
+            var obj=elems[i];
+            var dp="";
+            if(obj.style.display=="")
+            {
+                dp="none";
+            }
+            obj.style.display=dp;
+        }
+        return false;
+    },
+    stopB : function(e)
+    {
+        if(!e)e=window.event;e.cancelBubble=true;
+    },
+    checkDateFormat : function(selectId)
+    {
+		var elem = document.getElementById(selectId);
+		var currentSel = elem.options[elem.selectedIndex].value; 
+		var parentElem = elem.parentNode;
+		if(typeof(parentElem) != 'undefined')
+		{
+			for (var dEl=0; dEl<parentElem.childNodes.length; dEl++)
+			{
+				if (parentElem.childNodes[dEl].nodeName=="INPUT")
+				{
+					if(currentSel ==  "@datecreatedB" || currentSel ==  "@datecreatedA" || currentSel ==  "@datemodifiedB" || currentSel ==  "@datemodifiedA")
+					{
+						if(parentElem.childNodes[dEl].value == "") 
+						{
+							parentElem.childNodes[dEl].value = "YYYY/MM/DD";
+					}
+					else
+					{
+						if(parentElem.childNodes[dEl].value != "") 
+						{
+							parentElem.childNodes[dEl].value = "";
+						}
+					}
+				}
+			}
+		}
+	},
+    removeMeta : function(metaId)
+    {
+        //Get the id 
+        var parentElem = document.getElementById('parentForFilters');
+        if(typeof(parentElem) != 'undefined')
+        {
+			var divCount = 0;
+			for (var i=0; i<parentElem.childNodes.length; i++)
+			{
+				if (parentElem.childNodes[i].nodeName=="DIV")
+				{
+					++divCount;
+				}
+			} 
+			if(divCount == 1) //Only one div dont remove
+			{
+				var metaElem = document.getElementById(metaId);
+				if(typeof(metaElem) != 'undefined')
+				{
+					for (var dEl=0; dEl<metaElem.childNodes.length; dEl++)
+					{
+						if (metaElem.childNodes[dEl].nodeName=="INPUT")
+						{
+							metaElem.childNodes[dEl].value = "";
+						}
+					}
+				}	
+			}
+			else
+			{
+				var metaElem = document.getElementById(metaId);
+				//go to parent 
+				if(typeof(metaElem) != 'undefined')
+				{
+					var parentElem = metaElem.parentNode;
+					//do remove child
+					if(typeof(parentElem) != 'undefined')
+					{
+						parentElem.removeChild(metaElem);
+					}
+				}
+			}
+		}
+    },
+    addMeta : function(init)
+    {
+        //go to the tag
+        if (document.getElementById('parentForFilters') == null)
+			return;
+        var parentElem = document.getElementById('parentForFilters');
+        if(typeof(parentElem) != 'undefined')
+        {
+            //get a random number
+            var randomnumber= Math.floor(Math.random()*1000);
+            //get all html
+            
+            // create a DIV element, using the variable eDIV as a reference to it
+            var eDIV = document.createElement("div");
+            //use the setAttribute method to assign it an id
+            eDIV.setAttribute("id", "div_Meta" + randomnumber);
+            var metaDiv = ' <select name="ecm_MT{0}" id="ecm_M{0}" onchange="EkSearch.checkDateFormat(\'ecm_M{0}\');"> \
+                               <option id="datecreatedB" value="@datecreatedB">Created Before</option> \
+                               <option id="datecreatedA" value="@datecreatedA">Created After</option> \
+                               <option id="datemodifiedB" value="@datemodifiedB">Modified Before</option> \
+                               <option id="datemodifiedA" value="@datemodifiedA">Modified After</option> \
+                               <option selected="selected" id="author" value="@docauthor">Author</option> \
+                               <option id="cmssize" value="@cmssize">File Size</option> \
+                             </select>&nbsp; \
+                            <input name="ecm_MV{0}" type="text" value="" />&nbsp; '
+                            metaDiv = metaDiv + '<a href="#" onclick="EkSearch.removeMeta(\'div_Meta{0}\');"> \
+                            <img src="{1}/minus.gif" alt="" width="24" height="24" border="0" align="absmiddle"/> \
+                            </a>&nbsp;&nbsp;&nbsp; ';
+                            metaDiv = metaDiv + '<a href="#" onclick="EkSearch.addMeta(\'notinit\');"> \
+                              <img src="{1}/add.gif" alt="" width="24" height="24" border="0" align="absmiddle" /> \
+                            </a>&nbsp';
+             eDIV.innerHTML = metaDiv.format(randomnumber,EkSearch.imagepath);
+            //associate with id add to the display
+            parentElem.appendChild(eDIV);
+         }
+    },
+    changeSearchType : function(type,controlArgs) 
+    {
+        var searchType=document.getElementById('ecmSearchForTypes');
+        searchType.value = type; 
+        __LoadSearchResult(EkSearch.getArguements(),"control=" + controlArgs + "&__ecmcurrentpage=1");
+    },
+    doAdvanced : function(type)
+    {
+        EkSearch.clrCookie();
+        var searchType=document.getElementById('ecmsearchmode');
+        searchType.value = type;
+        EkSearch.showSearchOps(type);
+    },
+    doBasic : function(type)
+    {
+        EkSearch.clrCookie();
+        var searchType=document.getElementById('ecmsearchmode');
+        searchType.value = type;
+        EkSearch.showSearchOps(type);
+    },
+    clrCookie : function()
+    {
+        EkCookie.deleteCookie('pageparams','');
+        EkCookie.deleteCookie('searchcookie','');
+        EkCookie.deleteCookie('contextparams','');
+    }
+}
+
+EkSearch.addLoadEvent(EkSearch.searchInit);
+EkSearch.addLoadEvent(EkSearch.searchBackButton);
+
+
+function EkMarkPostOnEnter(item, keys) 
+{
+    if (item.keyCode==13)
+    {
+        MarkPostBack();
+    }
+    return true;
+}
+
+function ShowLoadingMessage(tagName){
+    if (tagName)
+    {
+		var dvResult = document.getElementById(tagName);
+        if (dvResult != null)
+			dvResult.innerHTML = "Search is loading ... ";
+    }
+}
+
+
+

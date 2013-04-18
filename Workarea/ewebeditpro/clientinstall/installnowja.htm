@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Copyright 2007 Ektron, Inc. -->
+<!-- Revision Date: 2007-Jan-06 -->
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=iso-2022-jp">
+<title>eWebEditPro with WebImageFXのインストール</title>
+<script language="JavaScript1.2" src="parseinstallparams.js" type="text/javascript"></script>
+<script language="JavaScript1.2" src="../ewebeditpro.js" type="text/javascript"></script>
+<style type="text/css">
+P { font-size : small; font-family : 'ＭＳ Ｐゴシック', Osaka, sans-serif; }
+H1 { font-family : 'ＭＳ Ｐゴシック', Osaka, sans-serif; }
+H2 { font-family : 'ＭＳ Ｐゴシック', Osaka, sans-serif; }
+A { font-family : 'ＭＳ Ｐゴシック', Osaka, sans-serif; }
+BODY { font-size : small; }
+</style>
+
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+var g_bWifxReady = false;
+var g_bEwepReady = false;
+var g_bSetTimeout = false;
+
+function ReloadParent()
+{
+	document.loadingMsg.style.visibility = "hidden";
+	if (top.opener && !top.opener.closed)
+	{
+		top.opener.location.reload();
+		setTimeout("self.close()", 5000);
+	}
+}
+function OnReadyHandler()
+{
+	g_bEwepReady = true;
+	if (true == g_bWifxReady && false == g_bSetTimeout)
+	{
+		g_bSetTimeout = true;
+		ReloadParent();
+	}
+}
+function OnWifxReadyHandler()
+{
+	if (false == g_bWifxReady)
+    {
+        g_bWifxReady = true;
+		if (true == g_bEwepReady && false == g_bSetTimeout) 
+		{
+			g_bSetTimeout = true;
+			ReloadParent();
+		}
+     }
+}
+//-->
+</script>
+
+</head>
+
+<body>
+
+<h2 align="center">
+eWebEditPro with WebImageFXの<br/>自動<br/>ダウンロードとインストール
+</h2>
+
+<form method="post" action="#">
+<input type=hidden name="DoneMsg" value="&lt;p&gt; &lt;/p&gt;&lt;p align=center&gt;&lt;font face='Arial' size=4&gt;ダウンロード中、しばらくお待ちください...&lt;/font&gt;&lt;/p&gt;">
+<input type=hidden name="RestartMsg" value="&lt;p&gt; &lt;/p&gt;&lt;p align=center&gt;&lt;font face='Arial' size=4&gt;Windows&amp;#12434;&amp;#20877;&amp;#36215;&amp;#21205;&amp;#12375;&amp;#12390;&amp;#12452;&amp;#12531;&amp;#12473;&amp;#12488;&amp;#12540;&amp;#12523;&amp;#12434;&amp;#23436;&amp;#20102;&amp;#12375;&amp;#12390;&amp;#12367;&amp;#12384;&amp;#12373;&amp;#12356;&amp;#12290;&lt;/font&gt;&lt;/p&gt;">
+
+<p align="center"><font size="-1">
+<img name="loadingMsg" src="loading.gif" alt="ダウンロード中、しばらくお待ちください..." width=234 height=30><br>
+<!-- 正常に終了すると、「インストールが完了しました」というメッセージが下のボックスに表示されます。 -->
+</font></p>
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+	var sCaption = "   eWebEditPro client installed.";
+	var sWifxCaption = "   WebImageFX client installed.";
+	writeLoader(sCaption, sWifxCaption);
+// -->
+</script>
+<div id="Instructions" style="display:none">小さな赤い<font color="red"><b>X</b></font>が表示された場合は、<a href="eWebEditProDefaults.clientInstall">クライアントインストールプログラム</a>をダウンロードして実行してみてください。</div>
+<p><font size="-1">
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+	var sHtml = document.getElementById("Instructions").innerHTML + " ";
+	if (typeof eWebEditProDefaults == "undefined") 
+	{
+		sHtml = sHtml.replace("eWebEditProDefaults.clientInstall", "ewebeditproclient.exe");
+	}
+	else
+	{
+		sHtml = sHtml.replace("eWebEditProDefaults.clientInstall", eWebEditProDefaults.clientInstall);
+	}
+	document.write(sHtml);
+// -->
+</script>
+</font></p>
+<p><font size="-1">
+より詳しいサポートが必要な場合は、<a href="http://www.ektron.com/support" target="_blank">Ektron社のサポートページ</a>を参照してください。
+</font></p>
+</form>
+</body>
+</html>

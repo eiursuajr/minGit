@@ -1,0 +1,123 @@
+
+<Form>
+	<Title>General Demographic Survey</Title>
+	<Description>General demographic survey.</Description>
+	<SubmittedData>
+		<Date value="2005-11-03T11:12:27">11/3/2005 11:12:27 AM</Date>
+		<Data form_data_id="28" totalCount="80">
+			<Age_range>
+				<item value="0" totalCount="10">18-21</item>
+				<item value="1" totalCount="20">22-25</item>
+				<item value="2" totalCount="0">26-30</item>
+				<item value="3" totalCount="0">31-40</item>
+				<item value="4" totalCount="20">41-50</item>
+				<item value="5" totalCount="20">51-60</item>
+				<item value="6" totalCount="30">61 or over</item>
+			</Age_range>
+			<Annual_Income>
+				<item value="0" totalCount="10">Less than $10,000</item>
+				<item value="1" totalCount="10">$10,000-$19,999</item>
+				<item value="2" totalCount="10">$20,000-$29,999</item>
+				<item value="3" totalCount="10">$30,000-$39,999</item>
+				<item value="4" totalCount="10">$40,000-$49,999</item>
+				<item value="5" totalCount="10">$50,000-$59,999</item>
+				<item value="6" totalCount="10">$60,000-$69,999</item>
+				<item value="7" totalCount="10">$70,000-$79,999</item>
+				<item value="8" totalCount="10">$80,000-$89,999</item>
+				<item value="9" totalCount="10">$90,000-$99,999</item>
+				<item value="10" totalCount="0">$100,000-$149,000</item>
+				<item value="11" totalCount="0">More than $150,000</item>
+			</Annual_Income>
+			<Education_Level>
+				<item value="0" totalCount="10">Less than High School</item>
+				<item value="1" totalCount="10">High School/GED</item>
+				<item value="2" totalCount="10">Some College</item>
+				<item value="3" totalCount="10">2-Year College Degree(Associates)</item>
+				<item value="4" totalCount="10">4-Year College Degree(BA,BS)</item>
+				<item value="5" totalCount="10">Master's Degree</item>
+				<item value="6" totalCount="10">Doctoral Degree</item>
+				<item value="7" totalCount="10">Professional Degree(MD,JD)</item>
+			</Education_Level>
+			<Father_s_Education_Level>
+				<item value="0" totalCount="0">Less than High School</item>
+				<item value="1" totalCount="0">High School/GED</item>
+				<item value="2" totalCount="8">Some College</item>
+				<item value="3" totalCount="12">2-Year College Degree(Associates)</item>
+				<item value="4" totalCount="10">4-Year College Degree(BA,BS)</item>
+				<item value="5" totalCount="30">Master's Degree</item>
+				<item value="6" totalCount="10">Doctoral Degree</item>
+				<item value="7" totalCount="10">Professional Degree(MD,JD)</item>
+			</Father_s_Education_Level>
+			<Gender>
+				<item value="M" totalCount="60">Male</item>
+				<item value="F" totalCount="20">Female</item>
+			</Gender>
+			<Household_Income>
+				<item value="0" totalCount="0">Less than $10,000</item>
+				<item value="1" totalCount="0">$10,000-$19,999</item>
+				<item value="2" totalCount="0">$20,000-$29,999</item>
+				<item value="3" totalCount="0">$30,000-$39,999</item>
+				<item value="4" totalCount="80">$40,000-$49,999</item>
+				<item value="5" totalCount="0">$50,000-$59,999</item>
+				<item value="6" totalCount="0">$60,000-$69,999</item>
+				<item value="7" totalCount="0">$70,000-$79,999</item>
+				<item value="8" totalCount="0">$80,000-$89,999</item>
+				<item value="9" totalCount="0">$90,000-$99,999</item>
+				<item value="10" totalCount="0">$100,000-$149,000</item>
+				<item value="11" totalCount="0">More than $150,000</item>
+			</Household_Income>
+			<Marital_Status>
+				<item value="Divorced" totalCount="0">Divorced</item>
+				<item value="Legally Separated" totalCount="0">Legally Separated</item>
+				<item value="Married" totalCount="70">Married</item>
+				<item value="Registered Domestic Partner" totalCount="0">Registered Domestic Partner</item>
+				<item value="Separated" totalCount="0">Separated</item>
+				<item value="Single" totalCount="10">Single</item>
+				<item value="Unmarried" totalCount="0">Unmarried</item>
+				<item value="Unreported" totalCount="0">Unreported</item>
+				<item value="Widowed" totalCount="0">Widowed</item>
+			</Marital_Status>
+			<Mother_s_Education_Level>
+				<item value="0" totalCount="10">Less than High School</item>
+				<item value="1" totalCount="10">High School/GED</item>
+				<item value="2" totalCount="10">Some College</item>
+				<item value="3" totalCount="10">2-Year College Degree(Associates)</item>
+				<item value="4" totalCount="10">4-Year College Degree(BA,BS)</item>
+				<item value="5" totalCount="10">Master's Degree</item>
+				<item value="6" totalCount="10">Doctoral Degree</item>
+				<item value="7" totalCount="10">Professional Degree(MD,JD)</item>
+			</Mother_s_Education_Level>
+			<Race>
+				<item value="0" totalCount="0">White</item>
+				<item value="1" totalCount="80">White, non-Hispanic</item>
+				<item value="2" totalCount="0">African-American</item>
+				<item value="3" totalCount="0">Hispanic</item>
+				<item value="4" totalCount="0">Asian-Pacific Islander</item>
+				<item value="5" totalCount="0">Native American</item>
+			</Race>
+			<Religious>
+				<item value="Protestant Christian" totalCount="0">Protestant Christian</item>
+				<item value="Roman Catholic" totalCount="0">Roman Catholic</item>
+				<item value="Evangelical Christian" totalCount="0">Evangelical Christian</item>
+				<item value="Jewish" totalCount="0">Jewish</item>
+				<item value="Muslim" totalCount="0">Muslim</item>
+				<item value="Hindu" totalCount="0">Hindu</item>
+				<item value="Other" totalCount="80">Other</item>
+			</Religious>
+		</Data>
+	</SubmittedData>
+	<ektdesignpackage_list>
+		<fieldlist>
+			<field name="Gender" title="Gender">Gender</field>
+			<field name="Age_range" title="Age">Age range</field>
+			<field name="Education_Level" title="Education Level">Education Level</field>
+			<field name="Annual_Income" title="Annual Income">Annual Income</field>
+			<field name="Household_Income" title="Household Income">Household Income</field>
+			<field name="Marital_Status" title="Marital Status">Marital Status</field>
+			<field name="Religious" title="Religious">Religious</field>
+			<field name="Race" title="Race">Race</field>
+			<field name="Mother_s_Education_Level" title="Mother's Education Level">Mother's Education Level</field>
+			<field name="Father_s_Education_Level" title="Father's Education Level">Father's Education Level</field>
+		</fieldlist>
+	</ektdesignpackage_list>
+</Form>

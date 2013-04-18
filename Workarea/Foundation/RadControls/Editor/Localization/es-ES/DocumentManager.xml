@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Gestion de documentos</string>
+	<string id="ConfirmDelete">Esta seguro de quierer eliminar el archivo seleccionado?\nEl archivo seleccionado puede estar en uso. Si se elimina es posible que las paginas no se visualicen correctamente.\nPulse \"OK\" para confirmar que desea eliminar.</string>
+	<string id="Alertfile">Por favor, propocionar un archivo de documento que desee cargar!</string>
+	<string id="Alertvalid">Por favor, propocionar un archivo de documento valido que desee cargar!</string>
+	<string id="Alertexists">El archivo de documento elegido ya existe en esta carpeta!</string>
+	<string id="MessageNothingPost">Por favor, propocionar un archivo de documento!</string>
+	<string id="MessageValid">Por favor, propocionar un archivo de documento valido!</string>
+	<string id="MessageSize">El documento seleccionado supera el tamano maximo!</string>
+	<string id="Tab1HeaderText">Buscar archivos</string>
+	<string id="Tab2HeaderText">Cargar documento</string>
+	<string id="DocumentDirectory">Carpeta de documentos:</string>
+	<string id="DocumentFile">Archivo de documento:</string>
+	<string id="Tooltip">Tooltip:</string>
+	<string id="Target">Destino:</string>
+	<string id="Note">Nota:</string>
+	<string id="SelectDirectory">Seleccionar directorio</string>
+	<string id="ShowProperties">Mostrar panel de propiedades</string>
+	<string id="ChooseFileToInsert">Por favor, seleccione un archivo para insertar</string>
+</localization>

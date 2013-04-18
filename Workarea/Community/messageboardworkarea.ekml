@@ -1,0 +1,50 @@
+<!--
+Copyright (C) Ektron Inc. All rights reserved.
+Ektron Markup Variables:
+
+  [$DateCreated]  - Displays the date created.
+  [$DateModified] - Displays the date modified.
+  [$MessageText]  - Displays the Message.
+  [$UserName]     - Displays the user name.
+  [$FirstName]    - Displays the First name of the member.
+  [$LastName]     - Displays the Last name of the member.
+  [$DisplayName]  - Displays the displayname of the member.
+  [$Avatar]       - Displays the current profile picture or avatar of the member.
+  [$EmailAddress] - Displays the mail address of the  member.
+  [$UserId]       - Displays the userid of the user.
+  [$LanguageId]   - Displays the Languageid of the contentitem.
+  [$ObjectId]     - Displays the objectid of the contentitem.
+  [$ObjectType]   - Displays the type of the contentitem.
+  [$EmailAddress] - Displays the Email Address of the member.
+
+
+   -For additional information on the EKML, its variables and tags, see the CMS400.NET Developer Manual
+    section "Ektron Markup Language"
+
+-->
+
+<!-- The <ekmarkup></ekmarkup> tags open and close the Ektron Markup Language.-->
+<ekmarkup>
+	<!-- The <ekoutput></ekoutput> tags define what information is output from the server control. -->
+	<ekoutput>
+		<!-- The <ekrepeat></ekrepeat> tags apply any variables and styling information contained
+	   within them to each item in the list. -->
+		<table class="ektronGrid" id="messageBoardTable">
+			<ekrepeat>
+				<tr>
+                    <td>[$Avatar]</td>
+                    <td>[$DisplayName]</td>
+                    <td>[$MessageText]</td>
+                    <td class="center nowrap approve">[$ApproveMessageLink]</td>
+                    <td class="center nowrap delete">[$DeleteMessageLink]</td>
+                    <td class="nowrap">[$DateModified]</td>
+				</tr>
+			</ekrepeat>
+		</table>
+        <script type="text/javascript" defer="defer">
+            var imgString = '<img src="Images/ui/icons/check.png" title="Approved" />';
+            window.setTimeout('var messageBoardTable = $ektron("#messageBoardTable"); messageBoardTable.find("td.delete a").addClass("buttonDelete ui-icon"); var tdApprove = messageBoardTable.find("td.approve:empty");tdApprove.append(imgString); messageBoardTable.fadeIn(); ', 1);
+        </script>
+    [$AddCommentBox]
+	</ekoutput>
+</ekmarkup>

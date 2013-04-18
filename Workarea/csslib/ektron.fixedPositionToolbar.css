@@ -1,0 +1,32 @@
+html, body {
+	background: #fff;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.ektronPageHeader 
+{
+	position: absolute;
+	width: 100%;
+	height: 65px;
+	/*overflow: hidden;*/
+	top: 0;
+}
+.ektronPageContainer
+{
+	position: absolute;
+	left:0 !important;
+	right:0 !important;
+	top: 85px !important; 
+	bottom:0 !important;
+	overflow: auto;
+	background: #fff;
+}
+
+
+/*user inbox page*/
+#msgCtlContainer .ektronPageHeader { height: 133px; }
+#msgCtlContainer .ektronPageContainer { top: 97px !important; }
+#msgCtlContainer .ektronTitlebar { padding: 0 24px; padding-top: 24px; }
+#msgCtlContainer .ektronToolbar { padding: 0 24px; padding-bottom: 24px; }

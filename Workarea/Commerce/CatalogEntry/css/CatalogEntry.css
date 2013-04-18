@@ -1,0 +1,20 @@
+body {min-height:30em;height:auto;padding-bottom:15em;background-color:White;}
+
+#dvHoldMessage {border-right: 1px;border-top: 1px; display: none; border-left: 1px;width: 100%; border-bottom: 1px; position: absolute; top: 48px; height: 1px;background-color: white; z-index:-100;}
+#dvHoldMessage table.wrapper {width:100%;}
+#dvHoldMessage table.wrapper td {vertical-align:top;white-space:nowrap;text-align:center;}
+#dvHoldMessage table.wrapper td h3 {color: red;display:none;}
+
+#_dvContent {top:107px;}
+
+
+#content_html_ContentInfo {display:none;}
+
+/* finish wrapper */
+div.finish {padding:1em !important;}
+
+/* content */
+div.finish h3 {font-size:14px;text-align:center;background-image:url('../../../images/application/commerce/th76.gif');background-repeat:repeat-x;background-position:0px 0px;color:White;padding:.25em .5em;border:1px solid silver;margin:0;}
+div.finish div.innerWrapper {padding:1em;border:1px solid silver;border-top:none;background-image:url('../../../images/application/commerce/tfoot.gif');background-repeat:repeat;background-position:0px 0px;}
+div.finish div.innerWrapper p {background-color:white;border:1px solid silver;padding:1em;}
+div.finish div.innerWrapper p span {padding-left:20px;background-image:url('../../../images/application/alert.gif');background-repeat:no-repeat;background-position:center left;}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="RadEditorStatistics">Statistiques</string>
+  <string id="RadEditorNodeInspector">Inspecteur de propriétés</string>
+  <string id="EkRadEditorDomInspector">Inspecteur des balises HTML</string>
+  <string id="RadEditorHtmlInspector">Vue HTML immédiate</string>
+  <string id="StatisticsWords">Mots :</string>
+  <string id="StatisticsCharacters">Caractères :</string>
+  <string id="NodeInspectorSelectedElement">L'élément sélectionné est </string>
+  <string id="NodeInspectorInvalidValue">Valeur invalide. Veuillez entrer un numéro.</string>
+  <string id="className">Nom de classe</string>
+  <string id="borderColor">Couleur de bordure</string>
+  <string id="bgColor">Couleur du fond</string>
+  <string id="width">Largeur</string>
+  <string id="height">Hauteur</string>
+  <string id="align">Alignement</string>
+  <string id="vAlign">Alignement vertical</string>
+  <string id="cellSpacing">CellSpacing</string>
+  <string id="cellPadding">CellPadding</string>
+  <string id="border">Largeur de la bordure</string>
+  <string id="noWrap">Pas de retour à la ligne</string>
+  <string id="value">Valeur</string>
+  <string id="id">Id</string>
+  <string id="name">Nom</string>
+  <string id="href">URL</string>
+  <string id="title">Titre</string>
+  <string id="target">Cible</string>
+  <string id="alt">ToolTip</string>
+  <string id="_blank">Nouvelle fenêtre</string>
+  <string id="_self">Même fenêtre</string>
+  <string id="_parent">Fenêtre parente</string>
+  <string id="_top">Fenêtre du navigateur</string>
+  <string id="_search">Panneau de recherche</string>
+  <string id="_media">Panneau de media</string>
+  <string id="DomInspectorRemoveElement">Supprimer l'élément</string>
+  <string id="rows">Lignes</string>
+  <string id="cols">Colonnes</string>
+  <string id="EkRadEditorXhtmlValidator">Content Validator</string>
+</localization>

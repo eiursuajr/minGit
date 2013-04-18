@@ -1,0 +1,11 @@
+﻿div.paging {border-bottom:1px solid #bbddf6;display:block !important;}
+div.paging ul {float:left;margin:0 1em;padding:0;list-style:none;position:relative;top:8px;}
+div.paging ul li {display:inline;}
+div.paging p {float:right;padding:.5em 1em;margin:0;}
+div.paging p input.adHocPage {width:20px;}
+div.paging p a.AdHoc {text-decoration:underline !important; }
+
+div.paging ul li input.FirstPage {cursor:pointer}
+div.paging ul li input.PreviousPage {cursor:pointer}
+div.paging ul li input.NextPage {cursor:pointer}
+div.paging ul li input.LastPage {cursor:pointer}

@@ -1,0 +1,74 @@
+.ContributionForm {background-color:#F7F7F7; border: 1px solid #D8DFEA; width: 100%; padding: .5em 0em;}
+.ContributionForm a {text-decoration:none;}
+.ContributionForm a:hover {text-decoration:underline;}
+
+/* In accordance with Creative Commons Licsense v2.5 (http://creativecommons.org/licenses/by/2.5/), */
+/* the following images are attributed to Mark James, developer of Silk Icons v1.3 (http://www.famfamfam.com/lab/icons/community/) */
+/* comments.gif, comment_add.gif, comment_approve.gif, comment_delete.gif, hourglass.gif,   */
+
+.ContributionForm h4 {font-size:1em; color: #486AC5; text-transform:uppercase; margin: .5em 1em .25em 1em; padding: 0em 0em 0em 21px ; background-image: url('../images/comments.gif'); background-repeat: no-repeat; background-position:0px 0px;}
+.ContributionForm h4 a {font-weight:normal;text-transform:capitalize;}
+
+.ContributionForm ul {list-style-type: none; margin: 0em; padding: 0em 1em;}
+.ContributionForm ul li.ekMessagePost  {clear: both; display: block; margin: 0em 0em .75em 0em; border: solid 1px #ccc; background: #eee; padding: .25em; min-height: 48px; height:auto !important; height: 48px;} /* extra height declarations for IE */
+.ContributionForm ul li.ekPending, .ContributionForm ul li.ekApprove {border: dotted 2px #393;}
+
+.ContributionForm ul li.ekMessagePost div.avatar {width: 48px; text-align: center; float: left;}
+.ContributionForm ul li.ekMessagePost div.avatar img.avatar {width: 48px; height: 48px; border:none;}
+
+.ContributionForm ul li div.message {margin: 0em .25em 0em 52px;}
+.ContributionForm ul li div.message div.metaData {margin: 0em; border-bottom: solid 1px #ccc; text-align: right;}
+.ContributionForm ul li div.message div.metaData span.username {display: block; float: left; white-space: nowrap; font-size: .85em; font-weight: bold; color: #666696;}
+.ContributionForm ul li div.message div.metaData span.time {white-space: nowrap; font-size: .75em; color: #666696;}
+
+.ContributionForm ul li div.message p.body {margin: .25em 0em; overflow: auto;}
+
+.ContributionForm ul li div.message p.body .EkForceWrap{word-break: break-all; -moz-binding: url('xml/moz_wordwrap.xml#wordwrap');}
+.ContributionForm ul li div.message p.body a.EkForceWrap:active, .ContributionForm ul li div.message p.body a.EkForceWrap:focus{outline: none;} /* fixes scrollbars appearing when focus and active status is brought to link in mozilla */
+
+.ContributionForm ul li.ekMessagePost div.message ul.commands {margin: 0em; padding: 0em; list-style-type: none; text-align: right; height: 16px;}
+.ContributionForm ul li.ekMessagePost div.message ul.commands li {display: inline; margin-right: .5em;}
+.ContributionForm ul li.ekMessagePost div.message ul.commands li a, .ContributionForm ul li div.message ul.commands li span {display: block; float: right; overflow: hidden; width: 16px; height: 16px; background-repeat: no-repeat; text-decoration: none; text-indent: 1000px;} 
+.ContributionForm ul li.ekMessagePost div.message ul.commands li.ekApproveMessage a {background-image: url('../images/comment_approve.gif');}
+.ContributionForm ul li.ekMessagePost div.message ul.commands li.ekDeleteMessage a {background-image: url('../images/comment_delete.gif');}
+.ContributionForm ul li.ekMessagePost div.message ul.commands li span {background-image: url('../images/hourglass.gif'); border: 0px;}
+
+.ContributionForm div.AddComment {margin: 0em; padding: 0em;}
+.ContributionForm div.AddComment h4 {background-image:url('../images/comment_add.gif'); margin: 2em 1em .25em 1em; background-repeat: no-repeat; background-position:0px 0px; min-height: 16px; height:auto !important; height: 16px;} /* extra height declarations for IE */
+.ContributionForm div.AddComment p {margin: 0em; padding: 0em 1em; text-align:center;}
+.ContributionForm div.AddComment p textarea.ContributionText {width: 90%;  height:5em;  overflow-y:scroll; font-size: 1em; border: solid 1px #ccc; background: #fff; margin: auto;}
+.ContributionForm div.AddComment h6 {margin: 0em 1.5em; font-size: .87em; color: #486AC5; font-weight: normal;} 
+.ContributionForm div.AddComment input {display:block;margin-left: auto;margin-right: auto; margin-bottom: .5em;}
+    
+div.ekCommentError {color: red; font-size: 1em;}
+
+/* Paging */
+div.ekMessagePaging {margin: 0em; width:100%; position: relative; overflow: hidden; height: 20px;}
+div.ekMessagePaging h4 {margin: 0em 0em 0em .25em; font-size: 1em; margin-top: .25em; text-align: left;}
+div.ekMessagePaging div.ekPageControl {position: absolute; top: -.25em; right: 0em; text-align: right; width: 80px;}
+div.ekMessagePaging div.ekPageControl span {display: block; width: 20px; height: 20px; overflow: hidden; background-repeat: no-repeat; float: left;}
+div.ekMessagePaging div.ekPageControl span a {background-image: none;}
+
+div.ekMessagePaging div.ekPageControl span.but_first_disable {text-indent: 100px; background-image:url('../images/but_first_d.gif'); background-position: -9px 0px;}
+div.ekMessagePaging div.ekPageControl span.but_first{background-image:url('../images/but_first.gif'); background-position: -9px 0px;}
+div.ekMessagePaging div.ekPageControl span.but_first a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekMessagePaging div.ekPageControl span.but_previous_disable{text-indent: 100px; background-image:url('../images/but_prev_d.gif'); background-position: -6px 0px; }
+div.ekMessagePaging div.ekPageControl span.but_previous{background-image:url('../images/but_prev.gif'); background-position: -6px 0px;}
+div.ekMessagePaging div.ekPageControl span.but_previous a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekMessagePaging div.ekPageControl span.but_next_disable {text-indent: 100px; background-image:url('../images/but_next_d.gif'); background-position: 0px 0px;}
+div.ekMessagePaging div.ekPageControl span.but_next{background-image:url('../images/but_next.gif'); background-position: 0px 0px;}
+div.ekMessagePaging div.ekPageControl span.but_next a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekMessagePaging div.ekPageControl span.but_last_disable {text-indent: 100px; background-image:url('../images/but_last_d.gif'); background-position: 0px 0px;}
+div.ekMessagePaging div.ekPageControl span.but_last{background-image:url('../images/but_last.gif'); background-position: 0px 0px;}
+div.ekMessagePaging div.ekPageControl span.but_last a{display: block; text-indent: 100px; height: 20px;}
+
+/* more link CSS */
+span.ekMore span.ekMoreLink, span.ekMore span.ekLessLink {color: blue; cursor: pointer; display: inline-block; margin: 0em .25em;}
+span.ekMore span.ekHid {word-break: break-all; -moz-binding: url('xml/moz_wordwrap.xml#wordwrap');}
+span.ekMore span.ekHid, span.ekMoreLinkOff {display: none;}
+span.ekMore span.ekNotHid {display: inline;}
+span.ekMore span.ekMoreArrow {display: inline-block; margin-left: .25em;}
+span.ekMore span.ekLessArrow {display: inline-block; margin-right: .25em;}

@@ -1,0 +1,42 @@
+div.subscriptionView fieldset {width:40em;}
+div.subscriptionView fieldset legend {font-size:1.25em;}
+div.subscriptionView fieldset table {margin:1em auto;width:38em;border-collapse:collapse;}
+div.subscriptionView fieldset table th, div.subscriptionView fieldset table td {padding:.25em;border:1px solid silver;font-weight:normal;font-size:1em;}
+div.subscriptionView fieldset table th {width:14em;text-align:right;padding-right:1em;}
+div.subscriptionView fieldset table td {text-align:right;padding-left:1em;}
+div.subscriptionView fieldset table td input {display:none;float:left;}
+div.subscriptionView fieldset table td span {float:left;}
+div.subscriptionView fieldset table td span.markedForDelete {color:silver !important;text-decoration:line-through;}
+div.subscriptionView fieldset table td a.restore {display:none;}
+div.subscriptionView fieldset table td a.groupNotSet {display:none;}
+div.subscriptionView fieldset table tr.membershipGroup td span.required {color:Red;font-size:.9em;display:inline !important;}
+div.subscriptionView fieldset table td p.requiredText {color:Red;font-size:.9em;clear:both;float:left;}
+div.subscriptionView fieldset table tr.membershipGroup th,
+div.subscriptionView fieldset table tr.membershipGroup td {vertical-align:top;}
+
+/* item selector modal */
+div.itemsSubscriptionMembershipModal {width:40em;padding:0em 0em 1em 0em;}
+div.itemsSubscriptionMembershipModal h3.itemsSubscriptionMembershipModalHeader {margin:0;color:#000080;font-size:1.2em;line-height:20px;padding:.25em;background-image:url('images/th.gif');background-position:0px 0px;background-repeat:repeat-x;}
+div.itemsSubscriptionMembershipModal h3.itemsSubscriptionMembershipModalHeader img {float:right;cursor:pointer;cursor:hand;}
+div.itemsSubscriptionMembershipModal p.cancelSubscriptionMembershipModal {border-top:1px dotted #000080;padding:1em;margin:0em .5em;}
+div.itemsSubscriptionMembershipModal p.cancelSubscriptionMembershipModal a {margin-left:1em;}
+
+/* modal content */
+div.itemsSubscriptionMembershipModal iframe {width:100%;height:20em;}
+
+/* modal buttons */
+div.itemsSubscriptionMembershipModal a {color:blue;text-decoration:none;}
+div.itemsSubscriptionMembershipModal a:hover {color:blue;text-decoration:underline;}
+div.itemsSubscriptionMembershipModal a:visited {color:blue;}
+div.itemsSubscriptionMembershipModal a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.itemsSubscriptionMembershipModal a.buttonLeft {float:left;}
+div.itemsSubscriptionMembershipModal a.buttonRight {float:right;}
+div.itemsSubscriptionMembershipModal a.buttonInline {display:inline;}
+div.itemsSubscriptionMembershipModal a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.itemsSubscriptionMembershipModal a.renameBasket img {margin:0 3px -1px 3px !important;padding-left:3px;}
+div.itemsSubscriptionMembershipModal a.button:hover {border:1px solid #fbc2c4;color:#d12f19;}
+div.itemsSubscriptionMembershipModal a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.itemsSubscriptionMembershipModal a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.itemsSubscriptionMembershipModal a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+div.itemsSubscriptionMembershipModal p.editButtons {border-top:1px dotted #000080;padding:1em;margin:0em .5em;}
+div.itemsSubscriptionMembershipModal p.editButtons a {margin-left:1em;}

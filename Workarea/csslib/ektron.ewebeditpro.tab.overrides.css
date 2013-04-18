@@ -1,0 +1,9 @@
+#editContentPageContainer {position: absolute !important;}
+.editContentContainer {position: absolute !important; }
+.ektronPageTabbed {position: absolute; width: 95%; margin-top: .5em;}
+
+.ui-tabs .ui-tabs-panel { padding: .75em; display: block; position: absolute !important; border-width: 0; background: none; width: 95%;}
+.ui-tabs .ui-tabs-hide { position: absolute !important; left: -10000px !important; display: block !important;}
+
+.ewebeditproWrapper{ position: absolute !important; left: -10000px; height: 450px; width: 98%; display: block !important; z-index: 300; visibility: visible !important;}
+.ewebeditproPlaceholder{height: 450px; width: 98%;}

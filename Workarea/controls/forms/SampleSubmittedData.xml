@@ -1,0 +1,40 @@
+
+<SubmittedData>
+	<FormTitle>contact us</FormTitle>
+	<FormDescription>Please reply within <font color="red">36</font> hours.</FormDescription>
+	<Date>7/11/2005 5:24:58 PM</Date>
+	<Mail>
+		<To>you@email.com</To>
+		<From>me@email.com</From>
+		<CC></CC>
+		<Subject>Test CMS 400 Form</Subject>
+		<MessageBody>Test Message Body</MessageBody>
+	</Mail>
+	<Data form_data_id="1">
+		<name>My Name Here</name>
+		<phone>+1 (603) 594-0249</phone>
+		<fax>+1 (603) 594-0258</fax>
+		<email>me@email.com</email>
+		<dob>1989-02-23</dob>
+		<interest>CMS</interest>
+		<interest>DMS</interest>
+		<company>
+		</company>
+	</Data>
+	<ektdesignpackage_list>
+		<fieldlist>
+			<field name="name" datatype="string" xpath="/root/name">Name</field>
+			<field name="phone" datatype="phoneUSCA" xpath="/root/phone">Telephone</field>
+			<field name="fax" datatype="phoneUSCA" xpath="/root/fax">Fax</field>
+			<field name="email" datatype="email" xpath="/root/email">E-Mail</field>
+			<field name="dob" datatype="date" xpath="/root/dob">Birthdate</field>
+			<field name="interest" datatype="string" datalist="ID000" xpath="/root/interest">Product Interest</field>
+			<field name="company" datatype="string" xpath="/root/company">Company Name</field>
+			<datalist name="ID000">
+				<item value="CMS">Web Content Management Solutions</item>
+				<item value="editor">Browser-base Editors</item>
+				<item value="DMS">Document Management</item>
+			</datalist>
+		</fieldlist>
+	</ektdesignpackage_list>
+</SubmittedData>

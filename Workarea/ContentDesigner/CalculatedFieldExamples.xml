@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items name="calculatedField">
+	<Item Value="{X} + {Y}" localeRef="sAdd2N"/>
+	<Item Value="{X} - {Y}" localeRef="sSub2N"/>
+	<Item Value="{X} * {Y}" localeRef="sMul2N"/>
+	<Item Value="format-number( {X} div {Y} ,'0.###')" localeRef="sDiv2N"/>
+	<Item Value="format-number( {X} div {Y} ,'#0%')" localeRef="sFmtPct"/>
+	<Item Value="{X} * (number( {X} &gt; 0)*2-1)" localeRef="sAbsVal"/>
+	<Item Value="{X} * number( {X} &lt;= {Y} ) + {Y} * number( {X} &gt; {Y} )" localeRef="sMin2"/>
+	<Item Value="{X} * number( {X} &gt;= {Y} ) + {Y} * number( {X} &lt; {Y} )" localeRef="sMax2"/>
+	<Item Value="( {X} - {Y} ) * number(( {X} - {Y} ) &gt; 0)" localeRef="s0IfNeg"/>
+	<Item Value="{X} * ( {Y} * number( {Z} ='true') + number( {Z} !='true'))" localeRef="sMulIf"/>
+	<Item Value="round( {X} )" localeRef="sRnd"/>
+	<Item Value="ceiling( {X} )" localeRef="sRndUp"/>
+	<Item Value="floor( {X} )" localeRef="sRndDn"/>
+	<Item Value="sum( {X}[text()] | {Y}[text()] | {Z}[text()] )" localeRef="sTotFlds"/>
+	<Item Value="sum( {X}[text()] )" localeRef="sTotList"/>
+	<Item Value="format-number( {X} ,'0.00')" localeRef="sFmtDecN2"/>
+	<Item Value="format-number(sum( {X}[text()] ) div count( {X} ),'0.###')" localeRef="sAveList"/>
+	<Item Value="count( {X} )" localeRef="sCntList"/>
+	<Item Value="translate( {X} ,'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" localeRef="sLCase"/>
+	<Item Value="translate( {X} ,'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')" localeRef="sUCase"/>
+	<Item Value="normalize-space( {X} )" localeRef="sRemSp"/>
+	<Item Value="concat( {X} , ', ' , {Y} )" localeRef="sConcat"/>
+	<Item Value="string-length( {X} )" localeRef="sSzTxt"/>
+</Items>

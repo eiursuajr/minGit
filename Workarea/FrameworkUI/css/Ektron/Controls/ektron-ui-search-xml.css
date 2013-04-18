@@ -1,0 +1,9 @@
+﻿/* User Search Control Styles
+----------------------------------*/
+.ektron-ui-search-xml { }
+
+.ektron-ui-search-xml .xml-search-fields { }
+
+.ektron-ui-search-xml .xml-search-fields .fields-list tr td { vertical-align: top; padding-bottom: .25em;}
+
+.ektron-ui-search-xml .xml-search-fields .fields-list tr td.field-label { text-align: right; padding-right: .5em; }

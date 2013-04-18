@@ -1,0 +1,1 @@
+<%@ Control Language="c#" AutoEventWireup="false" Codebehind="TabControl.ascx.cs" Inherits="Ektron.Telerik.WebControls.EditorControls.RadTab" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>

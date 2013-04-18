@@ -1,0 +1,138 @@
+﻿@import url("../../java/plugins/cluetip/ektron.cluetip.css");
+
+/* Clue Tip Overrides */
+#cluetip #cluetip-outer
+{
+	background: #f7eda1;
+	border: solid 1px #f7eda1;
+	font-size: 12px;
+	font-family: Arial, Verdana, Sans-Serif;
+	color: #333;
+}
+
+#cluetip #cluetip-outer
+{
+	background: #fff;
+}
+
+#cluetip #cluetip-outer #cluetip-title
+{
+	background: #f7eda1;
+	color: #fff;
+	font-weight: bold;
+}
+
+#cluetip #cluetip-inner span 
+{
+	font-weight: bold;
+	display: inline-block;
+	padding: 0 .25em;
+}
+
+#cluetip #cluetip-inner table td 
+{
+	vertical-align: top;
+	padding: .25em;
+	margin: 0;
+}
+
+#cluetip #cluetip-inner div.contentDetails
+{
+	border: solid 1px #f7eda1;
+	margin: 0;
+	padding: 0;
+}
+
+#cluetip #cluetip-inner div.contentDetails div.teaser
+{
+	font-style: italic;
+	font-size: .9em;
+	padding: 0 .5em .5em;
+	margin: 0;
+}
+
+.clue-right-default .cluetip-arrows {
+  background-image: url(../../java/plugins/cluetip/images/bgarrowleft.gif);
+}
+
+.clue-left-default .cluetip-arrows {
+  background-image: url(../../java/plugins/cluetip/images/bgarrowright.gif);
+  left: 100%;
+  margin-right: -11px;
+}
+
+.clue-top-default .cluetip-arrows {
+  background-image: url(../../java/plugins/cluetip/images/bgarrowdown.png);
+  top: 100%;
+  left: 50%;
+  margin-top: -1px; 
+  margin-left: -13px;
+  height: 16px;
+  width: 27px; 
+} 
+ 
+.clue-bottom-default .cluetip-arrows {
+  background-image: url(../../java/plugins/cluetip/images/bgarrowup.gif);
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  height: 11px;
+  width: 22px;
+}
+
+#cluetip .EkForceWrap{word-break: break-all; -moz-binding: url('../../csslib/xml/moz_wordwrap.xml#wordwrap');}
+#cluetip a.EkForceWrap:active, #cluetip a.EkForceWrap:focus{outline: none;} /* fixes scrollbars appearing when focus and active status is brought to link in mozilla */
+
+div.CBresult
+   {
+        padding: 0 1em;
+        overflow: hidden;
+        margin-right:3px;
+   }
+   
+.greenHover:hover 
+{
+	background-color:#E6EFC2;
+	border:1px solid #C6D880;
+	color:#529214;
+}
+.redHover:hover 
+{
+	background-color:#fbe3e4;
+	border:1px solid #fbc2c4;
+	color:#d12f19;
+}
+.button
+{
+	margin:0;
+	background-color:#f5f5f5;
+	border:1px solid #dedede;
+	border-top:1px solid #eee;
+	border-left:1px solid #eee;
+	font-size:100%;
+	line-height:100%;
+	text-decoration:none;
+	color:#565656;
+	cursor:pointer;
+	padding:5px 10px 6px 7px;
+	padding: .25em 1em .25em 2.25em; 
+	background-repeat: no-repeat;
+}
+
+.buttonSearch
+{
+	 background-image: url(../../images/ui/icons/magnifier.png); 
+	 background-position: .6em center;
+}
+
+.buttonClear
+{
+	
+	 background-image: url(../../images/ui/icons/exclamation.png); 
+	 background-position: .6em center;
+}
+.ektronTopspace
+{
+	margin-top:.75em;
+}
+    

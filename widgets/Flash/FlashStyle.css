@@ -1,0 +1,318 @@
+@import url("ektron.treeview.css");
+@import url("jquery.cluetip.css");
+
+div.CBEdit
+{
+	overflow: visible;
+	font-family: Arial, Verdana, Sans-Serif;
+	font-size: 12px;
+	min-width: 32em;
+	width: auto !important;
+	width: 32em;
+	background-color: #FFF;	
+	border: 1px solid #ccc;
+	z-index: 2;
+	position: relative;
+}
+
+div.CBEdit div#ResultsToggle
+{
+	margin: .75em 0 .25em;
+	font-size: 80%;
+}
+
+div.CBEdit div#ResultsToggle a
+{
+	text-decoration: none;
+}
+
+div.CBEdit div.CBResults
+{
+	border: solid 1px gray;
+	font-size: 80%;
+	font-family:Arial, Tahoma, Verdana;
+	height: 6em;
+	overflow: auto;
+	overflow-y: scroll;
+	cursor: pointer;
+	min-width:98%;
+}
+
+div.CBEdit div.CBResults div.CBresult
+{
+	padding: 0 1em;
+	overflow: hidden;
+	margin-right:3px;
+}
+
+div.CBEdit div.CBResults .even
+{
+	background-color:#ddd;
+}
+div.CBEdit div.CBResults .selected, div.CBEdit div.CBResults .selected span.title, div.CBEdit div.CBResults .selected span
+{
+	background-color: #5c9ccc;
+	color: #fff;
+}
+
+div.CBEdit div.CBPaging
+{
+	text-align:center;
+}
+
+div.CBEdit div.CBresult span.title
+{
+	float:left;
+	color: #222;
+}
+
+div.CBEdit div.CBresult span.contentid
+{
+	float:right;
+}
+div.CBEdit div.CBresult br.clearall
+{
+	clear:both;
+}
+
+div.CBEdit .CBEditControls
+{
+	text-align: right;
+	margin: .25em 0 0;
+}
+
+div.CBEdit .CBSave
+{
+}
+
+/* Filter Options */
+div.CBEdit #CBFilterOptions
+{
+	margin-top: .25em;
+	float: right;
+}
+
+div.CBEdit #CBFilterOptions .FilterOption
+{
+	font-size: 90%;
+}
+
+/* TABS */
+div.CBEdit .CBTabInterface .ByTaxonomy, div.CBEdit .CBTabInterface .BySearch
+{
+	display: none;
+}
+
+div.CBEdit ul.CBTabWrapper
+{
+	list-style: none;
+    margin: 2px 0 0 0;
+    padding: 0;
+}
+
+div.CBEdit ul.CBTabWrapper li.CBTab
+{
+	float: left;
+	border: solid 1px #97A5B0;
+	background: #97A5B0;
+	margin: .25em 0 0 .25em;
+	padding: 0;
+	position: relative;
+	top: 1px;
+	z-index: 2;
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+	font-weight: bold;
+}
+
+div.CBEdit ul.CBTabWrapper li.CBTab a:hover
+{
+	background-color: #27537a;
+	color: #fff;
+}
+
+div.CBEdit ul.CBTabWrapper li.CBTab span, div.CBEdit ul.CBTabWrapper li.CBTab a
+{
+	display: inline-block;
+	padding: .25em .5em .1em .5em;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+div.CBEdit ul.CBTabWrapper li.selected
+{
+	background-color: #fff;
+	border-bottom: solid 1px #fff;
+}
+
+div.CBEdit ul.CBTabWrapper li.selected a:hover
+{
+	background-color: #fff;
+}
+
+div.CBEdit ul.CBTabWrapper li.selected a, div.CBEdit ul.CBTabWrapper li.selected a:hover, div.CBEdit ul.CBTabWrapper li.selected span
+{
+	color: #27537a;
+}
+
+div.CBEdit .CBTabInterface .CBTabPanel 
+{
+	min-width: 28em;
+	width: auto !important;
+	width: 28em;
+    border: 1px solid #97a5b0;
+    padding: .5em;
+    background: #fff;
+    overflow: auto;
+    height: 15em;
+    clear:both;
+}
+
+/*  Folder Tree */
+div.CBEdit .CBTabInterface .foldercontainer span.folder, .CBTabInterface .foldercontainer span.file 
+{ 
+	padding: 1px 0 1px 18px; 
+	display: block;
+}
+
+div.CBEdit .CBTabInterface div.foldercontainer span.folder
+{
+	background-image: url('../../workarea/java/plugins/treeview/images/folder.gif'); 
+	background-position: 0 0;
+	background-repeat: no-repeat; 
+	cursor: pointer;
+}
+
+div.CBEdit .CBTabInterface .EktronFolderTree li.expandable>span.folder
+{ 
+	background-image: url('../../workarea/java/plugins/treeview/images/folder-closed.gif'); 
+}
+div.CBEdit .CBTabInterface .EktronFolderTree li.collapsable>span.folder 
+{
+	background-image: url('../../workarea/java/plugins/treeview/images/folder.gif'); 
+}
+
+div.CBEdit .CBTabInterface .CBfoldercontainer .selected
+{
+	color: #5c9ccc;
+}
+
+/* Taxonomy Tree */
+div.CBEdit .CBTabInterface .treecontainer span.folder
+{
+	cursor: pointer;
+}
+
+/* Search */
+a.searchSubmit 
+{
+	text-indent: -10000px;
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	background-image: url('images/magnifier.png');
+	margin-left: .25em;
+}
+
+/* Clue Tip Overrides */
+#cluetip #cluetip-outer
+{
+	background: #97a5b0;
+	border: solid 1px #97a5b0;
+	font-size: 12px;
+	font-family: Arial, Verdana, Sans-Serif;
+	color: #333;
+}
+
+#cluetip #cluetip-outer
+{
+	background: #fff;
+}
+
+#cluetip #cluetip-outer #cluetip-title
+{
+	background: #97a5b0;
+	color: #fff;
+	font-weight: bold;
+}
+
+#cluetip #cluetip-inner span 
+{
+	font-weight: bold;
+	display: inline-block;
+	padding: 0 .25em;
+}
+
+#cluetip #cluetip-inner table td 
+{
+	vertical-align: top;
+	padding: .25em;
+	margin: 0;
+}
+
+#cluetip #cluetip-inner div.contentDetails
+{
+	border: solid 1px #97a5b0;
+	margin: 0;
+	padding: 0;
+}
+
+#cluetip #cluetip-inner div.contentDetails div.teaser
+{
+	font-style: italic;
+	font-size: .9em;
+	padding: 0 .5em .5em;
+	margin: 0;
+}
+
+.clue-right-default .cluetip-arrows {
+  background-image: url(images/bgarrowleft.gif);
+}
+
+.clue-left-default .cluetip-arrows {
+  background-image: url(images/bgarrowright.gif);
+  left: 100%;
+  margin-right: -11px;
+}
+
+.clue-top-default .cluetip-arrows {
+  background-image: url(images/bgarrowdown.png);
+  top: 100%;
+  left: 50%;
+  margin-top: -1px; 
+  margin-left: -13px;
+  height: 16px;
+  width: 27px; 
+} 
+ 
+.clue-bottom-default .cluetip-arrows {
+  background-image: url(images/bgarrowup.gif);
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  height: 11px;
+  width: 22px;
+}
+
+#cluetip .EkForceWrap{word-break: break-all; -moz-binding: url('../../workarea/csslib/xml/moz_wordwrap.xml#wordwrap');}
+#cluetip a.EkForceWrap:active, #cluetip a.EkForceWrap:focus{outline: none;} /* fixes scrollbars appearing when focus and active status is brought to link in mozilla */
+
+
+/* Clearfix */
+div.CBEdit .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+div.CBEdit .clearfix {display:block;}
+
+
+/*ie hacks (* in front of attribute prevents other browsers from knowing it, and this prevents us from having to create an ie-specific stylesheet) */
+div.EktronPersonalization div.CBEdit ul.CBTabWrapper li.CBTab 
+{
+	*position: static !important;
+}
+
+div.CBEdit .CBTabInterface .CBTabPanel
+{
+	*width: 97% !important;
+}
+
+div.CBEdit .clearfix { *display:inline-block;}

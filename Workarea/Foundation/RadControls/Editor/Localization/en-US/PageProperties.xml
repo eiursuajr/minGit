@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="HTMLAttributes">Page Attributes</string>
+	<string id="PageTitle">Page Title</string>
+	<string id="Description">Description</string>
+	<string id="Keywords">Keywords</string>
+	<string id="Width">Width</string>
+	<string id="BaseLocation">Base location</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Cancel</string>
+	<string id="BodyAttributes">Body Attributes</string>
+	<string id="BackColor">Back color</string>	
+	<string id="TopMargin">Top Margin</string>
+	<string id="BottomMargin">Bottom Margin</string>
+	<string id="LeftMargin">Left Margin</string>
+	<string id="RightMargin">Right Margin</string>
+	<string id="BGImage">Back Image</string>
+	<string id="ClassName">Class Name</string>
+	
+	
+</localization>

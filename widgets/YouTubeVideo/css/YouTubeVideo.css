@@ -1,0 +1,81 @@
+﻿.ektronWidgetYouTube {font-size: 12px; font-family: Arial, sans-serif;}
+.ektronWidgetYouTube .YTOptions {font-size: .9em; margin: 0; padding: 1em 0 .5em; border-top: solid 1px #c5dbec; }
+
+/* Tabs */
+.ektronWidgetYouTube ul.ektronWidgetYTTabs {margin: 0; padding: 0; list-style-type: none; overflow: visible;}
+.ektronWidgetYouTube ul.ektronWidgetYTTabs li {display: block; float: left;}
+.ektronWidgetYouTube ul.ektronWidgetYTTabs li a, .ektronWidgetYouTube ul.ektronWidgetYTTabs li a:active, .ektronWidgetYouTube ul.ektronWidgetYTTabs li a:visited, .ektronWidgetYouTube ul.ektronWidgetYTTabs li a:focus 
+{
+	border: solid 1px #c5dbec; 
+	padding: .25em .5em 0em; 
+	margin: 0 0 0 .25em; 
+	position: relative; 
+	background-repeat: repeat-x; 
+	background-image: url("../images/tabBackground.png"); 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: #2e6e9e; 
+	cursor: pointer;
+	-moz-outline-style: none; 
+}
+.ektronWidgetYouTube ul.ektronWidgetYTTabs li a:hover 
+{
+	color: #e17009; 
+}
+.ektronWidgetYouTube ul.ektronWidgetYTTabs a.selectedTab 
+{
+	background-image: none; 
+	background-color: #fff; 
+	border-bottom: solid 1px #fff; 
+	z-index: 10;
+}
+
+/* The Video List */
+.ektronWidgetYouTube ul.ektronWidgetYTVideos {list-style-type: none; margin: .25em 0; padding: 0;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos li {display: block; padding: .25em 0; margin: .25em 0;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos li.alt1 {background-color: #eee;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos li.videoFirst {background-color: transparent;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos div.videoThumbOuter {float: left; text-align: center; padding: 4px; border: solid 1px #ccc; background: #fff;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos div.videoThumbInner {text-align: center; overflow: hidden; width: 90px;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos div.videoThumbInner img.thumbnail {display: block; margin: auto; width:120px; height:100px;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos a, .ektronWidgetYouTube ul.ektronWidgetYTVideos a:active, .ektronWidgetYouTube ul.ektronWidgetYTVideos a:visited {display: block; margin-left: 108px; margin-right: .5em; text-decoration: none; color: #2e6e9e; -moz-outline-style: none;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos a:hover {color: #e17009; text-decoration: none;}
+.ektronWidgetYouTube ul.ektronWidgetYTVideos span.short-description {display: block; margin-left: 108px; margin-right: .5em; font-size: .9em}
+
+
+/* Buttons */
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper {margin: 0; padding: .5em 0 0; text-align: center; list-style-type: none; border-top: solid 1px #c5dbec;}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper li {display: inline; font-size: .9em; margin: 0; padding: 0;}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTButton {display:inline-block; width: 16px; height: 16px; background-position: 0 0; background-repeat: no-repeat; cursor: pointer;}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTButton span {display: inline-block; text-indent: -10000px; visibility:hidden;}
+.itemhide{display:none;}
+
+
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTButtonFirst {background-image: url("../images/resultset_first.png");}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTFirstDisabled {background-image: url("../images/resultset_first_disabled.png"); cursor: default;}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTButtonPrevious {background-image: url("../images/resultset_previous.png");}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTPreviousDisabled {background-image: url("../images/resultset_previous_disabled.png"); cursor: default;}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTButtonNext {background-image: url("../images/resultset_next.png");}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTNextDisabled {background-image: url("../images/resultset_next_disabled.png"); cursor: default;}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTButtonLast {background-image: url("../images/resultset_last.png");}
+.ektronWidgetYouTube ul.ektronWidgetYTButtonWrapper .ektronWidgetYTLastDisabled {background-image: url("../images/resultset_last_disabled.png"); cursor: default;}
+
+.ektronWidgetYouTube ul.ektronWidgetYTSearchButtons a.ektronWidgetYTButton {display:inline-block;}
+.ektronWidgetYouTube .ektronWidgetYTGoButton {display: inline-block; width: 16px; height: 16px; text-indent: -10000px; background-image: url("../images/zoom.png"); background-repeat: no-repeat; cursor: pointer;} 
+
+
+/* clearfix */
+.ektronWidgetYouTube .clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.ektronWidgetYouTube .clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .ektronWidgetYouTube .clearfix {height: 1%;}
+.ektronWidgetYouTube .clearfix {display: block;}
+/* End hide from IE-mac */

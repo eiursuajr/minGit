@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Items name="relevant">
+	<Item Value="{X} = 'true'" localeRef="sRelChkd"/>
+	<Item Value="{X} = 'false'" localeRef="sRelNChkd"/>
+	<Item Value="{X} = 'value'" localeRef="sRelEqVal"/>
+	<Item Value="not( {X} = 'value')" localeRef="sRelNEqVal"/>
+	<Item Value="{X} = 'value1' or {X} = 'value2'" localeRef="sRelEq1of2"/>
+	<Item Value="{X} = 'value1' and {Y} = 'value2'" localeRef="sRelEqAndEq"/>
+	<Item Value="contains( {X} ,'value')" localeRef="sRelContains"/>
+	<Item Value="{X} = {Y}" localeRef="sRelEq"/>
+	<Item Value="not( {X} = {Y} )" localeRef="sRelNEq"/>
+	<Item Value="count( {X} ) &gt; 0" localeRef="sRelExists"/>
+	<Item Value="string-length( {X} ) &gt; 0" localeRef="sRelNBlank"/>
+	<Item Value="{X} &lt;= {Y}" localeRef="sRelLEq"/>
+	<Item Value="sum( {X} ) &gt; {Y}" localeRef="sRelSumGt"/>
+</Items>

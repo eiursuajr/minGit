@@ -1,0 +1,28 @@
+/* general styles */
+div.scope span.required {color:Red;}
+div.scope p.required {color:Red;font-size:.8em;margin-top:.25em;}
+div.scope .error {font-weight:bold !important;color:Red !important;}
+div.scope .hide {display:none;}
+
+/* application row */
+div.scope table tbody tr.application td span {display:block;margin:.1em 0em;}
+
+/* min required basket row */
+div.scope table tbody tr.minRequiredValue td.content input.dollars {width:5em;text-align:right;}
+div.scope table tbody tr.minRequiredValue td.content input.cents {width:2.5em;}
+
+/* start date */
+div.scope table tbody tr.startDate td.content span.date {padding-right:.25em;}
+div.scope table tbody tr.startDate td.content span.disabled {font-style:italic;}
+div.scope table tbody tr.startDate a:hover {text-decoration:none;}
+
+/* end date */
+div.scope table tbody tr.endDate td.content span.date {padding-right:.25em;}
+div.scope table tbody tr.endDate td.content span.disabled {font-style:italic;}
+div.scope table tbody tr.endDate a:hover {text-decoration:none;}
+
+/* modal overrides */
+div#EktronCouponsScopeModalDatePicker {padding:3px;}
+.ui-dialog .ui-dialog-content {overflow:visible;}
+div#EktronCouponsScopeModalDatePicker table {margin:0 auto;}
+div#EktronCouponsScopeModalDatePicker div.time {margin-bottom:1em;text-align:center;}

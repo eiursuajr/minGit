@@ -1,0 +1,107 @@
+/* wrapper */
+div.EktronMediaTabWrapper {width:60em;padding-bottom:.75em;margin:0 auto;font-family:Arial, Helvetica, Tahoma, Verdana, sans-serif;}
+
+/* widget styles */
+div.EktronMediaTabWrapper .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+div.EktronMediaTabWrapper .clearfix {display:inline-block;}
+div.EktronMediaTabWrapper img {border:none;}
+div.EktronMediaTabWrapper .alignRight {text-align:right;}
+div.EktronMediaTabWrapper .alignLeft {text-align:left;}
+div.EktronMediaTabWrapper .textSmall {font-size:.75em;}
+div.EktronMediaTabWrapper .emphasis {font-weight:bold;}
+div.EktronMediaTabWrapper .noBackgroundImage {background-image:none;}
+div.EktronMediaTabWrapper .noBorderTop {border-top:none;}
+div.EktronMediaTabWrapper .noBorderTopBottom {border-top:none;border-bottom:none;}
+div.EktronMediaTabWrapper .gutterRight {margin-right:1em !important;}
+div.EktronMediaTabWrapper .gutterLeft {margin-left:1em !important;}
+div.EktronMediaTabWrapper .placeholder {display:none !important;}
+
+/* buttons */
+div.EktronMediaTabWrapper a {color:blue;text-decoration:none;}
+div.EktronMediaTabWrapper a:hover {color:blue;text-decoration:underline;}
+div.EktronMediaTabWrapper a:visited {color:blue;}
+div.EktronMediaTabWrapper a.button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.EktronMediaTabWrapper a.buttonLeft {float:left;}
+div.EktronMediaTabWrapper a.buttonRight {float:right;}
+div.EktronMediaTabWrapper a.buttonInline {display:inline;}
+div.EktronMediaTabWrapper a.button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.EktronMediaTabWrapper a.renameBasket img {margin:0 3px -1px 3px !important;padding-left:3px;}
+div.EktronMediaTabWrapper a.button:hover {border:1px solid #fbc2c4;color:#d12f19;text-decoration:none;}
+div.EktronMediaTabWrapper a.greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.EktronMediaTabWrapper a.redHover:hover {background:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.EktronMediaTabWrapper a.blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+
+/* widget header */
+div.EktronMediaTabWrapper div.mediaGroupHeader {padding:1em 0em 1.5em 0em;margin:0 0 1em 0;border-bottom:1px dotted silver;line-height:35px;}
+div.EktronMediaTabWrapper div.mediaGroupHeader h3 {display:inline;padding:15px 0px 20px 58px;background-image:url('../../images/application/commerce/images.gif');background-position:0px 5px;background-repeat:no-repeat;text-align:left;font-weight:bold;font-size:1.5em;}
+div.EktronMediaTabWrapper div.mediaGroupHeader p.addImage {position:relative;margin-top:-2em;}
+
+/* modal - fullsize media 
+div.EktronMediaTabWrapper div.mediaGroup {clear:both;}*/
+div.ektronWindow {margin:0;padding:0;}
+div.ektronWindow iframe {height:300px;}
+div.ektronWindow h4 {width:100%;margin:0;padding:0;text-align:right;background-image:url('../../images/application/commerce/th76.gif');background-position:0 0;background-repeat:repeat-x;height:30px;}
+div.ektronWindow h4 span {position:relative;margin-top:5px;left:.5em;float:left;color:white;line-height:100%;font-size:100%;}
+div.ektronWindow h4 img {position:relative;top:3px;right:5px;cursor:pointer;cursor:hand;}
+div#ektronMediaModal table.fullsizeMedia {border-collapse:separate;margin:1em auto;}
+div#ektronMediaModal table.fullsizeMedia th {vertical-align:middle;border:none;padding:0;margin:0;color:silver;font-weight:normal;}
+div#ektronMediaModal table.fullsizeMedia th.height {width:5em;text-align:center;background-image:url('../../images/application/commerce/xyRule.gif');background-position:top center;background-repeat:repeat-y;border-top:1px solid silver;border-right:none;border-bottom:1px solid silver;border-left:none;}
+div#ektronMediaModal table.fullsizeMedia th.width {width:5em;text-align:center;background-image:url('../../images/application/commerce/xyRule.gif');background-position:center left;background-repeat:repeat-x;border-top:none;border-right:1px solid silver;border-bottom:none;border-left:1px solid silver;}
+div#ektronMediaModal table.fullsizeMedia th.height span,
+div#ektronMediaModal table.fullsizeMedia th.width span {padding:0em 1em;margin:0;background-color:white;}
+div#ektronMediaModal table.fullsizeMedia td {width:auto;border:none;padding:0;margin:0;}
+div#ektronMediaModal table.fullsizeMedia td img {border:1px solid #FF0080;}
+div#ektronMediaModal table.fullsizeMedia td div.mediaOverflow { position:relative;width:30em;height:30em;overflow:scroll;}
+
+/* media list - Images */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList {list-style-type:none;margin:0;padding:0;border-bottom:1px solid silver;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li {margin:-3px 0 0 0;display:block;border:1px solid silver;border-bottom:none;padding:1em;}
+
+/* media list - Images: image wrapper */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.mediaPreview {float:left;cursor:pointer;cursor:hand;background-image:url(../../images/application/commerce/background.gif);background-repeat:repeat;background-position:0px 0px;float:left;background-position:center center;overflow:hidden;float:left;margin:0 0 0 0;border:1px solid silver;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.mediaPreview span.viewFullsize {display:none;background-image:url(../../images/application/commerce/opennewwindow.gif);background-repeat:no-repeat;background-position:3px 3px;position:absolute;z-index:99;background-color:#4c4c4c;color:white;text-align:center;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.mediaPreview img {position:relative;display:none;}
+
+/* media list - Images: image attributes list */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes {list-style:none;margin-left:1em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li {background-color:white;margin:0;display:block;border:1px solid silver;border-left:none;border-bottom:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li.last {border-bottom:1px solid silver;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li.stripe {background-image:none;background-color:#F2F0F5;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li.greenHover {background-color:#E6EFC2;color:#529214;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li div.edit img {cursor:pointer;cursor:hand;margin:0em .5em;float:right;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li h4 {float:left;width:5em;text-align:right;padding:0;margin:0em .5em 0em 0em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li p {padding:0;margin:0;display:inline;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li input {display:inline;width:24em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li div img.reviseOK,
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li ul.mediaAttributes li div img.reviseCancel {display:none;}
+
+/* media list - Images: action buttons */
+
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.actions {display:block;clear:left;margin:1em 0em 0em 0em;padding:0em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.actions a.defaultImageSelector {}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.actions a.deleteImageSelector {}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li p.actions .defaultImage {background-color:#4c4c4c;color:white;}
+
+/* media list - Images: thumbnails wrapper */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails {display:none;background-image:url(../../images/application/commerce/background.gif);background-repeat:repeat;background-position:0px 0px;text-align:center;margin:1em 0em 0em 0em;padding:1em;border:1px solid silver;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails h4 {border-right:1px solid silver;border-bottom:1px solid silver;float:left;margin:-1em 0em 0em -1em;padding:.25em 1em;position:absolute;}
+
+/* media list - Images: thumbnails image wrapper */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper {border:1px solid silver;border-collapse:collapse;width:100%;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper th {font-weight:normal;background-color:#4c4c4c;color:white;vertical-align:middle;border:none;padding:.25em}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper thead th {margin:0;background-image:url('../../images/application/commerce/th76.gif');background-position:0 0;background-repeat:repeat-x;font-weight:bold;text-align:left;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper td {background-color:#4c4c4c;color:white;vertical-align:bottom;border:none;padding:0;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper tfoot th,
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper tbody th {text-align:right;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper td div.thumbnailImageWrapper {overflow-x:scroll !important;padding:1em .5em;}
+
+/* media list - Images: thumbnail image table */
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper {margin:0;padding:0;border:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper td {padding:0em .5em;vertical-align:top;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p {margin:0;padding:0;text-align:center;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper span {display:none;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.dimensions {margin:.5em auto;color:silver;text-align:center;font-size:.75em;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.thumbnailSelector {margin:0 !important;padding:0 !important;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.defaultThumbnail {line-height:30px;height:30px;cursor:pointer;cursor:hand;color:black;background-image:url(../../images/application/commerce/defaultThumbnail.gif);background-repeat:repeat-x;background-position:0px 0px;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.selectedThumbnail {background-image:url(../../images/application/commerce/defaultThumbnailSelected.gif);color:white;}
+div.EktronMediaTabWrapper div.mediaGroup ul.mediaList li div.thumbnails table.thumbnailWrapper div.thumbnailImageWrapper .thumbnailWrapper p.thumbnailPreview img {border:2px solid #FF00EE;}

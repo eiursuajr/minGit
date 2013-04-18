@@ -1,0 +1,94 @@
+/* Generic context menu styles */
+.ektronContextMenu {
+	position: absolute;
+	z-index: 99999;
+	border: 1px solid #bfbfbf;
+	background: #ededed url(../../../images/UI/menu/dropdown-background.gif) repeat-x 0 0;
+	padding:18px 0;
+	margin: 0;
+	display: none;
+}
+.ektronContextMenu li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.ektronContextMenu a {
+	display: block;
+	color: #000;
+	padding: 0 18px;
+	text-decoration: none;
+	line-height: 20px;
+	margin: 0;
+	outline: none;
+}
+.ektronContextMenu li.hover a {
+	background: #3767af url('../../../images/ui/over_tab.gif') 0 0 repeat-x;
+	color:#fff;
+    text-decoration: none;
+	display: block;
+}
+.ektronContextMenu li.disabled { display: none; }
+
+.ektronContextMenu li.separator  {
+	border-top:1px solid #bfbfbf;
+	margin: 8px 19px;
+    font-size:1px;
+    line-height:1em;
+    padding: 0;
+}
+
+/*
+	Adding Icons
+	
+	You can add icons to the context menu by adding
+	classes to the respective li element(s)
+*/
+/*
+.ektronContextMenu li.add a {background-image: url("../../../images/UI/icons/add.png");}
+.ektronContextMenu li.edit a {background-image: url("../../../images/UI/icons/pencil.png");}
+.ektronContextMenu li.cut a {background-image: url("../../../images/UI/icons/cut.png");}
+.ektronContextMenu li.copy a {background-image: url("../../../images/UI/icons/contentCopy.png");}
+.ektronContextMenu li.paste a {background-image: url("../../../images/UI/icons/paste.png");}
+.ektronContextMenu li.delete a {background-image: url("../../../images/UI/icons/delete.png");}
+.ektronContextMenu li.quit a {background-image: url("../../../images/UI/icons/door.png"); }
+.ektronContextMenu li.remove a {background-image: url("../../../images/UI/icons/remove.png"); }
+.ektronContextMenu li.reorder a {background-image: url("../../../images/UI/icons/arrowUpDown.png"); }
+.ektronContextMenu li.addFolder a {background-image: url("../../../images/ui/icons/folder.png");}
+.ektronContextMenu li.addBlogFolder a {background-image: url("../../../images/ui/icons/folderBlog.png");}
+.ektronContextMenu li.addBoardFolder a {background-image: url("../../../images/ui/icons/folderBoard.png");}
+.ektronContextMenu li.addCommunityFolder a {background-image: url("../../../images/ui/icons/folderCommunity.png");}
+.ektronContextMenu li.addCalendarFolder a {background-image: url("../../../images/ui/icons/folderCalendar.png");}
+.ektronContextMenu li.addContent a {background-image: url("../../../images/ui/icons/contentAdd.png");}
+.ektronContextMenu li.addDiscussionForum a {background-image: url("../../../images/ui/icons/folderBoard.png");}
+.ektronContextMenu li.addEcommerceFolder a {background-image: url("../../../images/ui/icons/folderGreen.png");}
+.ektronContextMenu li.pasteContent a {background-image: url("../../../images/ui/icons/paste.png");}
+.ektronContextMenu li.addSiteFolder a {background-image: url("../../../images/ui/icons/folderSite.png");}
+.ektronContextMenu li.addBlogPost a {background-image: url("../../../images/ui/icons/blog.png");}
+.ektronContextMenu li.addSubject a {background-image: url("../../../images/ui/icons/users.png");}
+
+.ektronContextMenu li.assignItems a {background-image: url("../../../images/ui/icons/contentStackAdd.png");}
+.ektronContextMenu li.assignFolders a {background-image: url("../../../images/ui/icons/folderAdd.png");}
+
+.ektronContextMenu li.viewProperties a {background-image: url("../../../images/ui/icons/properties.png");}
+.ektronContextMenu li.viewPermissions a {background-image: url("../../../images/ui/icons/permissions.png");}
+
+.ektronContextMenu li.cutFolder a {background-image: url("../../../images/ui/icons/cut.png");}
+.ektronContextMenu li.copyFolder a {background-image: url("../../../images/ui/icons/contentCopy.png");}
+.ektronContextMenu li.pasteFolder a {background-image: url("../../../images/ui/icons/paste.png");}
+
+.ektronContextMenu li.cutTaxonomy a {background-image: url("../../../images/ui/icons/cut.png");}
+.ektronContextMenu li.copyTaxonomy a {background-image: url("../../../images/ui/icons/contentCopy.png");}
+.ektronContextMenu li.pasteTaxonomy a {background-image: url("../../../images/ui/icons/paste.png");}
+.ektronContextMenu li.deleteTaxonomy a {background-image: url("../../../images/ui/icons/delete.png");}
+
+.ektronContextMenu li.deleteEcommerceFolder a {background-image: url("../../../images/ui/icons/folderGreenDelete.png");}
+.ektronContextMenu li.deleteEcommerceContent a {background-image: url("../../../images/ui/icons/brickDelete.png");}
+.ektronContextMenu li.deleteFolder a {background-image: url("../../../images/ui/icons/folderDelete.png");}
+.ektronContextMenu li.deleteSiteFolder a {background-image: url("../../../images/ui/icons/folderSiteDelete.png");}
+.ektronContextMenu li.deleteFolderContent a {background-image: url("../../../images/ui/icons/contentDelete.png");}
+.ektronContextMenu li.deleteBlogFolder a {background-image: url("../../../images/ui/icons/folderBlogDelete.png");}
+.ektronContextMenu li.deleteBlogContent a {background-image: url("../../../images/ui/icons/blogDelete.png");}
+.ektronContextMenu li.deleteCommunityFolder a {background-image: url("../../../images/ui/icons/folderCommunityDelete.png");}
+.ektronContextMenu li.deleteCalendarFolder a {background-image: url("../../../images/ui/icons/calendarDelete.png");}
+.ektronContextMenu li.deleteBoardFolder a {background-image: url("../../../images/ui/icons/folderBoardDelete.png");}*/

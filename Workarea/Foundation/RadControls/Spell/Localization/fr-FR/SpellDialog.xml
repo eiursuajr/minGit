@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<localization>
+	<string id="Title">Correcteur d'orthographe</string>
+	<string id="NoPermission">Vous n'avez pas les autorisations pour accéder à cette page ou votre session est expirée<br />Actualisez la page.</string>
+	<string id="Tab1HeaderText">Correcteur d'orthographe</string>
+	<string id="ProgressMessage">Correction d'orthographe en cours.....</string>
+	<string id="Confirm">Désirez-vous appliquer ou annuler les corrections faites jusqu'à maintenant?</string>
+	<string id="ChangesMade">Vous avez apporté des changements au texte</string>
+	<string id="SpellCheckComplete">La correction d'orthographe est terminée.</string>
+	<string id="Nosuggestions">Aucune suggestion</string>
+	<string id="Undo">Annuler</string>
+	<string id="UndoEdit">Annuler la modification</string>
+	<string id="Ignore">Ignorer</string>
+	<string id="IgnoreAll">Ignorer tout</string>
+	<string id="Cancel">Quitter</string>
+	<string id="AddCustom">Ajouter</string>
+	<string id="Change">Modifier</string>
+	<string id="ChangeAll">Modifier tout</string>
+	<string id="Help">Aide</string>
+	<string id="NotInDictionary">Absent du dictionnaire:</string>
+	<string id="Suggestions">Suggestions:</string>
+	<string id="AddWord1">Êtes-vous certain de vouloir ajouter '</string>
+	<string id="AddWord2">' au dictionnaire personnalisé?</string>
+</localization>

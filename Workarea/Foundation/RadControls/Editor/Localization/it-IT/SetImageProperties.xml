@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Proprietà immagine</string>
+	<string id="Bytes">bytes</string>
+	<string id="Customh">Personalizzato - </string>
+	<string id="PromptColor">Per piacere, inserisci un codice colore HEX:</string>
+	<string id="Tab1HeaderText">Proprietà immagine</string>
+	<string id="Tab2HeaderText">Informazione immagine</string>
+	<string id="Tab3HeaderText">Crea le miniature</string>
+	<string id="BorderWidth">Spessore bordo:</string>
+	<string id="NoBorder">Nessun bordo</string>
+	<string id="BorderColor">Colore bordo:</string>
+	<string id="NoColor">Nessun Colore</string>
+	<string id="Black">Nero</string>
+	<string id="Blue">Blu</string>
+	<string id="Green">Verde</string>
+	<string id="Orange">Arancione</string>
+	<string id="Red">Rosso</string>
+	<string id="White">Bianco</string>
+	<string id="Yellow">Giallo</string>
+	<string id="Custom">Personalizzato</string>
+	<string id="ImageAlign">Allineamento immagine:</string>
+	<string id="AbsoluteBottom">Basso forzato</string>
+	<string id="AbsoluteMiddle">Mezzo forzato</string>
+	<string id="Baseline">Linea Base</string>
+	<string id="Bottom">Basso</string>
+	<string id="Left">Sinistro</string>
+	<string id="Middle">Mezzo</string>
+	<string id="Right">Destrp</string>
+	<string id="TextTop">Testo superiore</string>
+	<string id="Top">Sopra</string>
+	<string id="ImageWidth">Larghezza immagine:</string>
+	<string id="ImageHeight">Altezza immagine:</string>
+	<string id="ImageSize">Dimensione immagine:</string>
+	<string id="FileName">Nome del file:</string>
+	<string id="Constrain">Mantieni</string>
+	<string id="Width">Larghezza:</string>
+	<string id="Height">Altezza:</string>
+	<string id="VerticalSpacing">Spazio verticale:</string>
+	<string id="HorizontalSpacing">Spazio orizzontale:</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Annulla</string>
+	<string id="AddCustomColor">Aggiungi un colore personalizzato...</string>
+	<string id="ImageLongDesc">Descrizione lunga</string>
+	<string id="AddHexColor">Aggiungi un colore con codice Hex...</string>
+	<string id="ChangeImageSrc">Percorso immagine (tag src):</string>
+</localization>

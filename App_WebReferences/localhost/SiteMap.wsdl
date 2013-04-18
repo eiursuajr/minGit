@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetWebsiteMap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="folderId" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="getSameLevelNodes" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWebsiteMapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetWebsiteMapResult" nillable="true" type="tns:WebsiteMap" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WebsiteMap">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SitemapPath">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="childrenNodes" type="tns:WebsiteMap" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SitemapPath">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Url" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Order" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FolderId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="ContentId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Language" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AuthenticationHeader" type="tns:AuthenticationHeader" />
+      <s:complexType name="AuthenticationHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Domain" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="RequestInfoParameters" type="tns:RequestInfoParameters" />
+      <s:complexType name="RequestInfoParameters">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ContentLanguage" type="s:int" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetFolderBreadcrumbPath">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="isFolder" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFolderBreadcrumbPathResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFolderBreadcrumbPathResult" type="tns:ArrayOfSitemapPath" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSitemapPath">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SitemapPath" nillable="true" type="tns:SitemapPath" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="RenderWebsiteMap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="webSitemap" nillable="true" type="tns:WebsiteMap" />
+            <s:element minOccurs="0" maxOccurs="1" name="displayType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="className" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxLevel" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="startLevel" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pageUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenderWebsiteMapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RenderWebsiteMapResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenderFolderBreadcrumbHtml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nodes" type="tns:ArrayOfSitemapPath" />
+            <s:element minOccurs="0" maxOccurs="1" name="pathSeparator" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="linkNodes" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="linkTarget" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="displayVertical" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pageUrl" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RenderFolderBreadcrumbHtmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RenderFolderBreadcrumbHtmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebsiteMap" nillable="true" type="tns:WebsiteMap" />
+      <s:element name="ArrayOfSitemapPath" nillable="true" type="tns:ArrayOfSitemapPath" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetWebsiteMapSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWebsiteMap" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsiteMapSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWebsiteMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsiteMapAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsiteMapRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderBreadcrumbPathSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFolderBreadcrumbPath" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderBreadcrumbPathSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFolderBreadcrumbPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderBreadcrumbPathAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderBreadcrumbPathRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="RenderWebsiteMapSoapIn">
+    <wsdl:part name="parameters" element="tns:RenderWebsiteMap" />
+  </wsdl:message>
+  <wsdl:message name="RenderWebsiteMapSoapOut">
+    <wsdl:part name="parameters" element="tns:RenderWebsiteMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenderWebsiteMapAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="RenderWebsiteMapRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="RenderFolderBreadcrumbHtmlSoapIn">
+    <wsdl:part name="parameters" element="tns:RenderFolderBreadcrumbHtml" />
+  </wsdl:message>
+  <wsdl:message name="RenderFolderBreadcrumbHtmlSoapOut">
+    <wsdl:part name="parameters" element="tns:RenderFolderBreadcrumbHtmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="RenderFolderBreadcrumbHtmlAuthenticationHeader">
+    <wsdl:part name="AuthenticationHeader" element="tns:AuthenticationHeader" />
+  </wsdl:message>
+  <wsdl:message name="RenderFolderBreadcrumbHtmlRequestInfoParameters">
+    <wsdl:part name="RequestInfoParameters" element="tns:RequestInfoParameters" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsiteMapHttpGetIn">
+    <wsdl:part name="folderId" type="s:string" />
+    <wsdl:part name="getSameLevelNodes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsiteMapHttpGetOut">
+    <wsdl:part name="Body" element="tns:WebsiteMap" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderBreadcrumbPathHttpGetIn">
+    <wsdl:part name="id" type="s:string" />
+    <wsdl:part name="isFolder" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderBreadcrumbPathHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSitemapPath" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsiteMapHttpPostIn">
+    <wsdl:part name="folderId" type="s:string" />
+    <wsdl:part name="getSameLevelNodes" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetWebsiteMapHttpPostOut">
+    <wsdl:part name="Body" element="tns:WebsiteMap" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderBreadcrumbPathHttpPostIn">
+    <wsdl:part name="id" type="s:string" />
+    <wsdl:part name="isFolder" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetFolderBreadcrumbPathHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfSitemapPath" />
+  </wsdl:message>
+  <wsdl:portType name="SiteMapSoap">
+    <wsdl:operation name="GetWebsiteMap">
+      <wsdl:input message="tns:GetWebsiteMapSoapIn" />
+      <wsdl:output message="tns:GetWebsiteMapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBreadcrumbPath">
+      <wsdl:input message="tns:GetFolderBreadcrumbPathSoapIn" />
+      <wsdl:output message="tns:GetFolderBreadcrumbPathSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenderWebsiteMap">
+      <wsdl:input message="tns:RenderWebsiteMapSoapIn" />
+      <wsdl:output message="tns:RenderWebsiteMapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RenderFolderBreadcrumbHtml">
+      <wsdl:input message="tns:RenderFolderBreadcrumbHtmlSoapIn" />
+      <wsdl:output message="tns:RenderFolderBreadcrumbHtmlSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SiteMapHttpGet">
+    <wsdl:operation name="GetWebsiteMap">
+      <wsdl:input message="tns:GetWebsiteMapHttpGetIn" />
+      <wsdl:output message="tns:GetWebsiteMapHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBreadcrumbPath">
+      <wsdl:input message="tns:GetFolderBreadcrumbPathHttpGetIn" />
+      <wsdl:output message="tns:GetFolderBreadcrumbPathHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SiteMapHttpPost">
+    <wsdl:operation name="GetWebsiteMap">
+      <wsdl:input message="tns:GetWebsiteMapHttpPostIn" />
+      <wsdl:output message="tns:GetWebsiteMapHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBreadcrumbPath">
+      <wsdl:input message="tns:GetFolderBreadcrumbPathHttpPostIn" />
+      <wsdl:output message="tns:GetFolderBreadcrumbPathHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SiteMapSoap" type="tns:SiteMapSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWebsiteMap">
+      <soap:operation soapAction="http://tempuri.org/GetWebsiteMap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetWebsiteMapAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetWebsiteMapRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBreadcrumbPath">
+      <soap:operation soapAction="http://tempuri.org/GetFolderBreadcrumbPath" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFolderBreadcrumbPathAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:GetFolderBreadcrumbPathRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenderWebsiteMap">
+      <soap:operation soapAction="http://tempuri.org/RenderWebsiteMap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RenderWebsiteMapAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:RenderWebsiteMapRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenderFolderBreadcrumbHtml">
+      <soap:operation soapAction="http://tempuri.org/RenderFolderBreadcrumbHtml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:RenderFolderBreadcrumbHtmlAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap:header message="tns:RenderFolderBreadcrumbHtmlRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SiteMapSoap12" type="tns:SiteMapSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWebsiteMap">
+      <soap12:operation soapAction="http://tempuri.org/GetWebsiteMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetWebsiteMapAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetWebsiteMapRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBreadcrumbPath">
+      <soap12:operation soapAction="http://tempuri.org/GetFolderBreadcrumbPath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFolderBreadcrumbPathAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:GetFolderBreadcrumbPathRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenderWebsiteMap">
+      <soap12:operation soapAction="http://tempuri.org/RenderWebsiteMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:RenderWebsiteMapAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:RenderWebsiteMapRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RenderFolderBreadcrumbHtml">
+      <soap12:operation soapAction="http://tempuri.org/RenderFolderBreadcrumbHtml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:RenderFolderBreadcrumbHtmlAuthenticationHeader" part="AuthenticationHeader" use="literal" />
+        <soap12:header message="tns:RenderFolderBreadcrumbHtmlRequestInfoParameters" part="RequestInfoParameters" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SiteMapHttpGet" type="tns:SiteMapHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetWebsiteMap">
+      <http:operation location="/GetWebsiteMap" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBreadcrumbPath">
+      <http:operation location="/GetFolderBreadcrumbPath" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SiteMapHttpPost" type="tns:SiteMapHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetWebsiteMap">
+      <http:operation location="/GetWebsiteMap" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFolderBreadcrumbPath">
+      <http:operation location="/GetFolderBreadcrumbPath" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SiteMap">
+    <wsdl:port name="SiteMapSoap" binding="tns:SiteMapSoap">
+      <soap:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/SiteMap.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SiteMapSoap12" binding="tns:SiteMapSoap12">
+      <soap12:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/SiteMap.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SiteMapHttpGet" binding="tns:SiteMapHttpGet">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/SiteMap.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SiteMapHttpPost" binding="tns:SiteMapHttpPost">
+      <http:address location="http://localhost/CMS400Developer/Workarea/webservices/WebServiceAPI/SiteMap.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

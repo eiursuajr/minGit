@@ -1,0 +1,688 @@
+<!--   Ektron Copyright 2002-2004 -->
+<!-- 
+  A Popup Dialog to define the Section 508 data for the TABLE tag. 
+  Date: 2004-07-22
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>Section 508 Table Properties</title>
+	<base id="myBase">
+</head>
+
+<style type="text/css">
+<!--
+Body	{background: silver;}
+TD		
+{
+	color: black;
+	font: 10pt Helvetica, Verdana, Arial, Sans-Serif;
+}
+.noBorder	{background: silver;  border: none; }
+.noDisplay	{display:none;}
+.widthNarrow	{width: 80; height : 22;}
+.widthWide	{width: 420;}	
+.numberField {text-align: right;}
+.PageHeader	
+{
+	color: black;
+	font-family: Helvetica, Verdana, Arial, Sans-Serif;
+	font-size: 12pt;
+	text-align: left;
+}
+-->
+</style>
+<script language="JavaScript1.2" type="text/javascript" src="eweputil.js"></script>
+<script Language="JavaScript1.2" type="text/javascript">
+<!--
+function default508TableTextFilename()
+//get the Form Element Text Filename section508TabletextXX.js
+{
+	return "section508tabletext" + eWebEditProUtil.languageCode + ".js";
+}
+
+document.writeln('<script type="text/javascript" language="JavaScript1.2" src="' + 
+				default508TableTextFilename() + '"></scr' + 'ipt>');
+
+//-->	
+</script>
+<script language="JavaScript1.2" type="text/javascript">
+<!--
+	function isInt(textObj)
+	{// Return true if input is an Integer.
+		var newValue = textObj.value;
+		var newLength = newValue.length;
+		for ( var i = 0; i != newLength; i++ )
+		{
+			var aChar = newValue.substring(i,i+1)
+			if ( aChar < "0" || aChar > "9" )	
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	function updateEditorContent(theForm)	
+	{// Form validation before save, call edit508Attri() and close the dialog
+		if ( isInt(theForm.tblHRows) )
+		{
+			if ( theForm.tblHRows.value > eval(iMaxHRow.innerText) )	
+			{
+				alert(Section508TableMsges["MsgIllegalHeadRows"]);
+	    		theForm.tblHRows.focus();
+	    		return false;
+			}
+			else if ( theForm.tblHRows.value == eval(iMaxHRow.innerText) &&  theForm.tblHCols.value != 0 )
+			{
+				alert(Section508TableMsges["MsgWarnHeadCols"]);
+			}
+		}
+		else
+		{
+			alert(Section508TableMsges["MsgInvalidHeadRows"]);
+			theForm.tblHRows.focus();
+	    	return false;
+		}
+		if ( isInt(theForm.tblHCols) )
+		{
+			if ( theForm.tblHCols.value > eval(iMaxHCol.innerText) )	
+			{
+				alert(Section508TableMsges["MsgIllegalHeadCols"]);
+	    		theForm.tblHCols.focus();
+	    		return false;
+			}
+		}
+		else
+		{
+			alert(Section508TableMsges["MsgInvalidHeadCols"]);
+    		theForm.tblHCols.focus();
+    		return false;
+		}
+		// update the selected table with the section 508 properties
+		submitText = edit508Attri();
+		// replace the selected table at the editor with this one with new 508 attribtues
+		if (eWebEditProUtil.isOpenerAvailable())	
+		{
+			var theEditor = eWebEditProUtil.getOpenerInstance().editor;
+			theEditor.pasteHTML(submitText);
+		}
+		else
+		{
+			alert(Section508TableMsges["MsgNoEditorforSave"]);
+		}
+		window.close();
+	}
+	
+	function getRandom() 
+	{// generate a random number as the table id
+	     return Math.round(Math.random()*1000);
+	}
+	
+	function moveCellAttr(oTag,oNewTag)	
+	{// move the attributes from the old tag to the new tag
+		// can't use mergeAttributes because we have different tag names
+ 		// style attributes would not be copied over
+		
+ 	    // Retrieve attributes with getAttribute method, these attributes might not be retrieved by IE 5.0
+		for ( var attr in oTag )	
+		{
+			var strAttrList = "abbr;axis;ch;choff;headers;scope;"; // end list string with a ';'
+			var strAttr = attr.toLowerCase() + ";";
+			if ( strAttrList.indexOf(strAttr) >= 0 ) 
+			{
+				var attrValue = oTag.getAttribute(attr); 
+				if ( attrValue && typeof attrValue != "object" )	
+				{
+					oNewTag.setAttribute(attr, attrValue);
+				}
+			}
+		}
+		// Retrieve the collection of attributes for the specified object.
+	    var oAttribs = oTag.attributes;
+	    // Iterate through the collection.
+	    for ( var i = 0; i < oAttribs.length; i++ )
+	    {
+	        var oAttrib = oAttribs[i];
+			if ( oAttrib.specified ) 
+			{
+				var attrValue = oTag.getAttribute(oAttrib.nodeName); 
+				if ( attrValue && typeof attrValue != "object" )	
+				{
+					oNewTag.setAttribute(oAttrib.nodeName, attrValue);
+				}
+			}
+		}
+		return (oNewTag);
+	}
+		
+	function createCellID(x,y)
+	{
+		var strCellID = x + "_" + y;
+		return	(strCellID);
+	}
+	
+	function writeOutMatrix(nRow,nCell,nColSpan,nRowSpan,aMatrix,sValue)
+	{
+		if ( nColSpan || nRowSpan )
+		{
+			for ( var x = 0; x < nRowSpan; x++ )
+			{
+				var next_row = eval(nRow + x);
+				for ( var y = 0; y < nColSpan; y++ )
+				{
+					var next_cell = eval(nCell + y);
+					while ( aMatrix["'" + next_row + "," + next_cell + "'"] != "" )
+					{
+						next_cell = next_cell + 1;
+					}
+					aMatrix["'" + next_row + "," + next_cell + "'"] = sValue;
+				}
+			}
+		}
+		return (aMatrix);
+	}
+	
+	function edit508Attri()
+	{// edit Section 508 properties of the selected table
+		var bSuccess; 
+		var oTable = oTableContainer.all[0]; 
+		// edit summary attribute of the TABLE
+		if ( "" == document.frm_def.tblSummary.value )
+		{
+			bSuccess = oTable.removeAttribute("summary");
+		}
+		else
+		{
+			oTable.summary = document.frm_def.tblSummary.value;
+		}
+		//edit Abbr
+		if ( "" == document.frm_def.tblAbbr.value )
+		{
+			bSuccess = oTable.removeAttribute("abbr");
+		}
+		else
+		{
+			oTable.abbr = document.frm_def.tblAbbr.value;
+		}
+		
+		if ( "" == document.frm_def.tblAxis.value )
+		{
+			bSuccess = oTable.removeAttribute("axis");
+		}
+		else
+		{
+			oTable.axis = document.frm_def.tblAxis.value;
+		}
+
+		// edit CAPTION and its attributes
+		var oCaption = oTable.createCaption();
+		if ( "" == document.frm_def.tblCaption.value )	
+		{
+			oTable.deleteCaption();
+		}
+		else	
+		{
+			oCaption.innerHTML = document.frm_def.tblCaption.value;
+			if ( "" == document.frm_def.tblCAlign.options[document.frm_def.tblCAlign.selectedIndex].value )	
+			{
+				bSuccess = oCaption.removeAttribute("align");
+			}
+			else	
+			{
+				oCaption.align = document.frm_def.tblCAlign.options[document.frm_def.tblCAlign.selectedIndex].value;
+			}
+			if ( "" == document.frm_def.tblCVAlign.options[document.frm_def.tblCVAlign.selectedIndex].value )	
+			{
+				bSuccess = oCaption.removeAttribute("vAlign");
+			}
+			else	
+			{
+				oCaption.vAlign = document.frm_def.tblCVAlign.options[document.frm_def.tblCVAlign.selectedIndex].value;
+			}
+		}
+
+		//insert or remove SCOPE, ID, HEADERS attributes of all cells
+		var nRandTbl = getRandom();
+		var oRow;
+		var curr_row;
+		var curr_cell;
+		var nCellId;
+		var strTempID;
+		var aAction;
+		var nTHRows = document.frm_def.tblHRows.value;
+		var nTHCols = document.frm_def.tblHCols.value;
+		
+		// initialize a 2-D array to store all the corresponding IDs or HEADERS
+		var nMatrixX = eval(iMaxHRow.innerText);
+		var nMatrixY = eval(iMaxHCol.innerText);
+		var matrixmap = new Array();
+		for ( var x = 0; x < nMatrixX; x++ )
+		{
+			for ( var y = 0; y < nMatrixY; y++ )
+			{
+				matrixmap["'" + x + "," + y + "'"] = "";
+			}
+		}
+		
+		for ( curr_row = 0; curr_row < oTable.rows.length; curr_row++ )	
+		{
+			oRow = oTable.rows[curr_row];
+			for ( curr_cell = 0; curr_cell < oRow.cells.length; curr_cell++ )	
+			{
+				// reset all the HEADERS 
+				oRow.cells[curr_cell].removeAttribute("headers");
+				if ( curr_row < nTHRows )	
+				{// add 508 attributes and change tagname to TH for Row Headings
+					oRow.cells[curr_cell].scope = "col";
+					strTempID = createCellID(curr_row,curr_cell);
+					oRow.cells[curr_cell].id = "tbl" + nRandTbl + "id" + strTempID;
+					aAction = writeOutMatrix(curr_row,curr_cell,oRow.cells[curr_cell].colSpan,oRow.cells[curr_cell].rowSpan,matrixmap,oRow.cells[curr_cell].id);
+					if ( oRow.cells[curr_cell].tagName != "TH" )	
+					{// get the ID of the TD cell that needs to change to TH, delete its headers
+						nCellId = oRow.cells[curr_cell].id;
+						var oTemp = document.getElementById(nCellId);
+						bSuccess = document.all[nCellId].removeAttribute("headers");
+						// create a new TH tag and copy all the text and attributes of the TD cell
+						var oNewItem = document.createElement("TH");
+						oNewItem.innerHTML = oTemp.innerHTML;	
+						oNewItem = moveCellAttr(oTemp,oNewItem);
+						// insert the TH cell before the TD cell and delete the TD cell
+						oTemp.insertAdjacentElement("BeforeBegin",oNewItem);
+						oRow.deleteCell(curr_cell + 1);
+					}
+				}
+				else	
+				{// if (curr_row > nTHrows)
+					var matrix_cell = curr_cell;
+					while ( matrixmap["'" + curr_row + "," + matrix_cell + "'"] != "" )
+					{
+						matrix_cell = matrix_cell + 1;
+					}
+					if ( matrix_cell < nTHCols && 0 == matrixmap["'" + curr_row + "," + matrix_cell + "'"] )	
+					{// add 508 attributes and change tagname to TH for Column Headings
+						oRow.cells[curr_cell].scope = "row";
+						strTempID = createCellID(curr_row,curr_cell);
+						oRow.cells[curr_cell].id = "tbl" + nRandTbl + "id" + strTempID;
+						aAction = writeOutMatrix(curr_row,matrix_cell,oRow.cells[curr_cell].colSpan,oRow.cells[curr_cell].rowSpan,matrixmap,oRow.cells[curr_cell].id);
+						nCellId = oRow.cells[curr_cell].id;
+						var oTemp = document.getElementById(nCellId);
+						bSuccess = document.all[nCellId].removeAttribute("headers");
+						// create a new TH tag and copy all the text and attributes of the TD cell
+						var oNewItem = document.createElement("TH");
+						oNewItem.innerHTML = oTemp.innerHTML;	
+						oNewItem = moveCellAttr(oTemp,oNewItem);
+						// insert the TH cell before the TD cell and delete the TD cell
+						oTemp.insertAdjacentElement("BeforeBegin",oNewItem);
+						oRow.deleteCell(curr_cell + 1);
+					}
+					else	
+					{// these are not Headings, HEADERS are required
+						nCellId = oRow.cells[curr_cell].id;
+						if ( nCellId != "" )	
+						{// remove 508 attributes and change tagname to TD
+							var oTemp = document.getElementById(nCellId);
+							bSuccess = document.all[nCellId].removeAttribute("scope");	
+							bSuccess = document.all[nCellId].removeAttribute("id");
+							// create a new TD tag and copy all the text and attributes of the TH cell
+							var oNewItem = document.createElement("TD");
+							oNewItem.innerHTML = oTemp.innerHTML;	
+							oNewItem = moveCellAttr(oTemp,oNewItem);
+							// insert the TD cell before the TH cell and delete the TH cell
+							oTemp.insertAdjacentElement("BeforeBegin",oNewItem);
+							oRow.deleteCell(curr_cell + 1);
+						}
+						
+						if ( nTHCols > 0 || nTHRows > 0 )
+						{// add 508 headers attribute, loop through the IDs inside out, and Row IDs before Column IDs
+							var iCol = nTHCols;
+							var iRow = nTHRows;
+							var sHeaders = "";
+							for ( var j = iCol-1; j >= 0; j-- )	
+							{
+								sHeaders = sHeaders + " " + matrixmap["'" + curr_row + "," + j + "'"];
+							}
+							for ( var i = iRow-1; i >= 0; i-- )	
+							{
+								sHeaders = sHeaders + " "  + matrixmap["'" + i + "," + matrix_cell + "'"];
+							}
+							if ( 0 == sHeaders.indexOf(" ") )
+							{
+								sHeaders = sHeaders.substring(1);
+							}
+							aAction = writeOutMatrix(curr_row,matrix_cell,oRow.cells[curr_cell].colSpan,oRow.cells[curr_cell].rowSpan,matrixmap,sHeaders);
+							if ( sHeaders != "" )
+							{// insert HEADERS attribute if it exists
+								oRow.cells[curr_cell].headers = sHeaders;
+							}
+							if ( " " == oRow.cells[curr_cell].headers )
+							{// removeAttribute("headers") if it is an empty string
+								oRow.cells[curr_cell].removeAttribute("headers");
+							}
+						}
+						else	
+						{// The table has no ID, these cells have no Headers
+							oRow.cells[curr_cell].removeAttribute("headers");
+							oRow.cells[curr_cell].removeAttribute("scope");
+							oRow.cells[curr_cell].removeAttribute("id");
+						}
+					}
+				}
+		  	}
+		}
+		if (nTHRows>0)	
+		{// Place THEAD in the TABLE
+			if ( !oTable.tHead )	
+			{
+				oTable.createTHead();
+			}
+			if ( oTable.tHead )	
+			{
+				if ( oTable.tHead.rows.length < nTHRows )	
+				{// add cell collection to the THEAD
+					for (var i = oTable.tHead.rows.length; i < nTHRows; i++)	
+					{
+						oTable.tHead.appendChild(oTable.rows[i]);
+					}
+				}
+				else if ( oTable.tHead.rows.length > nTHRows )	
+				{// remove cell collection to the THEAD
+					for ( var i = oTable.tHead.rows.length-1; i >= nTHRows; i-- )	
+					{
+						oTable.tBodies[0].insertBefore(oTable.rows[i],oTable.tBodies[0].firstChild);
+					}
+				}
+			}
+		}
+		else	
+		{// Remove THEAD
+			if ( oTable.tHead )	
+			{// remove cell collection to the THEAD where there is no Row Headings
+				if ( oTable.tHead.rows.length > nTHRows )	
+				{
+					for ( var i = oTable.tHead.rows.length-1; i >= nTHRows; i-- )	
+					{
+						oTable.tBodies[0].insertBefore(oTable.rows[i],oTable.tBodies[0].firstChild);
+					}
+				}
+				oTable.deleteTHead();
+			}
+		}
+		matrixmap = null;
+		var submitText = oTableContainer.innerHTML;
+		return(submitText);
+	}
+	
+	function writeInputBtnTag(sType,sName,sValue)
+	{
+		var sTemp = '<input type="' + sType + '" name="' + sName + '" value="' + sValue + '" cla' + 'ss="widthNarrow"';
+		return sTemp;
+	}
+	
+	function writeOptionTag(sValue,sDisplay)
+	{
+		var sTemp = '<option value="' + sValue + '">' + sDisplay + '</opt' + 'ion>';
+		return sTemp;
+	}
+//-->	
+</script>
+<body onload="self.focus();">
+	<!-- place holder for the working TABLE tag -->
+	<div id="oTableContainer" class="noDisplay"></div>
+
+	<table border="0" cellspacing="0" cellpadding="0" width="100%" summary="The form to define the seciont 508 attributes of the selected table.">
+	<form onsubmit="return updateEditorContent(this);" name="frm_def">
+		<caption class="PageHeader">
+		<script language="JavaScript1.2" type="text/javascript">
+			document.write(Section508TableMsges["LabelForm"]);
+		</script>
+		</caption>
+		<tr>
+			<td colspan="3"><hr></td>
+		</tr>
+		<tr>
+			<td nowrap>
+			<script language="JavaScript1.2" type="text/javascript">
+				document.write(Section508TableMsges["LabelHeadRows"]);
+			</script>
+			</td>
+			<td nowrap><input type="Text" name="tblHRows" value="" size="3" maxlength="2" class="numberField">&nbsp;&nbsp;&nbsp;(<script language="JavaScript1.2" type="text/javascript">document.write(Section508TableMsges["LabelMax"]);</script> <span id="iMaxHRow">0</span>)</td>
+			<td align="right">
+			<script language="JavaScript1.2" type="text/javascript">
+				var sHTML = writeInputBtnTag("submit","btnSave",Section508TableMsges["LabelBtnDone"]);
+				sHTML += '>';
+				document.write(sHTML);
+			</script>
+			</td>
+		</tr>
+		<tr>
+			<td nowrap>
+			<script language="JavaScript1.2" type="text/javascript">
+				document.write(Section508TableMsges["LabelHeadCols"]);
+			</script>
+			</td>
+			<td nowrap><input type="Text" name="tblHCols" value="" size="3" maxlength="2" class="numberField">&nbsp;&nbsp;&nbsp;(<script language="JavaScript1.2" type="text/javascript">document.write(Section508TableMsges["LabelMax"]);</script> <span id="iMaxHCol">0</span>)</td>
+			<td align="right">
+			<script language="JavaScript1.2" type="text/javascript">
+				var sHTML = writeInputBtnTag("button","btnClose",Section508TableMsges["LabelBtnCancel"]);
+				sHTML += ' onclick="window.close();">';
+				document.write(sHTML);
+			</script>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<script language="JavaScript1.2" type="text/javascript">
+				document.write(Section508TableMsges["LabelSummary"]);
+			</script>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"><input type="Text" name="tblSummary" value="" class="widthWide"></td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+			<script language="JavaScript1.2" type="text/javascript">
+				document.write(Section508TableMsges["LabelCaption"]);
+			</script>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"><textarea name="tblCaption" cols="50" rows="3" class="widthWide"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+Abbr
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"><textarea name="tblAbbr" cols="50" rows="3" class="widthWide"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="3">
+Axis
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3"><textarea name="tblAxis" cols="50" rows="3" class="widthWide"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<td colspan="2" nowrap>
+			<script language="JavaScript1.2" type="text/javascript">
+				document.write(Section508TableMsges["LabelHCaption"]);
+			</script>
+			</td>
+			<td>
+			<script language="JavaScript1.2" type="text/javascript">
+				var sHTML = '<sel' + 'ect name="tblCAlign" cla' + 'ss="width80">';
+				sHTML += writeOptionTag("",Section508TableMsges["OptionNotSet"]);
+				sHTML += writeOptionTag("LEFT",Section508TableMsges["OptionLeft"]);
+				sHTML += writeOptionTag("CENTER",Section508TableMsges["OptionCenter"]);
+				sHTML += writeOptionTag("Right",Section508TableMsges["OptionRight"]);
+				sHTML += '</sel' + 'ect>';
+				document.write(sHTML);
+			</script>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<script language="JavaScript1.2" type="text/javascript">
+				document.write(Section508TableMsges["LabelVCaptionAlign"]);
+			</script>
+			</td>
+			<td>
+			<script language="JavaScript1.2" type="text/javascript">
+				var sHTML = '<sel' + 'ect name="tblCVAlign" cla' + 'ss="width80">';
+				sHTML += writeOptionTag("",Section508TableMsges["OptionNotSet"]);
+				sHTML += writeOptionTag("TOP",Section508TableMsges["OptionTop"]);
+				sHTML += writeOptionTag("BOTTOM",Section508TableMsges["OptionBottom"]);
+				sHTML += '</sel' + 'ect>';
+				document.write(sHTML);
+			</script>
+			</td>
+		</tr>
+		</form>
+	</table>
+		
+	<script language="JavaScript1.2" type="text/javascript">
+	<!--
+		// loading the selected tag and prefill the form
+		var strTextData;
+		if (eWebEditProUtil.isOpenerAvailable())
+		{
+			var theEditor = eWebEditProUtil.getOpenerInstance().editor;
+			strTextData = theEditor.getSelectedHTML();
+		}
+		else
+		{
+			alert(Section508TableMsges["MsgNoEditorforLoad"]);
+			window.close();
+		}
+
+		if ( strTextData.length > 0 ) 
+		{// calculate the number of existing Headings and the max. number of Headings allowed
+			document.getElementById("myBase").href = top.opener.location.href;
+			oTableContainer.innerHTML = strTextData; 
+			var oTable = oTableContainer.all[0]; 
+			
+			var oRow;
+			var curr_row;
+			var curr_cell;
+			var nMax_row = 0;
+			var nMax_cell = 0;
+			var nTH = 0;
+			var nTHCount = 0;
+			var nCellCount = 0;
+			var nTHRows = 0;
+			var nTHCols = 0;
+			var nStartRow = 0;
+			if ( oTable.tHead )	
+			{// calculate the number of Row Heading in THEAD
+				nTHRows = nTHRows + oTable.tHead.rows.length;
+				nStartRow = oTable.tHead.rows.length;
+				nMax_row = oTable.tHead.rows.length;
+				nMax_cell = oTable.rows[oTable.tHead.rows.length-1].cells.length;
+			}
+			for ( curr_row = nStartRow; curr_row < oTable.rows.length; curr_row++ )	
+			{//calculate the number of Row Heading outside THEAD
+				oRow = oTable.rows[curr_row];
+				for ( curr_cell = 0; curr_cell < oRow.cells.length; curr_cell++ )	
+				{
+					if ( curr_cell == 0 )	
+					{
+						nTH = 0;
+						nCellCount = 0;
+						nTHCount = 0;
+					}
+					// count Column Heading.
+					if ( "TH" == oRow.cells[curr_cell].tagName )	
+					{
+						nTHCount = nTHCount + oRow.cells[curr_cell].colSpan;
+					}
+					// count table columns 
+					nCellCount = nCellCount + oRow.cells[curr_cell].colSpan;
+			  	}
+				if ( nTHCount > nTH )
+				{
+					nTH = nTHCount;
+				}
+				// test if all cells are row heading or column heading
+				var bColScope = true;
+				if ( ("string" == typeof oRow.cells[0].scope) && ("row" == oRow.cells[0].scope.toLowerCase()) )
+				{
+					bColScope = false;
+				}
+				if ( nTHCount == nCellCount && bColScope )	
+				{
+					nTHRows = curr_row + 1;
+					nTH = 0;
+				}
+				if ( nMax_cell < nCellCount )	
+				{
+			    	nMax_cell = nCellCount;
+			  	}
+				nMax_row = nMax_row + 1; 
+				if ( nTH != 0 && 0 == nTHCols )
+				{
+					nTHCols = nTH;
+				}
+			}
+			document.frm_def.tblHRows.value = nTHRows;
+			document.frm_def.tblHCols.value = nTHCols;
+			iMaxHRow.innerText = nMax_row;
+			iMaxHCol.innerText = nMax_cell;
+			// prefill the summary attributes of the TABLE tag
+			if ( typeof oTable.summary != "undefined" )
+			{
+				document.frm_def.tblSummary.value = oTable.summary;
+			}
+			if ( typeof oTable.abbr != "undefined" )
+			{
+				document.frm_def.tblAbbr.value = oTable.abbr;
+			}
+			if ( typeof oTable.axis != "undefined" )
+			{
+				document.frm_def.tblAxis.value = oTable.axis;
+			}
+	
+			// prefill the CAPTION tag information and its attributes
+			var oCaption = oTable.createCaption();
+			document.frm_def.tblCaption.value = oCaption.innerHTML; 
+			var strTemp = oCaption.align.toUpperCase();
+			for ( var i=0; i < document.frm_def.tblCAlign.options.length ; i++ )	
+			{
+				if ( document.frm_def.tblCAlign.options[i].value == strTemp )	
+				{
+					document.frm_def.tblCAlign.options[i].selected = true;
+				}
+			}
+			strTemp = oCaption.vAlign.toUpperCase();
+			for ( var i = 0; i < document.frm_def.tblCVAlign.options.length ; i++ )	
+			{
+				if ( document.frm_def.tblCVAlign.options[i].value == strTemp )	
+				{
+					document.frm_def.tblCVAlign.options[i].selected = true;
+				}
+			}
+		}
+	// -->
+	</script>
+</body>
+</html>
+
+

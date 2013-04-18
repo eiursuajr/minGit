@@ -1,0 +1,230 @@
+/* wrapper */
+div.EktronPersonalization {display: block; border:1px solid silver;padding:0;margin:0 auto;font-family:Arial, Helvetica, sans-serif;}
+div.EktronPersonalization div.innerWrapper {padding:1em;}
+
+/* default styles */
+div.EktronPersonalization img {border:none;}
+div.EktronPersonalization a {color:blue;text-decoration:none;}
+div.EktronPersonalization a:hover {color:blue;text-decoration:underline;}
+div.EktronPersonalization a:visited {color:blue;}
+
+/* base styles */
+div.EktronPersonalization .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+div.EktronPersonalization .clearfix {display:inline-block;}
+div.EktronPersonalization .alignRight {text-align:right;}
+div.EktronPersonalization .alignLeft {text-align:left;}
+div.EktronPersonalization .textSmall {font-size:.75em;}
+div.EktronPersonalization .emphasis {font-weight:bold;}
+div.EktronPersonalization .italic {font-style:italic;}
+div.EktronPersonalization .noBackgroundImage {background-image:none;}
+div.EktronPersonalization .noBorderTop {border-top:none;}
+div.EktronPersonalization .noBorderTopBottom {border-top:none;border-bottom:none;}
+div.EktronPersonalization .gutterTop {margin-top:1em !important;}
+div.EktronPersonalization .gutterTopSmall {margin-top:.5em !important;}
+div.EktronPersonalization .gutterTopMini {margin-top:.25em !important;}
+div.EktronPersonalization .gutterTopMicro {margin-top:2px !important;}
+div.EktronPersonalization .gutterRight {margin-right:1em !important;}
+div.EktronPersonalization .gutterRightSmall {margin-right:.5em !important;}
+div.EktronPersonalization .gutterRightMini {margin-right:.25em !important;}
+div.EktronPersonalization .gutterRightMicro {margin-right:2px !important;}
+div.EktronPersonalization .gutterLeft {margin-left:1em !important;}
+div.EktronPersonalization .gutterLeftSmall {margin-left:.5em !important;}
+div.EktronPersonalization .gutterLeftMini {margin-right:.25em !important;}
+div.EktronPersonalization .gutterLeftMicro {margin-right:2px !important;}
+div.EktronPersonalization .required {color:red;}
+div.EktronPersonalization .requiredReminder {display:none;}
+div.EktronPersonalization .smallText {font-size:.9em;}
+
+/* buttons */
+div.EktronPersonalization .button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}
+div.EktronPersonalization .buttonLeft {float:left;}
+div.EktronPersonalization .buttonRight {float:right;}
+div.EktronPersonalization .buttonInline {display:inline;}
+div.EktronPersonalization .button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+div.EktronPersonalization .button:hover {border:1px solid #fbc2c4;color:#d12f19;text-decoration:none;}
+div.EktronPersonalization .greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+div.EktronPersonalization .redHover:hover {background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+div.EktronPersonalization .blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}
+
+/* tab menu */
+div.EktronPersonalization div.tabWrapper {display:block;background-image:url('images/widgetHandleBackground.gif');background-repeat:repeat-x;background-position:0px 0px;padding:5px 0px 0px 0px;position:relative;z-index:88;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper {margin:0;padding:0;background-image:url('images/tabBackgroundOff.jpg');background-repeat:repeat-x;background-position:0px 0px;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs {display:block;float:none;list-style:none;margin:0;padding:0;border-bottom:1px solid #9a9a9a;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.tab {white-space:nowrap;height:auto !important;text-align:left;font-weight:bold;float:left;background-image:url('images/tabBackgroundOff.jpg');background-repeat:repeat;background-position:0px 0px;position:relative;padding:6px 30px 6px 30px;border-right:1px solid #9a9a9a;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.tabOptions {padding:5px 5px;float:right !important;border-right:none;border-left:1px solid #9a9a9a;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.first {border-left:1px solid #9a9a9a;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.selected {background-image:url('images/tabBackgroundOn.jpg');cursor:default;background-position:0px 0px;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.tab a {color:#676767;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.hover a {color:#383838;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.selected a.label {background-image:none !important;color:white !important;}
+
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li a.private,
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.selected a.private {background-image:url('images/lock.png') !important;background-repeat:no-repeat;padding-left:12px;background-position:left 2px;}
+
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li a:hover {text-decoration:none;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li a.remove {float:left;display:none;position:absolute;top:4px;right:10px;border:1px solid #676767;padding:0;margin:0;height:10px;width:10px;background-image:url('images/tabDelete.gif');background-repeat:no-repeat;background-position:center center;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.selected a.remove {border:1px solid white;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li a.remove:hover {background-color:#676767;background-image:url('images/tabDeleteHover.gif');}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.selected a.remove {background-image:url('images/tabDeleteSelected.gif');}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.selected a.remove:hover {background-color:white;background-image:url('images/tabDeleteSelectedHover.gif');}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.tabOptions a {display:block;width:16px;height:16px;margin:0;padding:0;background-image:url('images/tabOptionsOff.gif');background-repeat:no-repeat;background-position:0px 0px;}
+div.EktronPersonalization div.tabWrapper div.innerWrapper ul.tabs li.tabOptions a:hover {background-image:url('images/tabOptionsHover.gif');}
+
+/* tab options menu */
+div.EktronPersonalization div.tabWrapper ul.tabOptions {list-style:none;display:none;margin:0;padding:18px 0;position:absolute;z-index:9999;top:28px;right:5px; background: #ededed url(../../images/UI/menu/dropdown-background.gif) repeat-x 0 0; border: solid 1px #bfbfbf;}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li {margin:0;padding:0;display:block;background-repeat:no-repeat;background-position:3px center;}
+/*
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.addTab {background-image:url('images/tabAdd.gif');}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.addColumn {background-image:url('images/columnAdd.gif');}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.resetWidgets {background-image:url('images/resetWidgets.jpg');}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.editDefaultWidgets {background-image:url('images/editDefaultWidgets.gif');}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.done {background-image:url('images/tick.jpg');}
+*/
+div.EktronPersonalization div.tabWrapper ul.tabOptions li a {display: block; margin:0; padding: 3px 24px; color:#000;}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li a:hover {text-decoration:none; color: #fff;  background: #3767af url('../../images/ui/over_tab.gif') 0 0 repeat-x;}
+/*
+div.EktronPersonalization div.tabWrapper ul.tabOptions li a span {padding:.25em .25em .25em 15px;margin-left:15px;display:block;background-repeat:no-repeat;background-position:0px 2px;}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.addTab a:hover span {background-image:url('images/addSmall.gif');}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.addColumn a:hover span {background-image:url('images/addSmall.gif');}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.resetWidgets a:hover span {background-image:url('images/selectSmall.gif');}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.editDefaultWidgets a:hover span {background-image:url('images/selectSmall.gif');}
+div.EktronPersonalization div.tabWrapper ul.tabOptions li.done a:hover span {background-image:url('images/addSmall.gif');}
+*/
+
+/* base modal styles */
+table.tabWindow .dialogLabel {background-image:url('images/modal.png');margin:0em 0em 1em 0em !important;padding:.5em .5em .5em 26px;background-repeat:no-repeat;background-position:5px center;}
+table.tabWindow .redLabel {background-color:#fbe3e4;border:1px solid #fbc2c4;}
+table.tabWindow .greenLabel {background-color:#E6EFC2;border:1px solid #C6D880;}
+
+/* tab modal */
+/* NOTE: To get around an IE6 issue, we need to use the toTop property on Modal, */
+/* so none of the modal rules can be encapsulated inside of div.EktronPersonalization */
+table.tabWindow {margin:0;border:1px solid silver;border-collapse:collapse;}
+table.tabWindow thead th.tabHeader {height:30px;line-height:100%;padding:0em .5em;text-align:left;background-image:url('images/th.gif');background-repeat:repeat-x;background-position:0px 0px;}
+table.tabWindow thead th.tabHeader span {color:White;position:relative;top:4px;}
+table.tabWindow thead th.tabHeader img {float:right;position:relative;top:1px;}
+table.tabWindow thead th.tabHeader img {float:right;position:relative;top:1px;}
+table.tabWindow tfoot td {padding:1em;}
+table.tabWindow tfoot div {padding:1em;margin:0em;border-top:1px dotted silver;}
+table.tabWindow tbody td {padding:0;}
+table.tabWindow tbody td div.wrapper {padding:1em 1em 0em 1em;background-color:white;}
+table.tabWindow tbody td div.wrapper div.buttons {border:none;margin:0;padding:1em 0em 0em 0em;}
+/*table.tabWindow .button {display:block;margin:0;background-color:#f5f5f5;border:1px solid #dedede;border-top:1px solid #eee;border-left:1px solid #eee;font-size:100%;line-height:100%;text-decoration:none;color:#565656;cursor:pointer;padding:5px 10px 6px 7px;}*/
+table.tabWindow .buttonLeft {float:left;}
+table.tabWindow .buttonRight {float:right;}
+table.tabWindow .buttonInline {display:inline;}
+table.tabWindow .button img {margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px;}
+/*table.tabWindow .button:hover {border:1px solid #fbc2c4;color:#d12f19;text-decoration:none;}*/
+/*table.tabWindow .greenHover:hover {background-color:#E6EFC2;border:1px solid #C6D880;color:#529214;}
+table.tabWindow .redHover:hover {background-color:#fbe3e4;border:1px solid #fbc2c4;color:#d12f19;}
+table.tabWindow .blueHover:hover {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;}*/
+
+/* tab modal - cancel button */
+/*table.tabWindow a.ektronModalClose {font-weight:normal !important;color:#4c4c4c !important;}*/
+
+/* tab modal - add tab */
+table.tabWindow tbody td div.wrapper div.addTab {display:none;}
+table.tabWindow tbody td div.wrapper div.addTab div.form {margin:0;padding:0em;}
+table.tabWindow tbody td div.wrapper div.addTab div.form p.first {margin-bottom:.5em;}
+table.tabWindow tbody td div.wrapper div.addTab div.form p label {position:relative;top:5px;float:left;width:8em;margin-right:.5em;text-align:right;}
+
+/* tab modal - remove tab */
+table.tabWindow tbody td div.wrapper div.removeTab {display:none;}
+table.tabWindow tbody td div.wrapper div.removeTab div.form {margin:0;padding:0;}
+table.tabWindow tbody td div.wrapper div.removeTab div.form p {color:#4c4c4c;margin:0;}
+table.tabWindow tbody td div.wrapper div.removeTab div.form p label {position:relative;top:3px;float:left;width:5em;margin-right:.25em;text-align:right;}
+
+/* widget list */
+div.EktronPersonalization div.widgetTray {margin:0;padding:0;display:none;background-image:url('images/widgetListBackground.gif');background-repeat:repeat;background-position:0px 0px;}
+div.EktronPersonalization div.widgetTray div.innerWrapper {margin:0;padding:0;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper {margin:0;padding:0;position:relative; z-index: 50;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a {position:absolute;display:none; width: 58px;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a img {visibility:hidden;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a:hover {text-decoration:none;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a.scrollLeft {z-index:9; background-image:url('images/scrollLeft.png'); background-position:0px 0px; background-repeat:no-repeat;left:-1px;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a.scrollLeft:hover img {visibility:visible;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a.scrollRight {z-index:9; right: -1px; background-image:url('images/scrollRight.png'); background-position:0px 0px; background-repeat:no-repeat; text-align: right;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a.scrollRight:hover img {width: auto;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a.hide:hover {cursor:default !important;}
+div.EktronPersonalization div.widgetTray div.innerWrapper p.scrollWrapper a.hide:hover img {visibility:hidden !important;}
+div.EktronPersonalization div.widgetTray div.innerWrapper div.overflowWrapper {padding:1.2em 0em;margin:0em 1em;overflow:hidden;position:relative;z-index:8;}
+div.EktronPersonalization div.widgetTray div.innerWrapper div.overflowWrapper ul.widgetList {position:relative;list-style:none;margin:0;padding:0;}
+div.EktronPersonalization div.widgetTray div.innerWrapper div.overflowWrapper ul.widgetList .placeholder {display:none;}
+
+li.widgetToken {width:80px;cursor:move;background-color:white;list-style:none;overflow:hidden;float:left;margin:0em .5em 0em .5em;padding:0em;border:2px solid silver;}
+li.widgetTokenFirst {margin-left:0em;}
+li.widgetTokenLast {margin-right:0em;}
+li.widgetToken:hover {border:2px solid #FF00FF;}
+li.widgetToken img {margin:5px auto;display:block;height:48px;width:48px;}
+li.widgetToken span {overflow:hidden;display:block;font-size:.9em;margin-top:.25em;padding:.1em;display:block;text-align:center;background-color:#4c4c4c;color:white;word-wrap:normal !important;}
+
+/* widget tray handle */
+div.EktronPersonalization p.widgetTrayHandle {position:relative;z-index:2;margin:0 0 -9px 0;padding:0px 40px 0px 0px;text-align:right;background-image:url('images/widgetHandleBackground.gif');background-repeat:repeat-x;background-position:0px 0px;}
+div.EktronPersonalization p.widgetTrayHandle a.widgetTrayToggle {text-decoration:none;top:0px;padding:0;margin:0;position:relative;}
+div.EktronPersonalization p.widgetTrayHandle a.widgetTrayToggle:hover {text-decoration:none;}
+div.EktronPersonalization p.widgetTrayHandle a.widgetTrayToggle img {border:none;margin:0;padding:0;}
+div.EktronPersonalization p.widgetTrayHandle a.widgetTrayToggle span.direction {position:absolute;left:30px;top:3px;width:10px;height:10px;background-image:url('images/arrowDown.gif');background-repeat:no-repeat;background-position:0px 0px;}
+div.EktronPersonalization p.widgetTrayHandle a.widgetTrayToggle:hover span.direction {background-image:url('images/arrowDownHover.gif');}
+div.EktronPersonalization p.widgetTrayHandle a.widgetTrayToggle span.directionUp {background-image:url('images/arrowUp.gif');}
+div.EktronPersonalization p.widgetTrayHandle a.widgetTrayToggle:hover span.directionUp {background-image:url('images/arrowUpHover.gif');}
+
+/* widget page - table */
+div.EktronPersonalization div.widgetWrapper {opacity:0;filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"}
+div.EktronPersonalization table.ektronWidgetPage {width:100%;border-collapse:collapse;margin:0;padding:0;z-index:1;}
+
+/* columns */
+div.EktronPersonalization table.ektronWidgetPage td.column {overflow:hidden;padding:0px;position:static;vertical-align:top;border:1px solid #EEEEEE;vertical-align:top;min-height:100px;height:auto !important;height:100px;margin:0px;}
+div.EktronPersonalization table.ektronWidgetPage td.column div.columnRemove {display:none;}
+div.EktronPersonalization table.ektronWidgetPage td.column div.columnRemove p {margin:0px 0px 10px 0px;background-color:#f5f5f5;border:none;}
+div.EktronPersonalization table.ektronWidgetPage td.column div.columnRemove p a.removeColumn {display:block;padding:5px 0px 5px 0px;border-bottom:1px solid #EEEEEE;}
+div.EktronPersonalization table.ektronWidgetPage td.column div.columnRemove p a.hover {background-color:#fbe3e4;}
+div.EktronPersonalization table.ektronWidgetPage td.column div.columnRemove p a.removeColumn img {float:right;vertical-align:middle;}
+div.EktronPersonalization table.ektronWidgetPage td.column div.columnRemove p a.removeColumn img.hover {display:none;}
+div.EktronPersonalization table.ektronWidgetPage td.column div.widgetWrapper {overflow:hidden;}
+div.EktronPersonalization table.ektronWidgetPage td.column li.widgetToken {float:none !important;}
+
+
+/* widget */
+div.widget {background-color:white;display:block;margin:10px;border:1px solid #9a9a9a; }
+div.widget > div.header { cursor:move;line-height:20px;background-image:url('images/widgetHeaderBackground.gif');background-position:0px 0px;background-repeat:repeat-x; }
+div.widget > div.header div.buttons {padding:0px 2px 0px 0px;white-space:nowrap;}
+div.widget div.header div.buttons input {position:relative;top:2px;float:right;height:16px;width:16px;}
+div.widget div.header div.buttons input.minimize {float:left;}
+div.widget div.header div.buttons input.restore {float:left;}
+div.widget > div.header div.buttons a {position:relative;top:2px;float:right;height:16px;width:16px;}
+div.widget > div.header div.buttons a img {border:none;}
+div.widget div.header div.buttons a.minimize {float:left;}
+div.widget div.header div.buttons a.restore {float:left;}
+div.widget > div.header h4 {display:inline;margin:0;padding:0;font-size:13px;clear:none !important;}
+div.widget > div.header h4 span {overflow:hidden;display:block;white-space:nowrap;margin-right:1em;padding:0px 0px 0px 2px;color:#676767;}
+div.widget > div.header h4 span a.commerceperiodlink {float: none; text-decoration:underline; height: auto; width: auto; top: auto; position: static; display: inline-block; padding: 0 0 0 1.75em; background-image: url('../../images/ui/icons/calendar.png'); background-repeat: no-repeat; background-position: .25em center;}
+div.widget > div.header h4 span a.commerceactionlink {float: none; text-decoration:underline; height: auto; width: auto; top: auto; position: static; display: inline-block; }
+div.widget > div.header h4 span a.commercecriteria {float: none; text-decoration:underline; height: auto; width: auto; top: auto; position: static; display: inline-block; padding: 0 0 0 1.75em; background-image: url('../../images/ui/icons/calendar.png'); background-repeat: no-repeat; background-position: .25em center;}
+div.widget div.content {overflow:auto;margin:0;padding:0;}
+
+.placeholder {list-style:none;background-image:url(images/dropzonepattern.png);border:2px solid #f7a11a;margin:10px;height:80px;}
+
+a.commerceperiodlink {float: none; text-decoration:underline; height: auto; width: auto; top: auto; position: static; display: inline-block; padding: 0 0 0 1.75em; background-image: url('../../images/ui/icons/calendar.png'); background-repeat: no-repeat; background-position: .25em center;}
+a.commerceactionlink {float: none; text-decoration:underline; height: auto; width: auto; top: auto; position: static; display: inline-block;}
+.periodMenu {display: none; border: solid 1px #858585; list-style-type: none; margin: 0; padding: .25em; position: absolute; top: 0px; left: 20px; background-color: #fff; z-index: 10000;}
+.periodMenu li:hover {background-color: gray;}
+.KPIup { color:green; font-weight: bold; float: none; height: auto; width: auto; top: auto; position: static; display: inline-block; padding: 0 0 0 1.75em; background-image: url('../../images/ui/icons/up.png'); background-repeat: no-repeat; background-position: .25em center;}
+.KPIdown { color:red; font-weight: bold; float: none; height: auto; width: auto; top: auto; position: static; display: inline-block; padding: 0 0 0 1.75em; background-image: url('../../images/ui/icons/arrowDownRed.png'); background-repeat: no-repeat; background-position: .25em center;}
+.KPIna { color:black; float: none; height: auto; width: auto; top: auto; position: static; display: inline-block; padding: 0 0 0 1.75em; background-image: url('../../images/ui/icons/bulletGreen.png'); background-repeat: no-repeat; background-position: .25em center;}
+.dateMenu {display: none; border: solid 1px red; list-style-type: none; margin: 0; padding: .25em; position: absolute; left: -10000px; background-color: #fff;}
+.dateMenu li:hover {background-color: gray;}
+.ektronTopSpace .quantityTexBox {width:2em;}
+
+/* images */
+div.EktronPersonalization img.widgetTrayLeft {background-image: url('images/scrollLeftHover.png'); width:36px; height:110px;}
+div.EktronPersonalization img.widgetTrayRight {background-image: url('images/scrollRightHover.png'); width:36px; height:110px;}
+div.EktronPersonalization img.widgetHandle {background-image: url('images/widgetHandle.gif');width:69px;height:12px;}
+div.EktronPersonalization img.widgetEdit {background-image: url('images/widgetEdit.gif');width:16px;height:16px;}
+div.EktronPersonalization img.widgetRestore {background-image: url('images/widgetRestore.gif');width:16px;height:16px;}
+div.EktronPersonalization img.widgetMinimize {background-image: url('images/widgetMinimize.gif');width:16px;height:16px;}
+div.EktronPersonalization img.widgetClose {background-image: url('images/widgetClose.gif');width:16px;height:16px;}
+div.EktronPersonalization img.columnRemove {background-image: url('images/columnRemove.gif');width:16px;height:16px;}
+div.EktronPersonalization img.columnRemoveHover {background-image: url('images/columnRemoveHover.gif');width:16px;height:16px;}
+table.ektronWindow img.modalClose {background-image: url('images/closeButton.gif');width:21px;height:21px;}
+table.ektronWindow img.modalOK {background-image: url('images/tick.gif');width:16px;height:16px;}
+table.ektronWindow img.modalCancel {background-image: url('images/cross.gif');width:16px;height:16px;}

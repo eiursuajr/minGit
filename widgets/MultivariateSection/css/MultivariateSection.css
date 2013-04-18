@@ -1,0 +1,79 @@
+.multivariate-section {
+    background: #ffffff !important;
+    color: #666666;
+}
+
+.multivariate-section .item-number
+{
+	font-size: medium;
+	text-align: center;
+	margin: 0 auto;
+	width: 3em;
+	float: left;
+}
+
+.multivariate-section .slider-container
+{
+	padding: 10px;
+	text-align: center;
+}
+
+.multivariate-section .slider-container .slider
+{
+	margin-right: 24px;
+	margin-top: 4px;
+	margin-left: 4em;
+}
+
+.multivariate-section .slider-container .add-variant
+{
+	float: right;
+	font-weight: bold;
+	border: 1px solid white;
+	width: 20px;
+	line-height: 20px;
+	background-color: #5C8EB3;
+	color: White;
+	display: block;
+}
+
+.multivariate-section .slider-container .add-variant:hover
+{
+	border: 1px solid #5C8EB3;
+	background-color: White;
+	color: #5C8EB3;
+	cursor: pointer;
+}
+
+.multivariate-section .add-variant-btn
+{
+	display: none;
+}
+
+.multivariate-section .column
+{
+	padding-bottom: 50px;
+}
+
+/* Fixes for the pagehost styles - they're messing up the Multivariate Sections */
+
+div.PBColumn div.widget > div
+{
+    margin: 0 0 4px !important;
+}
+
+div.PBViewing ul.columnwidgetlist > li
+{
+	width: 99% !important;
+}
+
+div.PBViewing div.widget div.header
+{
+	display: block !important;
+}
+
+div.PBColumn ul.columnwidgetlist li.header {
+    width: 99% !important;
+    padding-top: 4px !important;
+}
+

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="HTMLAttributes">HTML מאפייני</string>
+	<string id="Title">כותרת</string>
+	<string id="Description">תיאור</string>
+	<string id="Keywords">מילות מפתח </string>
+	<string id="Width">רוחב</string>
+	<string id="BaseLocation">מיקום בסיסי</string>
+	<string id="OK">אישור</string>
+	<string id="Cancel">ביטול</string>
+	<string id="BodyAttributes">מאפייני גוף הדף</string>
+	<string id="BackColor">צבע רקע</string>	
+	<string id="TopMargin">שוליים עליונים </string>
+	<string id="BottomMargin">שוליים תחתונים</string>
+	<string id="LeftMargin">שוליים שמאלים</string>
+	<string id="RightMargin">שוליים ימנים</string>
+</localization>

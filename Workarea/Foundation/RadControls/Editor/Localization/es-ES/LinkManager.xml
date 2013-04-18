@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Gestion de vinculos</string>
+	<string id="Tab1HeaderText">Hipervínculo</string>
+	<string id="Tab2HeaderText">Marcador</string>
+	<string id="Tab3HeaderText">E-mail</string>
+	<string id="LinkUrl">URL:</string>
+	<string id="LinkType">Tipo:</string>
+	<string id="Other">otro</string>
+	<string id="LinkTarget">Destino:</string>
+	<string id="Target">Destino</string>
+	<string id="LinkTooltip">Tooltip:</string>
+	<string id="LinkName">Nombre:</string>
+	<string id="LinkAddress">Direccion:</string>
+	<string id="LinkSubject">Asunto:</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Cancelar</string>
+	<string id="CssClass">Estilo CSS:</string>
+	<string id="AnchorCss">CSS enlace</string>
+	<string id="LinkText">Texto enlace:</string>
+	<string id="ClearStyle">Limpiar estilo</string>
+	<string id="LinkToAnchor">Marcador existente:</string>
+	<string id="AnchorNone">Ninguno</string>
+
+	<string id="_blank">Nueva Ventana</string>
+	<string id="_self">Misma Ventana</string>
+	<string id="_parent">Ventana Padre</string>
+	<string id="_top">Ventana de navigador</string>
+	<string id="_search">Panel de busqueda</string>
+	<string id="_media">Panel de media</string>	 
+    <string id="ektron">Ektron Editor Starts</string>
+	<string id="UrlRequired">URL is required.</string>
+	<string id="NameRequired">Name is required.</string>
+	<string id="AddressRequired">Address is required.</string>
+	<string id="InvalidEmail">Email address is not valid.</string>
+	<string id="DuplicatedName">Bookmark name is not unique.</string>
+	<string id="AccessChecksWarn">The content is not accessibility compliance. Would you like to correct it?</string>
+	<string id="AccessChecksEnforce">Please fill in the accessibility compliance field(s).</string>
+	<string id="Or">or</string>
+	<string id="InvalidUrl">Invalid Url is detected. Please correct your Url.</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

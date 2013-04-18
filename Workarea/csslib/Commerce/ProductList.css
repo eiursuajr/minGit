@@ -1,0 +1,38 @@
+﻿/* --- two column --- */
+
+div.EktronProductListWrapper {width:60em;padding-bottom:.75em;margin:0 auto 1em auto;font-family:Arial, Helvetica, Tahoma, Verdana, sans-serif;}
+
+div.EktronProductListWrapper .clearfix:after {content:" ";display:block;height:0;clear:both;visibility:hidden;}
+div.EktronProductListWrapper .clearfix {display:inline-block;}
+
+div.EktronProductListWrapper h3 {margin:0 0 1em 0;padding:10px 0px 20px 58px;border-bottom:1px dotted silver;background-image:url('../../images/application/Commerce/productLarge.gif');line-height:35px;background-position:0px 5px;background-repeat:no-repeat;text-align:left;font-weight:bold;font-size:1.5em;}
+
+div.EktronProductListWrapper div.products {border:1px solid silver;background-image:url('../../images/application/Commerce/background.gif');background-repeat:repeat;background-position:0px 0px;}
+
+div.EktronProductListWrapper div.products ul.productList {list-style:none;margin:0;padding:0;margin:0;padding:1em 1em 0em 0em;}
+div.EktronProductListWrapper div.products ul.productList li {float:left;width:26.25em;display:block;margin:0em 0em 1em 1em;padding:1em;background-color:white;border:1px solid silver;}
+
+div.EktronProductListWrapper div.products ul.productList li.hover,
+div.EktronProductListWrapper div.products ul.productList li.hover li {background-color:#dff4ff;border:1px solid #c2e1ef;color:#336699;cursor:pointer;cursor:hand;}
+
+div.EktronProductListWrapper div.products ul.productList li span.productImage {float:left;width:6em;height:6em;background-color:white;background-image:url('../../images/application/Commerce/productImageBackground.gif');background-repeat:no-repeat;background-position:center center;overflow:hidden;float:left;margin:0 1em 0 0;border:1px solid silver;}
+div.EktronProductListWrapper div.products ul.productList li span.productImage img {position:relative;display:none;}
+
+div.EktronProductListWrapper div.products ul.productList li img.fullImage {position:absolute;z-index:9999;border:1px solid silver;background-color:white;padding:.25em;margin:0;}
+
+div.EktronProductListWrapper div.products ul.productList li span.productName {width:12em;float:left;margin:0;padding:0;}
+
+div.EktronProductListWrapper div.products ul.productList li ul.prices {width:6em;display:inline-block;float:right;margin:0;padding:0;list-style:none;text-align:right;}
+div.EktronProductListWrapper div.products ul.productList li ul.prices li {float:none;border:none;margin:0;padding:0;width:auto;}
+
+div.EktronProductListWrapper div.products ul.productList li ul.prices li a {font-weight:normal;text-decoration:none;display:inline;}
+div.EktronProductListWrapper div.products ul.productList li ul.prices li a:hover {font-weight:normal;text-decoration:underline;}
+div.EktronProductListWrapper div.products ul.productList li ul.prices li.priceOld {text-decoration:line-through;color:#9e9e9e;}
+div.EktronProductListWrapper div.products ul.productList li ul.prices li.priceCurrent {font-weight:bold;}
+
+div.EktronProductListWrapper div.products .EktronProductListPaging{ background-color: White; border-top: 1px solid silver; padding: 0.3em;}
+div.EktronProductListWrapper div.products .EktronProductListPaging .EktronProductListPageLink{margin-left: 0.5em; color: Blue;}
+div.EktronProductListWrapper div.products .EktronProductListPaging .EktronProductListPageLink_Selected{margin-left: 0.5em; color: White; background-color:Gray; font-weight: bolder;}
+
+
+div.EktronProductListWrapper div.products .EktronProductListFiltering{ background-color: White; border-bottom: 1px solid silver; padding: 0.3em;}

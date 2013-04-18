@@ -1,0 +1,250 @@
+
+<Form>
+	<Title>Contact Information</Title>
+	<Description>Contact information.</Description>
+	<SubmittedData>
+		<Date value="2005-11-03T11:11:17">11/3/2005 11:11:17 AM</Date>
+		<Data form_data_id="26">
+			<Address>318 Megan Dr</Address>
+			<BusinessPhone></BusinessPhone>
+			<City>Manchester</City>
+			<Country></Country>
+			<Day_Phone>+1 603 816-2034</Day_Phone>
+			<Email_Addr>dbmmd@yahoo.com</Email_Addr>
+			<EmailAddress></EmailAddress>
+			<Eve_Phone></Eve_Phone>
+			<HomePhone></HomePhone>
+			<Name></Name>
+			<State></State>
+			<Subject>Contact Form</Subject>
+			<Submitter_Name>Doug Domeny</Submitter_Name>
+			<Zip>03109</Zip>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T11:11:43">11/3/2005 11:11:43 AM</Date>
+		<Data form_data_id="27">
+			<Address>40 Yahd Circle</Address>
+			<BusinessPhone></BusinessPhone>
+			<City>Rundover</City>
+			<Country></Country>
+			<Day_Phone></Day_Phone>
+			<Email_Addr></Email_Addr>
+			<EmailAddress></EmailAddress>
+			<Eve_Phone></Eve_Phone>
+			<HomePhone></HomePhone>
+			<Name></Name>
+			<State></State>
+			<Subject>Contact Form</Subject>
+			<Submitter_Name>Willie Maeckit</Submitter_Name>
+			<Zip>03109</Zip>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T16:50:17">11/3/2005 4:50:17 PM</Date>
+		<User id="1" member="false">
+			<Name>
+				<FirstName>Application</FirstName>
+				<LastName>Administrator</LastName>
+			</Name>
+			<Username>admin</Username>
+			<Email>doug@ektron.com</Email>
+		</User>
+		<Data form_data_id="45">
+			<Address>318 Megan Dr</Address>
+			<BusinessPhone>+1 (603) 816-2034</BusinessPhone>
+			<City>Manchester</City>
+			<Country></Country>
+			<Day_Phone></Day_Phone>
+			<Email_Addr></Email_Addr>
+			<EmailAddress>dbmmd@yahoo.com</EmailAddress>
+			<Eve_Phone></Eve_Phone>
+			<HomePhone>+1 (603) 644-3401</HomePhone>
+			<Name>Doug Domeny</Name>
+			<State>NH</State>
+			<Subject>Contact Form</Subject>
+			<Submitter_Name></Submitter_Name>
+			<Zip>03109</Zip>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T17:00:41">11/3/2005 5:00:41 PM</Date>
+		<Data form_data_id="50">
+			<Address>318 Megan Dr</Address>
+			<BusinessPhone>+1 (603) 816-2034</BusinessPhone>
+			<City>Manchester</City>
+			<Country></Country>
+			<Day_Phone></Day_Phone>
+			<Email_Addr></Email_Addr>
+			<EmailAddress>dbmmd@yahoo.com</EmailAddress>
+			<Eve_Phone></Eve_Phone>
+			<HomePhone>+1 (603) 644-3401</HomePhone>
+			<Name>Doug Domeny</Name>
+			<State>NH</State>
+			<Subject>Contact Form</Subject>
+			<Submitter_Name></Submitter_Name>
+			<Zip>03109</Zip>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T17:01:52">11/3/2005 5:01:52 PM</Date>
+		<Data form_data_id="51">
+			<Address>40 Yahd Circle</Address>
+			<BusinessPhone></BusinessPhone>
+			<City>Rundover</City>
+			<Country></Country>
+			<Day_Phone></Day_Phone>
+			<Email_Addr></Email_Addr>
+			<EmailAddress></EmailAddress>
+			<Eve_Phone></Eve_Phone>
+			<HomePhone></HomePhone>
+			<Name>Willie Maeckette</Name>
+			<State>AK</State>
+			<Subject>Contact Form</Subject>
+			<Submitter_Name></Submitter_Name>
+			<Zip>03109</Zip>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T17:03:02">11/3/2005 5:03:02 PM</Date>
+		<Data form_data_id="52">
+			<Address>40 Yahd Circle</Address>
+			<BusinessPhone></BusinessPhone>
+			<City>Rundover</City>
+			<Country></Country>
+			<Day_Phone></Day_Phone>
+			<Email_Addr></Email_Addr>
+			<EmailAddress></EmailAddress>
+			<Eve_Phone></Eve_Phone>
+			<HomePhone></HomePhone>
+			<Name>Willie Maeckette</Name>
+			<State>AK</State>
+			<Subject>Contact Form</Subject>
+			<Submitter_Name></Submitter_Name>
+			<Zip>03109</Zip>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-03T17:06:27">11/3/2005 5:06:27 PM</Date>
+		<Data form_data_id="53">
+			<Address>40 Yahd Circle</Address>
+			<BusinessPhone></BusinessPhone>
+			<City>Rundover</City>
+			<Country></Country>
+			<Day_Phone></Day_Phone>
+			<Email_Addr></Email_Addr>
+			<EmailAddress></EmailAddress>
+			<Eve_Phone></Eve_Phone>
+			<HomePhone></HomePhone>
+			<Name>Willie Maeckette</Name>
+			<State>AK</State>
+			<Subject>Contact Form</Subject>
+			<Submitter_Name></Submitter_Name>
+			<Zip>03109</Zip>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date value="2005-11-09T16:24:01">11/9/2005 4:24:01 PM</Date>
+		<User id="1" member="false">
+			<Name>
+				<FirstName>Application</FirstName>
+				<LastName>Administrator</LastName>
+			</Name>
+			<Username>admin</Username>
+			<Email>doug@ektron.com</Email>
+		</User>
+		<Data form_data_id="67">
+			<Address>318 Megan Dr</Address>
+			<BusinessPhone></BusinessPhone>
+			<City>Manchester</City>
+			<Country></Country>
+			<Day_Phone></Day_Phone>
+			<Email_Addr></Email_Addr>
+			<EmailAddress></EmailAddress>
+			<Eve_Phone></Eve_Phone>
+			<HomePhone></HomePhone>
+			<Name>Doug Domeny</Name>
+			<State>NH</State>
+			<Subject>Contact Form</Subject>
+			<Submitter_Name></Submitter_Name>
+			<Zip>03109</Zip>
+		</Data>
+	</SubmittedData>
+	<ektdesignpackage_list>
+		<fieldlist>
+			<field name="Subject" datatype="string" basetype="text" xpath="/root/Subject">Subject</field>
+			<field name="Name" datatype="string" basetype="text" xpath="/root/Name">Full Name</field>
+			<field name="Address" datatype="string" basetype="text" xpath="/root/Address">Address</field>
+			<field name="City" datatype="string" basetype="text" xpath="/root/City">City</field>
+			<field name="State" datatype="choice" basetype="text" xpath="/root/State" datalist="USPS-US">State</field>
+			<field name="Zip" datatype="ZipCode" basetype="text" xpath="/root/Zip">Zip</field>
+			<field name="BusinessPhone" datatype="phoneUSCA" basetype="text" xpath="/root/BusinessPhone">Business Phone</field>
+			<field name="HomePhone" datatype="phoneUSCA" basetype="text" xpath="/root/HomePhone">Home Phone</field>
+			<field name="Email" datatype="email" basetype="text" xpath="/root/Email">Email Address</field>
+			<datalist name="USPS-US">
+				<item value="AL">Alabama</item>
+				<item value="AK">Alaska</item>
+				<item value="AS">American Samoa</item>
+				<item value="AZ">Arizona</item>
+				<item value="AR">Arkansas</item>
+				<item value="AA">Armed Forces Americas (except Canada)</item>
+				<item value="AE">Armed Forces Europe, Canada, Africa, Middle East</item>
+				<item value="AP">Armed Forces Pacific</item>
+				<item value="CA">California</item>
+				<item value="CO">Colorado</item>
+				<item value="CT">Connecticut</item>
+				<item value="DE">Delaware</item>
+				<item value="DC">District Of Columbia</item>
+				<item value="FM">Federated States Of Micronesia</item>
+				<item value="FL">Florida</item>
+				<item value="GA">Georgia</item>
+				<item value="GU">Guam</item>
+				<item value="HI">Hawaii</item>
+				<item value="ID">Idaho</item>
+				<item value="IL">Illinois</item>
+				<item value="IN">Indiana</item>
+				<item value="IA">Iowa</item>
+				<item value="KS">Kansas</item>
+				<item value="KY">Kentucky</item>
+				<item value="LA">Louisiana</item>
+				<item value="ME">Maine</item>
+				<item value="MH">Marshall Islands</item>
+				<item value="MD">Maryland</item>
+				<item value="MA">Massachusetts</item>
+				<item value="MI">Michigan</item>
+				<item value="MN">Minnesota</item>
+				<item value="MS">Mississippi</item>
+				<item value="MO">Missouri</item>
+				<item value="MT">Montana</item>
+				<item value="NE">Nebraska</item>
+				<item value="NV">Nevada</item>
+				<item value="NH">New Hampshire</item>
+				<item value="NJ">New Jersey</item>
+				<item value="NM">New Mexico</item>
+				<item value="NY">New York</item>
+				<item value="NC">North Carolina</item>
+				<item value="ND">North Dakota</item>
+				<item value="MP">Northern Mariana Islands</item>
+				<item value="OH">Ohio</item>
+				<item value="OK">Oklahoma</item>
+				<item value="OR">Oregon</item>
+				<item value="PW">Palau</item>
+				<item value="PA">Pennsylvania</item>
+				<item value="PR">Puerto Rico</item>
+				<item value="RI">Rhode Island</item>
+				<item value="SC">South Carolina</item>
+				<item value="SD">South Dakota</item>
+				<item value="TN">Tennessee</item>
+				<item value="TX">Texas</item>
+				<item value="UT">Utah</item>
+				<item value="VT">Vermont</item>
+				<item value="VI">Virgin Islands</item>
+				<item value="VA">Virginia</item>
+				<item value="WA">Washington</item>
+				<item value="WV">West Virginia</item>
+				<item value="WI">Wisconsin</item>
+				<item value="WY">Wyoming</item>
+			</datalist>
+		</fieldlist>
+	</ektdesignpackage_list>
+</Form>

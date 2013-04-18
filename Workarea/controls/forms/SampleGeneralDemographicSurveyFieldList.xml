@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<fieldlist>
+  <field name="survey_id" datatype="string" basetype="text" xpath="*/survey_id" title="survey_id">survey_id</field>
+  <field name="Gender" datatype="choice" basetype="text" xpath="*/Gender" title="Gender" datalist="gender">Gender</field>
+  <field name="Age_range" datatype="choice" basetype="text" xpath="*/Age_range" title="Age range" datalist="EBC">Age range</field>
+  <field name="Education_Level" datatype="choice" basetype="text" xpath="*/Education_Level" title="Education Level" datalist="EHD">Education Level</field>
+  <field name="Annual_Income" datatype="choice" basetype="text" xpath="*/Annual_Income" title="Annual Income" datalist="EQE">Annual Income</field>
+  <field name="Household_Income" datatype="choice" basetype="text" xpath="*/Household_Income" title="Household Income" datalist="EFG">Household Income</field>
+  <field name="Marital_Status" datatype="choice" basetype="text" xpath="*/Marital_Status" title="Marital Status" datalist="maritalStatus">Marital Status</field>
+  <field name="Religious" datatype="choice" basetype="text" xpath="*/Religious" title="Religious" datalist="EDEAC">Religious</field>
+  <field name="Other_Religious_Affiliation" datatype="string" basetype="text" xpath="*/Other_Religious_Affiliation" title="Other Religious Affiliation">Other Religious Affiliation</field>
+  <field name="Race" datatype="choice" basetype="text" xpath="*/Race" title="Race" datalist="EAIAC">Race</field>
+  <field name="Mother_s_Education_Level" datatype="choice" basetype="text" xpath="*/Mother_s_Education_Level" title="Mother's Education Level" datalist="EDJAC">Mother's Education Level</field>
+  <field name="Father_s_Education_Level" datatype="choice" basetype="text" xpath="*/Father_s_Education_Level" title="Father's Education Level" datalist="EMKAC">Father's Education Level</field>
+  <datalist name="gender">
+    <item value="M">Male</item>
+    <item value="F">Female</item>
+  </datalist>
+  <datalist name="EBC">
+    <item value="0">18-21</item>
+    <item value="1">22-25</item>
+    <item value="2">26-30</item>
+    <item value="3">31-40</item>
+    <item value="4">41-50</item>
+    <item value="5">51-60</item>
+    <item value="6">61 or over</item>
+  </datalist>
+  <datalist name="EHD">
+    <item value="0">Less than High School</item>
+    <item value="1">High School/GED</item>
+    <item value="2">Some College</item>
+    <item value="3">2-Year College Degree(Associates)</item>
+    <item value="4">4-Year College Degree(BA,BS)</item>
+    <item value="5">Master's Degree</item>
+    <item value="6">Doctoral Degree</item>
+    <item value="7">Professional Degree(MD,JD)</item>
+  </datalist>
+  <datalist name="EQE">
+    <item value="0">Less than $10,000</item>
+    <item value="1">$10,000-$19,999</item>
+    <item value="2">$20,000-$29,999</item>
+    <item value="3">$30,000-$39,999</item>
+    <item value="4">$40,000-$49,999</item>
+    <item value="5">$50,000-$59,999</item>
+    <item value="6">$60,000-$69,999</item>
+    <item value="7">$70,000-$79,999</item>
+    <item value="8">$80,000-$89,999</item>
+    <item value="9">$90,000-$99,999</item>
+    <item value="10">$100,000-$149,000</item>
+    <item value="11">More than $150,000</item>
+  </datalist>
+  <datalist name="EFG">
+    <item value="0">Less than $10,000</item>
+    <item value="1">$10,000-$19,999</item>
+    <item value="2">$20,000-$29,999</item>
+    <item value="3">$30,000-$39,999</item>
+    <item value="4">$40,000-$49,999</item>
+    <item value="5">$50,000-$59,999</item>
+    <item value="6">$60,000-$69,999</item>
+    <item value="7">$70,000-$79,999</item>
+    <item value="8">$80,000-$89,999</item>
+    <item value="9">$90,000-$99,999</item>
+    <item value="10">$100,000-$149,000</item>
+    <item value="11">More than $150,000</item>
+  </datalist>
+  <datalist name="maritalStatus">
+    <item value="Divorced">Divorced</item>
+    <item value="Legally Separated">Legally Separated</item>
+    <item value="Married">Married</item>
+    <item value="Registered Domestic Partner">Registered Domestic Partner</item>
+    <item value="Separated">Separated</item>
+    <item value="Single">Single</item>
+    <item value="Unmarried">Unmarried</item>
+    <item value="Unreported">Unreported</item>
+    <item value="Widowed">Widowed</item>
+  </datalist>
+  <datalist name="EDEAC">
+    <item value="Protestant Christian">Protestant Christian</item>
+    <item value="Roman Catholic">Roman Catholic</item>
+    <item value="Evangelical Christian">Evangelical Christian</item>
+    <item value="Jewish">Jewish</item>
+    <item value="Muslim">Muslim</item>
+    <item value="Hindu">Hindu</item>
+    <item value="Other">Other</item>
+  </datalist>
+  <datalist name="EAIAC">
+    <item value="0">White</item>
+    <item value="1">White, non-Hispanic</item>
+    <item value="2">African-American</item>
+    <item value="3">Hispanic</item>
+    <item value="4">Asian-Pacific Islander</item>
+    <item value="5">Native American</item>
+  </datalist>
+  <datalist name="EDJAC">
+    <item value="0">Less than High School</item>
+    <item value="1">High School/GED</item>
+    <item value="2">Some College</item>
+    <item value="3">2-Year College Degree(Associates)</item>
+    <item value="4">4-Year College Degree(BA,BS)</item>
+    <item value="5">Master's Degree</item>
+    <item value="6">Doctoral Degree</item>
+    <item value="7">Professional Degree(MD,JD)</item>
+  </datalist>
+  <datalist name="EMKAC">
+    <item value="0">Less than High School</item>
+    <item value="1">High School/GED</item>
+    <item value="2">Some College</item>
+    <item value="3">2-Year College Degree(Associates)</item>
+    <item value="4">4-Year College Degree(BA,BS)</item>
+    <item value="5">Master's Degree</item>
+    <item value="6">Doctoral Degree</item>
+    <item value="7">Professional Degree(MD,JD)</item>
+  </datalist>
+</fieldlist>

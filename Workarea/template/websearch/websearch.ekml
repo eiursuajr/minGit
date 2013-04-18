@@ -1,0 +1,174 @@
+<!-- 
+Characterization,DocLastAuthor,DocSubject,DocTitle,FileName,CMSSize,DateCreated,DateModified,ContentID,
+ContentLanguage,FolderID,QuickLink,ContentType,TaxCategory
+
+Copyright (C) Ektron Inc. All rights reserved.
+Ektron Template Markup
+
+ 	 [$ContentByteSize]				- Displays the content item’s size in KB.
+	 [$ContentId]					- Displays the content item’s ID.
+	 [$DateModified]				- Display the date the content was last modified.
+	 [$EditorFirstName]				- Display the last editor’s first name for a content item.
+	 [$EditorLastName]				- Display the last editor’s last name for a content item.
+	 [$Image]                       - Displays the path for the image defined in a content item’s Metadata. 
+		                                 When wrapped in <img src=””/> tag, the image is displayed.
+	 [$ImageIcon]					- Used in non-image searches to display content type icon.
+	 [$ImageThumbnail]				- Used in image searches to display the image thumbnail.
+	 [$ItemCount]					- Total number of items (works only in paging mode otherwise -1).
+	 [$LinkTarget]					- When added to an <a href=””> tag’s target=”” attribute, this variable
+										 reads the server control’s LinkTarget property and uses its setting.
+	 [$PagingCurrentEndIndex]		- End count for the items displayed in a page's search results.
+	 [$PagingCurrentStartIndex]		- Start count for the items displayed in a page's search results.
+     [$QuickLink]					- This property displays the Quicklink information for the content item.
+										 When wrapped in an <a href=””> tag, you can create a Hyperlink.
+ 	 [$SearchDuration]				- The amount of time, in seconds, taken for executing search.
+	 [$SearchSummary]				- displays a teaser that is created from information stored in the 
+									     indexing service for each item in the search results.
+	 [$SearchText]					- Displays the text for which a user is searching.      
+ 	 [$Title]						- Displays the content item’s title.
+	         								
+    
+    
+  
+  -Please note that there are three <ekoutput> nodes in this template. Each contains a result format that 
+  corresponds to a particular type of search result. The first <ekoutput> node is the normal format 
+  of search results. The second <ekoutput> node is the format of the results when searching for images 
+  on a CMS400.Net site. The third <ekoutput> node is the format of the suggested results if any.
+  
+  Please note that to display results correctly the ekml file should be in the format illustrated below.
+  
+  -For additional information on EKML, its variables and tags, see the CMS400.NET Developer Manual
+  section "Ektron Markup Language"
+-->
+
+<!-- The <ekmarkup></ekmarkup> tags open and close the Ektron Markup Language.-->
+<ekmarkup>
+  <!-- The <ekoutput></ekoutput> tags define what information is output from the server control. -->
+  <ekoutput>
+    <!-- This table creates a header section for the results. It creates a line that shows beginning and end number
+			 for the results on the page, the total number results, the text that was used for the search, the amount 
+			 of time to execute the search in seconds.-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="t" style="border-top:1px solid #36c">
+      <tr>
+        <td nowrap="true">
+          <font size="+1">
+            &#160;<b>Web</b>
+          </font>&#160;
+        </td>
+        <td align="right" nowrap="">
+          <font size="-1">
+            Results from template <b>[$PagingCurrentStartIndex] </b> - <b>[$PagingCurrentEndIndex] </b> of <b> [$ItemCount] </b>
+            for <b> [$SearchText] </b>.  (<b> [$SearchDuration] </b> seconds)&#160;
+          </font>
+        </td>
+      </tr>
+    </table>
+
+    <!-- This table uses the <ekrepeat></ekrepeat> tags to apply the variables and any styling information to each 
+		 item in the list. -->
+    <table>
+      <ekrepeat>
+        <tr>
+          <td>
+            <p class="g">
+              <!-- This line adds an icon that represents the type of content returned. It also creates a hyperlink that
+			       uses the title of the content and the last date modified as the display text.-->
+              [$ImageIcon]<a class="l" target="[$LinkTarget]" href="[$QuickLink]">[$Title]([$DateModified])</a>
+              <table cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="j">
+                    <!-- These lines define how the "summary" or "teaser" information for each content item appears. -->
+                    <font size="-1">
+                      [$SearchSummary]<b>...</b><br/>
+                      <!-- These lines display and style ID, size and last author information for each content item. -->
+                      <font color="#008000">
+                        ID=[$ContentId] Size=[$ContentByteSize] LastAuthor=[$EditorLastName] [$EditorFirstName]
+                      </font>
+                    </font>
+                  </td>
+                </tr>
+              </table>
+            </p >
+          </td>
+        </tr>
+      </ekrepeat>
+    </table>
+  </ekoutput>
+  <ekoutput>
+    <!-- This is the result template when searching for images -->
+    <!-- This table creates a header section for the results. It creates a line that shows beginning and end number
+			 for the results on the page, the total number results, the text that was used for the search, the amount 
+			 of time to execute the search in seconds.-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" class="t" style="border-top:1px solid #36c">
+      <tr>
+        <td nowrap="true">
+          <font size="+1">
+            &#160;<b>Web</b>
+          </font>&#160;
+        </td>
+        <td align="right" nowrap="">
+          <font size="-1">
+            Results from image template <b>[$PagingCurrentStartIndex] </b> - <b>[$PagingCurrentEndIndex] </b> of <b> [$ItemCount] </b>
+            for <b> [$SearchText] </b>.  (<b> [$SearchDuration] </b> seconds)&#160;
+          </font>
+        </td>
+      </tr>
+    </table>
+
+    <!-- This table uses the <ekrepeat></ekrepeat> tags to apply the variables and any styling information to each 
+		 item in the list. -->
+    <table>
+      <ekrepeat>
+        <a class="l" href="[$QuickLink]" target="[$LinkTarget]">
+          <img src="[$ImageThumbnail]" alt="[$Title]([$DateModified])" class="search_result" />
+        </a>
+        <table cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="j">
+              <font color="#008000">ID=[$ContentId] Size=[$ContentByteSize] Last Author=[$EditorLastName] [$EditorFirstName]</font>
+            </td>
+          </tr>
+        </table>
+      </ekrepeat>
+    </table>
+  </ekoutput>
+
+  <!-- This is the results template used for displaying suggested results -->
+  <ekoutput>
+    <div class="suggestedResults">
+      <h3>Suggested Result:</h3>
+      <ekrepeat>
+        <div class="resultPreview">
+          <h4>
+            <a title="[$Title]" href="[$QuickLink]" >[$Title]</a>
+          </h4>
+        </div>
+        [$SearchSummary]
+      </ekrepeat>
+    </div>
+  </ekoutput>
+</ekmarkup>
+
+<!-- header template
+    outputText = new StringBuilder("<table border=0 cellpadding=0 cellspacing=0 width=100% class=t style=\"border-top:1px solid #36c\">");
+    outputText.Append("<tr><td nowrap><font size=+1>&nbsp;<b>Web</b></font>&nbsp;</td><td align=right nowrap>");
+    NumberFormatInfo nfi = new CultureInfo(CultureInfo.CurrentCulture.LCID).NumberFormat;
+    nfi.NumberDecimalDigits = 2;
+    outputText.Append("<font size=-1>Results <b>Start Count " + StartCount.ToString() + " </b> - <b>End Count " + EndCount.ToString() + " </b> of <b>" + _resultCount + "</b> for <b>" + SearchText + "</b>.  (<b>" + TimeTaken.ToString("N", nfi) + "</b> seconds)&nbsp;</font></td></tr></table>");
+-->
+
+<!-- repeater template
+<p class="g">
+	<img src={"9"} alt=''></img>&nbsp;<a class='l' {0=''}\">{1}({5})
+		</a>
+		<table cellpadding='0' cellspacing='0' border='0'>
+			<tr>
+				<td class='j'>
+					<font size='-1'>
+						{2}<b>...</b><br>
+							<font color=#'008000'>ID={3} Size={4} Last Author={6} Hit Count={7} Rank={8}</font>
+					</font>
+				</td>
+			</tr>
+		</table>
+-->

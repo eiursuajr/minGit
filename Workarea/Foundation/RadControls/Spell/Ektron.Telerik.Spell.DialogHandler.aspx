@@ -1,0 +1,1 @@
+<%@ Page Language="C#" Inherits="Ektron.Telerik.WebControls.Spell.DialogHandler" %>

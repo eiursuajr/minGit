@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="HTMLAttributes">Attributi pagina</string>
+	<string id="PageTitle">Titolo pagina</string>
+	<string id="Description">descrizione</string>
+	<string id="Keywords">Parole chiave</string>
+	<string id="Width">Larghezza</string>
+	<string id="BaseLocation">Localizzazione</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Cencella</string>
+	<string id="BodyAttributes">Attributi Body</string>
+	<string id="BackColor">Colore di sfondo</string>	
+	<string id="TopMargin">Margine superiore</string>
+	<string id="BottomMargin">Margine inferiore</string>
+	<string id="LeftMargin">Margine sinistra</string>
+	<string id="RightMargin">Margine destro</string>
+	<string id="BGImage">Sfondo immagine</string>
+	<string id="ClassName">Classe</string>
+</localization>

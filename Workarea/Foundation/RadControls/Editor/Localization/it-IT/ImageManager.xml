@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Manager immagine</string>
+	<string id="ConfirmLink">Inserire un Link dalla miniatura all' immagine originale?</string>
+	<string id="ConfirmDelete">Sei sicuro di voler cancellare i file selezionato?\nL' immagine selezionata potrebbe essere in uso. Se la cancelli, qualche pagina potrebbe non essere visualizzata correttamente.\nPremi \"OK\" per confermare l' eliminazione.</string>
+	<string id="AlertImage">Per piacere, inserisci un file immagine per fare l' upload!</string>
+	<string id="AlertExists">Questo File immagine già esiste in questa directory!</string>
+	<string id="AlertDimensions">Per piacere, inserisci o la larghezza della miniatura o l' altezza della miniatura.</string>
+	<string id="AlertWidth">Per piacere, inserisci una larghezza valida.</string>
+	<string id="AlertHeight">Per piacere, inserisci una altezza valida.</string>
+	<string id="MessageNothingPost">Per piacere, seleziona un file immagine!</string>
+	<string id="MessageValid">Per piacere, seleziona un file immagine valido!</string>
+	<string id="MessageSize">Il file selezionato supera la massima dimensione file consentita!</string>
+	<string id="MessagePermission">Non hai il permesso di accedere a questa pagina o il tuo cookie è scaduto!<br/>Per piacere aggiorna la pagina!</string>
+	<string id="Tab1HeaderText">Sfoglia...</string>
+	<string id="Tab2HeaderText">Upload Immagine</string>
+	<string id="ImageFile">File Immagine:</string>
+	<string id="ImageURL">URL Immagine:</string>
+	<string id="Preview">Anteprima</string>
+	<string id="Loading">Loading...</string>
+	<string id="CreateThumbnail">Crea miniature:</string>
+	<string id="Yes">Sì</string>
+	<string id="No">No</string>
+	<string id="Width">Larghezza:</string>
+	<string id="Height">Altezza:</string>
+	<string id="Constrain">Proporzioni</string>
+	<string id="KeepOriginalImage">Mantieni l' immagine originale:</string>
+	<string id="LoadingImagePrompt">Caricamento immagine. Attendere prego...</string>
+	<string id="BestFit">Miglior allargamento</string>
+	<string id="ActualSize">Dimensioni attuali</string>
+	<string id="ZoomIn">Zoom +</string>
+	<string id="ZoomOut">Zoom -</string>
+	<string id="ChooseFileToInsert">Per piacere, seleziona un file da inserire</string>
+	<string id="CreateThumbnailIconTitle">Crea Miniatura</string>
+	<string id="LinkToOriginal">Collega all'originale</string>
+	<string id="OpenOriginalInBlank">Apri l'originale in una nuova finestra</string>
+	<string id="NoImageSelectedToInsert">Per piacere, seleziona un'immagine da inserire!</string>
+</localization>

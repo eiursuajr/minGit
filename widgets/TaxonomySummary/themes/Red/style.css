@@ -1,0 +1,57 @@
+﻿ 
+.themered .taxlistheader
+{
+	color:#7A0000;
+}
+
+.themered ul.itemlist 
+{
+	list-style-type:none;
+	margin-left:0px;
+	padding-left:0px;
+}
+
+.themered ul.itemlist  li
+{
+	color:#940202;
+	list-style:none;
+	padding-bottom:10px;	
+}
+
+.themered ul.itemlist  li a
+{
+	text-decoration:none;
+	color:#940202;
+	font-weight:bold;
+}
+
+.themered ul.itemlist  li a:hover
+{
+	text-decoration:underline;
+	color:#940202;
+	font-weight:bold;
+}
+
+.themered ul.itemlist  li p
+{
+	color:#A42E2E;
+	margin:0px;
+}
+     
+
+.themered .taxList table td span
+{
+	color:#A42E2E;
+}
+     
+.themered .taxList table td span a
+{
+	text-decoration:none;
+	color:#940202;	
+}
+
+.themered .taxList table td span a:hover
+{
+	text-decoration:underline;
+	color:#940202;	
+}

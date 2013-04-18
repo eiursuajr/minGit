@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Service="Ektron.WcfServices.feeds" CodeBehind="feeds.svc.cs" Factory="Ektron.WcfServiceHostFactory.EktronServiceHostFactory" %>

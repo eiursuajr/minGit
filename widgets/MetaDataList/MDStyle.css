@@ -1,0 +1,129 @@
+@import url("ektron.treeview.css");
+
+div.MDWidget
+{
+	overflow:auto;
+}
+
+/* TABS */
+div.MDEdit .MDTabInterface .ByTaxonomy, div.MDEdit .MDTabInterface .BySearch
+{
+	display: none;
+}
+
+div.MDEdit table
+{
+	width: 90%;
+}
+
+div.MDEdit ul.MDTabWrapper
+{
+	list-style: none;
+    margin: 2px 0 0 0;
+    padding: 0;
+}
+
+div.MDEdit ul.MDTabWrapper li.MDTab
+{
+	float: left;
+	border: solid 1px #97A5B0;
+	background: #97A5B0;
+	margin: .25em 0 0 .25em;
+	padding: 0;
+	position: relative;
+	top: 1px;
+	z-index: 2;
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+	font-weight: bold;
+}
+
+div.MDEdit ul.MDTabWrapper li.MDTab a:hover
+{
+	background-color: #27537a;
+	color: #fff;
+}
+
+div.MDEdit ul.MDTabWrapper li.MDTab span, div.MDEdit ul.MDTabWrapper li.MDTab a
+{
+	display: inline-block;
+	padding: .25em .5em .1em .5em;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+div.MDEdit ul.MDTabWrapper li.selected
+{
+	background-color: #fff;
+	border-bottom: solid 1px #fff;
+}
+
+div.MDEdit ul.MDTabWrapper li.selected a:hover
+{
+	background-color: #fff;
+}
+
+div.MDEdit ul.MDTabWrapper li.selected a, div.MDEdit ul.MDTabWrapper li.selected a:hover, div.MDEdit ul.MDTabWrapper li.selected span
+{
+	color: #27537a;
+}
+
+div.MDEdit .MDTabInterface .MDTabPanel 
+{
+	min-width: 28em;
+	width: auto !important;
+	width: 28em;
+    border: 1px solid #97a5b0;
+    padding: .5em;
+    background: #fff;
+    overflow: auto;
+    height: 16em;
+    clear:both;
+}
+
+/*  Folder Tree */
+div.MDEdit .MDTabInterface .foldercontainer span.folder, .MDTabInterface .foldercontainer span.file 
+{ 
+	padding: 1px 0 1px 18px; 
+	display: block;
+}
+
+div.MDEdit .MDTabInterface div.foldercontainer span.folder
+{
+	background-image: url('images/treeview/folder.gif'); 
+	background-position: 0 0;
+	background-repeat: no-repeat; 
+	cursor: pointer;
+}
+
+div.MDEdit .MDTabInterface .EktronFolderTree li.expandable>span.folder
+{ 
+	background-image: url('images/treeview/folder-closed.gif'); 
+}
+div.MDEdit .MDTabInterface .EktronFolderTree li.collapsable>span.folder 
+{
+	background-image: url('images/treeview/folder.gif'); 
+}
+
+div.MDEdit .MDTabInterface .EktronFolderTree .selected, div.MDEdit .MDTabInterface .EktronTaxonomyTree .selected
+{
+	color: #5c9ccc;
+}
+
+/* Taxonomy Tree */
+div.MDEdit .MDTabInterface .treecontainer span.folder
+{
+	cursor: pointer;
+}
+
+/*ie hacks (* in front of attribute prevents other browsers from knowing it, and this prevents us from having to create an ie-specific stylesheet) */
+div.EktronPersonalization div.MDEdit ul.MDTabWrapper li.MDTab 
+{
+	*position: static !important;
+}
+
+div.MDEdit .MDTabInterface .MDTabPanel
+{
+	*width: 97% !important;
+}

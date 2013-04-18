@@ -1,0 +1,265 @@
+img {
+	border:none; 
+	vertical-align: middle;
+}
+
+a {
+	color:#6a85b6;
+	text-decoration:none;
+}
+a:hover {text-decoration:underline;}
+a:visited {color:#6a85b6;}
+.WorkspaceShareDiv
+{
+	color:blue;
+	background-color:Yellow;
+	margin-left:30px;
+	margin-top:15px;
+	position:absolute;
+	text-align:center;
+	display:none;
+	border-style:solid;
+	border-color:Black;
+	border-width:thin;
+	padding:10px;
+}
+
+div.Ekt_AddAssetLink
+{
+	float:right;
+}
+
+#maincontainer {
+	width: 60em;
+	margin: 1em auto;
+	background-color:white;
+	border:1px solid #4c4c4c;
+}
+
+div#header {
+	/*background-image:url('workarea/images/photogallery/HeaderBackground.gif');*/
+	background-position:0 0;
+	background-repeat:repeat-x;
+	background-color:#bac8e0;
+	border-top:1px solid #6a85b6;
+	border-right:none;
+	border-bottom:1px solid #6a85b6;
+	border-left:none;
+}
+
+div#header h1 {
+	text-align:left;
+	background-image:url('workarea/images/photogallery/camera2.gif');
+	background-position:left -5px;
+	background-repeat:no-repeat;
+	padding-left:1.7em;
+	text-transform:lowercase;
+	color:white;
+	margin-left:.5em;
+}
+
+div#header h1 a {
+	color:white;
+	text-decoration: none;
+}
+
+div.breadcrumb {
+	text-align: left;
+}
+
+div.breadcrumb span.bc_title, div.breadcrumb span.bc_sep {
+	font-size: .9em;
+	color: #333333;
+	font-weight: normal;
+}
+
+table#GalleryLayout {
+    border-collapse:collapse;
+    width:100%; 
+    margin: auto;
+    padding: 0em;
+}
+
+/* Headers */
+table#GalleryLayout th.breadcrumb, table#GalleryLayout th.subcategories, table#GalleryLayout th.images {
+	padding:.4em .5em;
+	/*background-image:url('workarea/images/photogallery/TableHeaderBackground.gif');*/
+	background-position:left top;
+	background-repeat:repeat-x;
+	background-color:#fdfcfd;
+	border-top:1px solid #938f8f;
+	border-right:none;
+	border-bottom:1px solid #938f8f;
+	border-left:none;
+	font-weight:bold;
+	color:#4c4c4c;
+}
+
+table#GalleryLayout thead tr th.subcategories {
+	text-align: left;
+	border-right: 1px solid #938f8f;
+}
+
+table#GalleryLayout thead tr th span.subcategory {
+	background-image:url('workarea/images/photogallery/folder.gif');
+	background-repeat:no-repeat;
+	padding:.25em .25em .25em 2em;
+}
+
+table#GalleryLayout thead tr th span.showall {
+	font-size: .9em;
+	font-weight: normal;	
+}
+
+table#GalleryLayout thead tr th span.showall span.showAllCheckBox {
+	position: absolute;
+	left: -1000em;
+}
+table#GalleryLayout thead tr th span.showall input {
+	position: relative;
+	top: .15em;
+}
+
+table#GalleryLayout thead tr th span.image {
+	background-image:url('workarea/images/photogallery/film.gif');
+	background-repeat:no-repeat;
+	padding:.25em .25em .25em 2em;
+}
+
+/* Navigation */
+table#GalleryLayout td#navigation {
+	background-color: #ffffff;
+	vertical-align: top;
+	padding: .5em;
+	width: 17em;
+}
+
+table#GalleryLayout td#navigation h4 {
+	margin: 1em 0em .25em .25em;
+	padding: 0em;
+}
+
+table#GalleryLayout td#navigation input {
+	width: 75%;
+}
+
+table#GalleryLayout td#navigation ul.taxonomy-navigation {
+	border-style: none;
+	border-top: none;
+	height: expression( this.scrollHeight > 299 ? "300px" : "auto" );
+	min-height: 300px;
+	list-style: none;
+	margin: 0em;
+	padding: 0em;
+}
+
+table#GalleryLayout td#navigation ul.taxonomy-navigation li, table#GalleryLayout td#navigation ul.taxonomy-navigation span {
+	/*background-image:url('workarea/images/photogallery/taxonomyNavBacgrkound.gif');*/
+	background-position:left top;
+	background-repeat:repeat-x;
+	border-top:1px solid #4c4c4c;
+	padding:.25em;
+	background-color:#eeeeee;
+}
+
+#__NoCatMsg
+{
+	display: none;
+}
+
+table#GalleryLayout td#navigation ul.taxonomy-navigation span {
+	color:#6a85b6;
+	font-weight: bold;
+}
+
+/* Images Cell */
+table#GalleryLayout td#images {
+    border-left:1px solid #938f8f;
+    padding-left:.5em;
+    margin-left:.5em;
+    vertical-align: top;
+}
+
+/* Gallery Layout */
+table.Gallery {
+    border-collapse:collapse;
+    width: auto;
+    margin: .5em auto;
+}
+
+table.Gallery td.Image {
+    /*width: 12.5em;*/
+    border: solid .75em #fff;
+    vertical-align: bottom;
+    text-align: left;
+}
+
+table.Gallery td.Image div.image {
+	padding: .5em;
+	border: 1px solid #938f8f;
+	margin: .25em 0em;
+	text-align: center;
+}
+
+table.Gallery td.Image div.image img {
+	/*width: 11.5em;*/
+	border: 0em;
+}
+
+.bc_current
+{
+	font-weight: normal;
+}
+
+/* DMSMenu alterations for the Photo Gallery.  See WorkArea/DmsMenu/DmsMenu.css for additional DMSMenu CSS information */
+
+div.dmsWrapper a, div.dmsWrapperIE6Hover a:hover {text-decoration:none;color:inherit;}
+
+table.Gallery td.Image {vertical-align:bottom;}
+
+table.Gallery td.Image .dmsWrapper, table.Gallery td.Image .dmsWrapperIE6Hover
+{
+	border: solid 1px #fff;
+}
+
+div.dmsWrapper a.dmsViewItemAnchor, div.dmsWrapperIE6Hover a.dmsViewItemAnchor
+{
+	font-size:.75em !important;
+	font-family:Arial, Verdana, Sans-Serif !important;
+	word-wrap: break-word; 
+	-moz-binding: url('../xml/moz_wordwrap.xml#wordwrap');
+}
+
+div.dmsWrapper a.dmsViewItemAnchor img,  div.dmsWrapperIE6Hover a.dmsViewItemAnchor img {vertical-align:middle;}
+
+div.dmsWrapper p.dmsItemWrapperActive,
+div.dmsWrapperIE6Hover p.dmsItemWrapperActive
+{
+	height:1.5em; 
+    line-height: 1.25em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+div.dmsWrapper p.dmsItemWrapper ,
+div.dmsWrapperIE6Hover p.dmsItemWrapper 
+{
+	height:1.5em; 
+    line-height: 1.25em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* div.dmsWrapper {overflow: hidden;} */
+
+span.refreshButton
+{
+  display:block;
+  float:left;
+  width:16px;
+  height:16px;
+  margin-right:0px;
+  background-image:url(../../images/application/refresh.png);
+  background-repeat:no-repeat;
+  title:"refresh";
+}
+span.refreshButton span {display:none;}

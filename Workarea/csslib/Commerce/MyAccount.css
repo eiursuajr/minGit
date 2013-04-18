@@ -1,0 +1,113 @@
+﻿.EktronMyAccount
+{
+	font-family: Helvetica,Verdana,Geneva,Arial,sans-serif;	
+	padding: 0.25em;
+	position: relative; top: 0; left: 0; /* Ensure any absolutly positioned elements are placed inside the control */
+	white-space: nowrap;
+	background-image:url(../../images/application/Commerce/background.gif);
+	background-position:0 0;
+	background-repeat:repeat;
+	border:1px solid silver;	
+}
+
+.EktronMyAccount_FloatClear{clear: both; height: 0px;}
+
+.EktronMyAccount h3
+{
+	padding: 0.3em;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: left;
+}
+
+.EktronMyAccount .editBlock h3
+{
+	text-align: center;
+}
+
+.EktronMyAccount_PersonalInfo,
+.EktronMyAccount_BillingInfo,
+.EktronMyAccount_ShippingInfo
+{
+	float: left;
+	margin: 0.25em;
+	padding: 0.5em;
+	background-color: White;
+	border:1px solid silver;	
+}
+
+.viewBlock
+{
+	text-align: left;
+	padding-bottom: 0.5em;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+}
+
+.EktronMyAccount ul {list-style: none; padding-left: 0;}
+
+.EktronMyAccount .editBlock 
+{
+	width: 99%;
+	height: 99%;
+	background-color: White;
+	padding-left: 0.5em;
+	border:1px solid silver;	
+}
+
+.EktronMyAccount .editBlock ul {}
+
+.EktronMyAccount .editBlock li{margin-top: 0.25em; margin-bottom: 0.25em;}
+
+.EktronMyAccount .editBlock li label 
+{
+	float: left;
+	width: 45%;
+	text-align: right;
+	padding-right: 0.25em;
+}
+
+.EktronMyAccount .EktronMyAccount_InlineButton
+{
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+
+.EktronMyAccount .editBlock .infoBlock,
+.EktronMyAccount .editBlock .buttonBlock
+{
+	text-align: center;
+	margin-top: 0.5em;
+}
+
+.EktronMyAccount .EktronMyAccount_MultipleAddressBlock .EktronMyAccount_AjaxBusyImageContainer img{margin-top: 0.5em;}
+
+.EktronMyAccount .EktronMyAccount_UserInfo_ShippingAddress_AddNewAddressLink{margin-left: 0.25em;}
+
+.EktronMyAccount .EktronMyAccount_RequiredNotice_FailedVerification {color: Red;}
+.EktronMyAccount .EktronMyAccount_Required_FailedVerification label{color: Red;}
+.EktronMyAccount .EktronMyAccount_Required_FailedVerification input{border: solid 2px Red; background-color: #ffeaea;}
+.EktronMyAccount .EktronMyAccount_Required_FailedVerification select{border: solid 2px Red; background-color: #ffeaea;}
+
+.EktronMyAccount .EktronMyAccount_ErrorText{color: Red;}
+
+.EktronMyAccount .EktronMyAccount_UserProperty{margin-left: 0.5em;}
+
+.EktronMyAccount .EktronMyAccount_UserProperty .EktronMyAccount_UserPropertyName{font-style:italic; color: #5555ff;}
+.EktronMyAccount .EktronMyAccount_UserProperty .EktronMyAccount_UserPropertyDelimiter{font-style:italic;}
+.EktronMyAccount .EktronMyAccount_UserProperty .EktronMyAccount_UserPropertyValue{margin-left: 0.5em;font-style:italic;}
+
+.EktronMyAccount .EktronMyAccountFooter{clear: both;}
+
+.EktronMyAccount .EktronMyAccount_NotAuthenticatedTitle,
+.EktronMyAccount .EktronMyAccount_NotAuthenticatedMessage { background-color: White; background-image: none; z-index: 99999; position: relative; top: 0; left: 0;}
+
+.EktronMyAccount_PersonalInfo_Edit .EktronMyAccount_Edit_UserProperty .subscription { margin-left: 45%; }
+.EktronMyAccount_PersonalInfo .EktronMyAccount_UserProperty .subscription { margin-left: 5%; }
+
+/* start for IE6 */
+div.EktronMyAccount_BrowserIE6
+{
+	background-image: none;
+}
+/* end for IE6 */

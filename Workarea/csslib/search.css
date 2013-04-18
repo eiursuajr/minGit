@@ -1,0 +1,128 @@
+.ektronSearch {padding:1em;margin:1em;font-family:Arial, Sans-Serif;}
+.ektronSearch ul.searchNavigation {width:100%;list-style:none;margin:0em;padding:0em;}
+.ektronSearch ul.searchNavigation li {display:block;float:left;margin:0em;margin-right:.25em;border-top:1px solid #d4d4d4;border-right:1px solid #d4d4d4;border-bottom:none;border-left:1px solid #d4d4d4;}
+.ektronSearch ul.searchNavigation li a {display:block;padding:.25em .5em;text-decoration:none;background-color:#eee;color:#000000;}
+.ektronSearch ul.searchNavigation li a:hover {text-decoration:underline;}
+.ektronSearch ul.searchNavigation li a.selected {background-color:white;padding:.25em .5em;position:relative;top:1px;}
+
+.ektronSearch div.searchWrapper {clear:left;padding:1em 1em 1em 1em;margin:0em;border:1px solid #d4d4d4;}
+.ektronSearch div.searchWrapper input {margin:0em 1em 0em 0em;}
+.ektronSearch div.searchWrapper fieldset {margin:0em;}
+
+.ektronSearch div.searchWrapper div#advancedTerms ul {list-style:none;margin:0em 0em 1em 1em;padding:0em 0em 0em 0em;}
+.ektronSearch div.searchWrapper div#advancedTerms ul li {clear:left;margin:.25em 0em;}
+.ektronSearch div.searchWrapper div#advancedTerms ul li span {display:block;width:12em;float:left;}
+
+.ektronSearch div.searchWrapper div#basicTerms {padding:0em;margin:0em;}
+.ektronSearch div.searchWrapper div#basicTerms input {margin-right:.5em;font-weight:normal;color:#4c4c4c;padding:0em;}
+.ektronSearch div.searchWrapper div#basicTerms select {margin-right:.5em;font-weight:normal;color:#4c4c4c;padding:0em;}
+.ektronSearch div.searchWrapper div#basicTerms input.basicSearchSubmit {padding:0em 0em;}
+
+.ektronSearch div.searchWrapper div#advancedTerms {padding:0em;margin:0em}
+
+.ektronSearch div.searchWrapper p#EktronCategorySearchToggle 
+{
+	margin-top:1em;
+	padding-left:15px;
+	background-image:url('../images/application/arrowClosed.gif');
+	background-position:0 2px;
+	background-repeat:no-repeat;
+}
+
+.ektronSearch div.searchWrapper p#EktronCategorySearchToggle:hover {text-decoration:underline;}
+
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch {margin-top:.5em;padding:0em 1em .5em 1em;background-color:White;display:block;}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch>div {margin-top:.5em;}
+
+.ektronSearch div.searchWrapper div.searchResultsHeader h3 {border-top:1px dotted #d4d4d4;color:#676767;background-color:#eee;margin:0em 0em .5em 0em;padding:.25em;text-align:left;font-weight:normal;}
+.ektronSearch div.searchWrapper div.searchResultsHeader h3.noResults {text-align:left;}
+.ektronSearch div.searchWrapper div.searchResultsHeader h3 span.resultslabel {font-weight:normal;color:#4c4c4c;}
+.ektronSearch div.searchWrapper div.searchResultsHeader h3 span.beginPageCount {font-weight:bold;color:#4c4c4c;}
+.ektronSearch div.searchWrapper div.searchResultsHeader h3 span.endPageCount {font-weight:bold;color:#4c4c4c;}
+.ektronSearch div.searchWrapper div.searchResultsHeader h3 span.totalCount {font-weight:bold;color:#4c4c4c;}
+.ektronSearch div.searchWrapper div.searchResultsHeader h3 span.searchTerms {font-weight:bold;color:#4c4c4c;}
+.ektronSearch div.searchWrapper div.searchResultsHeader h3 span.searchDuration {font-weight:bold;color:#4c4c4c;}
+
+.ektronSearch div.searchWrapper div.suggestedResults {background-color:#FFFFD8;padding:1em .5em .5em .5em;border:1px solid silver;}
+.ektronSearch div.searchWrapper div.suggestedResults div.resultPreview {margin-bottom:1em;}
+.ektronSearch div.searchWrapper div.suggestedResults h3 {float:right;font-weight:normal;color:#4c4c4c;font-size:1em;margin:0em;padding:0em;}
+.ektronSearch div.searchWrapper div.suggestedResults h4 {display:inline;font-weight:normal;margin:1em 0em .25em 0em;}
+
+.ektronSearch div.searchWrapper div.searchResults h4 {font-weight:normal;margin:1em 0em .25em 0em;text-align:left;}
+.ektronSearch div.searchWrapper div.searchResults h4 img {margin-right:.25em;}
+.ektronSearch div.searchWrapper div.searchResults h4 span.dateTime {margin-left:.5em;color:#4c4c4c;font-size:.9em;}
+
+.ektronSearch div.searchWrapper div#advancedTerms fieldset {margin:0em 0em 1em 0em;padding:0em 0em 1em 0em;}
+.ektronSearch div.searchWrapper div#advancedTerms fieldset ul {margin:1em 1em 1em 1em;padding:0em;}
+.ektronSearch div.searchWrapper div#advancedTerms fieldset input {margin:0em 1em 0em 1em;}
+.ektronSearch div.searchWrapper div#advancedTerms fieldset a {text-decoration:none;}
+.ektronSearch div.searchWrapper div#advancedTerms fieldset a:hover {text-decoration:underline;}
+.ektronSearch div.searchWrapper div#advancedTerms fieldset p {margin:0em 0em 0em 1em;padding:0em;}
+.ektronSearch div.searchWrapper div#advancedTerms fieldset input.addFilter {margin:0em;}
+.ektronSearch div.searchWrapper div#advancedTerms input.advancedSubmit {padding:0em 1em;margin:0em 0em 1em 0em;}
+
+.ektronSearch div.searchWrapper div.resultPreview {margin:0em 0em 1em 0em;}
+.ektronSearch div.searchWrapper div.resultPreview p {margin:0em;padding:0em;}
+.ektronSearch div.searchWrapper div.resultPreview div.resultPreviewDetails span {color:#497d32;}
+
+.ektronSearch div#navbar {text-align:center;display:block;margin-top:1em;border-top:1px dotted silver;padding-top:1em;}
+.ektronSearch div#navbar ul.ektronPaging {list-style:none;margin:0em;padding:0em;}
+.ektronSearch div#navbar ul.ektronPaging li {display:inline;border:1px solid blue;padding:.35em;margin-right:.5em;font-weight:bold;}
+.ektronSearch div#navbar ul.ektronPaging li a {text-decoration:none;font-weight:normal;}
+.ektronSearch div#navbar ul.ektronPaging li a:hover {text-decoration:underline;}
+
+/* Category Filter Tree */
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane input.searchTaxonomyPath 
+	{
+		margin: 0 .25em 0 0;
+		padding: 0;
+		position: relative;
+		top: .1em;
+		*position: static; /* fix for IE */
+		*top: 0; /* fix for IE */
+		*vertical-align: middle; /* fix for IE */
+	}
+
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li 
+	{
+		background: none;		
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview .hitarea 
+	{
+		background-image: none;
+		background-repeat: no-repeat;
+		background-position: 3px 0px;
+		background-color: transparent;
+		*background-position: 5px 3px;
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview .expandable-hitarea 
+	{
+		background-image: url('../images/ui/icons/tree/plus.png'); 
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview .collapsable-hitarea  
+	{
+		background-image: url('../images/ui/icons/tree/minus.png'); 
+	}
+
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li span.folder, 
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li span.file 
+	{
+		display: inline-block;
+		padding: 0 0 0 20px;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li.collapsable>span.folder 
+	{
+		background-image: url('../images/ui/icons/folderOpen.png'); 
+
+	}	
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview li.expandable>span.folder 
+	{
+		background-image: url('../images/ui/icons/folder.png'); 
+	}
+.ektronSearch div.searchWrapper fieldset#EktronCategorySearch div#divTreePane .EktronTreeview span.file 
+	{
+		background-image: url('../images/ui/icons/taxonomy.png'); 
+	}		

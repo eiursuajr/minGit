@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="OK">OK</string>
+	<string id="Cancel">Cancel</string>
+  <string id="None">Ingen</string>
+
+	<string id="Link Manager">Hyperlink Manager</string>
+	<string id="Text">Link tekst</string>
+	<string id="Type">Typ</string>
+  <string id="Documents">Dokumenter</string>
+
+  <string id="Picture">Billede</string>
+  <string id="Pictures">Billede</string>
+  <string id="AltText">ALT Tekst</string> 
+
+  <string id="Link">Link</string>
+  <string id="LinkURL">Link URL</string>
+  
+  <string id="Target">Target</string>
+  <string id="TargetStandard">Standard</string>
+  <string id="TargetNewWindow">Ny vindue</string>
+
+  <string id="Layout">Layout</string>
+  <string id="ImageAlign">Justering</string>
+  <string id="AlignNone">None</string>
+  <string id="AlignLeft">Left</string>
+  <string id="AlignRight">Right</string>
+  <string id="AlignTextTop">Texttop</string>
+  <string id="AlignAbsMiddle">AbsMiddle</string>
+  <string id="AlignBaseline">Baseline</string>
+  <string id="AlignAbsBottom">AbsBottom</string>
+  <string id="AlignBottom">Bottom</string>
+  <string id="AlignMiddle">Middle</string>
+  <string id="AlignTop">Top</string>
+
+  <string id="BorderSize">Billedeamme-tykkelse</string>
+
+  <string id="Padding">Spatiering</string>
+  <string id="HorizontalPadding">Horisontal</string>
+  <string id="VerticalPadding">Vertikal</string>
+</localization>

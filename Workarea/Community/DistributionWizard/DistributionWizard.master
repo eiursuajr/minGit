@@ -1,0 +1,20 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="DistributionWizard.master.cs" Inherits="Community_DistributionWizard_DistributionWizard" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+    <head runat="server" id="dwHeader">
+        <title>Distribution Wizard</title>
+        <link rel="stylesheet" type="text/css" href="DistributionWizard.css" />
+        <script src="java/distribution_wizard.js" type="text/javascript" language="javascript"></script>
+    </head>
+    <body onbeforeunload="javascript:HandleWindowClose();">
+        <form id="form1" runat="server">
+            <div id="DistributionWizard">
+                <div id="DistributionWizardStepHeader"><asp:Literal ID="ltrWizardStepHeader" runat="server"></asp:Literal></div>
+                <div id="DistributionWizardStepTitle"><asp:Literal ID="ltrWizardStepTitle" runat="server"></asp:Literal></div>
+                <div id="DistributionWizardContent"><asp:ContentPlaceHolder ID="cphDistributionWizardContent" runat="server"></asp:ContentPlaceHolder></div>
+            </div>
+        </form>
+    </body>
+</html>

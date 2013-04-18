@@ -1,0 +1,47 @@
+a.EktronEditorsMenuMarker 
+{
+	display:block !important;
+	height:1em !important;
+	width:1em !important;
+	margin:0 !important;
+	padding:0 !important;
+	text-decoration:none !important;}
+
+a.EktronEditorsMenuMarker:hover {text-decoration:none !important;}
+
+a.EktronEditorsMenuMarker img {
+	margin:0 !important;
+	padding:0 !important;
+	border:none !important;
+	cursor:pointer !important;
+	cursor:hand !important;}
+
+/* Note: menu position is assigned in webtoolbar.js */
+ul.EktronEditorsMenu 
+{
+	position:absolute !important;
+	text-align:left !important;
+	list-style:none !important;
+	margin:0 !important;
+	padding:18px 0 !important;
+	background: #ededed url(../images/UI/menu/dropdown-background.gif) repeat-x 0 0 !important;
+	border: solid 1px #bfbfbf !important;
+	font-family: Arial, Verdana, sans-serif;
+	-moz-box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#000000');
+}
+
+ul.EktronEditorsMenuNotLayered {position:static !important;width:150px !important;margin-bottom:1em !important;margin-left:16px !important}
+
+ul.EktronEditorsMenu li {margin:0 0 -1px 0 !important;padding:0 !important;border:none !important;}
+ul.EktronEditorsMenu li a {display:block !important;margin:0 !important;padding:.25em !important;text-decoration:none !important; padding: 3px 24px !important; color: #000;}
+ul.EktronEditorsMenu li a:hover { background: #3767af url('../images/ui/over_tab.gif') 0 0 repeat-x !important;color:white !important;text-decoration:none !important;}
+ul.EktronEditorsMenu li a img {border:none !important;margin:0em .25em 0em 0em !important;padding:0 !important;width:16px !important;height:16px !important; display: none;}
+
+ul.EktronEditorsMenu li a span {visibility:visible !important;}
+

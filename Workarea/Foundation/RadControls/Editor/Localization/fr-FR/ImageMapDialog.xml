@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="AreaFieldSet">Propriétés de la zone sélectionnée</string>
+	<string id="ImageFieldSet">Propriétés de l'Image</string>
+	<string id="Update">Mettre à jour</string>
+	<string id="Remove">Supprimer zone</string>
+	<string id="RemoveAll">Supprimer Tout</string>
+	<string id="NewArea">Créer</string>
+	<string id="Left">Gauche</string>
+	<string id="Top">Haut</string>
+	<string id="Width">Largeur</string>
+	<string id="Height">Hauteur</string>
+	<string id="Url">Url</string>	
+	<string id="Target">Cible</string>
+	<string id="Comment">Commentaire</string>
+	<string id="ImageSrc">Image Src</string>
+	<string id="AlertInvalidProperties"> Propriétés non valables !</string>
+	<string id="AlertInvalidAreaProperties"> Propriétés de zone non valables ! S'il vous plaît, entrer une URL.</string>
+	<string id="AlertDeleteArea">Etes vous sûr de vouloir supprimer cette zone ?</string>
+	<string id="AlertDeleteAllAreas">Etes vous sûr de vouloir supprimer TOUTES les zones ?</string>
+	<string id="AlertWrongAreaDimensions"> Dimensions erronées détectées. Sauter cette zone.</string>
+	<string id="ShapeAlt">Tirez sur la poignée en bas à droite pour redimensionner cette zone.</string>
+	<string id="HowToAdd">Vous pouvez aussi cliquer-glisser la souris sur l'image pour créer une nouvelle zone.</string>
+	<string id="RectangleShapeName">Rectangle</string>
+	<string id="CircleShapeName">Cercle</string>
+	<string id="PolygonShapeName">Polygone</string>	
+	<string id="SelectImage">Veuillez sélectionner une image pour créer une zone réactive.</string>
+	<string id="_blank">Nouvelle fenêtre</string>
+	<string id="_self">Même fenêtre</string>
+	<string id="_parent">Fenêtre parente</string>
+	<string id="_top">Fenêtre du navigateur</string>
+	<string id="_search">Panneau de recherche</string>
+	<string id="_media">Panneau Media</string>
+</localization>

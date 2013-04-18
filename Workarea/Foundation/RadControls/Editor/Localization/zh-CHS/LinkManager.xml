@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">JWs</string>
+	<string id="Tab1HeaderText">Ws</string>
+	<string id="Tab2HeaderText">锚点</string>
+	<string id="Tab3HeaderText">qll</string>
+	<string id="LinkUrl">网址:</string>
+	<string id="LinkType">样式:</string>
+	<string id="Other">其他</string>
+	<string id="LinkTarget">目标:</string>
+	<string id="Target">目标</string>
+	<string id="LinkTooltip">替代文字:</string>
+	<string id="LinkName">名称:</string>
+	<string id="LinkAddress">位置:</string>
+	<string id="LinkSubject">主题:</string>
+	<string id="OK">确定</string>
+	<string id="Cancel">取消</string>
+	<string id="CssClass">样式:</string>
+	<string id="AnchorCss">锚点样式</string>
+	<string id="LinkText">连结文字:</string>
+	<string id="ClearStyle">无</string>
+	<string id="LinkToAnchor">已存在锚点:</string>
+	<string id="AnchorNone">无</string>
+	<string id="_blank">_blank</string>
+	<string id="_self">_self</string>
+	<string id="_parent">_parent</string>
+	<string id="_top">_top</string>
+	<string id="_search">_search</string>
+	<string id="_media">_media</string>
+    <string id="ektron">Ektron Editor Starts</string>
+	<string id="UrlRequired">URL is required.</string>
+	<string id="NameRequired">Name is required.</string>
+	<string id="AddressRequired">Address is required.</string>
+	<string id="InvalidEmail">Email address is not valid.</string>
+	<string id="DuplicatedName">Bookmark name is not unique.</string>
+	<string id="AccessChecksWarn">The content is not accessibility compliance. Would you like to correct it?</string>
+	<string id="AccessChecksEnforce">Please fill in the accessibility compliance field(s).</string>
+	<string id="Or">or</string>
+	<string id="InvalidUrl">Invalid Url is detected. Please correct your Url.</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

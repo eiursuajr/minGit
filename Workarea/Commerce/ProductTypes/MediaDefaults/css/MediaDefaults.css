@@ -1,0 +1,31 @@
+/* default styles */
+div.EktronMediaDefaults .hide {display:none;}
+div.EktronMediaDefaults span.required {color:Red;font-weight:bold;display:none;margin-left:.5em;float:left;}
+div.EktronMediaDefaults p.requiredFieldNote {display:none;font-size:.9em;color:Red;font-weight:bold;margin-left:.5em;padding:0em;margin:.5em .5em 0em .5em;}
+div.EktronMediaDefaults .wideColumn {width:40%}
+div.EktronMediaDefaults .narrowColumn {width:10%}
+div.EktronMediaDefaults p.actions a:hover {text-decoration:none !important;border:none !important;padding:0;margin:0;}
+
+div.EktronMediaDefaults .ektronGrid {border-bottom:1px solid #d4d4d4;}
+
+/* Attributes Table */
+div.EktronMediaDefaults table caption {text-align:left;}
+div.EktronMediaDefaults table tbody tr.mediaDefaultsCloneRow {display:none;}
+
+div.EktronMediaDefaults tbody td.data p.actions {margin:0;padding:0;}
+div.EktronMediaDefaults tbody td.data p.actions a {margin-left:.25em;}
+
+div.EktronMediaDefaults tbody td.data p.actions a.ok {display:none;}
+div.EktronMediaDefaults tbody td.data p.actions a.cancel {display:none;}
+div.EktronMediaDefaults tbody td.data p.actions a.restore {display:none;}
+div.EktronMediaDefaults tbody td.data p.data {margin:0;padding:0;}
+div.EktronMediaDefaults tbody td.data p.data span.view {}
+div.EktronMediaDefaults tbody td input {display:none;width:3em;}
+div.EktronMediaDefaults tbody td.name span.example {font-size:.9em;font-style:italic;margin:0 0 0 1em;}
+div.EktronMediaDefaults tbody .markedForDelete {color:Silver;text-decoration:line-through;}
+
+/* Modal - new attribute */
+div.EktronMediaDefaults p.addThumbnail {margin-top:1em;}
+div#MediaDefaultsModal tbody td input {width:auto;float:left;}
+div#MediaDefaultsModal tbody td span.units {float:left;padding-left:.25em;}
+div#MediaDefaultsModal .ui-dialog-content p.required {margin:0;}

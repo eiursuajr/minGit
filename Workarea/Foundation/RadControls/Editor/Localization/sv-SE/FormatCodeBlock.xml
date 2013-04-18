@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+
+	<string id="PasteSourceCode">Klistra in källkod nedan:</string>
+	<string id="CodeLanguage">Språk</string>
+	<string id="SnippetMaxHeight">Kod snuttens största höjd</string>
+	<string id="ShowLineNumbers">Visa radnummer</string>
+	<string id="SnippetMaxWidth">Kod snuttens största bredd</string>
+	<string id="Preview">Förhandsgranska</string>
+	<string id="PreviewCode">Förhandsgranska kod</string>
+	<string id="Working">Arbetar ...</string>
+</localization>

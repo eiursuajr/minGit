@@ -1,0 +1,83 @@
+.tree
+{
+	width:200px;
+	height:200px;
+	overflow:auto;
+}
+
+ul.ektree  
+{
+	display:block; 
+	z-index:3; 
+	top:0px; 
+	white-space: nowrap;
+	margin: 0px;
+	padding:0px;
+	list-style-type: none;
+	zoom: 1;
+}
+
+ul.ektree ul
+{
+	list-style-type: none;
+}
+
+.ekTreeItem
+{
+	padding: 2px 0px;
+	list-style: none;
+	margin: 0 0 0 .25em;
+} 
+
+.ekTreeRootItem
+{
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	top:0px;
+} 
+
+ul.ekSubTree
+{
+	margin-left:5px;
+}
+
+.hasChildIcon
+{
+	width: 31;
+	height: 16;
+	vertical-align: top;
+	margin-right: 1px;
+	position: relative;
+	top: 1px;
+}
+
+.linkStyle
+{
+	padding:1px;
+	padding-left:2px;
+	text-decoration: none;
+	color: black;
+}
+.linkStyleDisabled, ul.ektree a.linkStyleDisabled
+{
+	color: #c0c0c0;
+}
+.disabledLinkStyle_selected
+{
+	padding-left:1px;
+	background-color:Gray;
+}
+.linkStyle_selected
+{
+	padding-left:1px;
+	border: dashed 1px black;
+}
+
+.loadingMessage
+{
+	margin-top: 5px;
+	margin-left: 35px;
+	width: 50px;
+	color: #969696;
+}

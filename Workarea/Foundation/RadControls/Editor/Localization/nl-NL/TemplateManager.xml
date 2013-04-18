@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Tab1HeaderText">Kies een template</string>
+	<string id="Tab2HeaderText">Upload een template</string>
+	<string id="TemplateURL">URL:</string>
+	<string id="AlertFile">Geef aub een template bestand aan!</string>
+	<string id="AlertExists">Er bestaat reeds een bestand met die naam!</string>
+</localization>

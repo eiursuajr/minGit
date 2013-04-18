@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Søg og erstat</string>
+	<string id="Tab1HeaderText">Søg</string>
+	<string id="Tab2HeaderText">Erstat</string>
+	<string id="SearchText">Søg efter:</string>
+	<string id="FindNext">Find næste</string>
+	<string id="Replace">Erstat</string>
+	<string id="ReplacementText">Erstat med:</string>
+	<string id="ReplaceAll">Erstat alle</string>
+	<string id="SearchIn">Søg:</string>
+	<string id="SearchEntireText">Hele teksten</string>
+	<string id="SearchSelection">Kun den markerede tekst</string>
+	<string id="SearchDirection">Søgeretning:</string>
+	<string id="MatchCase">Eksakt sætning</string>
+	<string id="WholeWordsOnly">Kun hele ord</string>
+	<string id="SearchUp">Op</string>
+	<string id="SearchDown">Ned</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Annulér</string>
+	<string id="SearchCriteriaNotSpecified">Søgekriterie er ikke specificeret</string>
+	<string id="NoSearchTarget">Intet indhold at søge i</string>
+	<string id="FinishedSearching">Søgningen er færdig</string>
+	<string id="AndHasMade">og har foretaget</string>
+	<string id="Replacements">erstatninger.</string>
+	<string id="ektron">Ektron Editor Starts</string>
+	<string id="Close">Close</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

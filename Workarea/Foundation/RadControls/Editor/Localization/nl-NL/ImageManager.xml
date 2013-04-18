@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Afbeelding beheer</string>
+	<string id="ConfirmLink">Thumbnail naar het origineel linken?</string>
+	<string id="ConfirmDelete">Weet u zeker dat dit bestand verwijder moet worden?\nHet bstand kan in gebruik zijn. Wanneer het verwijderd wordt, kunnen mogelijk pagina's niet meer correct worden weergegeven.\nKlik op \"OK\" om het verwijderen te bevestigen.</string>
+	<string id="AlertImage">Geen aub een bestand aan om te uploaden!</string>
+	<string id="AlertExists">Er bestaat reeks een bestand met die naam!</string>
+	<string id="AlertDimensions">Geeg aub een hoogte of breedte op van de thumbnail.</string>
+	<string id="AlertWidth">Geef aub een geldige breedte op.</string>
+	<string id="AlertHeight">Geef aub een geldige hoogte op.</string>
+	<string id="MessageNothingPost">Geef aub een bestand aan!</string>
+	<string id="MessageValid">Geef aub een geldige afbeelding aan!</string>
+	<string id="MessageSize">Het aangegeven bestand is de groot!</string>
+	<string id="MessagePermission">U heeft geen toegang tot deze pagina of uw cookie is verlopen!<br />Ververs aub de pagina!</string>
+	<string id="Tab1HeaderText">Zoek bestand</string>
+	<string id="Tab2HeaderText">Upload Afbeelding</string>
+	<string id="ImageFile">Bestandsnaam:</string>
+	<string id="ImageURL">URL Afbeelding:</string>
+	<string id="Preview">Voorbeeld</string>
+	<string id="Loading">Laden...</string>
+	<string id="CreateThumbnail">Thumbnail aanmaken:</string>
+	<string id="Yes">Ja</string>
+	<string id="No">Nee</string>
+	<string id="Width">Breedte:</string>
+	<string id="Height">Hoogte:</string>
+	<string id="Constrain">Behoud</string>
+	<string id="KeepOriginalImage">Behoud origineel:</string>
+	<string id="LoadingImagePrompt">Afbeelding aan het laden. Een moment...</string>
+	<string id="BestFit">Passen</string>
+	<string id="ActualSize">Daadwerkelijke grootte</string>
+	<string id="ZoomIn">Vergroten</string>
+	<string id="ZoomOut">Verkleinen</string>
+	<string id="ChooseFileToInsert">Selecteer aub een bestand</string>
+	<string id="CreateThumbnailIconTitle">Thumbnail maken</string>
+</localization>

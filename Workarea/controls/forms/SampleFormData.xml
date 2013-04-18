@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<Form>
+	<Title>contact us</Title>
+	<Description>Please reply within <font color="red">36</font> hours.</Description>
+	<SubmittedData>
+		<Date>8/12/2005 6:34:58 PM</Date>
+		<Data form_data_id="2">
+			<name>Your Name Here</name>
+			<phone>+1 (603) 594-0249</phone>
+			<fax>+1 (603) 594-0258</fax>
+			<email>you@email.com</email>
+			<dob>1989-02-23</dob>
+			<interest>CMS</interest>
+			<company>Email.com</company>
+			<contactme>true</contactme>
+			<num>3.5</num>
+		</Data>
+	</SubmittedData>
+	<SubmittedData>
+		<Date>7/11/2005 5:24:58 PM</Date>
+		<Data form_data_id="1">
+			<name>My Name Here</name>
+			<phone>+1 (603) 594-0249</phone>
+			<fax>+1 (603) 594-0258</fax>
+			<email>me@email.com</email>
+			<dob>1989-02-23</dob>
+			<interest>CMS</interest>
+			<interest>DMS</interest>
+			<company>
+			</company>
+			<contactme>true</contactme>
+			<num>2.4</num>
+		</Data>
+	</SubmittedData>
+	<ektdesignpackage_list>
+		<fieldlist>
+			<field name="name" datatype="string" basetype="text" xpath="/root/name">Name</field>
+			<field name="phone" datatype="phoneUSCA" basetype="text" xpath="/root/phone">Telephone</field>
+			<field name="fax" datatype="phoneUSCA" basetype="text" xpath="/root/fax">Fax</field>
+			<field name="email" datatype="email" basetype="text" xpath="/root/email">E-Mail</field>
+			<field name="dob" datatype="date" basetype="calendar" xpath="/root/dob">Birthdate</field>
+			<field name="interest" datatype="selection" basetype="text" datalist="ID000" xpath="/root/interest">Product Interest</field>
+			<field name="company" datatype="string" basetype="text" xpath="/root/company">Company Name</field>
+			<field name="contactme" datatype="boolean" basetype="text" xpath="/root/contactme">Contact Me</field>
+			<field name="num" datatype="decnum2-req" basetype="number" xpath="/root/num">My Number</field>
+			<datalist name="ID000">
+				<item value="CMS">Web Content Management Solutions</item>
+				<item value="editor">Browser-base Editors</item>
+				<item value="DMS">Document Management</item>
+			</datalist>
+		</fieldlist>
+	</ektdesignpackage_list>
+</Form>

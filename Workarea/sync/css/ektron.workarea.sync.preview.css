@@ -1,0 +1,12 @@
+﻿div.previewOption
+{
+    margin: 5px;
+}
+tr.delete stripe > td
+{
+	color: Red;
+}
+tr.delete > td
+{
+	color: Red;
+}

@@ -1,0 +1,52 @@
+<root>
+	<modules>
+	</modules>
+	<tools name="Edit" enabled="true" dockable="false">
+		<tool separator="true"/>
+		<tool name="Cut" />
+		<tool name="Copy" />
+		<tool name="Paste" />
+		<tool name="PasteFromWordNoFontsNoSizes" />
+		<tool name="PastePlainText" />
+		<tool name="Undo" />
+		<tool name="Redo" />
+		<tool separator="true"/>
+		<tool name="Bold" />
+		<tool name="Italic" />
+	</tools>	
+	<tools name="Paragraph Format" enabled="true" dockable="false">
+		<tool separator="true"/>
+		<tool name="InsertOrderedList" />
+		<tool name="InsertUnorderedList"/>
+		<tool name="Outdent" />
+		<tool name="Indent" />
+		<tool separator="true"/>
+		<tool name="JustifyLeft" />
+		<tool name="JustifyCenter" />
+		<tool name="JustifyRight" />
+		<tool name="JustifyFull" />
+		<tool separator="true"/>
+		<tool name="AjaxSpellCheck" />
+		<tool separator="true"/>
+		<tool name="LinkManager" />
+		<tool name="Unlink" />
+		<tool name="EkLibrary" />
+	</tools>
+	<tools name="Table" dockable="false" enabled="true">
+		<tool separator="true"/>
+		<tool name="InsertTable" />
+		<tool name="InsertRowAbove" />
+		<tool name="InsertRowBelow" />
+		<tool name="InsertColumnLeft" />
+		<tool name="InsertColumnRight" />
+		<tool name="DeleteRow" />
+		<tool name="DeleteColumn" />
+		<tool name="DeleteCell" />
+		<tool name="MergeColumns" />
+		<tool name="MergeRows" />
+		<tool name="SplitCell" />
+		<tool name="SetTableProperties" />
+		<tool name="SetCellProperties" />
+		<tool name="ToggleTableBorder" />
+	</tools>
+</root>

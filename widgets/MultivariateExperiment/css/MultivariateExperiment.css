@@ -1,0 +1,110 @@
+﻿div.multivariate-experiment-content
+{
+    font-size: small;
+    display: none;
+}
+
+div.multivariate-experiment-header span.max-conversions
+{
+    display: inline;
+}
+
+div.multivariate-experiment-header .show-report,.hide-report { display: none; text-align: center; }
+
+div.multivariate-experiment-content ul.reports-list
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #E5E5E5;
+}
+
+div.multivariate-experiment-content ul.reports-list > li
+{
+    display: block;
+    margin: 0;
+    padding: 2px;
+    padding-left: 4px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+div.multivariate-experiment-content ul.reports-list > li img
+{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div.multivariate-experiment-content ul.reports-list > li .progress-bar-percent
+{
+    line-height: 1em;
+    font-size: smaller;
+    color: #9E9E9E;
+}
+
+div.multivariate-experiment-content ul.reports-list > li.top-report
+{
+    background-color: #FFF8C7;
+}
+
+div.multivariate-experiment-content ul.reports-list > li .progress-bar
+{
+    width: 100px;
+    display: inline-block;
+    zoom: 1.0;
+    background-color: #E7E7E7;
+    border: 1px solid #AEAEAE;
+}
+
+div.multivariate-experiment-header
+{
+    width: 100%;
+}
+
+div.multivariate-experiment-header label
+{
+    font-weight: bold;
+    padding: 0.5em;
+    display: inline;
+}
+
+div.multivariate-experiment-header span.validation
+{
+    display: block;
+}
+
+div.multivariate-experiment-header .textbox
+{
+    margin-right: 0.2em;
+}
+
+div.multivariate-experiment-header .button
+{
+    border:1px solid #999;
+	background: #ddd;
+}
+div.multivariate-experiment-header span.max-conversions
+{
+	display:inline;
+	padding-left: 5px;
+}
+
+div.multivariate-experiment-header .show-report,.hide-report { 
+	background:#DDDDDD none repeat scroll 0 0;
+	border:1px solid #999999;
+	display:none;
+	margin:5px;
+	padding:2px 3px;
+	text-align:center;
+	width:7em;
+}
+
+div.multivariate-experiment-header div.browse-dialog
+{
+    overflow-y: scroll;
+    height: 600px;
+    display: none;
+}
+
+div.targetPage {
+	padding-bottom: 5px;
+}

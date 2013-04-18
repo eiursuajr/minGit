@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="Title">Spelling Controle</string>
+	<string id="NoPermission">U heeft geen toestemming om deze pagina te bekijken of uw cookie is verlopen!<br />Herlaad de pagina aub</string>
+	<string id="Tab1HeaderText">Spelling controle</string>
+	<string id="ProgressMessage">Spelling controle in voortgang.....</string>
+	<string id="Confirm">Wilt u de tot nu toe gemaakte veranderingen aan de tekst doorvoeren of ongedaan maken?</string>
+	<string id="ChangesMade">U heeft de tekst veranderd.</string>
+	<string id="SpellCheckComplete">Spelling Controle is voltooid!</string>
+	<string id="Nosuggestions">Geen suggesties</string>
+	<string id="Undo">Ongedaan maken</string>
+	<string id="UndoEdit">Bewerking ongedaan maken</string>
+	<string id="Ignore">Negeren</string>
+	<string id="IgnoreAll">Alles negeren</string>
+	<string id="Cancel">Afsluiten</string>
+	<string id="AddCustom">Toevoegen</string>
+	<string id="Change">Verander</string>
+	<string id="ChangeAll">Alles veranderen</string>
+	<string id="Help">Help</string>
+	<string id="NotInDictionary">Niet in woordenboek:</string>
+	<string id="Suggestions">Suggesties:</string>
+	<string id="AddWord1">Weet u zeker dat u '</string>
+	<string id="AddWord2">' wilt toevoegen aan het woordenboek?</string>
+</localization>

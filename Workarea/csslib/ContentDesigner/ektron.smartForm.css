@@ -1,0 +1,852 @@
+﻿/* Copyright 2003-2010, Ektron, Inc. */
+
+body
+{
+	margin:0px;
+}
+
+/* Wraps the content being edited. */
+/* div.design_content may also have class design_mode_design or design_mode_entry */
+#design_content, div.design_content 
+{
+	overflow: auto;
+	padding:2px;
+	background-image:none;
+	border-style:none;
+	background-color:white; /* required for workaround */
+	/*
+	If the background color is not set, clicking below the text on the left half
+	of the window will send the cursor to the top of the content. Clicking on the
+	right half sends the cursor to the end of the content, as it should. With
+	the background color set, the cursor will find a location on the last line of
+	text vertically above the mouse pointer when clicked.
+	*/
+}
+
+#design_content table th.small, div.design_content table th.small 
+{
+	font-size: .87em;  /*prevents horizontal scroll in some situations */
+}
+
+/* This style would override the bordercolor attribute :-(
+div.design_mode_design table 
+{
+	border:silver solid 1px;
+}
+
+div.design_mode_design td 
+{
+	border:silver solid 1px;
+}
+*/
+
+#design_content a.design_bookmark, div.design_content a.design_bookmark
+/* a[name] is not reliable in IE 7, so we add a class */
+{
+	display: inline-block;
+	min-width: 18px; min-height: 14px;
+	background-image: url(bkmrktag.gif) !important;
+	background-repeat: no-repeat;
+	background-position: bottom left; 
+	text-decoration: none !important;
+	cursor: move !important;
+	border: solid 1px transparent;
+	vertical-align: text-bottom;
+	margin-bottom: 1px;
+}
+#design_content a.design_bookmark:hover, div.design_content a.design_bookmark:hover
+{
+	border: solid 1px cyan;
+}
+
+#design_content .design_textfield, div.design_content .design_textfield 
+{
+	width: auto; 
+	height: auto;
+}
+
+.design_loading_indicator
+{
+	position: absolute; 
+}
+iframe.contenteditable, iframe.design_cache
+{
+	width:100%; height:100%;
+	background-image:none;
+	border-style:none;
+	padding:0px;
+	min-height:5em; /* autoheight */
+}
+div.design_richarea iframe.contenteditable, div.design_richarea iframe.design_cache
+{
+	/* autoheight */
+	min-height:5em; 
+}
+/* Wraps the shadowed content of the iframe.contenteditable. */
+div.design_iframe_membrane 
+{
+	display:none;
+}
+
+/* Wraps the content of the group box (eg, <fieldset>) apart from its caption (eg, <legend>). */
+div.design_membrane 
+{
+	width:100%;
+	background-image:none;
+	border-style:none;
+	margin:0px;
+	padding:0px;
+}
+
+/* The following apply to their respective field types for design. */
+div.ektdesignns_richarea 
+{
+	border:inset 2px; 
+	margin:0px;
+	padding:1px; 
+	width:98%; height:5em; overflow:auto; 
+	vertical-align:top; 
+	font-size:x-small;
+	background-image:none;
+}
+
+div.ektdesignns_checklist 
+{
+	border:dotted buttonface 2px; 
+	margin:2px;
+	padding:4px;
+	background-image:none;
+}
+
+div.ektdesignns_choices 
+{
+	border:dotted buttonface 2px; 
+	margin:2px;
+	padding:4px;
+	background-image:none;
+}
+
+span.HackForMoveToElementText
+{
+	line-height: 0px; 
+}
+
+span.ektdesignns_calendar 
+{
+	background-color:#99ccff; 
+	border:1.0px solid #6699cc; 
+	/*border:dotted buttonface 2px; */
+	margin:2px;
+	padding:1px;
+	background-image:none;
+}
+
+span.ektdesignns_imageonly 
+{
+	border:dotted buttonface 2px; 
+	margin:2px;
+	padding:1px;
+	background-image:none;
+}
+
+span.ektdesignns_filelink 
+{
+	border:dotted buttonface 2px; 
+	margin:2px;
+	padding:1px;
+	background-image:none;
+}
+
+span.ektdesignns_mergefield 
+{
+	background-color:#99ccff; 
+	border:1.0px solid #6699cc; 
+	padding-left:2px; padding-right:2px;
+	padding-top:0px; padding-bottom:0px;
+	background-image:none;
+}
+
+div.ektdesignns_mergelist 
+{
+	background-color:#99ccff; 
+	border:4px solid #6699cc; 
+	padding:7px; 
+	overflow:auto; 
+	vertical-align:top;
+	background-image:none;
+}
+
+div.ektdesignns_mergelist table
+{
+	border:1px; 
+}
+
+span.ektdesignns_resource
+{
+	border:dotted buttonface 2px; 
+	margin:2px;
+	padding:1px;
+	background-image:none;
+}
+
+span.ektdesignns_resource span, span.design_resource span
+{
+	background-color:#99ccff; 
+	padding:0px;
+	background-image:none;
+}
+
+/* ektdesignns_conditional */
+
+table.ektdesignns_conditional 
+{
+    font-family: Arial, Tahoma, sans-serif;
+    font-size: small;
+    border: solid 1px #6699cc !important;
+    margin-top: 2px; 
+    margin-bottom: 2px;
+    padding: 0;
+    border-spacing: 0;
+}
+
+table.ektdesignns_conditional caption
+{
+    font-family: Courier New;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    background-color: #6699cc;
+    padding-left: 4px; 
+    padding-right: 4px;
+}
+
+table.ektdesignns_conditional > thead > tr > th
+{
+    font-weight: normal;
+    margin: 0;
+    padding-left: 4px; 
+    padding-right: 4px;
+    border: none;
+    border-bottom: solid 1px #6699cc;
+    background-color: #99ccff;
+}
+
+table.ektdesignns_conditional > thead > tr > td
+{
+    width: 90%;
+    font-family: Courier New;
+    color: #333333;
+    margin: 0;
+    padding-left: 4px; 
+    padding-right: 4px;
+    border: none;
+    border-bottom: solid 1px #6699cc;
+    background-color: #bbeeff;
+}
+
+table.ektdesignns_conditional > tbody > tr > td
+{
+    margin: 0;
+    padding: 2px; 
+    border: none !important;
+    border-top: solid 1px #6699cc !important;
+}
+
+/* ektdesignns_localize */
+
+table.ektdesignns_localize 
+{
+    border: solid 1px #6699cc !important;
+    margin-top: 2px; 
+    margin-bottom: 2px;
+    padding: 0;
+    border-spacing: 0;
+}
+
+table.ektdesignns_localize caption
+{
+    font-family: Courier New;
+    font-weight: bold;
+    color: white;
+    background-color: #6699cc;
+    padding-left: 4px; 
+    padding-right: 4px;
+}
+
+table.ektdesignns_localize > thead > tr > th
+{
+    font-weight: normal;
+    margin: 0;
+    padding-left: 4px; 
+    padding-right: 4px;
+    border: none;
+    border-bottom: solid 1px #6699cc;
+    background-color: #99ccff;
+}
+
+table.ektdesignns_localize > thead > tr > td
+{
+    width: 90%;
+    font-family: Courier New;
+    color: #333333;
+    margin: 0;
+    padding-left: 4px; 
+    padding-right: 4px;
+    border: none;
+    border-bottom: solid 1px #6699cc;
+    background-color: #bbeeff;
+}
+
+table.ektdesignns_localize > tbody > tr > td
+{
+    margin: 0;
+    padding: 2px; 
+    border: none !important;
+    border-top: solid 1px #6699cc !important;
+}
+
+/* The following apply to their respective field types for data entry. */
+div.design_group 
+{
+	min-height:5em;  /* standards mode */
+	overflow:visible;
+	background-image:none;
+	border-style:none;
+	margin:0px;
+	padding:0px; 
+}
+
+fieldset.design_group 
+{
+	border:dashed buttonface 2px; 
+	padding:2px; 
+	margin:2px; 
+	width:100%;
+}
+
+div.design_richarea 
+{
+	border:inset 2px;
+	width:99%; 
+	height:auto;
+	min-height:5em; /* standards mode */
+	overflow:visible;
+	/*background-color:white;*/
+	padding:1px;
+	background-image:none;
+}
+
+div.design_checklist 
+{
+	font-family:arial; 
+	font-weight:normal; 
+	background-color:white; 
+	padding:4px;
+	background-image:none;
+	border-style:none;
+}
+
+div.design_choices 
+{
+	font-family:arial; 
+	font-weight:normal; 
+	background-color:white; 
+	padding:4px;
+	background-image:none;
+	border-style:none;
+}
+
+span.design_calendar 
+{
+	font-family:arial; 
+	font-weight:normal; 
+	background-color:white; 
+	border-width:2px;
+	padding:1px;
+	background-image:none;
+}
+
+span.design_imageonly 
+{
+	font-family:arial; 
+	font-weight:normal; 
+	background-color:white; 
+	padding:1px;
+	border-width:2px;
+	background-image:none;
+}
+
+span.design_filelink 
+{
+	font-family:arial; 
+	font-weight:normal; 
+	/*background-color:white; */
+	padding:1px;
+	border-width:2px;
+	background-image:none;
+}
+
+input.design_calculation 
+{
+	border-style:solid;
+	border-width:1px;
+}
+
+span.design_standardlabel
+{
+	font-family:arial; 
+	font-weight:normal; 
+	background-color:white; 
+	padding:1px;
+	border-width:2px;
+	background-image:none;
+}
+
+/* design_fieldbutton applies to the icon for fields with a button (e.g., calendar). */
+img.design_fieldbutton 
+{
+	/* margin:2px; Can't set margin because it interferes with span border */
+	vertical-align: middle;
+}
+
+/* design_container is used in data entry mode for the context menu. */
+div.design_container 
+{
+	background-image:none;
+	border-style:none;
+	padding:0px; 
+}
+
+/* design_selectwrapper is used in data entry mode to hide select lists when the context menu 
+	is showing. Otherwise, the select list window is always on top. */
+span.design_selectwrapper 
+{
+	border:inset 2px;
+	background-color:#F0F0F0;
+	background-image:none;
+	padding:0px; 
+}
+
+span.design_selectwrapper select 
+{
+	margin:-2px;
+	visibility:hidden;
+}
+
+/* design_contextmenu is used in data entry mode for the context menu for repeatable elements. */
+div.design_contextmenu 
+{
+	position:absolute; z-index:32001;
+	border:2px outset;
+	padding:2px;
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	color:buttontext; background-color:buttonface; 
+	background-image:none;
+}
+
+div.design_contextmenu table, div.design_contextmenu table th, div.design_contextmenu table td
+{
+	border:none;
+	padding:0px;
+}
+
+img.design_contextmenu_button 
+{
+}
+
+/* design_view_button is for the icon to show/hide group boxes. */
+a.design_view_button:link 
+{
+	padding:2px; 
+}
+a.design_view_button:visited 
+{
+	padding:2px; 
+}
+a.design_view_button:hover 
+{
+	padding:2px; 
+}
+a.design_view_button 
+{
+	padding:2px; 
+}
+
+img.design_view_button 
+{
+}
+
+/* design_menuitem is used in data entry mode for the context menu for repeatable elements. */
+/*	If a web page has the DOCTYPE declaration, different modern browsers will draw the page in 
+	different rendering modes (quirks, standard/strict, almost standard modes). 
+	http://hsivonen.iki.fi/doctype/
+	The following pages describe how to trigger quirks mode in IE6 and IE7 
+	in order to give the correct hover background coverage (the page behaves as IE5):
+	http://www.quirksmode.org/css/quirksmode.html 
+	http://www.satzansatz.de/cssd/quirksmode.html
+http://msdn.microsoft.com/library/default.asp?url=/library/en-us/IETechCol/cols/dnexpie/ie7_css_compat.asp
+	However, Draco has no control over customer's web pages.  These materials
+	can only be written as a workaround for future KB articles. 
+*/
+a.design_menuitem:link 
+{
+	color:buttontext;
+	padding-right:4px; padding-left:4px; padding-top:2px; padding-bottom:2px; 
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	text-decoration:none;
+}
+a.design_menuitem:visited 
+{
+	color:buttontext;
+	padding-right:4px; padding-left:4px; padding-top:2px; padding-bottom:2px; 
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	text-decoration:none;
+}
+a.design_menuitem:hover 
+{
+	background-color:yellow;
+	color:buttontext;
+	padding-right:4px; padding-left:4px; padding-top:2px; padding-bottom:2px; 
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	text-decoration:none;
+}
+a.design_menuitem 
+{
+	color:buttontext;
+	width:100%;
+	padding-right:4px; padding-left:4px; padding-top:2px; padding-bottom:2px; 
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	text-decoration:none;
+}
+a.design_menuitem_disabled:link 
+{
+	cursor:not-allowed;
+	padding-right:4px; padding-left:4px; padding-top:2px; padding-bottom:2px; 
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	text-decoration:none;
+}
+a.design_menuitem_disabled:visited 
+{
+	cursor:not-allowed;
+	padding-right:4px; padding-left:4px; padding-top:2px; padding-bottom:2px; 
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	text-decoration:none;
+}
+a.design_menuitem_disabled:hover 
+{
+	cursor:not-allowed;
+	padding-right:4px; padding-left:4px; padding-top:2px; padding-bottom:2px; 
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	text-decoration:none;
+}
+a.design_menuitem_disabled 
+{
+	cursor:not-allowed;
+	padding-right:4px; padding-left:4px; padding-top:2px; padding-bottom:2px; 
+	font-family:MS Sans Serif;
+	font-size:x-small;
+	text-decoration:none;
+}
+
+/* Moving the cursor up and down over background-image:url() will eventually use up resources :-( */
+
+a.design_menuitem img 
+{
+	margin-right:4px;
+}
+a.design_menuitem_disabled img 
+{
+	margin-right:4px;
+}
+
+
+/* design_dynlist_* is used in data entry mode for repeatable elements. */
+div.design_dynlist_container 
+{
+	background-image:none;
+	border-style:none;
+	padding:0px; 
+}
+
+table.design_dynlist_area 
+{
+	width:100%;
+}
+
+img.design_dynlist_spacer 
+{
+	width:150px; height:0;
+}
+
+td.design_dynlist_first_normal 
+{
+	padding:3px;
+	width:11px;
+	vertical-align:top;
+}
+td.design_dynlist_normal, th.design_dynlist_normal 
+{
+	padding:2px;
+	border:white solid 1px !important;
+	vertical-align:top;
+}
+td.design_dynlist_last_normal 
+{
+	width:1px;
+	vertical-align:top;
+}
+td.design_dynlist_first_hover 
+{
+	padding:3px;
+	width:11px;
+	vertical-align:top;
+}
+td.design_dynlist_hover, th.design_dynlist_hover 
+{
+	padding:2px;
+	border:buttonface dotted 1px !important;
+	vertical-align:top;
+}
+td.design_dynlist_last_hover 
+{
+	width:1px;
+	vertical-align:top;
+}
+
+table.design_dynlist_area,
+table.design_dynlist_area > tbody > tr > td,
+td.design_dynlist_first_normal, td.design_dynlist_last_normal,
+td.design_dynlist_first_hover, td.design_dynlist_last_hover,
+tr.design_spacer td
+{
+	border-style:none !important;
+}
+
+a.design_dynlist_menu:link 
+{
+	color:buttontext;
+	border-style:none;
+	font-family:MS Sans Serif;
+	font-size:xx-small;
+	text-decoration:none;
+}
+a.design_dynlist_menu:visited 
+{
+	color:buttontext;
+	border-style:none;
+	font-family:MS Sans Serif;
+	font-size:xx-small;
+	text-decoration:none;
+}
+a.design_dynlist_menu:hover 
+{
+	color:buttontext;
+	border-style:none;
+	font-family:MS Sans Serif;
+	font-size:xx-small;
+	text-decoration:underline;
+}
+a.design_dynlist_menu 
+{
+	color:buttontext;
+	border-style:none;
+	font-family:MS Sans Serif;
+	font-size:xx-small;
+	text-decoration:none;
+}
+
+/* design_add_graphic for icon to add new data elements in data entry mode. */
+img.design_add_graphic 
+{
+	margin-right:2px;
+}
+
+/* design_prototype identifies content to adding new data elements in data entry mode. */
+.design_prototype 
+{
+	display:none;
+}
+
+/* design_list_* format choices field */
+ol.design_list_vertical 
+{
+	list-style-type:none;
+	margin:0;
+	padding-left:1px;
+	padding-right:3px;
+	border:solid white 2px;
+}
+ol.design_list_vertical li 
+{
+	display:list-item;
+}
+ol.design_list_horizontal 
+{
+	margin:0;
+	padding-left:1px;
+	padding-right:3px;
+	border:solid white 2px;
+}
+ol.design_list_horizontal li 
+{
+	display:inline;
+}
+select, textarea 
+{
+	vertical-align:top;
+}
+.design_validation_failed
+{
+	border: 2px dashed red !important;
+}
+input.design_validation_failed 
+{
+	background: #ffeeee;
+}
+span.design_validation_failed select
+{
+	background: #ffeeee;
+}
+span.design_validation_failed input
+{
+	background: #ffeeee;
+}
+
+/* show_design_border is used to display a border around the tabular data table in design mode. */
+.show_design_border, table.show_design_border td, table.show_design_border th 
+{
+	border: silver solid 1px;
+}
+
+/* indicate selected field in content */
+.design_selected_field
+{
+	background-image: url("selectedfield.gif") !important;
+	background-repeat: repeat;
+}
+span.design_edit_fieldprop 
+{
+	background-image: url("editfieldprop.gif") !important;
+	background-repeat:no-repeat;
+	vertical-align: baseline;
+	cursor: pointer !important;
+	margin: 2px 2px 0 2px;
+	width: 16px;
+    height: 16px;
+    display: inline-block;
+}
+
+.MakeLink
+{
+	color: #00F;
+	border-bottom: dotted;
+}
+
+/* placeholder tags */
+textarea.design_placeholder_script
+{
+	display: block;
+	width: 98%;
+	height: 200px;
+	color: Maroon;
+	background-color: White;
+	font-family: Courier New;
+	font-size: small;
+	overflow: auto;
+}
+
+img.design_fixedsize_placeholder
+{
+	background: #0066CC url(placeholder.png) no-repeat;
+	width: 28px;
+	height: 18px;
+	margin: 2px;
+	border-style: none;
+}
+
+img.design_resizable_placeholder
+{
+	background: white url(placeholderbg.gif) repeat;
+	margin: 2px;
+	border: solid 2px black;
+}
+
+img.design_placeholder_script
+{
+	background: url(script.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+	border-style: none;
+}
+
+img.design_placeholder_link
+{
+	background: url(css.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+	border-style: none;
+}
+
+.design_placeholder-hidden
+{
+	width: 0 !important;
+	height: 0 !important;
+	border: none 0 !important;
+}
+
+
+.contentUsability 
+{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+span.contentUsability
+{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+span.contentUsability-nohover
+{
+	background-image: url(circledot.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+span.contentUsability-hover
+{
+	/* this class is removed on mouse action */
+}
+
+p.contentUsability-nohover
+{
+	clear: left;
+	float: left;
+	/* position: relative;   position causes IE 7 to make the content editable DIV element a scrollable region
+	top: -3px; */
+	margin-top: -3px;
+	width: 14px;
+	height: 14px;
+	line-height: 0;
+	background-image: url(circledot.gif);
+	background-position: left;
+	background-repeat: no-repeat;
+}
+p.contentUsability-hover
+{
+	/* this class is removed on mouse action */
+	/* using min-width causes IE 7 to display the paragraph as a selectable control with cursor forced to 'move' */
+	/* min-width: 11px; */
+}
+/* IE will always display when editing, so we need to manually hide, unfortunately, we can only make it invisible, but not actually remove the realestate */

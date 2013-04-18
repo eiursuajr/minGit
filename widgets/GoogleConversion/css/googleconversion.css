@@ -1,0 +1,36 @@
+﻿label.google-orange-label
+{
+	color:#CC6600;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family:arial,helvetica;
+}
+
+label.google-green-label
+{
+	color:#006600;
+	font-weight: bold;
+	font-size: 10pt;
+	font-family:arial,helvetica;
+}
+
+div.google-conversion-script
+{
+	padding-left: 40px;
+	margin-bottom: 5px;
+}
+
+div.google-buttons
+{
+	text-align: right;
+}
+
+div.google-buttons input
+{
+	margin-left: 5px;
+}
+
+img.google-thumbnail
+{
+	float: left;
+}

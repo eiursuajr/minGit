@@ -1,0 +1,730 @@
+
+span.dateClass{
+	padding: 0px;
+}
+/*****Dashboard WIDGET*****/
+/*top tabs styles*/
+.ektronWorkAreaHeader
+{
+	background: none;
+}
+
+.ui-tabs
+{
+	position: relative !important;
+	margin-top: 20px;
+}
+.ektronWorkAreaHeader .tabs .ui-tabs-nav
+{
+	margin-left: 10px;
+}
+.ui-tabs .ui-tabs-nav li
+{
+	margin-top: 39px;
+}
+.ui-tabs .ui-tabs-nav li
+{
+	background: #C8C7C2 url(/WorkArea/images/UI/Header/tabsBG.png) repeat-x scroll 0 0;
+	float: left;
+}
+.ektronWorkAreaHeader .tabs .ui-tabs-nav li a
+{
+	margin-top: 0px !important;
+	padding: 2px 5px !important;
+}
+
+/*2 column section*/
+.twoColumn
+{
+	background-color: #D5E7F4;
+	float: left;
+	width: 100%;
+}
+.twoColumn .column
+{
+	width: 49.5%;
+	float: left;
+	padding: 20px 0;
+}
+.twoColumn .divider
+{
+	border-right: 1px solid #f2f2f2;
+}
+
+/*search section*/
+.paddingLeft
+{
+	float: left;
+	padding-left: 20px;
+}
+.textbox
+{
+	width: 142px;
+	height: 14px;
+	float: left;
+	border: 0px;
+	color: #333;
+	font-family: Arial, Helvetica Lt Std, Sans-Serif;
+	font-size: 1em;
+	border: 1px solid #bbb;
+	padding: 2px 10px 4px;
+	margin-right: 15px;
+}
+.goBtn
+{
+	float: left;
+	cursor: pointer;
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	border: 1px solid black;
+	cursor: pointer;
+	padding: 1px 6px;
+	margin-right: 10px;
+}
+
+/*paging*/
+div.navbar ul.ektronPaging
+{
+	list-style-image: none;
+	list-style-position: outside;
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 0;
+	border-top: 1px solid #5d8fb4;
+	border-bottom: 1px solid #5d8fb4;
+}
+div.navbar ul.ektronPaging li.previous a
+{
+	border-right: 1px solid #5d8fb4;
+	padding-right: 10px;
+}
+div.navbar ul.ektronPaging li.next a
+{
+	border-left: 1px solid #5d8fb4;
+	padding-left: 10px;
+}
+div.navbar ul.ektronPaging li
+{
+	border: 0px;
+	display: inline;
+	font-weight: bold;
+	margin-right: 0.5em;
+	padding: 0.35em;
+}
+
+/*listing section*/
+.listing
+{
+	padding: 10px 0 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+}
+.listingHdr
+{
+	height: 28px;
+}
+.hdrBack
+{
+	height: 23px;
+	background-color: #ccc;
+	padding-top: 5px;
+}
+.hdrBack a, .hdrBack a:hover
+{
+	color: #555;
+	font-weight: bold;
+	font-size: 1em;
+	font-family: Arial;
+	text-decoration: none;
+	background-position: right 6px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	padding-right: 11px;
+}
+.hdrSortDown a
+{
+	background-image: url(/WorkArea/Personalization/css/images/arrowDown.gif);
+}
+.hdrSortUp a
+{
+	background-image: url(/WorkArea/Personalization/css/images/arrowUp.gif);
+}
+.gridCol
+{
+	border-right: 1px solid #ddd;
+	padding: 10px 0 10px 10px;
+	vertical-align: top;
+}
+.localeReport
+{
+	width:100%;
+}
+div.gridCol, div.col1, div.col2, div.col3, div.col4, div.col5, div.col6, div.col7, div.col8, div.col9, div.col10, div.col11, div.col12, div.col13
+{
+	float: left;
+}
+.col1
+{
+	width: 9%;
+}
+.col2
+{
+	width: 19%;
+}
+.col3
+{
+	width: 6%;
+}
+.col4
+{
+	width: 13%;
+}
+.col5
+{
+	width: 10%;
+}
+.col6
+{
+	width: 7%;
+}
+.col7
+{
+	width: 10%;
+}
+.col8
+{
+	width: 10%;
+}
+.col9
+{
+	width: 10%;
+}
+.col10
+{
+	width: 11%;
+}
+.col11
+{
+	width: 8%;
+}
+.col12
+{
+	width: 6%;
+}
+.col13
+{
+	width: 100%;
+}
+
+.approvedecline .col1
+{
+	width:200px;
+}
+
+.approvedecline .col2
+{
+	width:80px;
+}
+
+.approvedecline .col3
+{
+	width:100px;
+}
+
+.approvedecline .col4
+{
+	width:130px;
+}
+
+.approvedecline .col5
+{
+	width:130px;
+}
+
+.approvedecline .col6
+{
+	width:120px;
+}
+
+.approvedecline .col7
+{
+	width:120px;
+}
+
+.approvedecline .col8
+{
+	width:120px;
+}
+
+.approvedecline .col9
+{
+	width:310px;
+}
+
+.hdrBack .col1, .hdrBack .col2, .hdrBack .col3, .hdrBack .col4, .hdrBack .col5, .hdrBack .col6, .hdrBack .col7, .hdrBack .col8, .hdrBack .col9, .hdrBack .col10, .hdrBack .col11, .hdrBack .col12, .hdrBack .col13
+{
+	padding: 0 0 0 10px;
+	border-right: 0px;
+}
+.listRows
+{
+	color: #74706b; /*color:#D6DEF3;*/
+	font-size: 0.9em;
+	font-family: Arial;
+}
+.listRows a
+{
+	color: #74706b;
+	font-family: Arial;
+	text-decoration: none;
+}
+.listRows a img
+{
+	border: 0px;
+}
+.listRows a:hover
+{
+	
+}
+.row
+{
+	background-color: #f6f6f6;
+}
+.altRow
+{
+	background-color: #eee;
+}
+div.row, div.altRow, div.listing, div.listingHdr, div.hdrBack, div.listRows
+{
+	width: 100%;
+	float: left;
+}
+
+/*****Handoff Package WIDGET*****/
+/*1 column section*/
+.oneColumn
+{
+	background-color: #D5E7F4;
+	float: left;
+	width: 100%;
+	padding: 20px 0;
+}
+.labelItem
+{
+	float: left;
+	margin-right: 5px;
+	clear: left;
+	width: 130px;
+	text-align: right;
+}
+.dropdownItems
+{
+	float: left;
+	margin-right: 10px;
+}
+
+/*****CreateReport WIDGET*****/
+/*3 column section*/
+.threeColumn
+{
+	background-color: #D5E7F4;
+	float: left;
+	width: 100%;
+}
+.threeColumn .column
+{
+	width: 32.5%;
+	float: left;
+	padding: 20px 0;
+}
+.threeColumn .divider
+{
+	border-right: 1px solid #f2f2f2;
+}
+.topMargin
+{
+	margin-top: 5px;
+}
+.smallTextBox
+{
+	width: 125px !important;
+}
+.threeColumn select
+{
+	max-width: 200px;
+}
+
+
+/*****History Package WIDGET*****/
+.leftFloat
+{
+	float: left;
+}
+.leftPadding
+{
+	padding-left: 135px;
+}
+.handbackHistory .hdrBack a, .handbackHistory .hdrBack a:hover
+{
+	background-image: none;
+	padding-right: 0px;
+}
+.handbackHistory .hdrBack .col1, .handbackHistory .hdrBack .col2, .handbackHistory .hdrBack .col3, .handbackHistory .hdrBack .col4
+{
+	padding: 0 0 0 10px;
+	border-right: 0px;
+}
+.handbackHistory .col1, .handbackHistory .col2, .handbackHistory .col4
+{
+	width: 150px;
+	border-right: 0px;
+}
+.handbackHistory .col0
+{
+	width: 20px;
+	border-right: 0px;
+}
+.handbackHistory .newHandoff
+{
+	border: 1px solid red;
+}
+.handbackHistory .newHandoff div
+{
+	color:red;
+}
+.handbackHistory .col3
+{
+	width: 300px;
+	border-right: 0px;
+}
+
+/*****Handoff Name WIDGET*****/
+.createHandoff .hdrBack .col1, .createHandoff .hdrBack .col2, .createHandoff .hdrBack .col3, .createHandoff .hdrBack .col4
+{
+	padding: 0 0 0 10px;
+	border-right: 0px;
+}
+.createHandoff .col1, .createHandoff .col2, .createHandoff .col3, .createHandoff .col4
+{
+	width: 150px;
+	border-right: 0px;
+}
+.createHandoff .hdrBack .col4 a, .createHandoff .hdrBack a:hover
+{
+	background-image: none;
+	padding-right: 0px;
+}
+
+
+
+/************PRODUCTION DASHBOARD MODAL WINDOW *************/
+
+.modalWindow
+{
+	margin: 0 auto;
+	border:1px solid black;
+}
+.modalWindowTitle
+{
+	width: 100%;
+	background-color: #666;
+	height: 23px;
+	padding: 5px 0;
+}
+.modalWindowTitle .title
+{
+	color: #fff;
+	text-transform: uppercase;
+	float: left;
+	padding-left: 15px;
+	font-weight: bold;
+	font-family: arial;
+	font-size: 1.2em;
+}
+.modalWindowTitle input
+{
+	float: right;
+}
+.windowPadding
+{
+	background-color: #f2f2f2;
+	float: left;
+	padding: 20px 50px;
+	width: 948px;
+	border: 1px solid #666;
+}
+.contentBlockTitle
+{
+	font-size: 1em;
+}
+.contentBlockTitle .labelItem
+{
+	width: auto;
+}
+.bold
+{
+	font-weight: bold;
+}
+.twoColumnModal
+{
+	float: left;
+	width: 100%;
+}
+.twoColumnModal .column
+{
+	width: 40%;
+	float: left;
+	margin: 20px 0 10px;
+}
+.twoColumnModal .marginRight
+{
+	margin-right: 50px;
+}
+.twoColumnModal .listingTitle
+{
+	font-weight:bold;
+	margin-bottom:5px;
+}
+.twoColumnModal .listing
+{
+	border-bottom: 0px;
+	padding: 0px;
+	padding: 20px;
+	border: 1px solid #666;
+	width:80%;
+}
+
+.twoColumnModal .row
+{
+	background-color: Transparent;
+}
+.twoColumnModal .listRows
+{
+	height: 150px;
+	overflow-y: scroll;
+}
+.twoColumnModal .listingHdr
+{
+	width: 95%;
+}
+.twoColumnModal .hdrBack
+{
+	width: 100%;
+	height: 23px;
+	background-color: Transparent;
+	float: left;
+	padding-top: 0px;
+}
+.twoColumnModal .hdrBack a, .twoColumnModal .hdrBack a:hover
+{
+	color: #555;
+	font-weight: normal;
+	font-size: 1em;
+	font-family: Arial;
+	text-decoration: none;
+	background-image: none;
+	cursor: pointer;
+	padding-right: 11px;
+}
+.twoColumnModal .col1, .twoColumnModal .col2, .twoColumnModal .col3
+{
+	float: left;
+	width: 30%;
+	border: 0px;
+	padding: 10px 0 0 5px;
+}
+
+.modalWindowBottomLinks input
+{
+	border:1px solid #666;
+}
+.modalWindowBottomLinks ul
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+.modalWindowBottomLinks ul li
+{
+	float: left;
+	color: #666;
+}
+.modalWindowBottomLinks ul li a
+{
+	display: block;
+	color: #666;
+	text-decoration: underline;
+	border-right:1px solid #aaa;
+	padding:0 5px;
+	line-height:normal;	
+}
+.modalWindowBottomLinks ul li a.last
+{
+	border:0px;
+}
+.modalWindowBottomLinks ul li a:hover
+{
+	cursor: pointer;
+	color: #666;
+}
+
+/*****ViewHandback WIDGET*****/
+.viewHandback .hdrBack .col1, .viewHandback .hdrBack .col2, .viewHandback .hdrBack .col3, .viewHandback .hdrBack .col4
+{
+	padding: 0 0 0 10px;
+	border-right: 0px;
+}
+.viewHandback .col1, .viewHandback .col2, .viewHandback .col3
+{
+	width: 150px;
+	border-right: 0px;
+}
+
+.viewHandback .col1
+{
+	width:410px;
+}
+
+.viewHandback .col4
+{
+	width: 380px;
+	border-right: 0px;
+}
+.viewHandback .col4 a
+{
+	text-decoration:underline;
+}
+.viewHandback .hdrBack .col4 a, .viewHandback .hdrBack a:hover
+{
+	background-image: none;
+	padding-right: 0px;
+}
+.leftMargin
+{
+	margin-left:10px;
+}
+a.underline
+{
+	text-decoration:underline !important;
+}
+.borderTop
+{
+	border-top:1px solid #ccc;
+}
+
+/*dropdown lists*/
+.dropdownList .nav, .dropdownList .nav ul { /* all lists */
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1;
+	float:left;	
+	width:100%;
+	background-color:#C4C5C6;	
+}
+.dropdownList .nav ul.handoffbatch {
+	display:none;
+}
+.nav li { /* all list items */
+	float: left;
+	/*background-image:url(/WorkArea/Personalization/css/images/arrowUp.gif);*/
+	background-repeat:no-repeat;
+	background-position:left 10px;
+	width:100%;
+}
+.nav div {
+	display: block;
+	text-decoration:none;
+	font-family: Arial, Helvetica LT Std, Sans-Serif;
+	font-size:1em;
+	color:#74706B;
+	padding:10px 0 10px 12px;
+}
+.nav div a {
+	text-decoration: underline;
+}
+
+.nav li:hover
+{
+	/*background-image:url(/WorkArea/Personalization/css/images/arrowDown.gif);*/
+	background-repeat:no-repeat;
+	background-position:left 10px;
+}
+.nav li:hover a
+{
+	
+}
+
+.nav li ul, .nav li.sfhover ul
+{
+	margin-top:8px;
+	left:auto;
+	padding:20px 0;
+	width:100%;
+	background-color:#fff;
+	border-bottom:1px solid #ccc;
+	position:relative;
+	/*height:auto;*/	
+}
+.nav li ul li, .nav li.sfhover ul li
+{	
+	width:100%;text-align:left;
+	padding:5px;margin:0;	
+	border:0px;	
+	/*background-color:Transparent;
+	height:auto;*/	
+	background-image:none;
+	background-color:#fff;
+}
+.nav li ul li div, .nav li.sfhover ul li div
+{
+	display:block;
+	width:25%;
+	text-decoration:none;
+	text-transform:none;
+	color:#000;		
+	font-weight:normal;
+	float:left;
+	padding:10px;
+}
+.nav li:hover ul li a:hover, .nav li.sfhover ul li a:hover, .nav li:hover ul li a.selected, .nav li.sfhover ul li a.selected
+{
+	
+}
+.nav li li:hover ul, .nav li li.sfhover ul { /* lists nested under hovered list items */
+	left: auto;
+}
+
+/*****ViewHandback modal window WIDGET*****/
+.listBorder
+{
+	border: 1px solid #000;
+}
+.errorName
+{
+	font-weight:bold;
+	padding:5px 0 0 18px;
+}
+.handoffbatchframe {
+	width: 100%;
+	height: 42px;
+	overflow: hidden;
+}
+.handoffindividualframe {
+	width: 100%;
+	height: 50px;
+	overflow: hidden;
+}
+.nav div.hdrBack
+{
+	padding: 10pt 0pt 0pt 10px;
+	color:#555555;
+	font-family:Arial;
+	font-size:1em;
+	font-weight:bold;
+}
+
+span.dateClass { width:200px; }
+div.dateLabel {	display:inline; width:80px; float:left; }

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://ektron.com/synccommunicationservice" elementFormDefault="qualified" targetNamespace="http://ektron.com/synccommunicationservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" />
+  <xs:element name="Synchronize">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" minOccurs="0" name="syncParams" nillable="true" type="q1:SyncParameters" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" minOccurs="0" name="syncFileParams" nillable="true" type="q2:SyncFileParameters" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeFileResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentSyncStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="siteName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="syncId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrentSyncStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" minOccurs="0" name="GetCurrentSyncStatusResult" nillable="true" type="q3:SyncStatusInfoList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsSyncInProgress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sitePath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="siteName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsSyncInProgressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsSyncInProgressResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeContent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" minOccurs="0" name="syncContentParams" nillable="true" type="q4:SyncContentParameters" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeContentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeFolder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" minOccurs="0" name="syncFolderParams" nillable="true" type="q5:SyncFolderParameters" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeFolderResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeMultiSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Ektron.FileSync.Common" minOccurs="0" name="syncMultiSiteParams" nillable="true" type="q6:SyncMultiSiteParameters" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SynchronizeMultiSiteResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

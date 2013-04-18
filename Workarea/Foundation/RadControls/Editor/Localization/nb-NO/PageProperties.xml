@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="HTMLAttributes">Side attributter</string>
+	<string id="PageTitle">Tittel på side</string>
+	<string id="Description">Beskrivelse</string>
+	<string id="Keywords">Nøkkelord</string>
+	<string id="Width">Bredde</string>
+	<string id="BaseLocation">Basis lokasjon</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Avbryt</string>
+	<string id="BodyAttributes">Attributter for innhold</string>
+	<string id="BackColor">Bakgrunnsfarge</string>	
+	<string id="TopMargin">Toppmarg</string>
+	<string id="BottomMargin">Bunnmarg</string>
+	<string id="LeftMargin">Venstremarg</string>
+	<string id="RightMargin">Høyremarg</string>
+	<string id="BGImage">Bakgrunnsbilde</string>
+	<string id="ClassName">Klassenavn</string>
+	
+	
+</localization>

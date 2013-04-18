@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Gestion de Imagen</string>
+	<string id="ConfirmLink">Enlacer thumbnail a la imagen original?</string>
+	<string id="ConfirmDelete">Esta seguro de que quiere eliminar el archivo seleccionado?\nEl archivo seleccionado puede estar en uso. Si se elimina es posible que las paginas no se visualicen correctamente.\nPulse \"OK\" para confirmar que desea eliminar.</string>
+	<string id="AlertImage">Por favor, propocionar un archivo de documento!</string>
+	<string id="Alertexists">El archivo de documento elegido ya existe en esta carpeta!</string>
+	<string id="AlertDimensions">Por favor, proporcionar el ancho del thumbnail o el alto del thumbnail.</string>
+	<string id="AlertWidth">Por favor, proporcionar un ancho de imagen valido.</string>
+	<string id="AlertHeight">Por favor, proporcionar un alto de imagen valido.</string>
+	<string id="MessageNothingPost">Por favor, proporcionar un archivo de imagen!</string>
+	<string id="MessageValid">Por favor, proporcionar un archivo de imagen valido!</string>
+	<string id="MessageSize">El documento seleccionado supera el tamano maximo!</string>
+	<string id="MessagePermission">Usted no tiene permiso para acceder a esta pagina o la sesion ha caducado!<br />Por favor, recargue la pagina!</string>
+	<string id="Tab1HeaderText">Buscar archivo</string>
+	<string id="Tab2HeaderText">Cargar imagen</string>
+	<string id="ImageFile">Archivo de imagen:</string>
+	<string id="ImageURL">URL de imagen:</string>
+	<string id="Preview">Previsualizar</string>
+	<string id="Loading">Cargando...</string>
+	<string id="CreateThumbnail">Crear Thumbnail:</string>
+	<string id="Yes">Si</string>
+	<string id="No">No</string>
+	<string id="Width">Ancho:</string>
+	<string id="Height">Alto:</string>
+	<string id="Constrain">Forzar</string>
+	<string id="KeepOriginalImage">Mantener imagen existente:</string>
+	<string id="LoadingImagePrompt">Cargando imagen. Espere por favor...</string>
+	<string id="BestFit">Mejor ajuste</string>
+	<string id="ActualSize">Tamano actual</string>
+	<string id="ZoomIn">Acercarse</string>
+	<string id="ZoomOut">Alejarse</string>
+	<string id="ChooseFileToInsert">Por favor, seleccione un archivo para insertar</string>
+	<string id="CreateThumbnailIconTitle">Crear Thumbnail</string>
+</localization>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">חפש &amp; החלף</string>
+	<string id="Tab1HeaderText">חפש</string>
+	<string id="Tab2HeaderText">החלף</string>
+	<string id="SearchText">:חפש</string>
+	<string id="FindNext">:חפש הבא</string>
+	<string id="Replace">החלף</string>
+	<string id="ReplacementText">:החלף עם</string>
+	<string id="ReplaceAll">החלף הכל</string>
+	<string id="SearchIn">:חיפוש</string>
+	<string id="SearchEntireText">בכל הטקסט</string>
+	<string id="SearchSelection">בחירה בלבד</string>
+	<string id="SearchDirection">:כיוון</string>
+	<string id="MatchCase">התאם רישיות</string>
+	<string id="WholeWordsOnly">אתר מילים שלמות בלבד</string>
+	<string id="SearchUp">למעלה</string>
+	<string id="SearchDown">למטה</string>
+	<string id="OK">אישור</string>
+	<string id="Cancel">ביטול</string>
+	<string id="SearchCriteriaNotSpecified">קריטריון החיפוש לא צוין</string>
+	<string id="NoSearchTarget">לא נבחר תוכן לחיפוש</string>
+	<string id="FinishedSearching">סיים את החיפוש r.a.d</string>
+	<string id="AndHasMade">ועשה</string>
+	<string id="Replacements">.החלפות</string>
+	<string id="ektron">Ektron Editor Starts</string>
+	<string id="Close">Close</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

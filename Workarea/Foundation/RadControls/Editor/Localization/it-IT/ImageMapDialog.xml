@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="AreaFieldSet">Area delle proprietà selezionata</string>
+	<string id="ImageFieldSet">proprietà dell'immagine</string>
+	<string id="Update">Area aggiornamento</string>
+	<string id="Remove">Area da cancellare</string>
+	<string id="RemoveAll">Cancella tutto</string>
+	<string id="NewArea">Crea Area</string>
+	<string id="Left">Sinistra</string>
+	<string id="Top">In alto</string>
+	<string id="Width">Larghezza</string>
+	<string id="Height">Altezza</string>
+	<string id="Url">Url</string>
+	<string id="Target">Target</string>
+	<string id="Comment">Commento</string>
+	<string id="ImageSrc">origine immagine</string>
+	<string id="AlertInvalidProperties">Proprietà non valida!</string>
+	<string id="AlertInvalidAreaProperties">Proprietà dell'area non valida. Per piacere inserisci un url.</string>
+	<string id="AlertDeleteArea">Sei sicuro di voler cancellare quest'area?</string>
+	<string id="AlertDeleteAllAreas">Sei sicuro di voler cancellare TUTTE le aree?</string>
+	<string id="AlertWrongAreaDimensions">Dimensioni dell'area errate. Ignora quest'area.</string>	
+	<string id="ShapeAlt">Trascina l'angolo in basso a destra dell'immagine per ridimensionarla.</string>
+	<string id="HowToAdd">Puoi spostare l'immagine per creare una nuova area.</string>
+	<string id="RectangleShapeName">Rettangolare</string>
+	<string id="CircleShapeName">Circolare</string>
+	<string id="PolygonShapeName">Poligonale</string>
+	<string id="SelectImage">Per piacere scegli un'immagine per creare un'area immagine.</string>
+	<string id="_blank">_blank</string>
+	<string id="_self">_self</string>
+	<string id="_parent">_parent</string>
+	<string id="_top">_top</string>
+	<string id="_search">_search</string>
+	<string id="_media">_media</string>
+</localization>

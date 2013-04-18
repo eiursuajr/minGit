@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Tab1HeaderText">选择样版</string>
+	<string id="Tab2HeaderText">上传样板</string>
+	<string id="TemplateURL">网址:</string>
+	<string id="AlertFile">请提供上传之样版档案!</string>
+	<string id="AlertExists">此样版档案已存在!</string>
+	<string id="MessageValid">请提供适合的样版档案!</string>
+	<string id="MessageSize">提供之样版档案容量超过最大限制!</string>
+	<string id="MessageNothingPost">请提供一样版档案!</string>
+</localization>

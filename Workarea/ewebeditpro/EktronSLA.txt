@@ -1,0 +1,58 @@
+EKTRON, INC. SOFTWARE LICENSE AGREEMENT
+
+** READ THIS BEFORE LOADING SOFTWARE**
+
+	YOUR RIGHT TO USE THE PRODUCT ENCLOSED IN THIS ENVELOPE OR OTHERWISE DELIVERED IS SUBJECT TO THE TERMS AND CONDITIONS SET OUT IN THIS LICENSE AGREEMENT. OPENING THIS ENVELOPE OR USING THIS PRODUCT SIGNIFIES YOUR AGREEMENT TO THESE TERMS. IF YOU DO NOT AGREE TO THIS SOFTWARE LICENSE AGREEMENT, YOU MAY RETURN THE  PACKAGE WITH THE UNOPENED ENVELOPE OR AS IT WAS DELIVERED AND THE UNDAMAGED SOFTWARE ENCLOSED, ALONG WITH THE RECEIPT, TO YOUR SUPPLIER OR TO EKTRON, INC. WITHIN THIRTY DAYS FROM THE DATE OF PURCHASE FOR A FULL REFUND.
+
+	CUSTOMER should carefully read the following terms and conditions before using the software program(s) contained herein (the Software). Opening this sealed envelope, and/or using the Software or copying the Software onto CUSTOMER’S computer hard drive indicates CUSTOMER’S acceptance of these terms and conditions. If CUSTOMER does not agree with the terms of this agreement, CUSTOMER should promptly return the unused and unopened Software for a full refund.
+
+	Ektron, Inc. (Ektron) grants, and the CUSTOMER accepts, a nontransferable and nonexclusive License to use the Software on the following terms and conditions:
+
+	1.   Right to use:  The Software is licensed for use only in delivered code form. Each copy of the Software is licensed for use only on a single URL.  Each license is valid for the number of seats listed below (the Basic Package).  Any use of the Software beyond the number of authorized seats contained in the Basic Package without paying additional license fees as provided herein shall cause this license to terminate.  This is not a concurrent use license.  Should CUSTOMER wish to add seats beyond the seats licensed in the Basic Package, the CUSTOMER may add seats on a block basis at the then current price for additional seats (see product pages for current price).  The Basic Packages are as follows: 
+eWebEditPro - Licensed for ten (10) seats per URL.  
+
+For purposes of this section, the term seat shall mean an individual user provided access to the capabilities of the Software. 
+
+	2.   Duration:  This License shall continue so long as CUSTOMER uses the Software in compliance with this License. Should CUSTOMER breach any of its obligations hereunder, CUSTOMER agrees to return all copies of the Software and this License upon notification and demand by Ektron.
+
+	3.   Copyright:  The Software (including any images, applets, photographs, animations, video, audio, music and text incorporated into the Software) as well as any accompanying written materials (the Documentation) is owned by Ektron or its suppliers, is protected by United States copyright laws and international treaties, and contains confidential information and trade secrets. CUSTOMER agrees to protect the confidentiality of the Software and Documentation. CUSTOMER agrees that it will not provide a copy of this Software or Documentation nor divulge any proprietary information of Ektron to any person, other than its employees, without the prior consent of Ektron; CUSTOMER shall use its best efforts to see that any user of the Software licensed hereunder complies with this license.
+
+	4.   Limited Warranty:  Ektron warrants solely that the medium upon which the Software is delivered will be free from defects in material and workmanship under normal, proper and intended usage for a period of three (3) months from the date of receipt. Ektron does not warrant the use of the Software will be uninterrupted or error free, nor that program errors will be corrected. This limited warranty shall not apply to any error or failure resulting from (i) machine error, (ii) Customer's failure to follow operating instructions, (iii) negligence or accident, or (iv) modifications to the Software by any person or entity other than Company.  In the event of a breach of warranty, Customer’s  sole and exclusive remedy, is repair of all or any portion of the Software.  If such remedy fails of its essential purpose, Customer’s sole remedy and Ektron’s maximum liability shall be or refund of the paid purchase price for the defective Products only. This limited warranty is only valid if Ektron receives written notice of breach of warranty within thirty days after the warranty  period expires.  In the event of a breach of warranty, Ektron’s sole responsibility, and CUSTOMER’S sole and exclusive remedy, is   correction of any defect or bug causing the breach of warrant (either by repair or replacement of the Software).  In the event this remedy fails of its essential purpose, CUSTOMER’s sole and exclusive remedy shall be refund of the Purchase Price of the defective Software only.  This limited warranty is only valid if Ektron receives written notice of breach of warranty within thirty days following the warranty period.
+
+	5.   Limitation of Warranties and Liability:  THE SOFTWARE AND DOCUMENTATION ARE SOLD AS IS AND WITHOUT ANY WARRANTIES AS TO THE PERFORMANCE, MERCHANTIBILITY, DESIGN, OR OPERATION OF THE SOFTWARE.  BECAUSE OF THE DIVERSITY OF CONDITIONS UNDER WHICH THIS PRODUCT MAY BE USED, NO WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE IS OFFERED. EXCEPT AS DESCRIBED IN SECTION 4, ALL WARRANTIES EXPRESS AND IMPLIED ARE HEREBY DISCLAIMED.
+
+THE REMEDY DESCRIBED IN SECTION 12 SHALL BE CUSTOMER’S  SOLE REMEDY FOR ANY PERFORMANCE FAILURE OF THE PRODUCTS.  NEITHER COMPANY NOR ITS SUPPLIERS SHALL BE LIABLE FOR ANY LOSS OF PROFITS, LOSS OF BUSINESS OR GOODWILL, LOSS OF DATA OR USE OF DATA, INTERRUPTION OF BUSINESS NOR FOR ANY OTHER INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES OF ANY KIND UNDER OR ARISING OUT OF, OR IN ANY RELATED TO THIS AGREEMENT, HOWEVER, CAUSED, WHETHER FOR BREACH OF WARRANTY, BREACH OR REPUDIATION OF CONTRACT, TORT, NEGLIGENCE, OR OTHERWISE, EVEN IF COMPANY OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH LOSS.
+
+	6.   Miscellaneous:  This License Agreement, the License granted hereunder, and the Software may not be assigned or in any way transferred without the prior written consent of Ektron. This Agreement and its performance and all claims arising from the relationship between the parties contemplated herein shall be governed by, construed and enforced in accordance with the laws of the State of New Hampshire without regard to conflict of laws principles thereof.  The parties agree that any action brought in connection with this Agreement shall be maintained only in a court of competent subject matter jurisdiction located in the State of New Hampshire or in any court to which appeal therefrom may be taken.  The parties hereby consent to the exclusive personal jurisdiction of such courts in the State of New Hampshire for all such purposes.. The United Nations Convention on Contracts for the International Sale of Goods is specifically excluded from governing this License. If any provision of this License is to be held unenforceable, such holding will not affect the validity of the other provisions hereof. Failure of a party to enforce any provision of this Agreement shall not constitute or be construed as a waiver of such provision or of the right to enforce such provision. If you fail to comply with any term of this License, YOUR LICENSE IS AUTOMATICALLY TERMINATED. This License represents the entire understanding between the parties with respect to its subject matter.
+
+*************************************************************************************************************
+*************************************************************************************************************
+*************************************************************************************************************
+
+Esker Active X Plug-in, Version 4.4
+Active X controls under Netscape
+Use License 
+ 
+======
+IMPORTANT: READ CAREFULLY -
+
+Use of the Esker Active X Plug-in, Version 4.4, is subject to the terms and conditions below. BY INSTALLING, COPYING OR OTHERWISE USING THE PLUG-IN, YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS BELOW. IF YOU DO NOT AGREE TO THESE TERMS AND CONDITIONS, DO NOT INSTALL, COPY OR USE THE PLUG-IN.
+
+The Plug-in is provided to you as an end-user "as is" without technical support. No rights are granted to you in this license for commercial use or redistribution of any kind. Should you desire to redistribute the Plug-in or include it with other software packages please e-mail Esker at axplug-in@esker.com to find out how you may do so. 
+
+DISCLAIMER OF WARRANTIES. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ESKER AND ITS SUPPLIERS PROVIDE TO YOU THE PLUG-IN AS IS AND WITH ALL FAULTS; AND ESKER AND ITS SUPPLIERS HEREBY DISCLAIM WITH RESPECT TO THE PLUG-IN ALL WARRANTIES AND CONDITIONS, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING, BUT NOT LIMITED TO, ANY (IF ANY) WARRANTIES OR CONDITIONS OF OR RELATED TO: TITLE, NON-INFRINGEMENT, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, LACK OF VIRUSES, ACCURACY OR COMPLETENESS OF RESPONSES, RESULTS, LACK OF NEGLIGENCE OR LACK OF WORKMANLIKE EFFORT, QUIET ENJOYMENT, QUIET POSSESSION, AND CORRESPONDENCE TO DESCRIPTION. THE ENTIRE RISK ARISING OUT OF USE OR PERFORMANCE OF THE PLUG-IN REMAINS WITH YOU.
+
+EXCLUSION OF INCIDENTAL, CONSEQUENTIAL AND CERTAIN OTHER DAMAGES. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL ESKER OR ITS SUPPLIERS BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES WHATSOEVER INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR: LOSS OF PROFITS, LOSS OF CONFIDENTIAL OR OTHER INFORMATION, BUSINESS INTERRUPTION, PERSONAL INJURY, LOSS OF PRIVACY, FAILURE TO MEET ANY DUTY (INCLUDING OF GOOD FAITH OR OF REASONABLE CARE), NEGLIGENCE, AND ANY OTHER PECUNIARY OR OTHER LOSS WHATSOEVER ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OF OR INABILITY TO USE THE PLUG-IN, OR FAILURE TO PROVIDE TECHNICAL SUPPORT, OR OTHERWISE UNDER OR IN CONNECTION WITH ANY PROVISION OF THIS LICENSE, EVEN IF ESKER OR ANY SUPPLIER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+Due to the complex nature of computer software Esker does not warrant that the Plug-in is completely error-free, will operate without interruption or is compatible with all equipment and software configurations. You are advised to check all work performed with the Plug-in. Do not use the Plug-in in any case where significant damage or injury to persons, property or business may happen if an error occurs. You expressly assume all risks for such use. 
+
+© 2001 Esker, Inc. All rights reserved. Copyright to and in the Plug-in remains the property of Esker, Inc. and as such, any copyright notices in the Plug-in are not to be removed. 
+
+
+*************************************************************************************************************
+*************************************************************************************************************
+*************************************************************************************************************
+
+	YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, THAT YOU UNDERSTAND THIS AGREEMENT, AND UNDERSTAND THAT BY CONTINUING THE INSTALLATION OF THE SOFTWARE, BY LOADING OR RUNNING THE SOFTWARE, OR BY PLACING OR COPYING THE SOFTWARE ONTO YOUR COMPUTER HARD DRIVE, YOU AGREE TO BE BOUND BY THIS AGREEMENT’S TERMS AND CONDITIONS. YOU FURTHER AGREE THAT, EXCEPT FOR WRITTEN SEPARATE AGREEMENTS BETWEEN EKTRON AND YOU, THIS AGREEMENT IS A COMPLETE AND EXCLUSIVE STATEMENT OF THE RIGHTS AND LIABILITIES OF THE PARTIES.
+
+(c) 1999-2003 Ektron, Inc. All rights reserved.					      LA10031, Revision 1.5b

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Bildebehandling</string>
+	<string id="ConfirmLink">Link thumbnail til orginalbilde?</string>
+	<string id="ConfirmDelete">Er du sikker på at du vil slette den valgte filen?\nValgt bilde er i bruk. Dersom du sletter dette bildet vil noen viser ikke vise skikkelig.\nTrykk \"OK\" for å bekrefte slettingen.</string>
+	<string id="AlertImage">Vennligst velg en bildefil du vil laste opp!</string>
+	<string id="AlertExists">Bildet finnes allerede i denne mappen!</string>
+	<string id="AlertDimensions">Vennligst oppgi enten bredde eller høyde på thumbnail.</string>
+	<string id="AlertWidth">Vennligst oppgi en gyldig bilde bredde.</string>
+	<string id="AlertHeight">Vennligst oppgi en gyldig bilde høyde.</string>
+	<string id="MessageNothingPost">Vennligst velg en bildefil!</string>
+	<string id="MessageValid">Vennligst velg en gyldig bildefil!</string>
+	<string id="MessageSize">Filen du har valgt er større en det som er tillatt!</string>
+	<string id="MessagePermission">Du har ikke tilgang eller din sesjon er utløpt!<br/>Vennligst oppdater siden!</string>
+	<string id="Tab1HeaderText">Bla gjennom</string>
+	<string id="Tab2HeaderText">Last opp bilde</string>
+	<string id="ImageFile">Bildefiler:</string>
+	<string id="ImageURL">Bilde URL:</string>
+	<string id="Preview">Forhåndsvisning</string>
+	<string id="Loading">Laster...</string>
+	<string id="CreateThumbnail">Opprett thumbnail:</string>
+	<string id="Yes">Ja</string>
+	<string id="No">Nei</string>
+	<string id="Width">Bredde:</string>
+	<string id="Height">Høyde:</string>
+	<string id="Constrain">Innskrenk</string>
+	<string id="KeepOriginalImage">Behold orginalbilde:</string>
+	<string id="LoadingImagePrompt">Laster bilde. Vennligst vent...</string>
+	<string id="BestFit">Best visning</string>
+	<string id="ActualSize">Opprinelig størrelse</string>
+	<string id="ZoomIn">Zoom inn</string>
+	<string id="ZoomOut">Zoom ut</string>
+	<string id="ChooseFileToInsert">Vennligst velg et bilde du vil sette inn</string>
+	<string id="CreateThumbnailIconTitle">Opprett Thumbnail</string>
+	<string id="LinkToOriginal">Link til orginal</string>
+	<string id="OpenOriginalInBlank">Åpne oprginal i nytt vindu</string>
+  <string id="NoImageSelectedToInsert">Vennligst velg et bilde du vil sette inn!</string>
+</localization>

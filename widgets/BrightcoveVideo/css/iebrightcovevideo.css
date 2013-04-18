@@ -1,0 +1,17 @@
+﻿.ektronWidgetBrightcove .options span, .ektronWidgetBrightcove .options
+{
+    height:10px !important;
+    float: right;
+    color: #0f73b7;
+    font-weight: bold;
+    margin: 3px 5px;
+    cursor: pointer;
+}
+.ektronWidgetBrightcove .options span.uploadLink
+{
+    padding-left:120px;
+}
+.ektronWidgetBrightcove .options span.sep
+{
+    margin:-16px 0px 0px 18px !important;
+}

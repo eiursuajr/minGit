@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Title">Gestionnaire d'images</string>
+  <string id="ConfirmLink">Lien vers l'image originale ?</string>
+  <string id="ConfirmDelete">Êtes-vous certain de vouloir supprimer le fichier sélectionné.\n L' image sélectionnée est peut-être en cours d'utilisation. La suppression peut faire en sorte que certaines pages ne soient pas affichées correctement.\nActivez le bouton \"OK\" pour confirmer la suppression.</string>
+  <string id="AlertImage">Vous devez sélectionner une image à télécharger !</string>
+  <string id="AlertExists">Un fichier identique existe déjà dans ce dossier !</string>
+  <string id="AlertDimensions">Vous devez saisir la largeur ou la hauteur de l'image miniature !</string>
+  <string id="AlertWidth">La largeur de l'image doit être valide !</string>
+  <string id="AlertHeight">La hauteur de l'image doit être valide !</string>
+  <string id="MessageValid">Vous devez sélectionner une image valide !</string>
+  <string id="MessageSize">L'image sélectionnée dépasse la taille limite permise !</string>
+  <string id="MessagePermission">Vous n'avez pas les autorisations pour accéder à cette page ou votre session est expirée<br />Actualisez la page.</string>
+  <string id="Tab1HeaderText">Propriétés de l'image</string>
+  <string id="Tab2HeaderText">Image</string>
+  <string id="MessageNothingPost">Fichier image :</string>
+  <string id="ImageURL">URL de l'image :</string>
+  <string id="Preview">Aperçu</string>
+  <string id="Loading">Téléchargement...</string>
+  <string id="CreateThumbnail">Créer une image miniature :</string>
+  <string id="Yes">Oui</string>
+  <string id="No">Non</string>
+  <string id="Width">Largeur :</string>
+  <string id="Height">Hauteur :</string>
+  <string id="Constrain">Contraindre</string>
+  <string id="KeepOriginalImage">Garder la proportion :</string>
+  <string id="LoadingImagePrompt">Téléchargement de l'image. Veuillez patienter...</string>
+  <string id="BestFit">Taille optimale</string>
+  <string id="ActualSize">Taille actuelle</string>
+  <string id="ZoomIn">Zoom avant</string>
+  <string id="ZoomOut">Zoom arrière</string>
+  <string id="ChooseFileToInsert">Veuillez choisir un fichier à insérer</string>
+  <string id="ImageFile">Fichier d'image :</string>
+  <string id="CreateThumbnailIconTitle">Créer une image miniature</string>
+  <string id="LinkToOriginal">Lien vers l'original</string>
+  <string id="OpenOriginalInBlank">Ouvrir l'original dans une nouvelle fenêtre</string>
+  <string id="NoImageSelectedToInsert">Merci de sélectionner l'image à insérer !</string>
+</localization>

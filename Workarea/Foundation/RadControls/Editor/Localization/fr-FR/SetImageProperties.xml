@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Title">Propriétés de l'image</string>
+  <string id="Bytes">Octets</string>
+  <string id="Customh">Personnalisée - </string>
+  <string id="PromptColor">Vous devez saisir une couleur au format HEX :</string>
+  <string id="Tab1HeaderText">Propriétés de l'image</string>
+  <string id="Tab2HeaderText">Information de l'image</string>
+  <string id="BorderWidth">Largeur de la bordure :</string>
+  <string id="NoBorder">Aucune bordure</string>
+  <string id="BorderColor">Couleur de la bordure :</string>
+  <string id="NoColor">Aucune couleur</string>
+  <string id="Black">Noir</string>
+  <string id="Blue">Bleu</string>
+  <string id="Green">Vert</string>
+  <string id="Orange">Orange</string>
+  <string id="Red">Rouge</string>
+  <string id="White">Blanc</string>
+  <string id="Yellow">Jaune</string>
+  <string id="Custom">Personnalisée</string>
+  <string id="ImageAlign">Alignement :</string>
+  <string id="AbsoluteBottom">Bas absolu</string>
+  <string id="AbsoluteMiddle">Milieu absolu</string>
+  <string id="Baseline">Sur la ligne</string>
+  <string id="Bottom">Bas</string>
+  <string id="Left">Gauche</string>
+  <string id="Middle">Milieu</string>
+  <string id="Right">Droite</string>
+  <string id="TextTop">Haut du texte</string>
+  <string id="Top">Haut</string>
+  <string id="ImageWidth">Largeur :</string>
+  <string id="ImageHeight">Hauteur :</string>
+  <string id="ImageSize">Taille :</string>
+  <string id="FileName">Nom :</string>
+  <string id="Constrain">Contraindre</string>
+  <string id="Width">Largeur :</string>
+  <string id="Height">Hauteur :</string>
+  <string id="VerticalSpacing">Espacement vertical :</string>
+  <string id="HorizontalSpacing">Espacement horizontal :</string>
+  <string id="OK">OK</string>
+  <string id="Cancel">Annuler</string>
+  <string id="AddCustomColor">Ajouter une couleur personnalisée...</string>
+  <string id="ImageLongDesc">Description complète</string>
+  <string id="AddHexColor">Ajouter une couleur HEX...</string>
+  <string id="Tab3HeaderText">Créer une image miniature</string>
+  <string id="ChangeImageSrc">Changer la source de l'image :</string>
+</localization>

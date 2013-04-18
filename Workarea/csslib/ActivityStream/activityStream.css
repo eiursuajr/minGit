@@ -1,0 +1,303 @@
+
+ul.EkActivityList {list-style-type: none;font-style:italic;font-size:13px;font-family: Arial, sans-serif;}
+ul.EkActivityList li.EkActivityMessage { clear: both; display:block; margin: 0em 0em .75em 0em; padding: .55em;}
+
+li.EkActivityMessage div.message p {margin: .25em 0 .25em 4.5em ; overflow: auto;}
+li.EkActivityMessage div.message p a.EkForceWrap{word-break: break-all; -moz-binding: url('../xml/moz_wordwrap.xml#wordwrap');}
+ul.EkActivityList li.EkActivityMessage div.message p a.EkForceWrap:active,ul.EkActivityList li.EkActivityMessage div.message p a.EkForceWrap:focus{outline: none;} /* fixes scrollbars appearing when focus and active status is brought to link in mozilla */
+
+
+ul.EkActivityList li div.avatar{width: 48px; text-align: center; float: left;}
+ul.EkActivityList li div.avatar img.avatar {width: 40px; height: 40px; border:none;}
+ul.EkActivityList li div.avatar {width: 40px; text-align: center; float: left;}
+ul.EkActivityList li div.avatar {width: 40px; height: 40px; border:none;}
+
+
+ul.EkActivityList li span.EkActivityLogin {color:red;font-family:Arial,sans-serif;}
+ul.EkActivityList li.EkActivityMessage ul.activityStreamCommands { font-size: .75em;margin: 0em; padding: 0em; list-style-type: none; text-align: right;}
+ul.EkActivityList li.EkActivityMessage ul.activityStreamCommands li{display:inline;margin-right:0.5em;font-style:normal;} 
+ul.EkActivityList li.EkActivityMessage ul.activityStreamCommands li.shareMessage {float:left;clear:left;margin-left:5em;}
+ul.EkActivityList li.EkActivityMessage ul.activityStreamCommands li.commentMessage {float:left;margin-left:.20em;}
+ul.EkActivityList li.EkActivityMessage ul.activityStreamCommands li.commandSeparator{float:left;margin-top: -.15em;font-weight:bold;}
+ul.EkActivityList li.EkActivityMessage span.EkActivityTimeSpan { white-space: nowrap; font-size: .75em; color:#666696;float:right;font-style:normal;}
+ul.EkActivityList li.EkActivityMessage div.message div.shareSuccess {color:#529214 ; font-size: 1em;background-color:#E6EFC2; padding: .25em .5em;clear:both;}  
+ul.EkActivityList li.EkActivityMessage div.message p span {width: 20px; height: 20px; vertical-align:middle;}
+
+
+/* Paging */
+div.ekActivityFeedPaging {margin: 0em; width:100%; position: relative; overflow: hidden; height: 20px;}
+div.ekActivityFeedPaging h4 {margin: 0em 0em 0em .25em; font-size: 1em; margin-top: .25em; text-align: left;}
+div.ekActivityFeedPaging div.ekPageControl {position: absolute; top: -.25em; right: 0em; text-align: right; width: 80px;}
+div.ekActivityFeedPaging div.ekPageControl span {display: block; width: 20px; height: 20px; overflow: hidden; background-repeat: no-repeat; float: left;}
+div.ekActivityFeedPaging div.ekPageControl span a {background-image: none;}
+
+div.ekActivityFeedPaging div.ekPageControl span.but_first_disable {text-indent: 100px; background-image:url('../../images/application/but_first_d.gif'); background-position: -9px 0px;}
+div.ekActivityFeedPaging div.ekPageControl span.but_first{background-image:url('../../images/application/but_first.gif'); background-position: -9px 0px;}
+div.ekActivityFeedPaging div.ekPageControl span.but_first a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekActivityFeedPaging div.ekPageControl span.but_previous_disable{text-indent: 100px; background-image:url('../../images/application/but_prev_d.gif'); background-position: -6px 0px; }
+div.ekActivityFeedPaging div.ekPageControl span.but_previous{background-image:url('../../images/application/but_prev.gif'); background-position: -6px 0px;}
+div.ekActivityFeedPaging div.ekPageControl span.but_previous a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekActivityFeedPaging div.ekPageControl span.but_next_disable {text-indent: 100px; background-image:url('../../images/application/but_next_d.gif'); background-position: 0px 0px;}
+div.ekActivityFeedPaging div.ekPageControl span.but_next{background-image:url('../../images/application/but_next.gif'); background-position: 0px 0px;}
+div.ekActivityFeedPaging div.ekPageControl span.but_next a{display: block; text-indent: 100px; height: 20px;}
+
+div.ekActivityFeedPaging div.ekPageControl span.but_last_disable {text-indent: 100px; background-image:url('../../images/application/but_last_d.gif'); background-position: 0px 0px;}
+div.ekActivityFeedPaging div.ekPageControl span.but_last{background-image:url('../../images/application/but_last.gif'); background-position: 0px 0px;}
+div.ekActivityFeedPaging div.ekPageControl span.but_last a{display: block; text-indent: 100px; height: 20px;}
+
+
+/*Comments*/
+
+ul.EkActivityComments li.CommentItem
+{ 
+	clear:left;
+	margin-bottom: 2px;
+	font-style : normal;
+	background-color : #ECEFF5; 
+	padding:5px 0 4px 5px; 
+	width:350px;
+	list-style-type: none; 
+	 
+}
+ul.EkActivityList li.EkActivityMessage div.AddActivityComment
+{
+	clear:both;
+}
+ul.EkActivityList li.EkActivityMessage div.AddActivityComment textarea.ContributionText
+{
+	height:14px;
+	min-height : 14px;
+	width:350px;
+	margin-left:3.2em;
+}
+
+ul.EkActivityList li.EkActivityMessage div.AddActivityComment input 
+{
+	display:block; 
+	float:right;
+	margin:0 9em .5em auto;
+	
+}
+ul.EkActivityList li.EkActivityMessage ul.EkActivityComments li.CommentItem p.body 
+{
+	margin: .25em 0em; 
+	overflow: auto;
+	font-size:10px;
+    line-height: 1.75em;
+}
+ul.EkActivityList li.EkActivityMessage ul.EkActivityComments li.CommentItem div.comment {margin: 0 .25em .5em 52px;}
+ul.EkActivityList li.EkActivityMessage ul.EkActivityComments li.CommentItem div.avatar 
+{
+	width: 30px; 
+	text-align: center;
+	float: left;
+	*margin-top:-.45em;
+	margin-left:.50em;
+}
+ul.EkActivityList li.EkActivityMessage ul.EkActivityComments li.CommentItem div.avatar img.avatar 
+{
+	width: 32px;
+	height: 32px;
+	border:none;
+	*margin-top:0.5em;
+}
+
+
+ul.EkActivityList li.EkActivityMessage ul.EkActivityComments li.CommentItem  div.comment span.username 
+{
+	display: block;
+	float: left; 
+	white-space: nowrap; 
+	font-size: .85em;
+	font-weight: bold;
+	color: #666696;
+	
+}
+ul.EkActivityList li.EkActivityMessage  ul.EkActivityComments li.CommentItem  div.comment div.metaData span.time {white-space: nowrap; font-size: .65em; color: #666696;}
+ul.EkActivityList li.EkActivityMessage  ul.EkActivityComments li.CommentItem  div.comment div.metaData span.time a {color: #666696;}
+ul.EkActivityList li.EkActivityMessage  ul.EkActivityComments li.CommentItem  div.comment ul.commands li a, ul.EkActivityList li.EkActivityMessage div.message ul.EkActivityComments li.CommentItem  div.comment ul.commands li span {display: block; overflow: hidden; width: 16px; height: 16px; background-repeat: no-repeat; text-decoration: none; text-indent: 1000px;}
+ul.EkActivityList li.EkActivityMessage  ul.EkActivityComments li.CommentItem  div.comment ul.commands {margin: 0em; padding: 0em; list-style-type: none; text-align: right; height: 16px;}
+ul.EkActivityList li.EkActivityMessage  ul.EkActivityComments li.CommentItem  div.comment ul.commands li {display: inline; margin-right: .5em;}
+ul.EkActivityList li.EkActivityMessage  ul.EkActivityComments li.CommentItem  div.comment li.ekDeleteComment a {background-image: url('../../images/UI/icons/delete.png');display:none;float: right;}
+
+ul.EkActivityList li.EkActivityMessage div.EkViewMoreComments
+{
+	margin-left:4.0em;
+	padding-bottom:.25em;
+	font-size:10px;
+	font-style :normal;  
+}
+
+/*Membership*/
+
+div.EkMembershipTab
+{
+    font-size: 1em;
+}
+
+div.membershipControlActivityTab
+{
+    font-size: 12px;
+}
+
+div.EkMembershipActivityTab table.ektronGrid
+{
+	border-spacing:0;
+	border-collapse:separate;
+	width: 100%;
+	font-size: 1em;
+	display:block;
+}
+
+div.EkMembershipActivityTab table.ektronGrid
+{
+	border-top:1px solid #ababab;
+	border-left:1px solid #ababab;
+}
+
+div.EkMembershipActivityTab a:active
+{
+  outline: none;
+}
+
+div.EkMembershipActivityTab a:focus
+{
+  -moz-outline-style: none;
+}
+
+
+
+div.EkMembershipActivityTab .ektronGrid tr.title-header
+{
+	color: #235478;
+	line-height: 19px;
+	white-space: nowrap;
+	background: #f2f2f2 url('../../Images/UI/Grid/headerBackground_30.gif') repeat-x;
+}
+
+div.EkMembershipActivityTab .ektronGrid td, .ektronGrid td.title-header, .ektronGrid th, .ektronGrid th.title-header
+{
+	padding: .25em .5em;
+	vertical-align: top;
+	text-align:left;
+}
+
+div.EkMembershipActivityTab .ektronGrid td, div.EkMembershipActivityTab .ektronGrid td.title-header, div.EkMembershipActivityTab .ektronGrid th, div.EkMembershipActivityTab .ektronGrid th.title-header
+{
+    border-right:1px solid #ababab;
+	border-bottom:1px solid #ababab;
+}
+
+div.EkMembershipActivityTab .ektronGrid td.title-header, .ektronGrid th, .ektronGrid th.title-header
+{
+	text-align:center;
+	white-space:nowrap;
+}
+
+div.EkMembershipActivityTab .ektronGrid tr.stripe {background-color:#d0e5f5;}
+div.EkMembershipActivityTab .ektronGrid tr.title-header td a, .ektronGrid tr.title-header td a:active, .ektronGrid tr.title-header td a:visited, .ektronGrid tr.title-header td a:focus
+
+{
+	color: #235478;
+	text-decoration: none;
+}
+
+div.EkMembershipActivityTab  .ektronGrid tr.title-header td a:hover
+{
+	text-decoration: underline;
+}
+
+div.EkMembershipActivityTab  .ektronGrid tr.ektronSubjectHeader
+{			
+	background-color: #e6f3ff;  
+	border-top: solid 1px #ababab; 	
+	border-bottom: solid 1px #ababab; 	
+}
+
+div.EkMembershipActivityTab .ektronGrid .label
+{
+    color:#1d5987;
+    width:10%;
+    white-space:nowrap;
+	font-weight:bold;
+	text-align:right;
+	font-size: .87em;
+}
+
+div.membershipControlActivityTab .ektronGrid .label
+{
+    /* override for membership control */
+    font-size: .9em;
+}
+
+div.EkMembershipActivityTab  .ektronGrid th.left {text-align:left !important;}
+div.EkMembershipActivityTab  .ektronGrid td.center {text-align:center !important;}
+div.EkMembershipActivityTab ul.activities_tab_subTabs 
+{
+	list-style-type: none;
+	margin: 0;
+	padding: .5em 0;
+}
+
+div.EkMembershipActivityTab span.EkActivityNotifyText
+{
+	color:#000;
+	margin-left:6em;
+	font-weight:bold; 
+}
+div.EkMembershipActivityTab>table tr td {vertical-align: top; margin: 0;padding:0;}
+div.EkMembershipActivityTab>table tr td.label {padding: .25em .5em;}
+div.EkMembershipActivityTab>table {width: 100%; border-collapse: collapse; margin: 0; padding: 0;}
+div.EkMembershipActivityTab>table tr td.subTabsWrapper {width: 10em;}
+div.EkMembershipActivityTab table td div.dvCollGrid
+{
+	padding: .50em; 
+	border:solid 1px #ababab;
+}
+div.EkMembershipActivityTab table td div.dvGroupGrid
+{
+	padding: .50em; 
+	border:solid 1px #ababab;
+}
+div.EkMembershipActivityTab table td div.dvPrivacyGrid
+{
+	padding: .50em; 
+	border:solid 1px #ababab;
+}
+
+div.EkMembershipActivityTab ul.activities_tab_subTabs li
+{
+	text-align: center; 
+	margin: .25em 0;
+	padding: .25em; 
+}
+div.EkMembershipActivityTab div.dvCollGrid,div.EkMembershipActivityTab div.dvGroupGrid
+{
+	padding: .50em; 
+}
+div.EkMembershipActivityTab ul.activities_tab_subTabs li.SelectedTab 
+{
+	background: url('../../Images/UI/active_tab.gif') 0 0 repeat-x;
+	display:block;
+}
+div.EkMembershipActivityTab ul.activities_tab_subTabs li.SelectedTab a { color: #fff; }
+div.EkMembershipActivityTab ul.activities_tab_subTabs li.UnSelectedTab
+{
+	background:#e6e6e6;
+	display:block ;
+}
+div.EkMembershipActivityTab ul.activities_tab_subTabs li.UnSelectedTab:hover { background: url('../../Images/UI/over_tab.gif') 0 0 repeat-x; }
+div.EkMembershipActivityTab ul.activities_tab_subTabs li.UnSelectedTab:hover a { color: #fff; }
+div.EkMembershipActivityTab ul.activities_tab_subTabs li.UnSelectedTab a { color: #000; }
+div.EkMembershipActivityTab ul.activities_tab_subTabs li.SelectedTab a, div.EkMembershipActivityTab ul.activities_tab_subTabs li.UnSelectedTab a 
+{
+    line-height:1.2;
+    text-align:center;
+    text-decoration:none;
+    white-space:nowrap;
+}
+
+#dvUserGroups p { color: #444444 !important; }
+#dvUserGroups ul.userGroups { border-color: #d4d4d4 !important; }

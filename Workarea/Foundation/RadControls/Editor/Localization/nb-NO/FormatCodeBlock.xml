@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+
+	<string id="PasteSourceCode">Lim inn kildekode under:</string>
+	<string id="CodeLanguage">Språk</string>
+	<string id="SnippetMaxHeight">Snippet maks høyde</string>
+	<string id="ShowLineNumbers">Vis linjenummer</string>
+	<string id="SnippetMaxWidth">Snippet maks bredde</string>
+	<string id="Preview">Forhåndsvis</string>
+	<string id="PreviewCode">Forhåndsvis kode</string>
+	<string id="Working">Working ...</string>
+</localization>

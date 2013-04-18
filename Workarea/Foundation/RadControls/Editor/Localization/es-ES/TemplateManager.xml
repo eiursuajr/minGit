@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Tab1HeaderText">Seleccionar Plantilla</string>
+	<string id="Tab2HeaderText">Cargar Plantilla</string>
+	<string id="TemplateURL">URL:</string>
+</localization>

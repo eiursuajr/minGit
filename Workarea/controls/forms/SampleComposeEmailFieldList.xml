@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<fieldlist>
+  <field name="To" datatype="emailList" basetype="text" xpath="*/To" title="List email addresses to receive your message.">To</field>
+  <field name="CC" datatype="emailList" basetype="text" xpath="*/CC" title="List of email addresses to receive a copy of the message.">CC</field>
+  <field name="Email" datatype="email" basetype="text" xpath="*/Email" title="Your email address.">Email</field>
+  <field name="Name" datatype="string" basetype="text" xpath="*/Name" title="Your name.">Name</field>
+  <field name="Subject" datatype="string" basetype="text" xpath="*/Subject" title="Subject">Subject</field>
+  <field name="Message" datatype="textarea" basetype="textbox" xpath="*/Message" title="Your message" content="textarea">Message</field>
+</fieldlist>

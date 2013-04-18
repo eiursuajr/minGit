@@ -1,0 +1,189 @@
+<root>
+	<modules>
+		<module name="RadEditorStatistics" dockingZone="Bottom" enabled="true" visible="true"/>
+		<module name="EkRadEditorDomInspector" dockingZone="Module" enabled="true" visible="true" />
+		<module name="RadEditorNodeInspector" dockingZone="Module" enabled="true" visible="true" dockable="false" />
+
+		<module name="RadEditorDiagnostics" dockingZone="Module" enabled="true" visible="true" dockable="true" />
+		<module name="EkRadEditorXhtmlValidator" dockingZone="Module" enabled="true" visible="true" dockable="true" />
+		<!-- RadEditorHtmlInspector causes defect #30021 - cursor goes back and forth in the plain text field in data entry mode -->
+		<module name="RadEditorHtmlInspector" dockingZone="Module" enabled="false" visible="false" />
+	</modules>
+	<tools name="Edit" enabled="true">
+		<tool name="Cut" />
+		<tool name="Copy" />
+		<tool name="Paste" shortcut="CTRL+!"/>
+		<tool name="PasteFromWord" />
+		<tool name="PasteFromWordNoFontsNoSizes" />
+		<tool name="PastePlainText" />
+		<tool name="PasteAsHtml"  />
+		<tool name="FindAndReplace" />
+		<tool name="Print" />
+		<tool separator="true"/>
+		<tool name="Undo" />
+		<tool name="Redo" />
+		<tool separator="true"/>
+		<tool name="AjaxSpellCheck" />
+		<tool separator="true"/>	
+		<tool name="LinkManager" />
+		<tool name="InsertAnchor"/>
+		<tool name="InsertEmailLink"/>
+		<tool name="Unlink" />
+		<tool separator="true"/>
+		<tool name="InsertHorizontalRule" />
+		<tool name="ImageManager" shortcut="CTRL+M"/>
+		<tool name="ImageMapDialog"/>
+	<!-- Ektron Editor Start -->
+		<tool name="EktronImageModificationTool"/>
+	<!-- Ektron Editor ends -->
+		<tool name="AbsolutePosition" />
+		<tool separator="true"/>
+		<tool name="FlashManager" />
+		<tool name="MediaManager" />
+		<tool name="InsertSymbol" />
+	</tools>	
+	<tools name="Paragraph Format" enabled="true" dockable="true">
+		<tool name="InsertOrderedList" />
+		<tool name="InsertUnorderedList"/>
+		<tool name="Indent" />
+		<tool name="Outdent" />
+		<tool separator="true"/>
+		<tool name="JustifyLeft" />
+		<tool name="JustifyCenter" />
+		<tool name="JustifyRight" />
+		<tool name="JustifyFull" />
+		<tool name="JustifyNone" />
+		<tool name="AboutDialog" />
+	</tools>
+	<tools name="Format" dockable="true">
+		<tool name="ApplyClass"/>
+		<tool name="FormatBlock"/>
+		<tool name="FontName"/>
+		<tool name="FontSize"/>
+		<tool name="RealFontSize"/>
+		<tool name="ForeColor" />
+		<tool name="BackColor"/>
+		<tool separator="true"/>
+		<tool name="Bold" />
+		<tool name="Italic" />
+		<tool name="Underline" />
+		<tool separator="true"/>
+		<tool name="Superscript" />
+		<tool name="Subscript" />
+	</tools>
+	<tools name="Table" dockable="true" enabled="true">
+		<tool name="InsertTable" />
+		<tool name="InsertRowAbove" />
+		<tool name="InsertRowBelow" />
+		<tool name="InsertColumnLeft" />
+		<tool name="InsertColumnRight" />
+		<tool name="DeleteRow" />
+		<tool name="DeleteColumn" />
+		<tool name="DeleteCell" />
+		<tool name="MergeColumns" />
+		<tool name="MergeRows" />
+		<tool name="SplitCell" />
+		<tool name="SetTableProperties" />
+		<tool name="SetCellProperties" />
+		<tool name="ToggleTableBorder" />
+	</tools>
+	<!--<tools name="Position Objects" enabled="true" dockable="true">
+		<tool name="AbsolutePosition" />
+	</tools>-->
+	<!-- Ektron Editor Start -->
+	<tools name="Data Designer" dockable="true">
+		<tool name="EkGroupBox"/>
+		<tool name="EkTabularDataBox"/>
+		<tool separator="true"/>
+		<tool name="EkCheckBoxField"/>
+		<tool name="EkTextField"/>
+		<tool name="EkChoicesField"/>
+		<tool name="EkCalculatedField"/>
+		<tool name="EkCalendarField"/>
+		<tool name="EkImageOnlyField"/>
+		<tool name="EkFileLinkField"/>
+	</tools>
+	<!-- Ektron Editor ends -->
+
+	<!--<tools name="MainToolbar" dockable="true" enabled="true">
+		<tool name="FormatCodeBlock" />
+		<tool name="FormatStripper" />
+		<tool separator="true"/>
+		<tool name="InsertFormElement" />
+		<tool name="InsertFormForm" />
+		<tool name="InsertFormButton" />
+		<tool name="InsertFormCheckbox" />
+		<tool name="InsertFormHidden" />
+		<tool name="InsertFormPassword" />
+		<tool name="InsertFormRadio" />
+		<tool name="InsertFormReset" />
+		<tool name="InsertFormSelect" />
+		<tool name="InsertFormSubmit" />
+		<tool name="InsertFormTextarea" />
+		<tool name="InsertFormText" />
+		<tool separator="true"/>
+		<tool name="StripAll" />
+		<tool name="StripCss" />
+		<tool name="StripFont" />
+		<tool name="StripSpan" />
+		<tool name="StripWord" />
+		<tool name="ToggleScreenMode" />
+		<tool name="Zoom" />
+		<tool name="ModuleManager" />
+		<tool name="ToggleDocking" />
+		<tool name="RepeatLastCommand" />
+		<tool separator="true"/>
+		<tool name="DocumentManager" />
+		<tool name="TemplateManager" />
+		<tool name="SelectAll" />
+		<tool name="InsertGroupbox" />
+		<tool name="InsertParagraph" />
+		<tool name="InsertSnippet" />
+		<tool separator="true"/>
+		<tool name="InsertDate" />
+		<tool name="InsertTime" />
+		<tool separator="true"/>
+		<tool name="Help" />
+		<tool name="StrikeThrough" />
+		<tool separator="true"/>
+		<tool name="ConvertToLower" />
+		<tool name="ConvertToUpper" />
+		<tool name="InsertCustomLink"/>
+	</tools>-->
+
+
+	<symbols>
+
+	</symbols>
+	<fontNames>
+	</fontNames>
+	<fontSizes>
+	</fontSizes>
+
+	<colors>
+	</colors>
+	<classes>
+	</classes>
+
+	<paragraphs>
+	</paragraphs>
+
+	<!-- Ektron Editor Starts -->
+	<dialogParameters>
+		<dialog name="GroupBox"/>
+		<dialog name="TabularDataBox"/>
+		<dialog name="CheckBoxField"/>
+		<dialog name="PlainTextField"/>
+		<dialog name="RichAreaField"/>
+		<dialog name="ChoicesField"/>
+		<dialog name="SelectListField"/>
+		<dialog name="CalculatedField"/>
+		<dialog name="CalendarField"/>
+		<dialog name="ImageOnlyField"/>
+		<dialog name="FileLinkField"/>
+	</dialogParameters>
+	<!-- Ektron Editor ends -->	
+	
+	<languages>
+	</languages>
+</root>

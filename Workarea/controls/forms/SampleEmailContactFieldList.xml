@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<fieldlist>
+  <field name="Contact" datatype="choice" basetype="text" xpath="*/Contact" title="Contact" datalist="EAB">Contact</field>
+  <field name="Email" datatype="email" basetype="text" xpath="*/Email" title="Your email address.">Email</field>
+  <field name="Subject" datatype="choice" basetype="text" xpath="*/Subject" title="Subject" datalist="EVC">Subject</field>
+  <field name="Message" datatype="textarea" basetype="textbox" xpath="*/Message" title="Your message" content="textarea">Message</field>
+  <datalist name="EAB">
+    <item value="select">(Select)</item>
+  </datalist>
+  <datalist name="EVC">
+    <item value="Info">Request information</item>
+    <item value="Proposal">Request for proposal</item>
+    <item value="Quote">Request for quote</item>
+    <item value="Billing">Billing question</item>
+    <item value="Help">Need technical help</item>
+    <item value="Web">Comment about the web site</item>
+    <item value="Comment">General comment</item>
+  </datalist>
+</fieldlist>

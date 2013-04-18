@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Tab1HeaderText">Suchen</string>
+  <string id="Title">Datei Manager</string>
+  <string id="Tab2HeaderText">Ersetzen</string>
+  <string id="SearchText">Finden:</string>
+  <string id="FindNext">Weitersuchen</string>
+  <string id="Replace">Ersetzen</string>
+  <string id="ReplacementText">Ersetzen mit:</string>
+  <string id="ReplaceAll">Alles ersetzen</string>
+  <string id="SearchIn">Suchen:</string>
+  <string id="SearchEntireText">Gesamten Text</string>
+  <string id="SearchSelection">Nur die Markierung</string>
+  <string id="SearchDirection">Richtung:</string>
+  <string id="MatchCase">Ergebnis</string>
+  <string id="WholeWordsOnly">Nur ganzes Wort suchen</string>
+  <string id="SearchUp">Hoch</string>
+  <string id="SearchDown">Runter</string>
+  <string id="OK">OK</string>
+  <string id="Cancel">Abbrechen</string>
+  <string id="SearchCriteriaNotSpecified">Keine Suchkriterien angegeben</string>
+  <string id="NoSearchTarget">Kein Inhalt zum Durchsuchen vorhanden</string>
+  <string id="FinishedSearching">Ektron eWebEdit400 hat die Suche beendet</string>
+  <string id="AndHasMade">und hat</string>
+  <string id="Replacements">Ersetzungen vorgenommen.</string>
+	<string id="ektron">Ektron Editor Starts</string>
+	<string id="Close">Close</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

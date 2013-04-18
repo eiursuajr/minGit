@@ -1,0 +1,6 @@
+/* general styles */
+div.amount span.help {position:relative;top:2px;}
+
+/* content cell */
+div.amount table tbody tr td input.leftOfDecimal {text-align:right;}
+div.amount table tbody tr td input.rightOfDecimal {width:2em;}

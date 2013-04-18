@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="Maximize">Maximera</string>
+	<string id="Minimize">Minimera</string>
+	<string id="Close">Stäng</string>
+	<string id="Restore">Återskapa</string>	
+	<string id="PinOff">Pinna av</string>
+	<string id="PinOn">Pinna på</string>
+	<string id="ConfirmMessage">Är du säker?</string>
+	<string id="PromptMessage">Ange värde:</string>
+	<string id="Ok">OK</string>
+	<string id="Cancel">Avbryt</string>
+	<string id="Yes">Ja</string>
+	<string id="No">Nej</string>
+	<string id="Loading">Laddar...</string>
+	<string id="Reload">Uppdatera</string>	
+	<string id="Alert">r.a.d.fönster varning</string>
+	<string id="Prompt">r.a.d.fönster inmatning</string>
+	<string id="Confirm">r.a.d.fönster konfirmera</string>	
+</localization>

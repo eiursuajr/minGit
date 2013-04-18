@@ -1,0 +1,14 @@
+ul.EktronTagCloud {margin:0;padding:.25em;list-style:none;border:1px solid silver;}
+
+ul.EktronTagCloud li {display:inline;margin:.25em;padding:0;background-color:Transparent;}
+
+ul.EktronTagCloud li a {text-decoration:none;}
+ul.EktronTagCloud li a:hover {text-decoration:underline;}
+
+ul.EktronTagCloud li .ektagcloudxxsmall {font-size:.75em !important;}
+ul.EktronTagCloud li .ektagcloudxsmall {font-size:.8em !important;}
+ul.EktronTagCloud li .ektagcloudsmall {font-size:.9em !important;}
+ul.EktronTagCloud li .ektagcloudmedium {font-size:1em !important;}
+ul.EktronTagCloud li .ektagcloudlarge {font-size:1.5em !important;}
+ul.EktronTagCloud li .ektagcloudxlarge {font-size:2em !important;}
+ul.EktronTagCloud li .ektagcloudxxlarge {font-size:2.5em !important;}

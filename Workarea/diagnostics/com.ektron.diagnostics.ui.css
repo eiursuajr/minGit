@@ -1,0 +1,105 @@
+body
+{
+    font-family:MS Sans Serif, Arial;
+    font-size: 13pt;
+}
+
+table
+{
+	font-family:MS Sans Serif, Arial;
+	font-size:xx-small;
+}
+
+.field
+{
+	padding-top: 7px;
+	padding-bottom: 7px;
+	border-bottom: solid 1px #ccc;
+}
+
+.fieldName
+{
+    width: 200px;
+    vertical-align:text-top;
+}
+
+.fieldValue
+{
+    width:415px;
+    vertical-align:text-top;
+}
+
+.statusError
+{
+    color: red;
+    font-weight: bold;
+}
+
+.statusSuccess
+{
+    color: green;
+    font-weight: bold;
+}
+
+.label
+{
+	padding: 15px;
+	border: solid 1px #ccc;
+	background: #f0f0f0;
+}
+
+.logo
+{
+    margin-bottom: 10px;
+}
+
+.eventLogNames
+{
+	font-weight:bold;
+	font-size:13pt;
+}
+
+.eventRowHeader
+{
+	background-color:#dcdcdc;
+    font-size: 13pt;
+}
+
+.eventRowData
+{
+	vertical-align:text-top;
+}
+
+.Information
+{
+	color:Blue;
+	border-bottom:solid 1pt gray;
+}
+
+.Warning
+{
+	color:#ffcc33;
+	border-bottom:solid 1pt gray;
+}
+
+.Error
+{
+	color:Red;
+	font-weight:bold;
+	border-bottom:solid 1pt gray;
+}
+
+.eventSource
+{
+	border-bottom:solid 1pt gray;
+}
+
+.eventDesc
+{
+	border-bottom:solid 1pt gray;
+}
+
+.eventDateTime
+{
+	border-bottom:solid 1pt gray;
+}

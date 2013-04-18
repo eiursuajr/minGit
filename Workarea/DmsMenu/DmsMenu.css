@@ -1,0 +1,142 @@
+div.dmsWrapper {margin:0;}
+
+/* DMS Item Wrapper
+----------------------------------*/
+div.dmsWrapper p.dmsItemWrapper
+{
+    line-height:16px;
+	margin:0px 1px 0 0;
+	padding:0 20px 0 0;
+    border: solid 1px transparent;
+    background-image:url('images/menuSprite.gif');
+    background-repeat:no-repeat;
+    background-position:  right -798px;
+    cursor: pointer;
+    zoom: 1; /* ensures the background image shows up in IE6 */
+} 
+
+div.dmsWrapperHover p.dmsItemWrapper 
+{
+    border: solid 1px #5d8fb4;
+    background-position:  right -598px;
+}
+
+div.dmsWrapper p.dmsItemWrapperMenuActive 
+{
+    background-position:  right -395px;
+}
+
+div.dmsWrapperHover p.dmsItemWrapperMenuActive 
+{
+    background-position:  right -195px;
+}
+div.dmsWrapper p.dmsItemWrapperLoading, div.dmsWrapperHover p.dmsItemWrapperLoading 
+{
+    background-position: right -2px;
+    cursor: progress;
+}
+
+/* DMS View Item Wrapper
+----------------------------------*/
+div.dmsWrapper p.dmsItemWrapper a.dmsViewItemAnchor
+{
+	overflow:hidden;
+	display:block;
+	margin:0;
+	padding:0 5px 0 0;
+	border-right: solid 1px transparent;
+}
+div.dmsWrapperHover p.dmsItemWrapper a.dmsViewItemAnchor {border-right: solid 1px #2a60a8;}
+
+div.dmsWrapper p.dmsItemWrapper a.dmsViewItemAnchor img {border: none !important; margin: 0 .25em 0 0 !important;}
+
+/* DMS Menu Wrapper
+----------------------------------*/
+ul.dmsMenuWrapper 
+{
+	display: block;
+	list-style: none !important;
+	z-index: 99999 !important;
+	position: absolute !important;
+	margin: 0 !important;
+	top:0;
+	left: -10000px; /* ensures the menu doesn't interfere with the page layout when first inserted */
+	padding: 18px 0 !important;
+	background: #ededed url('../images/UI/menu/dropdown-background.gif') repeat-x;
+    border: solid 1px #bfbfbf;
+    zoom: 1;
+}
+
+ul.dmsMenuWrapper li
+{
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    border: 0 !important;
+    font-size: 1em !important;
+    text-transform: none !important;
+}
+
+ul.dmsMenuWrapper li.sectionBreak 
+{
+    border-top:1px solid #dfdfdf !important;
+	margin: 8px 19px !important;
+    font-size:1px !important;
+    line-height:1em !important;
+    padding: 0 !important;
+}
+
+ul.dmsMenuWrapper li a
+{
+    color: #000;
+    border: none !important;
+	padding: 0 18px !important;
+	font-size:1em !important;
+	text-decoration: none !important;
+    height: 20px !important;
+    line-height: 20px !important;
+    display: block !important;
+}
+
+ul.dmsMenuWrapper li a:hover { color: #fff !important; background: #3767af url('../images/UI/over_tab.gif') 0 0 repeat-x !important; }
+
+ul.dmsMenuWrapper li a span 
+{
+	font-weight: normal !important;
+	text-align: left !important;
+	display: inline !important;
+    margin: 0px !important;
+    padding: 0px !important;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+/* In accordance with Creative Commons Licsense v2.5 (http://creativecommons.org/licenses/by/2.5/), */
+/* the following images are attributed to Mark James, developer of Silk Icons v1.3 (http://www.famfamfam.com/lab/icons/silk/) */
+/*
+ul.dmsMenuWrapper a.DmsMenuView {background-image:url('../images/ui/icons/contentViewPublished.png') !important; display: block !important}
+ul.dmsMenuWrapper a.DmsMenuViewHistory {background-image:url('../images/ui/icons/history.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuViewProperties {background-image:url('../images/ui/icons/properties.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuEdit {background-image:url('../images/ui/icons/pencil.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuEditProperties {background-image:url('../images/ui/icons/propertiesEdit.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuDelete {background-image:url('../images/ui/icons/delete.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuEditInMicrosoftOffice {background-image:url('images/officeIconEdit.jpg') !important;}
+ul.dmsMenuWrapper a.DmsMenuViewInMicrosoftOffice {background-image:url('images/officeIcon.jpg') !important;}
+ul.dmsMenuWrapper a.DmsMenuCheckOutandSaveAs {background-image:url('../images/ui/icons/checkoutandsave.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuCheckOutAndSaveAs {background-image:url('../images/ui/icons/checkoutandsave.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuSaveAs {background-image:url('../images/ui/icons/save.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuCheckIn {background-image:url('../images/ui/icons/checkIn.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuSubmit {background-image:url('../images/ui/icons/contentLink.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuPublish {background-image:url('../images/ui/icons/contentPublish.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuDecline {background-image:url('../images/ui/icons/cancel.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuApprove {background-image:url('../images/ui/icons/check.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuCopy {background-image:url('../images/ui/icons/contentCopy.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuDistribute {background-image:url('../images/ui/icons/folderUp.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuRequestCheckIn {background-image:url('../images/ui/icons/email.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuForceCheckIn {background-image:url('../images/ui/icons/contentForce.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuRotateCW {background-image:url('../images/ui/icons/rotateClockwise.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuRotateCCW {background-image:url('../images/ui/icons/rotateCounterClockwise.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuSync {background-image:url('../images/ui/icons/sync.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuEditLayout {background-image:url('../images/ui/icons/layoutEdit.png') !important;}
+ul.dmsMenuWrapper a.DmsMenuViewAnalytics {background-image:url('../images/ui/icons/chartPie.png') !important;}
+*/

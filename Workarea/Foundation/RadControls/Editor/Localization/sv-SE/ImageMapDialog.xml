@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="AreaFieldSet">Vald region egenskaper</string>
+	<string id="ImageFieldSet">Bild egenskaper</string>
+	<string id="Update">Uppdateringsregion</string>
+	<string id="Remove">Ta bort region</string>
+	<string id="RemoveAll">Ta bort allt</string>
+	<string id="NewArea">Skapa region</string>
+	<string id="Left">Vänster</string>
+	<string id="Top">Överst</string>
+	<string id="Width">Bredd</string>
+	<string id="Height">Höjd</string>
+	<string id="Url">URL</string>
+	<string id="Target">Mål</string>
+	<string id="Comment">Kommentar</string>
+	<string id="ImageSrc">Bild SRC</string>
+	<string id="AlertInvalidProperties">Ej giltiga egenskaper!</string>
+	<string id="AlertInvalidAreaProperties">Ej giltiga egenskaper för regionen. Ange en URL.</string>
+	<string id="AlertDeleteArea">Är du säker på att du vill ta bort regionen.</string>
+	<string id="AlertDeleteAllAreas">Är du säker på att du vill ta bort alla regioner?</string>
+	<string id="AlertWrongAreaDimensions">Felaktig region dimension. Ignorera denna region.</string>	
+	<string id="ShapeAlt">Dra i nedre högra hörnet för att ändra storleken på regionen.</string>
+	<string id="HowToAdd">Du kan dra över bilden för att skapa en ny region.</string>
+	<string id="RectangleShapeName">Rektangel</string>
+	<string id="CircleShapeName">Cirkel</string>
+	<string id="PolygonShapeName">Polygon</string>
+	<string id="SelectImage">Var vänlig och välj en bild för att skapa en bild karta.</string>
+	<string id="_blank">Nytt Fönster</string>
+	<string id="_self">Samma plats i fönster</string>
+	<string id="_parent">Överliggande Fönster</string>
+	<string id="_top">Samma Fönster</string>
+	<string id="_search">Sök yta</string>
+	<string id="_media">Media yta</string>
+</localization>

@@ -1,0 +1,4 @@
+﻿.pageWrapper {margin: 5px;}
+#divStatusMessage {padding: 5px;}
+#divStatusMessage.success {background-color: #E6EFC2; border: 1px solid #C6D880; color:#529214;}
+#divStatusMessage.error {background-color: #FBE3E4; border: 1px solid #FBC2C4; color:#D12F19;}

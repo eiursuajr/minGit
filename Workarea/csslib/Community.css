@@ -1,0 +1,479 @@
+﻿.EktWordWrap 
+{
+	/* Word-Wrap support for IE, FireFox, and Safari */
+	/* (will be supported by more as they adopt CSS 3.0) */
+	word-wrap: break-word; 
+	-moz-binding: url('xml/moz_wordwrap.xml#wordwrap'); /* add support for FireFox 2.0 */
+}
+
+/*****************************************************************************/
+/* Profile Control */
+
+.EktProfileCtl 
+{
+	font-size: .87em;
+	background-color: #ffffff;
+	border-style: solid;
+	border-color: #3B5998 ;
+	border-width: 1px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 470px;
+	height: 235px;
+	overflow: hidden;
+}
+
+/* HeaderBar */
+.EktProfileCtl_HeaderBar
+{
+	background-color: #3B5998;
+	font-weight: bold;
+	font-size: 1.25em;
+	padding: .25em;
+	padding-left: .5em;
+	color: #fff;
+}
+
+.EktProfileCtl_Body
+{
+	height: 200px;
+}
+
+.EktProfileCtl_ScrollableBlock
+{
+	overflow: auto;
+	height: 100%;
+	margin-top: .25em;
+}
+
+.EktProfileCtl_Body a
+{
+	color: #3B5998;
+}
+
+/* Image Container */
+.EktProfileCtl_ImageContainer
+{
+	position: relative;
+	margin-top: .5em;
+	margin-left: .5em;
+	float: left; 
+}
+
+
+/* Image Container */
+.EktProfileCtl_ImageContainer img
+{
+	border: solid 1px #dddddd;
+	margin-right: .5em;
+}
+.EktProfileCtl_TagBlockContainer 
+{
+	float: left; 
+	padding: .25em;
+	margin-top: .25em;
+	padding-top: 0em;
+}
+.EktProfileCtl_TagNameContainer {font-weight:bold;}
+.EktProfileCtl_TagsContainer 
+{
+	width: 120px;
+	overflow: auto;
+}
+.EktProfileCtl_TagItem 
+{
+	margin: 0 5px 0 0;
+	float: left;
+	white-space: nowrap;
+	line-height: 1.5em;
+}
+	 
+.EktProfileCtl_TagItemName {}
+.EktProfileCtl_TagLinks
+{
+	word-wrap: break-word;
+	-moz-binding: url('xml/moz_wordwrap.xml#wordwrap'); /* add support for FireFox 2.0 */
+}
+/* Info Container */
+.EktProfileCtl_InfoContainer
+{
+	margin-left: 2em;
+	margin-top: .25;
+	float: left; 
+	padding: .25em;
+}
+
+/* ScreenName Container */
+.EktProfileCtl_ScreenNameContainer
+{
+	font-weight: bold;
+}
+
+/* Email Container - if enabled */
+.EktProfileCtl_EmailContainer
+{
+	font-weight: bold;
+}
+
+/* Properties Container */
+.EktProfileCtl_PropertiesContainer
+{
+	padding: 0em;
+	width:182px;
+	overflow: auto;
+}
+.EktProfileCtl_PropertiesTitle
+{
+	font-weight: bold;
+}
+
+.EktProfileCtl_PropertiesItem
+{
+	margin-bottom: 4px;
+	width: 100%;
+	word-wrap: break-word; 
+	-moz-binding: url('xml/moz_wordwrap.xml#wordwrap'); /* add support for FireFox 2.0 */
+}
+
+.EktProfileCtl_PropertiesItemName
+{
+	font-weight: normal;
+}
+
+.EktProfileCtl_PropertiesItemValue
+{
+	font-weight: normal;
+	margin-left: .5em;
+}
+
+.EktProfileCtl_PropertiesItemValue input 
+{
+	vertical-align: middle;
+}
+
+
+.EktProfileCtl_EditLinkContainer
+{
+	clear: both;
+	position:absolute;
+	top: .5em; 
+	right: .5em;
+}
+
+.EktProfileCtl_EditLinkContainer a 
+{
+	color: #ACBABC;
+	text-decoration: none;
+	display: block;
+}
+
+.EktProfileCtl_EditLinkContainer a:hover
+{
+	color: #fff;
+	text-decoration: underline;
+}
+
+/*****************************************************************************/
+/* Message Control */
+.EktMessageCtl
+{
+	position: relative;
+	border: solid 1px #3B5998;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+	font-size: 1em;
+}
+
+.EktMessageCtl_header
+{
+	background-color: #3B5998; 
+	color: #fff;
+	border-bottom: solid 1px #3B5998;  
+	font-size: 1em;
+	padding: .25em;
+	height: 1.25em;
+}
+
+
+.EktMessageCtl_buttonsContainer
+{
+	position: absolute; 
+	top: 0px; 
+	right: 0px; 
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.EktMessageCtl .EktMessageCtl_buttons
+{
+	border-left: solid 1px #3B5998;
+	float: left; 
+	background-color: #F7F7F7;
+	color: #666696;
+	padding: .25em .5em;
+}
+.EktMessageCtl_buttonsSelected
+{
+	border-left: solid 1px #3B5998; 
+	float: left; 
+	background-color: #D8DFEA;
+	color: #3B5998;
+	padding: .25em .5em;
+}
+
+.EktMessageCtl_main{font-size: .92em;}
+
+.EktMessageCtl_inboxDataTbl {
+	width: 100%;
+	background-color: #F7F7F7;
+	border-collapse: collapse;
+}
+.EktMessageCtl_inboxDataTbl tr td a, .EktMessageCtl_inboxDataTbl tr th a {color: #00f;}
+.EktMessageCtl_inboxDataTbl thead{}
+.EktMessageCtl_inboxDataTbl th{
+	background-color: #EEEEEE;
+	text-align: left;
+	border-collapse: separate; 
+	border-left: solid 1px #3B5998;	
+	border-bottom: solid 1px #3B5998;			
+	padding: .25em;
+	color: #606099;
+}
+
+th.EktMessageCtl_inboxDataFrom{width: 23%; border-left: none;}
+th.EktMessageCtl_inboxDataSubject{width: 50%;}
+th.EktMessageCtl_inboxDataDate{width: 22%;}
+th.EktMessageCtl_inboxDataDelete{width: 5%;}
+
+td.EktMessageCtl_inboxDataFrom{}
+td.EktMessageCtl_inboxDataSubject{}
+td.EktMessageCtl_inboxDataDate{white-space:nowrap;}
+td.EktMessageCtl_inboxDataDelete{text-indent: 10px;}
+
+.EktMessageCtl_inboxDataTbl td {padding-left: 4px; padding-top:0px; height: 30px;}
+.EktMessageCtl_oddRow td {background-color: #ffffff;}
+.EktMessageCtl_evenRow td {background-color: #F7F7F7;}
+.EktMessageCtl_noMessages {color: #553355; background-color: #fff; padding: .25em}
+.EktMessageCtl_msgRead{ font-weight: normal; }
+.EktMessageCtl_msgNotRead{ font-weight: bold !important; } /* Styles to make unread messages more noticeable */
+
+.EktMessageCtl_MessageTargetUI 
+{
+	z-index:10; 
+	padding: 5px;
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	border: solid 1px rgb(192, 192, 192);
+	width: 350px;
+	position: absolute;
+	top: 40px;
+	left: 150px;
+	background-color: white;
+}
+.EktMsgTargetsBody
+{
+    position: relative;
+    top: 0px;
+    left: 0px;
+	background-color: white;
+	z-index:12;
+	padding-left: 0px;
+	padding-bottom: 0px;
+}
+
+
+
+.EktMessageCtl_MessageTargetUI_user {position:relative; top: 0px; left: 22px; height: 25px;}
+.EktMessageCtl_MessageTargetUI_userSelImg {position: absolute; top:0px; left: -22px;}
+
+.EktMessageCtl_viewMessageInfo{padding: 10px;}
+.EktMessageCtl_viewMessageInfoLinksTable{margin-top: 12px; width: 75%; border-collapse: collapse; border-width: 0px;}
+.EktMessageCtl_viewMessageInfoLinksTable td 
+{padding-left: 10px; width: 15%; vertical-align: middle; text-align: left; height: 22px;}
+.EktMessageCtl_viewMessageInfoReplyLinkSpan{}
+.EktMessageCtl_viewMessageInfoForwardMsgLinkSpan{}
+.EktMessageCtl_viewMessageInfoPrintMsgLinkSpan{}
+.EktMessageCtl_viewMessageInfoDeleteMsgLinkSpan{}
+.EktMessageCtl_viewMessageInfoPrevMsgLinkSpan{}
+.EktMessageCtl_viewMessageInfoNextMsgLinkSpan{}
+.EktMessageCtl_viewMessageInfoPrevMsgLinkSpan_Disabled,
+.EktMessageCtl_viewMessageInfoNextMsgLinkSpan_Disabled {color: #777777;}
+
+.EktMessageCtl_viewMessageBody{margin-top: 0px; width: 100%; border-top: solid 1px black; padding: 10px; font-size: 16px;}
+
+.EktMessageCtl_msgSent {padding: 10px; font-size: 14px;}
+
+.EktMessageCtl_MsgHeadertable {margin-top: 10px;}
+
+.EktMessageCtl_content{width: 100%; margin: .5em 0em;}
+.EktMessageCtl_postformheader{width: 10%; padding-left: .5em;}
+.EktMessageCtl_post{width: 90%;}
+.EktMessageCtl_post a.ek_thickbox {text-decoration: none; }
+.EktMessageCtl_post a.ek_thickbox img {vertical-align: middle;}
+.EktMessageCtl_edit{}
+.EktMessageCtl_browseFriendsBtn{text-decoration: underline; cursor: pointer;}
+.EktMessageCtl_footer1{padding-top: .5em; text-align: center;}
+.EktMessageCtl_pbutton{}
+
+.EktMessageCtl_inboxDataSubject
+
+.EktMessageCtl_Error {padding: .5em; font-size: 1em; color: Red;}
+
+/* Styling for the Browse Members/Friends elements */
+.EktMsgTargets{padding-left: 5px; padding-right: 5px; padding-bottom: 5px;}
+.EktMsgTargetsTopControls{padding: 5px;}
+.EktMsgTargetsSearchText{width: 35%; margin-right: 2px;}
+.EktMsgTargetsTopControlsSearch{margin-bottom: 10px;}
+.EktMsgTargetsTopControlsSearch select {margin-right: 2px;}
+.EktMessageCtl .EktMsgTargetsBody .FriendsOnlyButtonLabel{background-color: #fff;}
+.EktMsgTargetsSearchBtn{position: relative; top:2px; left:0px;}
+.EktMsgTargetsBtmControls{padding: 5px; margin-bottom: 20px; position: relative; top:-10px; left: 0px; z-index:12;width: 90%;}
+.EktMsgTargetsPagePreviousBtn{float: left; margin-right: 10px;}
+.EktMsgTargetsPageNextBtn{float: left;}
+.EktMsgTargetsCancelBtn{margin: 10px;}
+.EktMsgTargetsDoneBtn{margin-left: 65%; margin-top: 10px; margin-bottom: 10px;}
+.EktMsgTargetsTopControlsSelectAll{
+	margin-top: 0px; margin-right: 5px; margin-bottom: 0px; 
+	position: relative;
+	top: -5px;
+	left: 0px;
+}
+.EktMsgTargetCtlSelAll{}
+.EktMsgTargetsMiddle{
+	margin-top: 0px;
+	position: relative;
+	top: -5px;
+	left: 0px;
+}
+.EktMsgTargetTable{
+    position: relative;
+    top: -2px;
+    left: 0px;
+    width: 100%;
+	border-collapse: collapse; 
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+}
+.EktMsgTargetTable th {padding: 5px;}
+.EktMsgTargetTable td {padding: 5px;}
+.EktMsgTargetTableDataSelect{width: 5%;}
+.EktMsgTargetTableDataAvatar{width: 20%;}
+.EktMsgTargetTableData_AvatarContainer{max-height: 75px; overflow:hidden;}
+.EktMsgTargetTableDataAvatar img {width: 75px; border: solid 1px rgb(192, 192, 192);}
+.EktMsgTargetTableDataMember{width: 65%;}
+.EktMsgTargetProfileLink{}
+.EktMsgTargetsNoResults{}
+
+/*****************************************************************************/
+
+/*****************************************************************************/
+/* Work-Area Message Control */
+.ektronPageContainer .ViewMsgContainer .ViewMsgMessage p { margin: 0 0 0.0001pt; }
+
+/*****************************************************************************/
+
+/*****************************************************************************/
+/* Invite Control */
+.EktInviteCtl {font-size: 1em; border: solid 1px #3B5998; background-color: white;}
+.EktInviteCtl div {margin: 0em;}
+.EktInviteCtl h2.EktInviteCtl_HeaderBar {background-color: #3B5998; color: #fff; font-weight: bold; font-size: 1em; padding: .25em; margin: 0em;}
+.EktInviteCtl_body {padding: .5em;}
+.EktInviteCtl div.EktInviteCtl_body h3.EktInviteCtl_infoContainer {font-size: .97em; font-weight: bold; margin: 0em;}
+
+.EktInviteCtl div.EktInviteCtl_addressContainer {margin-top: .5em;}
+.EktInviteCtl div.EktInviteCtl_addressInfo {position: relative; margin: .25em 0em;}
+.EktInviteCtl label {font-size: .92em; color: #666696;}
+.EktInviteCtl div.EktInviteCtl_addressInfo label {display: block;}
+.EktInviteCtl textarea {width: 100%; border: solid 1px #ccc; overflow: auto;}
+
+.EktInviteCtl div.EktInviteCtl_addressContainer span.EktInviteCtl_addressHelpLink {position: absolute; right: 0em; top: .1em; width: 50%; text-align: right; min-height: 16px;}
+.EktInviteCtl div.EktInviteCtl_addressContainer span.EktInviteCtl_addressHelpLink a {display: block; text-decoration: none; background-image: url('../images/application/community/help.gif'); cursor: help; background-repeat: no-repeat; background-position: right; font-size: .92em; padding-right: 18px; color: #486AC5;}
+.EktInviteCtl div.EktInviteCtl_addressContainer span.EktInviteCtl_addressHelpLink a div.EktInviteCtl_addressHelpContainer {position: absolute; right: 0em; top: 0em; border: solid 1px #EEEEEE; background-color: #FFFFE7; width: auto; padding: .5em; margin-top: 1.5em; z-index: 99; font-size: .83em; text-align: left; display: none; color: #333;}
+.EktInviteCtl div.EktInviteCtl_addressContainer span.EktInviteCtl_addressHelpLink a:hover div.EktInviteCtl_addressHelpContainer {display: block;}
+
+.EktInviteCtl div.EktInviteCtl_messageContainer {margin-top: 1em;}
+.EktInviteCtl div.EktInviteCtl_sendButtonContainer {margin: .5em 0em; text-align: center;}
+.EktInviteCtl span.ekError {color: #f00;}
+/*****************************************************************************/
+/* User Search Control */
+
+.EktUserSearchCtl{
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	border: solid 1px rgb(192, 192, 192);
+	width: 440px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.EktUserSearchCtl img{border: none;}
+.EktUserSearch_HeaderBar{
+	background-color: #EEEEEE;
+	font-weight: bold;
+	font-size: 22px; 
+	padding: 5px 10px 5px 10px;
+}
+.EktUserSearch_Body{}
+.EktUserSearch_Options{padding: 5px;}
+.EktUserSearch_Inputs{padding: 5px;}
+.EktUserSearch_Options a{position: relative; top: 0px; left: 5px; color: Blue;}
+.EktUserSearch_Result{padding: 5px;}
+.EktUserSearch_ResultTable{
+	border-collapse: collapse; 
+	border: solid 1px rgb(192, 192, 192);
+	font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+.EktUserSearch_ResultTable th {padding: 5px; border: solid 1px rgb(192, 192, 192);}
+.EktUserSearch_ResultTable td {padding: 5px; border: solid 1px rgb(192, 192, 192);}
+.EktUserSearch_ResultTableHead{background-color: rgb(223, 239, 255);}
+.EktUserSearch_ResultTableHeadAvatar{width: 20%;}
+.EktUserSearch_ResultTableHeadMember{width: 45%;}
+.EktUserSearch_ResultTableHeadStatus{width: 35%;}
+.EktUserSearch_ResultTableOddRow td {background-color: #ffffff;}
+.EktUserSearch_ResultTableEvenRow td {background-color: #f0f0f0;}
+.EktUserSearch_ResultTableDataAvatar{}
+.EktUserSearch_ResultTableDataAvatarContainer{max-height: 75px; overflow:hidden;}
+.EktUserSearch_ResultTableDataMember{}
+.EktUserSearch_ResultTableDataStatus{}
+.EktUserSearch_ResultTableDataAvatar img{border: none; width: 75px;}
+.EktUserSearch_ResultNoResults{color: red;}
+.EktUserSearch_ResultEmptyQuery{color: red;}
+.EktUserSearch_Result_MemberName{position:relative; top: 0px; left: 0px; margin-bottom: 4px; font-weight:bold;}
+.EktUserSearch_Result_MemberPTags{white-space: normal ; margin-bottom: 4px;}
+.EktUserSearch_Result_MemberLocationLink{margin-bottom: 4px;}
+.EktUserSearch_ResultLoading{}
+.EktUserSearch_Map{padding: 5px; margin: 5px; border: solid 1px rgb(192, 192, 192);}
+.EktUserSearch_TargetsPagePreviousBtn{margin-right: 10px;}
+.EktUserSearch_TargetsPageNextBtn{}
+.EktUserSearch_WaitingImage{}
+.EktUserSearch_InfoBlock{position:absolute; top: -86px; left: 20px; width: 300px; background-color:White; border: solid 1px black; white-space:normal; overflow:hidden;}
+.EktUserSearch_InfoBlockHeader{position:relative; top: 0px; left: 0px; border-bottom:solid 1px black; height: 16px; margin-bottom:5px; background-color: #cccccc;}
+.EktUserSearch_InfoBlockCloser{position:absolute; top: 1px; right: 1px; }
+.EktUserSearch_InfoBlockBody{}
+.EktUserSearch_InfoBlockItem{white-space:nowrap; position:relative; top: 0px; left: 0px; width: 100%; height: 20px;}
+.EktUserSearch_InfoBlockLabel{font-weight:bolder; position:absolute; top: 0px; right: 200px;}
+.EktUserSearch_InfoBlockData{position:absolute; top: 0px; left: 110px;}
+.EktUserSearchCtl a {color: Blue;}
+.EktUserSearchCtl a:visited {color: Blue;}
+.EktUserSearch_MainLocationSearchImage{position:relative; top: 5px;}
+.EktUserSearch_ItemLocationSearchImage{margin-top: 1px;}
+.EktUserSearch_UserTagLink{margin-right: 3px;}
+.EktUserSearch_UserTagLinkContainer{font-style:italic; margin-right: 5px; display:block;}
+.EktUserSearch_UserTagLinkContainer_Truncated{font-style:italic; margin-right: 5px; display:block;}
+.EktUserSearch_Options a img {position: relative; top: 8px; left: 0px; margin-left: 5px; margin-right: 3px;}
+.EktUserSearch_Options a {position: relative; top: -3px; left: 0px; text-decoration: none;}
+.EktUserSearch_accessDenied{font-weight:bolder;}
+.EktUserSearch_TopLocationSearch{margin-left:18px;}
+.EktUserSearch_TopLocationSearchText{text-decoration: underline;}
+.EktUserSearch_Categories{margin-left:18px;}
+.EktUserSearch_Categories a{text-decoration: underline; color: Blue;}
+.EktUserSearch_CategoryContainer{width: 200px; padding: 0px; background-color:White; position: absolute; top: 5px; left: 228px;}
+.EktUserSearch_InnerCategoryContainer{border: solid 1px rgb(192, 192, 192); padding: 0px;}
+.EktUserSearch_CategoryContainerHeader{position:relative; top: 0px; left: 0px; padding-left: 4px; padding-top: 1px; border-bottom:solid 1px #777777; height: 16px; background-color: #dddddd; margin-bottom: 7px;}
+.EktUserSearch_CategoryContainerCloser{position:absolute; top: 1px; right: 1px; }
+.EktUserSearch_CategoryFriendsContainer{position:absolute; top: 22px; left: 7px; }
+.EktUserSearch_CategoryContainer b3{margin: 0px;}

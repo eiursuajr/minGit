@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+	<xs:include schemaLocation="CommonSpec.xsd"/>
+
+	<xs:element name="datadesign">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="validation" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="choice" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="caption" type="captionType" minOccurs="0" maxOccurs="1"/>
+										<xs:element ref="schema" minOccurs="0" maxOccurs="1"/>
+										<xs:element name="calculate" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:group ref="expressionGroup"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="validate" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:group ref="expressionGroup"/>
+													<xs:element name="errormessage" minOccurs="0" maxOccurs="1">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute ref="localeRef"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attributeGroup ref="nameKey"/>
+									<xs:attribute name="treeImg" type="treeviewImageKey"/>
+									<xs:attribute name="translate" type="xs:boolean"/>
+									<xs:attribute name="ref" type="localeRefType"/>
+									<xs:attribute name="pattern" type="regexpPatternType"/>
+								</xs:complexType>
+								<xs:unique name="uniqueChoice">
+									<xs:selector xpath="choice"/>
+									<xs:field xpath="@name"/>
+								</xs:unique>
+							</xs:element>
+							<xs:element name="custom" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="caption" type="captionType" minOccurs="0" maxOccurs="1"/>
+										<xs:element name="selections" type="selectionsType" minOccurs="0" maxOccurs="unbounded"/>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute ref="visible"/>
+								</xs:complexType>
+								<xs:unique name="uniqueSelections">
+									<xs:selector xpath="selections"/>
+									<xs:field xpath="@name"/>
+								</xs:unique>
+							</xs:element>
+						</xs:sequence>
+						<xs:attributeGroup ref="nameKey"/>
+						<xs:attribute ref="enabled"/>
+						<xs:attribute ref="visible"/>
+					</xs:complexType>
+					<xs:unique name="uniqueValidation">
+						<xs:selector xpath="validation"/>
+						<xs:field xpath="@name"/>
+					</xs:unique>
+				</xs:element>
+				<xs:element name="validate" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="xslt" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attributeGroup ref="commonValidateAttributes"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="schema" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:attributeGroup ref="commonValidateAttributes"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="online" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="data" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType mixed="true">
+												<xs:attribute name="name" type="xs:Name" use="required"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attributeGroup ref="commonValidateAttributes"/>
+									<xs:attribute name="contentname" type="xs:string" use="required"/>
+									<xs:attribute name="doctype" type="xs:string" use="required"/>
+									<xs:attribute name="type" type="xs:string" use="required"/>
+									<xs:attribute name="keywordsearchresult" type="xs:string" use="optional"/>
+									<xs:attribute name="keyword" type="xs:string" use="optional"/>
+									<xs:attribute name="site" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute name="accessibility">
+							<xs:simpleType>
+								<xs:restriction base="xs:NMTOKEN">
+									<xs:enumeration value="strict"/>
+									<xs:enumeration value="loose"/>
+									<xs:enumeration value="none"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:attribute>
+						<xs:attribute name="suggestdefaultval" type="xs:boolean"/>
+					</xs:complexType>
+					<xs:unique name="uniqueId">
+						<xs:selector xpath="*"/>
+						<xs:field xpath="@id"/>
+					</xs:unique>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:attributeGroup name="commonValidateAttributes">
+		<xs:attribute name="id" type="xs:NCName" use="required"/>
+		<xs:attribute name="name" type="xs:string" use="required"/>
+		<xs:attribute ref="enabled"/>
+		<xs:attribute name="src" type="URLType" use="required"/>
+	</xs:attributeGroup>
+
+	<xs:complexType name="captionType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="enabled"/>
+				<xs:attribute ref="localeRef"/>
+				<xs:attribute ref="visible"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
+	<xs:simpleType name="YesNoOnlyType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="selectionsType">
+		<xs:sequence>
+			<xs:element name="listchoice" minOccurs="0" maxOccurs="unbounded" type="listchoiceType"/>
+		</xs:sequence>
+		<xs:attribute name="bookmarks" type="xs:boolean"/>
+		<xs:attribute ref="enabled"/>
+		<xs:attribute name="listtop" type="xs:boolean"/>
+		<xs:attributeGroup ref="nameKey"/>
+		<xs:attribute name="sorted" type="xs:boolean"/>
+		<xs:attribute ref="visible"/>
+	</xs:complexType>
+	<xs:complexType name="listchoiceType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="command" type="xs:string"/>
+				<xs:attribute name="data" type="xs:string"/>
+				<xs:attribute name="default" type="xs:boolean"/>
+				<xs:attribute name="delimited" type="xs:string"/>
+				<xs:attribute ref="enabled"/>
+				<xs:attribute ref="href"/>
+				<xs:attribute ref="localeRef"/>
+				<xs:attribute name="target" type="xs:string"/>
+				<xs:attribute name="treeImg" type="treeviewImageKey"/>
+				<xs:attribute name="translate" type="xs:boolean"/>
+				<xs:attribute name="value" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="regexpType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(/.+/[gim]{0,3})|(.{0})"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="regexpPatternType">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[^/].*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:group name="expressionGroup">
+		<xs:choice>
+			<xs:element name="regexp">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="regexpType">
+							<xs:attribute name="pattern" type="regexpPatternType"/>
+							<xs:attribute name="global" type="xs:boolean" default="false"/>
+							<xs:attribute name="ignorecase" type="xs:boolean" default="false"/>
+							<xs:attribute name="multiline" type="xs:boolean" default="false"/>
+							<xs:attribute name="wholeline" type="xs:boolean" default="false"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="script">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="value" type="xs:string" use="required"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="xpath">
+				<xs:complexType>
+					<xs:attribute name="select" type="xs:string" use="required"/>
+					<xs:attribute name="selfonly" type="xs:boolean" default="true"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="xslt">
+				<xs:complexType>
+					<xs:attribute ref="src" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+</xs:schema>

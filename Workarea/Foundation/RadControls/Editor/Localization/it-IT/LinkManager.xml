@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Manager Collegamento ipertestuale</string>
+	<string id="Tab1HeaderText">Collegamento Ipertestuale</string>
+	<string id="Tab2HeaderText">Ancora</string>
+	<string id="Tab3HeaderText">E-mail</string>
+	<string id="LinkUrl">URL:</string>
+	<string id="LinkType">Tipo:</string>
+	<string id="Other">altro</string>
+	<string id="LinkTarget">Target:</string>
+	<string id="Target">Target</string>
+	<string id="LinkTooltip">Tooltip:</string>
+	<string id="LinkName">Nome:</string>
+	<string id="LinkAddress">Indirizzo:</string>
+	<string id="LinkSubject">Soggetto:</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Annulla</string>
+	<string id="CssClass">Classe CSS:</string>
+	<string id="AnchorCss">Link CSS</string>
+	<string id="LinkText">Link Testo:</string>
+	<string id="ClearStyle">Nessuna Classe</string>
+	<string id="LinkToAnchor">Ancora esistente:</string>
+	<string id="AnchorNone">Nessuno</string>
+    <string id="ektron">Ektron Editor Starts</string>
+	<string id="UrlRequired">URL is required.</string>
+	<string id="NameRequired">Name is required.</string>
+	<string id="AddressRequired">Address is required.</string>
+	<string id="InvalidEmail">Email address is not valid.</string>
+	<string id="DuplicatedName">Bookmark name is not unique.</string>
+	<string id="AccessChecksWarn">The content is not accessibility compliance. Would you like to correct it?</string>
+	<string id="AccessChecksEnforce">Please fill in the accessibility compliance field(s).</string>
+	<string id="Or">or</string>
+	<string id="InvalidUrl">Invalid Url is detected. Please correct your Url.</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

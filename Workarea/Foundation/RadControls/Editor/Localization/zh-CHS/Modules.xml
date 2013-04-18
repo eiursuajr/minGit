@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorXhtmlValidator">XHTML 验证</string>
+	<string id="RadEditorStatistics">统计</string>
+	<string id="RadEditorNodeInspector">属性检视窗</string>
+	<string id="RadEditorDomInspector">标签检测器</string>	
+	<string id="RadEditorHtmlInspector">HTML检视窗</string>
+	<string id="StatisticsWords">字:</string>
+	<string id="StatisticsCharacters">字元:</string>	
+	<string id="NodeInspectorSelectedElement">选择的元素是</string>	
+	<string id="NodeInspectorInvalidValue">无效的值。请输入数字。</string>	
+	<string id="className">类别名称</string>		
+	<string id="borderColor">边框颜色</string>	
+	<string id="bgColor">背景</string>	
+	<string id="width">宽度</string>
+	<string id="height">高度</string>
+	<string id="align">水平对齐</string>
+	<string id="vAlign">垂直对齐</string>
+	<string id="cellSpacing">间距</string>
+	<string id="cellPadding">内距</string>
+	<string id="border">边框宽度</string>
+	<string id="noWrap">不换行</string>
+	<string id="value">值</string>
+	<string id="id">ID</string>
+	<string id="name">名称</string>
+	<string id="href">网址</string>
+	<string id="title">标题</string>
+	<string id="target">目标</string>
+	<string id="alt">替代文字</string>
+	<string id="_blank">_blank</string>
+	<string id="_self">_self</string>
+	<string id="_parent">_parent</string>
+	<string id="_top">_top</string>
+	<string id="_search">_search</string>
+	<string id="_media">_media</string>
+	<string id="DomInspectorRemoveElement">移除元素</string>
+	<string id="NAME">名称</string>
+	<string id="action">动作</string>	
+	<string id="ValidateXHTML">验证 XHTML</string>
+	<string id="ExpandValidator">展开描述视窗</string>
+	<string id="Doctype">选择 Doctype</string>
+</localization>

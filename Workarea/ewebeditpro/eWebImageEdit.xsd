@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:simpleType name="localeRefType">
+		<xs:annotation>
+			<xs:documentation>References an element in localeNNNN.xml</xs:documentation>
+			<xs:documentation>W3C XML Schema 1.0 does not support inter-document keyref. Quote: "In version 1, the reference mechanisms defined by Schema are restricted to a single document." source: http://lists.w3.org/Archives/Public/www-xml-schema-comments/2000JulSep/0186.html</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NCName"/>
+	</xs:simpleType>
+	<xs:simpleType name="yesnoType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="true"/>
+			<xs:enumeration value="false"/>
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="1"/>
+			<xs:enumeration value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:attribute name="localeRef" type="localeRefType"/>
+	<xs:attribute name="enabled" type="yesnoType"/>
+	<xs:attribute name="visible" type="yesnoType"/>
+	<xs:attribute name="href" type="xs:anyURI"/>
+	<xs:simpleType name="nameType">
+		<xs:restriction base="xs:NCName"/>
+	</xs:simpleType>
+	<xs:attributeGroup name="nameKey">
+		<xs:attribute name="name" type="nameType" use="required"/>
+	</xs:attributeGroup>
+	<xs:simpleType name="buttonStyleType">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="default"/>
+			<xs:enumeration value="icon"/>
+			<xs:enumeration value="toggle"/>
+			<xs:enumeration value="list"/>
+			<xs:enumeration value="listbox"/>
+			<xs:enumeration value="edit"/>
+			<xs:enumeration value="text"/>
+			<xs:enumeration value="0"/>
+			<xs:enumeration value="1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="buttonType">
+		<xs:attribute name="command" type="nameType" use="required"/>
+		<xs:attribute name="popup" type="nameType"/>
+		<xs:attribute ref="visible"/>
+	</xs:complexType>
+	<xs:complexType name="captionType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="enabled"/>
+				<xs:attribute ref="localeRef"/>
+				<xs:attribute ref="visible"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="tooltiptextType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="enabled"/>
+				<xs:attribute ref="localeRef"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:complexType name="selectionsType">
+		<xs:sequence>
+			<xs:element name="listchoice" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="xs:string">
+							<xs:attribute name="command" type="xs:string"/>
+							<xs:attribute name="data" type="xs:string"/>
+							<xs:attribute name="default" type="yesnoType"/>
+							<xs:attribute name="delimited" type="xs:string"/>
+							<xs:attribute ref="enabled"/>
+							<xs:attribute ref="href"/>
+							<xs:attribute ref="localeRef"/>
+							<xs:attribute name="target" type="xs:string"/>
+							<xs:attribute name="value" type="xs:string"/>
+						</xs:extension>
+					</xs:simpleContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="bookmarks" type="yesnoType"/>
+		<xs:attribute ref="enabled"/>
+		<xs:attribute name="listtop" type="yesnoType"/>
+		<xs:attributeGroup ref="nameKey"/>
+		<xs:attribute name="sorted" type="yesnoType"/>
+		<xs:attribute ref="visible"/>
+	</xs:complexType>	
+	<xs:group name="commandGroup">
+		<xs:choice>
+			<xs:element name="cmd">
+				<xs:complexType>
+					<xs:attribute ref="enabled"/>
+					<xs:attribute name="key" type="internalIconKey"/>
+					<xs:attribute name="maxwidth" type="xs:nonNegativeInteger"/>
+					<xs:attributeGroup ref="nameKey"/>
+					<xs:attribute name="ref" type="localeRefType"/>
+					<xs:attribute name="src" type="xs:anyURI"/>
+					<xs:attribute name="style" type="buttonStyleType"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="command">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="image" minOccurs="0">
+							<xs:complexType>
+								<xs:attribute name="key" type="internalIconKey"/>
+								<xs:attribute name="src" type="xs:anyURI"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="caption" type="captionType" minOccurs="0"/>
+						<xs:element name="tooltiptext" type="tooltiptextType" minOccurs="0"/>
+						<xs:element name="selections" type="selectionsType" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute ref="enabled"/>
+					<xs:attribute name="maxwidth" type="xs:nonNegativeInteger"/>
+					<xs:attributeGroup ref="nameKey"/>
+					<xs:attribute name="style" type="buttonStyleType"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:choice>
+	</xs:group>
+	<xs:element name="imgfmt">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="image/gif"/>
+				<xs:enumeration value="image/jpg"/>
+				<xs:enumeration value="image/png"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="valformats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="imgfmt" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="valoutformats">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="imgfmt" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="imgcreate">
+		<xs:complexType>
+			<xs:attribute name="allow" type="xs:boolean" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="fmtchange">
+		<xs:complexType>
+			<xs:attribute name="allow" type="xs:boolean" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="namechange">
+		<xs:complexType>
+			<xs:attribute name="allow" type="xs:boolean" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<!--  ==========================================  -->
+	<!--  =============   Root Tag   ===============  -->
+	<!--  ==========================================  -->
+	<xs:element name="imgedit">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="interface">
+					<xs:complexType>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="menu">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="caption" type="captionType"/>
+										<xs:choice minOccurs="0" maxOccurs="unbounded">
+											<xs:element name="button" type="buttonType"/>
+											<xs:element name="bar"/>
+											<xs:element name="space"/>
+										</xs:choice>
+									</xs:sequence>
+									<xs:attribute ref="enabled"/>
+									<xs:attribute ref="localeRef"/>
+									<xs:attributeGroup ref="nameKey"/>
+									<xs:attribute name="newRow" type="yesnoType"/>
+									<xs:attribute name="showButtonsCaptions" type="yesnoType"/>
+									<xs:attribute name="style">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="icon"/>
+												<xs:enumeration value="pulldown"/>
+												<xs:enumeration value="tab"/>
+												<xs:enumeration value="status"/>
+												<xs:enumeration value="popup"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="textAlignment">
+										<xs:simpleType>
+											<xs:restriction base="xs:NMTOKEN">
+												<xs:enumeration value="bottom"/>
+												<xs:enumeration value="top"/>
+												<xs:enumeration value="left"/>
+												<xs:enumeration value="right"/>
+												<xs:enumeration value="center"/>
+												<xs:enumeration value="0"/>
+												<xs:enumeration value="1"/>
+												<xs:enumeration value="2"/>
+												<xs:enumeration value="3"/>
+												<xs:enumeration value="4"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:attribute>
+									<xs:attribute name="tooltips" type="yesnoType"/>
+									<xs:attribute ref="visible"/>
+									<xs:attribute name="wrap" type="yesnoType"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="button" type="buttonType"/>
+							<xs:element name="popup">
+								<xs:complexType>
+									<xs:choice minOccurs="0" maxOccurs="unbounded">
+										<xs:element name="button" type="buttonType"/>
+										<xs:element name="bar"/>
+										<xs:element name="space"/>
+									</xs:choice>
+									<xs:attribute ref="enabled"/>
+									<xs:attributeGroup ref="nameKey"/>
+									<xs:attribute ref="visible"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:attribute name="allowCustomize" type="yesnoType"/>
+						<xs:attribute name="context" type="yesnoType"/>
+						<xs:attribute ref="enabled"/>
+						<xs:attributeGroup ref="nameKey"/>
+						<xs:attribute ref="visible"/>
+					</xs:complexType>
+					<xs:key name="popupName">
+						<xs:selector xpath="popup"/>
+						<xs:field xpath="@name"/>
+					</xs:key>
+					<xs:keyref name="popupRef" refer="popupName">
+						<xs:selector xpath=".//button"/>
+						<xs:field xpath="@popup"/>
+					</xs:keyref>
+					<xs:keyref name="commandRef" refer="commandName">
+						<xs:selector xpath=".//button"/>
+						<xs:field xpath="@command"/>
+					</xs:keyref>
+				</xs:element>
+				<xs:element name="operations">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="valformats"/>
+							<xs:element ref="imgcreate"/>
+							<xs:element ref="fmtchange"/>
+							<xs:element ref="namechange"/>
+							<xs:group ref="commandGroup" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute ref="enabled"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<!-- Key must be defined at this level for the keyref in interface to access it -->
+		<xs:key name="commandName">
+			<xs:selector xpath=".//cmd|.//command"/>
+			<xs:field xpath="@name"/>
+		</xs:key>
+	</xs:element>
+	<xs:simpleType name="internalIconKey">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="_combo"/>
+			<xs:enumeration value="_editbox"/>
+			<xs:enumeration value="about"/>
+			<xs:enumeration value="abovetext"/>
+			<xs:enumeration value="absmode"/>
+			<xs:enumeration value="abspos"/>
+			<xs:enumeration value="additem"/>
+			<xs:enumeration value="alert"/>
+			<xs:enumeration value="annotation"/>
+			<xs:enumeration value="audio"/>
+			<xs:enumeration value="back"/>
+			<xs:enumeration value="backward"/>
+			<xs:enumeration value="balloon"/>
+			<xs:enumeration value="bar"/>
+			<xs:enumeration value="bbtn"/>
+			<xs:enumeration value="belowtext"/>
+			<xs:enumeration value="bgcolor"/>
+			<xs:enumeration value="blank"/>
+			<xs:enumeration value="blur"/>
+			<xs:enumeration value="bold"/>
+			<xs:enumeration value="bookmark"/>
+			<xs:enumeration value="books1"/>
+			<xs:enumeration value="books2"/>
+			<xs:enumeration value="books3"/>
+			<xs:enumeration value="borders"/>
+			<xs:enumeration value="borders2"/>
+			<xs:enumeration value="brightness"/>
+			<xs:enumeration value="browse"/>
+			<xs:enumeration value="bull"/>
+			<xs:enumeration value="bullets"/>
+			<xs:enumeration value="camera"/>
+			<xs:enumeration value="cellprop"/>
+			<xs:enumeration value="center"/>
+			<xs:enumeration value="charsmenu"/>
+			<xs:enumeration value="check1"/>
+			<xs:enumeration value="checkbox"/>
+			<xs:enumeration value="choice"/>
+			<xs:enumeration value="clean"/>
+			<xs:enumeration value="close"/>
+			<xs:enumeration value="colordepth"/>
+			<xs:enumeration value="comment"/>
+			<xs:enumeration value="contrast"/>
+			<xs:enumeration value="copy"/>
+			<xs:enumeration value="crop"/>
+			<xs:enumeration value="cut"/>
+			<xs:enumeration value="dagger"/>
+			<xs:enumeration value="ddagger"/>
+			<xs:enumeration value="default"/>
+			<xs:enumeration value="del"/>
+			<xs:enumeration value="delcell"/>
+			<xs:enumeration value="delcol"/>
+			<xs:enumeration value="delete"/>
+			<xs:enumeration value="delrow"/>
+			<xs:enumeration value="deselect"/>
+			<xs:enumeration value="details"/>
+			<xs:enumeration value="digitalcamera"/>
+			<xs:enumeration value="dimensions"/>
+			<xs:enumeration value="dnload"/>
+			<xs:enumeration value="droplist"/>
+			<xs:enumeration value="erase"/>
+			<xs:enumeration value="eraser"/>
+			<xs:enumeration value="euro"/>
+			<xs:enumeration value="eyeglasses"/>
+			<xs:enumeration value="eyeglasses1"/>
+			<xs:enumeration value="faceplain"/>
+			<xs:enumeration value="facesad"/>
+			<xs:enumeration value="facesmile"/>
+			<xs:enumeration value="fgcolor"/>
+			<xs:enumeration value="fileup"/>
+			<xs:enumeration value="find"/>
+			<xs:enumeration value="findnext"/>
+			<xs:enumeration value="floodfill"/>
+			<xs:enumeration value="floppy"/>
+			<xs:enumeration value="fnof"/>
+			<xs:enumeration value="fontcolor"/>
+			<xs:enumeration value="fontcolor2"/>
+			<xs:enumeration value="fontcolpal"/>
+			<xs:enumeration value="fontface"/>
+			<xs:enumeration value="fontsize"/>
+			<xs:enumeration value="form"/>
+			<xs:enumeration value="forward"/>
+			<xs:enumeration value="freehand"/>
+			<xs:enumeration value="front"/>
+			<xs:enumeration value="fullview"/>
+			<xs:enumeration value="glyphs"/>
+			<xs:enumeration value="hellip"/>
+			<xs:enumeration value="help"/>
+			<xs:enumeration value="helpwhat"/>
+			<xs:enumeration value="hiddenfld"/>
+			<xs:enumeration value="hiliter"/>
+			<xs:enumeration value="hiliter1"/>
+			<xs:enumeration value="hiliter2"/>
+			<xs:enumeration value="horizflip"/>
+			<xs:enumeration value="horzrule"/>
+			<xs:enumeration value="hyperlink"/>
+			<xs:enumeration value="image"/>
+			<xs:enumeration value="indentleft"/>
+			<xs:enumeration value="indentright"/>
+			<xs:enumeration value="info"/>
+			<xs:enumeration value="information"/>
+			<xs:enumeration value="ins"/>
+			<xs:enumeration value="inscell"/>
+			<xs:enumeration value="inscol"/>
+			<xs:enumeration value="insrow"/>
+			<xs:enumeration value="instable"/>
+			<xs:enumeration value="italic"/>
+			<xs:enumeration value="justify"/>
+			<xs:enumeration value="key"/>
+			<xs:enumeration value="ldquo"/>
+			<xs:enumeration value="ldquor"/>
+			<xs:enumeration value="left"/>
+			<xs:enumeration value="line"/>
+			<xs:enumeration value="link"/>
+			<xs:enumeration value="lock"/>
+			<xs:enumeration value="lsaquo"/>
+			<xs:enumeration value="lsquo"/>
+			<xs:enumeration value="lsquor"/>
+			<xs:enumeration value="ltrblock"/>
+			<xs:enumeration value="ltredit"/>
+			<xs:enumeration value="mail"/>
+			<xs:enumeration value="mdash"/>
+			<xs:enumeration value="mergecell"/>
+			<xs:enumeration value="msword"/>
+			<xs:enumeration value="ndash"/>
+			<xs:enumeration value="new"/>
+			<xs:enumeration value="newwin"/>
+			<xs:enumeration value="nojustify"/>
+			<xs:enumeration value="normalview"/>
+			<xs:enumeration value="note"/>
+			<xs:enumeration value="numbered"/>
+			<xs:enumeration value="oelig"/>
+			<xs:enumeration value="oeoelig"/>
+			<xs:enumeration value="one"/>
+			<xs:enumeration value="open"/>
+			<xs:enumeration value="optionbox"/>
+			<xs:enumeration value="oval"/>
+			<xs:enumeration value="page"/>
+			<xs:enumeration value="pagetag"/>
+			<xs:enumeration value="palette"/>
+			<xs:enumeration value="paperclip"/>
+			<xs:enumeration value="paste"/>
+			<xs:enumeration value="pastenew"/>
+			<xs:enumeration value="pastetext"/>
+			<xs:enumeration value="pencil"/>
+			<xs:enumeration value="pencil1"/>
+			<xs:enumeration value="pencil2"/>
+			<xs:enumeration value="permil"/>
+			<xs:enumeration value="picture"/>
+			<xs:enumeration value="plain"/>
+			<xs:enumeration value="polygon"/>
+			<xs:enumeration value="print"/>
+			<xs:enumeration value="properties"/>
+			<xs:enumeration value="pwdfld"/>
+			<xs:enumeration value="question"/>
+			<xs:enumeration value="rbtn"/>
+			<xs:enumeration value="rdquo"/>
+			<xs:enumeration value="rectangle"/>
+			<xs:enumeration value="redo"/>
+			<xs:enumeration value="removelink"/>
+			<xs:enumeration value="removestyle"/>
+			<xs:enumeration value="right"/>
+			<xs:enumeration value="rotate"/>
+			<xs:enumeration value="rsaquo"/>
+			<xs:enumeration value="rsquo"/>
+			<xs:enumeration value="rtlblock"/>
+			<xs:enumeration value="rtledit"/>
+			<xs:enumeration value="save"/>
+			<xs:enumeration value="saveall"/>
+			<xs:enumeration value="saveas"/>
+			<xs:enumeration value="sbtn"/>
+			<xs:enumeration value="scaron"/>
+			<xs:enumeration value="select"/>
+			<xs:enumeration value="selectall"/>
+			<xs:enumeration value="selectnone"/>
+			<xs:enumeration value="setup"/>
+			<xs:enumeration value="sharpen"/>
+			<xs:enumeration value="snapgrid"/>
+			<xs:enumeration value="space"/>
+			<xs:enumeration value="spellayt"/>
+			<xs:enumeration value="spellcheck"/>
+			<xs:enumeration value="splitcell"/>
+			<xs:enumeration value="spraycan"/>
+			<xs:enumeration value="sscaron"/>
+			<xs:enumeration value="strikethrough"/>
+			<xs:enumeration value="subscript"/>
+			<xs:enumeration value="superscript"/>
+			<xs:enumeration value="table"/>
+			<xs:enumeration value="tablemenu"/>
+			<xs:enumeration value="tableprop"/>
+			<xs:enumeration value="text"/>
+			<xs:enumeration value="textbox"/>
+			<xs:enumeration value="textfld"/>
+			<xs:enumeration value="three"/>
+			<xs:enumeration value="thumbnail"/>
+			<xs:enumeration value="timer"/>
+			<xs:enumeration value="trade"/>
+			<xs:enumeration value="twain"/>
+			<xs:enumeration value="two"/>
+			<xs:enumeration value="underline"/>
+			<xs:enumeration value="undo"/>
+			<xs:enumeration value="up1lvl"/>
+			<xs:enumeration value="update"/>
+			<xs:enumeration value="upload"/>
+			<xs:enumeration value="vertflip"/>
+			<xs:enumeration value="vidcam"/>
+			<xs:enumeration value="viewprop"/>
+			<xs:enumeration value="wand"/>
+			<xs:enumeration value="warning"/>
+			<xs:enumeration value="world"/>
+			<xs:enumeration value="world2"/>
+			<xs:enumeration value="yyuml"/>
+			<xs:enumeration value="zcaron"/>
+			<xs:enumeration value="zoomin"/>
+			<xs:enumeration value="zoomout"/>
+			<xs:enumeration value="zordermenu"/>
+			<xs:enumeration value="zzcaron"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

@@ -1,0 +1,16 @@
+
+Some languages such as Arabic, Czech, Polish, Russian and Hebrew do not support phonetic spellchecking. That's why in order to use them you should configure the spellchecker to use its EditDistanceProvider, e.g.
+
+C#:
+====================================================
+RadSpell spell = (RadSpell) RadEditor1.RadSpell;
+spell.SpellCheckProvider = SpellCheckProvider.EditDistanceProvider;
+spell.DictionaryLanguage = "ar-AR";
+====================================================
+
+VB.NET:
+====================================================
+Dim spell As RadSpell = CType(RadEditor1.RadSpell, RadSpell)
+spell.SpellCheckProvider = SpellCheckProvider.EditDistanceProvider
+spell.DictionaryLanguage = "ar-AR"
+====================================================

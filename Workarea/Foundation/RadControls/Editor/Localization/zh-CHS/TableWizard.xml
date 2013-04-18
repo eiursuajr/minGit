@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">表格设定</string>
+	<string id="Tab1HeaderText">表格设计</string>
+	<string id="Tab2HeaderText">表格属性</string>
+	<string id="Tab3HeaderText">存贮格属性</string>
+	<string id="Layout">设计</string>
+	<string id="Alignment">对齐:</string>
+	<string id="Columns">栏</string>
+	<string id="ColumnSpan">合并栏</string>
+	<string id="Rows">列</string>
+	<string id="RowSpan">合并列</string>
+	<string id="CellSpacing">间距:</string>
+	<string id="Cell Padding">内距:</string>
+	<string id="Border">边框</string>
+	<string id="Size">大小:</string>
+	<string id="Frame">页框:</string>
+	<string id="Dimensions">尺寸</string>
+	<string id="Height">高度:</string>
+	<string id="Width">宽度:</string>
+	<string id="ContentAlignment">内容对齐</string>
+	<string id="Horizontal">水平:</string>
+	<string id="Left">靠左对齐</string>
+	<string id="Center">置中对齐</string>
+	<string id="Right">靠右对齐</string>
+	<string id="Vertical">垂直:</string>
+	<string id="Middle">置中对齐</string>
+	<string id="Top">靠上对齐</string>
+	<string id="Bottom">靠下对齐</string>
+	<string id="Baseline">靠文字底部对齐</string>
+	<string id="Background">背景影像</string>
+	<string id="UseColor">背景颜色:</string>
+	<string id="Black">黑色</string>
+	<string id="Blue">蓝色</string>
+	<string id="Green">绿色</string>
+	<string id="Orange">橘色</string>
+	<string id="Red">红色</string>
+	<string id="White">白色</string>
+	<string id="Yellow">黄色</string>
+	<string id="Custom">订制</string>
+	<string id="Customh">订制- </string>
+	<string id="PromptColor">请输入 custom color HEX 值:</string>
+	<string id="Additional">其他</string>
+	<string id="Content">内容:</string>
+	<string id="NoWrapping">不换行</string>
+	<string id="Tab4HeaderText">协助工具</string>	
+	<string id="Sec508HeadingRows">表头列:</string>
+	<string id="Sec508HeadingCols">表头栏:</string>
+	<string id="Sec508Summary">摘要:</string>
+	<string id="Sec508Caption">标题:</string>
+	<string id="Sec508CaptionAlign">标题对齐:</string>
+	<string id="Sec508AssocCellHeaders">合并表头存贮格</string>
+	<string id="TableBorderControlSizeOverflow">您所设定之边框大小超过最大值(1000)。它将被设成 1000。</string>
+	<string id="AddCustomColor">新增 Custom Color...</string>
+	<string id="AddHexColor">新增 Hex Color...</string>
+	<string id="InvalidTableWidth">无效的表格宽度。</string>
+	<string id="InvalidTableHeight">无效的表格高度。</string>
+	<string id="InvalidCellWidth">无效的存贮格宽度。</string>
+	<string id="InvalidCellHeight">无效的存贮格高度。</string>
+	
+	<string id="Allsides">外框线</string>
+	<string id="Rules">内框线</string>
+	<string id="Nosides">无</string>
+	<string id="Norules">无内框线</string>
+	<string id="Lefthand">左框线</string>
+	<string id="Betweencolumns">垂直框线</string>
+	<string id="Righthand">右框线</string>
+	<string id="Rightleft">左和右框线</string>
+	
+	<string id="Topbottom">上和下框线</string>	
+	<string id="Topside">上框线</string>
+	<string id="Betweenrows">水平框线</string>
+	<string id="Bottomside">下框线</string>					
+	
+	<string id="Betweenall">所有列与栏之间</string>
+	<string id="Betweengroup">列与栏群组之间</string>				
+</localization>

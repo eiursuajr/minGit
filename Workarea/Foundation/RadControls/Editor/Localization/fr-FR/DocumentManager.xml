@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+  <string id="Title">Gestionnaire de documents</string>
+  <string id="ConfirmDelete">Êtes-vous sûr de vouloir supprimer le fichier sélectionné\nLe fichier document sélectionné est peut-être en cours d'utilisation. La suppression peut faire en sorte que certaines pages ne soient pas affichées correctement.\nActivez le bouton \"OK\" pour confirmer la suppression.</string>
+  <string id="Alertfile">Vous devez sélectionner un fichier pour le téléchargement !</string>
+  <string id="Alertvalid">Vous devez sélectionner un fichier valide pour le téléchargement !</string>
+  <string id="Alertexists">Un fichier identique existe déjà dans ce dossier !</string>
+  <string id="MessageNothingPost">Vous devez sélectionner un fichier !</string>
+  <string id="MessageValid">Vous devez sélectionner un fichier valide !</string>
+  <string id="MessageSize">Le fichier sélectionné dépasse la taille maximale permise !</string>
+  <string id="Tab1HeaderText">Propriétés du document</string>
+  <string id="Tab2HeaderText">Téléchargement</string>
+  <string id="DocumentDirectory">Dossier du document :</string>
+  <string id="DocumentFile">Fichier :</string>
+  <string id="Tooltip">Infobulle :</string>
+  <string id="Target">Cible :</string>
+  <string id="SelectDirectory">Sélection de dossier</string>
+  <string id="Note">Note :</string>
+  <string id="ShowProperties">Afficher le panneau des propriétés</string>
+  <string id="ChooseFileToInsert">Veuillez choisir un fichier à insérer</string>
+  <string id="NoDocumentSelectedToInsert">Veuillez choisir un document à insérer !</string>
+</localization>

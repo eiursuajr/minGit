@@ -1,0 +1,6 @@
+﻿body {margin: 0; padding: 0;}
+
+#txtTitleBar {display: none;}
+
+body div.ektronPageHeader {height: 22px;}
+/*body div.ektronPageContainer {top: 22px !important;}*/

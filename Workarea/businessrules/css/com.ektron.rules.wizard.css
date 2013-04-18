@@ -1,0 +1,104 @@
+/*************************
+/* 
+/* rule set editor styles
+/* 
+ */ 
+
+.ruleset
+{
+	border: solid 1px #cdcdcd;
+	background: #fff;
+	padding: .5em;
+}
+
+.ruleEditorItem, .ruleEditorItemSelected
+{
+	padding: 3px;
+	cursor: default;
+	background: #fff;
+	color: #000;
+}
+
+.ruleEditorItemSelected
+{
+	background: #FFD492;
+	color: #363636;
+	border: 1px solid #EB9855
+}
+
+.ruleEditorItemName
+{
+	margin-left: 5px;
+}
+
+.rulesetButtonBar
+{
+	margin-bottom: 10px;
+}
+
+.rulesetButtonItem
+{
+	margin: 5px;
+}
+
+/*************************
+/* 
+/* rule editor styles
+/* 
+ */ 
+
+.stepLabel
+{
+	margin-bottom: 5px; 
+	font-weight:bold;
+}
+
+.matchLabel
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#conditionContainer, #actiontrueContainer, #actionfalseContainer
+{
+	height: 110px;
+	overflow:auto;
+	background: #fff;
+	border: 1px solid #d4d4d4;
+	padding: .25em;
+	margin: .25em;
+}
+
+.wizardStep .conditionTemplate {display:block;}
+
+.dataInputText, .dataInputTextSelected
+{
+	color: #1b4a94;
+	text-decoration: underline;
+	cursor: default;
+}
+
+.dataInputTextSelected
+{
+	background: #eee;
+}
+
+#dataBox
+{
+	display  : none;
+	position: fixed;
+	z-index: 200;
+	border: solid 1px #b9b9b9;
+	background: #eeeef0;
+	padding: 1em;
+	margin: .5em;
+	-moz-box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	-webkit-box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	box-shadow: 3px 3px 5px rgba(0,0,0,.25);
+	/* For IE 8 */
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000000')";
+	/* For IE 5.5 - 7 */
+	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000000');
+}
+
+#dataBox input {margin-bottom: .5em;}

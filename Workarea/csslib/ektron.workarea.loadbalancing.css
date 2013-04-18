@@ -1,0 +1,5 @@
+﻿.description {color:#666666;}
+.action {vertical-align: middle !important; text-align: center !important;}
+.statusTable { margin: 0px !important; }
+.statusTable td {padding-left: 5px; padding-right: 5px; font-family: Trebuchet MS,Tahoma,Verdana,Arial,sans-serif !important; }
+.statusTable td.time { color: #a0a0a0; vertical-align: middle; font-size: 11px;}

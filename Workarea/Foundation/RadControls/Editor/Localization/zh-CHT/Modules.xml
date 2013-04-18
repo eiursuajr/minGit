@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<localization>
+	<string id="RadEditorXhtmlValidator">XHTML 驗證</string>
+	<string id="RadEditorStatistics">統計</string>
+	<string id="RadEditorNodeInspector">屬性檢視窗</string>
+	<string id="RadEditorDomInspector">標籤檢測器</string>	
+	<string id="RadEditorHtmlInspector">HTML檢視窗</string>
+	<string id="StatisticsWords">字:</string>
+	<string id="StatisticsCharacters">字元:</string>	
+	<string id="NodeInspectorSelectedElement">選擇的元素是</string>	
+	<string id="NodeInspectorInvalidValue">無效的值。請輸入數字。</string>	
+	<string id="className">類別名稱</string>		
+	<string id="borderColor">邊框顏色</string>	
+	<string id="bgColor">背景</string>	
+	<string id="width">寬度</string>
+	<string id="height">高度</string>
+	<string id="align">水平對齊</string>
+	<string id="vAlign">垂直對齊</string>
+	<string id="cellSpacing">間距</string>
+	<string id="cellPadding">內距</string>
+	<string id="border">邊框寬度</string>
+	<string id="noWrap">不換行</string>
+	<string id="value">值</string>
+	<string id="id">ID</string>
+	<string id="name">名稱</string>
+	<string id="href">網址</string>
+	<string id="title">標題</string>
+	<string id="target">目標</string>
+	<string id="alt">替代文字</string>
+	<string id="_blank">_blank</string>
+	<string id="_self">_self</string>
+	<string id="_parent">_parent</string>
+	<string id="_top">_top</string>
+	<string id="_search">_search</string>
+	<string id="_media">_media</string>
+	<string id="DomInspectorRemoveElement">移除元素</string>
+	<string id="NAME">名稱</string>
+	<string id="action">動作</string>	
+	<string id="ValidateXHTML">驗證 XHTML</string>
+	<string id="ExpandValidator">展開描述視窗</string>
+	<string id="Doctype">選擇 Doctype</string>
+</localization>

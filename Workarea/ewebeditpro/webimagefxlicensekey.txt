@@ -1,0 +1,14 @@
+// Copyright 2000-2003, Ektron, Inc.
+// Revision Date: 2003-July-10
+
+/*
+	Specify license keys in WifxLicenseKeys (separated by commas)
+	For example, "www.mydomain.com?12401241247124, staging.server.com?12409812412"
+*/
+
+var WifxLicenseKeys = "Please insert a license key in webimagefxlicensekey.txt.";
+
+if ("function" == typeof RegisterLicense)
+{
+	RegisterLicense(WifxLicenseKeys);
+}

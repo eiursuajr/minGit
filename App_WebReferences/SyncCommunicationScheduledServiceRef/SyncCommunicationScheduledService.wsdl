@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:i0="http://ektron.com/synccommunicationservice" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="SyncCommunicationScheduledService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://ektron.com/synccommunicationservice" location="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc?wsdl=wsdl0" />
+  <wsdl:types />
+  <wsdl:binding name="httpSyncCommunicationScheduleServiceEndPoint" type="i0:SyncCommunicationSchedule">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Synchronize">
+      <soap:operation soapAction="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/Synchronize" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeFile">
+      <soap:operation soapAction="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrentSyncStatus">
+      <soap:operation soapAction="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/GetCurrentSyncStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsSyncInProgress">
+      <soap:operation soapAction="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/IsSyncInProgress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeContent">
+      <soap:operation soapAction="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeContent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeFolder">
+      <soap:operation soapAction="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeFolder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SynchronizeMultiSite">
+      <soap:operation soapAction="http://ektron.com/synccommunicationservice/SyncCommunicationSchedule/SynchronizeMultiSite" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SyncCommunicationScheduledService">
+    <wsdl:port name="httpSyncCommunicationScheduleServiceEndPoint" binding="tns:httpSyncCommunicationScheduleServiceEndPoint">
+      <soap:address location="http://localhost:8732/Ektron.Sync.Communication/SyncCommunicationScheduleService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

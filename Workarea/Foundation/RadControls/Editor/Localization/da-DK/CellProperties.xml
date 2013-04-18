@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+  <string id="Tab1HeaderText">Celle egenskaber</string>
+  <string id="Dimensions">Dimensioner</string>
+  <string id="Height">Højde:</string>
+  <string id="Width">Bredde:</string>
+  <string id="ContentAlignment">Justering af indhold</string>
+  <string id="Horizontal">Horisontalt:</string>
+  <string id="Left">Venstre</string>
+  <string id="Center">Center</string>
+  <string id="Right">Højre</string>
+  <string id="Vertical">Vertikalt:</string>
+  <string id="Middle">Midte</string>
+  <string id="Top">Top</string>
+  <string id="Bottom">Bund</string>
+  <string id="Baseline">Baseline</string>
+  <string id="Background">Baggrund</string>
+  <string id="UseColor">Brug farve:</string>
+  <string id="Black">Sort</string>
+  <string id="Blue">Blå</string>
+  <string id="Green">Grøn</string>
+  <string id="Orange">Orange</string>
+  <string id="Red">Rød</string>
+  <string id="White">Hvid</string>
+  <string id="Yellow">Gul</string>
+  <string id="Custom">Brugerdefineret</string>
+  <string id="Customh">Brugerdefineret - </string>
+  <string id="Update">Opdater</string>
+	<string id="Cancel">Annullér</string>
+	<string id="Additional">Additional</string>
+	<string id="NoWrapping">No Wrapping</string>
+  <string id="CellCss">CSS klasse for celle</string>
+  <string id="CssClass">CSS klasse:</string>
+	<string id="Style">Style:</string>
+  <string id="MessageStyle">Indtast venligst en gyldig style attribut.</string>
+  <string id="PromptColor">Indtast venligst HEX-værdien for den brugerdefinerede farve:</string>
+  <string id="AddCustomColor">Tilføj brugerdefineret farve...</string>
+  <string id="AddHexColor">Tilføj HEX farve...</string>
+	<string id="BackgroundImage">Baggrund billede</string>
+	<string id="ClearStyle">Fjern Style/Class</string>
+</localization>

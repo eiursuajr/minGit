@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Dokumenthåndtering</string>
+	<string id="ConfirmDelete">Er du sikker på at du vil slette det valgte dokumentet?\nDet valgte dokumentet kan være i bruk. Dersom det slettes kan det hende at noen sider ikke vises slik de skal.\nTrykk \"OK\" for å bekrefte.</string>
+	<string id="Alertfile">Vennligst velg et dokument!</string>
+	<string id="Alertvalid">Vennligst velg et gyldig dokument format!</string>
+	<string id="Alertexists">Det finnes allerede et dokument med samme navn i denne mappen!</string>
+	<string id="MessageNothingPost">Vennligst velg et dokument!</string>
+	<string id="MessageValid">Vennligst velg et gyldig dokument!</string>
+	<string id="MessageSize">Det er ikke tillatt å laste opp et så stort dokument!</string>
+	<string id="Tab1HeaderText">Bla gjennom</string>
+	<string id="Tab2HeaderText">Last opp dokument</string>
+	<string id="DocumentDirectory">Dokumentmappe:</string>
+	<string id="DocumentFile">Filer:</string>
+	<string id="Tooltip">Tooltip:</string>
+	<string id="Target">Target:</string>
+	<string id="Note">Kommentar:</string>
+	<string id="SelectDirectory">Velg mappe</string>
+	<string id="ShowProperties">Vis egenskaper</string>
+	<string id="ChooseFileToInsert">Vennligst velg et dokument du vil sette inn</string>
+  <string id="NoDocumentSelectedToInsert">Vennligst velg et dokument du vil sette inn!</string>
+</localization>

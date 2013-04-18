@@ -1,0 +1,12 @@
+div.EktronCommerceItems a.button {color:#565656 !important;}
+div.EktronCommerceItems a.button:hover {text-decoration:none !important;color:#565656 !important;}
+
+/* default view */
+div.EktronCommerceItems div.itemWrapper li {line-height:20px;}
+div.EktronCommerceItems div.itemWrapper li.defaultViewItem {margin-top:-3px;cursor:move;}
+div.EktronCommerceItems div.itemWrapper li.defaultViewItem span.delete {position:relative;margin-top:1px;}
+
+/* item selector modal */
+div.itemsTabModal h3.itemsModalHeader {font-size:1.2em;}
+div.itemsTabModal a.button {color:#565656 !important;}
+div.itemsTabModal a.button:hover {text-decoration:none !important;color:#565656 !important;}

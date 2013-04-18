@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Cel eigenschappen</string>
+	<string id="Tab1HeaderText">Cel eigenschappen</string>
+	<string id="Dimensions">Dimensies</string>
+	<string id="Height">Hoogte:</string>
+	<string id="Width">Breedte:</string>
+	<string id="ContentAlignment">Uitlijning inhoud</string>
+	<string id="Horizontal">Horizontaal:</string>
+	<string id="Left">Links</string>
+	<string id="Center">Centreren</string>
+	<string id="Right">Rechts</string>
+	<string id="Vertical">Verticaal:</string>
+	<string id="Middle">Midden</string>
+	<string id="Top">Top</string>
+	<string id="Bottom">Bodem</string>
+	<string id="Baseline">Baseline</string>
+	<string id="Background">Achtergrond</string>
+	<string id="UseColor">Gebruik kleur:</string>
+	<string id="Black">Zwart</string>
+	<string id="Blue">Blauw</string>
+	<string id="Green">Groen</string>
+	<string id="Orange">Oranje</string>
+	<string id="Red">Rood</string>
+	<string id="White">Wit</string>
+	<string id="Yellow">Geel</string>
+	<string id="Custom">Aangepast</string>
+	<string id="Customh">Aangepast - </string>
+	<string id="Update">Toepassen</string>
+	<string id="Cancel">Annuleren</string>
+	<string id="Additional">Additioneel</string>
+	<string id="NoWrapping">Geen Wrapping</string>
+	<string id="CellCss">Cel CSS</string>
+	<string id="CssClass">CSS klasse:</string>
+	<string id="Style">Stijl:</string>
+	<string id="MessageStyle">Geef aub een geldige stijl attribuut waarde op.</string>
+	<string id="PromptColor">Geen een hex kleurcode op:</string>
+	<string id="AddCustomColor">Voeg een kleur toe...</string>
+	<string id="AddHexColor">Voeg een kleur toe...</string>
+	<string id="BackgroundImage">Achtergrond afbeelding</string>
+	<string id="ClearStyle">Geen klasse</string>
+</localization>

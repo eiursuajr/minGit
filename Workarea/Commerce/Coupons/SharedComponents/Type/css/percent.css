@@ -1,0 +1,14 @@
+/* general styles */
+div.percent span.help {position:relative;top:2px;}
+
+/* percent row */
+div.percent table tbody tr.percent td input.hundreds {text-align:right;width:3em;margin-left:1em;}
+div.percent table tbody tr.percent td input.hundredths {width:2em;}
+
+/* max amount row */
+div.percent table tbody tr.maxAmount td input.dollars {text-align:right;width:3em;}
+div.percent table tbody tr.maxAmount td input.cents {width:2em;}
+div.percent table tbody tr.maxAmount td div.maxAmountMessage {margin:1em;display:none;}
+div.percent table tbody tr.maxAmount td div.maxAmountMessage ul {list-style-type:disc;margin:.5em 1em .5em 2em;}
+div.percent table tbody tr.maxAmount td div.maxAmountMessage ul li {line-height:1.5}
+div.percent table tbody tr.maxAmount td div.maxAmountMessage ul li span.calculation {font-weight:bold;font-style:italic;padding:0em .25em;background-color:#ffffcc;}

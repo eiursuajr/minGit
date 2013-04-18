@@ -1,0 +1,12 @@
+﻿#EkLeftPanel
+{
+	float:left;
+}
+
+#EkMainPanel
+{
+	float:left;
+	border-left: solid 1px silver;
+	margin-top:5px;
+	margin-left:5px;
+}

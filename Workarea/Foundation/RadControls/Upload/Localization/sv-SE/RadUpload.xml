@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Add">Lägga till</string>
+	<string id="Delete">Ta bort</string>
+	<string id="Select">Välj</string>
+	<string id="Remove">Radera</string>
+	<string id="Clear">Rensa</string>
+</localization>

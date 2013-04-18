@@ -1,0 +1,123 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- Copyright 2001 Ektron, Inc. -->
+<!-- Revision Date: 2001-05-16 -->
+<html>
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=gb2312">
+    <script language="JavaScript1.2" src="parseinstallparams.js"></script>
+	<title>安装 eWebEditPro with WebImageFX</title>
+</head>
+
+<style>
+P { font-size : small; font-family : verdana, helvetica; }
+H1 { font-family : verdana, helvetica; }
+H2 { font-family : verdana, helvetica; }
+A { font-family : verdana, helvetica; }
+BODY { font-size : small; }
+</style>
+
+<body>
+
+<script language="JavaScript1.2">
+function ExecuteInstall()
+{
+    var strLoadPath = "installnowzh.htm";
+    var strAddChar = "?";
+	
+    strPageLoad = strLoadPath;
+    
+    // We should set up an array and loop through it.
+    // But for now, it is left as an excersize for the critic.
+    
+    // This is an override for specifying the above values as 
+    // command line parameters.
+    // See clientinstall/parseinstallparams.js for how to set these values.
+	if("undefined" != typeof given_eWebEditProPath)
+    {
+        if(given_eWebEditProPath.length > 0)
+        {
+            // "?" + "instewep=" + escape(strInstEwep)
+            strPageLoad += strAddChar;
+            strPageLoad += "instewep=";
+            strPageLoad += given_eWebEditProPath;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_LicenseKeys)
+    {
+       if(given_LicenseKeys.length > 0)
+        {
+            // "&" + "licnewep=" + escape(strLicnEwep)
+            strPageLoad += strAddChar;
+            strPageLoad += "licnewep=";
+            strPageLoad += given_LicenseKeys;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_WebImageFXPath)
+    {
+        if(given_WebImageFXPath.length > 0)
+        {
+            // "&" + "instwifx=" + escape(strInstWifx)
+            strPageLoad += strAddChar;
+            strPageLoad += "instwifx=";
+            strPageLoad += given_WebImageFXPath;
+            
+            strAddChar = "&";  // every other is an amp.
+        }
+    }
+    if("undefined" != typeof given_WifxLicenseKeys)
+    {
+       if(given_WifxLicenseKeys.length > 0)
+        {
+            // "&" + "licnwifx=" + escape(strLicnWifx)
+            strPageLoad += strAddChar;
+            strPageLoad += "licnwifx=";
+            strPageLoad += given_WifxLicenseKeys;
+            
+            strAddChar = "&";  // If we add any after this.
+        }
+    }  
+    
+	location.href = strPageLoad;
+}
+</script>
+
+<blockquote><blockquote>
+<p align="center"><h2 align="center">
+eWebEditPro with WebImageFX <br>自动<br>下载和安装
+</h2></p>
+<p>您试图查看的网页包含 Ektron 的 eWebEditPro with WebImageFX 编辑器。它将出现在您的浏览器内。它使您为网页输入内容如同使用文字处理器一样轻松。</p>
+<p>在您能够使用 eWebEditPro with WebImageFX 之前，首先必须将其下载到您的浏览器内。当您单击此网页底部的<b>现在安装</b>按钮时，eWebEditPro with WebImageFX 将会自动下载和安装。此过程可能需要几分钟，取决于您网络连接的速度。一旦下载完成，eWebEditPro with WebImageFX 将<i>不必再下载</i>，除非要升级到新的版本。</p>
+<p>您必须拥有在您的计算机上安装程序的授权。</p>
+<p>类似于如下显示的画面可能会出现。第一个画面来自于 <a href="http://www.ektron.com" target="_blank">Ektron</a>。其他画面，如果出现的话，来自于 <a href="http://www.microsoft.com" target="_blank">Microsoft</a>。如果它们确实出现，请单击“是” 继续。</p>
+<p align="center">
+<img src="verisign2.gif" alt="提示下载 ActiveX 控件" width=331 height=242>
+</p>
+<p>检查您的 Internet Explorer 安全设置。安全级别必须设置为 “中” 或 “低” 以允许下载和运行 ActiveX 控件。从 “工具” 菜单中，选择 “Internet 选项” 并单击 “安全” 选项卡。</p>
+<p align="center">
+<img src="ieoptions2zh.gif" alt="Internet 安全选项" width=326 height=334>
+</p>
+<p>根据您的安全设置，您可能还会遇到如下所示的提示问题。每次都单击 “是”。</p>
+<blockquote>
+<p><font size=-1>您要允许运行诸如 ActiveX 控件和插件这样的软件吗？</font></p>
+<p><font size=-1>一个脚本正在访问此网页上的某一软件 (一个 ActiveX 控件)，该网页已标记为对脚本运行是安全的。<br>您是否允许如此？</font></p>
+</blockquote>
+<br><br>
+<p>单击<b>现在安装</b>以继续，或者如果您不要安装 eWebEditPro with WebImageFX，则请单击<b>取消</b>。</p>
+</blockquote></blockquote>
+
+<p align="center">
+<form>
+<input type=button value="现在安装" onclick="ExecuteInstall()">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type=button value="取消" onclick="self.close()">
+</form>
+<a href="http://www.ektron.com/ewebeditpro" target="_blank"><font size=1>关于 Ektron 的 eWebEditPro 的更多信息</font></a>
+</br>
+<a href="http://www.ektron.com/webimagefx.cfm" target="_blank"><font size=1>关于 Ektron 的 WebImageFX 的更多信息</font></a>
+</p>
+
+</body>
+</html>

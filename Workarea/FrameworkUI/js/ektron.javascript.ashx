@@ -1,0 +1,84 @@
+<%@ WebHandler Language="C#" Class="ektronJs" %>
+
+using System;
+using System.Web;
+using System.Web.Configuration;
+using System.Text;
+using System.Globalization;
+using System.IO;
+using Ektron.Cms.Framework.UI;
+
+public class ektronJs : IHttpHandler {
+    
+    public void ProcessRequest (HttpContext context) 
+    {
+        bool canUseClientCache = false;
+        bool isCallback = false;
+        
+        try
+        {
+            string idParam = HttpUtility.UrlDecode(HttpContext.Current.Request.QueryString["id"]);
+            string[] ids = idParam.Split(new char[] { ' ' });
+            isCallback = Boolean.TryParse(HttpContext.Current.Request.QueryString["callback"], out isCallback);
+
+            DateTime lastUpdate;
+            DateTime.TryParse(context.Request.Headers.Get("If-Modified-Since"), new CultureInfo("en-US"), System.Globalization.DateTimeStyles.None, out lastUpdate);
+
+            foreach (string id in ids)
+            {
+                //get file data from cache (if possible)
+                RegistrationItem item = RegisterUtilities.GetRegistrationItem(id);
+
+                //ensure cache has not been invalidated
+                if (item == null)
+                {
+                    System.Web.UI.Control control = new System.Web.UI.Control();
+                    control.ID = "EktronJSAshx";
+                    item = RegisterUtilities.RebuildRegistration(control, id, RegisterUtilities.MinificationFormat.Js);
+                }
+
+                //if item exists and has contents, process it
+                if (item != null && !String.IsNullOrEmpty(item.Contents))
+                {
+                    //if cache date is later than last update, invalidate client cache
+                    canUseClientCache = item.ReadDateTime.CompareTo(lastUpdate) > 0 ? false : true;
+
+                    //add js
+                    context.Response.Write(item.Contents);
+                    context.Response.Write(Environment.NewLine);
+                
+                    //if callback add to ektron client manager
+                    if (isCallback)
+                    {
+                        context.Response.Write(@"Ektron.ClientManager.add({""id"":""" + id + @""", ""path"":"""", ""mode"":""callback""});");
+                        context.Response.Write(Environment.NewLine + Environment.NewLine);
+                    }
+                }
+            }
+        }
+        catch 
+        {
+            //fail quietly 
+        }
+        finally
+        {
+            //set header info
+            context.Response.ContentType = "application/x-javascript";
+            context.Response.ContentEncoding = Encoding.UTF8;
+            context.Response.Cache.SetCacheability(HttpCacheability.Public);
+            context.Response.Cache.SetExpires(DateTime.Now.AddDays(365));
+            context.Response.Cache.SetMaxAge(new TimeSpan(365, 0, 0, 0, 0));
+            context.Response.Cache.SetLastModified(DateTime.Now);
+
+            //if using client cache, set status code and suppress content
+            context.Response.StatusCode = canUseClientCache ? 304 : 200;
+            context.Response.SuppressContent = canUseClientCache ? true : false;
+        }
+    }
+    
+    public bool IsReusable {
+        get {
+            return false;
+        }
+    }
+}

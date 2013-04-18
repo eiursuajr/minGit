@@ -1,0 +1,9 @@
+﻿#DistributionWizardFolderSelection {border: solid 1px #333333; height: 352px; overflow: scroll;}
+#DistributionWizardFolderSelection ul { list-style-type: none; padding-left: 5px; margin-left: 10px; }
+#DistributionWizardFolderSelection ul li a { font-size: 12px; color:#000000; text-decoration: none; }
+#DistributionWizardFolderSelection ul li a:hover { text-decoration: underline; }
+a.DistributionWizardFolderSelectionSelectedFolder { background-color: #0000FF; color: #ffffff !important; }
+ul li { white-space: nowrap; font-size: 12px; }
+ul li a { font-size: 12px; color: #000000; white-space:nowrap; }
+ul li a img { padding-right: 4px; }
+ul li img { padding-right: 4px; }

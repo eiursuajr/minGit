@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:simpleType name="localeRefType">
+		<xs:annotation>
+			<xs:documentation>References an element in DataListSpec.resx, or ValidateSpec.resx, etc.</xs:documentation>
+			<xs:documentation>W3C XML Schema 1.0 does not support inter-document keyref. Quote: "In version 1, the reference mechanisms defined by Schema are restricted to a single document." source: http://lists.w3.org/Archives/Public/www-xml-schema-comments/2000JulSep/0186.html</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NCName"/>
+	</xs:simpleType>
+	<!-- global attribute definitions -->
+	<xs:attribute name="localeRef" type="localeRefType"/>
+	<xs:attribute name="enabled" type="xs:boolean"/>
+	<xs:attribute name="visible" type="xs:boolean"/>
+	<xs:attribute name="href" type="URLType"/>
+	<xs:attribute name="src" type="URLType"/>
+	<xs:simpleType name="URLType">
+		<xs:union memberTypes="xs:anyURI">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="(\[\w+\].*)|(.{0})"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:union>
+	</xs:simpleType>
+	<xs:simpleType name="nameType">
+		<xs:restriction base="xs:NCName"/>
+	</xs:simpleType>
+	<xs:attributeGroup name="nameKey">
+		<xs:attribute name="name" type="nameType" use="required"/>
+	</xs:attributeGroup>
+
+	<xs:simpleType name="treeviewImageKey">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="calculation"/>
+			<xs:enumeration value="calendar"/>
+			<xs:enumeration value="checkbox"/>
+			<xs:enumeration value="droplist"/>
+			<xs:enumeration value="fieldset"/>
+			<xs:enumeration value="hidden"/>
+			<xs:enumeration value="hyperlink"/>
+			<xs:enumeration value="number"/>
+			<xs:enumeration value="password"/>
+			<xs:enumeration value="picture"/>
+			<xs:enumeration value="richarea"/>
+			<xs:enumeration value="table"/>
+			<xs:enumeration value="tablerow"/>
+			<xs:enumeration value="text"/>
+			<xs:enumeration value="textbox"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="schema">
+		<xs:complexType mixed="false">
+			<xs:sequence>
+				<xs:any namespace="http://www.w3.org/2001/XMLSchema" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+			</xs:sequence>
+			<xs:attribute name="datatype" type="xs:NCName"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

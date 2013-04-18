@@ -1,0 +1,45 @@
+
+div.ektronPageBuilderWizard {font-size: 12px; width: 56em; margin-left: -28em;}
+
+/* IFrames */
+.ektronPageBuilderWizard .ektronPageBuilderIframe {width: 100%; height: 30.5em; border: none;}
+/*.ektronPageBuilderWizard div.ektronModalBody {margin: 1em .75emem; padding: .5em 0em;}*/
+body div.ektronPageBuilderWizard div.ektronModalBody { overflow-y: hidden; }
+
+/* Buttons */
+.ektronPageBuilderWizard .ektronPageBuilderWizardButtons {}
+.ektronPageBuilderWizard .ektronPageBuilderWizardButtons .backButton{display: none;}
+.ektronPageBuilderWizard .ektronPageBuilderWizardButtons .okButton{display: none; background-position:.5em -420px;}
+.ektronPageBuilderWizard .ektronPageBuilderWizardButtons .finishButton{display: none; background-position:.5em -420px;}
+
+/* Status */
+.ektronPageBuilderWizard .wizardStatus {display: none; float:left; background-color:#F9DACD; border:1px solid #CD0A0A; color:#CD0A0A; -moz-border-radius:4px; margin-left:8px; } 
+.ektronPageBuilderWizard .wizardStatus p { color:#CD0A0A; font-family:Arial, Verdana, sans-serif; font-size:12px; margin:3px 7px 3px 7px; }
+.ektronPageBuilderWizard .wizardStatus p span { display:inline-block; height:16px; width:16px; background-image: url("../images/ajax-loader.gif"); margin: 0 4px 0 0; }
+.ektronPageBuilderWizard .wizardStatus p b { font-weight:normal; vertical-align:top; line-height:16px; display:inline-block; margin-top:1px; }
+
+/* Error Handling */
+.ektronPageBuilderWizard .messages {display: none; width: auto; margin-bottom: .5em;}
+.ektronPageBuilderWizard .messages span {display: block; margin: .25em; padding: .5em .5em .5em 2em;}
+.ektronPageBuilderWizard .messages span.wordbreak {display: inline; text-indent: -10000px; margin: 0; padding: 0; width: 0; overflow: hidden; font-size: 1px;}
+.ektronPageBuilderWizard div.messages span.error {background-color:#FBE3E4; border: 1px solid #FBC2C4; color:#D12F19; background-position: -21px -561px; font-size: .9em;}
+
+/* Sprites */
+/*.ektronPageBuilderWizard div.messages span.error, .ektronPageBuilderWizard .ektronPageBuilderWizardButtons .okButton {background-image: url("../images/wizardsSprites.gif"); background-repeat: no-repeat;}*/
+
+/* Clear Fix */
+.ektronPageBuilderWizard .clearfix:after {
+    content: " "; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden; 
+    font-size: 0; 
+}
+
+.ektronPageBuilderWizard .clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .ektronPageBuilderWizard .clearfix {height: 1%;}
+.ektronPageBuilderWizard .clearfix {display: block;}
+/* End hide from IE-mac */

@@ -1,0 +1,83 @@
+th.title-header{font-weight:normal;padding-left:3px;padding-right:3px;}
+td.title-header, th.title-header, tr.title-header{margin-top: 10px;font-size: 12px;color: black;line-height: 16px;border-bottom: gray thin solid;font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;background-color: #ece9d8;white-space: nowrap;font-weight:bold;border-width:1px;}
+td.tab_actived{color: #4b7c9f;cursor: pointer;border-left-style: solid;border-left-width: 1px;	border-left-color: #4b7c9f;	border-bottom-style: solid;	border-bottom-width: 1px;border-bottom-color: #4b7c9f;	border-right-style: solid;	border-right-width: 1px;	border-right-color: #4b7c9f;	background-color: white;}
+td.tab_disabled{border-left-style: solid;border-left-width: 1px;border-left-color: #4b7c9f;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #4b7c9f;border-right-style: solid;border-right-width: 1px;border-right-color: #4b7c9f;border-top-style: solid;border-top-width: 1px;border-top-color: #4b7c9f;color: #4b7c9f;cursor: pointer;background-color: white;}
+td.tab_last{cursor: default;background-color: white;border-top-style: solid;border-top-width: 1px;border-top-color: #4b7c9f;}
+td.tab_spacer{cursor: default;background-color: white;border-top-style: solid;border-top-width: 1px;border-top-color: #4b7c9f;}
+td.tab_line{cursor: default;background-color: white;border-top-style: solid;border-top-width: 1px;border-top-color: #4b7c9f;}
+tr.oddrow,td.oddrow{background-color: white;}
+tr.evenrow,td.evenrow{background-color: #f6f6f6;}
+
+td{color:  #444468;font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;font-size: 10px;}
+td.input-box-text {color : black;font-family : Verdana, Geneva, Arial, Helvetica, sans-serif;font-size : 12px;font-weight : bold;line-height : 20px;}
+.dir_action_label{font-size: 11px;color: black;line-height: 12px;border-bottom: gray thin solid;border-top: gray thin solid;border-left: gray thin solid;border-right: gray thin solid;font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;background-color: #ece9d8;white-space: nowrap;}
+.t{border-width:1px 1px 1px 1px;border-style:solid solid solid solid;border-left-color:#4b7c9f;border-top-color:#4b7c9f;border-bottom-color:#4b7c9f;border-right-color:#4b7c9f;padding:2px 2px 0;height:18px;width:230px;vertical-align:middle;background-position:right;background-repeat:no-repeat;background-color:White}
+
+.b{border-width:1px 1px 1px 1px;border-style:solid solid solid solid;border-left-color:#4b7c9f;border-top-color:#4b7c9f;border-bottom-color:#4b7c9f;border-right-color:#4b7c9f;vertical-align:middle;background-position:right;background-repeat:no-repeat;}
+.bl{font-size:10px;font-weight:bold;padding:6px;font-family:verdana,sans-serif;}
+.b-title{font-size:10px;font-weight:bold;padding:6px;font-family:verdana,sans-serif;}
+.b2{font-size:10px;font-weight:bold; color: #444468; background-color:#D7EDF4;padding:4px;}
+.b3{font-size:10px; background-color:#ffffff;}
+#timedv {border:1px solid #cbcbcb;padding:0px;}
+#catdv {border:1px solid #cbcbcb;padding:0px;}
+#MapSearchOption {position:absolute;border: solid 1px #cbcbcb; display: none;background-color: #f5f5f5;z-index: 3200;}
+.VE_Panel_el {display: none;}
+div.VE_PlaceList{overflow: auto; height:auto; padding-right: 12px;}
+div.VE_PlaceList .VE_PlaceList_Body {top: 20px;}
+
+/* Category Filter Tree */
+ div#__MapCategoryTreePane input.searchTaxonomyPath 
+	{
+		margin: 0 .25em 0 0;
+		padding: 0;
+		position: relative;
+		top: .1em;
+		*position: static; /* fix for IE */
+		*top: 0; /* fix for IE */
+		*vertical-align: middle; /* fix for IE */
+	}
+
+ div#__MapCategoryTreePane .EktronTreeview li 
+	{
+		background: none;		
+	}
+ div#__MapCategoryTreePane .EktronTreeview .hitarea 
+	{
+		background-image: none;
+		background-repeat: no-repeat;
+		background-position: 3px 0px;
+		background-color: transparent;
+		*background-position: 5px 3px;
+	}
+ div#__MapCategoryTreePane .EktronTreeview .expandable-hitarea 
+	{
+		background-image: url('../images/ui/icons/tree/plus.png'); 
+	}
+ div#__MapCategoryTreePane .EktronTreeview .collapsable-hitarea  
+	{
+		background-image: url('../images/ui/icons/tree/minus.png'); 
+	}
+
+ div#__MapCategoryTreePane .EktronTreeview li span.folder, 
+ div#__MapCategoryTreePane .EktronTreeview li span.file 
+	{
+		display: inline-block;
+		padding: 0 0 0 20px;
+		margin: 0;
+		background-repeat: no-repeat;
+		background-position: 0 0;
+		font-size: 12px;
+	}
+ div#__MapCategoryTreePane .EktronTreeview li.collapsable>span.folder 
+	{
+		background-image: url('../images/ui/icons/folderOpen.png');
+
+	}	
+ div#__MapCategoryTreePane .EktronTreeview li.expandable>span.folder 
+	{
+		background-image: url('../images/ui/icons/folder.png'); 
+	}
+ div#__MapCategoryTreePane .EktronTreeview span.file 
+	{
+		background-image: url('../images/ui/icons/taxonomy.png'); 
+	}		

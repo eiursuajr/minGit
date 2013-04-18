@@ -1,0 +1,116 @@
+﻿.targetedContent-rule-editor
+{
+	margin-top: 4px;
+}
+
+.targetedContent
+{
+	padding: 0.5em;
+}
+
+.targetedContent .WidgetEditControls
+{
+	text-align: right;
+	padding: 0;
+	margin: 0.5em 0 0 0;
+}
+
+.targetedContent .column
+{
+	padding-bottom: 50px;
+}
+
+.targetedContent div.PBColumn
+{
+	margin: 0;
+}
+
+.targetedContent div.PBColumn ul.columnwidgetlist li.header
+{
+	min-width: 100%;
+	cursor: pointer;
+}
+
+.targetedContent div.PBColumn ul.columnwidgetlist li.header .columnwidgetcaption
+{
+	text-align: left;
+}
+
+.targetedContent div.PBColumn ul.columnwidgetlist li.selectedZone
+{
+	cursor: default;
+}
+
+.targetedContent .targetedContent-changeZoneOrder
+{
+	display: none;
+}
+
+.targetedContent div.ui-widget{margin-top:5px;}
+.targetedContent div.columns-container{width:100%}
+.targetedContent div.PBViewing a.remColumn img {display:none;}
+.targetedContent a.ek-button
+{
+    text-decoration: none !important;
+    padding: 2px 6px;
+	color:#FFF;
+	background-color: #888888;
+	background-image: url("ui-bg_highlight-soft_40_888888_1x100.png");
+	background-repeat: repeat-x;
+	background-position: 50% 50%;
+}
+
+.targetedContent a.ek-button > span.ui-icon
+{
+	display: inline-block;
+	text-indent: 0;
+	vertical-align: middle;
+}
+
+.targetedContent-addZone
+{
+    margin-right: 1em !important;
+}
+
+
+a.globalConfigSelect {float:right; padding: 0 5px 5px 0;color:black;}
+a.globalConfigSelect:visited {color:Black;}
+a.globalConfigSelect:hover {color:Black;text-decoration:underline;cursor:pointer;}
+
+div.targetContentListModal {display:none;}
+div.targetContentListModal table.ektronGrid {display:block;margin-bottom:50px;}
+div.targetContentListModal table.ektronGrid a {cursor:pointer;}
+div.targetContentListModal table.ektronGrid a:hover {text-decoration:underline;}
+div.targetContentListModal div.paging {bottom:10px;border-bottom:none;}
+
+div.ektronTargetContentGlobalView {background-color:#cccccc;width:100%;padding:5px 5px 2px 2px;}
+div.ektronTargetContentGlobalView span.ektrontargetConfigTitle {}
+div.ektronTargetContentGlobalView a{float:right;}
+div.ektronTargetContentGlobalView label.ektronGlobalContentTitle{margin-right:3px;font-weight:bold;}
+
+
+
+.ektronGrid {
+	border-spacing:0;
+	border-collapse:collapse;
+	width:100%;
+	background-color:White;
+	display:none;
+	border: 1px solid #AAAAAA;}
+	
+.ektronGrid tr.title-header{
+	color: #222222;
+	line-height: 19px;
+	white-space: nowrap;
+	background: #cccccc;}
+
+.ektronGrid tr.stripe {background-color:#e6e6e6;}
+
+.ektronGrid td
+{
+	padding:.25em;
+	border-right:0px solid #D5E7F5;
+	border-bottom:0px solid #D5E7F5;
+	padding: .25em .5em;
+	vertical-align:top;
+}

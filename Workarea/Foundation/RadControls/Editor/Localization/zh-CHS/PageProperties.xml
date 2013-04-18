@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="HTMLAttributes">HTML 属性</string>
+	<string id="Title">标题</string>
+	<string id="Description">描述</string>
+	<string id="Keywords">关键字</string>
+	<string id="Width">宽度</string>
+	<string id="BaseLocation">基本入进</string>
+	<string id="OK">确定</string>
+	<string id="Cancel">取消</string>
+	<string id="BodyAttributes">Body 属性</string>
+	<string id="BackColor">背景颜色</string>	
+	<string id="TopMargin">上边界</string>
+	<string id="BottomMargin">下边界</string>
+	<string id="LeftMargin">左边界</string>
+	<string id="RightMargin">右边界</string>
+</localization>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Hyperlink administreing</string>
+	<string id="Tab1HeaderText">Hyperlink</string>
+	<string id="Tab2HeaderText">Anker</string>
+	<string id="Tab3HeaderText">E-post</string>
+	<string id="LinkUrl">URL:</string>
+	<string id="LinkType">Type:</string>
+	<string id="Other">Annet</string>
+	<string id="LinkTarget">Target:</string>
+	<string id="Target">Target</string>
+	<string id="LinkTooltip">Tooltip:</string>
+	<string id="LinkName">Navn:</string>
+	<string id="LinkAddress">Adresse:</string>
+	<string id="LinkSubject">Emne:</string>
+	<string id="OK">OK</string>
+	<string id="Cancel">Avbryt</string>
+	<string id="CssClass">CSS Class:</string>
+	<string id="AnchorCss">Link CSS</string>
+	<string id="LinkText">Link Tekst:</string>
+	<string id="ClearStyle">Ingen Class</string>
+	<string id="LinkToAnchor">Eksisterende anker:</string>
+	<string id="AnchorNone">Ingen</string>
+    <string id="ektron">Ektron Editor Starts</string>
+	<string id="UrlRequired">URL is required.</string>
+	<string id="NameRequired">Name is required.</string>
+	<string id="AddressRequired">Address is required.</string>
+	<string id="InvalidEmail">Email address is not valid.</string>
+	<string id="DuplicatedName">Bookmark name is not unique.</string>
+	<string id="AccessChecksWarn">The content is not accessibility compliance. Would you like to correct it?</string>
+	<string id="AccessChecksEnforce">Please fill in the accessibility compliance field(s).</string>
+	<string id="Or">or</string>
+	<string id="InvalidUrl">Invalid Url is detected. Please correct your Url.</string>
+	<string id="ektron2">Ektron Editor ends</string>
+</localization>

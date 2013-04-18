@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Bildhanteraren</string>
+	<string id="ConfirmLink">Länka 'thumbnail' till original bilden?</string>
+	<string id="ConfirmDelete">Vill du ta bort vald fil?\nBild filen kan användas av andra. Om du tar bort den kommer några sidor inte att visas korrekt.\nTryck \"OK\" för att konfirmera borttaget.</string>
+	<string id="AlertImage">Ange en bild fil att ladda upp!</string>
+	<string id="AlertExists">Bild filen finns redan i mappen!!</string>
+	<string id="AlertDimensions">Ange antingen 'thumbnail' höjd eller 'thumbnail' bredd.</string>
+	<string id="AlertWidth">Ange en giltig bildbredd.</string>
+	<string id="AlertHeight">Ange en giltig bildhöjd.</string>
+	<string id="MessageNothingPost">Var vänlig och ange en bild fil!</string>
+	<string id="MessageValid">Var vänlig och ange en giltig bild fil!</string>
+	<string id="MessageSize">Angiven bild fil är för stor!</string>
+	<string id="MessagePermission">Du har inte behörighet till sidan, eller din så har din kaka (cookie) gått ut!<br/>Var vänlig och uppdatera sidan</string>
+	<string id="Tab1HeaderText">Visa filer</string>
+	<string id="Tab2HeaderText">Ladda upp bild</string>
+	<string id="ImageFile">Bild fil:</string>
+	<string id="ImageURL">Bild URL:</string>
+	<string id="Preview">Förhandsgranska</string>
+	<string id="Loading">Laddar...</string>
+	<string id="CreateThumbnail">Skapa 'Thumbnail':</string>
+	<string id="Yes">Ja</string>
+	<string id="No">Nej</string>
+	<string id="Width">Höjd:</string>
+	<string id="Height">Bredd:</string>
+	<string id="Constrain">Begränsning</string>
+	<string id="KeepOriginalImage">Behåll original bild:</string>
+	<string id="LoadingImagePrompt">Laddar bild. Var vänlig vänta...</string>
+	<string id="BestFit">Bästa passning</string>
+	<string id="ActualSize">Riktig storlek</string>
+	<string id="ZoomIn">Zooma in</string>
+	<string id="ZoomOut">Zooma ut</string>
+	<string id="ChooseFileToInsert">Var vänlig och välj en bild att infoga</string>
+	<string id="CreateThumbnailIconTitle">Skapa 'Thumbnail'</string>
+	<string id="LinkToOriginal">Länka till original</string>
+	<string id="OpenOriginalInBlank">Öppna originalet i ett nytt fönster</string>
+	<string id="NoImageSelectedToInsert">Var vänlig och välj en bild att infoga!</string>
+</localization>

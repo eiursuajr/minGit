@@ -1,0 +1,18 @@
+<Form>
+	<Title>__Survey</Title>
+	<Description>Sample Data</Description>
+	<SubmittedData>
+		<Date>11/3/2005 11:15:29 AM</Date>
+		<Data form_data_id="436" totalCount="8">
+			<gender>
+				<item value="Female" totalCount="2">Female</item>
+				<item value="Male" totalCount="6">Male</item>
+			</gender>
+		</Data>
+	</SubmittedData>
+	<ektdesignpackage_list>
+		<fieldlist>
+			<field name="gender" datalist="gender" title="Enter your gender now">Gender</field>
+		</fieldlist>
+	</ektdesignpackage_list>
+</Form>

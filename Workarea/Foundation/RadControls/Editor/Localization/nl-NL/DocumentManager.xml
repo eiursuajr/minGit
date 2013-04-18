@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Document beheer</string>
+	<string id="ConfirmDelete">Weet u zeker dat dit bestand verwijder moet worden?\nHet bstand kan in gebruik zijn. Wanneer het verwijderd wordt, kunnen mogelijk pagina's niet meer correct worden weergegeven.\nKlik op \"OK\" om het verwijderen te bevestigen.</string>
+	<string id="Alertfile">Geef aub een bestand aan om te uploaden!</string>
+	<string id="Alertvalid">Geef aub een geldig document aan om te uploaden!</string>
+	<string id="Alertexists">Er bestaat reeds een document met die bestandsnaam!</string>
+	<string id="MessageNothingPost">Geef aub een bestand op!</string>
+	<string id="MessageValid">Geef aub een geldig document aan om te uploaden!</string>
+	<string id="MessageSize">Het opgegevens bestand is grote dan de maximale toegestande bestandsgrootte!</string>
+	<string id="Tab1HeaderText">Zoek bestand</string>
+	<string id="Tab2HeaderText">Document Uploaden</string>
+	<string id="DocumentDirectory">Document Directorie:</string>
+	<string id="DocumentFile">Bestandsnaam:</string>
+	<string id="Tooltip">Tooltip:</string>
+	<string id="Target">Doel:</string>
+	<string id="Note">Note:</string>
+	<string id="SelectDirectory">Seleteer de directorie</string>
+	<string id="ShowProperties">Laat de eigenschappen zien</string>
+	<string id="ChooseFileToInsert">Selecteer aub een bestand</string>
+</localization>

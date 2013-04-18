@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+	<string id="Title">Dokumenthanteraren</string>
+	<string id="ConfirmDelete">Vill du ta bort vald fil?\nDokumentet kan användas av andra. Om du tar bort den kommer några sidor inte att visas giltig.\nTryck \"OK\" för att konfirmera borttaget.</string>
+	<string id="Alertfile">Var vänlig och ange ett dokument att ladda upp!</string>
+	<string id="Alertvalid">Var vänlig och ange ett giltigt dokument!</string>
+	<string id="Alertexists">Dokumentet finns redan i mappen!</string>
+	<string id="MessageNothingPost">Var vänlig och ange ett dokument!</string>
+	<string id="MessageValid">Var vänlig och ange ett giltigt dokument!</string>
+	<string id="MessageSize">Angivet dokument (fil) är för stor!</string>
+	<string id="Tab1HeaderText">Visa filer</string>
+	<string id="Tab2HeaderText">Ladda upp dokument</string>
+	<string id="DocumentDirectory">Dokument Mapp:</string>
+	<string id="DocumentFile">Dokument Fil:</string>
+	<string id="Tooltip">Tips:</string>
+	<string id="Target">Mål:</string>
+	<string id="Note">Notering:</string>
+	<string id="SelectDirectory">Välj mapp</string>
+	<string id="ShowProperties">Visa egenskaper</string>
+	<string id="ChooseFileToInsert">Var vänlig och välj ett dokument att infoga</string>
+	<string id="NoDocumentSelectedToInsert">Var vänlig och välj ett dokument att infoga!</string>
+</localization>

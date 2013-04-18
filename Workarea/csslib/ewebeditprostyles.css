@@ -1,0 +1,12 @@
+﻿body, p, li, div 	
+{
+	margin:0em;
+	margin-bottom:.0001pt;
+	font-size:12pt;
+	font-family:Georgia, Arial, Verdana, Sans-Serif;
+}
+.MakeLink
+{
+	color: Blue;
+	border-bottom: dotted;
+}

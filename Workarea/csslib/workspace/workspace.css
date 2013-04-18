@@ -1,0 +1,25 @@
+img {
+	border:none; 
+	vertical-align: middle;
+}
+
+a {
+	color:#6a85b6;
+	text-decoration:none;
+}
+a:hover {text-decoration:underline;}
+a:visited {color:#6a85b6;}
+.WorkspaceShareDiv
+{
+	color:blue;
+	background-color:Yellow;
+	margin-left:30px;
+	margin-top:15px;
+	position:absolute;
+	text-align:center;
+	display:none;
+	border-style:solid;
+	border-color:Black;
+	border-width:thin;
+	padding:10px;
+}

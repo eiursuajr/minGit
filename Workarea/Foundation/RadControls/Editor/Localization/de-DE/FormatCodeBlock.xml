@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<localization>
+
+<string id="PasteSourceCode">Fügen Sie den Code unten ein:</string> 
+ <string id="CodeLanguage">Codesprache</string> 
+ <string id="SnippetMaxHeight">Die Maximale Höhe vom Schnipsel</string> 
+ <string id="ShowLineNumbers">Zeilennummern anzeigen</string> 
+ <string id="SnippetMaxWidth">Die Maximale Breite vom Schnipsel</string> 
+ <string id="Preview">Vorschau</string> 
+ <string id="PreviewCode">Vorschau vom Code</string> 
+ <string id="Working">Arbeiten..</string> 
+</localization>
